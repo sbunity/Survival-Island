@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 43e243ac8b72cc84aabfe05a6b43d23d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Upgrades/GatheringUpgrade.cs
+  uploadId: 872960

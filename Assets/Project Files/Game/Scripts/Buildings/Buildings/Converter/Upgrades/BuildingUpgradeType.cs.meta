@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1f01036e9d189d745a6b7bb70183c4db
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Buildings/Buildings/Converter/Upgrades/BuildingUpgradeType.cs
+  uploadId: 872960

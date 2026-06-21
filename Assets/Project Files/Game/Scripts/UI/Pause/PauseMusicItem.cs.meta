@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3f0224303d45316438b7f60031bf2af8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/UI/Pause/PauseMusicItem.cs
+  uploadId: 872960

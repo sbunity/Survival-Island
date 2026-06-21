@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 03821ff8597cebb4ebc141a7b579fe7f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Animations/Chest/Chest_Shaking.anim
+  uploadId: 872960

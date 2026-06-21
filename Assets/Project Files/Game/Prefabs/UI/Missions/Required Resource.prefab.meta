@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b8b4122d966012a46941c9fd198aa88d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/UI/Missions/Required Resource.prefab
+  uploadId: 872960

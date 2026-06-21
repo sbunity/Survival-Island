@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c063f09980cb63e4eb10369c18602e18
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Buildings/ResourceStorageBuildingBehavior.cs
+  uploadId: 872960

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5ac3247e45b9e8a438c85e7c3535bd85
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Watermelon Core/Modules/Save/Runtime/SaveManager.cs
+  uploadId: 872960

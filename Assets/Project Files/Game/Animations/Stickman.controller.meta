@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 657aaf1a94f67144ca3045fd511f9f7f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Animations/Stickman.controller
+  uploadId: 872960

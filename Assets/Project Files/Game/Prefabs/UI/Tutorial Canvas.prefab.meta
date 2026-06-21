@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 361722e00c30c8b4e825d56b2a957816
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/UI/Tutorial Canvas.prefab
+  uploadId: 872960

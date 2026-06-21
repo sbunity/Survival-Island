@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a8bceebba85b81d4c96ac1c2a12d9b31
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/Particles/Characters/Death Poof.prefab
+  uploadId: 872960

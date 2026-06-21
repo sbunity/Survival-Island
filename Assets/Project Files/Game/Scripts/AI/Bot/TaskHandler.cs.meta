@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c41fec90999e6bd42a408e84aa3368d3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/AI/Bot/TaskHandler.cs
+  uploadId: 872960

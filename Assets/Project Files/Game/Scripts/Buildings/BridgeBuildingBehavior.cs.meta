@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 993acf5d8c8a87540ae92984551844e7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Buildings/BridgeBuildingBehavior.cs
+  uploadId: 872960

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6ac835515e6df6146820b4134d85f35e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Animations/Helper/Helper Animator Controller.controller
+  uploadId: 872960

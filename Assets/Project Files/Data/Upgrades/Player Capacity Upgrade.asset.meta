@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ec601a00657d6164fb01f504079172a2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Data/Upgrades/Player Capacity Upgrade.asset
+  uploadId: 872960

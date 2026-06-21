@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e86e23dedde33e64eada8a3421f4b8ce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Data/Environment/Weather/Storm.asset
+  uploadId: 872960

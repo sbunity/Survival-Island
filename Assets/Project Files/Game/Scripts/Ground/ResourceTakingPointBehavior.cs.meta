@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a1864c7148a86a64ea4e2d65bf77044f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Ground/ResourceTakingPointBehavior.cs
+  uploadId: 872960

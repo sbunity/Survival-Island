@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 99efc2d04fe290e44b37d5b9bc9a4244
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Ground/PurchasePointSave.cs
+  uploadId: 872960

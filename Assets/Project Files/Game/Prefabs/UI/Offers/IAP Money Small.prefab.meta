@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fdcebb6f07ea4b04bb2db3d212ae71ff
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/UI/Offers/IAP Money Small.prefab
+  uploadId: 872960

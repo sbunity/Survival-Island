@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 678de321edf988f4793b893dcb59bc88
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Animations/Tutorial/Arrow/Upgrade Arrow Idle.anim
+  uploadId: 872960

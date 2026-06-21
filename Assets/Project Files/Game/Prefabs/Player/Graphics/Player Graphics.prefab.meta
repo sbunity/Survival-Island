@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 17118aec1367f034baa9a0ab2f7925be
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/Player/Graphics/Player Graphics.prefab
+  uploadId: 872960

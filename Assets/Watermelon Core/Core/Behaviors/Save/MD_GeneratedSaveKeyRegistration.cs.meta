@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a8b1ec996e3195b4090d767b85ef26f3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Watermelon Core/Core/Behaviors/Save/MD_GeneratedSaveKeyRegistration.cs
+  uploadId: 872960

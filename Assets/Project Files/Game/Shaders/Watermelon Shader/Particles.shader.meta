@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 832d317c9a566784eba826bf81454a07
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Shaders/Watermelon Shader/Particles.shader
+  uploadId: 872960

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b799c17a54eef0e4baa1be9eda7b82da, type: 3}
+  m_Name: Reward Starter Pack
+  m_EditorClassIdentifier: 
+  rewards:
+  - rid: 4221807265299824642
+  - rid: 4221807265299824645
+  - rid: 5810360931399761920
+  notes: 
+  references:
+    version: 2
+    RefIds:
+    - rid: 4221807265299824642
+      type: {class: NoAdsReward, ns: Watermelon, asm: Assembly-CSharp}
+      data:
+        disableAdsForever: 1
+        disableSeconds: 0
+        disableOfferIfNoAdsPurchased: 0
+    - rid: 4221807265299824645
+      type: {class: CurrencyReward, ns: Watermelon, asm: Assembly-CSharp}
+      data:
+        currencies:
+        - currencyType: 0
+          amount: 400
+        - currencyType: 1
+          amount: 100
+        - currencyType: 2
+          amount: 100
+        - currencyType: 100
+          amount: 100
+        analyticsSource: 
+    - rid: 5810360931399761920
+      type: {class: SkinReward, ns: Watermelon, asm: Assembly-CSharp}
+      data:
+        skinID: 290f3b81-10cd-4681-9d75-a93871a9bc58
+        autoSelect: 1

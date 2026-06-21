@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ba9e0b12ae7c9794d9556a9e1d1acb32
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Missions/Editor/MissionEditor.cs
+  uploadId: 872960

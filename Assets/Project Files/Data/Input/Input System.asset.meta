@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ce10a941858183b4490f5d437afa5066
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Data/Input/Input System.asset
+  uploadId: 872960

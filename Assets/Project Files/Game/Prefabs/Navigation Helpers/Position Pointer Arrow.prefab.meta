@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 23e9301109920024782696c2e75a00d8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/Navigation Helpers/Position Pointer
+    Arrow.prefab
+  uploadId: 872960

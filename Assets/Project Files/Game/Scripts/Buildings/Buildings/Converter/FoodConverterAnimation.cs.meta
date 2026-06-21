@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5e49358314e46aa41a5321bbd1ed200e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Buildings/Buildings/Converter/FoodConverterAnimation.cs
+  uploadId: 872960

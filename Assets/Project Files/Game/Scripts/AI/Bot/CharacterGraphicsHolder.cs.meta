@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dd6cb0117f1e0364c92414d311362119
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/AI/Bot/CharacterGraphicsHolder.cs
+  uploadId: 872960

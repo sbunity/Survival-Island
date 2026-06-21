@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6cbb19e233e2824dabaac63818dc63b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Materials/Particles/Spike.mat
+  uploadId: 872960

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5ce4dc1393626ac41a0ae53ebfe867ab
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/Post Processing/Global Volume.prefab
+  uploadId: 872960

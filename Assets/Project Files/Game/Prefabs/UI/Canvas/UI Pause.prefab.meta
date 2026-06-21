@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8aa5fcf64e8931045926b04d0a57b00e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/UI/Canvas/UI Pause.prefab
+  uploadId: 872960

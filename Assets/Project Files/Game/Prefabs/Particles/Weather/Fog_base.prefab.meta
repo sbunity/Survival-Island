@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0762591489f4fd34ea76bcbc82d7a59d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/Particles/Weather/Fog_base.prefab
+  uploadId: 872960

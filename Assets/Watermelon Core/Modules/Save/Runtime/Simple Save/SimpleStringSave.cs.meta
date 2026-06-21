@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 91e3da3c9fa28c24da4557c4b2828dab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Watermelon Core/Modules/Save/Runtime/Simple Save/SimpleStringSave.cs
+  uploadId: 872960

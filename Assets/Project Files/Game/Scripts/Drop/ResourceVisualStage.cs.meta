@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7c8b7e39f3e1cc44c8468a897a2d0a77
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Drop/ResourceVisualStage.cs
+  uploadId: 872960

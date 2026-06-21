@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f07b0b5e98a0b64c96b295203ec1917
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/UI/Missions/Mission Panel.prefab
+  uploadId: 872960

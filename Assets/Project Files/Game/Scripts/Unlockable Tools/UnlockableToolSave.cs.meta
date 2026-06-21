@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f1260a86cbb7ab74abefde8b11496e4a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Unlockable Tools/UnlockableToolSave.cs
+  uploadId: 872960

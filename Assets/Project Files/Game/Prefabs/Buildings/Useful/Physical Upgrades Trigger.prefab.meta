@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f433ff7d310a5a542948b2e72cf03392
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/Buildings/Useful/Physical Upgrades
+    Trigger.prefab
+  uploadId: 872960

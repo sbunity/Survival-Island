@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fe7762f2e6e42d74181f6ada19996226
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Prefabs/Player/Player.prefab
+  uploadId: 872960

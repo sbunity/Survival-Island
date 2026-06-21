@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7e7593ccd879453449903a7fcafe4d93
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.0
+  assetPath: Assets/Project Files/Game/Scripts/Navigation/TutorialArrowBehaviour.cs
+  uploadId: 872960
