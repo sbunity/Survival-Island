@@ -37,6 +37,10 @@
 # Visual Studio cache directory
 .vs/
 
+.agents/
+.claude/
+.codex/
+
 # Gradle cache directory
 .gradle/
 
