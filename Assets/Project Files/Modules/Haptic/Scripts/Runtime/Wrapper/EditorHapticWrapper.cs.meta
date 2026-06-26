@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3e1eeb2fb531f6c47b00fda338083df6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs
+  uploadId: 941274

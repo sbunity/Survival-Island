@@ -109,7 +109,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_MEDIUM);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.appear);
+            AudioController.PlaySound(AudioController.GetClip("appear"));
         }
 
         public void SetID(string id)

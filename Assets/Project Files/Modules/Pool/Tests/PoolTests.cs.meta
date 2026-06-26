@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9d54559e7d9d49b47ac72a99f25a1fe8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Pool/Tests/PoolTests.cs
+  uploadId: 941274

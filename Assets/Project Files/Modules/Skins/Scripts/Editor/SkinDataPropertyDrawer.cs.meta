@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1b88d81519978fc42a67e695740604a8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Skins/Scripts/Editor/SkinDataPropertyDrawer.cs
+  uploadId: 941274

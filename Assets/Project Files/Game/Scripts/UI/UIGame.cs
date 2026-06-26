@@ -72,9 +72,9 @@ namespace Watermelon
                 hungerUI.gameObject.SetActive(false);
             }
 
-            NotchSaveArea.RegisterRectTransform(safeAreaRectTransform);
+            SafeAreaAdapter.RegisterRectTransform(safeAreaRectTransform);
 
-            tutorialCanvasController.Initialise();
+            tutorialCanvasController.Init();
             worldTransitionPopUp.Initialise();
 
             backgroundImage.color = Color.white;
@@ -84,24 +84,24 @@ namespace Watermelon
 
         #region Show/Hide
 
-        public override void PlayShowAnimation()
+        protected override void OnShow()
         {
             playerInventory = PlayerBehavior.GetBehavior().Inventory;
             playerInventory.CapacityChanged += UpdateInventoryUI;
 
             UpdateInventoryUI();
 
-            UIController.OnPageOpened(this);
+            NotifyOpened();
 
             UIGamepadButton.DisableAllTags();
             UIGamepadButton.EnableTag(UIGamepadButtonTag.Game);
         }
 
-        public override void PlayHideAnimation()
+        protected override void OnHide()
         {
             playerInventory.CapacityChanged -= UpdateInventoryUI;
 
-            UIController.OnPageClosed(this);
+            NotifyClosed();
         }
 
         #endregion
@@ -121,7 +121,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
         }
 
         private void UpdateInventoryUI()
@@ -207,7 +207,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             GlobalUpgradesController.OpenMainUpgradesPage();
 
@@ -220,7 +220,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
 #if MODULE_MONETIZATION
             UIStore.OpenAsOverlay();
@@ -233,14 +233,15 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             UIController.ShowPage<UIPause>();
         }
 
         public void HighlightUpgradesButton()
         {
-            TutorialCanvasController.ActivatePointerScreenPos((RectTransform)upgradesButton.transform, TutorialCanvasController.POINTER_DEFAULT);
+            RectTransform rectTransform = upgradesButton.transform as RectTransform;
+            TutorialCanvasController.ActivatePointer(rectTransform.TransformPoint(rectTransform.rect.center), TutorialCanvasController.POINTER_CLICK);
         }
 
         public void StopUpgradesButtonHighlight()

@@ -1,0 +1,28 @@
+{
+    "name": "Watermelon.Advertisement",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:bae3502cf5297e148b5f28d762dcc2e1",
+        "GUID:2a1c6a40df50afc4e91f6365a598d744",
+        "GUID:f4a8d2c7e1b5f3a9d6c2b8e4f1a7d3c5",
+        "GUID:6f16dbb045f3bb64fa0e6baaf9ef0402",
+        "GUID:dfd68d793e4e5c24da9f1a86e6e09fbe",
+        "GUID:ead44b7ff0c1fef46af9d702fccc0dd9",
+        "GUID:76f2c9e186c46a74e9e619b844eba591",
+        "GUID:320a7f1e3dd30bf4dbb1ac85ea51c249",
+        "GUID:ef500e44dd1cf1d45bbf0bd01af3400a",
+        "GUID:4d7a6ac1a7b151945b12911823528318",
+        "GUID:d1926376319567343af1028976df0996",
+        "GUID:5c13976791bc78d49aef018c2c398dbc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

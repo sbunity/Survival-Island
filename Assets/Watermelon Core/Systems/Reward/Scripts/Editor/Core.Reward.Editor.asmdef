@@ -1,0 +1,23 @@
+{
+    "name": "Core.Reward.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f4a8d2c7e1b5f3a9d6c2b8e4f1a7d3c5",
+        "GUID:320a7f1e3dd30bf4dbb1ac85ea51c249",
+        "GUID:b144dfb63303ab24680905ee1a718def",
+        "GUID:60e58814b7969e0459416e87b0b42a14",
+        "GUID:dfd68d793e4e5c24da9f1a86e6e09fbe",
+        "GUID:58d423447910e474892c01353162b1ba"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

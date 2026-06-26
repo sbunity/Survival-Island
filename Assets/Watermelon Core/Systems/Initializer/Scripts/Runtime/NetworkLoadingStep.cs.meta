@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8b2e5f4a1d7c9e3b6f0a2d8c4e7b1f5a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Systems/Initializer/Scripts/Runtime/NetworkLoadingStep.cs
+  uploadId: 941274

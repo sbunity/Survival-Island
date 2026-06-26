@@ -439,7 +439,7 @@ namespace Watermelon
         {
             for (int i = 0; i < array.Length; i++)
             {
-                Debug.Log(function(array[i]));
+                LogManager.Log(function(array[i]), LogCategory.Systems);
             }
         }
 
@@ -450,7 +450,7 @@ namespace Watermelon
         {
             for (int i = 0; i < array.Count; i++)
             {
-                Debug.Log(function(array[i]));
+                LogManager.Log(function(array[i]), LogCategory.Systems);
             }
         }
 
@@ -539,9 +539,9 @@ namespace Watermelon
 
             while (tabsIndices.Count > 0)
             {
-                var i = Random.Range(0, tabsIndices.Count);
+                int i = Random.Range(0, tabsIndices.Count);
 
-                var index = tabsIndices[i];
+                int index = tabsIndices[i];
                 tabsIndices.RemoveAt(i);
 
                 if (action(list[index]))
@@ -560,9 +560,9 @@ namespace Watermelon
 
             while (tabsIndices.Count > 0)
             {
-                var i = Random.Range(0, tabsIndices.Count);
+                int i = Random.Range(0, tabsIndices.Count);
 
-                var index = tabsIndices[i];
+                int index = tabsIndices[i];
                 tabsIndices.RemoveAt(i);
 
                 if (action(array[index]))
@@ -723,7 +723,7 @@ namespace Watermelon
                 return true;
             }
 
-            Debug.LogError($"{gameObject.name} doesn't have {typeof(T)} script added to it", gameObject);
+            Debug.LogError($"{gameObject.name} doesn't have {typeof(T)} script added to it");
 
             component = null;
 
@@ -1090,9 +1090,9 @@ namespace Watermelon
 
         public static Vector3 GetRandomPosition(this Bounds bounds)
         {
-            var halfWidth = bounds.size.x / 2f;
-            var halfHeight = bounds.size.y / 2f;
-            var halfDepth = bounds.size.z / 2f;
+            float halfWidth = bounds.size.x / 2f;
+            float halfHeight = bounds.size.y / 2f;
+            float halfDepth = bounds.size.z / 2f;
 
             var result = bounds.center + new Vector3(
                 Random.Range(-halfWidth, halfWidth),
@@ -1104,9 +1104,9 @@ namespace Watermelon
 
         public static Vector3 GetRandomPosition(this Bounds bounds, Quaternion rotation, float offset = 0)
         {
-            var halfWidth = bounds.size.x / 2f + offset;
-            var halfHeight = bounds.size.y / 2f + offset;
-            var halfDepth = bounds.size.z / 2f + offset;
+            float halfWidth = bounds.size.x / 2f + offset;
+            float halfHeight = bounds.size.y / 2f + offset;
+            float halfDepth = bounds.size.z / 2f + offset;
 
             var result = bounds.center + rotation * new Vector3(
                 Random.Range(-halfWidth, halfWidth),

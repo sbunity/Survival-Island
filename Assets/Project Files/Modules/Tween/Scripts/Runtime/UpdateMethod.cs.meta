@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c0c287a330d283c44a4c9d7a2e0eef94
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Tween/Scripts/Runtime/UpdateMethod.cs
+  uploadId: 941274

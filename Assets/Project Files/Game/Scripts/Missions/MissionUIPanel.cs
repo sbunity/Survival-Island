@@ -99,7 +99,7 @@ namespace Watermelon
         {
             if (activeMission != null)
             {
-                AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+                AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
                 if (activeMission.MissionStage == Mission.Stage.Active)
                 {
@@ -232,7 +232,7 @@ namespace Watermelon
                 Mission.ResourceRewardData reward = activeMission.ResourceReward;
 
                 Currency currency = CurrencyController.GetCurrency(reward.CurrencyType);
-                if(currency.FloatingCloud.AddToCloud)
+                if(currency.CurrencyCloud.AddToCloud)
                 {
                     UIGame gameUI = UIController.GetPage<UIGame>();
 
@@ -240,7 +240,7 @@ namespace Watermelon
 
                     Tween.NextFrame(() =>
                     {
-                        FloatingCloud.SpawnCurrency(reward.CurrencyType.ToString(), floatingCloundSpawn, currencyUI.RectTransform, 10, "");
+                        CurrencyCloud.SpawnCurrency(reward.CurrencyType.ToString(), floatingCloundSpawn, currencyUI.RectTransform, 10, "");
                     });
                 }
             }

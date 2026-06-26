@@ -18,7 +18,7 @@ namespace Watermelon
 
         bool IsResourceTakingBlocked { get; }
 
-        void Rejected();
+        void Rejected(CurrencyType currencyType);
     }
 }
 

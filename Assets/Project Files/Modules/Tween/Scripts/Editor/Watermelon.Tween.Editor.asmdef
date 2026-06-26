@@ -1,0 +1,20 @@
+﻿{
+    "name": "Watermelon.Tween.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6f16dbb045f3bb64fa0e6baaf9ef0402",
+        "GUID:b144dfb63303ab24680905ee1a718def",
+        "GUID:dfd68d793e4e5c24da9f1a86e6e09fbe"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

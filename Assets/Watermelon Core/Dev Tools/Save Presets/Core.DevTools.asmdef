@@ -1,0 +1,16 @@
+﻿{
+    "name": "Core.DevTools",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bae3502cf5297e148b5f28d762dcc2e1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

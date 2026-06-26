@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 20b62f7a2e275cc428da9aef660f2fad
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Game/Prefabs/UI/Floating Text/Unlockable Tool Floating
+    Text.prefab
+  uploadId: 941274

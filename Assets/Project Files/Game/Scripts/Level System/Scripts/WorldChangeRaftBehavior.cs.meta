@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b689de6eee2b4a14596497a482b7026e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Game/Scripts/Level System/Scripts/WorldChangeRaftBehavior.cs
+  uploadId: 941274

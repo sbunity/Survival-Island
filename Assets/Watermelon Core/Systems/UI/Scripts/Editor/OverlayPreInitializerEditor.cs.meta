@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b518fb8050cf1254ab3df5b8df3fd934
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Systems/UI/Scripts/Editor/OverlayPreInitializerEditor.cs
+  uploadId: 941274

@@ -21,11 +21,10 @@ EditorBuildSettings:
     path: Assets/Project Files/Game/Scenes/Worlds/World 2 [Alt Demo].unity
     guid: b987323407a93a541963884fe5cb7501
   - enabled: 0
-    path: Assets/Watermelon Core/Examples/Example 04 - Ads/Scenes/Ads Example Scene.unity
+    path: Assets/Project Files/Modules/Advertisement/Examples/Ads Example Scene.unity
     guid: 4723a3e64b3234444b1393548554ce46
   - enabled: 0
-    path: Assets/Watermelon Core/Examples/Example 03 - Haptic/Scenes/Haptic Example
-      Scene.unity
+    path: Assets/Project Files/Modules/Haptic/Examples/Haptic Example Scene.unity
     guid: e730434b98fac584ba6dc410b97c41f5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ce10a941858183b4490f5d437afa5066,

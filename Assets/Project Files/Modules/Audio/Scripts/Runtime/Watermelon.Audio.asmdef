@@ -1,0 +1,21 @@
+﻿{
+    "name": "Watermelon.Audio",
+    "rootNamespace": "",
+    "references": [
+        "GUID:320a7f1e3dd30bf4dbb1ac85ea51c249",
+        "GUID:76f2c9e186c46a74e9e619b844eba591",
+        "GUID:bae3502cf5297e148b5f28d762dcc2e1",
+        "GUID:2a1c6a40df50afc4e91f6365a598d744",
+        "GUID:dfd68d793e4e5c24da9f1a86e6e09fbe",
+        "GUID:6f16dbb045f3bb64fa0e6baaf9ef0402"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

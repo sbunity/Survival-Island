@@ -55,6 +55,6 @@ namespace Watermelon
             return true;
         }
 
-        public virtual void Rejected() { }
+        public virtual void Rejected(CurrencyType currencyType) { }
     }
 }

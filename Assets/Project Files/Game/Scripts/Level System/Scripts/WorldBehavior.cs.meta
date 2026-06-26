@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 721f29108681b4f4991f7ce394c2c9d7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Game/Scripts/Level System/Scripts/WorldBehavior.cs
+  uploadId: 941274

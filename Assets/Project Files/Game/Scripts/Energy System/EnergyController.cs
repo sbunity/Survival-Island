@@ -45,6 +45,8 @@ namespace Watermelon
         private static int lastDisplayedFoodPoints;
         private static readonly float FULL_ENERGY_THRESHOLD = 0.9f;
 
+        public static bool IsEnergyFull => EnergyPoints >= Data.MaxEnergyPoints * FULL_ENERGY_THRESHOLD;
+
         public void Initialise()
         {
             instance = this;
@@ -151,7 +153,7 @@ namespace Watermelon
                 Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-                AudioController.PlaySound(AudioController.AudioClips.boost);
+                AudioController.PlaySound(AudioController.GetClip("boost"));
             }
         }
 

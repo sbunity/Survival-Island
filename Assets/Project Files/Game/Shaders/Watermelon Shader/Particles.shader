@@ -62,6 +62,13 @@ Shader "WMelon/Particles"
     //Particle shaders rely on "write" to CB syntax which is not supported by DXC
     #pragma never_use_dxc
 
+    // Particles.hlsl (URP) includes FoveatedRenderingKeywords.hlsl via #include_with_pragmas,
+    // which on macOS editor + mobile Metal target defines SUPPORTS_FOVEATED_RENDERING_NON_UNIFORM_RASTER
+    // but doesn't inject the _FOVEATED_RENDERING_NON_UNIFORM_RASTER cbuffer variable, causing a
+    // compile error. Pre-defining the include guard skips that file entirely — safe because
+    // particle shaders don't use foveated rendering (VR feature).
+    #define UNITY_FOVEATED_RENDERING_KEYWORDS_INCLUDED
+
     ENDHLSL
 
     SubShader

@@ -56,7 +56,7 @@ namespace Watermelon
             itemsPool?.Destroy();
         }
 
-        public override void PlayHideAnimation()
+        protected override void OnHide()
         {
             panelRect.DOAnchoredPosition(Vector2.up * panelHiddenY, 0.3f).SetEasing(Ease.Type.SineIn).OnComplete(() =>
             {
@@ -70,11 +70,11 @@ namespace Watermelon
 
                 Control.EnableMovementControl();
 
-                UIController.OnPageClosed(this);
+                NotifyClosed();
             });
         }
 
-        public override void PlayShowAnimation()
+        protected override void OnShow()
         {
             InitData();
 
@@ -87,7 +87,7 @@ namespace Watermelon
             UIGamepadButton.DisableAllTags();
             UIGamepadButton.EnableTag(UIGamepadButtonTag.Inventory);
 
-            UIController.OnPageOpened(this);
+            NotifyOpened();
         }
 
         private void Show()
@@ -185,7 +185,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
         }
 
         private void OnSellAllButtonClicked()
@@ -199,7 +199,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_MEDIUM);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             CurrencyController.Add(CurrencyType.Coins, CalculateAllMoney());
 

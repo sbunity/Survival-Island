@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b8459fda821a1d245945e18295b4093d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Control/Data/Gamepad Data.asset
+  uploadId: 941274

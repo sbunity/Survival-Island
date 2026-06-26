@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5640907271053946662}
   - component: {fileID: 5442334640524763641}
   - component: {fileID: 7873277644156613026}
-  - component: {fileID: 2694274837645137151}
+  - component: {fileID: 3495079339918773352}
+  - component: {fileID: 2150574767584700994}
   m_Layer: 0
   m_Name: SDKs
   m_TagString: Untagged
@@ -77,7 +78,20 @@ MonoBehaviour:
   umpDebugMode: 0
   umpDebugGeography: 0
   testDevices: []
---- !u!114 &2694274837645137151
+--- !u!114 &3495079339918773352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2651676344474471201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7635ab9fdcd8248a41a279112191bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: 726c02ce3548411e926c552fb1495096, type: 2}
+--- !u!114 &2150574767584700994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,4 +103,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760fc0dff5c1de94bbae8fbbbaee3a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: 529dbf8f89ab6f247ab843aef1ec6f59, type: 2}
+  settings: {fileID: 11400000, guid: bd0bc83d2c8f42cea53a9fb5c86722a5, type: 2}

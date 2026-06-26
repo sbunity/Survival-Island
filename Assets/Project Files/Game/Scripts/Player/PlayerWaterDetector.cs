@@ -101,10 +101,10 @@ namespace Watermelon
                         IsPlayerSwimming?.Invoke(true);
                         IsSwimming = true;
 
-                        if (AudioController.AudioClips.waterSound != null)
+                        if (AudioController.GetClip("water_sound") != null)
                         {
                             waterAudioHelper.DoVolume(maxVolume, soundTransitionDuration);
-                            waterAudioHelper.Play(AudioController.AudioClips.waterSound);
+                            waterAudioHelper.Play(AudioController.GetClip("water_sound"));
                         }
                     }
                 } else
@@ -116,7 +116,7 @@ namespace Watermelon
                             IsPlayerSwimming?.Invoke(false);
                             IsSwimming = false;
 
-                            if (AudioController.AudioClips.waterSound != null)
+                            if (AudioController.GetClip("water_sound") != null)
                             {
                                 waterAudioHelper.DoVolume(0, soundTransitionDuration).OnComplete(() => {
                                     waterAudioHelper.StopPlaying();
@@ -137,10 +137,10 @@ namespace Watermelon
                             IsPlayerSwimming?.Invoke(true);
                             IsSwimming = true;
 
-                            if (AudioController.AudioClips.waterSound != null)
+                            if (AudioController.GetClip("water_sound") != null)
                             {
                                 waterAudioHelper.DoVolume(maxVolume, soundTransitionDuration);
-                                waterAudioHelper.Play(AudioController.AudioClips.waterSound);
+                                waterAudioHelper.Play(AudioController.GetClip("water_sound"));
                             }
                         }
                     }
@@ -152,7 +152,7 @@ namespace Watermelon
                     IsPlayerSwimming?.Invoke(false);
                     IsSwimming = false;
 
-                    if (AudioController.AudioClips.waterSound != null)
+                    if (AudioController.GetClip("water_sound") != null)
                     {
                         waterAudioHelper.DoVolume(0, soundTransitionDuration).OnComplete(() => {
                             waterAudioHelper.StopPlaying();

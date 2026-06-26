@@ -121,15 +121,25 @@ namespace Watermelon
 
         public void Step()
         {
-            if (!AudioController.AudioClips.stepSounds.IsNullOrEmpty())
+            var data = GameController.Data;
+            var playerSpeednormalized = animator.GetFloat("Movement Multiplier");
+
+            if (playerSpeednormalized < data.MinSpeedToTriggerSteps) return;
+
+            var volume = data.StepsVolumeRange.Lerp(Mathf.InverseLerp(data.MinSpeedToTriggerSteps, 1, playerSpeednormalized));
+
+            switch (Random.Range(0, 3))
             {
-                var data = GameController.Data;
-                var playerSpeednormalized = animator.GetFloat("Movement Multiplier");
-
-                if (playerSpeednormalized < data.MinSpeedToTriggerSteps) return;
-
-                var volume = data.StepsVolumeRange.Lerp(Mathf.InverseLerp(data.MinSpeedToTriggerSteps, 1, playerSpeednormalized));
-                AudioController.PlaySound(AudioController.AudioClips.stepSounds.GetRandomItem(), volume);
+                case 1:
+                    AudioController.PlaySound(AudioController.GetClip("step 1"), volume);
+                    break;
+                case 2:
+                    AudioController.PlaySound(AudioController.GetClip("step 2"), volume);
+                    break;
+                case 0:
+                default:
+                    AudioController.PlaySound(AudioController.GetClip("step 3"), volume);
+                    break;
             }
         }
 

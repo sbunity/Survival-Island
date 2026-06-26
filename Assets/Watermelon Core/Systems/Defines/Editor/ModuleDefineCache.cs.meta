@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d2ac7286d2b202c42b07e6cd729a65d1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Systems/Defines/Editor/ModuleDefineCache.cs
+  uploadId: 941274

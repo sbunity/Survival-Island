@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a41dfa8d9d474bf4eb2669c33436376a
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Audio/Scripts/Editor/Watermelon.Audio.Editor.asmdef
+  uploadId: 941274
