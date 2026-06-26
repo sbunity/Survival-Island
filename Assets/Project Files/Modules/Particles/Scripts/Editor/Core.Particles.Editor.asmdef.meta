@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 82427a6c0a99b884385d97d24078888e
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Particles/Scripts/Editor/Core.Particles.Editor.asmdef
+  uploadId: 941274

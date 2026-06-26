@@ -124,7 +124,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             CurrencyController.Add(CurrencyType.Coins, MoneyCount);
             CurrencyController.Substract(CurrencyType, CurrencyCount);

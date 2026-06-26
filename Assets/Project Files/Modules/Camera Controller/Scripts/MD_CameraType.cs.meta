@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d5f50e9c3b0c6f54ba7d0c3cda0a0031
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Camera Controller/Scripts/MD_CameraType.cs
+  uploadId: 941274

@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Watermelon
 {
-    [StaticUnload]
     public class FoliageController : MonoBehaviour
     {
         private static List<Transform> foliageAgents = new List<Transform>();
@@ -48,12 +47,9 @@ namespace Watermelon
         private void OnDestroy()
         {
             Shader.SetGlobalInteger("_FoliagePositionsCount", 0);
-        }
-
-        private static void UnloadStatic()
-        {
             foliageAgents.Clear();
             changed = false;
         }
+
     }
 }

@@ -99,7 +99,7 @@ namespace Watermelon
             interactionAnimations.CustomEventInvoked += OnToolCustomEventInvoked;
 
             if (despawnTweenCase != null)
-                despawnTweenCase.Reset();
+                despawnTweenCase.Restart();
         }
 
         private void OnToolCustomEventInvoked(string eventName)

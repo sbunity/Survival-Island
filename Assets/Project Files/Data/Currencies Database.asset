@@ -32,7 +32,7 @@ MonoBehaviour:
       appearAudioClip: {fileID: 8300000, guid: 7ed02add2c2a9df4baaa5a74a78e355a, type: 3}
       collectAudioClip: {fileID: 8300000, guid: 1b3a9aa133dd17e4a80144d16ef86d0b,
         type: 3}
-    previewSettings: {fileID: 0}
+    previewSettings: {fileID: 11400000, guid: fc88f09e053711146b2ffdf07d3ce760, type: 2}
   - currencyType: 1
     defaultAmount: 0
     icon: {fileID: 21300000, guid: 74f9924d7bd6a2e47b66006361926e2c, type: 3}

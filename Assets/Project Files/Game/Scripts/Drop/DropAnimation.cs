@@ -85,27 +85,27 @@ namespace Watermelon
             TweenCase movementTweenCase;
             if (movementType == MovementType.Bezier)
             {
-                movementTweenCase = new TransformTweenCases.BezierPosition(animationData.DropTransform, targetPosition, animationData.DropTransform.position + new Vector3(bezierUpOffset.Random(), bezierRightOffset.Random(), bezierForwardOffset.Random())).SetDuration(movementDuration).SetDelay(movementDelay).SetEasing(movementEasing);
+                movementTweenCase = new TransformTweenCases.BezierPosition(animationData.DropTransform, targetPosition, animationData.DropTransform.position + new Vector3(bezierUpOffset.Random(), bezierRightOffset.Random(), bezierForwardOffset.Random())).SetDuration(movementDuration).SetDelay(movementDelay).SetEasing(movementEasing).StartTween();
             }
             else if (movementType == MovementType.Curves)
             {
-                movementTweenCase = new CurvePositions(animationData.DropTransform, movementCurveX, movementCurveY, movementCurveZ, targetPosition).SetDuration(movementDuration).SetDelay(movementDelay);
+                movementTweenCase = new CurvePositions(animationData.DropTransform, movementCurveX, movementCurveY, movementCurveZ, targetPosition).SetDuration(movementDuration).SetDelay(movementDelay).StartTween();
             }
             else
             {
-                movementTweenCase = new TransformTweenCases.Position(animationData.DropTransform, targetPosition).SetDuration(movementDuration).SetDelay(movementDelay).SetEasing(movementEasing);
+                movementTweenCase = new TransformTweenCases.Position(animationData.DropTransform, targetPosition).SetDuration(movementDuration).SetDelay(movementDelay).SetEasing(movementEasing).StartTween();
             }
 
             TweenCase scaleTweenCase = null;
             if (useScale)
             {
-                scaleTweenCase = new CurveScale(animationData.DropTransform, scaleCurve).SetDuration(scaleDuration);
+                scaleTweenCase = new CurveScale(animationData.DropTransform, scaleCurve).SetDuration(scaleDuration).StartTween();
             }
 
             TweenCase rotationTweenCase = null;
             if (useRotation)
             {
-                rotationTweenCase = new AngleRotation(animationData.DropTransform, rotationAngle).SetDuration(rotationDuration).SetEasing(rotationEasing);
+                rotationTweenCase = new AngleRotation(animationData.DropTransform, rotationAngle).SetDuration(rotationDuration).SetEasing(rotationEasing).StartTween();
             }
 
             bool allTweensCompleted;
@@ -116,33 +116,16 @@ namespace Watermelon
 
                 if (!movementTweenCase.IsCompleted)
                 {
-                    if (movementTweenCase.Delay > 0 && movementTweenCase.Delay > movementTweenCase.CurrentDelay)
-                    {
-                        movementTweenCase.UpdateDelay(Time.deltaTime);
-                    }
-                    else
-                    {
-                        movementTweenCase.UpdateState(Time.deltaTime);
-
-                        movementTweenCase.Invoke(0);
-                    }
-
                     allTweensCompleted = false;
                 }
 
                 if (scaleTweenCase != null && !scaleTweenCase.IsCompleted)
                 {
-                    scaleTweenCase.UpdateState(Time.deltaTime);
-                    scaleTweenCase.Invoke(0);
-
                     allTweensCompleted = false;
                 }
 
                 if (rotationTweenCase != null && !rotationTweenCase.IsCompleted)
                 {
-                    rotationTweenCase.UpdateState(Time.deltaTime);
-                    rotationTweenCase.Invoke(0);
-
                     allTweensCompleted = false;
                 }
 

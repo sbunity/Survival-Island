@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 84dd3e1ef7b26af4b96e16519f1aa089
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Systems/Save/Tests/DefaultSaveWrapperTests.cs
+  uploadId: 941274

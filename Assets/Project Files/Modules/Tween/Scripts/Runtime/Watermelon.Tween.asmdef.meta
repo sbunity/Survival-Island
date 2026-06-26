@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f16dbb045f3bb64fa0e6baaf9ef0402
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Tween/Scripts/Runtime/Watermelon.Tween.asmdef
+  uploadId: 941274

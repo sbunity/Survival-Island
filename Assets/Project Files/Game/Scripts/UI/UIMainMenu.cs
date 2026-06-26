@@ -20,7 +20,7 @@ namespace Watermelon
 
         public override void Init()
         {
-            NotchSaveArea.RegisterRectTransform(safeAreaRectTransform);
+            SafeAreaAdapter.RegisterRectTransform(safeAreaRectTransform);
 
             playButton.onClick.AddListener(OnPlayButtonClicked);
             newGameButton.onClick.AddListener(OnNewGameButtonClicked);
@@ -38,14 +38,14 @@ namespace Watermelon
 
         #region Show/Hide
 
-        public override void PlayShowAnimation()
+        protected override void OnShow()
         {
-            UIController.OnPageOpened(this);
+            NotifyOpened();
         }
 
-        public override void PlayHideAnimation()
+        protected override void OnHide()
         {
-            UIController.OnPageClosed(this);
+            NotifyClosed();
         }
 
         #endregion
@@ -58,7 +58,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             Overlay.Show(0.3f, () =>
             {
@@ -72,7 +72,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             newGameConfirmationPopUp.SetActive(true);
         }
@@ -103,7 +103,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             newGameConfirmationPopUp.SetActive(false);
         }
@@ -114,7 +114,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

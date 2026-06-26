@@ -75,6 +75,8 @@ namespace Watermelon
             particlesController.Init();
 
             navigationHelper.Initialise();
+
+            SaveController.GetSaveObject<TimeSave>().BeginSession();
         }
 
         private void Start()

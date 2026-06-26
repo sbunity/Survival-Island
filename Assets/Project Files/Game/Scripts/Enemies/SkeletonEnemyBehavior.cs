@@ -6,6 +6,9 @@ namespace Watermelon
 {
     public class SkeletonEnemyBehavior : BaseEnemyBehavior
     {
+        [SerializeField] int damage = 10;
+        public int Damage => damage;
+
         protected override void Awake()
         {
             base.Awake();
@@ -22,7 +25,7 @@ namespace Watermelon
         {
             if (Vector3.Distance(transform.position, PlayerBehavior.Position) < 1)
             {
-                PlayerBehavior.GetBehavior().TakeDamage(new DamageSource(10, this), transform.position, true);
+                PlayerBehavior.GetBehavior().TakeDamage(new DamageSource(damage, this), transform.position, true);
             }
         }
     }

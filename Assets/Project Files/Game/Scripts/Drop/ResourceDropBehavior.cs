@@ -104,11 +104,11 @@ namespace Watermelon
             {
                 isFlying = false;
 
-                if (AudioController.AudioClips.resourcesDropInStorageSound != null)
+                if (AudioController.GetClip("pick") != null)
                 {
                     var gameData = GameController.Data;
 
-                    gameData.StorageSoundHandler.Play(AudioController.AudioClips.resourcesDropInStorageSound, transform.position);
+                    gameData.StorageSoundHandler.Play(AudioController.GetClip("pick"), transform.position);
                 }
 
                 if (isAutoPickupActive)
@@ -174,11 +174,11 @@ namespace Watermelon
                 animationCoroutine = null;
             }
 
-            if (AudioController.AudioClips.resourcesPickUpFromStorageSound != null)
+            if (AudioController.GetClip("pick") != null)
             {
                 GameData gameData = GameController.Data;
 
-                gameData.StorageSoundHandler.Play(AudioController.AudioClips.resourcesPickUpFromStorageSound, transform.position);
+                gameData.StorageSoundHandler.Play(AudioController.GetClip("pick"), transform.position);
             }
 
             ResourcePicked?.Invoke();
@@ -261,7 +261,7 @@ namespace Watermelon
 
                 time += Time.deltaTime;
 
-                transform.position = Bezier.EvaluateQuadratic(startPosition, keyPos, endPos, time / duration);
+                transform.position = BezierUtils.EvaluateQuadratic(startPosition, keyPos, endPos, time / duration);
             }
 
             transform.position = endPos;

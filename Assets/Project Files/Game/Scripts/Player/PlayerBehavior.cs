@@ -707,11 +707,11 @@ namespace Watermelon
 
                 if (IsSwimming)
                 {
-                    AudioController.PlaySound(AudioController.AudioClips.playerDrowningSound);
+                    AudioController.PlaySound(AudioController.GetClip("player_drowning_sound"));
                 }
                 else
                 {
-                    AudioController.PlaySound(AudioController.AudioClips.playerDeathSound);
+                    AudioController.PlaySound(AudioController.GetClip("player_death_sound"));
                 }
 
 #if MODULE_HAPTIC
@@ -748,7 +748,7 @@ namespace Watermelon
                     PlayerGraphics.FlashOnHit();
 
                 lastTimeGotHit = Time.time;
-                AudioController.PlaySound(AudioController.AudioClips.punch);
+                AudioController.PlaySound(AudioController.GetClip("punch"));
 
 #if MODULE_HAPTIC
                 Haptic.Play(Haptic.HAPTIC_LIGHT);
@@ -821,13 +821,13 @@ namespace Watermelon
                 ShowResourceIndicator(flyingResource.ResourceType, flyingResource.Amount);
             });
 
-            if (AudioController.AudioClips.resourcesPickUpFromStorageSound != null)
+            if (AudioController.GetClip("pick") != null)
             {
                 var gameData = GameController.Data;
 
                 tweenCase.OnTimeReached(gameData.StorageSoundStartTime, () =>
                 {
-                    gameData.StorageSoundHandler.Play(AudioController.AudioClips.resourcesPickUpFromStorageSound, transform.position);
+                    gameData.StorageSoundHandler.Play(AudioController.GetClip("pick"), transform.position);
                 });
             }
         }
@@ -965,7 +965,7 @@ namespace Watermelon
                 {
                     if (currency.Data.PickUpSound != null)
                     {
-                        if (AudioController.AudioClips.resourcesPickUpFromStorageSound != null)
+                        if (AudioController.GetClip("pick") != null)
                         {
                             var gameData = GameController.Data;
 
@@ -982,11 +982,18 @@ namespace Watermelon
             return inventory.HasSpace(ref resource);
         }
 
-        public virtual void Rejected()
+        public virtual void Rejected(CurrencyType currencyType)
         {
-            if (inventory.IsFull())
+            if (EnergyController.IsFoorResource(currencyType))
             {
-                ShowFullFloatingText(customize: "NOT HUNGRY");
+                if (EnergyController.IsEnergyFull)
+                {
+                    ShowFullFloatingText(customize: "NOT HUNGRY");
+                }
+            }
+            else if (inventory.IsFull())
+            {
+                ShowFullFloatingText();
             }
         }
         #endregion
@@ -1015,7 +1022,7 @@ namespace Watermelon
 
         public void Unload()
         {
-            AudioController.ResetAudioLisenerParent();
+            AudioController.ResetAudioListenerParent();
 
             inventory.Unload();
 
@@ -1028,7 +1035,8 @@ namespace Watermelon
         {
             inventory.Unload();
 
-            AudioController.ResetAudioLisenerParent();
+            if (AudioController.IsInitialized)
+                AudioController.ResetAudioListenerParent();
 
             FoliageController.RemoveFoliageAgent(transform);
 

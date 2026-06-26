@@ -278,7 +278,7 @@ namespace Watermelon
                 Destroy(gameObject);
             });
 
-            AudioController.PlaySound(AudioController.AudioClips.reward);
+            AudioController.PlaySound(AudioController.GetClip("reward"));
         }
 
         public bool IsHittable() => true;

@@ -20,6 +20,16 @@ namespace Watermelon
             ResourceGiver = resourceGiver;
         }
 
+        private CurrencyType GetAvailableResourceType()
+        {
+            foreach (CurrencyType currencyType in System.Enum.GetValues(typeof(CurrencyType)))
+            {
+                if (ResourceGiver.GetResourceCount(currencyType) > 0) return currencyType;
+            }
+
+            return default;
+        }
+
         private void Update()
         {            
             if (ResourceGiver != null &&                                        // is ResourceGiver assigned
@@ -66,7 +76,7 @@ namespace Watermelon
                         }
                     }
 
-                    if (ResourceGiver.HasResources()) taker.Rejected();
+                    if (ResourceGiver.HasResources()) taker.Rejected(GetAvailableResourceType());
                 }
 
                 for (int i = 0; i < succesfullTakers.Count; i++)

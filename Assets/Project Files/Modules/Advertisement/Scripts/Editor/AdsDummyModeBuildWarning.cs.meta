@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 76ebfa55fdce5094fb05ca5f2ea71298
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Advertisement/Scripts/Editor/AdsDummyModeBuildWarning.cs
+  uploadId: 941274

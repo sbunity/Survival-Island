@@ -1,0 +1,23 @@
+﻿{
+    "name": "Watermelon.Purchasing.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:219000cd2ee198348ab28e260b4bbf49",
+        "GUID:b144dfb63303ab24680905ee1a718def",
+        "GUID:dfd68d793e4e5c24da9f1a86e6e09fbe",
+        "GUID:58d423447910e474892c01353162b1ba",
+        "GUID:e9b3f7a1d5c8b4e2a6d1c9e5b7f3a2d8",
+        "GUID:f4a8d2c7e1b5f3a9d6c2b8e4f1a7d3c5"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

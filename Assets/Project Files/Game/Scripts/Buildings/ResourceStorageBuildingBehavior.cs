@@ -123,7 +123,7 @@ namespace Watermelon
 
             if (fillUpOnGameStartap && !Storage.IsFull() && !save.Resources.IsNullOrEmpty())
             {
-                var timeSpan = DateTime.Now - SaveController.LastExitTime;
+                var timeSpan = DateTime.Now - SaveController.GetSaveObject<TimeSave>().LastExitTime;
                 var minutes = (float)timeSpan.TotalMinutes;
 
                 var t = Mathf.Clamp01(Mathf.InverseLerp(0, minAwayDurationInMinutes, minutes));

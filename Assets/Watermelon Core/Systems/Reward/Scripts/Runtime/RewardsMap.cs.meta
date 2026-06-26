@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7ac8a8d883245ae4c893137e4347ef83
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Systems/Reward/Scripts/Runtime/RewardsMap.cs
+  uploadId: 941274

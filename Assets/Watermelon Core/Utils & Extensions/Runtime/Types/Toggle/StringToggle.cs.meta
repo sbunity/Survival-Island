@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 262343d27a8402741b799bad1c54c7e8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Utils & Extensions/Runtime/Types/Toggle/StringToggle.cs
+  uploadId: 941274

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ad9c2f4fdbd69384e980371656b8299c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Upgrades/Scripts/AbstactGlobalUpgrade.cs
+  uploadId: 941274

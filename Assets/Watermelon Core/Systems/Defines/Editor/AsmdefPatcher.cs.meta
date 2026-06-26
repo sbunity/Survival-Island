@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d11a15ca851fd30439ed3fd39e263f7d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Systems/Defines/Editor/AsmdefPatcher.cs
+  uploadId: 941274

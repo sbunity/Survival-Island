@@ -1,0 +1,14 @@
+﻿fileFormatVersion: 2
+guid: 736a55196fa347bfaad16dbe27a001b5
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Tutorial/Scripts/Runtime/Watermelon.Tutorial.asmdef
+  uploadId: 941274

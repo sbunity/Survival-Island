@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7e9225e26c70f424abd2175855d661d7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Control/Scripts/Gamepad/UIGamepadButton.cs
+  uploadId: 941274

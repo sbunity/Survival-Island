@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5c13976791bc78d49aef018c2c398dbc
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Logging/Core.Logging.asmdef
+  uploadId: 941274
