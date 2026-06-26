@@ -12,12 +12,10 @@ namespace Watermelon
         public NavMeshSurfaceTweenCase(NavMeshSurface navMeshSurface)
         {
             this.navMeshSurface = navMeshSurface;
+            SetDelay(0);
+            SetDuration(float.MaxValue);
+            SetUnscaledMode(true);
 
-            delay = 0;
-            duration = float.MaxValue;
-
-            isUnscaled = true;
-            
             asyncOperation = navMeshSurface.UpdateNavMesh(navMeshSurface.navMeshData);
         }
 

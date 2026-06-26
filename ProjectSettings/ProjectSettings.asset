@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 84a209e901a0e480daae2c055455f43d
+  productGUID: 37879fca89430465290b55ffb8124b0a
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Survival Island | Template + Editor
+  productName: test island
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
@@ -83,7 +83,7 @@ PlayerSettings:
   androidApplicationEntry: 2
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 1
+  runInBackground: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
@@ -170,7 +170,8 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.DefaultCompany.SurvivalIsland
-    Standalone: com.DefaultCompany.Survival-Island---Template---Editor
+    Standalone: com.Default-Company.Survival-Island
+    iPhone: com.DefaultCompany.test-island
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -496,7 +497,10 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: iPhone
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -522,7 +526,10 @@ PlayerSettings:
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
-  m_BuildTargetDefaultTextureCompressionFormat: []
+  m_BuildTargetDefaultTextureCompressionFormat:
+  - serializedVersion: 3
+    m_BuildTarget: iOS
+    m_Formats: 03000000
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -801,12 +808,12 @@ PlayerSettings:
     PS5: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY
     QNX: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY
     Server: UNITY_MCP_READY
-    Standalone: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_TMP;MODULE_MONETIZATION;MODULE_HAPTIC;UNITY_MCP_READY
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_TMP;MODULE_ADS;MODULE_HAPTIC;UNITY_MCP_READY
     VisionOS: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY
     WebGL: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY
     Windows Store Apps: UNITY_MCP_READY
     XboxOne: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY
-    iPhone: MODULE_INPUT_SYSTEM;MODULE_TMP;MODULE_MONETIZATION;MODULE_HAPTIC;UNITY_MCP_READY
+    iPhone: MODULE_INPUT_SYSTEM;MODULE_TMP;MODULE_ADS;MODULE_HAPTIC;UNITY_MCP_READY;URP_COMPATIBILITY_MODE
     tvOS: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY
   additionalCompilerArguments: {}
   platformArchitecture: {}
@@ -829,14 +836,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Survival Island | Template + Editor
+  metroPackageName: test island
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Survival Island | Template + Editor
+  metroApplicationDescription: test island
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -908,11 +915,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: d3907e1a-0abe-4553-ab83-1f72af348dab
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: test island
+  organizationId: unity_1d289c8afc4d89e91bcd
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

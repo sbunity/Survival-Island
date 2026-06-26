@@ -71,7 +71,7 @@ namespace Watermelon
             if (fistTimeLoadingMission)
             {
                 WorldController.UpdateWorldSave(activeMission.gameObject.name);
-                //SavePresets.CreateSave(WorldController.CurrentWorld.Scene.Name + " " + activeMission.gameObject.name, "Missions", activeMission.ID);
+                SavePresets.CreateSave(WorldController.CurrentWorld.Scene.Name + " " + activeMission.gameObject.name, "Missions", activeMission.ID, new[] { WorldController.CurrentWorld.ID });
             }
 #endif
         }

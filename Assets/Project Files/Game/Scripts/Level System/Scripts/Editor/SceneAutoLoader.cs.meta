@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: caae4dfb2ba8ac749ac174eb16e57cb5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Game/Scripts/Level System/Scripts/Editor/SceneAutoLoader.cs
+  uploadId: 941274

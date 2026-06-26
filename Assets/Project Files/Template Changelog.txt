@@ -1,3 +1,18 @@
+v1.2.1
+Template: Fixed CurrencyCloud not clearing its floating clouds when a world unloads.
+Template: Fixed a null-reference on world unload when the currency system hadn't initialized yet, and hooked up CurvatureManager's player-follow target when a world loads.
+Template: Fixed the currency UI panel not resizing and re-showing correctly when currency changed while it was hiding.
+Template: Fixed resource-rejection floating text - food resources now show "NOT HUNGRY" only when energy is full, other resources show the inventory-full message.
+Template: Fixed the tutorial trigger call order in UIGame.
+Template: Made Global Upgrades save to the global save file instead of the per-world save file, so they now apply across all islands.
+Core: Reorganized Watermelon Core into a Runtime-based folder structure with assembly definitions per system, reducing rebuild times.
+Core: Added a centralized Logging system (LogManager, LogCategory, per-category toggles) replacing ad hoc debug logs.
+Modules: Updated the Camera Controller, Control, Currency, Curve, Floating Text, Particles, Scene Overlay, Tutorial, UI Store, Upgrades, Level System, and Reward modules to their latest versions.
+Monetization: Split the Monetization module into independent Ads and IAP modules, each with its own settings asset.
+Initializer: Replaced the Initializer prefab, SDKs prefab, and Init scene with the updated template versions.
+Audio: Migrated to the new Audio Registry asset (replaces Audio Clips) and renamed several clips to match; fixed leftover broken sound references (footsteps, pickup) and an AudioController console warning.
+Save: Switched the save file extension from .json to .save (existing .json saves still load). Added a TimeSave object that tracks last-exit time and accumulated play time. The editor's Remove Save action now clears every save file, not just the default one.
+
 v1.2.0
 Template: Fixed the Chest RV bug.
 Template: Fixed the World Upgrades button trigger bug.

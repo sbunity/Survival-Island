@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e9b3f7a1d5c8b4e2a6d1c9e5b7f3a2d8
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Watermelon Core/Systems/Reward/Scripts/Editor/Core.Reward.Editor.asmdef
+  uploadId: 941274

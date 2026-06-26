@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 14bcc2122d9d4d649badbb2c25f33049
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Tween/Scripts/Runtime/TweenCaseFunction.cs
+  uploadId: 941274

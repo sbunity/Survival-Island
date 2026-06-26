@@ -1,3 +1,15 @@
+v3.0.0
+Core: Watermelon Core moved from Assets/Watermelon Core/ to a Unity Package (Packages/com.watermelon.core). The framework is now a closed, distributed package — do not modify its files directly. Interact with it via inheritance, interfaces, and public APIs only.
+Core: Monetization module split into two independent modules — Ads and IAP — each with its own assembly definition (Core.Ads, Core.IAP).
+Core: Introduced assembly definitions across all core systems (Core.Runtime, Core.Save, Core.Pool, Core.Tween, Core.Analytics, Core.Initializer, Core.Inspector, Core.Ads, Core.IAP). Modules compile independently, reducing rebuild times.
+Analytics: Reworked analytics architecture. TrackEvent(string, IAnalyticsData) replaces typed event methods. Event name constants moved to AnalyticsEvents class.
+Defines: Moved individual defines to separate files for easier module isolation.
+Initializer: Added IPreInitializable interface for pre-initialization hooks. Added custom editor.
+UI: Reworked UIController architecture.
+Modules: FloatingCloud moved to Currency module.
+Modules: Added Logs system to module infrastructure.
+Tween: Added KillAll method for immediate cleanup before scene reload.
+
 v2.8.0
 UI: Added IPausePopup class and pause logic to UIController. Now game automatically pauses when a popup with interface is opened.
 UI: Reworked UIController architecture and introduced the CachedPages class for managing page loading from prefabs. This optimization improves performance by dynamically loading and unloading canvases, reducing memory and CPU overhead.

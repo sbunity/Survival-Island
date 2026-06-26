@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 664d097f876a0f74c83e0c4ce2bb68da
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Camera Controller/Scripts/CameraBlendSettings.cs
+  uploadId: 941274

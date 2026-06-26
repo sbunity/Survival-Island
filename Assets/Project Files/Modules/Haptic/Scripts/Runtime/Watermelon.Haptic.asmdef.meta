@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ef500e44dd1cf1d45bbf0bd01af3400a
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Haptic/Scripts/Runtime/Watermelon.Haptic.asmdef
+  uploadId: 941274

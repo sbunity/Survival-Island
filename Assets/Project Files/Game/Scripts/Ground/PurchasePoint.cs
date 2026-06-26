@@ -125,13 +125,13 @@ namespace Watermelon
                 OnResourcePlaced?.Invoke();
             });
 
-            if (AudioController.AudioClips.resourcesPickUpFromStorageSound != null && fromPlayer)
+            if (AudioController.GetClip("pick") != null && fromPlayer)
             {
                 var gameData = GameController.Data;
 
                 tweenCase.OnTimeReached(gameData.StorageSoundStartTime, () =>
                 {
-                    gameData.StorageSoundHandler.Play(AudioController.AudioClips.resourcesPickUpFromStorageSound, transform.position);
+                    gameData.StorageSoundHandler.Play(AudioController.GetClip("pick"), transform.position);
                 });
             }
         }

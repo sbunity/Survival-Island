@@ -25,6 +25,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - CURVE_ON
   - TOON_ON
   - _SHADOWS_NONE
   m_InvalidKeywords:
@@ -118,7 +119,7 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ColorMode: 0
     - _Cull: 2
-    - _CurveOn: 0
+    - _CurveOn: 1
     - _CustomLightDirectionOn: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1

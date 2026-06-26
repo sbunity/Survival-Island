@@ -1,0 +1,18 @@
+{
+    "name": "Core.Particles",
+    "rootNamespace": "",
+    "references": [
+        "GUID:76f2c9e186c46a74e9e619b844eba591",
+        "GUID:dfd68d793e4e5c24da9f1a86e6e09fbe",
+        "GUID:5f6fa69964d9ec24d927f36b8fd16319"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

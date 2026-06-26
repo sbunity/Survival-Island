@@ -102,7 +102,7 @@ namespace Watermelon
 
             onMissionCompleted?.Invoke();
 
-            AudioController.PlaySound(AudioController.AudioClips.reward, 0.7f);
+            AudioController.PlaySound(AudioController.GetClip("reward"), 0.7f);
         }
 
         public void FinishMission()

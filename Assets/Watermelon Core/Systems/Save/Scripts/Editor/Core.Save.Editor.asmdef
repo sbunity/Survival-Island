@@ -1,0 +1,21 @@
+{
+    "name": "Core.Save.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bae3502cf5297e148b5f28d762dcc2e1",
+        "GUID:58d423447910e474892c01353162b1ba",
+        "GUID:60e58814b7969e0459416e87b0b42a14",
+        "GUID:2a1c6a40df50afc4e91f6365a598d744"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

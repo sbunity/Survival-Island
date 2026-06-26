@@ -455,7 +455,7 @@ namespace Watermelon
                 listLabel = mission.gameObject.name;
                 missionSerializedObject = new SerializedObject(mission);
                 ParseNote();
-                //saveExist = SavePresets.IsSaveExistById(mission.ID);
+                saveExist = SavePresets.IsSaveExistById(mission.ID);
             }
 
             private void ParseNote()
@@ -514,7 +514,7 @@ namespace Watermelon
 
                 if (saveExist && GUILayout.Button("Load save"))
                 {
-                    //SavePresets.LoadSaveById(mission.ID);
+                    SavePresets.LoadSaveById(mission.ID);
                 }
             }
 

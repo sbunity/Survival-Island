@@ -1,0 +1,19 @@
+{
+    "name": "Core.Logging.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5c13976791bc78d49aef018c2c398dbc",
+        "GUID:7a454585290d68941b722c2e5910dd91"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

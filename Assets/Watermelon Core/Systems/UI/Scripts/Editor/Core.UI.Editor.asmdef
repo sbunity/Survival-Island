@@ -1,0 +1,20 @@
+{
+    "name": "Core.UI.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d1926376319567343af1028976df0996",
+        "GUID:dfd68d793e4e5c24da9f1a86e6e09fbe",
+        "GUID:b144dfb63303ab24680905ee1a718def"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

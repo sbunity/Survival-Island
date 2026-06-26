@@ -1,0 +1,19 @@
+﻿{
+    "name": "Core.DevTools.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9aae3d1913d6449d83c4cbe7e9cdeb57",
+        "GUID:b144dfb63303ab24680905ee1a718def"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

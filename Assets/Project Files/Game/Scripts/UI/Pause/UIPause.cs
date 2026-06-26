@@ -43,7 +43,7 @@ namespace Watermelon
             }, 2);
         }
 
-        public override void PlayHideAnimation()
+        protected override void OnHide()
         {
             Tween.DoFloat(0, 1, 0.3f, (value) => { Time.timeScale = Mathf.Clamp01(value); }, unscaledTime: true);
 
@@ -51,7 +51,7 @@ namespace Watermelon
 
             panelRect.DOAnchoredPosition(Vector2.up * panelHiddenY, 0.3f, unscaledTime: true).SetEasing(Ease.Type.SineIn).OnComplete(() =>
             {
-                UIController.OnPageClosed(this);
+                NotifyClosed();
 
                 for (int i = 0; i < items.Count; i++)
                 {
@@ -65,7 +65,7 @@ namespace Watermelon
             UIGamepadButton.EnableTag(UIGamepadButtonTag.Game);
         }
 
-        public override void PlayShowAnimation()
+        protected override void OnShow()
         {
             Tween.DoFloat(1, 0, 0.3f, (value) => { Time.timeScale = Mathf.Clamp01(value); }, unscaledTime: true);
 
@@ -78,7 +78,7 @@ namespace Watermelon
             SelectedItemId = 0;
             SelectedItem.Select();
 
-            UIController.OnPageOpened(this);
+            NotifyOpened();
 
             Control.DisableMovementControl();
 
@@ -132,7 +132,7 @@ namespace Watermelon
             Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-            AudioController.PlaySound(AudioController.AudioClips.buttonSound);
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
         }
     }
 }

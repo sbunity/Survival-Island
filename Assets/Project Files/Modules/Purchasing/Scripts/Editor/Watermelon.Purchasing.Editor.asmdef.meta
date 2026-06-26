@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 29825676deb3eaa43a45a8a32ccb0b63
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Purchasing/Scripts/Editor/Watermelon.Purchasing.Editor.asmdef
+  uploadId: 941274

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2de5db21211795c46a4e2b71c7ea1771
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: v1.2.1
+  assetPath: Assets/Project Files/Modules/Advertisement/Scripts/Runtime/ConsentRequirementStatus.cs
+  uploadId: 941274
