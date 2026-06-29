@@ -50,13 +50,23 @@ namespace Watermelon
                 return;
             }
 
-            helperBehavior.HelperUnlocked += OnHelperUnlocked;
+            if (!helperBehavior.WaitForExternalRelease)
+            {
+                Debug.LogError("[Guarded Helper Mission] Enable 'Wait For External Release' on the linked helper.", helperBehavior);
+                return;
+            }
+
+            helperBehavior.OpeningAreaUnlocked += OnOpeningAreaUnlocked;
             encounter.EnemyDied += OnEnemyDied;
 
-            var startLocked = !helperBehavior.IsOpened;
+            var startLocked = !helperBehavior.IsOpened && !helperBehavior.IsOpeningAreaUnlocked;
 
             if (!encounter.Begin(startLocked))
+            {
+                helperBehavior.OpeningAreaUnlocked -= OnOpeningAreaUnlocked;
+                encounter.EnemyDied -= OnEnemyDied;
                 return;
+            }
 
             StartMission();
         }
@@ -66,7 +76,7 @@ namespace Watermelon
             base.Deactivate();
 
             if (helperBehavior != null)
-                helperBehavior.HelperUnlocked -= OnHelperUnlocked;
+                helperBehavior.OpeningAreaUnlocked -= OnOpeningAreaUnlocked;
 
             if (encounter != null)
             {
@@ -75,9 +85,9 @@ namespace Watermelon
             }
         }
 
-        private void OnHelperUnlocked()
+        private void OnOpeningAreaUnlocked()
         {
-            helperBehavior.HelperUnlocked -= OnHelperUnlocked;
+            helperBehavior.OpeningAreaUnlocked -= OnOpeningAreaUnlocked;
 
             isDirty = true;
             encounter.UnlockCombat();
@@ -85,6 +95,12 @@ namespace Watermelon
 
         private void OnEnemyDied()
         {
+            if (!helperBehavior.IsOpened && !helperBehavior.TryRelease())
+            {
+                Debug.LogError("[Guarded Helper Mission] Helper cannot be released before its opening area is unlocked.", helperBehavior);
+                return;
+            }
+
             isDirty = true;
             FinishMission();
         }

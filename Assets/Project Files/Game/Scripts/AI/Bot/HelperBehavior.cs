@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using Watermelon.AI;
@@ -43,6 +43,11 @@ namespace Watermelon
         [ShowIf("specialOpeningLogic")]
         [BoxGroup("Opening")]
         [SerializeField] AnimationClip openingAnimation;
+
+        [ShowIf("specialOpeningLogic")]
+        [BoxGroup("Opening")]
+        [SerializeField] bool waitForExternalRelease;
+        public bool WaitForExternalRelease => waitForExternalRelease;
 
         [BoxGroup("Settings")]
         [SerializeField] HelperTaskType availableTasks;
@@ -118,7 +123,13 @@ namespace Watermelon
 
         private bool isInitialised;
 
+        private bool isOpeningAreaUnlocked;
+        public bool IsOpeningAreaUnlocked => isOpeningAreaUnlocked;
+
+        private bool isOpeningCompleted;
+
         public event SimpleCallback HelperUnlocked;
+        public event SimpleCallback OpeningAreaUnlocked;
 
         private void Awake()
         {
@@ -138,6 +149,8 @@ namespace Watermelon
         public void OnWorldLoaded()
         {
             isInitialised = true;
+            isOpeningAreaUnlocked = false;
+            isOpeningCompleted = false;
 
             graphicsHolder = new CharacterGraphicsHolder<HelperGraphics>();
             graphicsHolder.Initialise(this);
@@ -156,9 +169,11 @@ namespace Watermelon
         {
             if (helperSave.IsOpened)
             {
+                isOpeningAreaUnlocked = true;
+
                 navMeshAgentBehaviour.Warp(GetRestPosition());
 
-                OnLinkedElementOpened();
+                CompleteOpening(false);
             }
             else
             {
@@ -194,10 +209,13 @@ namespace Watermelon
                     }
 
                     CheckIfLinkedElementsOpened();
+
+                    if (isOpeningAreaUnlocked)
+                        UnsubscribeFromOpeningSources();
                 }
                 else
                 {
-                    OnLinkedElementOpened();
+                    OnOpeningAreaUnlocked();
                 }
             }
         }
@@ -213,10 +231,8 @@ namespace Watermelon
 
         private void CheckIfLinkedElementsOpened()
         {
-            if(IsAnyLinkedElementsOpened())
-            {
-                OnLinkedElementOpened();
-            }
+            if (!isOpeningAreaUnlocked && IsAnyLinkedElementsOpened())
+                OnOpeningAreaUnlocked();
         }
 
         private bool IsAnyLinkedElementsOpened()
@@ -246,16 +262,47 @@ namespace Watermelon
             return false;
         }
 
-        private void OnLinkedElementOpened()
+        private void OnOpeningAreaUnlocked()
         {
+            if (isOpeningAreaUnlocked)
+                return;
+
+            isOpeningAreaUnlocked = true;
+
+            UnsubscribeFromOpeningSources();
+
+            OpeningAreaUnlocked?.Invoke();
+
+            if (!waitForExternalRelease)
+                TryRelease();
+        }
+
+        public bool TryRelease()
+        {
+            if (isOpeningCompleted)
+                return true;
+
+            if (!isInitialised || helperSave == null || !isOpeningAreaUnlocked)
+                return false;
+
+            CompleteOpening(true);
+
+            return true;
+        }
+
+        private void CompleteOpening(bool notify)
+        {
+            if (isOpeningCompleted)
+                return;
+
+            isOpeningCompleted = true;
+
             if (disableObjectIfZoneIsLocked)
             {
                 gameObject.SetActive(true);
 
                 graphicsHolder.PlaySpawnAnimation();
             }
-
-            HelperUnlocked?.Invoke();
 
             helperSave.IsOpened = true;
 
@@ -264,6 +311,12 @@ namespace Watermelon
 
             DisableWaitingAnimation();
 
+            if (notify)
+                HelperUnlocked?.Invoke();
+        }
+
+        private void UnsubscribeFromOpeningSources()
+        {
             if (!linkedTiles.IsNullOrEmpty())
             {
                 foreach (GroundTileComplexBehavior linkedTile in linkedTiles)

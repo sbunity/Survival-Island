@@ -57665,6 +57665,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5590122855066601616, guid: 4290a228a2b18ee42b49a8c8340bd4e9,
         type: 3}
+      propertyPath: waitForExternalRelease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590122855066601616, guid: 4290a228a2b18ee42b49a8c8340bd4e9,
+        type: 3}
       propertyPath: botInventory.maxCapacity
       value: 40
       objectReference: {fileID: 0}
