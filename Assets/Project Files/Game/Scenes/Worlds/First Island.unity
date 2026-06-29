@@ -34974,6 +34974,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefba80d2d74b2240a8cc06c16950d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &855640418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855640419}
+  - component: {fileID: 855640420}
+  m_Layer: 0
+  m_Name: GuardedSkeletonEncounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &855640419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855640418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -35.85, y: -0.45, z: -23.18257}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780791335}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &855640420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855640418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ce58dc8785c5c439d11c0eaa28aaef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.GuardedSkeletonEncounter
+  spawnPoint: {fileID: 0}
+  stateMachineHandoffDistance: 4.5
 --- !u!1001 &856103899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57247,7 +57293,7 @@ Transform:
   - {fileID: 985329894}
   - {fileID: 15770474}
   - {fileID: 1918839487}
-  - {fileID: 1792338066}
+  - {fileID: 1568093621}
   - {fileID: 2054989353}
   - {fileID: 1964281675}
   - {fileID: 1752380779}
@@ -57665,7 +57711,7 @@ PrefabInstance:
     - target: {fileID: 7104437094078566006, guid: 4290a228a2b18ee42b49a8c8340bd4e9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.26
+      value: -34.53
       objectReference: {fileID: 0}
     - target: {fileID: 7104437094078566006, guid: 4290a228a2b18ee42b49a8c8340bd4e9,
         type: 3}
@@ -66054,6 +66100,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567058099}
   m_CullTransparentMesh: 1
+--- !u!1 &1568093620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568093621}
+  - component: {fileID: 1568093622}
+  m_Layer: 0
+  m_Name: M #11 - save helper #1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1568093621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568093620}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568093622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568093620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1301d901d2658643b17c1bda19c0072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.GuardedHelperMission
+  id: abe860c2-dd08-4e80-b7a7-931a4a1a8ac8
+  title: Save team crew
+  rewardType: 2
+  resourceReward:
+    currencyType: 0
+    amount: 0
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU CAN BUILD
+      previewIcon: {fileID: 21300000, guid: c1166737247b7aa4d9e598a44ccdae8c, type: 3}
+      mainText: RESOURCE STORAGE
+      buttonText: OKAY
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  helperBehavior: {fileID: 1327118833}
+  encounter: {fileID: 855640420}
 --- !u!1001 &1568522817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75506,6 +75635,7 @@ Transform:
   - {fileID: 51549155}
   - {fileID: 1745136080}
   - {fileID: 722457822}
+  - {fileID: 855640419}
   m_Father: {fileID: 2625476478768325108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787618243 stripped
@@ -75705,88 +75835,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1788236033}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1792338065
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1792338066}
-  - component: {fileID: 1792338067}
-  m_Layer: 0
-  m_Name: M #11 - helper #1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1792338066
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792338065}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1318192806}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1792338067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792338065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699b14d21088d304f8097d1738182b2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 4b6a60ad-4349-4bac-b28f-a95242e099fa
-  title: Save another survivor
-  rewardType: 2
-  resourceReward:
-    currencyType: 0
-    amount: 0
-  toolsReward:
-    interactionToUnlock: 0
-    uiRewardInfo:
-      headerText: YOU UNLOCKED
-      previewIcon: {fileID: 0}
-      mainText: 
-      buttonText: AWESOME
-  genericReward:
-    uiRewardInfo:
-      headerText: YOU CAN BUILD
-      previewIcon: {fileID: 21300000, guid: c1166737247b7aa4d9e598a44ccdae8c, type: 3}
-      mainText: RESOURCE STORAGE
-      buttonText: OKAY
-  useCustomTargetPosition: 0
-  customTargetPosition: {fileID: 0}
-  cameraPreviewAtStart: 0
-  showPositionPointer: 1
-  pointerPositionOffset: {x: 0, y: 4, z: 0}
-  showGuidingLine: 0
-  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
-  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
-  isTargetInSubworld: 0
-  subworldEntrance: {fileID: 0}
-  subworldBehavior: {fileID: 0}
-  onMissionStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onMissionCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  helperBehavior: {fileID: 1327118833}
 --- !u!1001 &1797956778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91778,7 +91826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredMissionId: 4b6a60ad-4349-4bac-b28f-a95242e099fa
+  requiredMissionId: abe860c2-dd08-4e80-b7a7-931a4a1a8ac8
 --- !u!1001 &7656147523151992326
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,6 +21,7 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.EnergyController.EnergySave), "Watermelon.EnergyController+EnergySave");
             SaveKeyMap.Register(typeof(Watermelon.GlobalUpgrades.UpgradeSavableObject), "Watermelon.GlobalUpgrades.UpgradeSavableObject");
             SaveKeyMap.Register(typeof(Watermelon.GroundUnlockMission.Save), "Watermelon.GroundUnlockMission+Save");
+            SaveKeyMap.Register(typeof(Watermelon.GuardedHelperMission.Save), "Watermelon.GuardedHelperMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.HapticSave), "Watermelon.HapticSave");
             SaveKeyMap.Register(typeof(Watermelon.HelperMission.Save), "Watermelon.HelperMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.HelperSave), "Watermelon.HelperSave");
