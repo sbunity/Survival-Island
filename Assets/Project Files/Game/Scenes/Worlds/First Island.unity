@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 7540370}
   - component: {fileID: 7540371}
   m_Layer: 0
-  m_Name: M #36 - planks craft building
+  m_Name: M #37 - planks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +614,7 @@ GameObject:
   - component: {fileID: 15770474}
   - component: {fileID: 15770475}
   m_Layer: 0
-  m_Name: M #08 - craft scissors
+  m_Name: M #09 - craft scissors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4163,7 +4163,7 @@ GameObject:
   - component: {fileID: 122126396}
   - component: {fileID: 122126397}
   m_Layer: 0
-  m_Name: M #25 - cooking place 2 building
+  m_Name: M #26 - cooking place 2 building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5030,7 +5030,7 @@ GameObject:
   - component: {fileID: 137583847}
   - component: {fileID: 137583848}
   m_Layer: 0
-  m_Name: M #37 - raft construction
+  m_Name: M #38 - raft construction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5601,7 +5601,7 @@ GameObject:
   - component: {fileID: 147546715}
   - component: {fileID: 147546716}
   m_Layer: 0
-  m_Name: M #38 - leave the island
+  m_Name: M #39 - leave the island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5888,7 +5888,7 @@ GameObject:
   - component: {fileID: 153406381}
   - component: {fileID: 153406382}
   m_Layer: 0
-  m_Name: M #17 - wood gen building
+  m_Name: M #18 - wood gen building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10341,7 +10341,7 @@ GameObject:
   - component: {fileID: 261071232}
   - component: {fileID: 261071233}
   m_Layer: 0
-  m_Name: M #27 - bricks craft building
+  m_Name: M #28 - bricks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10735,7 +10735,7 @@ GameObject:
   - component: {fileID: 269448811}
   - component: {fileID: 269448812}
   m_Layer: 0
-  m_Name: M #06 - jam cooking
+  m_Name: M #07 - jam cooking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16201,7 +16201,7 @@ GameObject:
   - component: {fileID: 362938667}
   - component: {fileID: 362938668}
   m_Layer: 0
-  m_Name: M #33 - cooking place 3 building
+  m_Name: M #34 - cooking place 3 building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18154,7 +18154,7 @@ GameObject:
   - component: {fileID: 422921082}
   - component: {fileID: 422921083}
   m_Layer: 0
-  m_Name: M #03 - tent building
+  m_Name: M #02 - tent building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19933,7 +19933,7 @@ GameObject:
   - component: {fileID: 475948696}
   - component: {fileID: 475948697}
   m_Layer: 0
-  m_Name: M #15 - upg craft speed
+  m_Name: M #16 - upg craft speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20424,7 +20424,7 @@ GameObject:
   - component: {fileID: 494353321}
   - component: {fileID: 494353322}
   m_Layer: 0
-  m_Name: M #18 - cooking place upgrade
+  m_Name: M #19 - cooking place upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23208,7 +23208,7 @@ GameObject:
   - component: {fileID: 560373834}
   - component: {fileID: 560373835}
   m_Layer: 0
-  m_Name: M #01 - wood harvest
+  m_Name: M #03 - wood harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24358,7 +24358,7 @@ GameObject:
   - component: {fileID: 584256488}
   - component: {fileID: 584256489}
   m_Layer: 0
-  m_Name: M #21 - grass harvest
+  m_Name: M #22 - grass harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25011,7 +25011,7 @@ GameObject:
   - component: {fileID: 604482800}
   - component: {fileID: 604482801}
   m_Layer: 0
-  m_Name: M #30 - ramp #1 build
+  m_Name: M #31 - ramp #1 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27331,7 +27331,7 @@ GameObject:
   - component: {fileID: 658929541}
   - component: {fileID: 658929542}
   m_Layer: 0
-  m_Name: M #26 - bridge #2
+  m_Name: M #27 - bridge #2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30050,7 +30050,7 @@ GameObject:
   - component: {fileID: 735787372}
   - component: {fileID: 735787373}
   m_Layer: 0
-  m_Name: M #16 - coconut harvest
+  m_Name: M #17 - coconut harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36100,7 +36100,7 @@ GameObject:
   - component: {fileID: 886913863}
   - component: {fileID: 886913864}
   m_Layer: 0
-  m_Name: M #28 - craft bricks
+  m_Name: M #29 - craft bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40991,7 +40991,7 @@ GameObject:
   - component: {fileID: 985329894}
   - component: {fileID: 985329895}
   m_Layer: 0
-  m_Name: M #07 - scissors craft table building
+  m_Name: M #08 - scissors craft table building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44537,7 +44537,7 @@ GameObject:
   - component: {fileID: 1044371288}
   - component: {fileID: 1044371289}
   m_Layer: 0
-  m_Name: M #24 - fishing
+  m_Name: M #25 - fishing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47926,7 +47926,7 @@ GameObject:
   - component: {fileID: 1094698899}
   - component: {fileID: 1094698900}
   m_Layer: 0
-  m_Name: M #34 - ramp #2 build
+  m_Name: M #35 - ramp #2 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49591,7 +49591,7 @@ GameObject:
   - component: {fileID: 1116972647}
   - component: {fileID: 1116972648}
   m_Layer: 0
-  m_Name: M #14 - food storage building
+  m_Name: M #15 - food storage building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49673,7 +49673,7 @@ GameObject:
   - component: {fileID: 1118120859}
   - component: {fileID: 1118120860}
   m_Layer: 0
-  m_Name: M #02 - stone harvest
+  m_Name: M #04 - stone harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50867,7 +50867,7 @@ GameObject:
   - component: {fileID: 1156361327}
   - component: {fileID: 1156361328}
   m_Layer: 0
-  m_Name: M #35 - stone generator building
+  m_Name: M #36 - stone generator building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55429,7 +55429,7 @@ GameObject:
   - component: {fileID: 1279860151}
   - component: {fileID: 1279860152}
   m_Layer: 0
-  m_Name: M #23 - fishing rod recipe
+  m_Name: M #24 - fishing rod recipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57237,9 +57237,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2098669971}
+  - {fileID: 422921082}
   - {fileID: 560373834}
   - {fileID: 1118120859}
-  - {fileID: 422921082}
   - {fileID: 1423833718}
   - {fileID: 1351028547}
   - {fileID: 269448811}
@@ -58687,7 +58688,7 @@ GameObject:
   - component: {fileID: 1351028547}
   - component: {fileID: 1351028548}
   m_Layer: 0
-  m_Name: M #05 - berries harvest
+  m_Name: M #06 - berries harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61028,7 +61029,7 @@ GameObject:
   - component: {fileID: 1423833718}
   - component: {fileID: 1423833719}
   m_Layer: 0
-  m_Name: M #04 - cooking place building
+  m_Name: M #05 - cooking place building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63839,7 +63840,7 @@ GameObject:
   - component: {fileID: 1524860581}
   - component: {fileID: 1524860582}
   m_Layer: 0
-  m_Name: M #20 - helper #2
+  m_Name: M #21 - helper #2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74960,7 +74961,7 @@ GameObject:
   - component: {fileID: 1752380779}
   - component: {fileID: 1752380780}
   m_Layer: 0
-  m_Name: M #13 - upg player speed
+  m_Name: M #14 - upg player speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75715,7 +75716,7 @@ GameObject:
   - component: {fileID: 1792338066}
   - component: {fileID: 1792338067}
   m_Layer: 0
-  m_Name: M #10 - helper #1
+  m_Name: M #11 - helper #1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79363,7 +79364,7 @@ GameObject:
   - component: {fileID: 1859535999}
   - component: {fileID: 1859536000}
   m_Layer: 0
-  m_Name: M #32 - pumpkins harvest
+  m_Name: M #33 - pumpkins harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79713,7 +79714,7 @@ GameObject:
   - component: {fileID: 1862503693}
   - component: {fileID: 1862503694}
   m_Layer: 0
-  m_Name: M #19 - cook new food
+  m_Name: M #20 - cook new food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81670,7 +81671,7 @@ GameObject:
   - component: {fileID: 1918839487}
   - component: {fileID: 1918839488}
   m_Layer: 0
-  m_Name: M #09 - clean the land
+  m_Name: M #10 - clean the land
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82699,7 +82700,7 @@ GameObject:
   - component: {fileID: 1964281675}
   - component: {fileID: 1964281676}
   m_Layer: 0
-  m_Name: M #12 - upg craft storage
+  m_Name: M #13 - upg craft storage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83936,7 +83937,7 @@ GameObject:
   - component: {fileID: 1989989903}
   - component: {fileID: 1989989904}
   m_Layer: 0
-  m_Name: M #31 - find pumpkins
+  m_Name: M #32 - find pumpkins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84252,7 +84253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredMissionId: bfb5ea19-371c-4684-8553-4ea61e501344
+  requiredMissionId: 7eeabcff-440c-4044-b49c-107a0596abde
 --- !u!1 &1999752522
 GameObject:
   m_ObjectHideFlags: 0
@@ -85979,7 +85980,7 @@ GameObject:
   - component: {fileID: 2041146394}
   - component: {fileID: 2041146395}
   m_Layer: 0
-  m_Name: M #22 - rope craft building
+  m_Name: M #23 - rope craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87293,7 +87294,7 @@ GameObject:
   - component: {fileID: 2054989353}
   - component: {fileID: 2054989354}
   m_Layer: 0
-  m_Name: M #11 - res storage
+  m_Name: M #12 - res storage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88972,7 +88973,7 @@ GameObject:
   - component: {fileID: 2093265913}
   - component: {fileID: 2093265914}
   m_Layer: 0
-  m_Name: M #29 - upg player harvest
+  m_Name: M #30 - upg player harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89277,6 +89278,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389001e3b23ffd04c9af8b7e293ac352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2098669970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2098669971}
+  - component: {fileID: 2098669972}
+  m_Layer: 0
+  m_Name: M #01 - loot the shipwreck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2098669971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098669970}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2098669972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098669970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726193bac78865746b1d68e898eba703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ShipwreckLootMission
+  id: b4b4d0f4-2c15-40bf-a837-d9d8466263bd
+  title: Loot the shipwreck
+  rewardType: 0
+  resourceReward:
+    currencyType: 0
+    amount: 10
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  shipwreckLoot: {fileID: 1836896734}
 --- !u!1001 &2100537620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89781,7 +89864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredMissionId: 7eeabcff-440c-4044-b49c-107a0596abde
+  requiredMissionId: b4b4d0f4-2c15-40bf-a837-d9d8466263bd
 --- !u!114 &2112527457 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2585449629886448675, guid: ade2243f7bee35646a321dabf0dcb566,
