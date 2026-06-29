@@ -28,6 +28,7 @@ namespace Watermelon
         [SerializeField] Animator animator;
         [BoxFoldout("Refs", label: "References")]
         [SerializeField] NavMeshAgent agent;
+        protected NavMeshAgent Agent => agent;
         [BoxFoldout("Refs", label: "References")]
         [SerializeField] Renderer bodyRenderer;
         [BoxFoldout("Refs", label: "References")]

@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Watermelon.Enemy.Skeleton
 {
-    public class SkeletonIdleState: StateBehavior<SkeletonEnemyBehavior>
+    public class SkeletonIdleState : StateBehavior<SkeletonEnemyBehavior>
     {
         public SkeletonIdleState(SkeletonEnemyBehavior skeleton) : base(skeleton)
         {
-            
+
         }
 
         public override void OnUpdate()
@@ -25,7 +25,53 @@ namespace Watermelon.Enemy.Skeleton
                 Target.transform.rotation = Quaternion.Lerp(Target.transform.rotation, Target.SpawnPoint.rotation, Time.deltaTime * 5);
             }
         }
-        
+    }
+
+    public class SkeletonPatrolState : StateBehavior<SkeletonEnemyBehavior>
+    {
+        private bool isMoving;
+        private int destinationSetFrame;
+        private float nextDestinationTime;
+
+        public SkeletonPatrolState(SkeletonEnemyBehavior skeleton) : base(skeleton)
+        {
+
+        }
+
+        public override void OnStart()
+        {
+            Target.StopMoving();
+            TryStartMoving();
+        }
+
+        public override void OnUpdate()
+        {
+            if (isMoving)
+            {
+                if (Time.frameCount == destinationSetFrame || !Target.IsPatrolPointReached())
+                    return;
+
+                isMoving = false;
+                nextDestinationTime = Time.time + Target.GetPatrolWaitDuration();
+            }
+
+            if (Time.time >= nextDestinationTime)
+                TryStartMoving();
+        }
+
+        public override void OnEnd()
+        {
+            Target.StopMoving();
+        }
+
+        private void TryStartMoving()
+        {
+            isMoving = Target.TryMoveToRandomPatrolPoint();
+            destinationSetFrame = Time.frameCount;
+
+            if (!isMoving)
+                nextDestinationTime = Time.time + Target.PatrolRetryDelay;
+        }
     }
 
     public class SkeletonAttackState : StateBehavior<SkeletonEnemyBehavior>
@@ -40,6 +86,9 @@ namespace Watermelon.Enemy.Skeleton
         public override void OnStart()
         {
             IsAttacking = false;
+
+            if (PlayerBehavior.GetBehavior() != null)
+                Target.MoveToPlayer();
         }
 
         public override void OnUpdate()
