@@ -14,12 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worlds:
   - scene:
+      scene: {fileID: 102900000, guid: d3a6a146325d3bc4f9276d25a5964d38, type: 3}
+      path: Assets/Project Files/Game/Scenes/Worlds/First Island.unity
+      name: First Island
+    id: d89f969c-bed9-4d47-8dba-48ef683c36f2
+  - scene:
       scene: {fileID: 102900000, guid: 099600eb61093244fbc0ea52b433e03d, type: 3}
       path: Assets/Project Files/Game/Scenes/Worlds/World 1 [Full Demo].unity
-      name: World 1 [Full Demo]
+      name: 'World 1 [Full Demo]'
     id: world1
   - scene:
       scene: {fileID: 102900000, guid: b987323407a93a541963884fe5cb7501, type: 3}
       path: Assets/Project Files/Game/Scenes/Worlds/World 2 [Alt Demo].unity
-      name: World 2 [Alt Demo]
+      name: 'World 2 [Alt Demo]'
     id: world2
