@@ -180,7 +180,7 @@ namespace Watermelon
 
         private void Update()
         {
-            if (conversionDuration <= 0 && !outStorage.IsFull() && inStorage.HasResources(recipe))
+            if (IsOperational && conversionDuration <= 0 && !outStorage.IsFull() && inStorage.HasResources(recipe))
             {
                 inStorage.RemoveResource(recipe);
                 outStorage.AddResources(recipe.ResultResourceType);
@@ -193,6 +193,12 @@ namespace Watermelon
             WaitForSeconds pointTwoSeconds = new WaitForSeconds(0.2f);
             while (true)
             {
+                if (!IsOperational)
+                {
+                    yield return pointTwoSeconds;
+                    continue;
+                }
+
                 if (outStorage.IsFull() || inStorage.IsEmpty() || !inStorage.HasResources(recipe))
                 {
                     outStorageResourceCanvas.ResourceUIList[0].SetFillState(0f);
@@ -213,6 +219,9 @@ namespace Watermelon
                     yield return null;
 
                     if (shouldResetConversion) break;
+
+                    if (!IsOperational)
+                        continue;
 
                     time += Time.deltaTime;
 
@@ -257,6 +266,17 @@ namespace Watermelon
             conversionDuration = ConversionDurationUpgrade.CurrentStage.Value;
 
             ConversionDurationUpgrade.OnUpgraded += OnDurationUpgraded;
+        }
+
+        protected override void OnOperationalStateChanged(bool isOperational)
+        {
+            if (storingTask == null)
+                return;
+
+            if (isOperational)
+                storingTask.Activate();
+            else
+                storingTask.Disable();
         }
     }
 }

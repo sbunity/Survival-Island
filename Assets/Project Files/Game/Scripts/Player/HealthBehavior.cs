@@ -56,6 +56,14 @@ namespace Watermelon
             NotifyHealthChanged();
         }
 
+        public void ConfigureRegeneration(bool enabled, float delay, float amountPerSecond)
+        {
+            enableRegeneration = enabled;
+            regenerationDelay = Mathf.Max(0f, delay);
+            regenerationPerSecond = Mathf.Max(0f, amountPerSecond);
+            regenerationAllowedTime = Time.time + regenerationDelay;
+        }
+
         private void Update()
         {
             if (healthbar != null)

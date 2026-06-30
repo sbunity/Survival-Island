@@ -410,6 +410,12 @@ namespace Watermelon.AI
 
         public override void OnUpdate()
         {
+            if (target.ActiveTask == null || !target.ActiveTask.IsActive || !targetStorage.IsOperational)
+            {
+                InvokeOnFinished();
+                return;
+            }
+
             if(targetStorage.IsFull)
             {
                 InvokeOnFinished();
@@ -489,6 +495,12 @@ namespace Watermelon.AI
 
         public override void OnUpdate()
         {
+            if (target.ActiveTask == null || !target.ActiveTask.IsActive || !targetStorage.IsOperational)
+            {
+                InvokeOnFinished();
+                return;
+            }
+
             if (targetStorage.InStorage.IsFull())
             {
                 InvokeOnFinished();

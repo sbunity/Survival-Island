@@ -63,6 +63,7 @@ namespace Watermelon
         private void Awake()
         {
             boxCollider = GetComponent<BoxCollider>();
+            canvasDefaultScale = canvas.transform.localScale;
         }
 
         public bool Init(IUnlockableComplex unlockableComplex)
@@ -76,7 +77,7 @@ namespace Watermelon
 
             if (save.IsBought || HitsMade >= unlockableComplex.ConstructionHitsRequired)
             {
-                Destroy();
+                Complete();
                 return false;
             }
 
@@ -86,8 +87,6 @@ namespace Watermelon
                 constructionIconImage.sprite = interactionData.InteractionIcon;
             }
             progressText.text = string.Format(textFormat, HitsMade, unlockableComplex.ConstructionHitsRequired);
-            canvasDefaultScale = canvas.transform.localScale;
-
             // Add object to distance toggle
             DistanceToggle.AddObject(this);
 
@@ -102,10 +101,7 @@ namespace Watermelon
 
         public bool LookUpConstructed(IUnlockableComplex unlockableComplex)
         {
-            if (save == null)
-            {
-                save = SaveController.GetSaveObject<ConstructingPointSave>(LinkedWorldBehavior.WorldData.ID, unlockableComplex.ID + "_building_point");
-            }
+            save ??= SaveController.GetSaveObject<ConstructingPointSave>(LinkedWorldBehavior.WorldData.ID, unlockableComplex.ID + "_building_point");
 
             return save.IsBought || HitsMade >= unlockableComplex.ConstructionHitsRequired;
         }
@@ -117,7 +113,7 @@ namespace Watermelon
 
         public void OnWorldUnloaded()
         {
-
+            Complete();
         }
 
         public override void GetHit(Vector3 hitSourcePosition, bool drop, IHitter resourcePicked = null)
@@ -167,6 +163,9 @@ namespace Watermelon
         {
             IsActive = true;
 
+            if (boxCollider != null)
+                boxCollider.enabled = true;
+
             // the next 2 fields responcible for canvas hiding and showing depending on player's position
             DistanceToggleActivated = true;
             IsDistanceToggleInCloseMode = false;
@@ -178,6 +177,9 @@ namespace Watermelon
         {
             IsActive = false;
 
+            if (boxCollider != null)
+                boxCollider.enabled = false;
+
             // the next 2 fields responcible for canvas hiding and showing depending on player's position
             DistanceToggleActivated = false;
             IsDistanceToggleInCloseMode = false;
@@ -185,18 +187,38 @@ namespace Watermelon
             canvas.gameObject.SetActive(false);
         }
 
-        public void Destroy()
+        public void Complete()
         {
-            // remove object from distance toggle system
             DistanceToggle.RemoveObject(this);
 
             if (constructionTask != null)
             {
                 constructionTask.Disable();
                 constructionTask.Destroy();
+                constructionTask = null;
             }
 
-            Destroy(gameObject);
+            canvasAppearCase.KillActive();
+            canvas.transform.localScale = canvasDefaultScale;
+            Disable();
+        }
+
+        public void ResetForReconstruction(IUnlockableComplex unlockableComplex)
+        {
+            UnlocableComplex = unlockableComplex;
+
+            save ??= SaveController.GetSaveObject<ConstructingPointSave>(LinkedWorldBehavior.WorldData.ID, unlockableComplex.ID + "_building_point");
+
+            save.Value = 0;
+            save.IsBought = false;
+
+            progressText.text = string.Format(textFormat, 0, unlockableComplex.ConstructionHitsRequired);
+            Complete();
+        }
+
+        public void Destroy()
+        {
+            Complete();
         }
 
         public void PlayerEnteredZone()
@@ -221,10 +243,7 @@ namespace Watermelon
             });
         }
 
-        public Sprite GetConstructionIcon()
-        {
-            return constructionIconImage.sprite;
-        }
+        public Sprite GetConstructionIcon() => constructionIconImage.sprite;
 
         #region Development
 

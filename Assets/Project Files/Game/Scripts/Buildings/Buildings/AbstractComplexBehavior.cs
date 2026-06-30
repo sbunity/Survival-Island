@@ -36,9 +36,9 @@ namespace Watermelon
 
         public ResourcesList CostLeft => purchaser.CostLeft;
 
-        public bool CanBePurchased { get; private set; }
-        public bool CanBeConstructed { get; private set; }
-        public bool IsOpen { get; private set; }
+        public bool CanBePurchased { get; protected set; }
+        public bool CanBeConstructed { get; protected set; }
+        public bool IsOpen { get; protected set; }
 
         protected bool isInitialised;
         private SimpleCallback initialisedCallback;
@@ -235,12 +235,45 @@ namespace Watermelon
         {
             if (!CanBeConstructed) return;
 
-            constructionPoint.Destroy();
+            constructionPoint.Complete();
 
             CanBePurchased = false;
             CanBeConstructed = false;
             IsOpen = true;
 
+            unlockable.FullyUnlock();
+        }
+
+        protected void InitialiseReconstruction(bool resetProgress)
+        {
+            IsOpen = false;
+            CanBePurchased = false;
+            CanBeConstructed = false;
+
+            if (resetProgress)
+            {
+                purchaser?.ResetForReconstruction(this);
+                constructionPoint?.ResetForReconstruction(this);
+            }
+
+            if (purchaser != null && purchaser.Init(this))
+            {
+                CanBePurchased = true;
+
+                if (constructionPoint != null)
+                    constructionPoint.Disable();
+
+                return;
+            }
+
+            if (constructionPoint != null && constructionPoint.Init(this))
+            {
+                CanBeConstructed = true;
+                constructionPoint.Enable();
+                return;
+            }
+
+            IsOpen = true;
             unlockable.FullyUnlock();
         }
 
