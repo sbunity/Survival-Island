@@ -1,8 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Watermelon;
-using System.Collections.Generic;
 
 namespace Watermelon
 {
@@ -24,86 +22,45 @@ namespace Watermelon
         [SerializeField] Color standartHealthbarColor;
 
         private IHealth targetHealth;
-        private Transform parentTransform;
-        private bool showAlways;
 
         private bool isInitialised;
-        private bool isPanelActive;
 
         private bool isDisabled;
         public bool IsDisabled => isDisabled;
 
-        private TweenCase maskTweenCase;
-        private TweenCase panelTweenCase;
         private TweenCase fadeTweenCase;
 
         public void Initialise(Transform parentTransform, IHealth targetHealth, bool showAlways)
         {
             this.targetHealth = targetHealth;
-            this.parentTransform = parentTransform;
-            this.showAlways = showAlways;
+
+            fadeTweenCase.KillActive();
 
             isDisabled = !showAlways;
-            isPanelActive = false;
 
-            // Reset bar parent
-            //healthBarTransform.SetParent(null);
             healthBarTransform.localPosition = HealthbarOffset;
             healthBarTransform.gameObject.SetActive(true);
+            healthBarCanvasGroup.gameObject.SetActive(true);
 
             healthFillImage.color = standartHealthbarColor;
-
-            // Redraw health
-            //RedrawHealth();
-
-            // Show or hide healthbar
             healthBarCanvasGroup.alpha = showAlways ? 1.0f : 0.0f;
+
+            RedrawHealth();
 
             isInitialised = true;
         }
 
         public void FollowUpdate()
         {
-            if (isInitialised)
-            {
-                //healthBarTransform.position = parentTransform.position + HealthbarOffset;
-                healthBarTransform.rotation = Camera.main.transform.rotation;
-            }
+            if (!isInitialised || Camera.main == null)
+                return;
+
+            healthBarTransform.rotation = Camera.main.transform.rotation;
         }
 
         public void OnHealthChanged()
         {
-            if (isDisabled)
-                return;
-
-            if (targetHealth == null)
-                return;
-
-            healthFillImage.fillAmount = targetHealth.CurrentHealth / targetHealth.MaxHealth;
-
-            maskTweenCase.KillActive();
-
-            maskTweenCase = maskFillImage.DOFillAmount(healthFillImage.fillAmount, 0.3f).SetEasing(Ease.Type.QuintIn);
-
-            if (!showAlways)
-            {
-                if (healthFillImage.fillAmount < 1.0f && !isPanelActive)
-                {
-                    isPanelActive = true;
-
-                    panelTweenCase.KillActive();
-
-                    panelTweenCase = healthBarCanvasGroup.DOFade(1.0f, 0.5f);
-                }
-                else if (healthFillImage.fillAmount >= 1.0f && isPanelActive)
-                {
-                    isPanelActive = false;
-
-                    panelTweenCase.KillActive();
-
-                    panelTweenCase = healthBarCanvasGroup.DOFade(0.0f, 0.5f);
-                }
-            }
+            RedrawHealth();
         }
 
         public void DisableBar()
@@ -129,6 +86,7 @@ namespace Watermelon
             isDisabled = false;
 
             healthBarTransform.gameObject.SetActive(true);
+            healthBarCanvasGroup.gameObject.SetActive(true);
 
             fadeTweenCase.KillActive();
             fadeTweenCase = healthBarCanvasGroup.DOFade(1.0f, 0.3f);
@@ -136,8 +94,13 @@ namespace Watermelon
 
         public void RedrawHealth()
         {
-            healthFillImage.fillAmount = targetHealth.CurrentHealth / targetHealth.MaxHealth;
-            maskFillImage.fillAmount = healthFillImage.fillAmount;
+            if (targetHealth == null)
+                return;
+
+            var fillAmount = targetHealth.MaxHealth > 0 ? targetHealth.CurrentHealth / targetHealth.MaxHealth : 0;
+
+            healthFillImage.fillAmount = fillAmount;
+            maskFillImage.fillAmount = fillAmount;
         }
 
         public void ForceDisable()
@@ -146,6 +109,7 @@ namespace Watermelon
 
             fadeTweenCase.KillActive();
 
+            healthBarCanvasGroup.alpha = 0;
             healthBarTransform.gameObject.SetActive(false);
             healthBarCanvasGroup.gameObject.SetActive(false);
         }
@@ -163,5 +127,4 @@ namespace Watermelon
         float CurrentHealth { get; }
         float MaxHealth { get; }
     }
-
 }
