@@ -817,6 +817,7 @@ GameObject:
   - component: {fileID: 18863362}
   - component: {fileID: 18863364}
   - component: {fileID: 18863363}
+  - component: {fileID: 18863365}
   m_Layer: 0
   m_Name: Tent Subworld
   m_TagString: Untagged
@@ -876,6 +877,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 836934276}
   helpersRestZone: {fileID: 0}
   helpersRestZoneSize: {x: 0, y: 0}
+  attackController: {fileID: 18863365}
   exits:
   - {fileID: 1725872944}
 --- !u!4 &18863361
@@ -895,6 +897,7 @@ Transform:
   - {fileID: 261196250}
   - {fileID: 1725872942}
   - {fileID: 836934276}
+  - {fileID: 2030088017}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &18863362
@@ -1026,6 +1029,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateAutomatically: 0
+--- !u!114 &18863365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18863358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfee41a4dbe288f4b8fc454842c30f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.BaseAttackController
+  defensePoint: {fileID: 2030088017}
+  defenseRadius: 15
+  alertCooldown: 5
 --- !u!1001 &22258441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3115,6 +3133,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389001e3b23ffd04c9af8b7e293ac352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &80865623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80865624}
+  m_Layer: 0
+  m_Name: Defense Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80865624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80865623}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3099976, y: 0, z: -23.79}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1820117117}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &81994898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3967498965958696906, guid: d1fb2b23a1d59dc4f8f482433275b3b6,
@@ -73303,6 +73352,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1728829931}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1728899278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728899279}
+  m_Layer: 0
+  m_Name: Defense Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1728899279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728899278}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -28.78, y: 0, z: -40.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2625476478768325108}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1730187497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78020,6 +78100,7 @@ GameObject:
   - component: {fileID: 1820117114}
   - component: {fileID: 1820117119}
   - component: {fileID: 1820117118}
+  - component: {fileID: 1820117120}
   m_Layer: 0
   m_Name: Cave Subworld
   m_TagString: Untagged
@@ -78103,6 +78184,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1544073180}
   helpersRestZone: {fileID: 0}
   helpersRestZoneSize: {x: 0, y: 0}
+  attackController: {fileID: 1820117120}
   exits:
   - {fileID: 79094325}
 --- !u!4 &1820117117
@@ -78123,6 +78205,7 @@ Transform:
   - {fileID: 1544073180}
   - {fileID: 259044426}
   - {fileID: 1559590263}
+  - {fileID: 80865624}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1820117118
@@ -78235,6 +78318,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateAutomatically: 0
+--- !u!114 &1820117120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820117113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfee41a4dbe288f4b8fc454842c30f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.BaseAttackController
+  defensePoint: {fileID: 80865624}
+  defenseRadius: 15
+  alertCooldown: 5
 --- !u!4 &1820374681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6283049097278459654, guid: 9b42a5e21aa070f48b89f1ae56ff71f9,
@@ -85800,6 +85898,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2028991963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2030088016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030088017}
+  m_Layer: 0
+  m_Name: Defense Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030088017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030088016}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.8959999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 18863361}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2030721811 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
@@ -88066,6 +88195,7 @@ GameObject:
   - component: {fileID: 2625476478768325110}
   - component: {fileID: 2625476478768325112}
   - component: {fileID: 2625476478768325113}
+  - component: {fileID: 2625476478768325114}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -91809,12 +91939,13 @@ MonoBehaviour:
   spawnPoint: {fileID: 247124221}
   helpersRestZone: {fileID: 71126579}
   helpersRestZoneSize: {x: 3.74, y: 2.64}
+  attackController: {fileID: 2625476478768325114}
   missionsHolder: {fileID: 1318192805}
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 1820117116}
     - {fileID: 18863360}
+    - {fileID: 1820117116}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
@@ -91851,6 +91982,7 @@ Transform:
   - {fileID: 1943672266}
   - {fileID: 1780791335}
   - {fileID: 817708189}
+  - {fileID: 1728899279}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2625476478768325109
@@ -92001,6 +92133,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5250148884a4a3e44a908e61116312a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2625476478768325114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070534942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfee41a4dbe288f4b8fc454842c30f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.BaseAttackController
+  defensePoint: {fileID: 1728899279}
+  defenseRadius: 15
+  alertCooldown: 5
 --- !u!4 &4213884168711787106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2964358188841591061, guid: ac20425b8ea2c854292180d3faea72fb,
