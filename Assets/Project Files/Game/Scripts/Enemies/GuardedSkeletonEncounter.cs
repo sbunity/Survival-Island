@@ -56,6 +56,8 @@ namespace Watermelon
 
             enemy.OnDeath += OnEnemyDied;
             enemy.Spawn(spawnPoint != null ? spawnPoint : transform);
+            enemy.SetForcedTarget(PlayerBehavior.GetBehavior());
+            enemy.SetTargetDamageEnabled(!startLocked);
 
             SetEnemyHittable(isCombatUnlocked);
 
@@ -80,6 +82,7 @@ namespace Watermelon
             isCombatUnlocked = true;
 
             StopLockedAttackLoop();
+            enemy.SetTargetDamageEnabled(true);
             SetEnemyHittable(true);
 
             if (isSpawnAnimationCompleted)
@@ -96,6 +99,8 @@ namespace Watermelon
             if (enemy != null)
             {
                 enemy.OnDeath -= OnEnemyDied;
+                enemy.ClearForcedTarget();
+                enemy.SetTargetDamageEnabled(true);
                 SetEnemyHittable(true);
 
                 if (!enemy.IsDead)
@@ -144,6 +149,7 @@ namespace Watermelon
                 stateMachine.StopMachine();
 
             enemy.StopMoving();
+            enemy.SetTargetDamageEnabled(false);
 
             if (!isLockedAttackLoopActive)
             {
@@ -184,17 +190,14 @@ namespace Watermelon
 
         private void UpdateAggroHandoff(bool forceDestinationUpdate = false)
         {
-            var player = PlayerBehavior.GetBehavior();
-
-            if (player == null || player.IsDead)
+            enemy.RefreshTargetSelection(forceDestinationUpdate);
+            if (!enemy.HasAvailableTarget())
             {
                 enemy.StopMoving();
                 return;
             }
 
-            var distanceToPlayer = Vector3.Distance(enemy.transform.position, PlayerBehavior.Position);
-
-            if (distanceToPlayer <= stateMachineHandoffDistance)
+            if (enemy.IsCurrentTargetWithin(stateMachineHandoffDistance))
             {
                 isChasingPlayer = false;
                 stateMachine.StartMachine();
@@ -205,7 +208,7 @@ namespace Watermelon
                 return;
 
             if (forceDestinationUpdate || Time.frameCount % CHASE_DESTINATION_UPDATE_RATE == 0)
-                enemy.MoveToPlayer();
+                enemy.MoveToCurrentTarget();
         }
 
         private void OnEnemyDied()
@@ -237,6 +240,8 @@ namespace Watermelon
                 return;
 
             enemy.OnDeath -= OnEnemyDied;
+            enemy.ClearForcedTarget();
+            enemy.SetTargetDamageEnabled(true);
             SetEnemyHittable(true);
             enemy.Unload();
             ClearEnemyReferences();

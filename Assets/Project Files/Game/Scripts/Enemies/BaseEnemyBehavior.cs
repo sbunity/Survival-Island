@@ -127,6 +127,8 @@ namespace Watermelon
             IsDead = false;
 
             CombatTargetRegistry.Register(this);
+
+            OnSpawned();
         }
 
         public void TakeDamage(DamageSource source, Vector3 position, bool shouldFlash = false)
@@ -138,6 +140,8 @@ namespace Watermelon
                 IsDead = true;
 
                 CombatTargetRegistry.Unregister(this);
+
+                OnDeathStarted();
 
                 stateMachine.StopMachine();
 
@@ -172,13 +176,7 @@ namespace Watermelon
             agent.stoppingDistance = 0;
         }
 
-        public void MoveToPlayer()
-        {
-            agent.SetDestination(PlayerBehavior.Position);
-            agent.stoppingDistance = 1;
-        }
-
-        public void Attack()
+        public virtual void Attack()
         {
             animator.SetTrigger(ATTACK_TRIGGER);
         }
@@ -294,6 +292,8 @@ namespace Watermelon
         {
             CombatTargetRegistry.Unregister(this);
 
+            OnUnloaded();
+
             Health.ForceHide();
 
             stateMachine.StopMachine();
@@ -303,6 +303,13 @@ namespace Watermelon
         private void OnDisable()
         {
             CombatTargetRegistry.Unregister(this);
+
+            OnReturnedToPool();
         }
+
+        protected virtual void OnSpawned() { }
+        protected virtual void OnDeathStarted() { }
+        protected virtual void OnUnloaded() { }
+        protected virtual void OnReturnedToPool() { }
     }
 }
