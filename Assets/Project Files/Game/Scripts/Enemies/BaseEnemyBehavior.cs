@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 namespace Watermelon
 {
-    public class BaseEnemyBehavior : MonoBehaviour, ICharacter, IHitable
+    public class BaseEnemyBehavior : MonoBehaviour, ICharacter, ICombatTarget, IHitable
     {
         private static readonly int MOVEMENT_NULTIPLIER_HASH = Animator.StringToHash("Movement Multiplier");
         private static readonly int ATTACK_TRIGGER = Animator.StringToHash("Attack");
@@ -17,6 +17,9 @@ namespace Watermelon
 
         public bool IsPlayer => false;
         public bool IsDead { get; private set; }
+        public CombatFaction Faction => CombatFaction.Hostile;
+        public CombatTargetType TargetType => CombatTargetType.Enemy;
+        public bool CanBeTargeted => isActiveAndEnabled && gameObject.activeInHierarchy && !IsDead && (characterCollider == null || characterCollider.enabled);
 
         public Transform SnappingTransform => transform;
         public Transform Transform => transform;
@@ -122,6 +125,8 @@ namespace Watermelon
             agent.Warp(spawnPoint.position);
 
             IsDead = false;
+
+            CombatTargetRegistry.Register(this);
         }
 
         public void TakeDamage(DamageSource source, Vector3 position, bool shouldFlash = false)
@@ -131,6 +136,8 @@ namespace Watermelon
             if (Health.IsDepleted)
             {
                 IsDead = true;
+
+                CombatTargetRegistry.Unregister(this);
 
                 stateMachine.StopMachine();
 
@@ -174,6 +181,14 @@ namespace Watermelon
         public void Attack()
         {
             animator.SetTrigger(ATTACK_TRIGGER);
+        }
+
+        public Vector3 GetAttackPosition(Vector3 attackerPosition)
+        {
+            if (characterCollider != null && characterCollider.enabled)
+                return characterCollider.ClosestPoint(attackerPosition);
+
+            return transform.position;
         }
 
         #region Animation Callbacks
@@ -277,10 +292,17 @@ namespace Watermelon
 
         public void Unload()
         {
+            CombatTargetRegistry.Unregister(this);
+
             Health.ForceHide();
 
             stateMachine.StopMachine();
             gameObject.SetActive(false);
+        }
+
+        private void OnDisable()
+        {
+            CombatTargetRegistry.Unregister(this);
         }
     }
 }
