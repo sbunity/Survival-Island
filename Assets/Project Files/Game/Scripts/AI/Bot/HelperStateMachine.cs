@@ -18,46 +18,67 @@ namespace Watermelon.AI
             this.helperBehavior = helperBehavior;
             this.navMeshAgentBehaviour = navMeshAgentBehaviour;
 
-            StateCase waitingForTaskStateCase = new StateCase();
-            waitingForTaskStateCase.state = new WaitingForTaskState(helperBehavior);
-            waitingForTaskStateCase.transitions = new List<StateTransition<State>>
+            var waitingForTaskStateCase = new StateCase
             {
-                new StateTransition<State>(WaitForTaskStateTransition, transitionType: StateTransitionType.Independent),
+                state = new WaitingForTaskState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(WaitForTaskStateTransition, transitionType: StateTransitionType.Independent),
+                }
             };
 
-            StateCase gatheringStateCase = new StateCase();
-            gatheringStateCase.state = new GatheringState(helperBehavior);
-            gatheringStateCase.transitions = new List<StateTransition<State>>
+            var gatheringStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new GatheringState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
-            StateCase storingStateCase = new StateCase();
-            storingStateCase.state = new StoringState(helperBehavior);
-            storingStateCase.transitions = new List<StateTransition<State>>
+            var storingStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new StoringState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
-            StateCase buildingStateCase = new StateCase();
-            buildingStateCase.state = new BuildingState(helperBehavior);
-            buildingStateCase.transitions = new List<StateTransition<State>>
+            var buildingStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new BuildingState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
-            StateCase converterStoringStateCase = new StateCase();
-            converterStoringStateCase.state = new ConverterStoringState(helperBehavior);
-            converterStoringStateCase.transitions = new List<StateTransition<State>>
+            var converterStoringStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new ConverterStoringState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
-            StateCase fishingStateCase = new StateCase();
-            fishingStateCase.state = new FishingState(helperBehavior);
-            fishingStateCase.transitions = new List<StateTransition<State>>
+            var fishingStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new FishingState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
+            };
+
+            var recoveringAtBaseStateCase = new StateCase
+            {
+                state = new RecoveringAtBaseState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(RecoveryFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
             states.Add(State.WaitingForTask, waitingForTaskStateCase);
@@ -66,6 +87,7 @@ namespace Watermelon.AI
             states.Add(State.Building, buildingStateCase);
             states.Add(State.ConverterStoring, converterStoringStateCase);
             states.Add(State.Fishing, fishingStateCase);
+            states.Add(State.RecoveringAtBase, recoveringAtBaseStateCase);
 
             startState = State.WaitingForTask;
         }
@@ -118,6 +140,13 @@ namespace Watermelon.AI
             return true;
         }
 
+        private bool RecoveryFinish(out State nextState)
+        {
+            nextState = State.WaitingForTask;
+
+            return !helperBehavior.IsRecovering;
+        }
+
         public enum State
         {
             WaitingForTask = 0,
@@ -127,6 +156,27 @@ namespace Watermelon.AI
             Building = 4,
             ConverterStoring = 5,
             Fishing = 6,
+            RecoveringAtBase = 7,
+        }
+    }
+
+    public class RecoveringAtBaseState : HelperStateBehavior
+    {
+        public RecoveringAtBaseState(HelperBehavior helperBehavior) : base(helperBehavior)
+        {
+        }
+
+        public override void OnStart()
+        {
+            navMeshAgent.Stop();
+            target.Graphics.InteractionAnimations.Disable();
+            target.ShowRecoveryHealthbar();
+        }
+
+        public override void OnUpdate()
+        {
+            if (target.UpdateRecovery(Time.deltaTime))
+                InvokeOnFinished();
         }
     }
 
