@@ -18,5 +18,7 @@ namespace Watermelon
 
         Building = 1 << 15,
         Fishing = 1 << 16,
+
+        DefendingBase = 1 << 30,
     }
 }

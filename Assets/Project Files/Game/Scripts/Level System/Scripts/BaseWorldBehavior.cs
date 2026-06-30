@@ -39,6 +39,12 @@ namespace Watermelon
         protected TaskHandler taskHandler;
         public TaskHandler TaskHandler => taskHandler;
 
+        [ReadOnly, BoxFoldout("AA", "Auto-Assigned", 99)]
+        [SerializeField] BaseAttackController attackController;
+        public BaseAttackController AttackController => attackController;
+
+        public event SimpleCallback BaseUnderAttack;
+
         private IWorldElement[] worldElements;
 
         private MusicSource musicSource;
@@ -64,6 +70,14 @@ namespace Watermelon
                 worldElements[i].LinkedWorldBehavior = this;
             }
 
+            if (attackController == null)
+                attackController = GetComponent<BaseAttackController>();
+
+            if (attackController == null)
+                attackController = gameObject.AddComponent<BaseAttackController>();
+
+            attackController.Initialise(this, worldElements, taskHandler);
+
             musicSource = GetComponent<MusicSource>();
 
             if (musicSource != null)
@@ -79,11 +93,10 @@ namespace Watermelon
 
             foreach (IWorldElement element in worldElements)
             {
-                if (element != null)
-                {
-                    element.OnWorldLoaded();
-                }
+                element?.OnWorldLoaded();
             }
+
+            attackController?.OnWorldLoaded();
 
 #if MODULE_CURVE
             if (curveOverride != null)
@@ -115,12 +128,11 @@ namespace Watermelon
 
         public virtual void Unload()
         {
+            attackController?.Unload();
+
             foreach (var element in worldElements)
             {
-                if (element != null)
-                {
-                    element.OnWorldUnloaded();
-                }
+                element?.OnWorldUnloaded();
             }
 
 #if MODULE_CURVE
@@ -144,6 +156,22 @@ namespace Watermelon
                 restZoneTransform = transform;
 
             return new Vector3(restZoneTransform.position.x + Random.Range(-helpersRestZoneSize.x, helpersRestZoneSize.x), restZoneTransform.position.y, restZoneTransform.position.z + Random.Range(-helpersRestZoneSize.y, helpersRestZoneSize.y));
+        }
+
+        public Vector3 GetDefaultDefensePosition()
+        {
+            if (helpersRestZone != null)
+                return helpersRestZone.position;
+
+            if (spawnPoint != null)
+                return spawnPoint.position;
+
+            return transform.position;
+        }
+
+        internal void NotifyBaseUnderAttack()
+        {
+            BaseUnderAttack?.Invoke();
         }
 
         private void OnDrawGizmos()

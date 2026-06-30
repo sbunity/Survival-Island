@@ -780,6 +780,24 @@ namespace Watermelon
         #endregion
 
         #region Task
+        public bool TryStartBaseDefense(DefendBaseTask task)
+        {
+            if (task == null || !task.Validate(this) || IsDead || IsRecovering)
+                return false;
+
+            if (activeTask == task && stateMachine.CurrentState == HelperStateMachine.State.DefendingBase)
+                return true;
+
+            if (stateMachine.IsPlaying)
+                stateMachine.StopMachine();
+
+            UnlinkActiveTask();
+            SetActiveTask(task);
+            stateMachine.StartMachine(HelperStateMachine.State.DefendingBase);
+
+            return true;
+        }
+
         public void SetActiveTask(BaseTask task)
         {
             UnlinkActiveTask();

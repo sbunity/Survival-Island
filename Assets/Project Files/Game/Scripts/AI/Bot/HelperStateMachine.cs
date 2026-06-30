@@ -81,6 +81,15 @@ namespace Watermelon.AI
                 }
             };
 
+            var defendingBaseStateCase = new StateCase
+            {
+                state = new DefendingBaseState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
+            };
+
             states.Add(State.WaitingForTask, waitingForTaskStateCase);
             states.Add(State.Gathering, gatheringStateCase);
             states.Add(State.Storing, storingStateCase);
@@ -88,6 +97,7 @@ namespace Watermelon.AI
             states.Add(State.ConverterStoring, converterStoringStateCase);
             states.Add(State.Fishing, fishingStateCase);
             states.Add(State.RecoveringAtBase, recoveringAtBaseStateCase);
+            states.Add(State.DefendingBase, defendingBaseStateCase);
 
             startState = State.WaitingForTask;
         }
@@ -157,6 +167,7 @@ namespace Watermelon.AI
             ConverterStoring = 5,
             Fishing = 6,
             RecoveringAtBase = 7,
+            DefendingBase = 8,
         }
     }
 
@@ -177,6 +188,101 @@ namespace Watermelon.AI
         {
             if (target.UpdateRecovery(Time.deltaTime))
                 InvokeOnFinished();
+        }
+    }
+
+    public class DefendingBaseState : HelperStateBehavior
+    {
+        private const float TARGET_MOVEMENT_REFRESH_DELAY = 0.2f;
+        private const float DEFENSE_POINT_REACH_DISTANCE = 0.25f;
+
+        private DefendBaseTask defendTask;
+        private BaseAttackController controller;
+        private float nextMovementRefreshTime;
+
+        public DefendingBaseState(HelperBehavior helperBehavior) : base(helperBehavior)
+        {
+        }
+
+        public override void OnStart()
+        {
+            defendTask = target.ActiveTask as DefendBaseTask;
+            controller = defendTask?.Controller;
+            nextMovementRefreshTime = Time.time;
+
+            navMeshAgent.Stop();
+            target.ClearCombatTarget();
+        }
+
+        public override void OnUpdate()
+        {
+            if (defendTask == null || controller == null || !defendTask.Validate(target))
+            {
+                InvokeOnFinished();
+                return;
+            }
+
+            var combatTarget = target.CombatTarget;
+            if (!target.IsCombatTargetValid(combatTarget) || !controller.IsInsideDefenseRadius(combatTarget))
+            {
+                navMeshAgent.Stop();
+                target.ClearCombatTarget();
+                combatTarget = null;
+            }
+
+            if (combatTarget == null)
+            {
+                combatTarget = controller.GetNearestHostile(target.transform.position);
+                if (combatTarget != null && !target.SetCombatTarget(combatTarget))
+                    combatTarget = null;
+            }
+
+            if (combatTarget != null)
+            {
+                var attackPosition = combatTarget.GetAttackPosition(target.transform.position);
+                var offset = attackPosition - target.transform.position;
+                offset.y = 0f;
+
+                if (offset.sqrMagnitude <= target.CombatRange * target.CombatRange)
+                {
+                    target.TryAttack();
+                }
+                else if (Time.time >= nextMovementRefreshTime)
+                {
+                    nextMovementRefreshTime = Time.time + TARGET_MOVEMENT_REFRESH_DELAY;
+                    target.MoveToCombatTarget();
+                }
+
+                return;
+            }
+
+            HoldDefensePoint();
+        }
+
+        private void HoldDefensePoint()
+        {
+            var defensePosition = controller.DefensePosition;
+            var offset = defensePosition - target.transform.position;
+            offset.y = 0f;
+
+            if (offset.sqrMagnitude <= DEFENSE_POINT_REACH_DISTANCE * DEFENSE_POINT_REACH_DISTANCE)
+            {
+                navMeshAgent.Stop();
+                return;
+            }
+
+            if (!navMeshAgent.IsMoving && navMeshAgent.PathExists(defensePosition))
+                navMeshAgent.SetWaypoints(defensePosition);
+        }
+
+        public override void OnEnd()
+        {
+            navMeshAgent.Stop();
+            target.ClearCombatTarget();
+            target.UnlinkActiveTask();
+
+            defendTask = null;
+            controller = null;
         }
     }
 
