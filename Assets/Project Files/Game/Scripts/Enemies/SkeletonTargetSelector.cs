@@ -13,6 +13,7 @@ namespace Watermelon
         private readonly NavMeshAgent agent;
         private readonly NavMeshPath path = new NavMeshPath();
         private readonly List<ICombatTarget> registeredTargets = new List<ICombatTarget>(32);
+        private readonly float aggroRadius;
 
         private ICombatTarget currentTarget;
         private ICombatTarget pendingTarget;
@@ -23,9 +24,10 @@ namespace Watermelon
 
         public ICombatTarget CurrentTarget => IsReferenceAlive(currentTarget) ? currentTarget : null;
 
-        public SkeletonTargetSelector(NavMeshAgent agent)
+        public SkeletonTargetSelector(NavMeshAgent agent, float aggroRadius)
         {
             this.agent = agent;
+            this.aggroRadius = aggroRadius > 0f ? aggroRadius : float.MaxValue;
         }
 
         public void Refresh(Vector3 attackerPosition, bool deferSwitch)
@@ -92,6 +94,7 @@ namespace Watermelon
 
             var bestPriority = 0;
             var bestDistanceSqr = float.MaxValue;
+            var aggroRadiusSqr = aggroRadius >= float.MaxValue ? float.MaxValue : aggroRadius * aggroRadius;
             ICombatTarget bestTarget = null;
 
             for (var i = 0; i < registeredTargets.Count; i++)
@@ -104,6 +107,9 @@ namespace Watermelon
 
                 var attackPosition = target.GetAttackPosition(attackerPosition);
                 var distanceSqr = (attackPosition - attackerPosition).sqrMagnitude;
+
+                if (distanceSqr > aggroRadiusSqr)
+                    continue;
 
                 if (CombatSystemLogic.IsBetterTarget(priority, distanceSqr, bestPriority, bestDistanceSqr))
                 {

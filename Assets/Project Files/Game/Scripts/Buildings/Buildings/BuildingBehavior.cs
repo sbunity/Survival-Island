@@ -153,7 +153,7 @@ namespace Watermelon
             InitialiseHealth();
             EnsureRuntimeInitialised();
 
-            SetVisuals(true);
+            SetVisuals(false);
             isOpen = false;
             SetOperational(false);
             healthBehavior.ForceHide();
@@ -349,6 +349,7 @@ namespace Watermelon
             buildingSave.IsDestroyed = true;
 
             SetOperational(false);
+            SetVisuals(false);
             healthBehavior.ForceHide();
             CombatTargetRegistry.Unregister(this);
 

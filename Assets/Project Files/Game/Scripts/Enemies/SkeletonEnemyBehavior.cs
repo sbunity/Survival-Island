@@ -14,6 +14,9 @@ namespace Watermelon
         [SerializeField] int damage = 10;
         public int Damage => damage;
 
+        [BoxFoldout("Combat", label: "Combat")]
+        [SerializeField, Min(0f)] float aggroRadius = 10f;
+
         [BoxFoldout("Patrol", label: "Patrol")]
         [SerializeField, Min(0.5f)] float patrolRadius = 4f;
         [BoxFoldout("Patrol", label: "Patrol")]
@@ -35,7 +38,7 @@ namespace Watermelon
             base.Awake();
 
             patrolPath = new NavMeshPath();
-            targetSelector = new SkeletonTargetSelector(Agent);
+            targetSelector = new SkeletonTargetSelector(Agent, aggroRadius);
 
             animationCallbacks.Add(EnemyAnimationEventType.SpawnEnded, OnSpawnAnimationEnded);
             animationCallbacks.Add(EnemyAnimationEventType.Hit, OnHit);

@@ -72514,6 +72514,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1230711292522888687, guid: f7ef739892ebab9479e3a1d44c4bba05,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1741921206749766460, guid: f7ef739892ebab9479e3a1d44c4bba05,
         type: 3}
       propertyPath: offset.x
