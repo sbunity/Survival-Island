@@ -99,28 +99,19 @@ namespace Watermelon
                 var target = registeredTargets[i];
                 var priority = GetPriority(target);
 
-                if (priority < bestPriority || !IsTargetAvailable(target, attackerPosition))
+                if (!IsTargetAvailable(target, attackerPosition))
                     continue;
-
-                if (priority > bestPriority)
-                {
-                    bestPriority = priority;
-                    bestDistanceSqr = float.MaxValue;
-                    bestTarget = null;
-                }
 
                 var attackPosition = target.GetAttackPosition(attackerPosition);
                 var distanceSqr = (attackPosition - attackerPosition).sqrMagnitude;
 
-                if (distanceSqr < bestDistanceSqr)
+                if (CombatSystemLogic.IsBetterTarget(priority, distanceSqr, bestPriority, bestDistanceSqr))
                 {
+                    bestPriority = priority;
                     bestDistanceSqr = distanceSqr;
                     bestTarget = target;
                 }
             }
-
-            if (IsTargetAvailable(currentTarget, attackerPosition) && GetPriority(currentTarget) == bestPriority)
-                return currentTarget;
 
             return bestTarget;
         }
@@ -145,13 +136,7 @@ namespace Watermelon
             if (!IsReferenceAlive(target))
                 return 0;
 
-            return target.TargetType switch
-            {
-                CombatTargetType.Player => PlayerPriority,
-                CombatTargetType.Helper => HelperPriority,
-                CombatTargetType.Building => BuildingPriority,
-                _ => 0,
-            };
+            return CombatSystemLogic.GetTargetPriority(target.TargetType);
 
         }
 

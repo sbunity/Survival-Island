@@ -250,7 +250,8 @@ namespace Watermelon.AI
                 else if (Time.time >= nextMovementRefreshTime)
                 {
                     nextMovementRefreshTime = Time.time + TARGET_MOVEMENT_REFRESH_DELAY;
-                    target.MoveToCombatTarget();
+                    var movementPosition = controller.ClampMovementInsideDefenseRadius(attackPosition, target.CombatRange);
+                    target.MoveToCombatPosition(movementPosition);
                 }
 
                 return;

@@ -69,10 +69,8 @@ namespace Watermelon
             if (healthbar != null)
                 healthbar.FollowUpdate();
 
-            if (!isInitialised || !enableRegeneration || regenerationPerSecond <= 0)
-                return;
-
-            if (IsDepleted || IsFull || Time.time < regenerationAllowedTime)
+            if (!CombatSystemLogic.CanRegenerate(isInitialised, enableRegeneration, regenerationPerSecond,
+                    CurrentHealth, MaxHealth, Time.time, regenerationAllowedTime))
                 return;
 
             Add(regenerationPerSecond * Time.deltaTime);
@@ -181,7 +179,7 @@ namespace Watermelon
 
             healthbar.OnHealthChanged();
 
-            var shouldBeVisible = isHealthbarVisibilityAllowed && CurrentHealth > 0 && CurrentHealth < MaxHealth;
+            var shouldBeVisible = CombatSystemLogic.ShouldShowHealthbar(isHealthbarVisibilityAllowed, CurrentHealth, MaxHealth);
             if (shouldBeVisible)
                 healthbar.EnableBar();
             else

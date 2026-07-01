@@ -111,7 +111,14 @@ namespace Watermelon
             CombatTargetRegistry.Unregister(this);
 
             if (healthBehavior != null)
+            {
+                healthBehavior.ConfigureRegeneration(false, regenerationDelay, regenerationPerSecond);
+                healthBehavior.HealthChanged -= OnHealthChanged;
                 healthBehavior.ForceHide();
+            }
+
+            buildingSave = null;
+            isHealthInitialised = false;
         }
 
         public virtual void SpawnUnlocked()
@@ -291,7 +298,17 @@ namespace Watermelon
                 ? openedVisuals.GetComponentsInChildren<Collider>(true)
                 : Array.Empty<Collider>();
 
-            buildingSave = SaveController.GetSaveObject<ConstructingPointSave>(LinkedWorldBehavior.WorldData.ID, ID + "_building_point");
+            var saveWorld = LinkedWorldBehavior != null && LinkedWorldBehavior.WorldData != null
+                ? LinkedWorldBehavior.WorldData
+                : WorldController.CurrentWorld;
+
+            if (saveWorld == null)
+            {
+                Debug.LogError($"[Building] '{name}' cannot initialise health before the world is selected.", this);
+                return;
+            }
+
+            buildingSave = SaveController.GetSaveObject<ConstructingPointSave>(saveWorld.ID, ID + "_building_point");
 
             var currentHealth = buildingSave.HasHealthData ? buildingSave.CurrentHealth : maxHealth;
             IsDestroyed = buildingSave.HasHealthData && (buildingSave.IsDestroyed || currentHealth <= 0f);

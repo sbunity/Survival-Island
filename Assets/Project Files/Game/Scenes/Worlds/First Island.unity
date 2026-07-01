@@ -65966,6 +65966,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8022279188463971615, guid: fa3e05011c81d6f46b7aad094f51f734,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8224338345121594480, guid: fa3e05011c81d6f46b7aad094f51f734,
         type: 3}
       propertyPath: m_Name

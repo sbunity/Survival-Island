@@ -70,6 +70,7 @@ namespace Watermelon
         public Transform SpawnPoint { get; private set; }
 
         private HealthBehavior Health { get; set; }
+        private TweenCase disableAfterDeathTweenCase;
 
         #region Hittable
 
@@ -113,6 +114,8 @@ namespace Watermelon
 
         public void Spawn(Transform spawnPoint)
         {
+            disableAfterDeathTweenCase.KillActive();
+
             SpawnPoint = spawnPoint;
 
             transform.position = spawnPoint.position;
@@ -133,6 +136,9 @@ namespace Watermelon
 
         public void TakeDamage(DamageSource source, Vector3 position, bool shouldFlash = false)
         {
+            if (IsDead || source == null || source.Damage <= 0f)
+                return;
+
             Health.Subtract(source.Damage);
 
             if (Health.IsDepleted)
@@ -149,8 +155,11 @@ namespace Watermelon
 
                 animator.SetTrigger(DIE_TRIGGER);
 
-                Tween.DelayedCall(2f, () =>
+                disableAfterDeathTweenCase = Tween.DelayedCall(2f, () =>
                 {
+                    if (!IsDead)
+                        return;
+
                     gameObject.SetActive(false);
                     PlayerBehavior.GetBehavior().OnHittableOutsideRangeOrCompleted(this);
                     OnDeath?.Invoke();
@@ -290,6 +299,8 @@ namespace Watermelon
 
         public void Unload()
         {
+            disableAfterDeathTweenCase.KillActive();
+
             CombatTargetRegistry.Unregister(this);
 
             OnUnloaded();
@@ -302,6 +313,8 @@ namespace Watermelon
 
         private void OnDisable()
         {
+            disableAfterDeathTweenCase.KillActive();
+
             CombatTargetRegistry.Unregister(this);
 
             OnReturnedToPool();

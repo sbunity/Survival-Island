@@ -56,7 +56,9 @@ namespace Watermelon
                 return;
             }
 
+            helperBehavior.OpeningAreaUnlocked -= OnOpeningAreaUnlocked;
             helperBehavior.OpeningAreaUnlocked += OnOpeningAreaUnlocked;
+            encounter.EnemyDied -= OnEnemyDied;
             encounter.EnemyDied += OnEnemyDied;
 
             var startLocked = !helperBehavior.IsOpened && !helperBehavior.IsOpeningAreaUnlocked;

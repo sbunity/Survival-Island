@@ -689,6 +689,22 @@ namespace Watermelon
             return true;
         }
 
+        public bool MoveToCombatPosition(Vector3 position)
+        {
+            if (IsDead || IsRecovering || !IsCombatTargetValid(combatTarget))
+            {
+                ClearCombatTarget();
+                return false;
+            }
+
+            if (!navMeshAgentBehaviour.PathExists(position))
+                return false;
+
+            navMeshAgent.stoppingDistance = 0f;
+            navMeshAgentBehaviour.SetWaypoints(position);
+            return true;
+        }
+
         public bool TryAttack()
         {
             if (IsDead || IsRecovering || Time.time < nextCombatAttackTime || !IsCombatTargetValid(combatTarget))

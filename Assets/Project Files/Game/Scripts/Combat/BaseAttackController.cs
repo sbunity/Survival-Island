@@ -209,6 +209,11 @@ namespace Watermelon
             return offset.sqrMagnitude <= defenseRadius * defenseRadius;
         }
 
+        public Vector3 ClampMovementInsideDefenseRadius(Vector3 position, float inset)
+        {
+            return CombatSystemLogic.ClampInsideRadius(DefensePosition, position, defenseRadius, inset);
+        }
+
         private bool HasHostilesInsideDefenseRadius()
         {
             CombatTargetRegistry.RemoveInvalidTargets();

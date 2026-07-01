@@ -88,7 +88,7 @@ namespace Watermelon
             if ((purchaser == null && constructionPoint == null) || isOpenFromStart) return true;
 
             bool purchaserLocked = purchaser != null && !purchaser.LookUpPurchased(this);
-            bool constructionLocked = constructionPoint != null && constructionPoint.LookUpConstructed(this);
+            bool constructionLocked = constructionPoint != null && !constructionPoint.LookUpConstructed(this);
             if (purchaserLocked || constructionLocked) return false;
 
             return true;
@@ -256,25 +256,28 @@ namespace Watermelon
                 constructionPoint?.ResetForReconstruction(this);
             }
 
-            if (purchaser != null && purchaser.Init(this))
+            var purchasePending = purchaser != null && purchaser.Init(this);
+            var constructionPending = !purchasePending && constructionPoint != null && constructionPoint.Init(this);
+
+            switch (CombatSystemLogic.GetRebuildStage(purchasePending, constructionPending))
             {
-                CanBePurchased = true;
+                case BuildingRebuildStage.Purchasing:
+                    CanBePurchased = true;
 
-                if (constructionPoint != null)
-                    constructionPoint.Disable();
+                    if (constructionPoint != null)
+                        constructionPoint.Disable();
+                    break;
 
-                return;
+                case BuildingRebuildStage.Constructing:
+                    CanBeConstructed = true;
+                    constructionPoint.Enable();
+                    break;
+
+                default:
+                    IsOpen = true;
+                    unlockable.FullyUnlock();
+                    break;
             }
-
-            if (constructionPoint != null && constructionPoint.Init(this))
-            {
-                CanBeConstructed = true;
-                constructionPoint.Enable();
-                return;
-            }
-
-            IsOpen = true;
-            unlockable.FullyUnlock();
         }
 
         public void EnableConstructing()
