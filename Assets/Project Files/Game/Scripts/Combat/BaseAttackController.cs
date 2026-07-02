@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,12 +24,12 @@ namespace Watermelon
         public IReadOnlyList<ICombatTarget> ActiveAttackers => activeAttackers;
 
         private readonly List<ICombatTarget> activeAttackers = new List<ICombatTarget>();
-        private readonly List<BuildingBehavior> buildings = new List<BuildingBehavior>();
+        private readonly List<AttackAnchor> attackAnchors = new List<AttackAnchor>();
+        private readonly Dictionary<BuildingBehavior, Action<DamageSource>> buildingHandlers = new Dictionary<BuildingBehavior, Action<DamageSource>>();
         private readonly List<HelperBehavior> helpers = new List<HelperBehavior>();
 
         private BaseWorldBehavior worldBehavior;
         private DefendBaseTask defendBaseTask;
-        private float lastThreatTime;
         private bool isInitialised;
 
         public void Initialise(BaseWorldBehavior worldBehavior, IWorldElement[] worldElements, TaskHandler taskHandler)
@@ -38,17 +39,14 @@ namespace Watermelon
 
             this.worldBehavior = worldBehavior;
 
-            buildings.Clear();
             helpers.Clear();
             activeAttackers.Clear();
+            attackAnchors.Clear();
 
             for (var i = 0; worldElements != null && i < worldElements.Length; i++)
             {
                 if (worldElements[i] is BuildingBehavior building)
-                {
-                    buildings.Add(building);
-                    building.Attacked += OnBuildingAttacked;
-                }
+                    RegisterBuilding(building);
 
                 if (worldElements[i] is HelperBehavior helper)
                     helpers.Add(helper);
@@ -67,8 +65,6 @@ namespace Watermelon
                 return;
 
             EndAlert();
-            activeAttackers.Clear();
-            lastThreatTime = Time.time;
         }
 
         public void Unload()
@@ -78,17 +74,18 @@ namespace Watermelon
 
             EndAlert();
 
-            for (var i = 0; i < buildings.Count; i++)
+            foreach (var pair in buildingHandlers)
             {
-                if (buildings[i] != null)
-                    buildings[i].Attacked -= OnBuildingAttacked;
+                if (pair.Key != null)
+                    pair.Key.Attacked -= pair.Value;
             }
 
             defendBaseTask?.Destroy();
             defendBaseTask = null;
 
+            buildingHandlers.Clear();
             activeAttackers.Clear();
-            buildings.Clear();
+            attackAnchors.Clear();
             helpers.Clear();
 
             worldBehavior = null;
@@ -101,19 +98,25 @@ namespace Watermelon
                 return;
 
             RemoveInvalidAttackers();
+            RefreshAnchors();
             AssignAvailableHelpers();
 
-            if (HasHostilesInsideDefenseRadius())
-            {
-                lastThreatTime = Time.time;
-                return;
-            }
-
-            if (Time.time >= lastThreatTime + alertCooldown)
+            if (attackAnchors.Count == 0)
                 EndAlert();
         }
 
-        private void OnBuildingAttacked(DamageSource source)
+        private void RegisterBuilding(BuildingBehavior building)
+        {
+            if (building == null || buildingHandlers.ContainsKey(building))
+                return;
+
+            Action<DamageSource> handler = source => OnBuildingAttacked(building, source);
+
+            building.Attacked += handler;
+            buildingHandlers.Add(building, handler);
+        }
+
+        private void OnBuildingAttacked(BuildingBehavior building, DamageSource source)
         {
             var attacker = source?.CharacterSource as ICombatTarget;
             if (!IsHostileAvailable(attacker))
@@ -122,12 +125,54 @@ namespace Watermelon
             if (!activeAttackers.Contains(attacker))
                 activeAttackers.Add(attacker);
 
-            lastThreatTime = Time.time;
+            RegisterAnchor(building);
 
             if (!IsAlertActive)
                 BeginAlert();
             else
                 AssignAvailableHelpers();
+        }
+
+        private void RegisterAnchor(BuildingBehavior building)
+        {
+            if (building == null)
+                return;
+
+            for (var i = 0; i < attackAnchors.Count; i++)
+            {
+                if (attackAnchors[i].Building != building)
+                    continue;
+
+                attackAnchors[i].Position = building.Transform.position;
+                attackAnchors[i].LastThreatTime = Time.time;
+                return;
+            }
+
+            attackAnchors.Add(new AttackAnchor
+            {
+                Building = building,
+                Position = building.Transform.position,
+                LastThreatTime = Time.time,
+            });
+        }
+
+        private void RefreshAnchors()
+        {
+            CombatTargetRegistry.RemoveInvalidTargets();
+
+            for (var i = attackAnchors.Count - 1; i >= 0; i--)
+            {
+                var anchor = attackAnchors[i];
+
+                if (anchor.Building != null)
+                    anchor.Position = anchor.Building.Transform.position;
+
+                if (HasHostileNear(anchor.Position))
+                    anchor.LastThreatTime = Time.time;
+
+                if (Time.time >= anchor.LastThreatTime + alertCooldown)
+                    attackAnchors.RemoveAt(i);
+            }
         }
 
         private void BeginAlert()
@@ -144,10 +189,11 @@ namespace Watermelon
             if (defendBaseTask != null && defendBaseTask.IsActive)
                 defendBaseTask.Disable();
 
-            bool wasActive = IsAlertActive;
+            var wasActive = IsAlertActive;
 
             IsAlertActive = false;
             activeAttackers.Clear();
+            attackAnchors.Clear();
 
             if (wasActive && worldBehavior != null)
                 worldBehavior.NotifyBaseAttackEnded();
@@ -204,33 +250,66 @@ namespace Watermelon
             return nearestTarget;
         }
 
-        public bool IsInsideDefenseRadius(ICombatTarget target) 
+        public Vector3 GetNearestDefensePosition(Vector3 from)
+        {
+            var nearest = DefensePosition;
+            var nearestDistanceSqr = float.MaxValue;
+
+            for (var i = 0; i < attackAnchors.Count; i++)
+            {
+                var anchorPosition = attackAnchors[i].Position;
+
+                var offset = anchorPosition - from;
+                offset.y = 0f;
+
+                var distanceSqr = offset.sqrMagnitude;
+                if (distanceSqr >= nearestDistanceSqr)
+                    continue;
+
+                nearestDistanceSqr = distanceSqr;
+                nearest = anchorPosition;
+            }
+
+            return nearest;
+        }
+
+        public bool IsInsideDefenseRadius(ICombatTarget target)
             => IsHostileAvailable(target) && IsInsideDefenseRadius(target.Transform.position);
 
         public bool IsInsideDefenseRadius(Vector3 position)
         {
-            var offset = position - DefensePosition;
-            offset.y = 0f;
-            return offset.sqrMagnitude <= defenseRadius * defenseRadius;
-        }
-
-        public Vector3 ClampMovementInsideDefenseRadius(Vector3 position, float inset)
-        {
-            return CombatSystemLogic.ClampInsideRadius(DefensePosition, position, defenseRadius, inset);
-        }
-
-        private bool HasHostilesInsideDefenseRadius()
-        {
-            CombatTargetRegistry.RemoveInvalidTargets();
-
-            for (var i = 0; i < CombatTargetRegistry.Count; i++)
+            for (var i = 0; i < attackAnchors.Count; i++)
             {
-                var target = CombatTargetRegistry.GetTarget(i);
-                if (IsHostileAvailable(target) && IsInsideDefenseRadius(target.Transform.position))
+                if (IsInsideRadius(attackAnchors[i].Position, position))
                     return true;
             }
 
             return false;
+        }
+
+        public Vector3 ClampMovementInsideDefenseRadius(Vector3 position, float inset)
+        {
+            var center = GetNearestDefensePosition(position);
+            return CombatSystemLogic.ClampInsideRadius(center, position, defenseRadius, inset);
+        }
+
+        private bool HasHostileNear(Vector3 position)
+        {
+            for (var i = 0; i < CombatTargetRegistry.Count; i++)
+            {
+                var target = CombatTargetRegistry.GetTarget(i);
+                if (IsHostileAvailable(target) && IsInsideRadius(position, target.Transform.position))
+                    return true;
+            }
+
+            return false;
+        }
+
+        private bool IsInsideRadius(Vector3 center, Vector3 position)
+        {
+            var offset = position - center;
+            offset.y = 0f;
+            return offset.sqrMagnitude <= defenseRadius * defenseRadius;
         }
 
         private bool IsHostileAvailable(ICombatTarget target)
@@ -238,7 +317,7 @@ namespace Watermelon
             if (target == null || target.Faction != CombatFaction.Hostile || !target.CanBeTargeted || target.IsDead || target.Transform == null)
                 return false;
 
-            return target is not Object unityObject || unityObject != null;
+            return target is not UnityEngine.Object unityObject || unityObject != null;
         }
 
         private void OnDestroy()
@@ -250,6 +329,13 @@ namespace Watermelon
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(defensePoint != null ? defensePoint.position : transform.position, defenseRadius);
+        }
+
+        private class AttackAnchor
+        {
+            public BuildingBehavior Building;
+            public Vector3 Position;
+            public float LastThreatTime;
         }
     }
 }

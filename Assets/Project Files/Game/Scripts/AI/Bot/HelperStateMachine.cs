@@ -262,7 +262,7 @@ namespace Watermelon.AI
 
         private void HoldDefensePoint()
         {
-            var defensePosition = controller.DefensePosition;
+            var defensePosition = controller.GetNearestDefensePosition(target.transform.position);
             var offset = defensePosition - target.transform.position;
             offset.y = 0f;
 
