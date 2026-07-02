@@ -63,11 +63,15 @@ namespace Watermelon
 
             displayedCost = new ResourcesList(costLeft);
 
+            // Activate the purchaser (and thus the canvas) before feeding it data, so the canvas is
+            // active-in-hierarchy and ResourcesCanvas.Awake/InitialiseUIPanels has collected the
+            // prefab's placeholder resource panels. Calling SetData while still inactive leaves those
+            // defaults untracked, so they linger on-screen next to the freshly instantiated panels.
+            gameObject.SetActive(true);
             resourceCanvas.gameObject.SetActive(true);
             resourceCanvas.SetData(displayedCost);
 
             PopulateRequiredResources();
-            gameObject.SetActive(true);
 
             return true;
         }

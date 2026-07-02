@@ -40,7 +40,11 @@ namespace Watermelon
                 return;
             }
 
-            if (deferSwitch)
+            // A strictly higher-priority target (e.g. a helper appearing while the skeleton
+            // attacks a building) must take over immediately, even mid-swing. Only equal- or
+            // lower-priority switches are deferred until the current attack finishes so we
+            // don't interrupt a swing just to re-pick between similar targets.
+            if (deferSwitch && !IsHigherPriorityThanCurrent(selectedTarget))
             {
                 pendingTarget = selectedTarget;
                 hasPendingTarget = true;
@@ -48,6 +52,14 @@ namespace Watermelon
             }
 
             SetCurrentTarget(selectedTarget);
+        }
+
+        private bool IsHigherPriorityThanCurrent(ICombatTarget candidate)
+        {
+            if (!IsReferenceAlive(candidate))
+                return false;
+
+            return GetPriority(candidate) > GetPriority(currentTarget);
         }
 
         public void SetForcedTarget(ICombatTarget target, Vector3 attackerPosition, bool deferSwitch)

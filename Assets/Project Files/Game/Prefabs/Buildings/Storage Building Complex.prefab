@@ -158,7 +158,7 @@ MonoBehaviour:
   healthFillImage: {fileID: 543880450525417173}
   maskFillImage: {fileID: 767331709560296443}
   healthText: {fileID: 0}
-  standartHealthbarColor: {r: 1, g: 0, b: 0.06914902, a: 1}
+  standartHealthbarColor: {r: 0.2807715, g: 1, b: 0, a: 1}
 --- !u!1 &2716507580400140800
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   healthBehavior: {fileID: 8456661771212285243}
   enablePassiveRegeneration: 1
   regenerationDelay: 5
-  regenerationPerSecond: 1
+  regenerationPerSecond: 33.33
   targetCollider: {fileID: 0}
   attackPoints:
   - {fileID: 1598532575795082778}
@@ -264,7 +264,7 @@ MonoBehaviour:
   healthbar: {fileID: 4797517453594368369}
   enableRegeneration: 1
   regenerationDelay: 5
-  regenerationPerSecond: 1
+  regenerationPerSecond: 33.33
 --- !u!1 &5202792942320019961
 GameObject:
   m_ObjectHideFlags: 0

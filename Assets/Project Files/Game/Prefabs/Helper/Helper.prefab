@@ -141,11 +141,11 @@ MonoBehaviour:
   maxHealth: 100
   healthBehavior: {fileID: 4965752313698598960}
   regenerationDelay: 5
-  regenerationPerSecond: 10
+  regenerationPerSecond: 33.33
   recoveryDuration: 5
-  combatDamage: 10
+  combatDamage: 1
   combatRange: 1.25
-  combatCooldown: 1
+  combatCooldown: 0.6
   emoteBehavior:
     canvasGroup: {fileID: 5696167514470813183}
     emoteImage: {fileID: 6745383921120782133}
@@ -257,7 +257,7 @@ MonoBehaviour:
   healthbar: {fileID: 7609556411991968464}
   enableRegeneration: 1
   regenerationDelay: 5
-  regenerationPerSecond: 10
+  regenerationPerSecond: 33.33
 --- !u!1 &2997753470009439448
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   healthFillImage: {fileID: 4846756389145762461}
   maskFillImage: {fileID: 5650187108540188595}
   healthText: {fileID: 0}
-  standartHealthbarColor: {r: 1, g: 0, b: 0.06914902, a: 1}
+  standartHealthbarColor: {r: 0.2807715, g: 1, b: 0, a: 1}
 --- !u!1001 &1848731785658154514
 PrefabInstance:
   m_ObjectHideFlags: 0
