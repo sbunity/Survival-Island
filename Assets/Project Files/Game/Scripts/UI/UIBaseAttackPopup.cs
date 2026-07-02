@@ -1,13 +1,17 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Watermelon
 {
     public class UIBaseAttackPopup : MonoBehaviour
     {
+        private const float CAMERA_FREEZE_TIME = 1.5f;
+
         [SerializeField] RectTransform panelRectTransform;
         [SerializeField] CanvasGroup canvasGroup;
         [SerializeField] TextMeshProUGUI messageText;
+        [SerializeField] Button button;
 
         [Space]
         [SerializeField] float slideOffset = 60f;
@@ -30,6 +34,11 @@ namespace Watermelon
             if (canvasGroup == null)
                 canvasGroup = GetComponent<CanvasGroup>();
 
+            if (button == null)
+                button = GetComponent<Button>();
+
+            button.onClick.AddListener(OnClicked);
+
             shownPosition = panelRectTransform.anchoredPosition;
             hiddenPosition = shownPosition + Vector2.up * slideOffset;
 
@@ -45,8 +54,35 @@ namespace Watermelon
             WorldController.OnWorldLoaded -= OnWorldLoaded;
             UnsubscribeFromWorld();
 
+            if (button != null)
+                button.onClick.RemoveListener(OnClicked);
+
             moveCase.KillActive();
             fadeCase.KillActive();
+        }
+
+        private void OnClicked()
+        {
+            if (subscribedWorld == null || PreviewCamera.IsActive)
+                return;
+
+            var attackController = subscribedWorld.AttackController;
+            if (attackController == null || !attackController.IsAlertActive)
+                return;
+
+            var player = PlayerBehavior.GetBehavior();
+            if (player == null)
+                return;
+
+            var focusPosition = attackController.GetNearestDefensePosition(player.transform.position);
+
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
+
+#if MODULE_HAPTIC
+            Haptic.Play(Haptic.HAPTIC_LIGHT);
+#endif
+
+            PreviewCamera.Focus(focusPosition, CAMERA_FREEZE_TIME);
         }
 
         private void OnDestroy()
