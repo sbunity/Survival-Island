@@ -23,6 +23,7 @@ namespace Watermelon.AI
                 state = new WaitingForTaskState(helperBehavior),
                 transitions = new List<StateTransition<State>>
                 {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
                     new(WaitForTaskStateTransition, transitionType: StateTransitionType.Independent),
                 }
             };
@@ -32,6 +33,7 @@ namespace Watermelon.AI
                 state = new GatheringState(helperBehavior),
                 transitions = new List<StateTransition<State>>
                 {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
                     new(TaskFinish, transitionType: StateTransitionType.OnFinish),
                 }
             };
@@ -41,6 +43,7 @@ namespace Watermelon.AI
                 state = new StoringState(helperBehavior),
                 transitions = new List<StateTransition<State>>
                 {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
                     new(TaskFinish, transitionType: StateTransitionType.OnFinish),
                 }
             };
@@ -50,6 +53,7 @@ namespace Watermelon.AI
                 state = new BuildingState(helperBehavior),
                 transitions = new List<StateTransition<State>>
                 {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
                     new(TaskFinish, transitionType: StateTransitionType.OnFinish),
                 }
             };
@@ -59,6 +63,7 @@ namespace Watermelon.AI
                 state = new ConverterStoringState(helperBehavior),
                 transitions = new List<StateTransition<State>>
                 {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
                     new(TaskFinish, transitionType: StateTransitionType.OnFinish),
                 }
             };
@@ -66,6 +71,16 @@ namespace Watermelon.AI
             var fishingStateCase = new StateCase
             {
                 state = new FishingState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
+            };
+
+            var attackingStateCase = new StateCase
+            {
+                state = new AttackingState(helperBehavior),
                 transitions = new List<StateTransition<State>>
                 {
                     new(TaskFinish, transitionType: StateTransitionType.OnFinish),
@@ -98,6 +113,7 @@ namespace Watermelon.AI
             states.Add(State.Fishing, fishingStateCase);
             states.Add(State.RecoveringAtBase, recoveringAtBaseStateCase);
             states.Add(State.DefendingBase, defendingBaseStateCase);
+            states.Add(State.Attacking, attackingStateCase);
 
             startState = State.WaitingForTask;
         }
@@ -143,6 +159,18 @@ namespace Watermelon.AI
             return false;
         }
 
+        private bool HostileNearbyTransition(out State nextState)
+        {
+            nextState = State.Attacking;
+
+            return CanEngageHostiles() && helperBehavior.HasHostileInAggroRange();
+        }
+
+        private bool CanEngageHostiles()
+        {
+            return helperBehavior != null && helperBehavior.IsOpened && !helperBehavior.IsDead && !helperBehavior.IsRecovering;
+        }
+
         private bool TaskFinish(out State nextState)
         {
             nextState = State.WaitingForTask;
@@ -168,6 +196,7 @@ namespace Watermelon.AI
             Fishing = 6,
             RecoveringAtBase = 7,
             DefendingBase = 8,
+            Attacking = 9,
         }
     }
 
@@ -284,6 +313,91 @@ namespace Watermelon.AI
 
             defendTask = null;
             controller = null;
+        }
+    }
+
+    public class AttackingState : HelperStateBehavior
+    {
+        private const float MOVEMENT_REFRESH_DELAY = 0.2f;
+
+        private Vector3 leashOrigin;
+        private float nextMovementRefreshTime;
+
+        public AttackingState(HelperBehavior helperBehavior) : base(helperBehavior)
+        {
+        }
+
+        public override void OnStart()
+        {
+            leashOrigin = target.transform.position;
+            nextMovementRefreshTime = Time.time;
+
+            navMeshAgent.Stop();
+
+            AcquireTarget();
+        }
+
+        public override void OnUpdate()
+        {
+            if (target.IsDead || target.IsRecovering)
+            {
+                InvokeOnFinished();
+                return;
+            }
+
+            var combatTarget = target.CombatTarget;
+            if (!target.IsCombatTargetValid(combatTarget) || !IsInsideLeash(combatTarget))
+            {
+                target.ClearCombatTarget();
+                combatTarget = AcquireTarget();
+            }
+
+            if (combatTarget == null)
+            {
+                InvokeOnFinished();
+                return;
+            }
+
+            var attackPosition = combatTarget.GetAttackPosition(target.transform.position);
+            var offset = attackPosition - target.transform.position;
+            offset.y = 0f;
+
+            if (offset.sqrMagnitude <= target.CombatRange * target.CombatRange)
+            {
+                target.TryAttack();
+            }
+            else if (Time.time >= nextMovementRefreshTime)
+            {
+                nextMovementRefreshTime = Time.time + MOVEMENT_REFRESH_DELAY;
+                target.MoveToCombatTarget();
+            }
+        }
+
+        private ICombatTarget AcquireTarget()
+        {
+            var hostile = target.FindNearestHostile(leashOrigin, target.AggroRadius);
+            if (hostile != null && target.SetCombatTarget(hostile))
+                return hostile;
+
+            target.ClearCombatTarget();
+            return null;
+        }
+
+        private bool IsInsideLeash(ICombatTarget combatTarget)
+        {
+            if (combatTarget == null || combatTarget.Transform == null)
+                return false;
+
+            var offset = combatTarget.Transform.position - leashOrigin;
+            offset.y = 0f;
+
+            return offset.sqrMagnitude <= target.AggroRadius * target.AggroRadius;
+        }
+
+        public override void OnEnd()
+        {
+            navMeshAgent.Stop();
+            target.ClearCombatTarget();
         }
     }
 

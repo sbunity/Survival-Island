@@ -86,6 +86,10 @@ namespace Watermelon
         [SerializeField, Min(0f)] float combatCooldown = 1f;
         public float CombatCooldown => combatCooldown;
 
+        [BoxGroup("Combat")]
+        [SerializeField, Min(0f)] float aggroRadius = 6f;
+        public float AggroRadius => aggroRadius;
+
         [Space]
         [BoxGroup("Settings")]
         [SerializeField] SimpleEmoteBehavior emoteBehavior;
@@ -664,6 +668,38 @@ namespace Watermelon
                 return false;
 
             return target.Transform != null && !target.IsDead;
+        }
+
+        public bool HasHostileInAggroRange()
+        {
+            return FindNearestHostile(transform.position, aggroRadius) != null;
+        }
+
+        public ICombatTarget FindNearestHostile(Vector3 origin, float radius)
+        {
+            CombatTargetRegistry.RemoveInvalidTargets();
+
+            ICombatTarget nearestTarget = null;
+            var nearestDistanceSqr = radius * radius;
+
+            for (var i = 0; i < CombatTargetRegistry.Count; i++)
+            {
+                var target = CombatTargetRegistry.GetTarget(i);
+                if (!IsCombatTargetValid(target))
+                    continue;
+
+                var offset = target.Transform.position - origin;
+                offset.y = 0f;
+
+                var distanceSqr = offset.sqrMagnitude;
+                if (distanceSqr > nearestDistanceSqr)
+                    continue;
+
+                nearestDistanceSqr = distanceSqr;
+                nearestTarget = target;
+            }
+
+            return nearestTarget;
         }
 
         public bool MoveToCombatTarget()
