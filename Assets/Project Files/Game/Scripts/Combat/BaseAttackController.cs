@@ -144,8 +144,13 @@ namespace Watermelon
             if (defendBaseTask != null && defendBaseTask.IsActive)
                 defendBaseTask.Disable();
 
+            bool wasActive = IsAlertActive;
+
             IsAlertActive = false;
             activeAttackers.Clear();
+
+            if (wasActive && worldBehavior != null)
+                worldBehavior.NotifyBaseAttackEnded();
         }
 
         private void AssignAvailableHelpers()

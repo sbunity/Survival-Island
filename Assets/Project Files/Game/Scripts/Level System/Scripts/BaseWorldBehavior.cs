@@ -44,6 +44,7 @@ namespace Watermelon
         public BaseAttackController AttackController => attackController;
 
         public event SimpleCallback BaseUnderAttack;
+        public event SimpleCallback BaseAttackEnded;
 
         private IWorldElement[] worldElements;
 
@@ -172,6 +173,11 @@ namespace Watermelon
         internal void NotifyBaseUnderAttack()
         {
             BaseUnderAttack?.Invoke();
+        }
+
+        internal void NotifyBaseAttackEnded()
+        {
+            BaseAttackEnded?.Invoke();
         }
 
         private void OnDrawGizmos()
