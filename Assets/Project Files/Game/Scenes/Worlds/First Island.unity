@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 7540370}
   - component: {fileID: 7540371}
   m_Layer: 0
-  m_Name: M #37 - planks craft building
+  m_Name: M #38 - planks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5079,7 +5079,7 @@ GameObject:
   - component: {fileID: 137583847}
   - component: {fileID: 137583848}
   m_Layer: 0
-  m_Name: M #38 - raft construction
+  m_Name: M #39 - raft construction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5650,7 +5650,7 @@ GameObject:
   - component: {fileID: 147546715}
   - component: {fileID: 147546716}
   m_Layer: 0
-  m_Name: M #39 - leave the island
+  m_Name: M #40 - leave the island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7929,6 +7929,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209138008}
   m_CullTransparentMesh: 1
+--- !u!1 &209678762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 209678763}
+  m_Layer: 0
+  m_Name: Line End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &209678763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209678762}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 812600212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &211569972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10390,7 +10421,7 @@ GameObject:
   - component: {fileID: 261071232}
   - component: {fileID: 261071233}
   m_Layer: 0
-  m_Name: M #28 - bricks craft building
+  m_Name: M #29 - bricks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16250,7 +16281,7 @@ GameObject:
   - component: {fileID: 362938667}
   - component: {fileID: 362938668}
   m_Layer: 0
-  m_Name: M #34 - cooking place 3 building
+  m_Name: M #35 - cooking place 3 building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25060,7 +25091,7 @@ GameObject:
   - component: {fileID: 604482800}
   - component: {fileID: 604482801}
   m_Layer: 0
-  m_Name: M #31 - ramp #1 build
+  m_Name: M #32 - ramp #1 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27380,7 +27411,7 @@ GameObject:
   - component: {fileID: 658929541}
   - component: {fileID: 658929542}
   m_Layer: 0
-  m_Name: M #27 - bridge #2
+  m_Name: M #28 - bridge #2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29817,6 +29848,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545e8f2bb4cd8e044af06c37c1f89f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &725824176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725824177}
+  - component: {fileID: 725824178}
+  m_Layer: 0
+  m_Name: M #27 - defend the base raid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &725824177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725824176}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &725824178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725824176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dcadb952f088864ab651aa6bdedea4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.DefeatRaidMission
+  id: d4f7a2b1-3c8e-4a6f-9b12-7e5c0a1d8f34
+  title: Defend the base
+  rewardType: 0
+  resourceReward:
+    currencyType: 0
+    amount: 15
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 0
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  spawner: {fileID: 812600211}
 --- !u!1001 &727765273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32570,6 +32683,58 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1852426831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &812600210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812600212}
+  - component: {fileID: 812600211}
+  m_Layer: 0
+  m_Name: Base Raid Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &812600211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812600210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16509603ace35fd4d93014e6444b8ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.SkeletonRaidSpawner
+  enemyType: 1
+  lineStart: {fileID: 1776633634}
+  lineEnd: {fileID: 209678763}
+  facingTarget: {fileID: 1728899279}
+  enemyCount: 10
+  navMeshSampleDistance: 3
+--- !u!4 &812600212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812600210}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.1, y: 0, z: -30}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1776633634}
+  - {fileID: 209678763}
+  m_Father: {fileID: 1780791335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &817708188
 GameObject:
   m_ObjectHideFlags: 0
@@ -36195,7 +36360,7 @@ GameObject:
   - component: {fileID: 886913863}
   - component: {fileID: 886913864}
   m_Layer: 0
-  m_Name: M #29 - craft bricks
+  m_Name: M #30 - craft bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37014,6 +37179,11 @@ PrefabInstance:
       propertyPath: tileBehavior
       value: 
       objectReference: {fileID: 313715431}
+    - target: {fileID: 3841919672535503069, guid: ade2243f7bee35646a321dabf0dcb566,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3896691156864399937, guid: ade2243f7bee35646a321dabf0dcb566,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -48021,7 +48191,7 @@ GameObject:
   - component: {fileID: 1094698899}
   - component: {fileID: 1094698900}
   m_Layer: 0
-  m_Name: M #35 - ramp #2 build
+  m_Name: M #36 - ramp #2 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50962,7 +51132,7 @@ GameObject:
   - component: {fileID: 1156361327}
   - component: {fileID: 1156361328}
   m_Layer: 0
-  m_Name: M #36 - stone generator building
+  m_Name: M #37 - stone generator building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57358,6 +57528,7 @@ Transform:
   - {fileID: 1279860151}
   - {fileID: 1044371288}
   - {fileID: 122126396}
+  - {fileID: 725824177}
   - {fileID: 658929541}
   - {fileID: 261071232}
   - {fileID: 886913863}
@@ -75931,6 +76102,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredMissionId: baf72f22-9f52-4466-ab52-3a3b3a52b2b8
+--- !u!1 &1776633633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1776633634}
+  m_Layer: 0
+  m_Name: Line Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1776633634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776633633}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.219999, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 812600212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1780791334
 GameObject:
   m_ObjectHideFlags: 0
@@ -75970,6 +76172,7 @@ Transform:
   - {fileID: 1745136080}
   - {fileID: 722457822}
   - {fileID: 855640419}
+  - {fileID: 812600212}
   m_Father: {fileID: 2625476478768325108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787618243 stripped
@@ -79764,7 +79967,7 @@ GameObject:
   - component: {fileID: 1859535999}
   - component: {fileID: 1859536000}
   m_Layer: 0
-  m_Name: M #33 - pumpkins harvest
+  m_Name: M #34 - pumpkins harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84337,7 +84540,7 @@ GameObject:
   - component: {fileID: 1989989903}
   - component: {fileID: 1989989904}
   m_Layer: 0
-  m_Name: M #32 - find pumpkins
+  m_Name: M #33 - find pumpkins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89405,7 +89608,7 @@ GameObject:
   - component: {fileID: 2093265913}
   - component: {fileID: 2093265914}
   m_Layer: 0
-  m_Name: M #30 - upg player harvest
+  m_Name: M #31 - upg player harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91954,8 +92157,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 18863360}
     - {fileID: 1820117116}
+    - {fileID: 18863360}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
