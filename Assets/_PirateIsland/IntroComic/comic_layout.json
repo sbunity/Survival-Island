@@ -1,0 +1,169 @@
+{
+  "canvas": {
+    "width": 864,
+    "height": 1821
+  },
+  "elements": [
+    {
+      "order": 1,
+      "name": "panel_01_ship_storm",
+      "file": "panel_01_ship_storm.png",
+      "sourceRectPx": {
+        "x": 5,
+        "y": 8,
+        "width": 853,
+        "height": 403
+      },
+      "unityAnchoredPositionPx": {
+        "x": -0.5,
+        "y": 701.0
+      },
+      "sizeDeltaPx": {
+        "width": 853,
+        "height": 403
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "order": 2,
+      "name": "panel_02_captain_panic",
+      "file": "panel_02_captain_panic.png",
+      "sourceRectPx": {
+        "x": 5,
+        "y": 407,
+        "width": 482,
+        "height": 373
+      },
+      "unityAnchoredPositionPx": {
+        "x": -186.0,
+        "y": 317.0
+      },
+      "sizeDeltaPx": {
+        "width": 482,
+        "height": 373
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "order": 3,
+      "name": "panel_03_hero_confused",
+      "file": "panel_03_hero_confused.png",
+      "sourceRectPx": {
+        "x": 466,
+        "y": 407,
+        "width": 392,
+        "height": 373
+      },
+      "unityAnchoredPositionPx": {
+        "x": 230.0,
+        "y": 317.0
+      },
+      "sizeDeltaPx": {
+        "width": 392,
+        "height": 373
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "order": 4,
+      "name": "panel_04_ship_crash",
+      "file": "panel_04_ship_crash.png",
+      "sourceRectPx": {
+        "x": 5,
+        "y": 779,
+        "width": 853,
+        "height": 313
+      },
+      "unityAnchoredPositionPx": {
+        "x": -0.5,
+        "y": -25.0
+      },
+      "sizeDeltaPx": {
+        "width": 853,
+        "height": 313
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "order": 5,
+      "name": "panel_05_hero_falls",
+      "file": "panel_05_hero_falls.png",
+      "sourceRectPx": {
+        "x": 5,
+        "y": 1100,
+        "width": 366,
+        "height": 308
+      },
+      "unityAnchoredPositionPx": {
+        "x": -244.0,
+        "y": -343.5
+      },
+      "sizeDeltaPx": {
+        "width": 366,
+        "height": 308
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "order": 6,
+      "name": "panel_06_hero_in_water",
+      "file": "panel_06_hero_in_water.png",
+      "sourceRectPx": {
+        "x": 359,
+        "y": 1100,
+        "width": 499,
+        "height": 308
+      },
+      "unityAnchoredPositionPx": {
+        "x": 176.5,
+        "y": -343.5
+      },
+      "sizeDeltaPx": {
+        "width": 499,
+        "height": 308
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "order": 7,
+      "name": "panel_07_beach_wakeup",
+      "file": "panel_07_beach_wakeup.png",
+      "sourceRectPx": {
+        "x": 5,
+        "y": 1422,
+        "width": 853,
+        "height": 391
+      },
+      "unityAnchoredPositionPx": {
+        "x": -0.5,
+        "y": -707.0
+      },
+      "sizeDeltaPx": {
+        "width": 853,
+        "height": 391
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ]
+}

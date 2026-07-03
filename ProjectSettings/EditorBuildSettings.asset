@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_PirateIsland/IntroComic/Scenes/IntroComic.unity
+    guid: 261c36da0343e437a8e0613ffc3c9976
+  - enabled: 1
     path: Assets/Project Files/Game/Scenes/Init.unity
     guid: cc0b80ce7479f924fa29c695693d8ae8
   - enabled: 1
