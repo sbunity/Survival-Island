@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Watermelon;
 
 public class ComicCutsceneController : MonoBehaviour
 {
@@ -67,6 +68,8 @@ public class ComicCutsceneController : MonoBehaviour
 
     private void Start()
     {
+        Overlay.Hide(0.3f);
+
         if (rememberWatchedCutscene && PlayerPrefs.GetInt(CutsceneWatchedKey, 0) == 1)
         {
             ShowAllAndFinish();

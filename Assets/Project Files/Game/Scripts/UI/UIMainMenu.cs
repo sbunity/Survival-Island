@@ -18,6 +18,8 @@ namespace Watermelon
         [SerializeField] Button newGameConfirmedButton;
         [SerializeField] Button newGameCancelButton;
 
+        private const string CutsceneWatchedKey = "IntroComicCutsceneWatched";
+        
         public override void Init()
         {
             SafeAreaAdapter.RegisterRectTransform(safeAreaRectTransform);
@@ -62,7 +64,14 @@ namespace Watermelon
 
             Overlay.Show(0.3f, () =>
             {
-                SceneManager.LoadScene("Game");
+                if(PlayerPrefs.GetInt(CutsceneWatchedKey, 0) == 0)
+                {
+                    SceneManager.LoadScene("IntroComic");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Game");
+                }
             });
         }
 
@@ -89,7 +98,11 @@ namespace Watermelon
 
             Overlay.Show(0.3f, () =>
             {
-                SceneManager.LoadScene("Game");
+                PlayerPrefs.SetInt(CutsceneWatchedKey, 0);
+                PlayerPrefs.Save();
+                
+                SceneManager.LoadScene("IntroComic");
+                //SceneManager.LoadScene("Game");
 
                 Overlay.Hide(0.3f, null);
             });

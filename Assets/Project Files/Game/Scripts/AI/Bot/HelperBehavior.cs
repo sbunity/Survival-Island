@@ -1,11 +1,11 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using Watermelon.AI;
 
 namespace Watermelon
 {
-    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IWorldElement
+    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IWorldElement, ICharacter, ICombatTarget
     {
         public static readonly int MOVEMENT_MULTIPLIER_HASH = Animator.StringToHash("Movement Multiplier");
 
@@ -44,6 +44,11 @@ namespace Watermelon
         [BoxGroup("Opening")]
         [SerializeField] AnimationClip openingAnimation;
 
+        [ShowIf("specialOpeningLogic")]
+        [BoxGroup("Opening")]
+        [SerializeField] bool waitForExternalRelease;
+        public bool WaitForExternalRelease => waitForExternalRelease;
+
         [BoxGroup("Settings")]
         [SerializeField] HelperTaskType availableTasks;
         public HelperTaskType AvailableTaskTypes => availableTasks;
@@ -51,6 +56,39 @@ namespace Watermelon
         [BoxGroup("Settings")]
         [SerializeField] float tasksDistance = 0;
         public float TasksDistance => tasksDistance;
+
+        [BoxGroup("Health")]
+        [SerializeField, Min(1f)] float maxHealth = 100f;
+        public float MaxHealth => isHealthInitialised ? healthBehavior.MaxHealth : maxHealth;
+
+        [BoxGroup("Health")]
+        [SerializeField] HealthBehavior healthBehavior;
+        public HealthBehavior Health => healthBehavior;
+
+        [BoxGroup("Health")]
+        [SerializeField, Min(0f)] float regenerationDelay = 5f;
+
+        [BoxGroup("Health")]
+        [SerializeField, Min(0f)] float regenerationPerSecond = 10f;
+
+        [BoxGroup("Health")]
+        [SerializeField, Min(0f)] float recoveryDuration = 5f;
+
+        [BoxGroup("Combat")]
+        [SerializeField, Min(0f)] float combatDamage = 10f;
+        public float CombatDamage => combatDamage;
+
+        [BoxGroup("Combat")]
+        [SerializeField, Min(0f)] float combatRange = 1.25f;
+        public float CombatRange => combatRange;
+
+        [BoxGroup("Combat")]
+        [SerializeField, Min(0f)] float combatCooldown = 1f;
+        public float CombatCooldown => combatCooldown;
+
+        [BoxGroup("Combat")]
+        [SerializeField, Min(0f)] float aggroRadius = 6f;
+        public float AggroRadius => aggroRadius;
 
         [Space]
         [BoxGroup("Settings")]
@@ -75,6 +113,13 @@ namespace Watermelon
 
         public Transform Transform => transform;
         public Transform SnappingTransform => transform;
+        public bool IsPlayer => false;
+        public bool IsDead => healthBehavior != null && healthBehavior.IsDepleted;
+        public bool IsRecovering { get; private set; }
+        public CombatFaction Faction => CombatFaction.Friendly;
+        public CombatTargetType TargetType => CombatTargetType.Helper;
+        public bool CanBeTargeted => isInitialised && isOpeningCompleted && !IsDead && !IsRecovering &&
+            isActiveAndEnabled && gameObject.activeInHierarchy && (characterCollider == null || characterCollider.enabled);
 
         // Graphics
         private CharacterGraphicsHolder<HelperGraphics> graphicsHolder;
@@ -86,6 +131,13 @@ namespace Watermelon
         // Gathering
         private AbstractHitableBehavior targetHitableBehavior;
         public AbstractHitableBehavior TtargetHitableBehavior => targetHitableBehavior;
+
+        private ICombatTarget combatTarget;
+        public ICombatTarget CombatTarget => combatTarget;
+
+        private ActionContext actionContext;
+        private float nextCombatAttackTime;
+        private float defaultStoppingDistance;
 
         private CurrencyType resourceType;
         public CurrencyType ResourceType => resourceType;
@@ -101,9 +153,7 @@ namespace Watermelon
         private bool isRunning;
         public bool IsRunning => isRunning;
 
-        public bool IsOpened => helperSave.IsOpened;
-
-        public bool IsPlayer => false;
+        public bool IsOpened => helperSave != null && helperSave.IsOpened;
 
         public Vector3 FlyingResourceSpawnPosition => transform.position + new Vector3(0, 1, 0);
 
@@ -118,12 +168,28 @@ namespace Watermelon
 
         private bool isInitialised;
 
+        private bool isOpeningAreaUnlocked;
+        public bool IsOpeningAreaUnlocked => isOpeningAreaUnlocked;
+
+        private bool isOpeningCompleted;
+        private bool isHealthInitialised;
+
         public event SimpleCallback HelperUnlocked;
+        public event SimpleCallback OpeningAreaUnlocked;
 
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             characterRigidbody = GetComponent<Rigidbody>();
+            characterCollider = GetComponent<Collider>();
+
+            if (healthBehavior == null)
+                healthBehavior = GetComponent<HealthBehavior>();
+
+            if (healthBehavior == null)
+                healthBehavior = gameObject.AddComponent<HealthBehavior>();
+
+            defaultStoppingDistance = navMeshAgent.stoppingDistance;
 
             navMeshAgentBehaviour = new NavMeshAgentBehaviour();
             navMeshAgentBehaviour.Initialise(this, navMeshAgent);
@@ -138,6 +204,8 @@ namespace Watermelon
         public void OnWorldLoaded()
         {
             isInitialised = true;
+            isOpeningAreaUnlocked = false;
+            isOpeningCompleted = false;
 
             graphicsHolder = new CharacterGraphicsHolder<HelperGraphics>();
             graphicsHolder.Initialise(this);
@@ -150,15 +218,19 @@ namespace Watermelon
             isStoringResourcesActive = availableTasks.IsTypeAvailable(HelperTaskType.Storing);
 
             zoneRestPosition = LinkedWorldBehavior.GetHelperRestPosition();
+
+            InitialiseHealth();
         }
 
         public void OnNavMeshInitialised()
         {
             if (helperSave.IsOpened)
             {
+                isOpeningAreaUnlocked = true;
+
                 navMeshAgentBehaviour.Warp(GetRestPosition());
 
-                OnLinkedElementOpened();
+                CompleteOpening(false);
             }
             else
             {
@@ -194,29 +266,49 @@ namespace Watermelon
                     }
 
                     CheckIfLinkedElementsOpened();
+
+                    if (isOpeningAreaUnlocked)
+                        UnsubscribeFromOpeningSources();
                 }
                 else
                 {
-                    OnLinkedElementOpened();
+                    OnOpeningAreaUnlocked();
                 }
             }
         }
 
         public void OnWorldUnloaded()
         {
+            SaveHealth();
+            CombatTargetRegistry.Unregister(this);
+            ClearCombatTarget();
+
             navMeshAgentBehaviour.Unload();
 
             emoteBehavior.Unload();
 
             stateMachine.StopMachine();
+
+            if (healthBehavior != null)
+            {
+                healthBehavior.ConfigureRegeneration(false, regenerationDelay, regenerationPerSecond);
+                healthBehavior.HealthChanged -= OnHealthChanged;
+                healthBehavior.Depleted -= OnHealthDepleted;
+            }
+
+            isHealthInitialised = false;
+            isInitialised = false;
+        }
+
+        private void OnDestroy()
+        {
+            CombatTargetRegistry.Unregister(this);
         }
 
         private void CheckIfLinkedElementsOpened()
         {
-            if(IsAnyLinkedElementsOpened())
-            {
-                OnLinkedElementOpened();
-            }
+            if (!isOpeningAreaUnlocked && IsAnyLinkedElementsOpened())
+                OnOpeningAreaUnlocked();
         }
 
         private bool IsAnyLinkedElementsOpened()
@@ -246,8 +338,41 @@ namespace Watermelon
             return false;
         }
 
-        private void OnLinkedElementOpened()
+        private void OnOpeningAreaUnlocked()
         {
+            if (isOpeningAreaUnlocked)
+                return;
+
+            isOpeningAreaUnlocked = true;
+
+            UnsubscribeFromOpeningSources();
+
+            OpeningAreaUnlocked?.Invoke();
+
+            if (!waitForExternalRelease)
+                TryRelease();
+        }
+
+        public bool TryRelease()
+        {
+            if (isOpeningCompleted)
+                return true;
+
+            if (!isInitialised || helperSave == null || !isOpeningAreaUnlocked)
+                return false;
+
+            CompleteOpening(true);
+
+            return true;
+        }
+
+        private void CompleteOpening(bool notify)
+        {
+            if (isOpeningCompleted)
+                return;
+
+            isOpeningCompleted = true;
+
             if (disableObjectIfZoneIsLocked)
             {
                 gameObject.SetActive(true);
@@ -255,15 +380,30 @@ namespace Watermelon
                 graphicsHolder.PlaySpawnAnimation();
             }
 
-            HelperUnlocked?.Invoke();
-
             helperSave.IsOpened = true;
 
             stateMachine.enabled = true;
-            stateMachine.StartMachine(HelperStateMachine.State.WaitingForTask);
+
+            if (IsRecovering)
+            {
+                CombatTargetRegistry.Unregister(this);
+                navMeshAgentBehaviour.Warp(GetRestPosition());
+                stateMachine.StartMachine(HelperStateMachine.State.RecoveringAtBase);
+            }
+            else
+            {
+                CombatTargetRegistry.Register(this);
+                stateMachine.StartMachine(HelperStateMachine.State.WaitingForTask);
+            }
 
             DisableWaitingAnimation();
 
+            if (notify)
+                HelperUnlocked?.Invoke();
+        }
+
+        private void UnsubscribeFromOpeningSources()
+        {
             if (!linkedTiles.IsNullOrEmpty())
             {
                 foreach (GroundTileComplexBehavior linkedTile in linkedTiles)
@@ -285,6 +425,123 @@ namespace Watermelon
                     }
                 }
             }
+        }
+
+        private void InitialiseHealth()
+        {
+            if (isHealthInitialised)
+                return;
+
+            var savedHealth = helperSave.HasHealthData ? helperSave.CurrentHealth : maxHealth;
+            var clampedMaxHealth = Mathf.Max(1f, maxHealth);
+
+            IsRecovering = helperSave.HasHealthData &&
+                (helperSave.IsRecovering || savedHealth <= 0f) &&
+                savedHealth < clampedMaxHealth;
+
+            healthBehavior.HealthChanged -= OnHealthChanged;
+            healthBehavior.HealthChanged += OnHealthChanged;
+            healthBehavior.Depleted -= OnHealthDepleted;
+            healthBehavior.Depleted += OnHealthDepleted;
+
+            healthBehavior.ShowOnChange = true;
+            healthBehavior.HideOnFull = true;
+
+            isHealthInitialised = true;
+
+            healthBehavior.Initialise(clampedMaxHealth, savedHealth);
+            healthBehavior.ConfigureRegeneration(!IsRecovering, regenerationDelay, regenerationPerSecond);
+
+            if (!healthBehavior.IsDepleted && !healthBehavior.IsFull)
+                healthBehavior.Show();
+            else if (healthBehavior.IsDepleted)
+                healthBehavior.ForceHide();
+
+            SaveHealth();
+        }
+
+        private void OnHealthChanged()
+        {
+            SaveHealth();
+        }
+
+        private void SaveHealth()
+        {
+            if (!isHealthInitialised || helperSave == null || healthBehavior == null)
+                return;
+
+            helperSave.HasHealthData = true;
+            helperSave.CurrentHealth = healthBehavior.CurrentHealth;
+            helperSave.IsRecovering = IsRecovering;
+        }
+
+        private void OnHealthDepleted()
+        {
+            if (IsRecovering)
+                return;
+
+            IsRecovering = true;
+            healthBehavior.ConfigureRegeneration(false, regenerationDelay, regenerationPerSecond);
+            healthBehavior.ForceHide();
+
+            CombatTargetRegistry.Unregister(this);
+            ClearCombatTarget();
+
+            stateMachine.StopMachine();
+            UnlinkActiveTask();
+
+            targetHitableBehavior = null;
+            actionContext = ActionContext.None;
+
+            Graphics.InteractionAnimations.Disable();
+            DisableSittingAnimation();
+            emoteBehavior.Hide();
+
+            navMeshAgentBehaviour.Stop();
+            navMeshAgent.stoppingDistance = defaultStoppingDistance;
+            navMeshAgentBehaviour.Warp(GetRestPosition());
+
+            SaveHealth();
+            stateMachine.StartMachine(HelperStateMachine.State.RecoveringAtBase);
+        }
+
+        public void ShowRecoveryHealthbar()
+        {
+            if (IsRecovering && healthBehavior.CurrentHealth > 0f)
+                healthBehavior.Show();
+        }
+
+        public bool UpdateRecovery(float deltaTime)
+        {
+            if (!IsRecovering)
+                return true;
+
+            if (!healthBehavior.IsFull)
+            {
+                var wasDepleted = healthBehavior.IsDepleted;
+
+                if (recoveryDuration <= 0f)
+                    healthBehavior.Restore();
+                else if (deltaTime > 0f)
+                    healthBehavior.Add(healthBehavior.MaxHealth / recoveryDuration * deltaTime);
+
+                if (wasDepleted && !healthBehavior.IsDepleted)
+                    healthBehavior.Show();
+            }
+
+            if (!healthBehavior.IsFull)
+                return false;
+
+            IsRecovering = false;
+            healthBehavior.Hide();
+            healthBehavior.ConfigureRegeneration(true, regenerationDelay, regenerationPerSecond);
+
+            SaveHealth();
+
+            if (isOpeningCompleted)
+                CombatTargetRegistry.Register(this);
+
+            return true;
         }
 
         private void Update()
@@ -359,6 +616,197 @@ namespace Watermelon
         }
         #endregion
 
+        #region Combat
+        public void TakeDamage(DamageSource source, Vector3 position, bool shouldFlash = false)
+        {
+            if (!CanBeTargeted || source == null || source.Damage <= 0f)
+                return;
+
+            healthBehavior.Subtract(source.Damage);
+        }
+
+        public Vector3 GetAttackPosition(Vector3 attackerPosition)
+        {
+            if (characterCollider != null && characterCollider.enabled)
+                return characterCollider.ClosestPoint(attackerPosition);
+
+            return transform.position;
+        }
+
+        public bool SetCombatTarget(ICombatTarget target)
+        {
+            if (!IsCombatTargetValid(target))
+            {
+                ClearCombatTarget();
+                return false;
+            }
+
+            combatTarget = target;
+            return true;
+        }
+
+        public void ClearCombatTarget()
+        {
+            combatTarget = null;
+            navMeshAgent.stoppingDistance = defaultStoppingDistance;
+
+            if (actionContext != ActionContext.Combat)
+                return;
+
+            actionContext = ActionContext.None;
+
+            if (Graphics != null)
+                Graphics.InteractionAnimations.Disable();
+        }
+
+        public bool IsCombatTargetValid(ICombatTarget target)
+        {
+            if (target == null || ReferenceEquals(target, this) || target.Faction != CombatFaction.Hostile || !target.CanBeTargeted)
+                return false;
+
+            if (target is Object unityObject && unityObject == null)
+                return false;
+
+            return target.Transform != null && !target.IsDead;
+        }
+
+        public bool HasHostileInAggroRange()
+        {
+            return FindNearestHostile(transform.position, aggroRadius) != null;
+        }
+
+        public ICombatTarget FindNearestHostile(Vector3 origin, float radius)
+        {
+            CombatTargetRegistry.RemoveInvalidTargets();
+
+            ICombatTarget nearestTarget = null;
+            var nearestDistanceSqr = radius * radius;
+
+            for (var i = 0; i < CombatTargetRegistry.Count; i++)
+            {
+                var target = CombatTargetRegistry.GetTarget(i);
+                if (!IsCombatTargetValid(target))
+                    continue;
+
+                var offset = target.Transform.position - origin;
+                offset.y = 0f;
+
+                var distanceSqr = offset.sqrMagnitude;
+                if (distanceSqr > nearestDistanceSqr)
+                    continue;
+
+                nearestDistanceSqr = distanceSqr;
+                nearestTarget = target;
+            }
+
+            return nearestTarget;
+        }
+
+        public bool MoveToCombatTarget()
+        {
+            if (IsDead || IsRecovering || !IsCombatTargetValid(combatTarget))
+            {
+                ClearCombatTarget();
+                return false;
+            }
+
+            var attackPosition = combatTarget.GetAttackPosition(transform.position);
+            if ((attackPosition - transform.position).sqrMagnitude <= combatRange * combatRange)
+            {
+                navMeshAgentBehaviour.Stop();
+                return true;
+            }
+
+            if (!navMeshAgentBehaviour.PathExists(attackPosition))
+                return false;
+
+            navMeshAgent.stoppingDistance = combatRange;
+            navMeshAgentBehaviour.SetWaypoints(attackPosition);
+            return true;
+        }
+
+        public bool MoveToCombatPosition(Vector3 position)
+        {
+            if (IsDead || IsRecovering || !IsCombatTargetValid(combatTarget))
+            {
+                ClearCombatTarget();
+                return false;
+            }
+
+            if (!navMeshAgentBehaviour.PathExists(position))
+                return false;
+
+            navMeshAgent.stoppingDistance = 0f;
+            navMeshAgentBehaviour.SetWaypoints(position);
+            return true;
+        }
+
+        public bool TryAttack()
+        {
+            if (IsDead || IsRecovering || Time.time < nextCombatAttackTime || !IsCombatTargetValid(combatTarget))
+            {
+                if (!IsCombatTargetValid(combatTarget))
+                    ClearCombatTarget();
+
+                return false;
+            }
+
+            var attackPosition = combatTarget.GetAttackPosition(transform.position);
+            var direction = attackPosition - transform.position;
+            direction.y = 0f;
+
+            if (direction.sqrMagnitude > combatRange * combatRange)
+                return false;
+
+            navMeshAgentBehaviour.Stop();
+
+            if (direction.sqrMagnitude > Mathf.Epsilon)
+                transform.rotation = Quaternion.LookRotation(direction.normalized);
+
+            actionContext = ActionContext.Combat;
+            nextCombatAttackTime = Time.time + combatCooldown;
+
+            Graphics.InteractionAnimations.Activate(InteractionAnimationType.Default);
+
+            var interactionsLayer = characterAnimator.GetLayerIndex("Interactions");
+            if (interactionsLayer >= 0)
+                characterAnimator.Play("Interaction", interactionsLayer, 0f);
+
+            return true;
+        }
+
+        public void OnAnimationHit()
+        {
+            if (actionContext == ActionContext.Combat)
+            {
+                OnCombatHit();
+                return;
+            }
+
+            if (actionContext == ActionContext.Resource)
+                OnResourceHit();
+        }
+
+        private void OnCombatHit()
+        {
+            if (!IsCombatTargetValid(combatTarget))
+            {
+                ClearCombatTarget();
+                return;
+            }
+
+            var attackPosition = combatTarget.GetAttackPosition(transform.position);
+            if ((attackPosition - transform.position).sqrMagnitude > combatRange * combatRange)
+                return;
+
+            var target = combatTarget;
+            target.TakeDamage(new DamageSource(combatDamage, this), transform.position, true);
+
+            if (!IsCombatTargetValid(target))
+                ClearCombatTarget();
+        }
+        #endregion
+
         #region Animations
         private void ActivateWaitingAnimation()
         {
@@ -384,6 +832,24 @@ namespace Watermelon
         #endregion
 
         #region Task
+        public bool TryStartBaseDefense(DefendBaseTask task)
+        {
+            if (task == null || !task.Validate(this) || IsDead || IsRecovering)
+                return false;
+
+            if (activeTask == task && stateMachine.CurrentState == HelperStateMachine.State.DefendingBase)
+                return true;
+
+            if (stateMachine.IsPlaying)
+                stateMachine.StopMachine();
+
+            UnlinkActiveTask();
+            SetActiveTask(task);
+            stateMachine.StartMachine(HelperStateMachine.State.DefendingBase);
+
+            return true;
+        }
+
         public void SetActiveTask(BaseTask task)
         {
             UnlinkActiveTask();
@@ -410,6 +876,11 @@ namespace Watermelon
         public void SetTargetHitableObject(AbstractHitableBehavior hitableBehavior)
         {
             targetHitableBehavior = hitableBehavior;
+
+            if (hitableBehavior != null)
+                actionContext = ActionContext.Resource;
+            else if (actionContext == ActionContext.Resource)
+                actionContext = ActionContext.None;
         }
 
         public void OnResourceHit()
@@ -426,7 +897,10 @@ namespace Watermelon
                 }
 
                 if (!targetHitableBehavior.IsActive)
+                {
                     targetHitableBehavior = null;
+                    actionContext = ActionContext.None;
+                }
             }
         }
 
@@ -505,6 +979,13 @@ namespace Watermelon
                     }
                 }
             }
+        }
+
+        private enum ActionContext
+        {
+            None = 0,
+            Resource = 1,
+            Combat = 2,
         }
     }
 }

@@ -19,6 +19,9 @@ namespace Watermelon
         public void Enable();
         public void Disable();
 
+        public void Complete();
+        public void ResetForReconstruction(IUnlockableComplex unlockableComplex);
+
         public void Destroy();
 
         // editor feature

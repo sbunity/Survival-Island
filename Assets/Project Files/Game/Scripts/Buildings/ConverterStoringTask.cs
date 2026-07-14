@@ -34,7 +34,7 @@ namespace Watermelon
 
         public override bool Validate(HelperBehavior botBehavior)
         {
-            if (resourceConverter == null || !resourceConverter.IsHelperTaskActive || !resourceConverter.gameObject.activeSelf || resourceConverter.InStorage.IsFull())
+            if (resourceConverter == null || !resourceConverter.IsOperational || !resourceConverter.IsHelperTaskActive || !resourceConverter.gameObject.activeSelf || resourceConverter.InStorage.IsFull())
                 return false;
 
             if (botBehavior.Inventory.HasResource(resourceConverter.InStorage.RequiredResources))

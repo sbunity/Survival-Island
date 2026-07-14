@@ -8,7 +8,7 @@ using Watermelon.GlobalUpgrades;
 
 namespace Watermelon
 {
-    public class PlayerBehavior : MonoBehaviour, ICharacter, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IHitter
+    public class PlayerBehavior : MonoBehaviour, ICharacter, ICombatTarget, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IHitter
     {
         private static readonly int FULL_FLOATING_TEXT_HASH = "Floating".GetHashCode();
         private static readonly int FULL_FLOATING_TEXT_DELAY = 2;
@@ -64,6 +64,9 @@ namespace Watermelon
 
         public bool IsPlayer => true;
         public bool IsDead { get; private set; }
+        public CombatFaction Faction => CombatFaction.Friendly;
+        public CombatTargetType TargetType => CombatTargetType.Player;
+        public bool CanBeTargeted => isActiveAndEnabled && gameObject.activeInHierarchy && !IsDead;
 
         private bool isAttacking;
         private bool IsHitting { get; set; }
@@ -204,6 +207,8 @@ namespace Watermelon
 
             EnergyController.OnEnergyChanged += OnHungerChanged;
             SkinController.SkinSelected += OnSkinSelected;
+
+            CombatTargetRegistry.Register(this);
         }
 
         private void Update()
@@ -756,6 +761,14 @@ namespace Watermelon
             }
         }
 
+        public Vector3 GetAttackPosition(Vector3 attackerPosition)
+        {
+            if (characterCollider != null && characterCollider.enabled)
+                return characterCollider.ClosestPoint(attackerPosition);
+
+            return transform.position;
+        }
+
         private void HealthRestorationUpdate()
         {
             if (!Health.IsFull && Time.time > lastTimeGotHit + 5)
@@ -1022,6 +1035,8 @@ namespace Watermelon
 
         public void Unload()
         {
+            CombatTargetRegistry.Unregister(this);
+
             AudioController.ResetAudioListenerParent();
 
             inventory.Unload();
@@ -1033,6 +1048,8 @@ namespace Watermelon
 
         private void OnDestroy()
         {
+            CombatTargetRegistry.Unregister(this);
+
             inventory.Unload();
 
             if (AudioController.IsInitialized)

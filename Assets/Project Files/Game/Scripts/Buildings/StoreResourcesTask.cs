@@ -42,6 +42,9 @@ namespace Watermelon
             if (!storageBuildingBehavior.IsHelperTaskActive)
                 return false;
 
+            if (!storageBuildingBehavior.IsOperational)
+                return false;
+
             if (!storageBuildingBehavior.gameObject.activeSelf)
                 return false;
 

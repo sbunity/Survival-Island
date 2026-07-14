@@ -36,9 +36,9 @@ namespace Watermelon
 
         public ResourcesList CostLeft => purchaser.CostLeft;
 
-        public bool CanBePurchased { get; private set; }
-        public bool CanBeConstructed { get; private set; }
-        public bool IsOpen { get; private set; }
+        public bool CanBePurchased { get; protected set; }
+        public bool CanBeConstructed { get; protected set; }
+        public bool IsOpen { get; protected set; }
 
         protected bool isInitialised;
         private SimpleCallback initialisedCallback;
@@ -88,7 +88,7 @@ namespace Watermelon
             if ((purchaser == null && constructionPoint == null) || isOpenFromStart) return true;
 
             bool purchaserLocked = purchaser != null && !purchaser.LookUpPurchased(this);
-            bool constructionLocked = constructionPoint != null && constructionPoint.LookUpConstructed(this);
+            bool constructionLocked = constructionPoint != null && !constructionPoint.LookUpConstructed(this);
             if (purchaserLocked || constructionLocked) return false;
 
             return true;
@@ -235,13 +235,49 @@ namespace Watermelon
         {
             if (!CanBeConstructed) return;
 
-            constructionPoint.Destroy();
+            constructionPoint.Complete();
 
             CanBePurchased = false;
             CanBeConstructed = false;
             IsOpen = true;
 
             unlockable.FullyUnlock();
+        }
+
+        protected void InitialiseReconstruction(bool resetProgress)
+        {
+            IsOpen = false;
+            CanBePurchased = false;
+            CanBeConstructed = false;
+
+            if (resetProgress)
+            {
+                purchaser?.ResetForReconstruction(this);
+                constructionPoint?.ResetForReconstruction(this);
+            }
+
+            var purchasePending = purchaser != null && purchaser.Init(this);
+            var constructionPending = !purchasePending && constructionPoint != null && constructionPoint.Init(this);
+
+            switch (CombatSystemLogic.GetRebuildStage(purchasePending, constructionPending))
+            {
+                case BuildingRebuildStage.Purchasing:
+                    CanBePurchased = true;
+
+                    if (constructionPoint != null)
+                        constructionPoint.Disable();
+                    break;
+
+                case BuildingRebuildStage.Constructing:
+                    CanBeConstructed = true;
+                    constructionPoint.Enable();
+                    break;
+
+                default:
+                    IsOpen = true;
+                    unlockable.FullyUnlock();
+                    break;
+            }
         }
 
         public void EnableConstructing()

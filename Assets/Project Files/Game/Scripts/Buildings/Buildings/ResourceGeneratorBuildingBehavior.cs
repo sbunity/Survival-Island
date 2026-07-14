@@ -88,21 +88,21 @@ namespace Watermelon
         {
             base.SpanwNotUnlocked();
 
-            isActive = false;
+            isActive = IsOperational;
         }
 
         public override void FullyUnlock()
         {
             base.FullyUnlock();
 
-            isActive = true;
+            isActive = IsOperational;
         }
 
         public override void SpawnUnlocked()
         {
             base.SpawnUnlocked();
 
-            isActive = true;
+            isActive = IsOperational;
         }
 
         public override void OnWorldUnloaded()
@@ -110,6 +110,17 @@ namespace Watermelon
             base.OnWorldUnloaded();
 
             isActive = false;
+        }
+
+        protected override void OnOperationalStateChanged(bool isOperational)
+        {
+            isActive = isOperational;
+
+            if (!isOperational && IsAnimationRunning)
+            {
+                IsAnimationRunning = false;
+                OnAnimationStoped?.Invoke();
+            }
         }
     }
 }

@@ -52,46 +52,35 @@ namespace Watermelon
         {
             UnlockableComplex = unlockableComplex;
 
-            if (Save == null)
-            {
-                WorldData worldData = WorldController.CurrentWorld;
-                SaveFile worldSave = SaveController.GetFile(worldData.ID);
-
-                Save = worldSave.GetSaveObject<PurchasePointSave>(unlockableComplex.ID + "_purchase_point");
-                Save.Init();
-            }
+            EnsureSave(unlockableComplex);
 
             costLeft = UnlockableComplex.Cost - Save.Resources;
             if (costLeft.Count == 0 || Save.IsBought)
             {
-                // The point has already done it's job, no need to keep it alive
-                Destroy();
+                Complete();
                 return false;
             }
 
             displayedCost = new ResourcesList(costLeft);
 
+            // Activate the purchaser (and thus the canvas) before feeding it data, so the canvas is
+            // active-in-hierarchy and ResourcesCanvas.Awake/InitialiseUIPanels has collected the
+            // prefab's placeholder resource panels. Calling SetData while still inactive leaves those
+            // defaults untracked, so they linger on-screen next to the freshly instantiated panels.
+            gameObject.SetActive(true);
             resourceCanvas.gameObject.SetActive(true);
             resourceCanvas.SetData(displayedCost);
 
             PopulateRequiredResources();
-            gameObject.SetActive(true);
 
             return true;
         }
 
         public bool LookUpPurchased(IUnlockableComplex unlockableComplex)
         {
-            if (Save == null)
-            {
-                WorldData worldData = WorldController.CurrentWorld;
-                SaveFile worldSave = SaveController.GetFile(worldData.ID);
+            EnsureSave(unlockableComplex);
 
-                Save = worldSave.GetSaveObject<PurchasePointSave>(unlockableComplex.ID + "_purchase_point");
-                Save.Init();
-            }
-
-            return Save.IsBought || (UnlockableComplex.Cost - Save.Resources).Count == 0;
+            return Save.IsBought || (unlockableComplex.Cost - Save.Resources).Count == 0;
         }
 
         public override void TakeResource(FlyingResourceBehavior flyingResource, bool fromPlayer)
@@ -166,12 +155,40 @@ namespace Watermelon
             }
         }
 
+        public void Complete()
+        {
+            Disable();
+            gameObject.SetActive(false);
+        }
+
+        public void ResetForReconstruction(IUnlockableComplex unlockableComplex)
+        {
+            EnsureSave(unlockableComplex);
+
+            Save.Resources = new ResourcesList();
+            Save.IsBought = false;
+
+            costLeft = new ResourcesList(unlockableComplex.Cost);
+            displayedCost = new ResourcesList(costLeft);
+
+            Complete();
+        }
+
         public void Destroy()
         {
-            if (resourceCanvas != null)
-                Destroy(resourceCanvas.gameObject);
+            Complete();
+        }
 
-            Destroy(gameObject);
+        private void EnsureSave(IUnlockableComplex unlockableComplex)
+        {
+            if (Save != null)
+                return;
+
+            var worldData = WorldController.CurrentWorld;
+            var worldSave = SaveController.GetFile(worldData.ID);
+
+            Save = worldSave.GetSaveObject<PurchasePointSave>(unlockableComplex.ID + "_purchase_point");
+            Save.Init();
         }
 
         #region Development

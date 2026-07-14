@@ -17,10 +17,12 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.CollectMission.Save), "Watermelon.CollectMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.ConstructingPointSave), "Watermelon.ConstructingPointSave");
             SaveKeyMap.Register(typeof(Watermelon.Currency.Save), "Watermelon.Currency+Save");
+            SaveKeyMap.Register(typeof(Watermelon.DefeatRaidMission.Save), "Watermelon.DefeatRaidMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.DiggingPointSave), "Watermelon.DiggingPointSave");
             SaveKeyMap.Register(typeof(Watermelon.EnergyController.EnergySave), "Watermelon.EnergyController+EnergySave");
             SaveKeyMap.Register(typeof(Watermelon.GlobalUpgrades.UpgradeSavableObject), "Watermelon.GlobalUpgrades.UpgradeSavableObject");
             SaveKeyMap.Register(typeof(Watermelon.GroundUnlockMission.Save), "Watermelon.GroundUnlockMission+Save");
+            SaveKeyMap.Register(typeof(Watermelon.GuardedHelperMission.Save), "Watermelon.GuardedHelperMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.HapticSave), "Watermelon.HapticSave");
             SaveKeyMap.Register(typeof(Watermelon.HelperMission.Save), "Watermelon.HelperMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.HelperSave), "Watermelon.HelperSave");
@@ -30,6 +32,8 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.PurchasePointSave), "Watermelon.PurchasePointSave");
             SaveKeyMap.Register(typeof(Watermelon.ResourceListSave), "Watermelon.ResourceListSave");
             SaveKeyMap.Register(typeof(Watermelon.ResourceStorageBuildingBehavior.ResourcesSave), "Watermelon.ResourceStorageBuildingBehavior+ResourcesSave");
+            SaveKeyMap.Register(typeof(Watermelon.ShipwreckLootMission.Save), "Watermelon.ShipwreckLootMission+Save");
+            SaveKeyMap.Register(typeof(Watermelon.ShipwreckLootSave), "Watermelon.ShipwreckLootSave");
             SaveKeyMap.Register(typeof(Watermelon.SimpleBoolSave), "Watermelon.SimpleBoolSave");
             SaveKeyMap.Register(typeof(Watermelon.SimpleFloatSave), "Watermelon.SimpleFloatSave");
             SaveKeyMap.Register(typeof(Watermelon.SimpleIntSave), "Watermelon.SimpleIntSave");

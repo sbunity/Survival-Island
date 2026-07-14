@@ -13,7 +13,29 @@ namespace Watermelon
         {
             base.Awake();
 
+            unlockable.SetComplex(this);
             GetComponentsInChildren(true, obstacles);
+        }
+
+        public override void Init()
+        {
+            if (unlockable.IsDestroyed)
+            {
+                unlockable.SpawnDestroyed();
+                InitialiseReconstruction(false);
+                InvokeInitialiseCallback();
+                return;
+            }
+
+            base.Init();
+        }
+
+        public void BeginReconstruction()
+        {
+            if (!unlockable.IsDestroyed)
+                return;
+
+            InitialiseReconstruction(true);
         }
 
         public override void Purchase()

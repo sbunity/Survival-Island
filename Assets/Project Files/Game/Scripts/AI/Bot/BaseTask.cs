@@ -112,7 +112,7 @@ namespace Watermelon
             return false;
         }
 
-        public bool IsTypeAvailable(HelperTaskType availableTasks)
+        public virtual bool IsTypeAvailable(HelperTaskType availableTasks)
         {
             return type != 0 && (availableTasks & type) == type;
         }

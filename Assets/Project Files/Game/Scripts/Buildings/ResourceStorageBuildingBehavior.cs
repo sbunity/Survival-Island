@@ -68,6 +68,7 @@ namespace Watermelon
             storeResourcesTask.Activate();
             storeResourcesTask.Register(LinkedWorldBehavior.TaskHandler);
 
+            storage.OnResourcesChanged -= OnStorageResourcesChanged;
             storage.OnResourcesChanged += OnStorageResourcesChanged;
             OnStorageResourcesChanged();
 
@@ -145,10 +146,34 @@ namespace Watermelon
             }
         }
 
-        private void OnDisable()
+        protected override void OnDisable()
         {
+            base.OnDisable();
+
             if (storage != null)
                 storage.OnResourcesChanged -= OnStorageResourcesChanged;
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+
+            if (storage != null)
+            {
+                storage.OnResourcesChanged -= OnStorageResourcesChanged;
+                storage.OnResourcesChanged += OnStorageResourcesChanged;
+            }
+        }
+
+        protected override void OnOperationalStateChanged(bool isOperational)
+        {
+            if (storeResourcesTask == null)
+                return;
+
+            if (isOperational)
+                storeResourcesTask.Activate();
+            else
+                storeResourcesTask.Disable();
         }
 
         [System.Serializable]

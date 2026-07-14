@@ -18,46 +18,91 @@ namespace Watermelon.AI
             this.helperBehavior = helperBehavior;
             this.navMeshAgentBehaviour = navMeshAgentBehaviour;
 
-            StateCase waitingForTaskStateCase = new StateCase();
-            waitingForTaskStateCase.state = new WaitingForTaskState(helperBehavior);
-            waitingForTaskStateCase.transitions = new List<StateTransition<State>>
+            var waitingForTaskStateCase = new StateCase
             {
-                new StateTransition<State>(WaitForTaskStateTransition, transitionType: StateTransitionType.Independent),
+                state = new WaitingForTaskState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
+                    new(WaitForTaskStateTransition, transitionType: StateTransitionType.Independent),
+                }
             };
 
-            StateCase gatheringStateCase = new StateCase();
-            gatheringStateCase.state = new GatheringState(helperBehavior);
-            gatheringStateCase.transitions = new List<StateTransition<State>>
+            var gatheringStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new GatheringState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
-            StateCase storingStateCase = new StateCase();
-            storingStateCase.state = new StoringState(helperBehavior);
-            storingStateCase.transitions = new List<StateTransition<State>>
+            var storingStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new StoringState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
-            StateCase buildingStateCase = new StateCase();
-            buildingStateCase.state = new BuildingState(helperBehavior);
-            buildingStateCase.transitions = new List<StateTransition<State>>
+            var buildingStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new BuildingState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
-            StateCase converterStoringStateCase = new StateCase();
-            converterStoringStateCase.state = new ConverterStoringState(helperBehavior);
-            converterStoringStateCase.transitions = new List<StateTransition<State>>
+            var converterStoringStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new ConverterStoringState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
-            StateCase fishingStateCase = new StateCase();
-            fishingStateCase.state = new FishingState(helperBehavior);
-            fishingStateCase.transitions = new List<StateTransition<State>>
+            var fishingStateCase = new StateCase
             {
-                new StateTransition<State>(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                state = new FishingState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(HostileNearbyTransition, transitionType: StateTransitionType.Independent),
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
+            };
+
+            var attackingStateCase = new StateCase
+            {
+                state = new AttackingState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
+            };
+
+            var recoveringAtBaseStateCase = new StateCase
+            {
+                state = new RecoveringAtBaseState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(RecoveryFinish, transitionType: StateTransitionType.OnFinish),
+                }
+            };
+
+            var defendingBaseStateCase = new StateCase
+            {
+                state = new DefendingBaseState(helperBehavior),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(TaskFinish, transitionType: StateTransitionType.OnFinish),
+                }
             };
 
             states.Add(State.WaitingForTask, waitingForTaskStateCase);
@@ -66,6 +111,9 @@ namespace Watermelon.AI
             states.Add(State.Building, buildingStateCase);
             states.Add(State.ConverterStoring, converterStoringStateCase);
             states.Add(State.Fishing, fishingStateCase);
+            states.Add(State.RecoveringAtBase, recoveringAtBaseStateCase);
+            states.Add(State.DefendingBase, defendingBaseStateCase);
+            states.Add(State.Attacking, attackingStateCase);
 
             startState = State.WaitingForTask;
         }
@@ -111,11 +159,30 @@ namespace Watermelon.AI
             return false;
         }
 
+        private bool HostileNearbyTransition(out State nextState)
+        {
+            nextState = State.Attacking;
+
+            return CanEngageHostiles() && helperBehavior.HasHostileInAggroRange();
+        }
+
+        private bool CanEngageHostiles()
+        {
+            return helperBehavior != null && helperBehavior.IsOpened && !helperBehavior.IsDead && !helperBehavior.IsRecovering;
+        }
+
         private bool TaskFinish(out State nextState)
         {
             nextState = State.WaitingForTask;
 
             return true;
+        }
+
+        private bool RecoveryFinish(out State nextState)
+        {
+            nextState = State.WaitingForTask;
+
+            return !helperBehavior.IsRecovering;
         }
 
         public enum State
@@ -127,6 +194,210 @@ namespace Watermelon.AI
             Building = 4,
             ConverterStoring = 5,
             Fishing = 6,
+            RecoveringAtBase = 7,
+            DefendingBase = 8,
+            Attacking = 9,
+        }
+    }
+
+    public class RecoveringAtBaseState : HelperStateBehavior
+    {
+        public RecoveringAtBaseState(HelperBehavior helperBehavior) : base(helperBehavior)
+        {
+        }
+
+        public override void OnStart()
+        {
+            navMeshAgent.Stop();
+            target.Graphics.InteractionAnimations.Disable();
+            target.ShowRecoveryHealthbar();
+        }
+
+        public override void OnUpdate()
+        {
+            if (target.UpdateRecovery(Time.deltaTime))
+                InvokeOnFinished();
+        }
+    }
+
+    public class DefendingBaseState : HelperStateBehavior
+    {
+        private const float TARGET_MOVEMENT_REFRESH_DELAY = 0.2f;
+        private const float DEFENSE_POINT_REACH_DISTANCE = 0.25f;
+
+        private DefendBaseTask defendTask;
+        private BaseAttackController controller;
+        private float nextMovementRefreshTime;
+
+        public DefendingBaseState(HelperBehavior helperBehavior) : base(helperBehavior)
+        {
+        }
+
+        public override void OnStart()
+        {
+            defendTask = target.ActiveTask as DefendBaseTask;
+            controller = defendTask?.Controller;
+            nextMovementRefreshTime = Time.time;
+
+            navMeshAgent.Stop();
+            target.ClearCombatTarget();
+        }
+
+        public override void OnUpdate()
+        {
+            if (defendTask == null || controller == null || !defendTask.Validate(target))
+            {
+                InvokeOnFinished();
+                return;
+            }
+
+            var combatTarget = target.CombatTarget;
+            if (!target.IsCombatTargetValid(combatTarget) || !controller.IsInsideDefenseRadius(combatTarget))
+            {
+                navMeshAgent.Stop();
+                target.ClearCombatTarget();
+                combatTarget = null;
+            }
+
+            if (combatTarget == null)
+            {
+                combatTarget = controller.GetNearestHostile(target.transform.position);
+                if (combatTarget != null && !target.SetCombatTarget(combatTarget))
+                    combatTarget = null;
+            }
+
+            if (combatTarget != null)
+            {
+                var attackPosition = combatTarget.GetAttackPosition(target.transform.position);
+                var offset = attackPosition - target.transform.position;
+                offset.y = 0f;
+
+                if (offset.sqrMagnitude <= target.CombatRange * target.CombatRange)
+                {
+                    target.TryAttack();
+                }
+                else if (Time.time >= nextMovementRefreshTime)
+                {
+                    nextMovementRefreshTime = Time.time + TARGET_MOVEMENT_REFRESH_DELAY;
+                    var movementPosition = controller.ClampMovementInsideDefenseRadius(attackPosition, target.CombatRange);
+                    target.MoveToCombatPosition(movementPosition);
+                }
+
+                return;
+            }
+
+            HoldDefensePoint();
+        }
+
+        private void HoldDefensePoint()
+        {
+            var defensePosition = controller.GetNearestDefensePosition(target.transform.position);
+            var offset = defensePosition - target.transform.position;
+            offset.y = 0f;
+
+            if (offset.sqrMagnitude <= DEFENSE_POINT_REACH_DISTANCE * DEFENSE_POINT_REACH_DISTANCE)
+            {
+                navMeshAgent.Stop();
+                return;
+            }
+
+            if (!navMeshAgent.IsMoving && navMeshAgent.PathExists(defensePosition))
+                navMeshAgent.SetWaypoints(defensePosition);
+        }
+
+        public override void OnEnd()
+        {
+            navMeshAgent.Stop();
+            target.ClearCombatTarget();
+            target.UnlinkActiveTask();
+
+            defendTask = null;
+            controller = null;
+        }
+    }
+
+    public class AttackingState : HelperStateBehavior
+    {
+        private const float MOVEMENT_REFRESH_DELAY = 0.2f;
+
+        private Vector3 leashOrigin;
+        private float nextMovementRefreshTime;
+
+        public AttackingState(HelperBehavior helperBehavior) : base(helperBehavior)
+        {
+        }
+
+        public override void OnStart()
+        {
+            leashOrigin = target.transform.position;
+            nextMovementRefreshTime = Time.time;
+
+            navMeshAgent.Stop();
+
+            AcquireTarget();
+        }
+
+        public override void OnUpdate()
+        {
+            if (target.IsDead || target.IsRecovering)
+            {
+                InvokeOnFinished();
+                return;
+            }
+
+            var combatTarget = target.CombatTarget;
+            if (!target.IsCombatTargetValid(combatTarget) || !IsInsideLeash(combatTarget))
+            {
+                target.ClearCombatTarget();
+                combatTarget = AcquireTarget();
+            }
+
+            if (combatTarget == null)
+            {
+                InvokeOnFinished();
+                return;
+            }
+
+            var attackPosition = combatTarget.GetAttackPosition(target.transform.position);
+            var offset = attackPosition - target.transform.position;
+            offset.y = 0f;
+
+            if (offset.sqrMagnitude <= target.CombatRange * target.CombatRange)
+            {
+                target.TryAttack();
+            }
+            else if (Time.time >= nextMovementRefreshTime)
+            {
+                nextMovementRefreshTime = Time.time + MOVEMENT_REFRESH_DELAY;
+                target.MoveToCombatTarget();
+            }
+        }
+
+        private ICombatTarget AcquireTarget()
+        {
+            var hostile = target.FindNearestHostile(leashOrigin, target.AggroRadius);
+            if (hostile != null && target.SetCombatTarget(hostile))
+                return hostile;
+
+            target.ClearCombatTarget();
+            return null;
+        }
+
+        private bool IsInsideLeash(ICombatTarget combatTarget)
+        {
+            if (combatTarget == null || combatTarget.Transform == null)
+                return false;
+
+            var offset = combatTarget.Transform.position - leashOrigin;
+            offset.y = 0f;
+
+            return offset.sqrMagnitude <= target.AggroRadius * target.AggroRadius;
+        }
+
+        public override void OnEnd()
+        {
+            navMeshAgent.Stop();
+            target.ClearCombatTarget();
         }
     }
 
@@ -410,6 +681,12 @@ namespace Watermelon.AI
 
         public override void OnUpdate()
         {
+            if (target.ActiveTask == null || !target.ActiveTask.IsActive || !targetStorage.IsOperational)
+            {
+                InvokeOnFinished();
+                return;
+            }
+
             if(targetStorage.IsFull)
             {
                 InvokeOnFinished();
@@ -489,6 +766,12 @@ namespace Watermelon.AI
 
         public override void OnUpdate()
         {
+            if (target.ActiveTask == null || !target.ActiveTask.IsActive || !targetStorage.IsOperational)
+            {
+                InvokeOnFinished();
+                return;
+            }
+
             if (targetStorage.InStorage.IsFull())
             {
                 InvokeOnFinished();

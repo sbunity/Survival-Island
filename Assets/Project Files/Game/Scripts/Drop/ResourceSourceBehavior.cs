@@ -165,6 +165,7 @@ namespace Watermelon
 
             respawnCase.KillActive();
             hitCase.KillActive();
+            tiltCase.KillActive();
         }
 
         private void CalculateDamagePerHit()
@@ -201,6 +202,7 @@ namespace Watermelon
 
         TweenCase respawnCase;
         TweenCase hitCase;
+        TweenCase tiltCase;
 
         private void Respawn()
         {
@@ -365,21 +367,21 @@ namespace Watermelon
             if (!tiltOnHit)
                 return;
 
+            tiltCase.KillActive();
+
             var direction = (Position - PlayerBehavior.Position).SetY(0).normalized;
 
-            var rotation = transform.rotation;
+            var restUp = Vector3.up;
+            var desiredUp = Vector3.Lerp(restUp, direction.SetY(0.5f).normalized, tiltMultiplier).normalized;
 
-            var up = rotatingTransform.up;
-            var desiredUp = Vector3.Lerp(rotatingTransform.up, direction.SetY(0.5f).normalized, tiltMultiplier).normalized;
-
-            Tween.DoFloat(0, 1, 0.1f, (value) =>
+            tiltCase = Tween.DoFloat(0, 1, 0.1f, (value) =>
             {
-                rotatingTransform.up = Vector3.Lerp(up, desiredUp, value).normalized;
+                rotatingTransform.up = Vector3.Lerp(restUp, desiredUp, value).normalized;
             }).SetEasing(Ease.Type.SineOut).OnComplete(() =>
             {
-                Tween.DoFloat(0, 1, 0.15f, (value) =>
+                tiltCase = Tween.DoFloat(0, 1, 0.15f, (value) =>
                 {
-                    rotatingTransform.up = Vector3.Lerp(desiredUp, up, value).normalized;
+                    rotatingTransform.up = Vector3.Lerp(desiredUp, restUp, value).normalized;
                 }).SetEasing(Ease.Type.SineInOut);
             });
         }
@@ -421,6 +423,7 @@ namespace Watermelon
 
             respawnCase.KillActive();
             hitCase.KillActive();
+            tiltCase.KillActive();
         }
 
         private class ResourceDrop

@@ -13,9 +13,16 @@ namespace Watermelon
 
         [SerializeField] CameraLocalData cameraData;
 
+        [SerializeField] float verticalSmoothTime = 0.12f;
+        [SerializeField] float verticalSnapThreshold = 1.5f;
+
         private bool isShaking;
         private float shakeGain = 0.0f;
         private TweenCase shakeTweenCase;
+
+        private float smoothedFollowY;
+        private float followYVelocity;
+        private bool isFollowYInitialised;
 
         private bool isBlending;
         public bool IsBlending => isBlending;
@@ -34,6 +41,8 @@ namespace Watermelon
         public void SetTarget(Transform target)
         {
             this.target = target;
+
+            isFollowYInitialised = false;
         }
 
         public void SetFollowOffset(Vector3 followOffset)
@@ -58,18 +67,33 @@ namespace Watermelon
             if ((!isActive && !isBlending) || target == null)
                 return;
 
+            Vector3 followPosition = target.position + cameraData.FollowOffset;
+            followPosition.y = ResolveFollowY(followPosition.y);
+
             if (isShaking)
             {
-                // Recalculate camera position
-                cameraData.UpdatePosition(target.position + cameraData.FollowOffset + (Random.onUnitSphere * shakeGain * Time.deltaTime));
+                followPosition += shakeGain * Time.deltaTime * Random.onUnitSphere;
+            }
+
+            cameraData.UpdatePosition(followPosition);
+
+            cameraData.UpdateRotation(Quaternion.Euler(cameraData.SimpleRotation));
+        }
+
+        private float ResolveFollowY(float targetY)
+        {
+            if (!isFollowYInitialised || verticalSmoothTime <= 0f || Mathf.Abs(targetY - smoothedFollowY) > verticalSnapThreshold)
+            {
+                smoothedFollowY = targetY;
+                followYVelocity = 0f;
+                isFollowYInitialised = true;
             }
             else
             {
-                // Recalculate camera position
-                cameraData.UpdatePosition(target.position + cameraData.FollowOffset);
+                smoothedFollowY = Mathf.SmoothDamp(smoothedFollowY, targetY, ref followYVelocity, verticalSmoothTime);
             }
 
-            cameraData.UpdateRotation(Quaternion.Euler(cameraData.SimpleRotation));
+            return smoothedFollowY;
         }
 
         public void StartTransition()

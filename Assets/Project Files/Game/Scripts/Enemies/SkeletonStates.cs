@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Watermelon.Enemy.Skeleton
 {
-    public class SkeletonIdleState: StateBehavior<SkeletonEnemyBehavior>
+    public class SkeletonIdleState : StateBehavior<SkeletonEnemyBehavior>
     {
         public SkeletonIdleState(SkeletonEnemyBehavior skeleton) : base(skeleton)
         {
-            
+
         }
 
         public override void OnUpdate()
@@ -25,12 +23,61 @@ namespace Watermelon.Enemy.Skeleton
                 Target.transform.rotation = Quaternion.Lerp(Target.transform.rotation, Target.SpawnPoint.rotation, Time.deltaTime * 5);
             }
         }
-        
+    }
+
+    public class SkeletonPatrolState : StateBehavior<SkeletonEnemyBehavior>
+    {
+        private bool isMoving;
+        private int destinationSetFrame;
+        private float nextDestinationTime;
+
+        public SkeletonPatrolState(SkeletonEnemyBehavior skeleton) : base(skeleton)
+        {
+
+        }
+
+        public override void OnStart()
+        {
+            Target.StopMoving();
+            TryStartMoving();
+        }
+
+        public override void OnUpdate()
+        {
+            if (isMoving)
+            {
+                if (Time.frameCount == destinationSetFrame || !Target.IsPatrolPointReached())
+                    return;
+
+                isMoving = false;
+                nextDestinationTime = Time.time + Target.GetPatrolWaitDuration();
+            }
+
+            if (Time.time >= nextDestinationTime)
+                TryStartMoving();
+        }
+
+        public override void OnEnd()
+        {
+            Target.StopMoving();
+        }
+
+        private void TryStartMoving()
+        {
+            isMoving = Target.TryMoveToRandomPatrolPoint();
+            destinationSetFrame = Time.frameCount;
+
+            if (!isMoving)
+                nextDestinationTime = Time.time + Target.PatrolRetryDelay;
+        }
     }
 
     public class SkeletonAttackState : StateBehavior<SkeletonEnemyBehavior>
     {
-        public bool IsAttacking { get; private set; }
+        private const float ATTACK_COOLDOWN = 0.5f;
+
+        private float nextAttackTime;
+        private bool isWaitingForHitEnded;
         
         public SkeletonAttackState(SkeletonEnemyBehavior skeleton) : base(skeleton)
         {
@@ -39,39 +86,60 @@ namespace Watermelon.Enemy.Skeleton
 
         public override void OnStart()
         {
-            IsAttacking = false;
+            nextAttackTime = 0f;
+            isWaitingForHitEnded = false;
+
+            Target.RefreshTargetSelection(true);
+            Target.MoveToCurrentTarget();
         }
 
         public override void OnUpdate()
         {
-            if (IsAttacking)
+            Target.RefreshTargetSelection();
+
+            if (Target.IsAttackAnimationPlaying)
             {
-                Target.transform.rotation = Quaternion.Lerp(Target.transform.rotation, Quaternion.LookRotation((PlayerBehavior.Position - Position).normalized), Time.deltaTime * 5);
+                Target.RotateTowardsCurrentTarget(5f);
                 return;
             }
 
-            if (PlayerBehavior.GetBehavior() == null) return;
+            if (!Target.HasAvailableTarget())
+                return;
 
-            if(Vector3.Distance(Position, PlayerBehavior.Position) > 1)
+            if (!Target.IsCurrentTargetWithin(Target.AttackRange))
             {
-                if(Time.frameCount % 10 == 2)
-                {
-                    Target.MoveToPlayer();
-                }
-            } else if(!PlayerBehavior.GetBehavior().IsDead)
+                if (Time.frameCount % 10 == 2)
+                    Target.MoveToCurrentTarget();
+
+                return;
+            }
+
+            Target.RotateTowardsCurrentTarget(5f);
+
+            if (Time.time >= nextAttackTime)
             {
                 Target.Attack();
 
-                IsAttacking = true;
-
-                Target.OnHitEnded += OnHitEnded;
+                if (!isWaitingForHitEnded)
+                {
+                    isWaitingForHitEnded = true;
+                    Target.OnHitEnded += OnHitEnded;
+                }
             }
+        }
+
+        public override void OnEnd()
+        {
+            Target.OnHitEnded -= OnHitEnded;
+            isWaitingForHitEnded = false;
+            Target.StopMoving();
         }
 
         private void OnHitEnded()
         {
-            Tween.DelayedCall(0.5f, () => IsAttacking = false);
             Target.OnHitEnded -= OnHitEnded;
+            isWaitingForHitEnded = false;
+            nextAttackTime = Time.time + ATTACK_COOLDOWN;
         }
     }
 }

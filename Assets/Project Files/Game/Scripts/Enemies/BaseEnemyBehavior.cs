@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 namespace Watermelon
 {
-    public class BaseEnemyBehavior : MonoBehaviour, ICharacter, IHitable
+    public class BaseEnemyBehavior : MonoBehaviour, ICharacter, ICombatTarget, IHitable
     {
         private static readonly int MOVEMENT_NULTIPLIER_HASH = Animator.StringToHash("Movement Multiplier");
         private static readonly int ATTACK_TRIGGER = Animator.StringToHash("Attack");
@@ -17,6 +17,9 @@ namespace Watermelon
 
         public bool IsPlayer => false;
         public bool IsDead { get; private set; }
+        public CombatFaction Faction => CombatFaction.Hostile;
+        public CombatTargetType TargetType => CombatTargetType.Enemy;
+        public bool CanBeTargeted => isActiveAndEnabled && gameObject.activeInHierarchy && !IsDead && (characterCollider == null || characterCollider.enabled);
 
         public Transform SnappingTransform => transform;
         public Transform Transform => transform;
@@ -28,6 +31,7 @@ namespace Watermelon
         [SerializeField] Animator animator;
         [BoxFoldout("Refs", label: "References")]
         [SerializeField] NavMeshAgent agent;
+        protected NavMeshAgent Agent => agent;
         [BoxFoldout("Refs", label: "References")]
         [SerializeField] Renderer bodyRenderer;
         [BoxFoldout("Refs", label: "References")]
@@ -66,6 +70,7 @@ namespace Watermelon
         public Transform SpawnPoint { get; private set; }
 
         private HealthBehavior Health { get; set; }
+        private TweenCase disableAfterDeathTweenCase;
 
         #region Hittable
 
@@ -109,6 +114,8 @@ namespace Watermelon
 
         public void Spawn(Transform spawnPoint)
         {
+            disableAfterDeathTweenCase.KillActive();
+
             SpawnPoint = spawnPoint;
 
             transform.position = spawnPoint.position;
@@ -121,15 +128,26 @@ namespace Watermelon
             agent.Warp(spawnPoint.position);
 
             IsDead = false;
+
+            CombatTargetRegistry.Register(this);
+
+            OnSpawned();
         }
 
         public void TakeDamage(DamageSource source, Vector3 position, bool shouldFlash = false)
         {
+            if (IsDead || source == null || source.Damage <= 0f)
+                return;
+
             Health.Subtract(source.Damage);
 
             if (Health.IsDepleted)
             {
                 IsDead = true;
+
+                CombatTargetRegistry.Unregister(this);
+
+                OnDeathStarted();
 
                 stateMachine.StopMachine();
 
@@ -137,8 +155,11 @@ namespace Watermelon
 
                 animator.SetTrigger(DIE_TRIGGER);
 
-                Tween.DelayedCall(2f, () =>
+                disableAfterDeathTweenCase = Tween.DelayedCall(2f, () =>
                 {
+                    if (!IsDead)
+                        return;
+
                     gameObject.SetActive(false);
                     PlayerBehavior.GetBehavior().OnHittableOutsideRangeOrCompleted(this);
                     OnDeath?.Invoke();
@@ -164,15 +185,17 @@ namespace Watermelon
             agent.stoppingDistance = 0;
         }
 
-        public void MoveToPlayer()
-        {
-            agent.SetDestination(PlayerBehavior.Position);
-            agent.stoppingDistance = 1;
-        }
-
-        public void Attack()
+        public virtual void Attack()
         {
             animator.SetTrigger(ATTACK_TRIGGER);
+        }
+
+        public Vector3 GetAttackPosition(Vector3 attackerPosition)
+        {
+            if (characterCollider != null && characterCollider.enabled)
+                return characterCollider.ClosestPoint(attackerPosition);
+
+            return transform.position;
         }
 
         #region Animation Callbacks
@@ -276,10 +299,30 @@ namespace Watermelon
 
         public void Unload()
         {
+            disableAfterDeathTweenCase.KillActive();
+
+            CombatTargetRegistry.Unregister(this);
+
+            OnUnloaded();
+
             Health.ForceHide();
 
             stateMachine.StopMachine();
             gameObject.SetActive(false);
         }
+
+        private void OnDisable()
+        {
+            disableAfterDeathTweenCase.KillActive();
+
+            CombatTargetRegistry.Unregister(this);
+
+            OnReturnedToPool();
+        }
+
+        protected virtual void OnSpawned() { }
+        protected virtual void OnDeathStarted() { }
+        protected virtual void OnUnloaded() { }
+        protected virtual void OnReturnedToPool() { }
     }
 }

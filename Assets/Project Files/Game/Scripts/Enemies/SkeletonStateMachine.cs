@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Watermelon.Enemy.Skeleton;
 
 namespace Watermelon
@@ -13,45 +12,67 @@ namespace Watermelon
         {
             enemy = GetComponent<SkeletonEnemyBehavior>();
 
-            var idleStateCase = new StateCase();
-            idleStateCase.state = new SkeletonIdleState(enemy);
-            idleStateCase.transitions = new List<StateTransition<State>>
+            var idleStateCase = new StateCase
             {
-                new StateTransition<State>(IdleStateTransition, StateTransitionType.Independent)
+                state = new SkeletonIdleState(enemy),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(IdleStateTransition, StateTransitionType.Independent)
+                }
             };
 
-            var attackingStateCase = new StateCase();
-            attackingStateCase.state = new SkeletonAttackState(enemy);
-            attackingStateCase.transitions = new List<StateTransition<State>>
+            var patrolStateCase = new StateCase
             {
-                new StateTransition<State> (AttackingStateTransition, StateTransitionType.Independent),
+                state = new SkeletonPatrolState(enemy),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(PatrolStateTransition, StateTransitionType.Independent)
+                }
+            };
+
+            var attackingStateCase = new StateCase
+            {
+                state = new SkeletonAttackState(enemy),
+                transitions = new List<StateTransition<State>>
+                {
+                    new(AttackingStateTransition, StateTransitionType.Independent),
+                }
             };
 
             states.Add(State.Idle, idleStateCase);
+            states.Add(State.Patrolling, patrolStateCase);
             states.Add(State.Attacking, attackingStateCase);
+
+            startState = State.Patrolling;
         }
 
-        private bool IdleStateTransition(out State nextState)
+        private bool PatrolStateTransition(out State nextState)
         {
             nextState = State.Attacking;
 
-            if (PlayerBehavior.GetBehavior() == null) return false;
-
-            return Vector3.Distance(PlayerBehavior.Position, enemy.transform.position) < 5f;
+            enemy.RefreshTargetSelection();
+            return enemy.IsCurrentTargetWithin(5f);
         }
+
+        private bool IdleStateTransition(out State nextState) 
+            => PatrolStateTransition(out nextState);
+
         private bool AttackingStateTransition(out State nextState)
         {
-            nextState = State.Idle;
+            nextState = State.Patrolling;
 
-            if (PlayerBehavior.GetBehavior() == null) return false;
+            if (enemy.IsAttackAnimationPlaying)
+                return false;
 
-            return Vector3.Distance(PlayerBehavior.Position, enemy.transform.position) > 10f;
+            enemy.RefreshTargetSelection();
+            return !enemy.HasAvailableTarget() || !enemy.IsCurrentTargetWithin(10f);
         }
 
         public enum State
         {
-            Idle,
+            Patrolling,
             Attacking,
+            Idle,
         }
     }
 }

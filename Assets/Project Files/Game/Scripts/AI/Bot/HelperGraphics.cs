@@ -23,7 +23,7 @@ namespace Watermelon
 
             interactionAnimations.InvokeHitEvent();
 
-            helperBehavior.OnResourceHit();
+            helperBehavior.OnAnimationHit();
         }
 
         public void Step()
