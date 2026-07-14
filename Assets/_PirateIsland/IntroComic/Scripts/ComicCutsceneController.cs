@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,50 +7,69 @@ using UnityEngine.SceneManagement;
 
 public class ComicCutsceneController : MonoBehaviour
 {
-    [Header("Comic panels in display order")]
-    [SerializeField] private List<CanvasGroup> comicElements = new List<CanvasGroup>();
+    [Serializable]
+    public enum ComicTextType { Sound, Dialogue, Narration }
 
-    [Header("Panel texts (optional, same order as panels)")]
-    [SerializeField, TextArea(2, 4)] private List<string> panelTexts = new List<string>();
+    [Serializable]
+    public class ComicTextEntry
+    {
+        public TypewriterText target;
+        public ComicTextType type;
+        [TextArea(1, 3)] public string text;
+        public float delayBefore;
+        public bool showInstantly;
+    }
+
+    [Serializable]
+    public class ComicPanelData
+    {
+        public CanvasGroup panel;
+        public List<ComicTextEntry> texts = new List<ComicTextEntry>();
+    }
+
+    [Header("Comic panels in display order")]
+    [SerializeField] private List<ComicPanelData> panels = new List<ComicPanelData>();
 
     [Header("Controls")]
     [SerializeField] private Button skipButton;
     [SerializeField] private Button continueButton;
 
     [Header("Animation")]
-    [SerializeField] private float delayBetweenElements = 0.25f;
+    [SerializeField] private float delayBetweenPanels = 0.25f;
     [SerializeField] private float fadeDuration = 0.25f;
     [SerializeField] private Vector3 hiddenScale = new Vector3(0.96f, 0.96f, 1f);
     [SerializeField] private Vector3 visibleScale = Vector3.one;
 
     [Header("After cutscene")]
-    [SerializeField] private string gameplaySceneName = "First Island";
+    [SerializeField] private string gameplaySceneName = "Init";
+    [SerializeField] private float continueDelay = 1f;
     [SerializeField] private bool rememberWatchedCutscene = true;
 
     private Coroutine playRoutine;
     private bool isFinishing;
+    private bool advancePanel;
     private TypewriterText activeTypewriter;
     private const string CutsceneWatchedKey = "IntroComicCutsceneWatched";
 
     private void Awake()
     {
+#if UNITY_EDITOR
+        PlayerPrefs.DeleteKey(CutsceneWatchedKey);
+#endif
         HideAllElements();
 
         if (skipButton != null)
-            skipButton.onClick.AddListener(SkipCutscene);
+            skipButton.onClick.AddListener(SkipCurrentPanel);
 
         if (continueButton != null)
-        {
-            continueButton.gameObject.SetActive(false);
-            continueButton.onClick.AddListener(FinishCutscene);
-        }
+            continueButton.onClick.AddListener(ShowAllAndFinish);
     }
 
     private void Start()
     {
         if (rememberWatchedCutscene && PlayerPrefs.GetInt(CutsceneWatchedKey, 0) == 1)
         {
-            FinishCutscene();
+            ShowAllAndFinish();
             return;
         }
 
@@ -58,49 +78,67 @@ public class ComicCutsceneController : MonoBehaviour
 
     private void HideAllElements()
     {
-        foreach (CanvasGroup element in comicElements)
+        foreach (var panelData in panels)
         {
-            if (element == null) continue;
+            if (panelData.panel == null) continue;
 
-            element.alpha = 0f;
-            element.transform.localScale = hiddenScale;
-            element.interactable = false;
-            element.blocksRaycasts = false;
+            panelData.panel.alpha = 0f;
+            panelData.panel.transform.localScale = hiddenScale;
+            panelData.panel.interactable = false;
+            panelData.panel.blocksRaycasts = false;
 
-            var tw = element.GetComponentInChildren<TypewriterText>(true);
-            tw?.Clear();
+            foreach (var entry in panelData.texts)
+                entry.target?.Clear();
         }
     }
 
     private IEnumerator PlayCutscene()
     {
-        for (int i = 0; i < comicElements.Count; i++)
+        foreach (var panelData in panels)
         {
-            var element = comicElements[i];
-            if (element == null) continue;
+            if (panelData.panel == null) continue;
+            advancePanel = false;
 
-            yield return ShowElement(element);
+            yield return ShowElement(panelData.panel);
 
-            // Start typewriter if this panel has text
-            string text = (panelTexts != null && i < panelTexts.Count) ? panelTexts[i] : null;
-            if (!string.IsNullOrEmpty(text))
+            foreach (var entry in panelData.texts)
             {
-                activeTypewriter = element.GetComponentInChildren<TypewriterText>(true);
-                if (activeTypewriter != null)
+                if (entry.target == null || string.IsNullOrEmpty(entry.text))
                 {
-                    bool done = false;
-                    activeTypewriter.Play(text, () => done = true);
-                    yield return new WaitUntil(() => done);
+#if UNITY_EDITOR
+                    if (entry.target == null)
+                        Debug.LogWarning($"[ComicCutscene] Panel '{panelData.panel.name}' has a text entry ({entry.type}) with no TypewriterText assigned.");
+#endif
+                    continue;
                 }
+
+                if (!advancePanel && entry.delayBefore > 0f)
+                    yield return WaitOrAdvance(entry.delayBefore);
+
+                if (advancePanel || entry.showInstantly)
+                {
+                    entry.target.Play(entry.text);
+                    entry.target.Skip();
+                    continue;
+                }
+
+                activeTypewriter = entry.target;
+                bool done = false;
+                entry.target.Play(entry.text, () => done = true);
+                yield return new WaitUntil(() => done || advancePanel);
+
+                if (advancePanel && activeTypewriter != null)
+                    activeTypewriter.Skip();
+
+                activeTypewriter = null;
             }
 
-            yield return new WaitForSeconds(delayBetweenElements);
+            if (!advancePanel)
+                yield return new WaitForSeconds(delayBetweenPanels);
         }
 
-        activeTypewriter = null;
-
-        if (continueButton != null)
-            continueButton.gameObject.SetActive(true);
+        yield return new WaitForSeconds(continueDelay);
+        FinishCutscene();
     }
 
     private IEnumerator ShowElement(CanvasGroup element)
@@ -109,12 +147,11 @@ public class ComicCutsceneController : MonoBehaviour
         element.alpha = 0f;
         element.transform.localScale = hiddenScale;
 
-        while (timer < fadeDuration)
+        while (timer < fadeDuration && !advancePanel)
         {
             timer += Time.deltaTime;
             float t = Mathf.Clamp01(timer / fadeDuration);
             float smooth = Mathf.SmoothStep(0f, 1f, t);
-
             element.alpha = smooth;
             element.transform.localScale = Vector3.Lerp(hiddenScale, visibleScale, smooth);
             yield return null;
@@ -124,30 +161,55 @@ public class ComicCutsceneController : MonoBehaviour
         element.transform.localScale = visibleScale;
     }
 
-    private void SkipCutscene()
+    private IEnumerator WaitOrAdvance(float duration)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration && !advancePanel)
+        {
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    // Skip — completes current panel instantly and moves to the next one
+    private void SkipCurrentPanel()
     {
         if (isFinishing) return;
+        advancePanel = true;
 
-        // If typewriter is active — skip it first
         if (activeTypewriter != null && activeTypewriter.IsTyping)
-        {
             activeTypewriter.Skip();
-            return;
-        }
+    }
+
+    // Continue — shows all panels and texts instantly, then transitions after continueDelay
+    private void ShowAllAndFinish()
+    {
+        if (isFinishing) return;
 
         if (playRoutine != null)
             StopCoroutine(playRoutine);
 
-        foreach (CanvasGroup element in comicElements)
+        foreach (var panelData in panels)
         {
-            if (element == null) continue;
-            element.alpha = 1f;
-            element.transform.localScale = visibleScale;
+            if (panelData.panel == null) continue;
 
-            var tw = element.GetComponentInChildren<TypewriterText>(true);
-            tw?.Skip();
+            panelData.panel.alpha = 1f;
+            panelData.panel.transform.localScale = visibleScale;
+
+            foreach (var entry in panelData.texts)
+            {
+                if (entry.target == null || string.IsNullOrEmpty(entry.text)) continue;
+                entry.target.Play(entry.text);
+                entry.target.Skip();
+            }
         }
 
+        StartCoroutine(DelayedFinish());
+    }
+
+    private IEnumerator DelayedFinish()
+    {
+        yield return new WaitForSeconds(continueDelay);
         FinishCutscene();
     }
 

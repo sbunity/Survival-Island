@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b86e224-7de4-4a7c-aa57-a01ae350375a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survival-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survival-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/NuGet/System.Runtime.CompilerServices.Unsafe.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/NuGet/System.Runtime.CompilerServices.Unsafe.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scenes/Worlds/World 1 Full Demo/Nav Mesh Cave Subworld.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scenes/Worlds/World 1 Full Demo/Nav Mesh Tent Subworld.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scenes/Worlds/World 1 Full Demo/Nav Mesh World 1.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scenes/IntroComic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scenes/IntroComic.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scripts/ComicCutsceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scripts/ComicCutsceneController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scripts/ComicCutsceneController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -93,6 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1782471488246</updated>
       <workItem from="1782471488247" duration="6793000" />
+      <workItem from="1783943407768" duration="5083000" />
     </task>
     <servers />
   </component>
