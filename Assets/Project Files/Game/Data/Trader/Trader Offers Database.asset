@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfab55a9f8daf634a99081fd3f6e721e, type: 3}
+  m_Name: Trader Offers Database
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.TraderOffersDatabase
+  offers:
+  - give:
+    - currency: 1
+      amount: 10
+    receive:
+    - currency: 2
+      amount: 6
+  - give:
+    - currency: 2
+      amount: 10
+    receive:
+    - currency: 1
+      amount: 6
+  - give:
+    - currency: 3
+      amount: 8
+    receive:
+    - currency: 1
+      amount: 4
+  - give:
+    - currency: 100
+      amount: 15
+    receive:
+    - currency: 101
+      amount: 8
+  - give:
+    - currency: 50
+      amount: 5
+    receive:
+    - currency: 51
+      amount: 3
+  - give:
+    - currency: 51
+      amount: 5
+    receive:
+    - currency: 50
+      amount: 3
+  - give:
+    - currency: 0
+      amount: 30
+    receive:
+    - currency: 1
+      amount: 5
+  - give:
+    - currency: 0
+      amount: 40
+    receive:
+    - currency: 2
+      amount: 5
+  - give:
+    - currency: 0
+      amount: 60
+    receive:
+    - currency: 50
+      amount: 3
+  - give:
+    - currency: 0
+      amount: 80
+    receive:
+    - currency: 51
+      amount: 3
+  - give:
+    - currency: 0
+      amount: 50
+    receive:
+    - currency: 52
+      amount: 4
+  - give:
+    - currency: 0
+      amount: 25
+    receive:
+    - currency: 3
+      amount: 6
+  minOffersPerVisit: 3
+  maxOffersPerVisit: 4

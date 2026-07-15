@@ -43,6 +43,7 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.SkinGlobalSave), "Watermelon.SkinGlobalSave");
             SaveKeyMap.Register(typeof(Watermelon.SkinSave), "Watermelon.SkinSave");
             SaveKeyMap.Register(typeof(Watermelon.SubworldEnterMission.Save), "Watermelon.SubworldEnterMission+Save");
+            SaveKeyMap.Register(typeof(Watermelon.TraderSave), "Watermelon.TraderSave");
             SaveKeyMap.Register(typeof(Watermelon.TutorialBaseSave), "Watermelon.TutorialBaseSave");
             SaveKeyMap.Register(typeof(Watermelon.UnlockableToolSave), "Watermelon.UnlockableToolSave");
             SaveKeyMap.Register(typeof(Watermelon.UpgradeMission.Save), "Watermelon.UpgradeMission+Save");
