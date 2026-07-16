@@ -5309,6 +5309,13 @@ MonoBehaviour:
   waterTrail: {fileID: 123556569418599294}
   swimWaterLineOffset: -0.15
   waterLevel: -0.9
+  requiresRescue: 0
+  capturedPoint: {fileID: 0}
+  rescueLinkedTiles: []
+  rescueLinkedBuildings: []
+  escortMoveSpeed: 4
+  escortArriveDistance: 1.5
+  escortPauseDuration: 0.5
 --- !u!1 &2377232065219413088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5698,6 +5705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3297497503980602954}
   - component: {fileID: 4675635563385411771}
+  - component: {fileID: 8491132123231629643}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -5745,6 +5753,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8491132123231629643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992266307572476371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acea23aa7c1273d4891cb4233d687cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.TraderAnimationEventReceiver
 --- !u!1 &4207066310614189513
 GameObject:
   m_ObjectHideFlags: 0
