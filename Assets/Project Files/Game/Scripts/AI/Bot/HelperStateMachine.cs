@@ -802,7 +802,10 @@ namespace Watermelon.AI
 
     public class BuildingState : HelperStateBehavior
     {
+        private const float BUILDING_STANDOFF_DISTANCE = 0.5f;
+
         private ConstructionPointBehavior targetConstructionPoint;
+        private bool isBuilding;
 
         public BuildingState(HelperBehavior helperBehavior) : base(helperBehavior)
         {
@@ -813,6 +816,8 @@ namespace Watermelon.AI
         {
             navMeshAgent.Stop();
 
+            isBuilding = false;
+
             BaseTask task = target.ActiveTask;
             if (task != null)
             {
@@ -821,17 +826,9 @@ namespace Watermelon.AI
                 {
                     targetConstructionPoint = constructionTask.ConstructionPointBehavior;
 
-                    Vector3 boxColliderSize = targetConstructionPoint.BoxCollider.size;
-                    float width = boxColliderSize.x;
-                    float height = boxColliderSize.z;
-
-                    float radius = Mathf.Sqrt(width * width + height * height) / 2;
-
                     target.SetTargetHitableObject(targetConstructionPoint);
 
-                    Vector3 direction = (target.transform.position - targetConstructionPoint.transform.position).normalized;
-
-                    navMeshAgent.SetWaypoints(targetConstructionPoint.transform.position + (direction * radius));
+                    navMeshAgent.SetWaypoints(GetApproachPosition());
                     navMeshAgent.PathFinished += OnBuildingReached;
                 }
                 else
@@ -843,6 +840,21 @@ namespace Watermelon.AI
             {
                 InvokeOnFinished();
             }
+        }
+
+        private Vector3 GetApproachPosition()
+        {
+            var helperPosition = target.transform.position;
+
+            var surfacePoint = targetConstructionPoint.BoxCollider.ClosestPoint(helperPosition);
+
+            var direction = (helperPosition - surfacePoint).SetY(0).normalized;
+            if (direction == Vector3.zero)
+                direction = (helperPosition - targetConstructionPoint.transform.position).SetY(0).normalized;
+            if (direction == Vector3.zero)
+                direction = target.transform.forward;
+
+            return surfacePoint.SetY(helperPosition.y) + direction * BUILDING_STANDOFF_DISTANCE;
         }
 
         private void OnBuildingReached()
@@ -857,6 +869,8 @@ namespace Watermelon.AI
                 Vector3 lookAt = (targetConstructionPoint.transform.position - target.transform.position).SetY(0).normalized;
 
                 target.transform.rotation = Quaternion.LookRotation(lookAt);
+
+                isBuilding = true;
             }
         }
 
@@ -871,6 +885,11 @@ namespace Watermelon.AI
             {
                 InvokeOnFinished();
             }
+
+            if (isBuilding && targetConstructionPoint != null)
+            {
+                target.SnapToHittable(targetConstructionPoint);
+            }
         }
 
         public override void OnEnd()
@@ -880,6 +899,8 @@ namespace Watermelon.AI
             target.Graphics.InteractionAnimations.Disable();
 
             target.UnlinkActiveTask();
+
+            isBuilding = false;
         }
     }
 

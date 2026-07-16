@@ -877,6 +877,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 836934276}
   helpersRestZone: {fileID: 0}
   helpersRestZoneSize: {x: 0, y: 0}
+  curveOverride: {fileID: 0}
   attackController: {fileID: 18863365}
   exits:
   - {fileID: 1725872944}
@@ -78962,6 +78963,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1544073180}
   helpersRestZone: {fileID: 0}
   helpersRestZoneSize: {x: 0, y: 0}
+  curveOverride: {fileID: 0}
   attackController: {fileID: 1820117120}
   exits:
   - {fileID: 79094325}
@@ -92617,6 +92619,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 247124221}
   helpersRestZone: {fileID: 71126579}
   helpersRestZoneSize: {x: 3.74, y: 2.64}
+  curveOverride: {fileID: 0}
   attackController: {fileID: 2625476478768325114}
   missionsHolder: {fileID: 1318192805}
   navMeshSurface: {fileID: 438512383339899028}
