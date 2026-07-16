@@ -8,7 +8,8 @@ namespace Watermelon
         private const int PATROL_POINT_SEARCH_ATTEMPTS = 10;
         private const float PATROL_POINT_REACH_DISTANCE = 0.2f;
         private const float PATROL_RETRY_DELAY = 1f;
-        private const float ATTACK_RANGE = 1f;
+        private const float ATTACK_RANGE = 0.8f;
+        private const float ATTACK_STOP_DISTANCE = 0.5f;
         private const int TARGET_SELECTION_UPDATE_RATE = 10;
 
         [SerializeField] int damage = 10;
@@ -92,7 +93,7 @@ namespace Watermelon
             if (target == null || !target.CanBeTargeted || !Agent.isActiveAndEnabled || !Agent.isOnNavMesh)
                 return false;
 
-            Agent.stoppingDistance = ATTACK_RANGE;
+            Agent.stoppingDistance = ATTACK_STOP_DISTANCE;
             return Agent.SetDestination(target.GetAttackPosition(transform.position));
         }
 
