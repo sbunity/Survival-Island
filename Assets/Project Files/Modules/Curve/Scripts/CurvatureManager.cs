@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace Watermelon
 {
+    [Define("MODULE_CURVE", "Watermelon.CurvatureManager")]
     public class CurvatureManager : MonoBehaviour
     {
         public static CurvatureManager Instance { get; private set; }
