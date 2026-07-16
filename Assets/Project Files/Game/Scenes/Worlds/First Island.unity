@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 7540370}
   - component: {fileID: 7540371}
   m_Layer: 0
-  m_Name: M #38 - planks craft building
+  m_Name: M #39 - planks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5079,7 +5079,7 @@ GameObject:
   - component: {fileID: 137583847}
   - component: {fileID: 137583848}
   m_Layer: 0
-  m_Name: M #39 - raft construction
+  m_Name: M #40 - raft construction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5650,7 +5650,7 @@ GameObject:
   - component: {fileID: 147546715}
   - component: {fileID: 147546716}
   m_Layer: 0
-  m_Name: M #40 - leave the island
+  m_Name: M #41 - leave the island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10452,7 +10452,7 @@ GameObject:
   - component: {fileID: 261071232}
   - component: {fileID: 261071233}
   m_Layer: 0
-  m_Name: M #29 - bricks craft building
+  m_Name: M #30 - bricks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16312,7 +16312,7 @@ GameObject:
   - component: {fileID: 362938667}
   - component: {fileID: 362938668}
   m_Layer: 0
-  m_Name: M #35 - cooking place 3 building
+  m_Name: M #36 - cooking place 3 building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18570,6 +18570,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389001e3b23ffd04c9af8b7e293ac352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &433935208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433935209}
+  m_Layer: 0
+  m_Name: TraderCapturedPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433935209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433935208}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 8.97, y: -0, z: 19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780791335}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &435689385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21071,6 +21102,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 503146791}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &503146793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1398969560553325866, guid: 9b42a5e21aa070f48b89f1ae56ff71f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 503146791}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4ee8f58ae906a4190cfa9428a227ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &503146794 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2378502918199222087, guid: 9b42a5e21aa070f48b89f1ae56ff71f9,
@@ -25218,7 +25261,7 @@ GameObject:
   - component: {fileID: 604482800}
   - component: {fileID: 604482801}
   m_Layer: 0
-  m_Name: M #32 - ramp #1 build
+  m_Name: M #33 - ramp #1 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31485,8 +31528,23 @@ PrefabInstance:
       objectReference: {fileID: 476499837}
     - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
+      propertyPath: capturedPoint
+      value: 
+      objectReference: {fileID: 433935209}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: requiresRescue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
       propertyPath: routeWaypoints.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: rescueLinkedTiles.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
@@ -31503,6 +31561,36 @@ PrefabInstance:
       propertyPath: 'routeWaypoints.Array.data[2]'
       value: 
       objectReference: {fileID: 1385829459}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: 'rescueLinkedTiles.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1194845666}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: 'rescueLinkedTiles.Array.data[1]'
+      value: 
+      objectReference: {fileID: 824033416}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: 'rescueLinkedTiles.Array.data[2]'
+      value: 
+      objectReference: {fileID: 503146793}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: 'rescueLinkedTiles.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1573624826}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: 'rescueLinkedTiles.Array.data[4]'
+      value: 
+      objectReference: {fileID: 887039524}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: 'rescueLinkedTiles.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1696516300}
     - target: {fileID: 8088102936174147510, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33676,6 +33764,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545e8f2bb4cd8e044af06c37c1f89f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &824033416 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1398969560553325866, guid: 9b42a5e21aa070f48b89f1ae56ff71f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 824033412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4ee8f58ae906a4190cfa9428a227ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &826074870
@@ -36694,7 +36794,7 @@ GameObject:
   - component: {fileID: 886913863}
   - component: {fileID: 886913864}
   m_Layer: 0
-  m_Name: M #30 - craft bricks
+  m_Name: M #31 - craft bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36953,6 +37053,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545e8f2bb4cd8e044af06c37c1f89f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &887039524 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1398969560553325866, guid: 9b42a5e21aa070f48b89f1ae56ff71f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 887039520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4ee8f58ae906a4190cfa9428a227ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &894158827
@@ -48525,7 +48637,7 @@ GameObject:
   - component: {fileID: 1094698899}
   - component: {fileID: 1094698900}
   m_Layer: 0
-  m_Name: M #36 - ramp #2 build
+  m_Name: M #37 - ramp #2 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51466,7 +51578,7 @@ GameObject:
   - component: {fileID: 1156361327}
   - component: {fileID: 1156361328}
   m_Layer: 0
-  m_Name: M #37 - stone generator building
+  m_Name: M #38 - stone generator building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52601,6 +52713,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545e8f2bb4cd8e044af06c37c1f89f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1194845666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1398969560553325866, guid: 9b42a5e21aa070f48b89f1ae56ff71f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1194845662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4ee8f58ae906a4190cfa9428a227ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196625786 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 156d5c54e9f3c1243b131a1a61db84df,
@@ -53275,6 +53399,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa94f01b98425904fa850725232e26a2, type: 3}
+--- !u!1 &1203055597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203055598}
+  - component: {fileID: 1203055599}
+  m_Layer: 0
+  m_Name: TraderGuardedSkeletonEncounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203055598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203055597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 7.32, y: 0.08, z: 18.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780791335}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1203055599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203055597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ce58dc8785c5c439d11c0eaa28aaef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.GuardedSkeletonEncounter
+  spawnPoint: {fileID: 0}
+  stateMachineHandoffDistance: 4.5
 --- !u!4 &1205112830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3672125828744499954, guid: 5664a03959e85d74eb8e406349a34f6c,
@@ -57864,6 +58034,7 @@ Transform:
   - {fileID: 122126396}
   - {fileID: 725824177}
   - {fileID: 658929541}
+  - {fileID: 1956794514}
   - {fileID: 261071232}
   - {fileID: 886913863}
   - {fileID: 2093265913}
@@ -66892,7 +67063,7 @@ MonoBehaviour:
   onMissionCompleted:
     m_PersistentCalls:
       m_Calls: []
-  helperBehavior: {fileID: 1327118833}
+  rescueTargetBehaviour: {fileID: 1327118833}
   encounter: {fileID: 855640420}
 --- !u!1001 &1568522817
 PrefabInstance:
@@ -67185,6 +67356,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545e8f2bb4cd8e044af06c37c1f89f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1573624826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1398969560553325866, guid: 9b42a5e21aa070f48b89f1ae56ff71f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1573624823}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4ee8f58ae906a4190cfa9428a227ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1573737404
@@ -71412,6 +71595,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545e8f2bb4cd8e044af06c37c1f89f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1696516300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1398969560553325866, guid: 9b42a5e21aa070f48b89f1ae56ff71f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696516296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4ee8f58ae906a4190cfa9428a227ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1699517631 stripped
@@ -76537,10 +76732,12 @@ Transform:
   - {fileID: 1745136080}
   - {fileID: 722457822}
   - {fileID: 855640419}
+  - {fileID: 1203055598}
   - {fileID: 812600212}
   - {fileID: 773305256}
   - {fileID: 476499837}
   - {fileID: 509374562}
+  - {fileID: 433935209}
   m_Father: {fileID: 2625476478768325108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1787618243 stripped
@@ -80335,7 +80532,7 @@ GameObject:
   - component: {fileID: 1859535999}
   - component: {fileID: 1859536000}
   m_Layer: 0
-  m_Name: M #34 - pumpkins harvest
+  m_Name: M #35 - pumpkins harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83374,6 +83571,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1956544175}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1956794513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956794514}
+  - component: {fileID: 1956794515}
+  m_Layer: 0
+  m_Name: M #29 - save the trader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1956794514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956794513}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1956794515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956794513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1301d901d2658643b17c1bda19c0072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.GuardedHelperMission
+  id: c75d8655-b1b2-4e7c-a650-212012330647
+  title: Save the native
+  rewardType: 0
+  resourceReward:
+    currencyType: 0
+    amount: 20
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 0
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  rescueTargetBehaviour: {fileID: 773305257}
+  encounter: {fileID: 1203055599}
 --- !u!114 &1960183816 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2588427521356791382, guid: 5cfb382d983355c4b9259ffe6551788e,
@@ -84725,7 +85005,7 @@ GameObject:
   - component: {fileID: 1989989903}
   - component: {fileID: 1989989904}
   m_Layer: 0
-  m_Name: M #33 - find pumpkins
+  m_Name: M #34 - find pumpkins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89793,7 +90073,7 @@ GameObject:
   - component: {fileID: 2093265913}
   - component: {fileID: 2093265914}
   m_Layer: 0
-  m_Name: M #31 - upg player harvest
+  m_Name: M #32 - upg player harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

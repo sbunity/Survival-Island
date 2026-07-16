@@ -5,7 +5,7 @@ using Watermelon.AI;
 
 namespace Watermelon
 {
-    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IWorldElement, ICharacter, ICombatTarget
+    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IWorldElement, ICharacter, ICombatTarget, IGuardedRescueTarget
     {
         public static readonly int MOVEMENT_MULTIPLIER_HASH = Animator.StringToHash("Movement Multiplier");
 
@@ -177,6 +177,16 @@ namespace Watermelon
         public event SimpleCallback HelperUnlocked;
         public event SimpleCallback OpeningAreaUnlocked;
 
+        private readonly RescueAreaGate openingGate = new RescueAreaGate();
+
+        bool IGuardedRescueTarget.IsRescued => IsOpened;
+        bool IGuardedRescueTarget.IsRescueAreaUnlocked => isOpeningAreaUnlocked;
+        event SimpleCallback IGuardedRescueTarget.RescueAreaUnlocked
+        {
+            add => OpeningAreaUnlocked += value;
+            remove => OpeningAreaUnlocked -= value;
+        }
+
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
@@ -241,34 +251,7 @@ namespace Watermelon
 
                     ActivateWaitingAnimation();
 
-                    if (!linkedTiles.IsNullOrEmpty())
-                    {
-                        foreach (GroundTileComplexBehavior linkedTile in linkedTiles)
-                        {
-                            if(linkedTile != null)
-                            {
-                                linkedTile.SubscribeOnFullyUnlocked(CheckIfLinkedElementsOpened);
-                                linkedTile.InvokeOrSubscribe(CheckIfLinkedElementsOpened);
-                            }
-                        }
-                    }
-
-                    if (!linkedBuildings.IsNullOrEmpty())
-                    {
-                        foreach (BuildingComplexBehavior linkedBuilding in linkedBuildings)
-                        {
-                            if (linkedBuilding != null)
-                            {
-                                linkedBuilding.SubscribeOnFullyUnlocked(CheckIfLinkedElementsOpened);
-                                linkedBuilding.InvokeOrSubscribe(CheckIfLinkedElementsOpened);
-                            }
-                        }
-                    }
-
-                    CheckIfLinkedElementsOpened();
-
-                    if (isOpeningAreaUnlocked)
-                        UnsubscribeFromOpeningSources();
+                    openingGate.Initialise(linkedTiles, linkedBuildings, OnOpeningAreaUnlocked);
                 }
                 else
                 {
@@ -279,6 +262,8 @@ namespace Watermelon
 
         public void OnWorldUnloaded()
         {
+            openingGate.Dispose();
+
             SaveHealth();
             CombatTargetRegistry.Unregister(this);
             ClearCombatTarget();
@@ -305,39 +290,6 @@ namespace Watermelon
             CombatTargetRegistry.Unregister(this);
         }
 
-        private void CheckIfLinkedElementsOpened()
-        {
-            if (!isOpeningAreaUnlocked && IsAnyLinkedElementsOpened())
-                OnOpeningAreaUnlocked();
-        }
-
-        private bool IsAnyLinkedElementsOpened()
-        {
-            if (!linkedTiles.IsNullOrEmpty())
-            {
-                foreach (GroundTileComplexBehavior linkedTile in linkedTiles)
-                {
-                    if(linkedTile != null && linkedTile.IsOpen)
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            if (!linkedBuildings.IsNullOrEmpty())
-            {
-                foreach (BuildingComplexBehavior linkedBuildign in linkedBuildings)
-                {
-                    if (linkedBuildign != null && linkedBuildign.IsOpen)
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-        }
-
         private void OnOpeningAreaUnlocked()
         {
             if (isOpeningAreaUnlocked)
@@ -345,7 +297,7 @@ namespace Watermelon
 
             isOpeningAreaUnlocked = true;
 
-            UnsubscribeFromOpeningSources();
+            openingGate.Dispose();
 
             OpeningAreaUnlocked?.Invoke();
 
@@ -400,31 +352,6 @@ namespace Watermelon
 
             if (notify)
                 HelperUnlocked?.Invoke();
-        }
-
-        private void UnsubscribeFromOpeningSources()
-        {
-            if (!linkedTiles.IsNullOrEmpty())
-            {
-                foreach (GroundTileComplexBehavior linkedTile in linkedTiles)
-                {
-                    if(linkedTile != null)
-                    {
-                        linkedTile.UnsubscribeOnFullyUnlocked(CheckIfLinkedElementsOpened);
-                    }
-                }
-            }
-
-            if (!linkedBuildings.IsNullOrEmpty())
-            {
-                foreach (BuildingComplexBehavior linkedBuilding in linkedBuildings)
-                {
-                    if(linkedBuilding)
-                    {
-                        linkedBuilding.UnsubscribeOnFullyUnlocked(CheckIfLinkedElementsOpened);
-                    }
-                }
-            }
         }
 
         private void InitialiseHealth()

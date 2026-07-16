@@ -5,6 +5,7 @@ namespace Watermelon
     [System.Serializable]
     public class TraderSave : ISaveObject
     {
+        public bool IsRescued;
         public int Phase;
         public float TimeUntilArrival;
         public float VisitTimeLeft;

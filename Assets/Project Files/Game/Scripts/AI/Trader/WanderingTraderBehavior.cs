@@ -4,13 +4,14 @@ using UnityEngine.AI;
 
 namespace Watermelon
 {
-    public class WanderingTraderBehavior : MonoBehaviour, IWorldElement
+    public class WanderingTraderBehavior : MonoBehaviour, IWorldElement, IGuardedRescueTarget
     {
         private const int WATER_AREA_MASK = 8;
 
         private static readonly int IS_MOVING_HASH = Animator.StringToHash("IsMoving");
         private static readonly int IS_SWIMMING_HASH = Animator.StringToHash("IsSwimming");
         private static readonly int IS_SITTING_HASH = Animator.StringToHash("IsSitting");
+        private static readonly int IS_CAPTURED_HASH = Animator.StringToHash("IsCaptured");
 
         public int InitialisationOrder => 10;
 
@@ -58,9 +59,35 @@ namespace Watermelon
         [BoxGroup("Water Visuals")]
         [SerializeField] float waterLevel = -0.9f;
 
+        [BoxGroup("Rescue")]
+        [SerializeField] bool requiresRescue;
+        [BoxGroup("Rescue")]
+        [SerializeField] Transform capturedPoint;
+        [BoxGroup("Rescue")]
+        [SerializeField] GroundTileComplexBehavior[] rescueLinkedTiles;
+        [BoxGroup("Rescue")]
+        [SerializeField] BuildingComplexBehavior[] rescueLinkedBuildings;
+        [BoxGroup("Rescue")]
+        [SerializeField, Min(0f)] float escortMoveSpeed = 4f;
+        [BoxGroup("Rescue")]
+        [SerializeField, Min(0.1f)] float escortArriveDistance = 1.5f;
+        [BoxGroup("Rescue")]
+        [SerializeField, Min(0f)] float escortPauseDuration = 0.5f;
+
         public BaseWorldBehavior LinkedWorldBehavior { get; set; }
 
         public event SimpleCallback OffersChanged;
+
+        public Transform Transform => transform;
+        public bool IsRescued => traderSave != null && traderSave.IsRescued;
+        public bool IsRescueAreaUnlocked => rescueGate.IsUnlocked;
+        public bool WaitForExternalRelease => true;
+        public event SimpleCallback RescueAreaUnlocked;
+
+        private readonly RescueAreaGate rescueGate = new RescueAreaGate();
+
+        private RescueState rescueState = RescueState.None;
+        private float escortPauseLeft;
 
         private TraderSave traderSave;
 
@@ -95,7 +122,10 @@ namespace Watermelon
             if (tradeButton != null)
                 tradeButton.Clicked += OpenTradeWindow;
 
-            RestoreState();
+            if (requiresRescue && !traderSave.IsRescued)
+                EnterCapturedState();
+            else
+                RestoreState();
 
             isInitialised = true;
         }
@@ -103,6 +133,8 @@ namespace Watermelon
         public void OnWorldUnloaded()
         {
             isInitialised = false;
+
+            rescueGate.Dispose();
 
             if (tradeButton != null)
             {
@@ -156,6 +188,13 @@ namespace Watermelon
         {
             if (!isInitialised)
                 return;
+
+            if (rescueState != RescueState.None)
+            {
+                UpdateRescue();
+                UpdateWaterVisuals();
+                return;
+            }
 
             switch (CurrentPhase)
             {
@@ -256,6 +295,151 @@ namespace Watermelon
 
             OffersChanged?.Invoke();
         }
+
+        #region Rescue
+        private void EnterCapturedState()
+        {
+            rescueState = RescueState.Captured;
+
+            if (capturedPoint != null)
+            {
+                transform.position = capturedPoint.position;
+                transform.rotation = capturedPoint.rotation;
+            }
+
+            SetMoving(false);
+            SetSitting(false);
+            SetSwimming(false);
+            swimming = false;
+            SetCaptured(true);
+
+            if (tradeButton != null)
+                tradeButton.Deactivate();
+
+            rescueGate.Initialise(rescueLinkedTiles, rescueLinkedBuildings, OnRescueAreaUnlocked);
+        }
+
+        private void OnRescueAreaUnlocked()
+        {
+            RescueAreaUnlocked?.Invoke();
+        }
+
+        public bool TryRelease()
+        {
+            if (traderSave == null)
+                return false;
+
+            if (traderSave.IsRescued)
+                return true;
+
+            traderSave.IsRescued = true;
+            Save();
+
+            rescueGate.Dispose();
+
+            SetCaptured(false);
+            SetSitting(false);
+            SetMoving(true);
+            rescueState = RescueState.RunningToPlayer;
+
+            return true;
+        }
+
+        private void UpdateRescue()
+        {
+            switch (rescueState)
+            {
+                case RescueState.Captured:
+                    swimming = false;
+                    break;
+
+                case RescueState.RunningToPlayer:
+                    if (MoveTowardsPlayer())
+                        EnterEscortPause();
+                    break;
+
+                case RescueState.Pausing:
+                    swimming = false;
+                    escortPauseLeft -= Time.deltaTime;
+                    if (escortPauseLeft <= 0f)
+                        StartGoingHome();
+                    break;
+
+                case RescueState.GoingHome:
+                    if (MoveTowardsPoint(islandPosition, escortArriveDistance))
+                        ArriveHomeAfterRescue();
+                    break;
+            }
+        }
+
+        private bool MoveTowardsPlayer()
+        {
+            var player = PlayerBehavior.GetBehavior();
+            if (player == null)
+                return true;
+
+            return MoveTowardsPoint(player.Transform.position, escortArriveDistance);
+        }
+
+        private bool MoveTowardsPoint(Vector3 target, float arriveDistance)
+        {
+            swimming = IsOverWater();
+            SetSwimming(swimming);
+
+            transform.position = Vector3.MoveTowards(transform.position, target, escortMoveSpeed * Time.deltaTime);
+
+            var direction = target - transform.position;
+            direction.y = 0f;
+
+            if (direction.sqrMagnitude > 0.0001f)
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+
+            var planarOffset = target - transform.position;
+            planarOffset.y = 0f;
+
+            return planarOffset.sqrMagnitude <= arriveDistance * arriveDistance;
+        }
+
+        private void EnterEscortPause()
+        {
+            SetMoving(false);
+            swimming = false;
+            SetSwimming(false);
+
+            escortPauseLeft = escortPauseDuration;
+            rescueState = RescueState.Pausing;
+        }
+
+        private void StartGoingHome()
+        {
+            SetMoving(true);
+            rescueState = RescueState.GoingHome;
+        }
+
+        private void ArriveHomeAfterRescue()
+        {
+            SetMoving(false);
+            SetSwimming(false);
+            swimming = false;
+
+            PlaceOnIsland();
+            SetSitting(true);
+
+            CurrentPhase = Phase.Idle;
+            traderSave.TimeUntilArrival = GetRandomRestTime();
+            traderSave.ActiveOfferIndices.Clear();
+            traderSave.OfferRemaining.Clear();
+
+            rescueState = RescueState.None;
+            Save();
+        }
+
+        private void SetCaptured(bool value)
+        {
+            if (graphicsAnimator != null)
+                graphicsAnimator.SetBool(IS_CAPTURED_HASH, value);
+        }
+        #endregion
 
         #region Movement
         private void BuildPathToBase()
@@ -521,6 +705,15 @@ namespace Watermelon
             SailingIn = 1,
             AtBase = 2,
             SailingOut = 3,
+        }
+
+        private enum RescueState
+        {
+            None = 0,
+            Captured = 1,
+            RunningToPlayer = 2,
+            Pausing = 3,
+            GoingHome = 4,
         }
     }
 }

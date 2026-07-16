@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Watermelon
 {
@@ -6,13 +7,15 @@ namespace Watermelon
     {
         public override MissionUICase.Type MissionUIType => MissionUICase.Type.Task;
 
-        [BoxGroup("Guarded Helper Mission Special", "Guarded Helper Mission Special")]
-        [SerializeField] HelperBehavior helperBehavior;
-        public HelperBehavior HelperBehavior => helperBehavior;
+        [BoxGroup("Guarded Rescue Mission Special", "Guarded Rescue Mission Special")]
+        [FormerlySerializedAs("helperBehavior")]
+        [SerializeField] MonoBehaviour rescueTargetBehaviour;
 
-        [BoxGroup("Guarded Helper Mission Special")]
+        [BoxGroup("Guarded Rescue Mission Special")]
         [SerializeField] GuardedSkeletonEncounter encounter;
         public GuardedSkeletonEncounter Encounter => encounter;
+
+        private IGuardedRescueTarget rescueTarget;
 
         private Save save;
 
@@ -44,28 +47,30 @@ namespace Watermelon
             if (missionStage == Stage.Collected)
                 return;
 
-            if (helperBehavior == null || encounter == null)
+            rescueTarget = rescueTargetBehaviour as IGuardedRescueTarget;
+
+            if (rescueTarget == null || encounter == null)
             {
-                Debug.LogError("[Guarded Helper Mission] Helper or encounter reference is missing.", this);
+                Debug.LogError("[Guarded Rescue Mission] Rescue target (must implement IGuardedRescueTarget) or encounter reference is missing.", this);
                 return;
             }
 
-            if (!helperBehavior.WaitForExternalRelease)
+            if (!rescueTarget.WaitForExternalRelease)
             {
-                Debug.LogError("[Guarded Helper Mission] Enable 'Wait For External Release' on the linked helper.", helperBehavior);
+                Debug.LogError("[Guarded Rescue Mission] Enable 'Wait For External Release' on the linked rescue target.", rescueTargetBehaviour);
                 return;
             }
 
-            helperBehavior.OpeningAreaUnlocked -= OnOpeningAreaUnlocked;
-            helperBehavior.OpeningAreaUnlocked += OnOpeningAreaUnlocked;
+            rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
+            rescueTarget.RescueAreaUnlocked += OnRescueAreaUnlocked;
             encounter.EnemyDied -= OnEnemyDied;
             encounter.EnemyDied += OnEnemyDied;
 
-            var startLocked = !helperBehavior.IsOpened && !helperBehavior.IsOpeningAreaUnlocked;
+            var startLocked = !rescueTarget.IsRescued && !rescueTarget.IsRescueAreaUnlocked;
 
             if (!encounter.Begin(startLocked))
             {
-                helperBehavior.OpeningAreaUnlocked -= OnOpeningAreaUnlocked;
+                rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
                 encounter.EnemyDied -= OnEnemyDied;
                 return;
             }
@@ -77,8 +82,8 @@ namespace Watermelon
         {
             base.Deactivate();
 
-            if (helperBehavior != null)
-                helperBehavior.OpeningAreaUnlocked -= OnOpeningAreaUnlocked;
+            if (rescueTarget != null)
+                rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
 
             if (encounter != null)
             {
@@ -87,9 +92,9 @@ namespace Watermelon
             }
         }
 
-        private void OnOpeningAreaUnlocked()
+        private void OnRescueAreaUnlocked()
         {
-            helperBehavior.OpeningAreaUnlocked -= OnOpeningAreaUnlocked;
+            rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
 
             isDirty = true;
             encounter.UnlockCombat();
@@ -97,9 +102,9 @@ namespace Watermelon
 
         private void OnEnemyDied()
         {
-            if (!helperBehavior.IsOpened && !helperBehavior.TryRelease())
+            if (!rescueTarget.IsRescued && !rescueTarget.TryRelease())
             {
-                Debug.LogError("[Guarded Helper Mission] Helper cannot be released before its opening area is unlocked.", helperBehavior);
+                Debug.LogError("[Guarded Rescue Mission] Rescue target cannot be released before its area is unlocked.", rescueTargetBehaviour);
                 return;
             }
 
@@ -107,10 +112,10 @@ namespace Watermelon
             FinishMission();
         }
 
-        public override string GetFormattedProgress() 
+        public override string GetFormattedProgress()
             => "";
 
-        public override float GetProgress() 
+        public override float GetProgress()
             => missionStage == Stage.Finished || missionStage == Stage.Collected ? 1.0f : 0.0f;
 
         public override Vector3 GetDefaultPreviewPosition()
@@ -118,7 +123,7 @@ namespace Watermelon
             if (encounter != null)
                 return encounter.Position;
 
-            return helperBehavior != null ? helperBehavior.transform.position : transform.position;
+            return rescueTargetBehaviour != null ? rescueTargetBehaviour.transform.position : transform.position;
         }
 
         #region Development
