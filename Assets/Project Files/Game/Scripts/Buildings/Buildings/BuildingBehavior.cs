@@ -187,14 +187,12 @@ namespace Watermelon
 
             if (wasDestroyed)
             {
+                RequestNavMeshRebuild();
                 Rebuilt?.Invoke();
                 return;
             }
 
-            Tween.DelayedCall(unlockAnimation != null ? unlockAnimation.TotalAnimationDuration : 0f, () =>
-            {
-                NavMeshController.CalculateNavMesh();
-            });
+            RequestNavMeshRebuild(unlockAnimation != null ? unlockAnimation.TotalAnimationDuration : 0f);
 
 #if MODULE_HAPTIC
             Haptic.Play(Haptic.HAPTIC_MEDIUM);
@@ -353,6 +351,8 @@ namespace Watermelon
             healthBehavior.ForceHide();
             CombatTargetRegistry.Unregister(this);
 
+            RequestNavMeshRebuild();
+
             Destroyed?.Invoke();
 
             if (complex != null)
@@ -393,6 +393,14 @@ namespace Watermelon
                 CombatTargetRegistry.Register(this);
             else
                 CombatTargetRegistry.Unregister(this);
+        }
+
+        private void RequestNavMeshRebuild(float delay = 0f)
+        {
+            if (delay > 0f)
+                Tween.DelayedCall(delay, () => NavMeshController.CalculateNavMesh());
+            else
+                NavMeshController.CalculateNavMesh();
         }
 
         private void SetVisuals(bool opened)

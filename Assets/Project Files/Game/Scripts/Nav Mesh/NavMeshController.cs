@@ -16,6 +16,7 @@ namespace Watermelon
         public static event SimpleCallback NavMeshRecalculated;
 
         private static bool navMeshRecalculating;
+        private static bool pendingRecalculation;
         private static Coroutine updateCoroutine;
 
         public static void AddNavMeshSurface(NavMeshSurface navMeshSurface)
@@ -37,20 +38,37 @@ namespace Watermelon
 
         public static void CalculateNavMesh(SimpleCallback simpleCallback = null)
         {
-            if (navMeshRecalculating)
-                return;
+            if (simpleCallback != null)
+                NavMeshRecalculated += simpleCallback;
 
+            if (navMeshRecalculating)
+            {
+                pendingRecalculation = true;
+                return;
+            }
+
+            RunCalculation();
+        }
+
+        private static void RunCalculation()
+        {
             navMeshRecalculating = true;
+            pendingRecalculation = false;
 
             updateCoroutine = Tween.InvokeCoroutine(CalculationCoroutine(() =>
             {
                 isNavMeshCalculated = true;
                 navMeshRecalculating = false;
 
-                simpleCallback?.Invoke();
+                if (pendingRecalculation)
+                {
+                    RunCalculation();
+                    return;
+                }
 
-                NavMeshRecalculated?.Invoke();
+                var callbacks = NavMeshRecalculated;
                 NavMeshRecalculated = null;
+                callbacks?.Invoke();
             }));
         }
 
@@ -93,6 +111,7 @@ namespace Watermelon
             }
 
             navMeshRecalculating = false;
+            pendingRecalculation = false;
             isNavMeshCalculated = false;
 
             NavMeshRecalculated = null;
