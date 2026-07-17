@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 7540370}
   - component: {fileID: 7540371}
   m_Layer: 0
-  m_Name: M #39 - planks craft building
+  m_Name: M #40 - planks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2020,6 +2020,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b42a5e21aa070f48b89f1ae56ff71f9, type: 3}
+--- !u!1 &46205037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4406365980478454093, guid: a645943fef2284f4d90514e5af5764e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 259044424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &47446530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5513,7 +5519,7 @@ GameObject:
   - component: {fileID: 137583847}
   - component: {fileID: 137583848}
   m_Layer: 0
-  m_Name: M #40 - raft construction
+  m_Name: M #41 - raft construction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6084,7 +6090,7 @@ GameObject:
   - component: {fileID: 147546715}
   - component: {fileID: 147546716}
   m_Layer: 0
-  m_Name: M #41 - leave the island
+  m_Name: M #42 - leave the island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10642,7 +10648,7 @@ PrefabInstance:
     - target: {fileID: 5668906927800187519, guid: a645943fef2284f4d90514e5af5764e1,
         type: 3}
       propertyPath: offset.y
-      value: -0.42
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 5668906927800187519, guid: a645943fef2284f4d90514e5af5764e1,
         type: 3}
@@ -10682,7 +10688,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4406365980478454093, guid: a645943fef2284f4d90514e5af5764e1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 259044430}
   m_SourcePrefab: {fileID: 100100000, guid: a645943fef2284f4d90514e5af5764e1, type: 3}
 --- !u!114 &259044425 stripped
 MonoBehaviour:
@@ -10690,7 +10700,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 259044424}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 46205037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60c8cc059657fd543a697d8ecc1dc355, type: 3}
@@ -10702,6 +10712,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 259044424}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &259044430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46205037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: c75d8655-b1b2-4e7c-a650-212012330647
 --- !u!1001 &259110013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11006,7 +11029,7 @@ GameObject:
   - component: {fileID: 261071232}
   - component: {fileID: 261071233}
   m_Layer: 0
-  m_Name: M #30 - bricks craft building
+  m_Name: M #31 - bricks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17368,7 +17391,7 @@ GameObject:
   - component: {fileID: 362938667}
   - component: {fileID: 362938668}
   m_Layer: 0
-  m_Name: M #36 - cooking place 3 building
+  m_Name: M #37 - cooking place 3 building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35710,6 +35733,88 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredMissionId: baf72f22-9f52-4466-ab52-3a3b3a52b2b8
+--- !u!1 &574753931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 574753932}
+  - component: {fileID: 574753933}
+  m_Layer: 0
+  m_Name: M #30 - open chest in cave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &574753932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574753931}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &574753933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574753931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bfa932ee705e74aa258c7b4d3923ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.OpenChestMission
+  id: 2f9c5ded-ad43-4f02-9149-f062f2c23607
+  title: Find chest in cave
+  rewardType: 0
+  resourceReward:
+    currencyType: 0
+    amount: 10
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 0
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 1
+  subworldEntrance: {fileID: 874980604}
+  subworldBehavior: {fileID: 1820117116}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  targetChest: {fileID: 259044425}
 --- !u!1001 &578771619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36873,7 +36978,7 @@ GameObject:
   - component: {fileID: 604482800}
   - component: {fileID: 604482801}
   m_Layer: 0
-  m_Name: M #33 - ramp #1 build
+  m_Name: M #34 - ramp #1 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48787,6 +48892,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 874980600}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &874980604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3466784961693451892, guid: aaa12518d4966ed4ba10e44af301b47c,
+    type: 3}
+  m_PrefabInstance: {fileID: 874980600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0a8de65d303b948b5cca3d685b5ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &875087965
 GameObject:
   m_ObjectHideFlags: 0
@@ -49545,7 +49662,7 @@ GameObject:
   - component: {fileID: 886913863}
   - component: {fileID: 886913864}
   m_Layer: 0
-  m_Name: M #31 - craft bricks
+  m_Name: M #32 - craft bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71456,7 +71573,7 @@ GameObject:
   - component: {fileID: 1094698899}
   - component: {fileID: 1094698900}
   m_Layer: 0
-  m_Name: M #37 - ramp #2 build
+  m_Name: M #38 - ramp #2 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74706,7 +74823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
-  requiredMissionId: b4b4d0f4-2c15-40bf-a837-d9d8466263bd
+  requiredMissionId: f88667d7-09d7-4e1e-a952-7d38adb7d54e
 --- !u!1 &1156361326
 GameObject:
   m_ObjectHideFlags: 0
@@ -74718,7 +74835,7 @@ GameObject:
   - component: {fileID: 1156361327}
   - component: {fileID: 1156361328}
   m_Layer: 0
-  m_Name: M #38 - stone generator building
+  m_Name: M #39 - stone generator building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82028,6 +82145,7 @@ Transform:
   - {fileID: 725824177}
   - {fileID: 658929541}
   - {fileID: 1956794514}
+  - {fileID: 574753932}
   - {fileID: 261071232}
   - {fileID: 886913863}
   - {fileID: 2093265913}
@@ -116756,7 +116874,7 @@ GameObject:
   - component: {fileID: 1859535999}
   - component: {fileID: 1859536000}
   m_Layer: 0
-  m_Name: M #35 - pumpkins harvest
+  m_Name: M #36 - pumpkins harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127088,7 +127206,7 @@ GameObject:
   - component: {fileID: 1989989903}
   - component: {fileID: 1989989904}
   m_Layer: 0
-  m_Name: M #34 - find pumpkins
+  m_Name: M #35 - find pumpkins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137720,7 +137838,7 @@ GameObject:
   - component: {fileID: 2093265913}
   - component: {fileID: 2093265914}
   m_Layer: 0
-  m_Name: M #32 - upg player harvest
+  m_Name: M #33 - upg player harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -46,6 +46,7 @@ namespace Watermelon
         private AnimatorEventListener animatorEventListener;
 
         private bool isOpened;
+        public bool IsOpened => isOpened;
 
         private bool isUnlocked;
         public bool IsUnlocked => isUnlocked;
