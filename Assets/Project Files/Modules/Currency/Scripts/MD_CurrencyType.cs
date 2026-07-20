@@ -9,6 +9,7 @@
         Wood = 1,
         Stone = 2,
         Fiber = 3,
+        Iron = 4,
 
         // produced resources
         Planks = 50,

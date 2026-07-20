@@ -56,6 +56,12 @@ namespace Watermelon
             CurrencyController.Set(CurrencyType.Fiber, 2000);
         }
 
+        [MenuItem("Actions/Get Resources/Iron", priority = 26)]
+        private static void GetIron()
+        {
+            CurrencyController.Set(CurrencyType.Iron, 2000);
+        }
+
         [MenuItem("Actions/Get Resources/Rope", priority = 26)]
         private static void GetRope()
         {

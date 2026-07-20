@@ -90,6 +90,25 @@ MonoBehaviour:
       appearAudioClip: {fileID: 0}
       collectAudioClip: {fileID: 0}
     previewSettings: {fileID: 0}
+  - currencyType: 4
+    defaultAmount: 0
+    icon: {fileID: 21300000, guid: 0a07687d5b897624db6f3d3415dde020, type: 3}
+    data:
+      displayAlways: 0
+      flyingResPrefab: {fileID: 3912945604614884336, guid: 56ee08fbd2479564aba1c72d8860b1de,
+        type: 3}
+      dropResPrefab: {fileID: 3912945604614884336, guid: 24b0981ad87cf6c499fcd470a4f6d5b7,
+        type: 3}
+      pickUpSound: {fileID: 0}
+      useInventory: 1
+      moneyConversionRate: 1
+    floatingCloud:
+      addToCloud: 1
+      radius: 200
+      specialPrefab: {fileID: 0}
+      appearAudioClip: {fileID: 0}
+      collectAudioClip: {fileID: 0}
+    previewSettings: {fileID: 0}
   - currencyType: 50
     defaultAmount: 0
     icon: {fileID: 21300000, guid: 1567854a2fa8904409a056959540cdc7, type: 3}
