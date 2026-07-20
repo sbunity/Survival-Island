@@ -4822,9 +4822,9 @@ MonoBehaviour:
       buttonText: AWESOME
   genericReward:
     uiRewardInfo:
-      headerText: YOU UNLOCKED NEW RESOURCE
+      headerText: YOU UNLOCK
       previewIcon: {fileID: 0}
-      mainText: IRON
+      mainText: IRON RESOURCE
       buttonText: OKAY
   useCustomTargetPosition: 0
   customTargetPosition: {fileID: 0}
@@ -5830,7 +5830,7 @@ GameObject:
   - component: {fileID: 137583847}
   - component: {fileID: 137583848}
   m_Layer: 0
-  m_Name: M #42 - raft construction
+  m_Name: M #43 - raft construction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6401,7 +6401,7 @@ GameObject:
   - component: {fileID: 147546715}
   - component: {fileID: 147546716}
   m_Layer: 0
-  m_Name: M #43 - leave the island
+  m_Name: M #44 - leave the island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83251,6 +83251,7 @@ Transform:
   - {fileID: 1156361327}
   - {fileID: 7540370}
   - {fileID: 118880451}
+  - {fileID: 1914649784}
   - {fileID: 137583847}
   - {fileID: 147546715}
   m_Father: {fileID: 2625476478768325108}
@@ -125746,6 +125747,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1911563743}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1914649783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914649784}
+  - component: {fileID: 1914649785}
+  m_Layer: 0
+  m_Name: M #42 - iron harvest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1914649784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914649783}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2029182479}
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1914649785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914649783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4741a408d3b4b3842906f9ff091e494b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.CollectMission
+  id: fd5dbf65-3691-4fbc-9569-5a653944f845
+  title: Collect some iron
+  rewardType: 0
+  resourceReward:
+    currencyType: 4
+    amount: 5
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 1
+  customTargetPosition: {fileID: 2029182479}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 1
+  subworldEntrance: {fileID: 874980604}
+  subworldBehavior: {fileID: 1820117116}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  currencyType: 4
+  amount: 10
 --- !u!1001 &1914823414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135352,6 +135437,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2028991963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2029182478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029182479}
+  m_Layer: 0
+  m_Name: Custom Pointer Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2029182479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029182478}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 129.03, y: -0.5, z: 67.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1914649784}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2030088016
 GameObject:
   m_ObjectHideFlags: 0
@@ -142430,7 +142546,7 @@ PrefabInstance:
     - target: {fileID: 9154107048037249495, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
       propertyPath: cost.Array.data[4].amount
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9154107048037249495, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
