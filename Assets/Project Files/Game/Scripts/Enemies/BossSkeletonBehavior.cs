@@ -17,6 +17,23 @@ namespace Watermelon
         public int InitialisationOrder => 100;
         public BaseWorldBehavior LinkedWorldBehavior { get; set; }
 
+        public event SimpleCallback Defeated;
+
+        public bool IsDefeated
+        {
+            get
+            {
+                if (save != null)
+                    return save.IsDead;
+
+                var worldSave = WorldController.CurrentWorld != null
+                    ? SaveController.GetFile(WorldController.CurrentWorld.ID)
+                    : null;
+
+                return worldSave != null && worldSave.GetSaveObject<BossSkeletonSave>(uniqueSaveID).IsDead;
+            }
+        }
+
         private HealthBehavior healthBehavior;
         private BossSkeletonSave save;
 
@@ -109,6 +126,8 @@ namespace Watermelon
                 save.IsDead = true;
                 SaveController.MarkAsSaveIsRequired();
             }
+
+            Defeated?.Invoke();
         }
 
         private void LateUpdate()
