@@ -914,6 +914,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iron Resource Source (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.x
+      value: -9.970001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.z
+      value: -28.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: tileBehavior
+      value: 
+      objectReference: {fileID: 1656499235}
     - target: {fileID: 8420286698620644356, guid: f7a8da84518f86343ac991662376b49e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32097,7 +32117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 969159498}
+  m_Father: {fileID: 1656499234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &480243155
 MeshRenderer:
@@ -35661,7 +35681,7 @@ PrefabInstance:
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: offset.x
-      value: -5.899994
+      value: -10.639999
       objectReference: {fileID: 0}
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
@@ -35671,13 +35691,13 @@ PrefabInstance:
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: offset.z
-      value: -11.779999
+      value: -24.970001
       objectReference: {fileID: 0}
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: tileBehavior
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1656499235}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36379,6 +36399,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iron Resource Source (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.x
+      value: 1.0999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.z
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: tileBehavior
+      value: 
+      objectReference: {fileID: 1656499235}
     - target: {fileID: 8420286698620644356, guid: f7a8da84518f86343ac991662376b49e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50348,7 +50388,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 969159498}
+  m_Father: {fileID: 1656499234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &886738395
 MeshRenderer:
@@ -51524,6 +51564,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iron Resource Source (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.x
+      value: -5.5399933
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.154
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.z
+      value: -30.129997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: tileBehavior
+      value: 
+      objectReference: {fileID: 1656499235}
     - target: {fileID: 8420286698620644356, guid: f7a8da84518f86343ac991662376b49e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54553,42 +54613,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7656147523151992326}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &969159497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 969159498}
-  m_Layer: 0
-  m_Name: Cave_platform_7_Base
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &969159498
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969159497}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1472729079}
-  - {fileID: 886738394}
-  - {fileID: 2017872402}
-  - {fileID: 2017641491}
-  - {fileID: 480243154}
-  m_Father: {fileID: 1656499234}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &969198893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57185,6 +57209,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iron Resource Source
       objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.x
+      value: -3.3199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.154
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: offset.z
+      value: -30.129997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643564737187559081, guid: f7a8da84518f86343ac991662376b49e,
+        type: 3}
+      propertyPath: tileBehavior
+      value: 
+      objectReference: {fileID: 1656499235}
     - target: {fileID: 8420286698620644356, guid: f7a8da84518f86343ac991662376b49e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -88282,7 +88326,7 @@ PrefabInstance:
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: offset.x
-      value: -10.639999
+      value: -1.441803
       objectReference: {fileID: 0}
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
@@ -88292,13 +88336,13 @@ PrefabInstance:
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: offset.z
-      value: -24.970001
+      value: -26.304749
       objectReference: {fileID: 0}
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: tileBehavior
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1656499235}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89937,7 +89981,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 969159498}
+  m_Father: {fileID: 1656499234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1472729080
 MeshRenderer:
@@ -106835,7 +106879,11 @@ Transform:
   - {fileID: 17654232}
   - {fileID: 578597010}
   - {fileID: 1452152897}
-  - {fileID: 969159498}
+  - {fileID: 1472729079}
+  - {fileID: 886738394}
+  - {fileID: 2017872402}
+  - {fileID: 2017641491}
+  - {fileID: 480243154}
   m_Father: {fileID: 1820117117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1656499235
@@ -108441,7 +108489,7 @@ PrefabInstance:
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: offset.x
-      value: -1.441803
+      value: -8.449997
       objectReference: {fileID: 0}
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
@@ -108451,13 +108499,13 @@ PrefabInstance:
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: offset.z
-      value: -26.304749
+      value: -17.900002
       objectReference: {fileID: 0}
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: tileBehavior
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1656499235}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -113937,7 +113985,7 @@ PrefabInstance:
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: offset.x
-      value: -1.441803
+      value: -2.1800003
       objectReference: {fileID: 0}
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
@@ -113947,13 +113995,13 @@ PrefabInstance:
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: offset.z
-      value: -26.304749
+      value: -18.95
       objectReference: {fileID: 0}
     - target: {fileID: 5975552073760942023, guid: 5386f231cf3267e44af9c6c1b909dcac,
         type: 3}
       propertyPath: tileBehavior
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1656499235}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -129876,7 +129924,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 969159498}
+  m_Father: {fileID: 1656499234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2017641492
 MeshRenderer:
@@ -129962,11 +130010,11 @@ Transform:
   m_GameObject: {fileID: 2017872401}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.6, y: -0.20704764, z: 15.61}
+  m_LocalPosition: {x: 4.600006, y: -0.20704764, z: 15.610001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 969159498}
+  m_Father: {fileID: 1656499234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2017872403
 MeshRenderer:
