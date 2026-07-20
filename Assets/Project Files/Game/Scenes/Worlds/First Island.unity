@@ -42754,6 +42754,92 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 739660764}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &740377008
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1559590263}
+    m_Modifications:
+    - target: {fileID: 6026344760361177115, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Skeleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.630005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.720001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27f259df56890ff44a24e3d1d77e80bd, type: 3}
+--- !u!114 &740377009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4729588866121953445, guid: 27f259df56890ff44a24e3d1d77e80bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 740377008}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28df6a4ba0d5760408a2c00f16d9a018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &740377010 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9110574007844534293, guid: 27f259df56890ff44a24e3d1d77e80bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 740377008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &741175166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96179,6 +96265,7 @@ Transform:
   - {fileID: 1700383091}
   - {fileID: 415279366}
   - {fileID: 1985706040}
+  - {fileID: 740377010}
   m_Father: {fileID: 1820117117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1560023285
@@ -115083,6 +115170,7 @@ MonoBehaviour:
   - {fileID: 1700383092}
   - {fileID: 415279367}
   - {fileID: 1985706039}
+  - {fileID: 740377009}
   - {fileID: 259044425}
   registeredNavmeshElements: []
   environmentPresetType: 3
@@ -140615,8 +140703,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 18863360}
     - {fileID: 1820117116}
+    - {fileID: 18863360}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0

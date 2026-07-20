@@ -12,6 +12,7 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.TimeSave), "sys_time");
             SaveKeyMap.Register(typeof(Watermelon.AdSave), "Watermelon.AdSave");
             SaveKeyMap.Register(typeof(Watermelon.AudioSave), "Watermelon.AudioSave");
+            SaveKeyMap.Register(typeof(Watermelon.BossSkeletonSave), "Watermelon.BossSkeletonSave");
             SaveKeyMap.Register(typeof(Watermelon.BuildingMission.Save), "Watermelon.BuildingMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.ChestSave), "Watermelon.ChestSave");
             SaveKeyMap.Register(typeof(Watermelon.CollectMission.Save), "Watermelon.CollectMission+Save");
