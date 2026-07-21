@@ -47,9 +47,15 @@ namespace Watermelon
         private readonly Dictionary<BaseEnemyBehavior, SimpleCallback> deathHandlers = new Dictionary<BaseEnemyBehavior, SimpleCallback>();
         private readonly List<Transform> spawnPoints = new List<Transform>();
 
-        public bool SpawnWave()
+        private int activeEnemyCount;
+
+        public bool SpawnWave() => SpawnWave(enemyCount);
+
+        public bool SpawnWave(int count)
         {
             StopWave();
+
+            activeEnemyCount = Mathf.Max(1, count);
 
             if (lineStart == null || lineEnd == null)
             {
@@ -65,7 +71,7 @@ namespace Watermelon
 
             EnsureSpawnPoints();
 
-            for (var i = 0; i < enemyCount; i++)
+            for (var i = 0; i < activeEnemyCount; i++)
             {
                 var enemy = GameController.Data.EnemiesDatabase.GetEnemyBehavior(enemyType);
 
@@ -133,7 +139,7 @@ namespace Watermelon
 
         private void EnsureSpawnPoints()
         {
-            if (spawnPoints.Count == enemyCount)
+            if (spawnPoints.Count == activeEnemyCount)
             {
                 UpdateSpawnPointPositions();
                 return;
@@ -141,7 +147,7 @@ namespace Watermelon
 
             ClearSpawnPoints();
 
-            for (var i = 0; i < enemyCount; i++)
+            for (var i = 0; i < activeEnemyCount; i++)
             {
                 var pointObject = new GameObject($"Raid Spawn Point {i}");
                 pointObject.transform.SetParent(transform);
@@ -210,23 +216,5 @@ namespace Watermelon
                 Gizmos.DrawWireSphere(Vector3.Lerp(lineStart.position, lineEnd.position, t), 0.25f);
             }
         }
-
-        #region Periodic Raids
-
-        // TODO: Reuse this spawner to trigger recurring base attacks (independent of the mission).
-        //
-        // Intended design (left unimplemented on purpose):
-        //   - Add serialized fields, e.g.:
-        //         [SerializeField] bool autoRepeat;
-        //         [SerializeField] Vector2 repeatDelayRange = new Vector2(60f, 120f);
-        //   - On enable (when autoRepeat is on) start a timer; when it elapses and no wave IsActive,
-        //     call SpawnWave(); after WaveCleared, restart the timer with a fresh random delay.
-        //   - Optionally gate spawning on player/base proximity or on a controller that owns the
-        //     "world is under attack" state, mirroring EnemySpawnPoint's playerDetectionRadius check.
-        //
-        // The public API above (SpawnWave / StopWave / IsActive / EnemyDefeated / WaveCleared) is
-        // already sufficient to drive periodic raids without any further changes to this class.
-
-        #endregion
     }
 }

@@ -98971,6 +98971,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefba80d2d74b2240a8cc06c16950d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1580915838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580915839}
+  - component: {fileID: 1580915840}
+  - component: {fileID: 1580915841}
+  m_Layer: 0
+  m_Name: Periodic Raid Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1580915839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580915838}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.1, y: 0, z: -30}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780791335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1580915840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580915838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 354a16d8f5ad5144881a2c2a0ef83f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.PeriodicRaidScheduler
+  spawner: {fileID: 812600211}
+  enemyCountRange: {x: 8, y: 16}
+  intervalRange: {x: 180, y: 300}
+  uniqueSaveID: eb2bb3b3-f844-421c-9be7-23c78af14c0e
+--- !u!114 &1580915841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580915838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: d4f7a2b1-3c8e-4a6f-9b12-7e5c0a1d8f34
 --- !u!1001 &1582193516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113893,6 +113955,7 @@ Transform:
   - {fileID: 855640419}
   - {fileID: 1203055598}
   - {fileID: 812600212}
+  - {fileID: 1580915839}
   - {fileID: 773305256}
   - {fileID: 476499837}
   - {fileID: 509374562}
@@ -142004,8 +142067,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 18863360}
     - {fileID: 1820117116}
+    - {fileID: 18863360}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0

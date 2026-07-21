@@ -32,6 +32,7 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.IAPManager.Save), "Watermelon.IAPManager+Save");
             SaveKeyMap.Register(typeof(Watermelon.InventorySave), "Watermelon.InventorySave");
             SaveKeyMap.Register(typeof(Watermelon.OpenChestMission.Save), "Watermelon.OpenChestMission+Save");
+            SaveKeyMap.Register(typeof(Watermelon.PeriodicRaidSave), "Watermelon.PeriodicRaidSave");
             SaveKeyMap.Register(typeof(Watermelon.PurchasePointSave), "Watermelon.PurchasePointSave");
             SaveKeyMap.Register(typeof(Watermelon.ResourceListSave), "Watermelon.ResourceListSave");
             SaveKeyMap.Register(typeof(Watermelon.ResourceStorageBuildingBehavior.ResourcesSave), "Watermelon.ResourceStorageBuildingBehavior+ResourcesSave");
