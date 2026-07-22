@@ -56,6 +56,21 @@ namespace Watermelon
             NotifyHealthChanged();
         }
 
+        public void SetMaxHealth(float value, bool healAddedAmount = true)
+        {
+            var newMax = Mathf.Max(0, value);
+            var delta = newMax - MaxHealth;
+
+            MaxHealth = newMax;
+
+            if (healAddedAmount && delta > 0)
+                CurrentHealth += delta;
+
+            CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+
+            NotifyHealthChanged();
+        }
+
         public void ConfigureRegeneration(bool enabled, float delay, float amountPerSecond)
         {
             enableRegeneration = enabled;

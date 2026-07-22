@@ -39,11 +39,7 @@ namespace Watermelon
         [SerializeField] HealthBehavior swimmingEnergyBehavior;
 
         [BoxGroup("Settings", "Settings")]
-        [SerializeField] int health = 100;
-        [BoxGroup("Settings")]
         [SerializeField] int swimmingEnergy = 100;
-        [BoxGroup("Settings")]
-        [SerializeField] DuoInt damage;
         [BoxGroup("Settings")]
         [SerializeField] float jumpHighDifference = 0.5f;
 
@@ -114,6 +110,11 @@ namespace Watermelon
 
         private MovementSpeedUpgrade speedUpgrade;
         private SwimmingDurationUpgrade swimmingUpgrade;
+        private MaxHealthUpgrade healthUpgrade;
+        private DamageUpgrade damageUpgrade;
+
+        // Combat damage dealt to enemies per hit, driven by the Damage upgrade
+        public int Damage => damageUpgrade.GetCurrentStage().Damage;
 
         private int jumpCounter = 0;
         private Vector3 playerPrevPos = Vector3.zero;
@@ -168,6 +169,9 @@ namespace Watermelon
 
             swimmingUpgrade = GlobalUpgradesController.GetUpgrade<SwimmingDurationUpgrade>(GlobalUpgradeType.SwimmingDuration);
 
+            healthUpgrade = GlobalUpgradesController.GetUpgrade<MaxHealthUpgrade>(GlobalUpgradeType.MaxHealth);
+            damageUpgrade = GlobalUpgradesController.GetUpgrade<DamageUpgrade>(GlobalUpgradeType.Damage);
+
             // Get selected skin data
             PlayerSkinData playerSkinData = (PlayerSkinData)SkinController.Instance.GetSelectedSkin<PlayerSkinsDatabase>();
 
@@ -183,7 +187,7 @@ namespace Watermelon
                 OnNavMeshUpdated();
             });
 
-            Health.Initialise(health);
+            Health.Initialise(healthUpgrade.GetCurrentStage().MaxHealth);
             SwimmingEnergy.Initialise(swimmingEnergy);
 
             Health.ShowOnChange = true;
@@ -290,6 +294,10 @@ namespace Watermelon
             if (upgradeType == GlobalUpgradeType.MovementSpeed)
             {
                 RecalculateSpeed();
+            }
+            else if (upgradeType == GlobalUpgradeType.MaxHealth)
+            {
+                Health.SetMaxHealth(healthUpgrade.GetCurrentStage().MaxHealth);
             }
         }
         #endregion

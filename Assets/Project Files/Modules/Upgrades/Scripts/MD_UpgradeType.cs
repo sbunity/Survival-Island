@@ -8,5 +8,7 @@ namespace Watermelon
         Capacity = 1,
         Gathering = 2,
         SwimmingDuration = 3,
+        MaxHealth = 4,
+        Damage = 5,
     }
 }

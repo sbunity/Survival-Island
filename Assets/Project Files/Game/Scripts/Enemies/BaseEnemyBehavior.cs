@@ -276,7 +276,9 @@ namespace Watermelon
         {
             lastHitSourcePosition = hitSourcePosition;
             lastHitter = hitter;
-            TakeDamage(new DamageSource(1, PlayerBehavior.GetBehavior()), PlayerBehavior.Position, true);
+
+            var player = PlayerBehavior.GetBehavior();
+            TakeDamage(new DamageSource(player.Damage, player), PlayerBehavior.Position, true);
         }
 
         protected virtual void FlashOnHit()

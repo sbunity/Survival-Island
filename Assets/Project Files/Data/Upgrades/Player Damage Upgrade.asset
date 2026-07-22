@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf4b7c8f7470004d96c2dd0a247f5d1, type: 3}
+  m_Name: Player Damage Upgrade
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.DamageUpgrade
+  globalUpgradeType: 5
+  title: Damage
+  icon: {fileID: 0}
+  descriptionFormat: Increase damage from <color=#FF4233>{0}</color> to <color=#56D103>{1}</color>
+  upgrades:
+  - price: 0
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damage: 1
+  - price: 40
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damage: 2
+  - price: 80
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damage: 3
+  - price: 140
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damage: 4
+  - price: 300
+    currencyType: 0
+    previewSprite: {fileID: 0}
+    damage: 5
