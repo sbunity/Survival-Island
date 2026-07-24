@@ -50,8 +50,16 @@ namespace Watermelon
 
             currencyIcon.sprite = Currency.Icon;
 
+            Currency.OnCurrencyChanged -= OnCurrencyChanged;
+            Currency.OnCurrencyChanged += OnCurrencyChanged;
+
             countSlider.normalizedValue = 0f;
             OnSliderValueChanged(0);
+        }
+
+        private void OnCurrencyChanged(Currency currency, int difference)
+        {
+            OnSliderValueChanged(countSlider.value);
         }
 
         public void OnSelect()
@@ -154,6 +162,8 @@ namespace Watermelon
         private void OnDisable()
         {
             if(IsSelected) OnDeselect();
+
+            Currency?.OnCurrencyChanged -= OnCurrencyChanged;
         }
     }
 }
