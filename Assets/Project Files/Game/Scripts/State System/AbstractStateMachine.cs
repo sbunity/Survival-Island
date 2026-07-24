@@ -35,6 +35,10 @@ namespace Watermelon
         /// </summary>
         public bool IsPlaying { get; protected set; }
 
+        private bool isTransitioning;
+        private bool hasPendingTransition;
+        private T pendingState;
+
         /// <summary>
         /// The StartMachine method initializes the state machine by setting IsPlaying to true, setting the CurrentState to the startState, and calling the StartState method.
         /// </summary>
@@ -73,9 +77,40 @@ namespace Watermelon
         /// </summary>
         public void StopMachine()
         {
+            if (!IsPlaying)
+                return;
+
             IsPlaying = false;
 
             EndState();
+        }
+
+        private void TransitionTo(T nextState)
+        {
+            if (isTransitioning)
+            {
+                pendingState = nextState;
+                hasPendingTransition = true;
+
+                return;
+            }
+
+            isTransitioning = true;
+
+            EndState();
+
+            CurrentState = nextState;
+
+            StartState();
+
+            isTransitioning = false;
+
+            if (hasPendingTransition)
+            {
+                hasPendingTransition = false;
+
+                TransitionTo(pendingState);
+            }
         }
 
         /// <summary>
@@ -86,21 +121,18 @@ namespace Watermelon
         /// </summary>
         private void OnStateFinished()
         {
-            var stateCase = states[CurrentState];
+            if (!IsPlaying)
+                return;
 
-            var state = stateCase.state;
-            var transitions = stateCase.transitions;
+            var transitions = states[CurrentState].transitions;
 
-            for (int i = 0; i < transitions.Count; i++)
+            for (var i = 0; i < transitions.Count; i++)
             {
                 var transition = transitions[i];
                 if (transition.transitionType == StateTransitionType.OnFinish && transition.Evaluate(out var nextState))
                 {
-                    EndState();
+                    TransitionTo(nextState);
 
-                    CurrentState = nextState;
-
-                    StartState();
                     break;
                 }
             }
@@ -114,27 +146,26 @@ namespace Watermelon
         /// </summary>
         private void Update()
         {
-            if (IsPlaying)
+            if (!IsPlaying)
+                return;
+
+            var currentState = CurrentState;
+
+            states[currentState].state.OnUpdate();
+
+            if (!IsPlaying || !EqualityComparer<T>.Default.Equals(CurrentState, currentState))
+                return;
+
+            var transitions = states[currentState].transitions;
+
+            for (var i = 0; i < transitions.Count; i++)
             {
-                var stateCase = states[CurrentState];
-
-                var state = stateCase.state;
-                var transitions = stateCase.transitions;
-
-                state.OnUpdate();
-
-                for (int i = 0; i < transitions.Count; i++)
+                var transition = transitions[i];
+                if (transition.transitionType == StateTransitionType.Independent && transition.Evaluate(out var nextState))
                 {
-                    var transition = transitions[i];
-                    if (transition.transitionType == StateTransitionType.Independent && transition.Evaluate(out var nextState))
-                    {
-                        EndState();
+                    TransitionTo(nextState);
 
-                        CurrentState = nextState;
-
-                        StartState();
-                        break;
-                    }
+                    break;
                 }
             }
         }

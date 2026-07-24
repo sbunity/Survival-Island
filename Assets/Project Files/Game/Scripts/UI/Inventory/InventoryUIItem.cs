@@ -163,7 +163,7 @@ namespace Watermelon
         {
             if(IsSelected) OnDeselect();
 
-            Currency?.OnCurrencyChanged -= OnCurrencyChanged;
+            if (Currency != null) Currency.OnCurrencyChanged -= OnCurrencyChanged;
         }
     }
 }

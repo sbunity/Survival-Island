@@ -517,11 +517,15 @@ namespace Watermelon.AI
             if (fishingPlace != null && fishingPlace.Health <= 0)
             {
                 InvokeOnFinished();
+
+                return;
             }
 
             if (!isGathering && !navMeshAgent.IsMoving)
             {
                 InvokeOnFinished();
+
+                return;
             }
 
             if (isGathering)
@@ -605,11 +609,15 @@ namespace Watermelon.AI
             if (targetResource != null && targetResource.Health <= 0)
             {
                 InvokeOnFinished();
+
+                return;
             }
 
             if(!isGathering && !navMeshAgent.IsMoving)
             {
                 InvokeOnFinished();
+
+                return;
             }
 
             if(isGathering)
@@ -879,11 +887,15 @@ namespace Watermelon.AI
             if(Target.ActiveTask == null || !Target.ActiveTask.IsActive)
             {
                 InvokeOnFinished();
+
+                return;
             }
 
             if (targetConstructionPoint != null && targetConstructionPoint.IsBuilt)
             {
                 InvokeOnFinished();
+
+                return;
             }
 
             if (isBuilding && targetConstructionPoint != null)
