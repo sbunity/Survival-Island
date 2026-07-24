@@ -42,16 +42,30 @@ namespace Watermelon
         {
             base.Purchase();
 
-            for(int i = 0; i < obstacles.Count; i++)
+            RefreshObstacleCarving();
+        }
+
+        public override void Construct()
+        {
+            base.Construct();
+
+            RefreshObstacleCarving();
+        }
+
+        private void RefreshObstacleCarving()
+        {
+            for (int i = 0; i < obstacles.Count; i++)
             {
-                obstacles[i].carveOnlyStationary = true;
+                if (obstacles[i] != null)
+                    obstacles[i].carveOnlyStationary = true;
             }
 
             Tween.DelayedCall(0.5f, () =>
             {
                 for (int i = 0; i < obstacles.Count; i++)
                 {
-                    obstacles[i].carveOnlyStationary = false;
+                    if (obstacles[i] != null)
+                        obstacles[i].carveOnlyStationary = false;
                 }
             });
         }
