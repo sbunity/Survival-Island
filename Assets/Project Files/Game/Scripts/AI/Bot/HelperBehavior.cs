@@ -693,7 +693,7 @@ namespace Watermelon
             actionContext = ActionContext.Combat;
             nextCombatAttackTime = Time.time + combatCooldown;
 
-            Graphics.InteractionAnimations.Activate(InteractionAnimationType.Default);
+            Graphics.InteractionAnimations.Activate(InteractionAnimationType.Chopping);
 
             var interactionsLayer = characterAnimator.GetLayerIndex("Interactions");
             if (interactionsLayer >= 0)
