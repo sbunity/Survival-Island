@@ -9,12 +9,25 @@ namespace Watermelon
     {
         private List<NavMeshObstacle> obstacles = new List<NavMeshObstacle>();
 
+        private bool openingFromGroundStream;
+
         public override void Awake()
         {
             base.Awake();
 
             unlockable.SetComplex(this);
             GetComponentsInChildren(true, obstacles);
+        }
+
+        private void OnEnable()
+        {
+            if (openingFromGroundStream)
+                return;
+
+            if (!NavMeshController.IsNavMeshCalculated)
+                return;
+
+            RebuildNavMeshAndRefreshCarving();
         }
 
         public override void Init()
@@ -42,17 +55,17 @@ namespace Watermelon
         {
             base.Purchase();
 
-            RefreshObstacleCarving();
+            RebuildNavMeshAndRefreshCarving();
         }
 
         public override void Construct()
         {
             base.Construct();
 
-            RefreshObstacleCarving();
+            RebuildNavMeshAndRefreshCarving();
         }
 
-        private void RefreshObstacleCarving()
+        private void RebuildNavMeshAndRefreshCarving()
         {
             for (int i = 0; i < obstacles.Count; i++)
             {
@@ -60,7 +73,7 @@ namespace Watermelon
                     obstacles[i].carveOnlyStationary = true;
             }
 
-            Tween.DelayedCall(0.5f, () =>
+            NavMeshController.CalculateNavMesh(() =>
             {
                 for (int i = 0; i < obstacles.Count; i++)
                 {
@@ -72,7 +85,9 @@ namespace Watermelon
 
         public void OnGroundOpen(bool immediately = false)
         {
+            openingFromGroundStream = true;
             gameObject.SetActive(true);
+            openingFromGroundStream = false;
 
             Init();
         }
