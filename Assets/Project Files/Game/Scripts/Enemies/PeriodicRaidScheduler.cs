@@ -63,11 +63,11 @@ namespace Watermelon
                 var worldSave = SaveController.GetFile(WorldController.CurrentWorld.ID);
                 save = worldSave.GetSaveObject<PeriodicRaidSave>(uniqueSaveID);
 
-                if (save.NextRaidAtGameTime <= 0f)
-                    ScheduleNext();
-
                 isInitialised = true;
             }
+
+            if (save.NextRaidAtGameTime <= GameTime)
+                ScheduleNext();
 
             Subscribe();
         }
