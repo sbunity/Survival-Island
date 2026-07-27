@@ -99,7 +99,7 @@ namespace Watermelon
             var previousHealth = CurrentHealth;
             CurrentHealth = Mathf.Min(CurrentHealth + value, MaxHealth);
 
-            if (Mathf.Approximately(previousHealth, CurrentHealth))
+            if (CurrentHealth <= previousHealth)
                 return;
 
             NotifyHealthChanged();
