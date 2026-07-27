@@ -190,6 +190,7 @@ namespace Watermelon
         private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            navMeshAgent.avoidancePriority = Random.Range(30, 71);
             characterRigidbody = GetComponent<Rigidbody>();
             characterCollider = GetComponent<Collider>();
 

@@ -10,12 +10,7 @@ namespace Watermelon
     {
         private static readonly Vector3[] DEFAULT_WAYPOINTS_ARRAY = new Vector3[1] { Vector3.zero };
 
-        // When a waypoint sits inside a NavMesh Obstacle (e.g. a berry bush or coconut tree),
-        // the agent only reaches a partial path and never gets within stoppingDistance, so the
-        // regular arrival check never triggers. These thresholds detect that stall and treat the
-        // waypoint as reached once the agent has stopped making progress for long enough.
-        private const float STUCK_TIMEOUT = 1.0f;
-        private const float STUCK_PROGRESS_THRESHOLD_SQR = 0.1f * 0.1f;
+        private const int RECOVERY_ATTEMPTS = 2;
 
         private bool isMoving;
         public bool IsMoving => isMoving;
@@ -25,14 +20,15 @@ namespace Watermelon
 
         private Vector3 currentPoint;
 
-        private Vector3 lastProgressPosition;
-        private float stuckTime;
+        private NavStallDetector stallDetector;
+        private int recoveryAttempts;
 
         private NavMeshAgent navMeshAgent;
         private INavMeshAgent navMeshAgentBehaviour;
         private NavMeshPath path;
 
         public event SimpleCallback PathFinished;
+        public event SimpleCallback MovementStalled;
 
         public void Initialise(INavMeshAgent navMeshAgentBehaviour, NavMeshAgent navMeshAgent)
         {
@@ -66,7 +62,7 @@ namespace Watermelon
             currentPoint = positions[0];
             currentWaypointIndex = 0;
 
-            ResetStuckTracking();
+            ResetStallTracking();
 
             if (navMeshAgent.isOnNavMesh)
             {
@@ -79,10 +75,10 @@ namespace Watermelon
             }
         }
 
-        private void ResetStuckTracking()
+        private void ResetStallTracking()
         {
-            lastProgressPosition = navMeshAgent.transform.position;
-            stuckTime = 0f;
+            stallDetector.Reset();
+            recoveryAttempts = 0;
         }
 
         public void Update()
@@ -90,37 +86,39 @@ namespace Watermelon
             if (!isMoving)
                 return;
 
-            if (navMeshAgent.isActiveAndEnabled)
+            if (!navMeshAgent.isActiveAndEnabled || navMeshAgent.pathPending)
+                return;
+
+            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
             {
-                if (!navMeshAgent.pathPending)
-                {
-                    if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
-                    {
-                        OnWaypointReached();
-                    }
-                    else if (IsStuck())
-                    {
-                        OnWaypointReached();
-                    }
-                }
+                OnWaypointReached();
+
+                return;
             }
+
+            if (stallDetector.Tick(navMeshAgent))
+                OnStalled();
         }
 
-        private bool IsStuck()
+        private void OnStalled()
         {
-            Vector3 currentPosition = navMeshAgent.transform.position;
-
-            if ((currentPosition - lastProgressPosition).sqrMagnitude >= STUCK_PROGRESS_THRESHOLD_SQR)
+            if (recoveryAttempts < RECOVERY_ATTEMPTS)
             {
-                lastProgressPosition = currentPosition;
-                stuckTime = 0f;
+                recoveryAttempts++;
+                stallDetector.Reset();
+                navMeshAgent.SetDestination(currentPoint);
 
-                return false;
+                return;
             }
 
-            stuckTime += Time.deltaTime;
+            isMoving = false;
 
-            return stuckTime >= STUCK_TIMEOUT;
+            if (navMeshAgent.isActiveAndEnabled)
+                navMeshAgent.isStopped = true;
+
+            navMeshAgentBehaviour.OnNavMeshAgentStopped();
+
+            MovementStalled?.Invoke();
         }
 
         private void OnWaypointReached()
@@ -145,7 +143,7 @@ namespace Watermelon
 
             navMeshAgent.SetDestination(currentPoint);
 
-            ResetStuckTracking();
+            ResetStallTracking();
 
             navMeshAgentBehaviour.OnNavMeshWaypointChanged(currentPoint);
         }

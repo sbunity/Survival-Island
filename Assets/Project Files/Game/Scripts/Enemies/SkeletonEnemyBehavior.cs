@@ -10,6 +10,8 @@ namespace Watermelon
         private const float PATROL_RETRY_DELAY = 1f;
         private const float ATTACK_RANGE = 0.8f;
         private const float ATTACK_STOP_DISTANCE = 0.5f;
+        private const float CHASE_SAMPLE_DISTANCE = 1.5f;
+        private const float CHASE_REPATH_THRESHOLD_SQR = 0.35f * 0.35f;
         private const int TARGET_SELECTION_UPDATE_RATE = 10;
 
         [SerializeField] int damage = 10;
@@ -29,6 +31,10 @@ namespace Watermelon
         public ICombatTarget CurrentTarget => targetSelector?.CurrentTarget;
 
         private NavMeshPath patrolPath;
+        private NavStallDetector patrolStallDetector;
+        private NavMeshPath chasePath;
+        private Vector3 lastChaseDestination;
+        private bool hasChaseDestination;
         private SkeletonTargetSelector targetSelector;
         private int nextTargetSelectionFrame;
         private bool isTargetDamageEnabled = true;
@@ -39,6 +45,7 @@ namespace Watermelon
             base.Awake();
 
             patrolPath = new NavMeshPath();
+            chasePath = new NavMeshPath();
             targetSelector = new SkeletonTargetSelector(Agent, aggroRadius);
 
             animationCallbacks.Add(EnemyAnimationEventType.SpawnEnded, OnSpawnAnimationEnded);
@@ -93,8 +100,29 @@ namespace Watermelon
             if (target == null || !target.CanBeTargeted || !Agent.isActiveAndEnabled || !Agent.isOnNavMesh)
                 return false;
 
+            var desiredPosition = target.GetAttackPosition(transform.position);
+
+            if (!NavMesh.SamplePosition(desiredPosition, out var hit, CHASE_SAMPLE_DISTANCE, Agent.areaMask))
+                return false;
+
+            if (hasChaseDestination && (hit.position - lastChaseDestination).sqrMagnitude < CHASE_REPATH_THRESHOLD_SQR)
+                return true;
+
+            if (!Agent.CalculatePath(hit.position, chasePath) || chasePath.status == NavMeshPathStatus.PathInvalid)
+                return false;
+
             Agent.stoppingDistance = ATTACK_STOP_DISTANCE;
-            return Agent.SetDestination(target.GetAttackPosition(transform.position));
+            Agent.SetPath(chasePath);
+
+            lastChaseDestination = hit.position;
+            hasChaseDestination = true;
+
+            return true;
+        }
+
+        public void ResetChasePath()
+        {
+            hasChaseDestination = false;
         }
 
         public void RotateTowardsCurrentTarget(float speed)
@@ -155,6 +183,7 @@ namespace Watermelon
                     continue;
 
                 Agent.stoppingDistance = 0f;
+                patrolStallDetector.Reset();
                 return Agent.SetDestination(hit.position);
             }
 
@@ -167,6 +196,14 @@ namespace Watermelon
                 return false;
 
             return Agent.remainingDistance <= Agent.stoppingDistance + PATROL_POINT_REACH_DISTANCE;
+        }
+
+        public bool IsPatrolMovementStalled()
+        {
+            if (!Agent.isActiveAndEnabled || !Agent.isOnNavMesh)
+                return false;
+
+            return patrolStallDetector.Tick(Agent);
         }
 
         public float GetPatrolWaitDuration()
@@ -216,6 +253,7 @@ namespace Watermelon
         private void ResetTargeting()
         {
             targetSelector?.Reset();
+            hasChaseDestination = false;
             IsAttackAnimationPlaying = false;
             isTargetDamageEnabled = true;
             currentAttackCanDealDamage = false;

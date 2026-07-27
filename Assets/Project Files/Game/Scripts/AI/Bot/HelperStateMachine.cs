@@ -416,10 +416,25 @@ namespace Watermelon.AI
 
             if (target != null)
             {
-                navMeshAgent.Stop();
-                navMeshAgent.SetWaypoints(target.GetRestPosition());
-                navMeshAgent.PathFinished += RestPositionReached;
+                navMeshAgent.MovementStalled += OnMovementStalled;
+
+                MoveToRestPosition();
             }
+        }
+
+        private void MoveToRestPosition()
+        {
+            navMeshAgent.Stop();
+            navMeshAgent.SetWaypoints(target.GetRestPosition());
+            navMeshAgent.PathFinished += RestPositionReached;
+        }
+
+        private void OnMovementStalled()
+        {
+            if (isSitting)
+                return;
+
+            MoveToRestPosition();
         }
 
         private void RestPositionReached()
@@ -447,6 +462,8 @@ namespace Watermelon.AI
         public override void OnEnd()
         {
             isSitting = false;
+
+            navMeshAgent.MovementStalled -= OnMovementStalled;
 
             target.DisableSittingAnimation();
 
@@ -892,6 +909,13 @@ namespace Watermelon.AI
             }
 
             if (targetConstructionPoint != null && targetConstructionPoint.IsBuilt)
+            {
+                InvokeOnFinished();
+
+                return;
+            }
+
+            if (!isBuilding && !navMeshAgent.IsMoving)
             {
                 InvokeOnFinished();
 

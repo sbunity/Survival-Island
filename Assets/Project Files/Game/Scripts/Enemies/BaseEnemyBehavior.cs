@@ -125,6 +125,7 @@ namespace Watermelon
             Health.Restore();
             Health.Show();
 
+            agent.avoidancePriority = Random.Range(30, 71);
             agent.Warp(spawnPoint.position);
 
             IsDead = false;

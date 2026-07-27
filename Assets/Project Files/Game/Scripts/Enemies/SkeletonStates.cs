@@ -46,7 +46,10 @@ namespace Watermelon.Enemy.Skeleton
         {
             if (isMoving)
             {
-                if (Time.frameCount == destinationSetFrame || !Target.IsPatrolPointReached())
+                if (Time.frameCount == destinationSetFrame)
+                    return;
+
+                if (!Target.IsPatrolPointReached() && !Target.IsPatrolMovementStalled())
                     return;
 
                 isMoving = false;
@@ -89,6 +92,7 @@ namespace Watermelon.Enemy.Skeleton
             nextAttackTime = 0f;
             isWaitingForHitEnded = false;
 
+            Target.ResetChasePath();
             Target.RefreshTargetSelection(true);
             Target.MoveToCurrentTarget();
         }
