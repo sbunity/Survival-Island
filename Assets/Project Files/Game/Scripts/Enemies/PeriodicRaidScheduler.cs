@@ -11,29 +11,27 @@ namespace Watermelon
         [SerializeField] Vector2Int enemyCountRange = new Vector2Int(4, 8);
 
         [Header("Interval")]
-        [Tooltip("Random delay between raids, in game-time seconds (SaveController GameTime).")]
+        [Tooltip("Random delay between raids, in seconds of active gameplay.")]
         [SerializeField] Vector2 intervalRange = new Vector2(120f, 240f);
 
         [Header("Save")]
         [UniqueID]
         [SerializeField] string uniqueSaveID;
 
+        [Header("Debug")]
+        [Tooltip("Interval, in seconds, chosen for the current wait until the next raid.")]
+        [SerializeField, ReadOnly] float selectedInterval;
+        [Tooltip("Seconds already elapsed within the current interval.")]
+        [SerializeField, ReadOnly] float secondsElapsed;
+
         private const float SpawnRetryDelay = 5f;
 
         private PeriodicRaidSave save;
         private bool isInitialised;
-        private bool subscribed;
-
-        private static float GameTime => SaveController.GetSaveObject<TimeSave>().GameTime;
 
         private void OnEnable()
         {
             Tween.NextFrame(Initialise);
-        }
-
-        private void OnDisable()
-        {
-            Unsubscribe();
         }
 
         private void Initialise()
@@ -66,57 +64,47 @@ namespace Watermelon
                 isInitialised = true;
             }
 
-            if (save.NextRaidAtGameTime <= GameTime)
+            if (save.SelectedInterval <= 0f)
                 ScheduleNext();
 
-            Subscribe();
+            SyncDebug();
         }
 
         private void Update()
         {
-            if (!isInitialised || spawner.IsActive)
+            if (!isInitialised)
                 return;
 
-            if (GameTime < save.NextRaidAtGameTime)
+            save.SecondsElapsed += Time.deltaTime;
+            SyncDebug();
+
+            if (save.SecondsElapsed < save.SelectedInterval)
                 return;
 
             var count = Random.Range(enemyCountRange.x, enemyCountRange.y + 1);
 
             if (!spawner.SpawnWave(count))
             {
-                save.NextRaidAtGameTime = GameTime + SpawnRetryDelay;
+                save.SelectedInterval = SpawnRetryDelay;
+                save.SecondsElapsed = 0f;
+                SyncDebug();
                 return;
             }
 
+            ScheduleNext();
         }
 
         private void ScheduleNext()
         {
-            var delay = Mathf.Max(0f, Random.Range(intervalRange.x, intervalRange.y));
-            save.NextRaidAtGameTime = GameTime + delay;
+            save.SelectedInterval = Mathf.Max(0f, Random.Range(intervalRange.x, intervalRange.y));
+            save.SecondsElapsed = 0f;
+            SyncDebug();
         }
 
-        private void Subscribe()
+        private void SyncDebug()
         {
-            if (subscribed || spawner == null)
-                return;
-
-            spawner.WaveCleared += OnWaveCleared;
-            subscribed = true;
-        }
-
-        private void Unsubscribe()
-        {
-            if (!subscribed || spawner == null)
-                return;
-
-            spawner.WaveCleared -= OnWaveCleared;
-            subscribed = false;
-        }
-
-        private void OnWaveCleared()
-        {
-            ScheduleNext();
+            selectedInterval = save.SelectedInterval;
+            secondsElapsed = save.SecondsElapsed;
         }
 
         private void OnValidate()

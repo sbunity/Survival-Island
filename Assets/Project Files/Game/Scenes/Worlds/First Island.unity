@@ -99018,8 +99018,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.PeriodicRaidScheduler
   spawner: {fileID: 812600211}
   enemyCountRange: {x: 8, y: 16}
-  intervalRange: {x: 180, y: 300}
+  intervalRange: {x: 240, y: 360}
   uniqueSaveID: eb2bb3b3-f844-421c-9be7-23c78af14c0e
+  selectedInterval: 0
+  secondsElapsed: 0
 --- !u!114 &1580915841
 MonoBehaviour:
   m_ObjectHideFlags: 0
