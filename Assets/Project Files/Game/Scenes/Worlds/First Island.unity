@@ -142069,8 +142069,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 1820117116}
     - {fileID: 18863360}
+    - {fileID: 1820117116}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
@@ -142609,7 +142609,7 @@ PrefabInstance:
     - target: {fileID: 5552947486282466229, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5552947486282466229, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
@@ -142619,7 +142619,7 @@ PrefabInstance:
     - target: {fileID: 5552947486282466229, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5552947486282466229, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
@@ -142629,7 +142629,7 @@ PrefabInstance:
     - target: {fileID: 5552947486282466229, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6586583295598286668, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
