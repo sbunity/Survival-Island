@@ -5,97 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b86e224-7de4-4a7c-aa57-a01ae350375a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Special Objects/Shipwreck Loot.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Special Objects/Shipwreck Loot.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/DefendBaseTask.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/DefendBaseTask.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/BaseAttackController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/BaseAttackController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/CombatSystemLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/CombatSystemLogic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/CombatTargetRegistry.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/CombatTargetRegistry.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/ICombatTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/ICombatTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/IDamageable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Combat/IDamageable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/GuardedSkeletonEncounter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/GuardedSkeletonEncounter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonRaidSpawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonRaidSpawner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonTargetSelector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonTargetSelector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Missions/DefeatRaidMission.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Missions/DefeatRaidMission.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Missions/GuardedHelperMission.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Missions/GuardedHelperMission.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Missions/ShipwreckLootMission.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Missions/ShipwreckLootMission.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Shipwreck.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Shipwreck/ShipwreckLootBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Shipwreck/ShipwreckLootBehavior.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Shipwreck/ShipwreckLootSave.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Shipwreck/ShipwreckLootSave.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/UI/UIBaseAttackPopup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/UI/UIBaseAttackPopup.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Survival-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survival-Island/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mcp.json" beforeDir="false" afterPath="$PROJECT_DIR$/.mcp.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Bricks Craft Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Bricks Craft Table.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Bridge Building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Bridge Building.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Cooking Place.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Cooking Place.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Planks Craft Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Planks Craft Table.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Raft Building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Raft Building.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Ramp Building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Ramp Building.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Ropes Craft Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Ropes Craft Table.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Scissors Craft Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Scissors Craft Table.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Stone Generator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Stone Generator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Storage Building Complex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Storage Building Complex.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Tent Building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Tent Building.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Upgrades Building.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Upgrades Building.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Wood Generator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Buildings/Wood Generator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Enemies/Skeleton Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Enemies/Skeleton Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Helper/Helper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Helper/Helper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/UI/Canvas/UI Game.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Prefabs/UI/Canvas/UI Game.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scenes/Worlds/First Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scenes/Worlds/First Island.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/BaseTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/BaseTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperGraphics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperGraphics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperSave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperTaskType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/HelperTaskType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/NavMeshAgentBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/AI/Bot/NavMeshAgentBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/AbstractComplexBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/AbstractComplexBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/BuildingBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/BuildingBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/BuildingComplexBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/BuildingComplexBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/Converter/ResourceConverterBuildingBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/Converter/ResourceConverterBuildingBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/ResourceGeneratorBuildingBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/Buildings/ResourceGeneratorBuildingBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/ConstructingPointSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/ConstructingPointSave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/ConstructionPointBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/ConstructionPointBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/ConverterStoringTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/ConverterStoringTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/ResourceStorageBuildingBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/ResourceStorageBuildingBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/StoreResourcesTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Buildings/StoreResourcesTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Drop/ResourceSourceBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Drop/ResourceSourceBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/BaseEnemyBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/BaseEnemyBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonEnemyBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonEnemyBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Enemies/SkeletonStates.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Ground/IPurchaser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Ground/IPurchaser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Ground/PurchasePoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Ground/PurchasePoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Level System/Scripts/BaseWorldBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Level System/Scripts/BaseWorldBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Player/HealthBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Player/HealthBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Player/HealthbarBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Player/HealthbarBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Player/ICharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Player/ICharacter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Player/PlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/Player/PlayerBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/UI/UIGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/UI/UIGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/UI/UIMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Game/Scripts/UI/UIMainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Modules/Camera Controller/Scripts/VirtualCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Modules/Camera Controller/Scripts/VirtualCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Modules/Save/MD_GeneratedSaveKeyRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Modules/Save/MD_GeneratedSaveKeyRegistration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scenes/IntroComic.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scenes/IntroComic.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scripts/ComicCutsceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scripts/ComicCutsceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +16,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Project Files/Game/Scripts/UI/UIMainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_PirateIsland/IntroComic/Scripts/ComicCutsceneController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -125,7 +35,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "Merging devS",
+    "git-widget-placeholder": "devV",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -181,6 +91,7 @@
       <updated>1782471488246</updated>
       <workItem from="1782471488247" duration="6793000" />
       <workItem from="1783943407768" duration="5083000" />
+      <workItem from="1785136309362" duration="3892000" />
     </task>
     <servers />
   </component>
