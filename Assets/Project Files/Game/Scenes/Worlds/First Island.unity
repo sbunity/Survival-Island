@@ -99061,6 +99061,7 @@ GameObject:
   - component: {fileID: 1580915839}
   - component: {fileID: 1580915840}
   - component: {fileID: 1580915841}
+  - component: {fileID: 1580915842}
   m_Layer: 0
   m_Name: Periodic Raid Spawner
   m_TagString: Untagged
@@ -99114,6 +99115,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
   requiredMissionId: d4f7a2b1-3c8e-4a6f-9b12-7e5c0a1d8f34
+--- !u!114 &1580915842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580915838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed82baf620af5ae46b19f125ec6eb6fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectDisablerByMission
+  requiredMissionId: a0a84898-c3de-4706-b048-9fb70c512aa2
 --- !u!1001 &1582193516
 PrefabInstance:
   m_ObjectHideFlags: 0
