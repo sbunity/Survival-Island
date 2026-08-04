@@ -19,6 +19,11 @@ MonoBehaviour:
       name: First Island
     id: d89f969c-bed9-4d47-8dba-48ef683c36f2
   - scene:
+      scene: {fileID: 102900000, guid: 20e642fb56e753744b2a6f7d6c4283cb, type: 3}
+      path: Assets/Project Files/Game/Scenes/Worlds/Second Island.unity
+      name: Second Island
+    id: 76840b51-f550-442e-a66f-3759aaf770ba
+  - scene:
       scene: {fileID: 102900000, guid: 099600eb61093244fbc0ea52b433e03d, type: 3}
       path: Assets/Project Files/Game/Scenes/Worlds/World 1 [Full Demo].unity
       name: 'World 1 [Full Demo]'
