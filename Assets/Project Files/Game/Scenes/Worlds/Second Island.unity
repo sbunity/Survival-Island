@@ -100093,11 +100093,11 @@ MonoBehaviour:
       - weight: 1
         item: {fileID: 1472633174973870647, guid: 84ddceb33f995b649b4ba007ebd9d3f3,
           type: 3}
-  resetCurrencyOnFirstTimeLoad: 1
+  resetCurrencyOnFirstTimeLoad: 0
   defaultCurrency:
   - currencyType: 0
     amount: 0
-  restoreHungerPointsOnFirstTimeLoad: 1
+  restoreHungerPointsOnFirstTimeLoad: 0
 --- !u!4 &2625476478768325108
 Transform:
   m_ObjectHideFlags: 0
