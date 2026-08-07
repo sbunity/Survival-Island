@@ -209,6 +209,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5486660}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8566299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8566300}
+  - component: {fileID: 8566301}
+  m_Layer: 0
+  m_Name: M #06 - res storage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8566300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566299}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8566301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 33e052ba-10d8-4213-886a-9f5b79350132
+  title: Construct storage
+  rewardType: 0
+  resourceReward:
+    currencyType: 1
+    amount: 20
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 821549645}
 --- !u!1001 &9208916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6426,6 +6508,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 145897146}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &146596836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 146596837}
+  - component: {fileID: 146596838}
+  m_Layer: 0
+  m_Name: M #09 - ramp #2 build
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &146596837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146596836}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &146596838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146596836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: ffefd469-6663-420e-b5e8-af90ec83d1a0
+  title: Build the ramp
+  rewardType: 0
+  resourceReward:
+    currencyType: 2
+    amount: 10
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 5, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 1772533723}
 --- !u!1001 &147612040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6515,6 +6679,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 147612040}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &149853033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149853034}
+  - component: {fileID: 149853035}
+  m_Layer: 0
+  m_Name: M #10 - ramp #3 build
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &149853034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149853033}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &149853035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149853033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8111f12b-f1e0-4ada-89bf-ca46df74bab4
+  title: Build the ramp
+  rewardType: 0
+  resourceReward:
+    currencyType: 2
+    amount: 10
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 5, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 1353520046}
 --- !u!1001 &149994839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26941,6 +27187,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 586404230}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &588911251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 588911252}
+  - component: {fileID: 588911253}
+  m_Layer: 0
+  m_Name: M #07 - bridge #1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &588911252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588911251}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &588911253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588911251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2825f3f7-2abf-4ece-bd36-f544a862a67b
+  title: Build the bridge
+  rewardType: 0
+  resourceReward:
+    currencyType: 1
+    amount: 25
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 1591192676}
 --- !u!1001 &589077148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28695,6 +29023,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 618642647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &619441485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619441486}
+  - component: {fileID: 619441487}
+  m_Layer: 0
+  m_Name: M #11 - bridge #3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619441486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619441485}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619441487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619441485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 767239e7-07e7-460d-92b4-54a9f7091d3e
+  title: Build the bridge
+  rewardType: 0
+  resourceReward:
+    currencyType: 1
+    amount: 25
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 1502413841}
 --- !u!1 &619611002
 GameObject:
   m_ObjectHideFlags: 0
@@ -31412,7 +31822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredMissionId: 9303c333-68b5-4670-ad39-d064da66e546
+  requiredMissionId: bfb5ea19-371c-4684-8553-4ea61e501344
 --- !u!1001 &668615553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38474,6 +38884,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 821280677}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &821549645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6735064403796600729, guid: be4e4e90948f3c24c9f0b4af506005c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1766972950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766972955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &825579340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38944,6 +39366,18 @@ MonoBehaviour:
   m_Center: {x: 0, y: -0.15, z: 0}
   m_Area: 3
   m_AffectedAgents: ffffffff
+--- !u!114 &838577820 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5086517210769173366, guid: f7ef739892ebab9479e3a1d44c4bba05,
+    type: 3}
+  m_PrefabInstance: {fileID: 1407376135}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407376138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &841694281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42769,6 +43203,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aefba80d2d74b2240a8cc06c16950d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &914119268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2205967126380910887, guid: 0630cff299105574c97c4207040df610,
+    type: 3}
+  m_PrefabInstance: {fileID: 667245072}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667245077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &914562429
@@ -46985,6 +47431,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389001e3b23ffd04c9af8b7e293ac352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1019898488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019898489}
+  - component: {fileID: 1019898490}
+  m_Layer: 0
+  m_Name: M #12 - ramp #4 build
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1019898489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019898488}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1019898490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019898488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4774a91d-ecc0-479f-b04f-0782f49fe3af
+  title: Build the ramp
+  rewardType: 0
+  resourceReward:
+    currencyType: 2
+    amount: 10
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 5, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 1173138916}
 --- !u!1001 &1023153852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47430,6 +47958,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1027958175}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1029397370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029397371}
+  - component: {fileID: 1029397372}
+  m_Layer: 0
+  m_Name: M #02 - cooking place building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029397371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029397370}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1742518141}
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1029397372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029397370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 69925f56-c9f5-4bd0-98c9-c260eca64738
+  title: Build Cooking Place
+  rewardType: 0
+  resourceReward:
+    currencyType: 0
+    amount: 10
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: 
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: 
+  genericReward:
+    uiRewardInfo:
+      headerText: 
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: 
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 914119268}
 --- !u!1001 &1032785873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54947,7 +55558,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6063050497918788169, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1173138918}
   m_SourcePrefab: {fileID: 100100000, guid: dd9ec47e2d168f64dac2cbea0366e64f, type: 3}
 --- !u!114 &1173138913 stripped
 MonoBehaviour:
@@ -54979,6 +55594,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6330c9e25a95f084aa76d1cb8c91bd9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1173138916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 25115567727027729, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1173138912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173138917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1173138917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6063050497918788169, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1173138912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1173138918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173138917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: 
 --- !u!1001 &1173460215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56080,6 +56726,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1187480550}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1187621047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1187621048}
+  m_Layer: 0
+  m_Name: Custom Pointer Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1187621048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187621047}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.02, y: -0.5, z: -46.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1664560465}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1187708310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57274,6 +57951,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213147512}
   m_CullTransparentMesh: 1
+--- !u!1 &1213514743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213514744}
+  - component: {fileID: 1213514745}
+  m_Layer: 0
+  m_Name: M #01 - tent building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1213514744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213514743}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213514745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213514743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: bfb5ea19-371c-4684-8553-4ea61e501344
+  title: Build the tent
+  rewardType: 0
+  resourceReward:
+    currencyType: 0
+    amount: 50
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 1564688150}
 --- !u!1001 &1213946127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62813,7 +63572,19 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1213514744}
+  - {fileID: 1029397371}
+  - {fileID: 2030177966}
+  - {fileID: 1826301505}
+  - {fileID: 1664560465}
+  - {fileID: 8566300}
+  - {fileID: 588911252}
+  - {fileID: 1741340962}
+  - {fileID: 146596837}
+  - {fileID: 149853034}
+  - {fileID: 619441486}
+  - {fileID: 1019898489}
   m_Father: {fileID: 2625476478768325108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1319572684
@@ -63021,7 +63792,7 @@ PrefabInstance:
     - target: {fileID: 5436709943623589316, guid: dd9ec47e2d168f64dac2cbea0366e64f,
         type: 3}
       propertyPath: offset.z
-      value: 1.1599998
+      value: 0.9900017
       objectReference: {fileID: 0}
     - target: {fileID: 5436709943623589316, guid: dd9ec47e2d168f64dac2cbea0366e64f,
         type: 3}
@@ -63066,7 +63837,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6063050497918788169, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1324977255}
   m_SourcePrefab: {fileID: 100100000, guid: dd9ec47e2d168f64dac2cbea0366e64f, type: 3}
 --- !u!114 &1324977250 stripped
 MonoBehaviour:
@@ -63098,6 +63873,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6330c9e25a95f084aa76d1cb8c91bd9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1324977253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 25115567727027729, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1324977249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324977254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1324977254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6063050497918788169, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1324977249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1324977255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324977254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: 69925f56-c9f5-4bd0-98c9-c260eca64738
 --- !u!1001 &1327206998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64445,7 +65251,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6063050497918788169, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353520048}
   m_SourcePrefab: {fileID: 100100000, guid: dd9ec47e2d168f64dac2cbea0366e64f, type: 3}
 --- !u!114 &1353520043 stripped
 MonoBehaviour:
@@ -64477,6 +65287,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6330c9e25a95f084aa76d1cb8c91bd9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1353520046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 25115567727027729, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1353520042}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353520047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1353520047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6063050497918788169, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1353520042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1353520048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353520047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: 
 --- !u!1001 &1355115265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66251,7 +67092,7 @@ PrefabInstance:
     - target: {fileID: 3619819707913485231, guid: ade2243f7bee35646a321dabf0dcb566,
         type: 3}
       propertyPath: offset.x
-      value: 2.4499998
+      value: -0.069999695
       objectReference: {fileID: 0}
     - target: {fileID: 3619819707913485231, guid: ade2243f7bee35646a321dabf0dcb566,
         type: 3}
@@ -66261,7 +67102,7 @@ PrefabInstance:
     - target: {fileID: 3619819707913485231, guid: ade2243f7bee35646a321dabf0dcb566,
         type: 3}
       propertyPath: offset.z
-      value: -0.22000122
+      value: 0.7599983
       objectReference: {fileID: 0}
     - target: {fileID: 3619819707913485231, guid: ade2243f7bee35646a321dabf0dcb566,
         type: 3}
@@ -66400,10 +67241,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 659148234}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6170877980888056982, guid: ade2243f7bee35646a321dabf0dcb566,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1397231171}
     - targetCorrespondingSourceObject: {fileID: 2921036817026428844, guid: ade2243f7bee35646a321dabf0dcb566,
         type: 3}
       insertIndex: -1
@@ -66430,12 +67267,6 @@ Transform:
 --- !u!1 &1397231166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2921036817026428844, guid: ade2243f7bee35646a321dabf0dcb566,
-    type: 3}
-  m_PrefabInstance: {fileID: 1397231162}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1397231167 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6170877980888056982, guid: ade2243f7bee35646a321dabf0dcb566,
     type: 3}
   m_PrefabInstance: {fileID: 1397231162}
   m_PrefabAsset: {fileID: 0}
@@ -66484,19 +67315,6 @@ MonoBehaviour:
   radomDelay:
     firstValue: 0
     secondValue: 0.2
---- !u!114 &1397231171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397231167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredMissionId: b4b4d0f4-2c15-40bf-a837-d9d8466263bd
 --- !u!1001 &1399231055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67209,7 +68027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredMissionId: 3a7ecd45-b1da-46d9-97d1-8036e2eac343
+  requiredMissionId: 7442fc88-0f5f-415b-9f86-b2a614de2a1e
 --- !u!1001 &1410498271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71612,7 +72430,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7054204330602659697, guid: d647b0fb526674e43b8426eed94e0137,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1502413843}
   m_SourcePrefab: {fileID: 100100000, guid: d647b0fb526674e43b8426eed94e0137, type: 3}
 --- !u!4 &1502413838 stripped
 Transform:
@@ -71644,6 +72466,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993acf5d8c8a87540ae92984551844e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1502413841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
+    type: 3}
+  m_PrefabInstance: {fileID: 1502413837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502413842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1502413842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7054204330602659697, guid: d647b0fb526674e43b8426eed94e0137,
+    type: 3}
+  m_PrefabInstance: {fileID: 1502413837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1502413843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502413842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: 
 --- !u!1001 &1502663675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74874,6 +75727,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1563931654}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1564688150 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2585449629886448675, guid: ade2243f7bee35646a321dabf0dcb566,
+    type: 3}
+  m_PrefabInstance: {fileID: 1397231162}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1568254506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76343,7 +77208,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7054204330602659697, guid: d647b0fb526674e43b8426eed94e0137,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1591192678}
   m_SourcePrefab: {fileID: 100100000, guid: d647b0fb526674e43b8426eed94e0137, type: 3}
 --- !u!4 &1591192673 stripped
 Transform:
@@ -76375,6 +77244,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993acf5d8c8a87540ae92984551844e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1591192676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
+    type: 3}
+  m_PrefabInstance: {fileID: 1591192672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591192677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1591192677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7054204330602659697, guid: d647b0fb526674e43b8426eed94e0137,
+    type: 3}
+  m_PrefabInstance: {fileID: 1591192672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1591192678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591192677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: 33e052ba-10d8-4213-886a-9f5b79350132
 --- !u!1001 &1591362210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79188,6 +80088,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545e8f2bb4cd8e044af06c37c1f89f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1664560464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664560465}
+  - component: {fileID: 1664560466}
+  m_Layer: 0
+  m_Name: M #05 - craft scissors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1664560465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664560464}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1187621048}
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1664560466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664560464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4741a408d3b4b3842906f9ff091e494b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 352b09c3-e3d2-4686-9c1b-4eefe52d57d6
+  title: Craft scissors
+  rewardType: 0
+  resourceReward:
+    currencyType: 500
+    amount: 12
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: 
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: 
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 21300000, guid: a5cb318d21c8d6a4eb19a74285e8456d, type: 3}
+      mainText: 
+      buttonText: AWESOME!
+  useCustomTargetPosition: 1
+  customTargetPosition: {fileID: 1187621048}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  currencyType: 500
+  amount: 3
 --- !u!1001 &1664957170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81984,6 +82968,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545e8f2bb4cd8e044af06c37c1f89f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1741340961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1741340962}
+  - component: {fileID: 1741340963}
+  m_Layer: 0
+  m_Name: M #08 - bridge #2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1741340962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741340961}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1741340963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741340961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7eee44d9-609c-4dd6-a4e8-a7ba5d5c0c13
+  title: Build the bridge
+  rewardType: 0
+  resourceReward:
+    currencyType: 1
+    amount: 25
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 1591192676}
 --- !u!1001 &1741960574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82073,6 +83139,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1741960574}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1742518140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1742518141}
+  m_Layer: 0
+  m_Name: Custom Pointer Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1742518141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742518140}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.92, y: -0.5, z: -46.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1029397371}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1744460030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83310,7 +84407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredMissionId: abe860c2-dd08-4e80-b7a7-931a4a1a8ac8
+  requiredMissionId: 352b09c3-e3d2-4686-9c1b-4eefe52d57d6
 --- !u!1001 &1767221907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83700,7 +84797,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6063050497918788169, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1772533725}
   m_SourcePrefab: {fileID: 100100000, guid: dd9ec47e2d168f64dac2cbea0366e64f, type: 3}
 --- !u!114 &1772533720 stripped
 MonoBehaviour:
@@ -83732,6 +84833,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6330c9e25a95f084aa76d1cb8c91bd9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1772533723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 25115567727027729, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1772533719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772533724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1772533724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6063050497918788169, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1772533719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1772533725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772533724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: 
 --- !u!1001 &1773745959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86356,7 +87488,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7054204330602659697, guid: d647b0fb526674e43b8426eed94e0137,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1826016350}
   m_SourcePrefab: {fileID: 100100000, guid: d647b0fb526674e43b8426eed94e0137, type: 3}
 --- !u!114 &1826016346 stripped
 MonoBehaviour:
@@ -86388,6 +87524,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993acf5d8c8a87540ae92984551844e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1826016349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7054204330602659697, guid: d647b0fb526674e43b8426eed94e0137,
+    type: 3}
+  m_PrefabInstance: {fileID: 1826016345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1826016350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826016349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
+  requiredMissionId: 
+--- !u!1 &1826301504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1826301505}
+  - component: {fileID: 1826301506}
+  m_Layer: 0
+  m_Name: M #04 - scissors craft table building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1826301505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826301504}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1980792132}
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826301506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826301504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: df257601-b51e-4a99-8558-1b6a5156d0c8
+  title: Build Scissors Craft Table
+  rewardType: 0
+  resourceReward:
+    currencyType: 0
+    amount: 10
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: 
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: 
+  genericReward:
+    uiRewardInfo:
+      headerText: 
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: 
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 838577820}
 --- !u!1001 &1827987559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94810,6 +96048,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1979077456}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1980792131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1980792132}
+  m_Layer: 0
+  m_Name: Custom Pointer Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1980792132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980792131}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.28, y: -0.5, z: -46.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1826301505}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1983807422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97139,6 +98408,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2026732954}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2030177965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030177966}
+  - component: {fileID: 2030177967}
+  m_Layer: 0
+  m_Name: M #03 - ramp #1 build
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030177966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030177965}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2030177967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030177965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7442fc88-0f5f-415b-9f86-b2a614de2a1e
+  title: Build the ramp
+  rewardType: 0
+  resourceReward:
+    currencyType: 2
+    amount: 10
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 0, y: 5, z: 0}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 1324977253}
 --- !u!1001 &2030363586
 PrefabInstance:
   m_ObjectHideFlags: 0
