@@ -23,7 +23,7 @@ namespace Watermelon
             var report = IdleProductionSimulator.Simulate(worldId, snapshot, Settings);
 
             if (report != null && !report.IsEmpty)
-                LogManager.Log($"[Idle Production]: {report}", LogCategory.Systems);
+                LogDiagnostic($"[Idle Production]: {report}");
 
             return report;
         }
@@ -48,11 +48,39 @@ namespace Watermelon
             if (snapshot == null)
                 return;
 
-            WorldProductionSnapshotBuilder.Capture(world, snapshot, worldId);
+            WorldProductionSnapshotBuilder.Capture(world, snapshot, worldId, Settings);
+
+            LogCapturedRates(worldId, snapshot);
 
             snapshot.SetLive(false);
 
             SaveController.MarkAsSaveIsRequired();
+        }
+
+        private static void LogCapturedRates(string worldId, WorldProductionSnapshot snapshot)
+        {
+            if (snapshot.Producers.IsNullOrEmpty())
+                return;
+
+            var builder = new System.Text.StringBuilder();
+            builder.Append("[Idle Production]: captured ").Append(worldId);
+
+            foreach (var producer in snapshot.Producers)
+            {
+                builder.Append(" | ").Append(producer.HelperId.Substring(0, 8))
+                    .Append(" authored=").Append(producer.AuthoredUnitsPerMinute.ToString("F1"))
+                    .Append(" measured=").Append(producer.MeasuredUnitsPerMinute.ToString("F1"))
+                    .Append("/min over ").Append(producer.SampleMinutes.ToString("F1")).Append("min");
+            }
+
+            LogDiagnostic(builder.ToString());
+        }
+
+        [System.Diagnostics.Conditional("UNITY_EDITOR")]
+        [System.Diagnostics.Conditional("DEVELOPMENT_BUILD")]
+        private static void LogDiagnostic(string message)
+        {
+            Debug.Log(message);
         }
 
         public static void InvalidateWorld(string worldId)

@@ -25,7 +25,7 @@ namespace Watermelon
 
             report.ElapsedMinutes = elapsedMinutes;
 
-            AccumulateProduction(snapshot, elapsedMinutes * settings.IdleEfficiency);
+            AccumulateProduction(snapshot, elapsedMinutes * settings.IdleEfficiency, settings);
 
             DistributeToSinks(worldId, snapshot, report);
             ConvertResources(worldId, snapshot, elapsedMinutes, report);
@@ -42,7 +42,7 @@ namespace Watermelon
             return report;
         }
 
-        private static void AccumulateProduction(WorldProductionSnapshot snapshot, float effectiveMinutes)
+        private static void AccumulateProduction(WorldProductionSnapshot snapshot, float effectiveMinutes, IdleProductionSettings settings)
         {
             producedBuffer.Clear();
 
@@ -53,7 +53,7 @@ namespace Watermelon
                 if (producer == null)
                     continue;
 
-                var rate = GetRate(producer);
+                var rate = GetRate(producer, settings);
                 if (rate <= 0f)
                     continue;
 
@@ -80,9 +80,15 @@ namespace Watermelon
             }
         }
 
-        private static float GetRate(WorldProductionSnapshot.ProducerEntry producer)
+        private static float GetRate(WorldProductionSnapshot.ProducerEntry producer, IdleProductionSettings settings)
         {
-            return producer.AuthoredUnitsPerMinute;
+            if (producer.SampleMinutes <= 0f || producer.MeasuredUnitsPerMinute <= 0f)
+                return producer.AuthoredUnitsPerMinute;
+
+            var threshold = settings.MeasuredBlendThresholdMinutes;
+            var trust = threshold > 0f ? Mathf.Clamp01(producer.SampleMinutes / threshold) : 1f;
+
+            return Mathf.Lerp(producer.AuthoredUnitsPerMinute, producer.MeasuredUnitsPerMinute, trust);
         }
 
         private static bool CanHarvest(int taskMask, int sourceFlag)

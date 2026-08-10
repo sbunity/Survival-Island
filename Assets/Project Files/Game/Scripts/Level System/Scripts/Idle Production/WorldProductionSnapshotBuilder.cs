@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Watermelon
 {
     public static class WorldProductionSnapshotBuilder
     {
-        public static void Capture(BaseWorldBehavior world, WorldProductionSnapshot snapshot, string worldId)
+        public static void Capture(BaseWorldBehavior world, WorldProductionSnapshot snapshot, string worldId, IdleProductionSettings settings)
         {
             if (world == null || snapshot == null || string.IsNullOrEmpty(worldId))
                 return;
@@ -14,13 +15,13 @@ namespace Watermelon
                 return;
 
             snapshot.Apply(
-                CaptureProducers(world, snapshot, worldId),
+                CaptureProducers(world, snapshot, worldId, settings),
                 CaptureSources(taskHandler),
                 CaptureSinks(taskHandler),
                 CaptureConverters(taskHandler));
         }
 
-        private static WorldProductionSnapshot.ProducerEntry[] CaptureProducers(BaseWorldBehavior world, WorldProductionSnapshot snapshot, string worldId)
+        private static WorldProductionSnapshot.ProducerEntry[] CaptureProducers(BaseWorldBehavior world, WorldProductionSnapshot snapshot, string worldId, IdleProductionSettings settings)
         {
             var helpers = world.GetComponentsInChildren<HelperBehavior>(true);
 
@@ -40,6 +41,7 @@ namespace Watermelon
                 };
 
                 CarryOverMeasurement(snapshot, entry, worldId);
+                FoldInSession(entry, helper, settings);
 
                 entries.Add(entry);
             }
@@ -62,6 +64,26 @@ namespace Watermelon
 
                 break;
             }
+        }
+
+        private static void FoldInSession(WorldProductionSnapshot.ProducerEntry entry, HelperBehavior helper, IdleProductionSettings settings)
+        {
+            FoldMeasurement(entry, helper.IdleActiveMinutes, helper.IdleDeliveredUnits, settings);
+        }
+
+        public static void FoldMeasurement(WorldProductionSnapshot.ProducerEntry entry, float sessionMinutes, int sessionUnits, IdleProductionSettings settings)
+        {
+            if (entry == null || settings == null)
+                return;
+
+            if (sessionMinutes <= 0f || sessionUnits <= 0)
+                return;
+
+            var decayedSample = entry.SampleMinutes * Mathf.Pow(0.5f, sessionMinutes / settings.MeasurementHalfLifeMinutes);
+            var totalWeight = decayedSample + sessionMinutes;
+
+            entry.MeasuredUnitsPerMinute = (entry.MeasuredUnitsPerMinute * decayedSample + sessionUnits) / totalWeight;
+            entry.SampleMinutes = totalWeight;
         }
 
         private static WorldProductionSnapshot.SourceEntry[] CaptureSources(TaskHandler taskHandler)

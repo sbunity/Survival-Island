@@ -61,7 +61,10 @@ namespace Watermelon
         // unloads all 3 types of provided helpers
         public static void Unload()
         {
-            instance.positionPointerPool.Clear();
+            if (instance == null)
+                return;
+
+            instance.positionPointerPool?.ReturnToPoolEverything(true);
 
             instance.directionPointersController.Unload();
         }

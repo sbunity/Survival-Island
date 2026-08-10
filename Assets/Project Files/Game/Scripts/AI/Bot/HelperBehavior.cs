@@ -61,6 +61,13 @@ namespace Watermelon
         [SerializeField, Min(0f)] float idleUnitsPerMinute = 6f;
         public float IdleUnitsPerMinute => idleUnitsPerMinute;
 
+        private int idleDeliveredUnits;
+        private float idleMeasureStartTime;
+
+        public int IdleDeliveredUnits => idleDeliveredUnits;
+
+        public float IdleActiveMinutes => Mathf.Max(0f, (IdleClock.Now - idleMeasureStartTime) / 60f);
+
         [BoxGroup("Health")]
         [SerializeField, Min(1f)] float maxHealth = 100f;
         public float MaxHealth => isHealthInitialised ? healthBehavior.MaxHealth : maxHealth;
@@ -329,6 +336,9 @@ namespace Watermelon
                 return;
 
             isOpeningCompleted = true;
+
+            idleDeliveredUnits = 0;
+            idleMeasureStartTime = IdleClock.Now;
 
             if (disableObjectIfZoneIsLocked)
             {
@@ -868,6 +878,8 @@ namespace Watermelon
             {
                 resourceSlot.Substract(resource.amount);
             }
+
+            idleDeliveredUnits += resource.amount;
 
             LastTimeResourceGiven = Time.time;
         }

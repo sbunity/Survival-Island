@@ -13,5 +13,11 @@ namespace Watermelon
 
         [SerializeField, Min(0f)] float idleEfficiency = 1f;
         public float IdleEfficiency => idleEfficiency;
+
+        [SerializeField, Min(0f)] float measuredBlendThresholdMinutes = 20f;
+        public float MeasuredBlendThresholdMinutes => measuredBlendThresholdMinutes;
+
+        [SerializeField, Min(1f)] float measurementHalfLifeMinutes = 60f;
+        public float MeasurementHalfLifeMinutes => measurementHalfLifeMinutes;
     }
 }
