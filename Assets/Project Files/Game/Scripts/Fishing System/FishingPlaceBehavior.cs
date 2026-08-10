@@ -21,6 +21,7 @@ namespace Watermelon
 
         [Space]
         [SerializeField] CurrencyType dropType;
+        public CurrencyType DropType => dropType;
         [SerializeField] int dropRate = 1;
 
         [Space]

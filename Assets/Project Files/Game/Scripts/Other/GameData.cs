@@ -25,6 +25,10 @@ namespace Watermelon
         public DuoFloat StepsVolumeRange => stepsVolumeRange;
         public float MinSpeedToTriggerSteps => minSpeedToTriggerSteps;
 
+        [BoxGroup("Idle Production", "Idle Production")]
+        [SerializeField] IdleProductionSettings idleSettings = new IdleProductionSettings();
+        public IdleProductionSettings IdleSettings => idleSettings;
+
         public void Init()
         {
             enemiesDatabase.Init();

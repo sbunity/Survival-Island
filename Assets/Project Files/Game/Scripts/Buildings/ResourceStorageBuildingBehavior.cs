@@ -25,12 +25,6 @@ namespace Watermelon
         [SerializeField] GameObject emptyStorageIndicator;
         [SerializeField] TMP_Text emptyStorageIndicatorText;
 
-        [Space]
-        [SerializeField] bool fillUpOnGameStartap;
-        [SerializeField] float minAwayDurationInMinutes = 30;
-
-        private ResourcesSave save;
-
         public bool IsFull => storage.IsFull();
 
         private StoreResourcesTask storeResourcesTask;
@@ -73,16 +67,6 @@ namespace Watermelon
             OnStorageResourcesChanged();
 
             emptyStorageIndicatorText.text = "0/" + capacity;
-
-            save = SaveController.GetSaveObject<ResourcesSave>(LinkedWorldBehavior.WorldData.ID, ID);
-            save.Init();
-            storage.OnResourceAdded += OnResourceStored;
-        }
-
-        private void OnResourceStored(CurrencyType resourceType)
-        {
-            if(!save.Resources.Contains(resourceType))
-                save.Resources.Add(resourceType);
         }
 
         private void OnStorageResourcesChanged()
@@ -116,25 +100,6 @@ namespace Watermelon
         public void OnGroundHidden(bool immediately = false)
         {
             gameObject.SetActive(false);
-        }
-
-        public override void SpawnUnlocked()
-        {
-            base.SpawnUnlocked();
-
-            if (fillUpOnGameStartap && !Storage.IsFull() && !save.Resources.IsNullOrEmpty())
-            {
-                var timeSpan = DateTime.Now - SaveController.GetSaveObject<TimeSave>().LastExitTime;
-                var minutes = (float)timeSpan.TotalMinutes;
-
-                var t = Mathf.Clamp01(Mathf.InverseLerp(0, minAwayDurationInMinutes, minutes));
-                var resourcesToAdd = Mathf.RoundToInt(t * Storage.SpaceLeft);
-               
-                for(int i = 0; i < resourcesToAdd; i++)
-                {
-                    Storage.AddResources(Resource.One(save.Resources.GetRandomItem()));
-                }
-            }
         }
 
         [Button]
@@ -174,31 +139,6 @@ namespace Watermelon
                 storeResourcesTask.Activate();
             else
                 storeResourcesTask.Disable();
-        }
-
-        [System.Serializable]
-        public class ResourcesSave : ISaveObject
-        {
-            public List<CurrencyType> Resources { get; set; }
-
-            [SerializeField] private CurrencyType[] saveCost;
-
-            public void Init()
-            {
-                if (saveCost != null)
-                {
-                    Resources = new List<CurrencyType>(saveCost);
-                }
-                else
-                {
-                    Resources = new List<CurrencyType>();
-                }
-            }
-
-            public void OnBeforeSave()
-            {
-                saveCost = Resources.ToArray();
-            }
         }
     }
 }

@@ -57,6 +57,10 @@ namespace Watermelon
         [SerializeField] float tasksDistance = 0;
         public float TasksDistance => tasksDistance;
 
+        [BoxGroup("Settings")]
+        [SerializeField, Min(0f)] float idleUnitsPerMinute = 6f;
+        public float IdleUnitsPerMinute => idleUnitsPerMinute;
+
         [BoxGroup("Health")]
         [SerializeField, Min(1f)] float maxHealth = 100f;
         public float MaxHealth => isHealthInitialised ? healthBehavior.MaxHealth : maxHealth;

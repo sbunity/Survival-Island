@@ -87,9 +87,33 @@ namespace Watermelon
             GameLoading.MarkAsReadyToHide();
         }
 
+        private bool isSuspended;
+
+        private void OnApplicationPause(bool pause)
+        {
+            if (pause)
+            {
+                isSuspended = true;
+
+                SaveController.Save(true);
+
+                return;
+            }
+
+            if (!isSuspended)
+                return;
+
+            isSuspended = false;
+
+            var timeSave = IdleClock.GetTimeSave();
+
+            if (timeSave != null)
+                timeSave.BeginSession();
+        }
+
         private void OnDestroy()
         {
-            Data.Unload(); 
+            Data.Unload();
             
             NavigationHelper.Unload();
 

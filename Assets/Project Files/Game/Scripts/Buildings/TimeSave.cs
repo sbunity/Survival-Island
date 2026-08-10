@@ -23,7 +23,7 @@ namespace Watermelon
             : DateTime.MinValue;
 
         /// <summary>Total accumulated gameplay time in seconds, including the current session.</summary>
-        public float GameTime => gameTime + (Time.realtimeSinceStartup - sessionCheckpointRealtime);
+        public float GameTime => Mathf.Max(0f, gameTime) + Mathf.Max(0f, Time.realtimeSinceStartup - sessionCheckpointRealtime);
 
         /// <summary>
         /// Marks the start of the current session for accurate <see cref="GameTime"/> tracking.
@@ -36,8 +36,9 @@ namespace Watermelon
 
         public void OnBeforeSave()
         {
-            float elapsed = Time.realtimeSinceStartup - sessionCheckpointRealtime;
-            gameTime += elapsed;
+            float elapsed = Mathf.Max(0f, Time.realtimeSinceStartup - sessionCheckpointRealtime);
+
+            gameTime = Mathf.Max(0f, gameTime) + elapsed;
             sessionCheckpointRealtime = Time.realtimeSinceStartup;
 
             lastExitUnix = DateTimeOffset.UtcNow.ToUnixTimeSeconds();

@@ -11,6 +11,7 @@ namespace Watermelon
 
         [Header("Converter")]
         [SerializeField, HideIf("EditorHaveRecipeUpgrade")] protected Recipe recipe;
+        public Recipe Recipe => recipe;
 
         protected ConverterRecipeUpgrade RecipeUpgrade { get; private set; }
 
@@ -18,6 +19,7 @@ namespace Watermelon
         [SerializeField] [HideIf("EditorHaveCapacityUpgrade")] protected int inputStorageCapacity = 10;
         [SerializeField] [HideIf("EditorHaveCapacityUpgrade")] protected int outputStorageCapacity = 10;
         [SerializeField] [HideIf("EditorHaveDurationUpgrade")] protected float conversionDuration = 10;
+        public float ConversionDuration => conversionDuration;
 
         [Header("Storage")]
         [SerializeField] ComplexResourceStorageBehavior inStorage;

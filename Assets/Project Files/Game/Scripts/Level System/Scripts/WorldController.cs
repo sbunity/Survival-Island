@@ -79,6 +79,8 @@ namespace Watermelon
 
         public void UnloadWorld(SimpleCallback onWorldUnloaded)
         {
+            IdleProduction.CaptureLiveWorld(WorldBehavior);
+
             NavMeshController.Reset();
 
             playerBehavior.Unload();
@@ -126,6 +128,9 @@ namespace Watermelon
         public void LoadWorld(WorldData worldData)
         {
             CurrentWorld = worldData;
+
+            IdleProduction.Simulate(worldData.ID);
+            IdleProduction.BeginLiveWorld(worldData.ID);
 
             WorldItemCollector.Initialise();
 

@@ -35,7 +35,6 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.PeriodicRaidSave), "Watermelon.PeriodicRaidSave");
             SaveKeyMap.Register(typeof(Watermelon.PurchasePointSave), "Watermelon.PurchasePointSave");
             SaveKeyMap.Register(typeof(Watermelon.ResourceListSave), "Watermelon.ResourceListSave");
-            SaveKeyMap.Register(typeof(Watermelon.ResourceStorageBuildingBehavior.ResourcesSave), "Watermelon.ResourceStorageBuildingBehavior+ResourcesSave");
             SaveKeyMap.Register(typeof(Watermelon.ShipwreckLootMission.Save), "Watermelon.ShipwreckLootMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.ShipwreckLootSave), "Watermelon.ShipwreckLootSave");
             SaveKeyMap.Register(typeof(Watermelon.SimpleBoolSave), "Watermelon.SimpleBoolSave");
@@ -53,6 +52,7 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.UpgradeMission.Save), "Watermelon.UpgradeMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.WorldChangeMission.Save), "Watermelon.WorldChangeMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.WorldGlobalSave), "Watermelon.WorldGlobalSave");
+            SaveKeyMap.Register(typeof(Watermelon.WorldProductionSnapshot), "idle_production");
             SaveKeyMap.Register(typeof(Watermelon.WorldSave), "Watermelon.WorldSave");
         }
     }
