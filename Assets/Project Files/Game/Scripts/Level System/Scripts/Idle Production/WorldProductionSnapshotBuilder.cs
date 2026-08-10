@@ -5,20 +5,22 @@ namespace Watermelon
 {
     public static class WorldProductionSnapshotBuilder
     {
-        public static void Capture(BaseWorldBehavior world, WorldProductionSnapshot snapshot, string worldId, IdleProductionSettings settings)
+        public static bool Capture(BaseWorldBehavior world, WorldProductionSnapshot snapshot, string worldId, IdleProductionSettings settings)
         {
             if (world == null || snapshot == null || string.IsNullOrEmpty(worldId))
-                return;
+                return false;
 
             var taskHandler = world.TaskHandler;
             if (taskHandler == null || taskHandler.Tasks == null)
-                return;
+                return false;
 
             snapshot.Apply(
                 CaptureProducers(world, snapshot, worldId, settings),
                 CaptureSources(taskHandler),
-                CaptureSinks(taskHandler),
+                CaptureSinks(taskHandler, snapshot, settings),
                 CaptureConverters(taskHandler));
+
+            return true;
         }
 
         private static WorldProductionSnapshot.ProducerEntry[] CaptureProducers(BaseWorldBehavior world, WorldProductionSnapshot snapshot, string worldId, IdleProductionSettings settings)
@@ -137,24 +139,26 @@ namespace Watermelon
             });
         }
 
-        private static WorldProductionSnapshot.SinkEntry[] CaptureSinks(TaskHandler taskHandler)
+        private static WorldProductionSnapshot.SinkEntry[] CaptureSinks(TaskHandler taskHandler, WorldProductionSnapshot snapshot, IdleProductionSettings settings)
         {
             var entries = new List<WorldProductionSnapshot.SinkEntry>();
 
             foreach (var task in taskHandler.Tasks)
             {
+                WorldProductionSnapshot.SinkEntry entry = null;
+
                 if (task is StoreResourcesTask storeTask)
                 {
                     var building = storeTask.StorageBuildingBehavior;
                     if (building == null || !building.IsOperational || !building.IsHelperTaskActive)
                         continue;
 
-                    entries.Add(new WorldProductionSnapshot.SinkEntry
+                    entry = new WorldProductionSnapshot.SinkEntry
                     {
                         SaveKey = $"{building.ID}_Storage",
                         Accepted = building.StoredResources.ToArray(),
                         FlatCapacity = building.Storage.Capacity
-                    });
+                    };
                 }
                 else if (task is ConverterStoringTask converterTask)
                 {
@@ -162,15 +166,66 @@ namespace Watermelon
                     if (converter == null || !converter.IsOperational || !converter.IsHelperTaskActive)
                         continue;
 
-                    entries.Add(new WorldProductionSnapshot.SinkEntry
+                    entry = new WorldProductionSnapshot.SinkEntry
                     {
                         SaveKey = $"{converter.ID}_IngridientsStorage",
                         PerCurrencyCapacity = BuildInputCapacity(converter)
-                    });
+                    };
                 }
+
+                if (entry == null)
+                    continue;
+
+                entry.ObservedMix = FoldObservedMix(FindPreviousMix(snapshot, entry.SaveKey), IdleProductionTracker.GetDeliveries(entry.SaveKey), settings);
+
+                entries.Add(entry);
             }
 
             return entries.ToArray();
+        }
+
+        private static Resource[] FindPreviousMix(WorldProductionSnapshot snapshot, string saveKey)
+        {
+            if (snapshot.Sinks.IsNullOrEmpty())
+                return null;
+
+            foreach (var previous in snapshot.Sinks)
+            {
+                if (previous != null && previous.SaveKey == saveKey)
+                    return previous.ObservedMix;
+            }
+
+            return null;
+        }
+
+        private static Resource[] FoldObservedMix(Resource[] previous, ResourcesList session, IdleProductionSettings settings)
+        {
+            var decay = settings != null
+                ? Mathf.Pow(0.5f, IdleProductionTracker.SessionMinutes / settings.MeasurementHalfLifeMinutes)
+                : 1f;
+
+            var merged = new ResourcesList();
+
+            if (previous != null)
+            {
+                foreach (var resource in previous)
+                {
+                    var faded = Mathf.RoundToInt(resource.amount * decay);
+                    if (faded > 0)
+                        merged += new Resource(resource.currency, faded);
+                }
+            }
+
+            if (session != null)
+            {
+                foreach (var resource in session)
+                {
+                    if (resource.amount > 0)
+                        merged += resource;
+                }
+            }
+
+            return merged.Count > 0 ? merged.ToArray() : null;
         }
 
         private static WorldProductionSnapshot.ConverterEntry[] CaptureConverters(TaskHandler taskHandler)

@@ -38,9 +38,13 @@ namespace Watermelon
                 resourceGivingPoint.SetResourceGiver(this);
         }
 
+        public string SaveName { get; private set; }
+
         protected void Init(string saveName)
         {
             WorldData worldData = WorldController.CurrentWorld;
+
+            SaveName = saveName;
 
             save = SaveController.GetSaveObject<ResourceListSave>(worldData.ID, saveName);
             save.Init();
@@ -102,6 +106,9 @@ namespace Watermelon
         /// <param name="flyingResource"></param>
         public override void TakeResource(FlyingResourceBehavior flyingResource, bool fromPlayer)
         {
+            if (!fromPlayer)
+                IdleProductionTracker.RecordDelivery(SaveName, flyingResource.ResourceType, flyingResource.Amount);
+
             var one = Resource.Create(flyingResource.ResourceType, flyingResource.Amount);
 
             Storage += one;

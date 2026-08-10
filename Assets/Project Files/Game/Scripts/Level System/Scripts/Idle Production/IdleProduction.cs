@@ -34,7 +34,9 @@ namespace Watermelon
             if (snapshot == null)
                 return;
 
-            snapshot.SetLive(true);
+            snapshot.SetLive(true, () => BankLiveMeasurements(worldId));
+
+            IdleProductionTracker.BeginSession();
         }
 
         public static void CaptureLiveWorld(BaseWorldBehavior world)
@@ -48,13 +50,42 @@ namespace Watermelon
             if (snapshot == null)
                 return;
 
-            WorldProductionSnapshotBuilder.Capture(world, snapshot, worldId, Settings);
+            CaptureAndReset(world, snapshot, worldId);
 
             LogCapturedRates(worldId, snapshot);
 
             snapshot.SetLive(false);
 
             SaveController.MarkAsSaveIsRequired();
+        }
+
+        private static void BankLiveMeasurements(string worldId)
+        {
+            var world = WorldController.WorldBehavior;
+
+            if (world == null || world.WorldData == null || world.WorldData.ID != worldId)
+                return;
+
+            var snapshot = GetSnapshot(worldId);
+            if (snapshot == null)
+                return;
+
+            CaptureAndReset(world, snapshot, worldId);
+        }
+
+        private static void CaptureAndReset(BaseWorldBehavior world, WorldProductionSnapshot snapshot, string worldId)
+        {
+            if (!WorldProductionSnapshotBuilder.Capture(world, snapshot, worldId, Settings))
+                return;
+
+            IdleProductionTracker.BeginSession();
+
+            var helpers = world.GetComponentsInChildren<HelperBehavior>(true);
+            foreach (var helper in helpers)
+            {
+                if (helper != null)
+                    helper.ResetIdleMeasurement();
+            }
         }
 
         private static void LogCapturedRates(string worldId, WorldProductionSnapshot snapshot)

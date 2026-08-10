@@ -5,8 +5,20 @@ namespace Watermelon
 {
     public static class IdleProductionSimulator
     {
-        private static readonly Dictionary<CurrencyType, float> producedBuffer = new Dictionary<CurrencyType, float>();
-        private static readonly List<ResourceListSave> touchedSaves = new List<ResourceListSave>();
+        private const int DISTRIBUTION_PASSES = 3;
+
+        private static readonly List<ResourceListSave> touchedSaves = new();
+        private static readonly HashSet<CurrencyType> producibleCurrencies = new();
+
+        private static readonly List<WorldProductionSnapshot.SinkEntry> candidateSinks = new();
+        private static readonly List<ResourceListSave> candidateSaves = new();
+        private static readonly List<float> candidateWeights = new();
+        private static readonly List<float> candidateObserved = new();
+
+        private static readonly List<CurrencyType> slotCurrencies = new();
+        private static readonly List<int> slotSpace = new();
+        private static readonly List<float> slotWeights = new();
+        private static readonly List<float> slotObserved = new();
 
         public static IdleProductionReport Simulate(string worldId, WorldProductionSnapshot snapshot, IdleProductionSettings settings)
         {
@@ -25,14 +37,19 @@ namespace Watermelon
 
             report.ElapsedMinutes = elapsedMinutes;
 
-            AccumulateProduction(snapshot, elapsedMinutes * settings.IdleEfficiency, settings);
+            CollectProducibleCurrencies(snapshot, settings);
 
-            DistributeToSinks(worldId, snapshot, report);
+            var budget = TotalRatePerMinute(snapshot, settings) * elapsedMinutes * settings.IdleEfficiency;
+
+            budget = FillSinks(worldId, snapshot, settings, report, budget, true);
+
+            if (!HasSpace(worldId, snapshot, true))
+                FillSinks(worldId, snapshot, settings, report, budget, false);
+
             ConvertResources(worldId, snapshot, elapsedMinutes, report);
 
-            producedBuffer.Clear();
-
             CommitTouchedSaves();
+            producibleCurrencies.Clear();
 
             snapshot.Checkpoint();
 
@@ -42,42 +59,51 @@ namespace Watermelon
             return report;
         }
 
-        private static void AccumulateProduction(WorldProductionSnapshot snapshot, float effectiveMinutes, IdleProductionSettings settings)
+        private static void CollectProducibleCurrencies(WorldProductionSnapshot snapshot, IdleProductionSettings settings)
         {
-            producedBuffer.Clear();
+            producibleCurrencies.Clear();
 
-            var sources = snapshot.Sources;
-
-            foreach (var producer in snapshot.Producers)
+            foreach (var source in snapshot.Sources)
             {
-                if (producer == null)
-                    continue;
-
-                var rate = GetRate(producer, settings);
-                if (rate <= 0f)
-                    continue;
-
-                var totalWeight = 0;
-                foreach (var source in sources)
+                foreach (var producer in snapshot.Producers)
                 {
-                    if (CanHarvest(producer.TaskMask, source.TaskTypeFlag))
-                        totalWeight += source.SourceCount;
-                }
+                    if (producer == null || GetRate(producer, settings) <= 0f)
+                        continue;
 
-                if (totalWeight <= 0)
-                    continue;
-
-                var units = rate * effectiveMinutes;
-
-                foreach (var source in sources)
-                {
                     if (!CanHarvest(producer.TaskMask, source.TaskTypeFlag))
                         continue;
 
-                    producedBuffer.TryGetValue(source.Currency, out float current);
-                    producedBuffer[source.Currency] = current + units * source.SourceCount / totalWeight;
+                    producibleCurrencies.Add(source.Currency);
+
+                    break;
                 }
             }
+        }
+
+        private static float TotalRatePerMinute(WorldProductionSnapshot snapshot, IdleProductionSettings settings)
+        {
+            var total = 0f;
+
+            foreach (var producer in snapshot.Producers)
+            {
+                if (producer == null || !CanHarvestAnything(producer, snapshot))
+                    continue;
+
+                total += Mathf.Max(0f, GetRate(producer, settings));
+            }
+
+            return total;
+        }
+
+        private static bool CanHarvestAnything(WorldProductionSnapshot.ProducerEntry producer, WorldProductionSnapshot snapshot)
+        {
+            foreach (var source in snapshot.Sources)
+            {
+                if (CanHarvest(producer.TaskMask, source.TaskTypeFlag))
+                    return true;
+            }
+
+            return false;
         }
 
         private static float GetRate(WorldProductionSnapshot.ProducerEntry producer, IdleProductionSettings settings)
@@ -96,79 +122,244 @@ namespace Watermelon
             return sourceFlag != 0 && (taskMask & sourceFlag) == sourceFlag;
         }
 
-        private static void DistributeToSinks(string worldId, WorldProductionSnapshot snapshot, IdleProductionReport report)
+        private static float FillSinks(string worldId, WorldProductionSnapshot snapshot, IdleProductionSettings settings, IdleProductionReport report, float budget, bool storagePhase)
         {
+            if (snapshot.Sinks.IsNullOrEmpty())
+                return budget;
+
+            for (var pass = 0; pass < DISTRIBUTION_PASSES && budget >= 1f; pass++)
+            {
+                GatherCandidates(worldId, snapshot, storagePhase);
+
+                if (candidateSinks.Count == 0)
+                    break;
+
+                ComputeSinkWeights(settings);
+
+                var spent = 0f;
+                for (var i = 0; i < candidateSinks.Count; i++)
+                    spent += FillSink(candidateSinks[i], candidateSaves[i], budget * candidateWeights[i], settings, report);
+
+                if (spent < 1f)
+                    break;
+
+                budget -= spent;
+            }
+
+            return Mathf.Max(0f, budget);
+        }
+
+        private static bool HasSpace(string worldId, WorldProductionSnapshot snapshot, bool storagePhase)
+        {
+            GatherCandidates(worldId, snapshot, storagePhase);
+
+            return candidateSinks.Count > 0;
+        }
+
+        private static void GatherCandidates(string worldId, WorldProductionSnapshot snapshot, bool storagePhase)
+        {
+            candidateSinks.Clear();
+            candidateSaves.Clear();
+
             foreach (var sink in snapshot.Sinks)
             {
-                if (sink == null)
+                if (sink == null || sink.IsStorage != storagePhase)
                     continue;
 
                 var save = GetResourceSave(worldId, sink.SaveKey);
-                if (save == null)
+                if (save == null || FreeSpace(sink, save) <= 0)
                     continue;
 
-                if (!sink.PerCurrencyCapacity.IsNullOrEmpty())
-                    FillPerCurrencySink(sink, save, report);
-                else
-                    FillFlatSink(sink, save, report);
+                BuildSlots(sink, save);
+                if (slotCurrencies.Count == 0)
+                    continue;
+
+                candidateSinks.Add(sink);
+                candidateSaves.Add(save);
             }
         }
 
-        private static void FillFlatSink(WorldProductionSnapshot.SinkEntry sink, ResourceListSave save, IdleProductionReport report)
+        private static void ComputeSinkWeights(IdleProductionSettings settings)
         {
-            if (sink.Accepted.IsNullOrEmpty() || sink.FlatCapacity <= 0)
-                return;
+            candidateWeights.Clear();
+            candidateObserved.Clear();
 
-            var space = sink.FlatCapacity - TotalAmount(save.Resources);
-            if (space <= 0)
-                return;
-
-            foreach (var currency in sink.Accepted)
+            var totalObserved = 0f;
+            for (var i = 0; i < candidateSinks.Count; i++)
             {
-                if (space <= 0)
-                    break;
+                var observed = SumObserved(candidateSinks[i].ObservedMix);
 
-                var amount = Take(currency, space);
+                candidateObserved.Add(observed);
+                totalObserved += observed;
+            }
+
+            var evenShare = 1f / candidateSinks.Count;
+            var trust = Mathf.Clamp01(totalObserved / (candidateSinks.Count * settings.MixConfidenceUnits));
+
+            for (var i = 0; i < candidateSinks.Count; i++)
+            {
+                candidateWeights.Add(totalObserved > 0f
+                    ? Mathf.Lerp(evenShare, candidateObserved[i] / totalObserved, trust)
+                    : evenShare);
+            }
+        }
+
+        private static float FillSink(WorldProductionSnapshot.SinkEntry sink, ResourceListSave save, float share, IdleProductionSettings settings, IdleProductionReport report)
+        {
+            if (share < 1f)
+                return 0f;
+
+            BuildSlots(sink, save);
+            if (slotCurrencies.Count == 0)
+                return 0f;
+
+            ComputeSlotWeights(sink, settings);
+
+            var remainingSpace = FreeSpace(sink, save);
+
+            share = Mathf.Min(share, remainingSpace);
+
+            var spent = 0;
+
+            for (var i = 0; i < slotCurrencies.Count && remainingSpace > 0; i++)
+            {
+                var amount = Mathf.Min(Mathf.Min(Mathf.FloorToInt(share * slotWeights[i]), slotSpace[i]), remainingSpace);
                 if (amount <= 0)
                     continue;
 
-                save.Resources += new Resource(currency, amount);
-                space -= amount;
+                Deposit(save, slotCurrencies[i], amount, report);
 
-                report.AddGathered(currency, amount);
+                slotSpace[i] -= amount;
+                remainingSpace -= amount;
+                spent += amount;
             }
+
+            var leftover = Mathf.FloorToInt(share) - spent;
+            for (var i = 0; i < slotCurrencies.Count && leftover > 0 && remainingSpace > 0; i++)
+            {
+                var amount = Mathf.Min(Mathf.Min(leftover, slotSpace[i]), remainingSpace);
+                if (amount <= 0)
+                    continue;
+
+                Deposit(save, slotCurrencies[i], amount, report);
+
+                slotSpace[i] -= amount;
+                remainingSpace -= amount;
+                leftover -= amount;
+                spent += amount;
+            }
+
+            return spent;
         }
 
-        private static void FillPerCurrencySink(WorldProductionSnapshot.SinkEntry sink, ResourceListSave save, IdleProductionReport report)
+        private static void BuildSlots(WorldProductionSnapshot.SinkEntry sink, ResourceListSave save)
         {
+            slotCurrencies.Clear();
+            slotSpace.Clear();
+
+            if (sink.IsStorage)
+            {
+                if (sink.Accepted.IsNullOrEmpty() || sink.FlatCapacity <= 0)
+                    return;
+
+                var space = sink.FlatCapacity - TotalAmount(save.Resources);
+                if (space <= 0)
+                    return;
+
+                foreach (var currency in sink.Accepted)
+                {
+                    if (!producibleCurrencies.Contains(currency) || slotCurrencies.Contains(currency))
+                        continue;
+
+                    slotCurrencies.Add(currency);
+                    slotSpace.Add(space);
+                }
+
+                return;
+            }
+
             foreach (var capacity in sink.PerCurrencyCapacity)
             {
+                if (!producibleCurrencies.Contains(capacity.currency) || slotCurrencies.Contains(capacity.currency))
+                    continue;
+
                 var space = capacity.amount - AmountOf(save.Resources, capacity.currency);
                 if (space <= 0)
                     continue;
 
-                var amount = Take(capacity.currency, space);
-                if (amount <= 0)
-                    continue;
-
-                save.Resources += new Resource(capacity.currency, amount);
-
-                report.AddGathered(capacity.currency, amount);
+                slotCurrencies.Add(capacity.currency);
+                slotSpace.Add(space);
             }
         }
 
-        private static int Take(CurrencyType currency, int limit)
+        private static void ComputeSlotWeights(WorldProductionSnapshot.SinkEntry sink, IdleProductionSettings settings)
         {
-            if (limit <= 0 || !producedBuffer.TryGetValue(currency, out float available))
-                return 0;
+            slotWeights.Clear();
+            slotObserved.Clear();
 
-            var amount = Mathf.Min(Mathf.FloorToInt(available), limit);
-            if (amount <= 0)
-                return 0;
+            var totalObserved = 0f;
+            for (var i = 0; i < slotCurrencies.Count; i++)
+            {
+                var observed = ObservedAmount(sink.ObservedMix, slotCurrencies[i]);
 
-            producedBuffer[currency] = available - amount;
+                slotObserved.Add(observed);
+                totalObserved += observed;
+            }
 
-            return amount;
+            var evenShare = 1f / slotCurrencies.Count;
+            var trust = Mathf.Clamp01(totalObserved / settings.MixConfidenceUnits);
+
+            for (var i = 0; i < slotCurrencies.Count; i++)
+            {
+                slotWeights.Add(totalObserved > 0f
+                    ? Mathf.Lerp(evenShare, slotObserved[i] / totalObserved, trust)
+                    : evenShare);
+            }
+        }
+
+        private static void Deposit(ResourceListSave save, CurrencyType currency, int amount, IdleProductionReport report)
+        {
+            save.Resources += new Resource(currency, amount);
+
+            report.AddGathered(currency, amount);
+        }
+
+        private static int FreeSpace(WorldProductionSnapshot.SinkEntry sink, ResourceListSave save)
+        {
+            if (sink.IsStorage)
+                return sink.FlatCapacity - TotalAmount(save.Resources);
+
+            var space = 0;
+            foreach (var capacity in sink.PerCurrencyCapacity)
+                space += Mathf.Max(0, capacity.amount - AmountOf(save.Resources, capacity.currency));
+
+            return space;
+        }
+
+        private static float SumObserved(Resource[] mix)
+        {
+            if (mix == null)
+                return 0f;
+
+            var total = 0f;
+            for (var i = 0; i < mix.Length; i++)
+                total += mix[i].amount;
+
+            return total;
+        }
+
+        private static float ObservedAmount(Resource[] mix, CurrencyType currency)
+        {
+            if (mix == null)
+                return 0f;
+
+            for (var i = 0; i < mix.Length; i++)
+            {
+                if (mix[i].currency == currency)
+                    return mix[i].amount;
+            }
+
+            return 0f;
         }
 
         private static void ConvertResources(string worldId, WorldProductionSnapshot snapshot, float elapsedMinutes, IdleProductionReport report)

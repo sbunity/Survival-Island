@@ -15,6 +15,7 @@ namespace Watermelon
         [SerializeField] ConverterEntry[] converters;
 
         [System.NonSerialized] private bool isLive;
+        [System.NonSerialized] private System.Action flushCallback;
 
         public float LastSimulatedGameTime => lastSimulatedGameTime;
 
@@ -38,9 +39,10 @@ namespace Watermelon
             lastSimulatedGameTime = IdleClock.Now;
         }
 
-        public void SetLive(bool value)
+        public void SetLive(bool value, System.Action onFlush = null)
         {
             isLive = value;
+            flushCallback = value ? onFlush : null;
 
             Checkpoint();
         }
@@ -57,8 +59,12 @@ namespace Watermelon
 
         public void OnBeforeSave()
         {
-            if (isLive)
-                Checkpoint();
+            if (!isLive)
+                return;
+
+            flushCallback?.Invoke();
+
+            Checkpoint();
         }
 
         [System.Serializable]
@@ -89,6 +95,10 @@ namespace Watermelon
             public CurrencyType[] Accepted;
             public int FlatCapacity;
             public Resource[] PerCurrencyCapacity;
+
+            public Resource[] ObservedMix;
+
+            public bool IsStorage => PerCurrencyCapacity == null || PerCurrencyCapacity.Length == 0;
         }
 
         [System.Serializable]

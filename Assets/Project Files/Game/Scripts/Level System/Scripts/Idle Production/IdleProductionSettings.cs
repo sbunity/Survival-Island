@@ -19,5 +19,8 @@ namespace Watermelon
 
         [SerializeField, Min(1f)] float measurementHalfLifeMinutes = 60f;
         public float MeasurementHalfLifeMinutes => measurementHalfLifeMinutes;
+
+        [SerializeField, Min(1f)] float mixConfidenceUnits = 100f;
+        public float MixConfidenceUnits => mixConfidenceUnits;
     }
 }
