@@ -9,6 +9,7 @@ namespace Watermelon
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void Register()
         {
+            SaveKeyMap.Register(typeof(Watermelon.WorldProductionSnapshot), "idle_production");
             SaveKeyMap.Register(typeof(Watermelon.TimeSave), "sys_time");
             SaveKeyMap.Register(typeof(Watermelon.AdSave), "Watermelon.AdSave");
             SaveKeyMap.Register(typeof(Watermelon.AudioSave), "Watermelon.AudioSave");
@@ -27,6 +28,7 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.GuardedHelperMission.Save), "Watermelon.GuardedHelperMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.HapticSave), "Watermelon.HapticSave");
             SaveKeyMap.Register(typeof(Watermelon.HelperMission.Save), "Watermelon.HelperMission+Save");
+            SaveKeyMap.Register(typeof(Watermelon.HelperRosterSave), "Watermelon.HelperRosterSave");
             SaveKeyMap.Register(typeof(Watermelon.HelperSave), "Watermelon.HelperSave");
             SaveKeyMap.Register(typeof(Watermelon.IAPItem.Save), "Watermelon.IAPItem+Save");
             SaveKeyMap.Register(typeof(Watermelon.IAPManager.Save), "Watermelon.IAPManager+Save");
@@ -52,7 +54,6 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.UpgradeMission.Save), "Watermelon.UpgradeMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.WorldChangeMission.Save), "Watermelon.WorldChangeMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.WorldGlobalSave), "Watermelon.WorldGlobalSave");
-            SaveKeyMap.Register(typeof(Watermelon.WorldProductionSnapshot), "idle_production");
             SaveKeyMap.Register(typeof(Watermelon.WorldSave), "Watermelon.WorldSave");
         }
     }

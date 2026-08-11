@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Watermelon
 {
@@ -6,12 +7,17 @@ namespace Watermelon
     public sealed class WorldChangeRaftBehavior : WorldChangeSpecialBehavior
     {
         [SerializeField] Transform playerHolderTransform;
+
+        [SerializeField] Transform[] passengerHolderTransforms;
+
         [SerializeField] ParticleSystem splashParticleSystem;
 
         [Space]
         [SerializeField] float worldChangeEventDelay = 0.5f;
 
         private Animator raftAnimator;
+
+        private IReadOnlyList<IRaftPassenger> passengers;
 
         private void Awake()
         {
@@ -33,21 +39,48 @@ namespace Watermelon
             }
         }
 
+        public override void SetPassengers(IReadOnlyList<IRaftPassenger> passengers)
+        {
+            this.passengers = passengers;
+        }
+
         public override void OnWorldChanged(SimpleCallback worldChangeCallback)
         {
             PlayerBehavior playerBehavior = PlayerBehavior.GetBehavior();
 
-            playerBehavior.Disable();
-            playerBehavior.transform.SetParent(playerHolderTransform);
-            playerBehavior.transform.ResetLocal();
+            playerBehavior.OnBoardRaft(playerHolderTransform);
 
-            playerBehavior.PlayerGraphics.Animator.Play("Sitting", -1, 0);
+            SeatPassengers();
 
             raftAnimator.Play("Move");
 
             splashParticleSystem.Play();
 
             Tween.DelayedCall(worldChangeEventDelay, worldChangeCallback);
+        }
+
+        private void SeatPassengers()
+        {
+            if (passengers == null)
+                return;
+
+            for (var i = 0; i < passengers.Count; i++)
+            {
+                var passenger = passengers[i];
+                if (passenger == null)
+                    continue;
+
+                if (!passengerHolderTransforms.IsInRange(i) || passengerHolderTransforms[i] == null)
+                {
+                    Debug.LogWarning($"[Raft]: no seat for passenger #{i}, it travels without riding the raft.", gameObject);
+
+                    continue;
+                }
+
+                passenger.OnBoardRaft(passengerHolderTransforms[i]);
+            }
+
+            passengers = null;
         }
     }
 }

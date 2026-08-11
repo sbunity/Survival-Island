@@ -5,18 +5,26 @@ using Watermelon.AI;
 
 namespace Watermelon
 {
-    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IWorldElement, ICharacter, ICombatTarget, IGuardedRescueTarget
+    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IWorldElement, ICharacter, ICombatTarget, IGuardedRescueTarget, IRaftPassenger
     {
         public static readonly int MOVEMENT_MULTIPLIER_HASH = Animator.StringToHash("Movement Multiplier");
 
         public static readonly int WAITING_HASH = Animator.StringToHash("Opening");
         public static readonly int SITTING_HASH = Animator.StringToHash("Sitting");
 
+        private const string SAVE_KEY_PREFIX = "helper_";
+
+        public static string GetSaveKey(string helperId) => SAVE_KEY_PREFIX + helperId;
+
         public int InitialisationOrder => 10;
 
         [UniqueID, Order(-1)]
         [SerializeField] string id;
         public string ID => id;
+
+        [Order(-1)]
+        [SerializeField] HelperData helperData;
+        public HelperData HelperData => helperData;
 
         [Order(-1)]
         [SerializeField] HelperGraphics defaultGraphics;
@@ -170,7 +178,13 @@ namespace Watermelon
         private bool isRunning;
         public bool IsRunning => isRunning;
 
-        public bool IsOpened => helperSave != null && helperSave.IsOpened;
+        public bool IsOpened => isPresent && !hasRelocated && helperSave != null && helperSave.IsOpened;
+
+        private bool isPresent = true;
+
+        public bool IsPresent => isPresent;
+
+        private bool hasRelocated;
 
         public Vector3 FlyingResourceSpawnPosition => transform.position + new Vector3(0, 1, 0);
 
@@ -229,8 +243,25 @@ namespace Watermelon
             emoteBehavior.Initialise();
         }
 
+        public void SetupAsGuest(HelperData guestData)
+        {
+            helperData = guestData;
+            id = guestData.GlobalId;
+
+            customRestPoint = null;
+        }
+
         public void OnWorldLoaded()
         {
+            isPresent = ResolvePresence();
+
+            if (!isPresent)
+            {
+                gameObject.SetActive(false);
+
+                return;
+            }
+
             isInitialised = true;
             isOpeningAreaUnlocked = false;
             isOpeningCompleted = false;
@@ -241,7 +272,7 @@ namespace Watermelon
 
             inventory.Initialise(this);
 
-            helperSave = SaveController.GetSaveObject<HelperSave>(LinkedWorldBehavior.WorldData.ID,"helper_" + id);
+            helperSave = SaveController.GetSaveObject<HelperSave>(LinkedWorldBehavior.WorldData.ID, GetSaveKey(id));
 
             isStoringResourcesActive = availableTasks.IsTypeAvailable(HelperTaskType.Storing);
 
@@ -250,8 +281,19 @@ namespace Watermelon
             InitialiseHealth();
         }
 
+        private bool ResolvePresence()
+        {
+            if (helperData == null)
+                return true;
+
+            return HelperRoster.IsInWorld(helperData, LinkedWorldBehavior.WorldData.ID);
+        }
+
         public void OnNavMeshInitialised()
         {
+            if (!isPresent)
+                return;
+
             if (helperSave.IsOpened)
             {
                 isOpeningAreaUnlocked = true;
@@ -280,6 +322,9 @@ namespace Watermelon
 
         public void OnWorldUnloaded()
         {
+            if (!isPresent)
+                return;
+
             openingGate.Dispose();
 
             SaveHealth();
@@ -770,6 +815,36 @@ namespace Watermelon
         public void ActivateSittingAnimation()
         {
             characterAnimator.SetBool(SITTING_HASH, true);
+        }
+
+        public void MarkAsRelocated()
+        {
+            hasRelocated = true;
+        }
+
+        public void OnBoardRaft(Transform seatTransform)
+        {
+            UnlinkActiveTask();
+            stateMachine.StopMachine();
+
+            CombatTargetRegistry.Unregister(this);
+            ClearCombatTarget();
+
+            navMeshAgentBehaviour.Stop();
+            navMeshAgent.enabled = false;
+
+            if (characterCollider != null)
+                characterCollider.enabled = false;
+
+            Graphics.InteractionAnimations.Disable();
+            emoteBehavior.Hide();
+
+            transform.SetParent(seatTransform);
+            transform.ResetLocal();
+
+            ActivateSittingAnimation();
+
+            isInitialised = false;
         }
 
         public void DisableSittingAnimation()

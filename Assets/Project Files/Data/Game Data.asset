@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdfe15605739d3844adf6c12ca0e15dc, type: 3}
   m_Name: Game Data
   m_EditorClassIdentifier: 
-  useMainMenu: 1
   enemiesDatabase: {fileID: 11400000, guid: 8be57db0ee0cc564296dedfbc8d47043, type: 2}
+  helpersDatabase: {fileID: 11400000, guid: a4593afbe7fc49b4bb03f7819e6e2542, type: 2}
   storageSoundStartTime: 0
   storageSoundHandler:
     audioType: 1
@@ -31,3 +31,10 @@ MonoBehaviour:
     firstValue: 0.4
     secondValue: 0.7
   minSpeedToTriggerSteps: 0.2
+  idleSettings:
+    isEnabled: 1
+    maxIdleHours: 8
+    idleEfficiency: 1
+    measuredBlendThresholdMinutes: 20
+    measurementHalfLifeMinutes: 60
+    mixConfidenceUnits: 100

@@ -77,6 +77,11 @@ namespace Watermelon
             }
         }
 
+        protected override HelperBehavior[] SpawnGuestHelpers()
+        {
+            return HelperGuestSpawner.Spawn(this, WorldController.CurrentWorld);
+        }
+
         public override void Unload()
         {
             taskHandler.Unload();

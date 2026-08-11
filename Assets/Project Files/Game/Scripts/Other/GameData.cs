@@ -9,6 +9,9 @@ namespace Watermelon
         [SerializeField] EnemiesDatabase enemiesDatabase;
         public EnemiesDatabase EnemiesDatabase => enemiesDatabase;
 
+        [SerializeField] HelpersDatabase helpersDatabase;
+        public HelpersDatabase HelpersDatabase => helpersDatabase;
+
         [BoxGroup("Storage Sound", "Storage Sound Data")]
         [SerializeField, Range(0, 1)] float storageSoundStartTime = 0.8f;
         [BoxGroup("Storage Sound")]

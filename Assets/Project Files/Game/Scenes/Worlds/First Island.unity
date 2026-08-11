@@ -118359,6 +118359,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5590122855066601616, guid: 4290a228a2b18ee42b49a8c8340bd4e9,
         type: 3}
+      propertyPath: helperData
+      value: 
+      objectReference: {fileID: 11400000, guid: 86cdbf274454791468a699217b4de94e,
+        type: 2}
+    - target: {fileID: 5590122855066601616, guid: 4290a228a2b18ee42b49a8c8340bd4e9,
+        type: 3}
       propertyPath: availableTasks
       value: 35859
       objectReference: {fileID: 0}
@@ -141990,8 +141996,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 1820117116}
     - {fileID: 18863360}
+    - {fileID: 1820117116}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
@@ -142302,6 +142308,11 @@ PrefabInstance:
       propertyPath: worldIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1424098771972127081, guid: ac20425b8ea2c854292180d3faea72fb,
+        type: 3}
+      propertyPath: travelManifest
+      value: 
+      objectReference: {fileID: 7656147523151992331}
     - target: {fileID: 1622324974783211803, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -142530,17 +142541,17 @@ PrefabInstance:
     - target: {fileID: 4313521266190946810, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
       propertyPath: offset.x
-      value: -0.8129997
+      value: -1.9969997
       objectReference: {fileID: 0}
     - target: {fileID: 4313521266190946810, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
       propertyPath: offset.y
-      value: -0.5
+      value: -0.030000001
       objectReference: {fileID: 0}
     - target: {fileID: 4313521266190946810, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
       propertyPath: offset.z
-      value: -1.4700012
+      value: 1.1199989
       objectReference: {fileID: 0}
     - target: {fileID: 4313521266190946810, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
@@ -142641,6 +142652,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5332440333536728537}
+    - targetCorrespondingSourceObject: {fileID: 7804665970407378067, guid: ac20425b8ea2c854292180d3faea72fb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7656147523151992331}
   m_SourcePrefab: {fileID: 100100000, guid: ac20425b8ea2c854292180d3faea72fb, type: 3}
 --- !u!114 &7656147523151992327 stripped
 MonoBehaviour:
@@ -142648,7 +142663,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7656147523151992326}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7656147523151992329}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ada1f810a76dd4f4cb1030fbfa706d21, type: 3}
@@ -142666,6 +142681,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7656147523151992329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7804665970407378067, guid: ac20425b8ea2c854292180d3faea72fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7656147523151992326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7656147523151992330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142679,6 +142700,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredMissionId: f88667d7-09d7-4e1e-a952-7d38adb7d54e
+--- !u!114 &7656147523151992331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656147523151992329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d10bdcf7e1b26b408b2aa1e3a61f605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.WorldTravelManifest
+  travellingHelpers:
+  - {fileID: 11400000, guid: 86cdbf274454791468a699217b4de94e, type: 2}
 --- !u!1001 &9075745670446798399
 PrefabInstance:
   m_ObjectHideFlags: 0

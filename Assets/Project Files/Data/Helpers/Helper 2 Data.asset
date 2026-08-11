@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d254aca1e53c3b04db39b46d318f29a3, type: 3}
+  m_Name: Helper 2 Data
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.HelperData
+  globalId: 830617df-c55f-4cc4-b501-d6dbf75cf1fe
+  displayName: Helper 2
+  homeWorldIndex: 0
+  guestPrefab: {fileID: 8992306854605619070, guid: f8e673117e52bc740a8031581d6d26c8,
+    type: 3}

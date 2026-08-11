@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Watermelon
@@ -47,6 +48,7 @@ namespace Watermelon
         public event SimpleCallback BaseAttackEnded;
 
         private IWorldElement[] worldElements;
+        private INavMeshAgent[] navMeshElements;
 
         private MusicSource musicSource;
         public MusicSource MusicSource => musicSource;
@@ -64,10 +66,13 @@ namespace Watermelon
             taskHandler = new TaskHandler();
             taskHandler.Initialise();
 
-            worldElements = new IWorldElement[registredWorldElements.Length];
+            var guestHelpers = SpawnGuestHelpers();
+
+            worldElements = CollectWorldElements(guestHelpers);
+            navMeshElements = CollectNavMeshElements(guestHelpers);
+
             for (int i = 0; i < worldElements.Length; i++)
             {
-                worldElements[i] = (IWorldElement)registredWorldElements[i];
                 worldElements[i].LinkedWorldBehavior = this;
             }
 
@@ -118,13 +123,42 @@ namespace Watermelon
 
         public void OnWorldNavMeshRecalculated()
         {
-            if (!registeredNavmeshElements.IsNullOrEmpty())
+            if (!navMeshElements.IsNullOrEmpty())
             {
-                foreach (Component navMeshAgent in registeredNavmeshElements)
+                foreach (var navMeshAgent in navMeshElements)
                 {
-                    ((INavMeshAgent)navMeshAgent).OnNavMeshInitialised();
+                    navMeshAgent.OnNavMeshInitialised();
                 }
             }
+        }
+
+        protected virtual HelperBehavior[] SpawnGuestHelpers()
+        {
+            return null;
+        }
+
+        private IWorldElement[] CollectWorldElements(HelperBehavior[] guestHelpers)
+        {
+            var authored = registredWorldElements.IsNullOrEmpty()
+                ? Enumerable.Empty<IWorldElement>()
+                : registredWorldElements.Cast<IWorldElement>();
+
+            if (!guestHelpers.IsNullOrEmpty())
+                authored = authored.Concat(guestHelpers);
+
+            return authored.OrderByDescending(element => element.InitialisationOrder).ToArray();
+        }
+
+        private INavMeshAgent[] CollectNavMeshElements(HelperBehavior[] guestHelpers)
+        {
+            var authored = registeredNavmeshElements.IsNullOrEmpty()
+                ? Enumerable.Empty<INavMeshAgent>()
+                : registeredNavmeshElements.Cast<INavMeshAgent>();
+
+            if (!guestHelpers.IsNullOrEmpty())
+                authored = authored.Concat(guestHelpers);
+
+            return authored.ToArray();
         }
 
         public virtual void Unload()

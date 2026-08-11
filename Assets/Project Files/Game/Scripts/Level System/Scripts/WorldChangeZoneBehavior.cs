@@ -10,6 +10,8 @@ namespace Watermelon
 
         [SerializeField] WorldChangeSpecialBehavior changeSpecialBehavior;
 
+        [SerializeField] WorldTravelManifest travelManifest;
+
         private Vector3 defaultScale;
 
         private WorldData worldData;
@@ -34,6 +36,9 @@ namespace Watermelon
                 {
                     if(changeSpecialBehavior != null)
                     {
+                        if (travelManifest != null)
+                            changeSpecialBehavior.SetPassengers(travelManifest.CollectPassengers());
+
                         changeSpecialBehavior.OnWorldChanged(() =>
                         {
                             LoadNextWorld();
@@ -54,6 +59,9 @@ namespace Watermelon
             if(worldData != null)
             {
                 OnWorldChangeZoneEntered?.Invoke();
+
+                if (travelManifest != null)
+                    travelManifest.CommitTravel(worldData.ID);
 
                 GameController.LoadWorld(worldData.ID);
             }

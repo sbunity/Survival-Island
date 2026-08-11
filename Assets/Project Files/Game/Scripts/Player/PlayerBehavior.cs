@@ -8,7 +8,7 @@ using Watermelon.GlobalUpgrades;
 
 namespace Watermelon
 {
-    public class PlayerBehavior : MonoBehaviour, ICharacter, ICombatTarget, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IHitter
+    public class PlayerBehavior : MonoBehaviour, ICharacter, ICombatTarget, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IHitter, IRaftPassenger
     {
         private static readonly int FULL_FLOATING_TEXT_HASH = "Floating".GetHashCode();
         private static readonly int FULL_FLOATING_TEXT_DELAY = 2;
@@ -1039,6 +1039,16 @@ namespace Watermelon
             agent.enabled = false;
 
             waterDetector.IsActive = false;
+        }
+
+        public void OnBoardRaft(Transform seatTransform)
+        {
+            Disable();
+
+            transform.SetParent(seatTransform);
+            transform.ResetLocal();
+
+            PlayerGraphics.Animator.Play("Sitting", -1, 0);
         }
 
         public void Unload()
