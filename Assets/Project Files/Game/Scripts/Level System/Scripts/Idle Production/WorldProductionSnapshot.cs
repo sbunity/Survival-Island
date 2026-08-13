@@ -26,6 +26,8 @@ namespace Watermelon
 
         public bool CanProduce => !producers.IsNullOrEmpty() && !sources.IsNullOrEmpty() && !sinks.IsNullOrEmpty();
 
+        public bool IsLive => isLive;
+
         public void Apply(ProducerEntry[] producers, SourceEntry[] sources, SinkEntry[] sinks, ConverterEntry[] converters)
         {
             this.producers = producers;

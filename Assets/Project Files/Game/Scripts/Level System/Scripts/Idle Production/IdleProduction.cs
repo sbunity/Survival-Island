@@ -98,13 +98,21 @@ namespace Watermelon
 
             foreach (var producer in snapshot.Producers)
             {
-                builder.Append(" | ").Append(producer.HelperId.Substring(0, 8))
+                builder.Append(" | ").Append(ShortId(producer.HelperId))
                     .Append(" authored=").Append(producer.AuthoredUnitsPerMinute.ToString("F1"))
                     .Append(" measured=").Append(producer.MeasuredUnitsPerMinute.ToString("F1"))
                     .Append("/min over ").Append(producer.SampleMinutes.ToString("F1")).Append("min");
             }
 
             LogDiagnostic(builder.ToString());
+        }
+
+        private static string ShortId(string helperId)
+        {
+            if (string.IsNullOrEmpty(helperId))
+                return "<no id>";
+
+            return helperId.Length > 8 ? helperId.Substring(0, 8) : helperId;
         }
 
         [System.Diagnostics.Conditional("UNITY_EDITOR")]
@@ -119,6 +127,9 @@ namespace Watermelon
             var snapshot = GetSnapshot(worldId);
             if (snapshot == null)
                 return;
+
+            if (!snapshot.IsLive)
+                Simulate(worldId);
 
             snapshot.Invalidate();
 
