@@ -39,6 +39,7 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.ResourceListSave), "Watermelon.ResourceListSave");
             SaveKeyMap.Register(typeof(Watermelon.ShipwreckLootMission.Save), "Watermelon.ShipwreckLootMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.ShipwreckLootSave), "Watermelon.ShipwreckLootSave");
+            SaveKeyMap.Register(typeof(Watermelon.ShipyardSave), "Watermelon.ShipyardSave");
             SaveKeyMap.Register(typeof(Watermelon.SimpleBoolSave), "Watermelon.SimpleBoolSave");
             SaveKeyMap.Register(typeof(Watermelon.SimpleFloatSave), "Watermelon.SimpleFloatSave");
             SaveKeyMap.Register(typeof(Watermelon.SimpleIntSave), "Watermelon.SimpleIntSave");

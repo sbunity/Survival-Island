@@ -165,6 +165,14 @@ namespace Watermelon
             {
                 buildingComplexes[i].UpdatePurchaseCostInEditor();
             }
+
+            var shipyards = new List<ShipyardBuilding>();
+            shipyards.AddRange(FindObjectsByType<ShipyardBuilding>(FindObjectsInactive.Include, FindObjectsSortMode.None));
+
+            for (var i = 0; i < shipyards.Count; i++)
+            {
+                shipyards[i].UpdateUpgradeCostInEditor();
+            }
         }
 #endif
     }

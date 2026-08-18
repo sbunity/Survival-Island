@@ -41,6 +41,8 @@ namespace Watermelon
             }
         }
 
+        private string saveOwnerId;
+
         /// <summary>
         /// The cost that are displayed on the UI. Decreases when the flying resources reach this point
         /// </summary>
@@ -181,7 +183,7 @@ namespace Watermelon
 
         private void EnsureSave(IUnlockableComplex unlockableComplex)
         {
-            if (Save != null)
+            if (Save != null && saveOwnerId == unlockableComplex.ID)
                 return;
 
             var worldData = WorldController.CurrentWorld;
@@ -189,6 +191,8 @@ namespace Watermelon
 
             Save = worldSave.GetSaveObject<PurchasePointSave>(unlockableComplex.ID + "_purchase_point");
             Save.Init();
+
+            saveOwnerId = unlockableComplex.ID;
         }
 
         #region Development

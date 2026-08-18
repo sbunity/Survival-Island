@@ -28,6 +28,8 @@ namespace Watermelon
 
         private ConstructingPointSave save;
 
+        private string saveOwnerId;
+
         public int HitsMade
         {
             get => save.Value;
@@ -70,10 +72,7 @@ namespace Watermelon
         {
             UnlocableComplex = unlockableComplex;
 
-            if (save == null)
-            {
-                save = SaveController.GetSaveObject<ConstructingPointSave>(LinkedWorldBehavior.WorldData.ID, unlockableComplex.ID + "_building_point");
-            }
+            EnsureSave(unlockableComplex);
 
             if (save.IsBought || HitsMade >= unlockableComplex.ConstructionHitsRequired)
             {
@@ -101,9 +100,19 @@ namespace Watermelon
 
         public bool LookUpConstructed(IUnlockableComplex unlockableComplex)
         {
-            save ??= SaveController.GetSaveObject<ConstructingPointSave>(LinkedWorldBehavior.WorldData.ID, unlockableComplex.ID + "_building_point");
+            EnsureSave(unlockableComplex);
 
             return save.IsBought || HitsMade >= unlockableComplex.ConstructionHitsRequired;
+        }
+
+        private void EnsureSave(IUnlockableComplex unlockableComplex)
+        {
+            if (save != null && saveOwnerId == unlockableComplex.ID)
+                return;
+
+            save = SaveController.GetSaveObject<ConstructingPointSave>(LinkedWorldBehavior.WorldData.ID, unlockableComplex.ID + "_building_point");
+
+            saveOwnerId = unlockableComplex.ID;
         }
 
         public void OnWorldLoaded()
@@ -207,7 +216,7 @@ namespace Watermelon
         {
             UnlocableComplex = unlockableComplex;
 
-            save ??= SaveController.GetSaveObject<ConstructingPointSave>(LinkedWorldBehavior.WorldData.ID, unlockableComplex.ID + "_building_point");
+            EnsureSave(unlockableComplex);
 
             save.Value = 0;
             save.IsBought = false;
