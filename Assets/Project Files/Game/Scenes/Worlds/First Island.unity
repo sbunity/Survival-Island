@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.08
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 16a12c03f3bfedc4e8c2cc3e3591cc7c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ea56ec6aacd6e8148be3d40ead01fbb9, type: 2}
   m_BuildHeightMesh: 0
 --- !u!114 &18863360
 MonoBehaviour:
@@ -141996,8 +141996,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 18863360}
     - {fileID: 1820117116}
+    - {fileID: 18863360}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
