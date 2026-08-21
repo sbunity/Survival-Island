@@ -8,7 +8,7 @@ using Watermelon.GlobalUpgrades;
 
 namespace Watermelon
 {
-    public class PlayerBehavior : MonoBehaviour, ICharacter, ICombatTarget, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IHitter, IRaftPassenger
+    public class PlayerBehavior : MonoBehaviour, ICharacter, ICombatTarget, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IResourceCarrier, IHitter, IRaftPassenger
     {
         private static readonly int FULL_FLOATING_TEXT_HASH = "Floating".GetHashCode();
         private static readonly int FULL_FLOATING_TEXT_DELAY = 2;
@@ -85,7 +85,10 @@ namespace Watermelon
         private IHitable activeHitable;
 
         public List<CurrencyType> RequiredResources { get; private set; }
-        public bool IsResourceTakingBlocked => IsRunning;
+        public bool IsResourceTakingBlocked => IsRunning || IsDead;
+
+        public Transform CarrierTransform => transform;
+        public bool IsCarrierActive => isActiveAndEnabled && !IsDead;
 
         public Vector3 FlyingResourceDestination => Position + Vector3.up;
 
@@ -95,7 +98,7 @@ namespace Watermelon
         public Vector3 FlyingResourceSpawnPosition => Position + Vector3.up * 2f;
 
         public float LastTimeResourceGiven { get; private set; }
-        public bool IsResourceGivingBlocked => IsRunning;
+        public bool IsResourceGivingBlocked => IsRunning || IsDead;
 
         private float lastFullMessageTime;
         private float lastShownResindicatorTime;
@@ -677,6 +680,8 @@ namespace Watermelon
 
         public void Warp(Transform destination)
         {
+            ResourceCarrierRegistry.Evict(this);
+
             ParticleSystem dustParticle = playerGraphicsHolder.CharacterGraphics.Dust;
             dustParticle.Stop();
 
@@ -688,6 +693,8 @@ namespace Watermelon
 
         public void Warp(Vector3 position)
         {
+            ResourceCarrierRegistry.Evict(this);
+
             ParticleSystem dustParticle = playerGraphicsHolder.CharacterGraphics.Dust;
             dustParticle.Stop();
 
@@ -734,6 +741,8 @@ namespace Watermelon
                 Overlay.Show(2.0f, () =>
                 {
                     WorldController.WorldBehavior.SubworldHandler.DisableSubworld();
+
+                    ResourceCarrierRegistry.Evict(this);
 
                     gameObject.SetActive(false);
 
@@ -1064,8 +1073,15 @@ namespace Watermelon
             GlobalUpgradesEventsHandler.OnUpgraded -= OnUpgraded;
         }
 
+        private void OnDisable()
+        {
+            ResourceCarrierRegistry.Evict(this);
+        }
+
         private void OnDestroy()
         {
+            ResourceCarrierRegistry.Evict(this);
+
             CombatTargetRegistry.Unregister(this);
 
             inventory.Unload();

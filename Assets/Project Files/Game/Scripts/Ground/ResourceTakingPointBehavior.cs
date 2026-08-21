@@ -1,17 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Watermelon
 {
-    /// <summary>
-    /// This class is taking resources from the player when the player is inside the trigger, 
-    /// and gives the said resources to the assigned ResourceTaker
-    /// </summary>
     public class ResourceTakingPointBehavior : ResourcePointBehavior
     {
         public IResourceTaker ResourceTaker { get; private set; }
-        public Dictionary<IResourceGiver, int> ResourceGivers { get; } = new Dictionary<IResourceGiver, int>();
+
+        private readonly Dictionary<IResourceGiver, CarrierState> resourceGivers = new Dictionary<IResourceGiver, CarrierState>();
+
+        private readonly List<IResourceGiver> iterationBuffer = new List<IResourceGiver>();
+        private readonly List<IResourceGiver> removalBuffer = new List<IResourceGiver>();
+        private readonly List<ShuffledResData> availableRequiredResources = new List<ShuffledResData>();
+
+        public int CarriersCount => resourceGivers.Count;
 
         [Space]
         [SerializeField] protected bool overrideResourceDestination;
@@ -26,62 +28,118 @@ namespace Watermelon
 
         private void Update()
         {
-            if (ResourceTaker != null &&                                // is ResourceTaker assigned
-                !ResourceTaker.RequiredResources.IsNullOrEmpty() &&     // does ResourceTaker need resources
-                ResourceGivers.Count > 0)                               // are there any resource givers inside the trigger
+            if (ResourceTaker == null)
+                return;
+
+            RefreshValidation();
+            PruneCarriers();
+
+            if (resourceGivers.Count == 0)
+                return;
+
+            if (ResourceTaker.RequiredResources.IsNullOrEmpty())
+                return;
+
+            iterationBuffer.Clear();
+            foreach (var giver in resourceGivers.Keys)
             {
-                var succesfullGivers = new List<IResourceGiver>(); // Workaround for enumerator to work properly
+                iterationBuffer.Add(giver);
+            }
 
-                foreach (var giver in ResourceGivers.Keys)
+            for (int i = 0; i < iterationBuffer.Count; i++)
+            {
+                IResourceGiver giver = iterationBuffer[i];
+
+                if (!resourceGivers.TryGetValue(giver, out CarrierState state))
+                    continue;
+
+                if (Time.time - giver.LastTimeResourceGiven < cooldown)
+                    continue;
+                if (giver.IsResourceGivingBlocked)
+                    continue;
+
+                if (ResourceTaker.RequiredResources == null) break;
+
+                availableRequiredResources.Clear();
+
+                foreach (var requiredResourceType in ResourceTaker.RequiredResources)
                 {
-                    if (Time.time - giver.LastTimeResourceGiven < cooldown)
-                        continue;   // is cooldown delay passed
-                    if (giver.IsResourceGivingBlocked)
-                        continue;                        // does giver can give resources (e.x. Player can't give resources when running)
+                    float takingSpeedUpStage = state.TransfersCount / 4;
+                    var nextAmount = (int)(2 * takingSpeedUpStage);
+                    if (nextAmount < 1)
+                        nextAmount = 1;
 
-                    var availableRequiredResources = new List<ShuffledResData>();
-
-                    if (ResourceTaker.RequiredResources == null) break;
-                    foreach (var requiredResourceType in ResourceTaker.RequiredResources)
-                    {
-                        float takingSpeedUpStage = ResourceGivers[giver] / 4;
-                        var nextAmount = (int)(2 * takingSpeedUpStage);
-                        if (nextAmount < 1)
-                            nextAmount = 1;
-
-                        var availableResources = Mathf.Min(giver.GetResourceCount(requiredResourceType), ResourceTaker.RequiredMaxAmount(requiredResourceType));
-                        if (availableResources > 0) availableRequiredResources.Add(new ShuffledResData { type = requiredResourceType, availableResources = availableResources, amount = nextAmount });
-                    }
-
-                    availableRequiredResources.Shuffle();
-
-                    foreach (var requiredResource in availableRequiredResources)
-                    {
-                        var nextAmount = Mathf.Clamp(requiredResource.amount, 1, requiredResource.availableResources);
-
-                        var one = Resource.Create(requiredResource.type, nextAmount);
-
-                        if (giver.HasResource(one))
-                        {
-                            giver.GiveResource(one);
-
-                            FlyingResourceBehavior flyingResource = CurrencyController.GetCurrency(requiredResource.type).Data.FlyingResPool.GetPooledComponent();
-
-                            flyingResource.InitAtPosition(giver.FlyingResourceSpawnPosition, nextAmount);
-
-                            ResourceTaker.TakeResource(flyingResource, giver.IsPlayer);
-
-                            succesfullGivers.Add(giver);
-
-                            break;
-                        }
-                    }
+                    var availableResources = Mathf.Min(giver.GetResourceCount(requiredResourceType), ResourceTaker.RequiredMaxAmount(requiredResourceType));
+                    if (availableResources > 0) availableRequiredResources.Add(new ShuffledResData { type = requiredResourceType, availableResources = availableResources, amount = nextAmount });
                 }
 
-                for (int i = 0; i < succesfullGivers.Count; i++)
+                availableRequiredResources.Shuffle();
+
+                foreach (var requiredResource in availableRequiredResources)
                 {
-                    ResourceGivers[succesfullGivers[i]] = ResourceGivers[succesfullGivers[i]] + 1;
+                    var nextAmount = Mathf.Clamp(requiredResource.amount, 1, requiredResource.availableResources);
+
+                    var one = Resource.Create(requiredResource.type, nextAmount);
+
+                    if (giver.HasResource(one))
+                    {
+                        giver.GiveResource(one);
+
+                        FlyingResourceBehavior flyingResource = CurrencyController.GetCurrency(requiredResource.type).Data.FlyingResPool.GetPooledComponent();
+
+                        flyingResource.InitAtPosition(giver.FlyingResourceSpawnPosition, nextAmount);
+
+                        ResourceTaker.TakeResource(flyingResource, giver.IsPlayer);
+
+                        state.TransfersCount++;
+                        resourceGivers[giver] = state;
+
+                        break;
+                    }
                 }
+            }
+        }
+
+        protected override void PruneCarriers()
+        {
+            if (resourceGivers.Count == 0)
+                return;
+
+            removalBuffer.Clear();
+
+            foreach (var pair in resourceGivers)
+            {
+                if (!IsCarrierValid(pair.Value.Carrier))
+                    removalBuffer.Add(pair.Key);
+            }
+
+            for (int i = 0; i < removalBuffer.Count; i++)
+            {
+                resourceGivers.Remove(removalBuffer[i]);
+            }
+        }
+
+        protected override void ClearCarriers()
+        {
+            resourceGivers.Clear();
+        }
+
+        public override void ForceRemoveCarrier(IResourceCarrier carrier)
+        {
+            if (carrier == null || resourceGivers.Count == 0)
+                return;
+
+            removalBuffer.Clear();
+
+            foreach (var pair in resourceGivers)
+            {
+                if (ReferenceEquals(pair.Value.Carrier, carrier))
+                    removalBuffer.Add(pair.Key);
+            }
+
+            for (int i = 0; i < removalBuffer.Count; i++)
+            {
+                resourceGivers.Remove(removalBuffer[i]);
             }
         }
 
@@ -91,12 +149,20 @@ namespace Watermelon
 
             if (resourceGiver == null)
             {
-                throw new System.Exception($"Game Object {carrierObject.name} does not implement IResourceGiver interface");
+                Debug.LogError($"Game Object {carrierObject.name} does not implement IResourceGiver interface", carrierObject);
+
+                return;
             }
-            else if (!ResourceGivers.ContainsKey(resourceGiver))
-            {
-                ResourceGivers.Add(resourceGiver, 0);
-            }
+
+            if (resourceGivers.ContainsKey(resourceGiver))
+                return;
+
+            IResourceCarrier carrier = ResolveCarrier(carrierObject);
+
+            if (carrier == null)
+                return;
+
+            resourceGivers.Add(resourceGiver, new CarrierState(carrier));
         }
 
         protected override void RemoveResourceCarrier(GameObject carrierObject)
@@ -105,12 +171,12 @@ namespace Watermelon
 
             if (resourceGiver == null)
             {
-                throw new System.Exception($"Game Object {carrierObject.name} does not implement IResourceGiver interface");
+                Debug.LogError($"Game Object {carrierObject.name} does not implement IResourceGiver interface", carrierObject);
+
+                return;
             }
-            else if (ResourceGivers.ContainsKey(resourceGiver))
-            {
-                ResourceGivers.Remove(resourceGiver);
-            }
+
+            resourceGivers.Remove(resourceGiver);
         }
 
         private struct ShuffledResData

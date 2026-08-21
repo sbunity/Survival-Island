@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,12 +6,18 @@ namespace Watermelon
     public class ResourceGivingPointBehavior : ResourcePointBehavior
     {
         public IResourceGiver ResourceGiver { get; private set; }
-        public Dictionary<IResourceTaker, int> ResourceTakers { get; } = new Dictionary<IResourceTaker, int>();
+
+        private readonly Dictionary<IResourceTaker, CarrierState> resourceTakers = new Dictionary<IResourceTaker, CarrierState>();
+
+        private readonly List<IResourceTaker> iterationBuffer = new List<IResourceTaker>();
+        private readonly List<IResourceTaker> removalBuffer = new List<IResourceTaker>();
+
+        public int CarriersCount => resourceTakers.Count;
 
         [Space]
         [SerializeField] protected bool overrideResourceSpawnPoint;
         [SerializeField, ShowIf("overrideResourceSpawnPoint")] protected Transform resourceSpawnPoint;
-        
+
         public Vector3 ResourceSpawnPosition => overrideResourceSpawnPoint ? resourceSpawnPoint.position : transform.position;
 
         public void SetResourceGiver(IResourceGiver resourceGiver)
@@ -31,58 +36,112 @@ namespace Watermelon
         }
 
         private void Update()
-        {            
-            if (ResourceGiver != null &&                                        // is ResourceGiver assigned
-                Time.time - ResourceGiver.LastTimeResourceGiven > cooldown &&   // is cooldown delay passed
-                !ResourceGiver.IsResourceGivingBlocked &&                       // does giver can give resources (e.x. Player can't give resources when running)
-                ResourceTakers.Count > 0)                                       // are there any resource takers inside the trigger
+        {
+            if (ResourceGiver == null)
+                return;
+
+            RefreshValidation();
+            PruneCarriers();
+
+            if (resourceTakers.Count == 0)
+                return;
+
+            if (Time.time - ResourceGiver.LastTimeResourceGiven <= cooldown)
+                return;
+
+            if (ResourceGiver.IsResourceGivingBlocked)
+                return;
+
+            iterationBuffer.Clear();
+            foreach (var taker in resourceTakers.Keys)
             {
+                iterationBuffer.Add(taker);
+            }
 
-                var succesfullTakers = new List<IResourceTaker>(); // Workaround for enumerator to work properly
+            for (int i = 0; i < iterationBuffer.Count; i++)
+            {
+                IResourceTaker taker = iterationBuffer[i];
 
-                foreach (var taker in ResourceTakers.Keys)
+                if (!resourceTakers.TryGetValue(taker, out CarrierState state))
+                    continue;
+
+                if (taker.IsResourceTakingBlocked || taker.RequiredResources == null) continue;
+
+                foreach (var requiredResourceType in taker.RequiredResources)
                 {
-                    if (taker.IsResourceTakingBlocked || taker.RequiredResources == null) continue;
-                    
-                    foreach (var requiredResourceType in taker.RequiredResources)
+                    float takingSpeedUpStage = state.TransfersCount / 4;
+                    int nextAmount = (int)(2 * takingSpeedUpStage);
+                    if (nextAmount < 1) nextAmount = 1;
+
+                    int availableResources = Mathf.Min(ResourceGiver.GetResourceCount(requiredResourceType), taker.RequiredMaxAmount(requiredResourceType));
+                    if (availableResources <= 0) continue;
+                    nextAmount = Mathf.Clamp(nextAmount, 1, availableResources);
+
+                    Resource one = Resource.Create(requiredResourceType, nextAmount);
+
+                    if (ResourceGiver.HasResource(one))
                     {
-                        float takingSpeedUpStage = ResourceTakers[taker] / 4;
-                        int nextAmount = (int)(2 * takingSpeedUpStage);
-                        if (nextAmount < 1) nextAmount = 1;
+                        if (!taker.CanTakeResource(ref one)) continue;
 
-                        int availableResources = Mathf.Min(ResourceGiver.GetResourceCount(requiredResourceType), taker.RequiredMaxAmount(requiredResourceType));
-                        if (availableResources <= 0) continue;
-                        nextAmount = Mathf.Clamp(nextAmount, 1, availableResources);
+                        ResourceGiver.GiveResource(one);
 
-                        Resource one = Resource.Create(requiredResourceType, nextAmount);
+                        FlyingResourceBehavior flyingResource = CurrencyController.GetCurrency(requiredResourceType).Data.FlyingResPool.GetPooledComponent();
 
-                        if (ResourceGiver.HasResource(one))
-                        {
-                            if (!taker.CanTakeResource(ref one)) continue; 
+                        flyingResource.InitAtPosition(ResourceGiver.FlyingResourceSpawnPosition, nextAmount);
 
-                            ResourceGiver.GiveResource(one);
+                        taker.TakeResource(flyingResource, ResourceGiver.IsPlayer);
 
-                            FlyingResourceBehavior flyingResource = CurrencyController.GetCurrency(requiredResourceType).Data.FlyingResPool.GetPooledComponent();
+                        state.TransfersCount++;
+                        resourceTakers[taker] = state;
 
-                            flyingResource.InitAtPosition(ResourceGiver.FlyingResourceSpawnPosition, nextAmount);
-
-                            taker.TakeResource(flyingResource, ResourceGiver.IsPlayer);
-
-                            succesfullTakers.Add(taker);
-
-                            ResourceTakers[taker] = ResourceTakers[taker] + 1;
-
-                            return;
-                        }
+                        return;
                     }
-
-                    if (ResourceGiver.HasResources()) taker.Rejected(GetAvailableResourceType());
                 }
 
-                for (int i = 0; i < succesfullTakers.Count; i++)
-                {
-                    ResourceTakers[succesfullTakers[i]] = ResourceTakers[succesfullTakers[i]] + 1;
-                }
+                if (ResourceGiver.HasResources()) taker.Rejected(GetAvailableResourceType());
+            }
+        }
+
+        protected override void PruneCarriers()
+        {
+            if (resourceTakers.Count == 0)
+                return;
+
+            removalBuffer.Clear();
+
+            foreach (var pair in resourceTakers)
+            {
+                if (!IsCarrierValid(pair.Value.Carrier))
+                    removalBuffer.Add(pair.Key);
+            }
+
+            for (int i = 0; i < removalBuffer.Count; i++)
+            {
+                resourceTakers.Remove(removalBuffer[i]);
+            }
+        }
+
+        protected override void ClearCarriers()
+        {
+            resourceTakers.Clear();
+        }
+
+        public override void ForceRemoveCarrier(IResourceCarrier carrier)
+        {
+            if (carrier == null || resourceTakers.Count == 0)
+                return;
+
+            removalBuffer.Clear();
+
+            foreach (var pair in resourceTakers)
+            {
+                if (ReferenceEquals(pair.Value.Carrier, carrier))
+                    removalBuffer.Add(pair.Key);
+            }
+
+            for (int i = 0; i < removalBuffer.Count; i++)
+            {
+                resourceTakers.Remove(removalBuffer[i]);
             }
         }
 
@@ -92,12 +151,20 @@ namespace Watermelon
 
             if (resourceTaker == null)
             {
-                throw new System.Exception($"Game Object {carrierObject.name} does not implement IResourceTaker interface");
+                Debug.LogError($"Game Object {carrierObject.name} does not implement IResourceTaker interface", carrierObject);
+
+                return;
             }
-            else if (!ResourceTakers.ContainsKey(resourceTaker))
-            {
-                ResourceTakers.Add(resourceTaker, 0);
-            }
+
+            if (resourceTakers.ContainsKey(resourceTaker))
+                return;
+
+            IResourceCarrier carrier = ResolveCarrier(carrierObject);
+
+            if (carrier == null)
+                return;
+
+            resourceTakers.Add(resourceTaker, new CarrierState(carrier));
         }
 
         protected override void RemoveResourceCarrier(GameObject carrierObject)
@@ -106,12 +173,12 @@ namespace Watermelon
 
             if (resourceTaker == null)
             {
-                throw new System.Exception($"Game Object {carrierObject.name} does not implement IResourceTaker interface");
+                Debug.LogError($"Game Object {carrierObject.name} does not implement IResourceTaker interface", carrierObject);
+
+                return;
             }
-            else if (ResourceTakers.ContainsKey(resourceTaker))
-            {
-                ResourceTakers.Remove(resourceTaker);
-            }
+
+            resourceTakers.Remove(resourceTaker);
         }
 
         #region Editor

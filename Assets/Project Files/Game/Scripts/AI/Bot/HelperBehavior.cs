@@ -5,7 +5,7 @@ using Watermelon.AI;
 
 namespace Watermelon
 {
-    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IWorldElement, ICharacter, ICombatTarget, IGuardedRescueTarget, IRaftPassenger
+    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IResourceCarrier, IWorldElement, ICharacter, ICombatTarget, IGuardedRescueTarget, IRaftPassenger
     {
         public static readonly int MOVEMENT_MULTIPLIER_HASH = Animator.StringToHash("Movement Multiplier");
 
@@ -191,6 +191,9 @@ namespace Watermelon
         public float LastTimeResourceGiven { get; protected set; }
         public bool IsResourceGivingBlocked => isRunning;
 
+        public Transform CarrierTransform => transform;
+        public bool IsCarrierActive => isActiveAndEnabled && !IsDead;
+
         public BaseWorldBehavior LinkedWorldBehavior { get; set; }
 
         public bool AutoPickResources => true;
@@ -348,8 +351,15 @@ namespace Watermelon
             isInitialised = false;
         }
 
+        private void OnDisable()
+        {
+            ResourceCarrierRegistry.Evict(this);
+        }
+
         private void OnDestroy()
         {
+            ResourceCarrierRegistry.Evict(this);
+
             CombatTargetRegistry.Unregister(this);
         }
 

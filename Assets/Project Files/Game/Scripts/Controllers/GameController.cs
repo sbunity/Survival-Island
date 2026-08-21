@@ -119,6 +119,8 @@ namespace Watermelon
 
             DistanceToggle.Unload();
 
+            ResourceCarrierRegistry.Clear();
+
             FishingController.Unload();
 
             diggingController.Disable();
@@ -176,6 +178,8 @@ namespace Watermelon
             NavigationHelper.Unload();
 
             DistanceToggle.Unload();
+
+            ResourceCarrierRegistry.Clear();
 
             FishingController.Unload();
 
