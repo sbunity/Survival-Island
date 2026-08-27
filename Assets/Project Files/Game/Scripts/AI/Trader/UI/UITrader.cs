@@ -16,6 +16,7 @@ namespace Watermelon
 
         [Space]
         [SerializeField] GameObject offerItemPrefab;
+        [SerializeField] GameObject minigameItemPrefab;
 
         private UIGame mainPage;
 
@@ -23,6 +24,7 @@ namespace Watermelon
         public WanderingTraderBehavior CurrentTrader => trader;
 
         private readonly List<UITraderOfferItem> items = new List<UITraderOfferItem>();
+        private UITraderMinigameItem minigameItem;
 
         public override void Init()
         {
@@ -80,6 +82,8 @@ namespace Watermelon
             trader.OffersChanged -= OnOffersChanged;
             trader.OffersChanged += OnOffersChanged;
 
+            RebuildMinigameItem();
+
             for (var i = 0; i < trader.ActiveOfferCount; i++)
             {
                 if (trader.GetOfferRemaining(i) <= 0)
@@ -95,6 +99,23 @@ namespace Watermelon
             }
         }
 
+        private void RebuildMinigameItem()
+        {
+            if (minigameItemPrefab == null)
+                return;
+
+            var slot = trader.MinigameSlot;
+            if (slot == null || !slot.HasGame)
+                return;
+
+            var itemObject = Instantiate(minigameItemPrefab, contentTransform);
+            itemObject.SetActive(true);
+            itemObject.transform.SetAsFirstSibling();
+
+            minigameItem = itemObject.GetComponent<UITraderMinigameItem>();
+            minigameItem.Init(this, slot);
+        }
+
         private void OnOffersChanged()
         {
             RebuildItems();
@@ -106,8 +127,48 @@ namespace Watermelon
                 trader.TryPurchase(offerIndex);
         }
 
+        public void PlayMinigame()
+        {
+            if (trader == null)
+                return;
+
+            var slot = trader.MinigameSlot;
+
+            if (!UIController.HasPage<UIMinigameHost>())
+            {
+                Debug.LogError("[Trader Minigames]: UIMinigameHost is not registered in the UIController cached pages.");
+
+                return;
+            }
+
+            var host = UIController.GetPage<UIMinigameHost>();
+
+            if (!slot.TryBeginPlay(out var context, out var blockReason))
+            {
+                if (!string.IsNullOrEmpty(blockReason))
+                    Debug.Log($"[Trader Minigames]: Cannot start - {blockReason}");
+
+                return;
+            }
+
+            host.Play(slot.Definition, slot.StakeRule, context, slot.CompletePlay, OnMinigameClosed);
+        }
+
+        private void OnMinigameClosed()
+        {
+            if (IsPageDisplayed)
+                RebuildItems();
+        }
+
         private void ClearItems()
         {
+            if (minigameItem != null)
+            {
+                Destroy(minigameItem.gameObject);
+
+                minigameItem = null;
+            }
+
             for (var i = 0; i < items.Count; i++)
                 if (items[i] != null)
                     Destroy(items[i].gameObject);

@@ -1,4 +1,3 @@
-using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -48,10 +47,10 @@ namespace Watermelon
             }
 
             if (receiveText != null)
-                receiveText.text = Format(offer.Receive);
+                receiveText.text = TraderResourceFormat.Format(offer.Receive);
 
             if (buttonText != null)
-                buttonText.text = Format(offer.Give);
+                buttonText.text = TraderResourceFormat.Format(offer.Give);
         }
 
         public void Redraw()
@@ -76,23 +75,6 @@ namespace Watermelon
             AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             page.PurchaseOffer(offerIndex);
-        }
-
-        private static string Format(Resource[] resources)
-        {
-            if (resources == null || resources.Length == 0)
-                return string.Empty;
-
-            var builder = new StringBuilder();
-            for (var i = 0; i < resources.Length; i++)
-            {
-                if (i > 0)
-                    builder.Append(' ');
-
-                builder.Append("<sprite name=").Append(resources[i].currency).Append('>').Append(resources[i].amount);
-            }
-
-            return builder.ToString();
         }
     }
 }

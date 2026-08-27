@@ -1,0 +1,245 @@
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Watermelon
+{
+    public class UIMinigameHost : UIPage
+    {
+        private readonly Vector2 DEFAULT_POSITION = new Vector2(0, 0);
+        private readonly Vector2 HIDE_POSITION = new Vector2(0, -2000);
+
+        [SerializeField] Image fadeImage;
+        [SerializeField] RectTransform panelRectTransform;
+        [SerializeField] RectTransform contentRoot;
+        [SerializeField] Button closeButton;
+
+        [Space]
+        [SerializeField] Image iconImage;
+        [SerializeField] TMP_Text titleText;
+        [SerializeField] TMP_Text descriptionText;
+        [SerializeField] TMP_Text stakeText;
+
+        [Space]
+        [SerializeField] GameObject resultPanel;
+        [SerializeField] TMP_Text resultTitleText;
+        [SerializeField] TMP_Text resultRewardText;
+        [SerializeField] Button resultButton;
+
+        [BoxGroup("Captions", "Captions")]
+        [SerializeField] string stakeCaptionFormat = "Bet: {0}";
+        [BoxGroup("Captions")]
+        [SerializeField] string prizeCaptionFormat = "Prize: {0}";
+        [BoxGroup("Captions")]
+        [SerializeField] string winCaption = "You won!";
+        [BoxGroup("Captions")]
+        [SerializeField] string loseCaption = "You lost";
+
+        private TraderMinigameDefinition definition;
+        private IMinigameStakeRule stakeRule;
+        private MinigameContext context;
+
+        private MinigameFinishedCallback settledCallback;
+        private SimpleCallback closedCallback;
+
+        private MinigameView activeView;
+
+        private bool isSettled;
+
+        public override void Init()
+        {
+            closeButton.onClick.AddListener(OnCloseButtonClicked);
+
+            if (resultButton != null)
+                resultButton.onClick.AddListener(OnCloseButtonClicked);
+        }
+
+        public void Play(TraderMinigameDefinition definition, IMinigameStakeRule stakeRule, MinigameContext context, MinigameFinishedCallback onSettled, SimpleCallback onClosed)
+        {
+            this.definition = definition;
+            this.stakeRule = stakeRule;
+            this.context = context;
+
+            settledCallback = onSettled;
+            closedCallback = onClosed;
+
+            UIController.ShowPage<UIMinigameHost>();
+        }
+
+        protected override void OnShow()
+        {
+            isSettled = false;
+
+            fadeImage.color = fadeImage.color.SetAlpha(0.0f);
+            fadeImage.DOFade(0.6f, 0.3f);
+
+            panelRectTransform.anchoredPosition = HIDE_POSITION;
+            panelRectTransform.DOAnchoredPosition(DEFAULT_POSITION, 0.3f).SetEasing(Ease.Type.CircOut);
+
+            BuildHeader();
+
+            if (resultPanel != null)
+                resultPanel.SetActive(false);
+
+            SpawnView();
+
+            NotifyOpened();
+        }
+
+        protected override void OnHide()
+        {
+            SettleIfNeeded(MinigameResult.Abandoned);
+
+            fadeImage.DOFade(0, 0.3f);
+            panelRectTransform.DOAnchoredPosition(HIDE_POSITION, 0.3f).SetEasing(Ease.Type.CircIn).OnComplete(delegate
+            {
+                ClearView();
+
+                var callback = closedCallback;
+                closedCallback = null;
+
+                callback?.Invoke();
+
+                NotifyClosed();
+            });
+        }
+
+        protected override void OnUnload()
+        {
+            StopView();
+            SettleIfNeeded(MinigameResult.Abandoned);
+            ClearView();
+
+            closedCallback = null;
+            settledCallback = null;
+        }
+
+        private void BuildHeader()
+        {
+            if (definition == null)
+                return;
+
+            if (iconImage != null)
+            {
+                iconImage.sprite = definition.Icon;
+                iconImage.gameObject.SetActive(definition.Icon != null);
+            }
+
+            if (titleText != null)
+                titleText.text = definition.Title;
+
+            if (descriptionText != null)
+                descriptionText.text = definition.Description;
+
+            if (stakeText != null)
+            {
+                stakeText.text = stakeRule != null && stakeRule.Stake.amount > 0
+                    ? string.Format(stakeCaptionFormat, TraderResourceFormat.Format(stakeRule.Stake))
+                    : string.Format(prizeCaptionFormat, TraderResourceFormat.Format(stakeRule?.Prize));
+            }
+        }
+
+        private void SpawnView()
+        {
+            ClearView();
+
+            activeView = definition != null ? definition.CreateView(contentRoot) : null;
+
+            if (activeView == null)
+            {
+                Debug.LogError($"[Trader Minigames]: \"{(definition != null ? definition.name : "null")}\" failed to create its view.", definition);
+
+                SettleIfNeeded(MinigameResult.Abandoned);
+                Close();
+
+                return;
+            }
+
+            activeView.gameObject.SetActive(true);
+            activeView.Finished += OnGameFinished;
+            activeView.Run(context);
+        }
+
+        private void OnGameFinished(MinigameResult result)
+        {
+            SettleIfNeeded(result);
+
+            ShowResult(result);
+        }
+
+        private void ShowResult(MinigameResult result)
+        {
+            if (resultPanel == null)
+            {
+                Close();
+
+                return;
+            }
+
+            resultPanel.SetActive(true);
+
+            if (resultTitleText != null)
+                resultTitleText.text = result.IsWin ? winCaption : loseCaption;
+
+            if (resultRewardText != null)
+            {
+                resultRewardText.text = result.IsWin && stakeRule != null ? TraderResourceFormat.Format(stakeRule.Prize) : string.Empty;
+                resultRewardText.gameObject.SetActive(result.IsWin);
+            }
+
+            AudioController.PlaySound(AudioController.GetClip(result.IsWin ? "reward" : "button_sound"), 0.7f);
+        }
+
+        private void SettleIfNeeded(MinigameResult result)
+        {
+            if (isSettled)
+                return;
+
+            isSettled = true;
+
+            var callback = settledCallback;
+            settledCallback = null;
+
+            callback?.Invoke(result);
+        }
+
+        private void StopView()
+        {
+            if (activeView == null)
+                return;
+
+            activeView.Finished -= OnGameFinished;
+            activeView.Stop();
+        }
+
+        private void ClearView()
+        {
+            if (activeView == null)
+                return;
+
+            activeView.Finished -= OnGameFinished;
+
+            Destroy(activeView.gameObject);
+
+            activeView = null;
+        }
+
+        private void Close()
+        {
+            UIController.HidePage<UIMinigameHost>();
+        }
+
+        private void OnCloseButtonClicked()
+        {
+#if MODULE_HAPTIC
+            Haptic.Play(Haptic.HAPTIC_LIGHT);
+#endif
+
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
+
+            StopView();
+
+            Close();
+        }
+    }
+}

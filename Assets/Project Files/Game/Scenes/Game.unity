@@ -673,8 +673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstCamera: 0
   virtualCameras:
-  - {fileID: 1945819188}
   - {fileID: 1949273330}
+  - {fileID: 1945819188}
   blendSettings: []
   defaultBlendData:
     BlendTime: 0.5
@@ -1945,6 +1945,9 @@ MonoBehaviour:
   cachedPages:
     pages:
     - pagePrefab: {fileID: 527524679281775643, guid: 14bbe1f4e0dfea24d987b86ed2c6236a,
+        type: 3}
+      autoDestroy: 1
+    - pagePrefab: {fileID: 591921506017927785, guid: 84797208a2f01bf40b7b68f49074556c,
         type: 3}
       autoDestroy: 1
   usePausePopups: 1

@@ -5305,6 +5305,7 @@ MonoBehaviour:
   offersDatabase: {fileID: 11400000, guid: e9365f35ddd99e947a945be3b79069cf, type: 2}
   tradeButton: {fileID: 6644814560760645075}
   purchasesPerOffer: 3
+  minigamesDatabase: {fileID: 11400000, guid: 81a85ec689e21384cbebe338b5c69d72, type: 2}
   graphicsRoot: {fileID: 3297497503980602954}
   waterTrail: {fileID: 123556569418599294}
   swimWaterLineOffset: -0.15

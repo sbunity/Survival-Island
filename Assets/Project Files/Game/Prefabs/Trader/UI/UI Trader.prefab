@@ -662,6 +662,8 @@ MonoBehaviour:
   closeButton: {fileID: 7452291268609322253}
   offerItemPrefab: {fileID: 9207283223754027654, guid: 28e91e10c02e1b645af2ea100bd56911,
     type: 3}
+  minigameItemPrefab: {fileID: 9207283223754027654, guid: 8193040e6f1af694c8ea2a3a2ec70722,
+    type: 3}
 --- !u!1 &8042622666058570194
 GameObject:
   m_ObjectHideFlags: 0

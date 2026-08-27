@@ -50,6 +50,9 @@ namespace Watermelon
         [BoxGroup("Trading")]
         [SerializeField, Min(1)] int purchasesPerOffer = 3;
 
+        [BoxGroup("Minigames", "Minigames")]
+        [SerializeField] TraderMinigamesDatabase minigamesDatabase;
+
         [BoxGroup("Water Visuals")]
         [SerializeField] Transform graphicsRoot;
         [BoxGroup("Water Visuals")]
@@ -86,6 +89,9 @@ namespace Watermelon
 
         private readonly RescueAreaGate rescueGate = new RescueAreaGate();
 
+        private readonly TraderMinigameSlot minigameSlot = new TraderMinigameSlot();
+        public TraderMinigameSlot MinigameSlot => minigameSlot;
+
         private RescueState rescueState = RescueState.None;
         private float escortPauseLeft;
 
@@ -119,6 +125,9 @@ namespace Watermelon
 
             traderSave = SaveController.GetSaveObject<TraderSave>(LinkedWorldBehavior.WorldData.ID, "trader_" + id);
 
+            minigameSlot.Initialise(minigamesDatabase, traderSave);
+            minigameSlot.Changed += OnMinigameSlotChanged;
+
             if (tradeButton != null)
                 tradeButton.Clicked += OpenTradeWindow;
 
@@ -135,6 +144,9 @@ namespace Watermelon
             isInitialised = false;
 
             rescueGate.Dispose();
+
+            minigameSlot.Changed -= OnMinigameSlotChanged;
+            minigameSlot.Dispose();
 
             if (tradeButton != null)
             {
@@ -213,9 +225,13 @@ namespace Watermelon
 
                 case Phase.AtBase:
                     swimming = false;
-                    traderSave.VisitTimeLeft -= Time.deltaTime;
-                    if (traderSave.VisitTimeLeft <= 0f)
-                        StartSailingToIsland();
+
+                    if (!minigameSlot.IsBusy)
+                    {
+                        traderSave.VisitTimeLeft -= Time.deltaTime;
+                        if (traderSave.VisitTimeLeft <= 0f)
+                            StartSailingToIsland();
+                    }
                     break;
 
                 case Phase.SailingOut:
@@ -279,11 +295,15 @@ namespace Watermelon
             traderSave.ActiveOfferIndices.Clear();
             traderSave.OfferRemaining.Clear();
 
+            minigameSlot.Clear();
+
             Save();
         }
 
         private void EnsureOffersGenerated()
         {
+            minigameSlot.RollForVisit();
+
             if (offersDatabase == null || traderSave.ActiveOfferIndices.Count > 0)
                 return;
 
@@ -429,6 +449,8 @@ namespace Watermelon
             traderSave.TimeUntilArrival = GetRandomRestTime();
             traderSave.ActiveOfferIndices.Clear();
             traderSave.OfferRemaining.Clear();
+
+            minigameSlot.Clear();
 
             rescueState = RescueState.None;
             Save();
@@ -621,10 +643,15 @@ namespace Watermelon
 
             OffersChanged?.Invoke();
 
-            if (AreAllOffersExhausted())
+            if (AreAllOffersExhausted() && !minigameSlot.IsBusy)
                 StartSailingToIsland();
 
             return true;
+        }
+
+        private void OnMinigameSlotChanged()
+        {
+            OffersChanged?.Invoke();
         }
 
         private bool AreAllOffersExhausted()
