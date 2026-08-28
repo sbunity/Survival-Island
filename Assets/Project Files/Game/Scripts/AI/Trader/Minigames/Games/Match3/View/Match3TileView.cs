@@ -48,6 +48,15 @@ namespace Watermelon
             RectTransform.localScale = Vector3.one;
         }
 
+        public void SetScale(float scale)
+        {
+            isPulsing = false;
+
+            scaleCase.KillActive();
+
+            RectTransform.localScale = Vector3.one * scale;
+        }
+
         public void AnimateMove(Vector2 position, float duration, Ease.Type easing)
         {
             moveCase.KillActive();

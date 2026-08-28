@@ -13,6 +13,8 @@ namespace Watermelon
         [SerializeField, Min(0f)] float finishDelay = 0.35f;
         [BoxGroup("Timing")]
         [SerializeField, Min(0.5f)] float hintDelay = 4f;
+        [BoxGroup("Timing")]
+        [SerializeField, Min(0f)] float shuffleDelay = 0.5f;
 
         private Match3Settings settings;
         private Match3Board board;
@@ -26,6 +28,7 @@ namespace Watermelon
         private readonly List<Match3Move> moveBuffer = new List<Match3Move>();
 
         private TweenCase finishCase;
+        private TweenCase shuffleCase;
 
         public void Configure(Match3Settings settings)
         {
@@ -66,6 +69,7 @@ namespace Watermelon
             Lock();
 
             finishCase.KillActive();
+            shuffleCase.KillActive();
 
             if (input != null)
             {
@@ -198,13 +202,29 @@ namespace Watermelon
 
             if (!board.HasAvailableMove())
             {
-                board.Shuffle();
-                field.PlayShuffle(board, Unlock);
+                StartShuffle();
 
                 return;
             }
 
             Unlock();
+        }
+
+        private void StartShuffle()
+        {
+            Lock();
+
+            shuffleCase.KillActive();
+            shuffleCase = Tween.DelayedCall(shuffleDelay, () =>
+            {
+                if (!IsRunning)
+                    return;
+
+                if (!board.Shuffle())
+                    Debug.LogWarning("[Match3]: the tile mix cannot be arranged into a playable board.", this);
+
+                field.PlayShuffle(board, Unlock);
+            });
         }
 
         private void FinishDelayed(bool isWin)

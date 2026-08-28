@@ -16,10 +16,16 @@ namespace Watermelon
         public int TileTypeCount { get; }
 
         private readonly int[] cells;
+        private readonly int[] originalCells;
+        private readonly int[] fallbackCells;
+
         private readonly System.Random random;
 
         private readonly HashSet<Vector2Int> matchBuffer = new HashSet<Vector2Int>();
         private readonly List<Vector2Int> dirtyBuffer = new List<Vector2Int>();
+
+        private readonly List<int> bag = new List<int>();
+        private readonly List<int> workingBag = new List<int>();
 
         public Match3Board(int columns, int rows, int tileTypeCount, System.Random random)
         {
@@ -30,6 +36,8 @@ namespace Watermelon
             this.random = random;
 
             cells = new int[Columns * Rows];
+            originalCells = new int[cells.Length];
+            fallbackCells = new int[cells.Length];
         }
 
         public bool IsInside(int x, int y) => x >= 0 && x < Columns && y >= 0 && y < Rows;
@@ -161,24 +169,87 @@ namespace Watermelon
             return found;
         }
 
-        public void Shuffle()
+        public bool Shuffle()
         {
-            var tiles = new List<int>(cells.Length);
+            bag.Clear();
             for (var i = 0; i < cells.Length; i++)
-                tiles.Add(cells[i]);
+            {
+                bag.Add(cells[i]);
+                originalCells[i] = cells[i];
+            }
+
+            var hasFallback = false;
 
             for (var attempt = 0; attempt < SHUFFLE_ATTEMPTS; attempt++)
             {
-                random.Shuffle(tiles);
+                if (!TryArrangeFromBag())
+                    continue;
+
+                if (HasAvailableMove())
+                    return true;
+
+                if (hasFallback)
+                    continue;
 
                 for (var i = 0; i < cells.Length; i++)
-                    cells[i] = tiles[i];
+                    fallbackCells[i] = cells[i];
 
-                if (!HasAnyMatch() && HasAvailableMove())
-                    return;
+                hasFallback = true;
             }
 
-            Fill();
+            var source = hasFallback ? fallbackCells : originalCells;
+
+            for (var i = 0; i < cells.Length; i++)
+                cells[i] = source[i];
+
+            return false;
+        }
+
+        private bool TryArrangeFromBag()
+        {
+            workingBag.Clear();
+            workingBag.AddRange(bag);
+
+            random.Shuffle(workingBag);
+
+            for (var i = 0; i < cells.Length; i++)
+                cells[i] = EMPTY;
+
+            for (var y = 0; y < Rows; y++)
+            {
+                for (var x = 0; x < Columns; x++)
+                {
+                    var index = FindPlaceableTile(x, y);
+
+                    if (index < 0)
+                        return false;
+
+                    Set(x, y, workingBag[index]);
+
+                    workingBag.RemoveAt(index);
+                }
+            }
+
+            return true;
+        }
+
+        private int FindPlaceableTile(int x, int y)
+        {
+            var cell = new Vector2Int(x, y);
+
+            for (var i = 0; i < workingBag.Count; i++)
+            {
+                Set(x, y, workingBag[i]);
+
+                var isClean = !HasMatchAt(cell);
+
+                Set(x, y, EMPTY);
+
+                if (isClean)
+                    return i;
+            }
+
+            return -1;
         }
 
         private void EnsurePlayable()
@@ -391,7 +462,7 @@ namespace Watermelon
             return HasSquareAt(cell, tileId);
         }
 
-        private bool HasAnyMatch()
+        public bool HasAnyMatch()
         {
             for (var y = 0; y < Rows; y++)
             {

@@ -40,6 +40,19 @@ namespace Watermelon
         [BoxGroup("Selection")]
         [SerializeField, Min(0.01f)] float selectionDuration = 0.12f;
 
+        [BoxGroup("Shuffle", "Shuffle")]
+        [SerializeField, Min(0.01f)] float shuffleGatherDuration = 0.3f;
+        [BoxGroup("Shuffle")]
+        [SerializeField, Min(0f)] float shufflePause = 0.08f;
+        [BoxGroup("Shuffle")]
+        [SerializeField, Min(0.01f)] float shuffleSpreadDuration = 0.36f;
+        [BoxGroup("Shuffle")]
+        [SerializeField, Range(0.05f, 1f)] float shuffleGatherScale = 0.45f;
+        [BoxGroup("Shuffle")]
+        [SerializeField] Ease.Type shuffleGatherEasing = Ease.Type.BackIn;
+        [BoxGroup("Shuffle")]
+        [SerializeField] Ease.Type shuffleSpreadEasing = Ease.Type.BackOut;
+
         [BoxGroup("Hint", "Hint")]
         [SerializeField, Min(1f)] float hintScale = 1.13f;
         [BoxGroup("Hint")]
@@ -275,28 +288,44 @@ namespace Watermelon
             ClearSelection();
 
             for (var i = 0; i < tiles.Length; i++)
-                tiles[i]?.AnimateClear(clearDuration, clearEasing, null);
-
-            Schedule(clearDuration, () =>
             {
-                ReleaseAll();
+                var tile = tiles[i];
 
-                tiles = new Match3TileView[settings.Columns * settings.Rows];
+                if (tile == null)
+                    continue;
 
+                tile.AnimateMove(gridCenter, shuffleGatherDuration, shuffleGatherEasing);
+                tile.AnimateScale(shuffleGatherScale, shuffleGatherDuration, shuffleGatherEasing);
+            }
+
+            Schedule(shuffleGatherDuration + shufflePause, () =>
+            {
                 for (var y = 0; y < settings.Rows; y++)
                 {
                     for (var x = 0; x < settings.Columns; x++)
                     {
                         var cell = new Vector2Int(x, y);
-                        var tile = Rent(board.Get(cell));
+                        var tile = GetTile(cell);
 
-                        tile.AnimateSpawn(CellToPosition(cell), spawnDuration, spawnEasing);
+                        if (tile == null)
+                        {
+                            tile = Rent(board.Get(cell));
+                            tile.PlaceAt(gridCenter);
+                            tile.SetScale(shuffleGatherScale);
 
-                        SetTile(cell, tile);
+                            SetTile(cell, tile);
+                        }
+                        else
+                        {
+                            tile.Setup(GetIcon(board.Get(cell)), tileSize);
+                        }
+
+                        tile.AnimateMove(CellToPosition(cell), shuffleSpreadDuration, shuffleSpreadEasing);
+                        tile.AnimateScale(1f, shuffleSpreadDuration, shuffleSpreadEasing);
                     }
                 }
 
-                Schedule(spawnDuration, onComplete);
+                Schedule(shuffleSpreadDuration, onComplete);
             });
         }
 
