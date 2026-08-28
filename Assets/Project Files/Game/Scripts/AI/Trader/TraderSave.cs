@@ -21,6 +21,8 @@ namespace Watermelon
 
         public CurrencyType MinigameStakeCurrency;
         public int MinigameStakeAmount;
+
+        public Resource[] MinigameReward;
         #endregion
 
         public void OnBeforeSave() { }

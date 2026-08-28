@@ -70,6 +70,7 @@ namespace Watermelon
             save.MinigameSeed = Random.Range(int.MinValue, int.MaxValue);
             save.MinigameStakeCurrency = stake.currency;
             save.MinigameStakeAmount = stake.amount;
+            save.MinigameReward = picked.RollReward();
 
             Resolve();
 
@@ -90,6 +91,7 @@ namespace Watermelon
                 save.MinigameSeed = 0;
                 save.MinigameStakeCurrency = default;
                 save.MinigameStakeAmount = 0;
+                save.MinigameReward = null;
             }
 
             Changed?.Invoke();
@@ -190,7 +192,7 @@ namespace Watermelon
                 return;
             }
 
-            stakeRule = MinigameStakeRuleFactory.Create(definition, new Resource(save.MinigameStakeCurrency, save.MinigameStakeAmount));
+            stakeRule = MinigameStakeRuleFactory.Create(definition, new Resource(save.MinigameStakeCurrency, save.MinigameStakeAmount), save.MinigameReward);
         }
     }
 }

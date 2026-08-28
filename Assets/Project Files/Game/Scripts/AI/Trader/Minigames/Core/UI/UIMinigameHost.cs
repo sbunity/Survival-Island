@@ -15,6 +15,7 @@ namespace Watermelon
         [SerializeField] Button closeButton;
 
         [Space]
+        [SerializeField] MinigameBackground background;
         [SerializeField] Image iconImage;
         [SerializeField] TMP_Text titleText;
         [SerializeField] TMP_Text descriptionText;
@@ -25,6 +26,7 @@ namespace Watermelon
         [SerializeField] TMP_Text resultTitleText;
         [SerializeField] TMP_Text resultRewardText;
         [SerializeField] Button resultButton;
+        [SerializeField] TMP_Text resultButtonText;
 
         [BoxGroup("Captions", "Captions")]
         [SerializeField] string stakeCaptionFormat = "Bet: {0}";
@@ -34,6 +36,10 @@ namespace Watermelon
         [SerializeField] string winCaption = "You won!";
         [BoxGroup("Captions")]
         [SerializeField] string loseCaption = "You lost";
+        [BoxGroup("Captions")]
+        [SerializeField] string winButtonCaption = "Collect";
+        [BoxGroup("Captions")]
+        [SerializeField] string loseButtonCaption = "Good luck next time";
 
         private TraderMinigameDefinition definition;
         private IMinigameStakeRule stakeRule;
@@ -81,6 +87,8 @@ namespace Watermelon
             if (resultPanel != null)
                 resultPanel.SetActive(false);
 
+            closeButton.gameObject.SetActive(true);
+
             SpawnView();
 
             NotifyOpened();
@@ -118,6 +126,9 @@ namespace Watermelon
         {
             if (definition == null)
                 return;
+
+            if (background != null)
+                background.SetSprite(definition.Background);
 
             if (iconImage != null)
             {
@@ -178,6 +189,8 @@ namespace Watermelon
 
             resultPanel.SetActive(true);
 
+            closeButton.gameObject.SetActive(false);
+
             if (resultTitleText != null)
                 resultTitleText.text = result.IsWin ? winCaption : loseCaption;
 
@@ -186,6 +199,9 @@ namespace Watermelon
                 resultRewardText.text = result.IsWin && stakeRule != null ? TraderResourceFormat.Format(stakeRule.Prize) : string.Empty;
                 resultRewardText.gameObject.SetActive(result.IsWin);
             }
+
+            if (resultButtonText != null)
+                resultButtonText.text = result.IsWin ? winButtonCaption : loseButtonCaption;
 
             AudioController.PlaySound(AudioController.GetClip(result.IsWin ? "reward" : "button_sound"), 0.7f);
         }

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f983a66943549a34c8442c9b4d64ce61, type: 3}
+  m_Name: Match3 Minigame
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.Match3MinigameDefinition
+  id: 572a2b57-d20c-4e52-b4d7-80ee3c3631aa
+  title: Match 3
+  icon: {fileID: 0}
+  description: Collect the requested resource in rows of three
+  background: {fileID: 21300000, guid: 0830d4ce3ce13414cbea739c30c56ce0, type: 3}
+  weight: 1
+  stakeType: 0
+  reward: []
+  stakeCurrencies: 
+  stakeAmountRange:
+    firstValue: 10
+    secondValue: 30
+  stakeAmountStep: 5
+  winMultiplier: 2
+  viewPrefab: {fileID: 5927192843654547826, guid: 430c810acb8cfda46a2750264051039a,
+    type: 3}
+  fieldSprite: {fileID: 21300000, guid: deafe07d7f2859c428f1d623552bc7aa, type: 3}
+  columns: 6
+  rows: 6
+  gridRect:
+    serializedVersion: 2
+    x: 0.0651
+    y: 0.1161
+    width: 0.8672
+    height: 0.8253
+  tileScale: 0.78
+  tilePool: 0100000002000000030000000400000032000000330000003400000064000000650000006600000067000000
+  tileTypesPerGame: 6
+  movesRange:
+    firstValue: 18
+    secondValue: 26
+  goalAmountRange:
+    firstValue: 15
+    secondValue: 25

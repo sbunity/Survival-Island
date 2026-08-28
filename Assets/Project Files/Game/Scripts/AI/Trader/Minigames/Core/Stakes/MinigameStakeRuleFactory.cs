@@ -4,7 +4,7 @@ namespace Watermelon
 {
     public static class MinigameStakeRuleFactory
     {
-        public static IMinigameStakeRule Create(TraderMinigameDefinition definition, Resource rolledStake)
+        public static IMinigameStakeRule Create(TraderMinigameDefinition definition, Resource rolledStake, Resource[] rolledReward)
         {
             if (definition == null)
                 return null;
@@ -12,7 +12,7 @@ namespace Watermelon
             switch (definition.StakeType)
             {
                 case MinigameStakeType.Reward:
-                    return new FixedRewardStakeRule(definition.Reward);
+                    return new FixedRewardStakeRule(rolledReward.IsNullOrEmpty() ? definition.Reward : rolledReward);
 
                 case MinigameStakeType.Wager:
                     return new WagerStakeRule(rolledStake, definition.WinMultiplier);

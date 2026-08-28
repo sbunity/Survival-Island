@@ -21,6 +21,10 @@ namespace Watermelon
         [SerializeField, TextArea(2, 4)] string description;
         public string Description => description;
 
+        [BoxGroup("Info")]
+        [SerializeField] Sprite background;
+        public Sprite Background => background;
+
         [BoxGroup("Selection", "Selection")]
         [SerializeField, Min(0f)] float weight = 1f;
         public float Weight => weight;
@@ -47,6 +51,11 @@ namespace Watermelon
         public float WinMultiplier => winMultiplier;
 
         public abstract MinigameView CreateView(Transform parent);
+
+        public virtual Resource[] RollReward()
+        {
+            return reward;
+        }
 
         public Resource RollStake()
         {
@@ -80,6 +89,18 @@ namespace Watermelon
         #region Editor
         protected bool IsRewardStake() => stakeType == MinigameStakeType.Reward;
         protected bool IsWagerStake() => stakeType == MinigameStakeType.Wager;
+
+#if UNITY_EDITOR
+        protected virtual void OnValidate()
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                id = UniqueIDUtils.GetUniqueID();
+
+                UnityEditor.EditorUtility.SetDirty(this);
+            }
+        }
+#endif
         #endregion
     }
 }
