@@ -21,12 +21,24 @@ namespace Watermelon
         [SerializeField] TMP_Text descriptionText;
         [SerializeField] TMP_Text stakeText;
 
-        [Space]
-        [SerializeField] GameObject resultPanel;
+        [BoxGroup("Result Popup", "Result Popup")]
+        [SerializeField] GameObject resultPopup;
+        [BoxGroup("Result Popup")]
+        [SerializeField] Image resultFadeImage;
+        [BoxGroup("Result Popup")]
+        [SerializeField] RectTransform resultPanelRectTransform;
+        [BoxGroup("Result Popup")]
         [SerializeField] TMP_Text resultTitleText;
+        [BoxGroup("Result Popup")]
         [SerializeField] TMP_Text resultRewardText;
+        [BoxGroup("Result Popup")]
         [SerializeField] Button resultButton;
+        [BoxGroup("Result Popup")]
         [SerializeField] TMP_Text resultButtonText;
+        [BoxGroup("Result Popup")]
+        [SerializeField, Min(0.01f)] float resultAnimationDuration = 0.4f;
+        [BoxGroup("Result Popup")]
+        [SerializeField, Range(0f, 1f)] float resultFadeAlpha = 0.5f;
 
         [BoxGroup("Captions", "Captions")]
         [SerializeField] string stakeCaptionFormat = "Bet: {0}";
@@ -51,6 +63,9 @@ namespace Watermelon
         private MinigameView activeView;
 
         private bool isSettled;
+
+        private TweenCase resultFadeCase;
+        private TweenCase resultPanelCase;
 
         public override void Init()
         {
@@ -84,8 +99,7 @@ namespace Watermelon
 
             BuildHeader();
 
-            if (resultPanel != null)
-                resultPanel.SetActive(false);
+            HideResult();
 
             closeButton.gameObject.SetActive(true);
 
@@ -97,6 +111,9 @@ namespace Watermelon
         protected override void OnHide()
         {
             SettleIfNeeded(MinigameResult.Abandoned);
+
+            resultFadeCase.KillActive();
+            resultPanelCase.KillActive();
 
             fadeImage.DOFade(0, 0.3f);
             panelRectTransform.DOAnchoredPosition(HIDE_POSITION, 0.3f).SetEasing(Ease.Type.CircIn).OnComplete(delegate
@@ -180,14 +197,14 @@ namespace Watermelon
 
         private void ShowResult(MinigameResult result)
         {
-            if (resultPanel == null)
+            if (resultPopup == null)
             {
                 Close();
 
                 return;
             }
 
-            resultPanel.SetActive(true);
+            resultPopup.SetActive(true);
 
             closeButton.gameObject.SetActive(false);
 
@@ -203,7 +220,45 @@ namespace Watermelon
             if (resultButtonText != null)
                 resultButtonText.text = result.IsWin ? winButtonCaption : loseButtonCaption;
 
+            PlayResultAppearance();
+
             AudioController.PlaySound(AudioController.GetClip(result.IsWin ? "reward" : "button_sound"), 0.7f);
+        }
+
+        private void PlayResultAppearance()
+        {
+            resultFadeCase.KillActive();
+            resultPanelCase.KillActive();
+
+            if (resultPanelRectTransform != null)
+                LayoutRebuilder.ForceRebuildLayoutImmediate(resultPanelRectTransform);
+
+            if (resultFadeImage != null)
+            {
+                resultFadeImage.color = resultFadeImage.color.SetAlpha(0f);
+                resultFadeCase = resultFadeImage.DOFade(resultFadeAlpha, resultAnimationDuration);
+            }
+
+            if (resultPanelRectTransform != null)
+            {
+                resultPanelRectTransform.anchoredPosition = HIDE_POSITION;
+                resultPanelCase = resultPanelRectTransform.DOAnchoredPosition(DEFAULT_POSITION, resultAnimationDuration).SetEasing(Ease.Type.CircOut);
+            }
+        }
+
+        private void HideResult()
+        {
+            resultFadeCase.KillActive();
+            resultPanelCase.KillActive();
+
+            if (resultFadeImage != null)
+                resultFadeImage.color = resultFadeImage.color.SetAlpha(0f);
+
+            if (resultPanelRectTransform != null)
+                resultPanelRectTransform.anchoredPosition = HIDE_POSITION;
+
+            if (resultPopup != null)
+                resultPopup.SetActive(false);
         }
 
         private void SettleIfNeeded(MinigameResult result)
