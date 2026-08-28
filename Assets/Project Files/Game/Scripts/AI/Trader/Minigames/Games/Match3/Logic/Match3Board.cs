@@ -7,6 +7,7 @@ namespace Watermelon
     {
         public const int EMPTY = -1;
         public const int MIN_MATCH_LENGTH = 3;
+        public const int SQUARE_MATCH_SIZE = 2;
 
         private const int SHUFFLE_ATTEMPTS = 64;
 
@@ -172,11 +173,15 @@ namespace Watermelon
             var forbiddenHorizontal = Get(x - 1, y) != EMPTY && Get(x - 1, y) == Get(x - 2, y) ? Get(x - 1, y) : EMPTY;
             var forbiddenVertical = Get(x, y - 1) != EMPTY && Get(x, y - 1) == Get(x, y - 2) ? Get(x, y - 1) : EMPTY;
 
+            var forbiddenSquare = Get(x - 1, y) != EMPTY && Get(x - 1, y) == Get(x, y - 1) && Get(x - 1, y) == Get(x - 1, y - 1)
+                ? Get(x - 1, y)
+                : EMPTY;
+
             for (var attempt = 0; attempt < SHUFFLE_ATTEMPTS; attempt++)
             {
                 var tileId = random.Next(0, TileTypeCount);
 
-                if (tileId != forbiddenHorizontal && tileId != forbiddenVertical)
+                if (tileId != forbiddenHorizontal && tileId != forbiddenVertical && tileId != forbiddenSquare)
                     return tileId;
             }
 
@@ -282,6 +287,57 @@ namespace Watermelon
                 for (var y = top; y <= bottom; y++)
                     result.Add(new Vector2Int(cell.x, y));
             }
+
+            CollectSquaresAt(cell, tileId, result);
+        }
+
+        private void CollectSquaresAt(Vector2Int cell, int tileId, HashSet<Vector2Int> result)
+        {
+            for (var y = cell.y - SQUARE_MATCH_SIZE + 1; y <= cell.y; y++)
+            {
+                for (var x = cell.x - SQUARE_MATCH_SIZE + 1; x <= cell.x; x++)
+                {
+                    if (!IsSquareAt(x, y, tileId))
+                        continue;
+
+                    for (var oy = 0; oy < SQUARE_MATCH_SIZE; oy++)
+                    {
+                        for (var ox = 0; ox < SQUARE_MATCH_SIZE; ox++)
+                            result.Add(new Vector2Int(x + ox, y + oy));
+                    }
+                }
+            }
+        }
+
+        private bool HasSquareAt(Vector2Int cell, int tileId)
+        {
+            for (var y = cell.y - SQUARE_MATCH_SIZE + 1; y <= cell.y; y++)
+            {
+                for (var x = cell.x - SQUARE_MATCH_SIZE + 1; x <= cell.x; x++)
+                {
+                    if (IsSquareAt(x, y, tileId))
+                        return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool IsSquareAt(int x, int y, int tileId)
+        {
+            if (tileId == EMPTY)
+                return false;
+
+            for (var oy = 0; oy < SQUARE_MATCH_SIZE; oy++)
+            {
+                for (var ox = 0; ox < SQUARE_MATCH_SIZE; ox++)
+                {
+                    if (Get(x + ox, y + oy) != tileId)
+                        return false;
+                }
+            }
+
+            return true;
         }
 
         private bool HasMatchAt(Vector2Int cell)
@@ -301,7 +357,10 @@ namespace Watermelon
             for (var y = cell.y - 1; Get(cell.x, y) == tileId; y--) vertical++;
             for (var y = cell.y + 1; Get(cell.x, y) == tileId; y++) vertical++;
 
-            return vertical >= MIN_MATCH_LENGTH;
+            if (vertical >= MIN_MATCH_LENGTH)
+                return true;
+
+            return HasSquareAt(cell, tileId);
         }
 
         private bool HasAnyMatch()
