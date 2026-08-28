@@ -14,6 +14,8 @@ namespace Watermelon
         [SerializeField] RectTransform contentRoot;
         [SerializeField] Button closeButton;
 
+        [SerializeField, Range(0f, 1f)] float fadeAlpha = 0f;
+
         [Space]
         [SerializeField] MinigameBackground background;
         [SerializeField] Image iconImage;
@@ -92,7 +94,7 @@ namespace Watermelon
             isSettled = false;
 
             fadeImage.color = fadeImage.color.SetAlpha(0.0f);
-            fadeImage.DOFade(0.6f, 0.3f);
+            fadeImage.DOFade(fadeAlpha, 0.3f);
 
             panelRectTransform.anchoredPosition = HIDE_POSITION;
             panelRectTransform.DOAnchoredPosition(DEFAULT_POSITION, 0.3f).SetEasing(Ease.Type.CircOut);

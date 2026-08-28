@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 namespace Watermelon
 {
-    public class WanderingTraderBehavior : MonoBehaviour, IWorldElement, IGuardedRescueTarget
+    public class WanderingTraderBehavior : MonoBehaviour, IWorldElement, IGuardedRescueTarget, IMinigameStageProvider
     {
         private const int WATER_AREA_MASK = 8;
 
@@ -53,6 +53,13 @@ namespace Watermelon
         [BoxGroup("Minigames", "Minigames")]
         [SerializeField] TraderMinigamesDatabase minigamesDatabase;
 
+        [BoxGroup("Minigames")]
+        [SerializeField] Transform minigamePlayerPoint;
+        [BoxGroup("Minigames")]
+        [SerializeField] Transform minigameFloorAnchor;
+        [BoxGroup("Minigames")]
+        [SerializeField] Transform minigameTableAnchor;
+
         [BoxGroup("Water Visuals")]
         [SerializeField] Transform graphicsRoot;
         [BoxGroup("Water Visuals")]
@@ -92,6 +99,8 @@ namespace Watermelon
         private readonly TraderMinigameSlot minigameSlot = new TraderMinigameSlot();
         public TraderMinigameSlot MinigameSlot => minigameSlot;
 
+        private readonly TraderMinigameLauncher minigameLauncher = new TraderMinigameLauncher();
+
         private RescueState rescueState = RescueState.None;
         private float escortPauseLeft;
 
@@ -113,6 +122,8 @@ namespace Watermelon
             get => (Phase)traderSave.Phase;
             set => traderSave.Phase = (int)value;
         }
+
+        public bool IsTrading => isInitialised && CurrentPhase == Phase.AtBase;
 
         public void OnWorldLoaded()
         {
@@ -144,6 +155,8 @@ namespace Watermelon
             isInitialised = false;
 
             rescueGate.Dispose();
+
+            minigameLauncher.Abort();
 
             minigameSlot.Changed -= OnMinigameSlotChanged;
             minigameSlot.Dispose();
@@ -652,6 +665,41 @@ namespace Watermelon
         private void OnMinigameSlotChanged()
         {
             OffersChanged?.Invoke();
+        }
+
+        public void PlayMinigame()
+        {
+            minigameLauncher.TryLaunch(this);
+        }
+
+        public bool TryGetStage(MinigameStageType stageType, out MinigameStageAnchors anchors)
+        {
+            anchors = null;
+
+            if (minigamePlayerPoint == null)
+                return false;
+
+            switch (stageType)
+            {
+                case MinigameStageType.Floor:
+                    if (minigameFloorAnchor == null)
+                        return false;
+
+                    anchors = new MinigameStageAnchors(minigameFloorAnchor, minigamePlayerPoint);
+
+                    return true;
+
+                case MinigameStageType.Table:
+                    if (minigameTableAnchor == null)
+                        return false;
+
+                    anchors = new MinigameStageAnchors(minigameTableAnchor, minigamePlayerPoint);
+
+                    return true;
+
+                default:
+                    return false;
+            }
         }
 
         private bool AreAllOffersExhausted()

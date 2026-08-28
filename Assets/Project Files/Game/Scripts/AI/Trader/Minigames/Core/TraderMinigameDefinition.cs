@@ -25,6 +25,10 @@ namespace Watermelon
         [SerializeField] Sprite background;
         public Sprite Background => background;
 
+        [BoxGroup("Info")]
+        [SerializeField] MinigameStageType stage = MinigameStageType.None;
+        public MinigameStageType Stage => stage;
+
         [BoxGroup("Selection", "Selection")]
         [SerializeField, Min(0f)] float weight = 1f;
         public float Weight => weight;

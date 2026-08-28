@@ -16,7 +16,8 @@ MonoBehaviour:
   title: Match 3
   icon: {fileID: 0}
   description: Collect the requested resource in rows of three
-  background: {fileID: 21300000, guid: 0830d4ce3ce13414cbea739c30c56ce0, type: 3}
+  background: {fileID: 0}
+  stage: 1
   weight: 1
   stakeType: 0
   reward: []

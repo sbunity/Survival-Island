@@ -16,6 +16,9 @@ namespace Watermelon
         [SerializeField] float verticalSmoothTime = 0.12f;
         [SerializeField] float verticalSnapThreshold = 1.5f;
 
+        [Space]
+        [SerializeField] bool useTargetRotation;
+
         private bool isShaking;
         private float shakeGain = 0.0f;
         private TweenCase shakeTweenCase;
@@ -67,7 +70,9 @@ namespace Watermelon
             if ((!isActive && !isBlending) || target == null)
                 return;
 
-            Vector3 followPosition = target.position + cameraData.FollowOffset;
+            Quaternion targetRotation = useTargetRotation ? target.rotation : Quaternion.identity;
+
+            Vector3 followPosition = target.position + targetRotation * cameraData.FollowOffset;
             followPosition.y = ResolveFollowY(followPosition.y);
 
             if (isShaking)
@@ -77,7 +82,7 @@ namespace Watermelon
 
             cameraData.UpdatePosition(followPosition);
 
-            cameraData.UpdateRotation(Quaternion.Euler(cameraData.SimpleRotation));
+            cameraData.UpdateRotation(targetRotation * Quaternion.Euler(cameraData.SimpleRotation));
         }
 
         private float ResolveFollowY(float targetY)

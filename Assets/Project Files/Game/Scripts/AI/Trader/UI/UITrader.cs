@@ -18,18 +18,16 @@ namespace Watermelon
         [SerializeField] GameObject offerItemPrefab;
         [SerializeField] GameObject minigameItemPrefab;
 
-        private UIGame mainPage;
-
         private WanderingTraderBehavior trader;
         public WanderingTraderBehavior CurrentTrader => trader;
 
         private readonly List<UITraderOfferItem> items = new List<UITraderOfferItem>();
         private UITraderMinigameItem minigameItem;
 
+        private bool holdsMovementLock;
+
         public override void Init()
         {
-            mainPage = UIController.GetPage<UIGame>();
-
             closeButton.onClick.AddListener(OnCloseButtonClicked);
         }
 
@@ -40,7 +38,7 @@ namespace Watermelon
 
         protected override void OnShow()
         {
-            mainPage.Joystick.HideVisuals();
+            AcquireMovementLock();
 
             fadeImage.color = fadeImage.color.SetAlpha(0.0f);
             fadeImage.DOFade(0.25f, 0.4f);
@@ -50,8 +48,6 @@ namespace Watermelon
 
             RebuildItems();
 
-            Control.DisableMovementControl();
-
             NotifyOpened();
         }
 
@@ -60,8 +56,6 @@ namespace Watermelon
             if (trader != null)
                 trader.OffersChanged -= OnOffersChanged;
 
-            mainPage.Joystick.ShowVisuals();
-
             fadeImage.DOFade(0, 0.4f);
             panelRectTransform.DOAnchoredPosition(HIDE_POSITION, 0.4f).SetEasing(Ease.Type.CircIn).OnComplete(delegate
             {
@@ -69,7 +63,37 @@ namespace Watermelon
                 NotifyClosed();
             });
 
-            Control.EnableMovementControl();
+            ReleaseMovementLock();
+        }
+
+        protected override void OnUnload()
+        {
+            ReleaseMovementLock();
+        }
+
+        private void OnDestroy()
+        {
+            ReleaseMovementLock();
+        }
+
+        private void AcquireMovementLock()
+        {
+            if (holdsMovementLock)
+                return;
+
+            holdsMovementLock = true;
+
+            MovementLock.Acquire();
+        }
+
+        private void ReleaseMovementLock()
+        {
+            if (!holdsMovementLock)
+                return;
+
+            holdsMovementLock = false;
+
+            MovementLock.Release();
         }
 
         private void RebuildItems()
@@ -129,35 +153,8 @@ namespace Watermelon
 
         public void PlayMinigame()
         {
-            if (trader == null)
-                return;
-
-            var slot = trader.MinigameSlot;
-
-            if (!UIController.HasPage<UIMinigameHost>())
-            {
-                Debug.LogError("[Trader Minigames]: UIMinigameHost is not registered in the UIController cached pages.");
-
-                return;
-            }
-
-            var host = UIController.GetPage<UIMinigameHost>();
-
-            if (!slot.TryBeginPlay(out var context, out var blockReason))
-            {
-                if (!string.IsNullOrEmpty(blockReason))
-                    Debug.Log($"[Trader Minigames]: Cannot start - {blockReason}");
-
-                return;
-            }
-
-            host.Play(slot.Definition, slot.StakeRule, context, slot.CompletePlay, OnMinigameClosed);
-        }
-
-        private void OnMinigameClosed()
-        {
-            if (IsPageDisplayed)
-                RebuildItems();
+            if (trader != null)
+                trader.PlayMinigame();
         }
 
         private void ClearItems()

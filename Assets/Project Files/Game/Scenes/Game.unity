@@ -121,6 +121,61 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &5337606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5337607}
+  - component: {fileID: 5337608}
+  m_Layer: 0
+  m_Name: Minigame Floor Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5337607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337606}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 956244641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5337608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5337606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22e605351f1e904ab9725618e12eca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.VirtualCamera
+  isActive: 0
+  cameraType: 2
+  cameraData:
+    fieldOfView: 60
+    nearClipPlane: 0.1
+    farClipPlane: 70
+    followOffset: {x: 0, y: 6, z: -4.5}
+    simpleRotation: {x: 55, y: 0, z: 0}
+  verticalSmoothTime: 0
+  verticalSnapThreshold: 0
+  useTargetRotation: 1
 --- !u!1001 &36792247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,13 +347,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8109136083484033349, guid: 82948df280d47ba4882db48023b6092b,
         type: 3}
+      propertyPath: hudCanvasGroup
+      value: 
+      objectReference: {fileID: 36792250}
+    - target: {fileID: 8109136083484033349, guid: 82948df280d47ba4882db48023b6092b,
+        type: 3}
       propertyPath: backgroundImage
       value: 
       objectReference: {fileID: 524285253}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7921812722436507131, guid: 82948df280d47ba4882db48023b6092b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 36792250}
   m_SourcePrefab: {fileID: 100100000, guid: 82948df280d47ba4882db48023b6092b, type: 3}
 --- !u!224 &36792248 stripped
 RectTransform:
@@ -306,6 +370,24 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 36792247}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &36792249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7921812722436507131, guid: 82948df280d47ba4882db48023b6092b,
+    type: 3}
+  m_PrefabInstance: {fileID: 36792247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &36792250
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36792249}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &257596588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -613,6 +695,8 @@ Transform:
   m_Children:
   - {fileID: 1945819187}
   - {fileID: 1949273329}
+  - {fileID: 5337607}
+  - {fileID: 1982263833}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &956244642
@@ -674,8 +758,30 @@ MonoBehaviour:
   firstCamera: 0
   virtualCameras:
   - {fileID: 1949273330}
+  - {fileID: 5337608}
+  - {fileID: 1982263832}
   - {fileID: 1945819188}
-  blendSettings: []
+  blendSettings:
+  - firstCameraType: 0
+    secondCameraType: 2
+    blendData:
+      BlendTime: 1.2
+      BlendEaseType: 6
+  - firstCameraType: 2
+    secondCameraType: 0
+    blendData:
+      BlendTime: 1.2
+      BlendEaseType: 6
+  - firstCameraType: 0
+    secondCameraType: 3
+    blendData:
+      BlendTime: 1.2
+      BlendEaseType: 6
+  - firstCameraType: 3
+    secondCameraType: 0
+    blendData:
+      BlendTime: 1.2
+      BlendEaseType: 6
   defaultBlendData:
     BlendTime: 0.5
     BlendEaseType: 15
@@ -1505,6 +1611,7 @@ MonoBehaviour:
     simpleRotation: {x: 54, y: 0, z: 0}
   verticalSmoothTime: 0.12
   verticalSnapThreshold: 1.5
+  useTargetRotation: 0
 --- !u!1 &1949273328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1666,62 @@ MonoBehaviour:
     simpleRotation: {x: 54, y: 0, z: 0}
   verticalSmoothTime: 0.12
   verticalSnapThreshold: 1.5
+  useTargetRotation: 0
+--- !u!1 &1982263831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982263833}
+  - component: {fileID: 1982263832}
+  m_Layer: 0
+  m_Name: Minigame Table Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1982263832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982263831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22e605351f1e904ab9725618e12eca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.VirtualCamera
+  isActive: 0
+  cameraType: 3
+  cameraData:
+    fieldOfView: 55
+    nearClipPlane: 0.1
+    farClipPlane: 70
+    followOffset: {x: 0, y: 4.5, z: -3.5}
+    simpleRotation: {x: 52, y: 0, z: 0}
+  verticalSmoothTime: 0
+  verticalSnapThreshold: 0
+  useTargetRotation: 1
+--- !u!4 &1982263833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982263831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 956244641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &5178066047858781992
 RectTransform:
   m_ObjectHideFlags: 0

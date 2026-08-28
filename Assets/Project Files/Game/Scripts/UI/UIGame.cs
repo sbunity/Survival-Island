@@ -44,6 +44,9 @@ namespace Watermelon
         [Space]
         [SerializeField] GamepadIndicatorUI gamepadInteractor;
 
+        [Space]
+        [SerializeField] CanvasGroup hudCanvasGroup;
+
         [Header("Inventory")]
         [SerializeField] Button inventoryButton;
         [SerializeField] Image inventoryShine;
@@ -54,6 +57,8 @@ namespace Watermelon
         private PlayerInventory playerInventory;
         private TweenCaseCollection caseCollection;
         private Coroutine shineCoroutine;
+
+        private TweenCase hudFadeCase;
 
         public override void Init()
         {
@@ -106,6 +111,28 @@ namespace Watermelon
             playerInventory.CapacityChanged -= UpdateInventoryUI;
 
             NotifyClosed();
+        }
+
+        public void SetHudVisible(bool isVisible, float duration = 0.25f)
+        {
+            if (hudCanvasGroup == null)
+                return;
+
+            hudFadeCase.KillActive();
+
+            hudCanvasGroup.blocksRaycasts = isVisible;
+            hudCanvasGroup.interactable = isVisible;
+
+            var target = isVisible ? 1f : 0f;
+
+            if (duration <= 0f)
+            {
+                hudCanvasGroup.alpha = target;
+
+                return;
+            }
+
+            hudFadeCase = hudCanvasGroup.DOFade(target, duration).SetEasing(Ease.Type.SineInOut);
         }
 
         #endregion

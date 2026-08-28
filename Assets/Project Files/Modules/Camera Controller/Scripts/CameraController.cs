@@ -101,6 +101,11 @@ namespace Watermelon
             return cameraController.virtualCameras[virtualCamerasLink[cameraType]];
         }
 
+        public static bool HasCamera(CameraType cameraType)
+        {
+            return virtualCamerasLink != null && virtualCamerasLink.ContainsKey(cameraType);
+        }
+
         private static CameraBlendData GetBlendData(CameraType firstCameraType, CameraType secondCameraType)
         {
             for (int i = 0; i < cameraController.blendSettings.Count; i++)
