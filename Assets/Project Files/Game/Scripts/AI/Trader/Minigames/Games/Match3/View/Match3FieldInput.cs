@@ -10,6 +10,8 @@ namespace Watermelon
 
         public event SwapRequestedCallback SwapRequested;
 
+        public event SimpleCallback Interacted;
+
         public bool IsEnabled { get; set; }
 
         private bool isPressed;
@@ -38,6 +40,8 @@ namespace Watermelon
 
             if (!IsEnabled || field == null)
                 return;
+
+            Interacted?.Invoke();
 
             if (!TryResolveCell(eventData, out pressedCell))
                 return;

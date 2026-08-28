@@ -54,6 +54,7 @@ MonoBehaviour:
   input: {fileID: 4796197988819380822}
   hud: {fileID: 6476668716964198211}
   finishDelay: 0.35
+  hintDelay: 4
 --- !u!1 &3700706417132044341
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +180,9 @@ MonoBehaviour:
   clearEasing: 1
   selectedScale: 1.15
   selectionDuration: 0.12
+  hintScale: 1.13
+  hintPulseDuration: 0.4
+  hintEasing: 15
 --- !u!1 &4971152100248666142
 GameObject:
   m_ObjectHideFlags: 0

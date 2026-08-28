@@ -11,6 +11,8 @@ namespace Watermelon
 
         [BoxGroup("Timing", "Timing")]
         [SerializeField, Min(0f)] float finishDelay = 0.35f;
+        [BoxGroup("Timing")]
+        [SerializeField, Min(0.5f)] float hintDelay = 4f;
 
         private Match3Settings settings;
         private Match3Board board;
@@ -19,6 +21,9 @@ namespace Watermelon
         private CurrencyType[] tileCurrencies;
         private int movesLeft;
         private bool isBusy;
+
+        private float idleTime;
+        private readonly List<Match3Move> moveBuffer = new List<Match3Move>();
 
         private TweenCase finishCase;
 
@@ -49,9 +54,11 @@ namespace Watermelon
 
             input.ResetState();
             input.SwapRequested += OnSwapRequested;
+            input.Interacted += OnPlayerInteracted;
             input.IsEnabled = true;
 
             isBusy = false;
+            idleTime = 0f;
         }
 
         protected override void OnStop()
@@ -61,7 +68,10 @@ namespace Watermelon
             finishCase.KillActive();
 
             if (input != null)
+            {
                 input.SwapRequested -= OnSwapRequested;
+                input.Interacted -= OnPlayerInteracted;
+            }
 
             if (field != null)
                 field.StopAllAnimations();
@@ -100,6 +110,42 @@ namespace Watermelon
             var currency = CurrencyController.GetCurrency(currencyType);
 
             return currency?.Icon;
+        }
+
+        private void Update()
+        {
+            if (!IsRunning || isBusy || field == null || field.IsHintShown)
+                return;
+
+            idleTime += Time.deltaTime;
+
+            if (idleTime >= hintDelay)
+                ShowHint();
+        }
+
+        private void ShowHint()
+        {
+            idleTime = 0f;
+
+            if (board == null || !board.CollectMoves(moveBuffer))
+                return;
+
+            var move = moveBuffer[Random.Range(0, moveBuffer.Count)];
+
+            field.ShowHint(move.From, move.To);
+        }
+
+        private void HideHint()
+        {
+            idleTime = 0f;
+
+            if (field != null)
+                field.ClearHint();
+        }
+
+        private void OnPlayerInteracted()
+        {
+            HideHint();
         }
 
         private void OnSwapRequested(Vector2Int from, Vector2Int to)
@@ -173,6 +219,8 @@ namespace Watermelon
         {
             isBusy = true;
 
+            HideHint();
+
             if (input != null)
                 input.IsEnabled = false;
         }
@@ -183,6 +231,7 @@ namespace Watermelon
                 return;
 
             isBusy = false;
+            idleTime = 0f;
 
             if (input != null)
                 input.IsEnabled = true;

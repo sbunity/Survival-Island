@@ -40,6 +40,13 @@ namespace Watermelon
         [BoxGroup("Selection")]
         [SerializeField, Min(0.01f)] float selectionDuration = 0.12f;
 
+        [BoxGroup("Hint", "Hint")]
+        [SerializeField, Min(1f)] float hintScale = 1.13f;
+        [BoxGroup("Hint")]
+        [SerializeField, Min(0.01f)] float hintPulseDuration = 0.4f;
+        [BoxGroup("Hint")]
+        [SerializeField] Ease.Type hintEasing = Ease.Type.SineInOut;
+
         private Match3TileView[] tiles;
         private readonly Stack<Match3TileView> pool = new Stack<Match3TileView>();
 
@@ -54,7 +61,11 @@ namespace Watermelon
         private bool hasSelection;
         private Vector2Int selectedCell;
 
+        private bool hasHint;
+
         private TweenCase sequenceCase;
+
+        public bool IsHintShown => hasHint;
 
         public int Columns => settings != null ? settings.Columns : 0;
         public int Rows => settings != null ? settings.Rows : 0;
@@ -70,6 +81,7 @@ namespace Watermelon
 
             ApplyLayout();
 
+            ClearHint();
             ReleaseAll();
 
             tiles = new Match3TileView[settings.Columns * settings.Rows];
@@ -167,6 +179,8 @@ namespace Watermelon
 
         public void ClearSelection()
         {
+            ClearHint();
+
             if (!hasSelection)
                 return;
 
@@ -175,6 +189,41 @@ namespace Watermelon
                 tile.AnimateScale(1f, selectionDuration, Ease.Type.SineOut);
 
             hasSelection = false;
+        }
+
+        public void ShowHint(Vector2Int from, Vector2Int to)
+        {
+            ClearHint();
+
+            var first = GetTile(from);
+            var second = GetTile(to);
+
+            if (first == null || second == null)
+                return;
+
+            hasHint = true;
+
+            first.PlayPulse(hintScale, hintPulseDuration, hintEasing);
+            second.PlayPulse(hintScale, hintPulseDuration, hintEasing);
+        }
+
+        public void ClearHint()
+        {
+            if (!hasHint)
+                return;
+
+            hasHint = false;
+
+            if (tiles == null)
+                return;
+
+            for (var i = 0; i < tiles.Length; i++)
+            {
+                var tile = tiles[i];
+
+                if (tile != null && tile.IsPulsing)
+                    tile.StopPulse(selectionDuration, Ease.Type.SineOut);
+            }
         }
 
         public void PlayInvalidSwap(Vector2Int from, Vector2Int to, SimpleCallback onComplete)
@@ -253,6 +302,8 @@ namespace Watermelon
 
         public void StopAllAnimations()
         {
+            hasHint = false;
+
             sequenceCase.KillActive();
 
             if (tiles == null)

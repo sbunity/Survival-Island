@@ -12,6 +12,10 @@ namespace Watermelon
         private TweenCase moveCase;
         private TweenCase scaleCase;
 
+        private bool isPulsing;
+
+        public bool IsPulsing => isPulsing;
+
         public RectTransform RectTransform
         {
             get
@@ -66,6 +70,42 @@ namespace Watermelon
             scaleCase = RectTransform.DOScale(target, duration).SetEasing(easing);
         }
 
+        public void PlayPulse(float scale, float duration, Ease.Type easing)
+        {
+            isPulsing = true;
+
+            PulseUp(scale, duration, easing);
+        }
+
+        public void StopPulse(float duration, Ease.Type easing)
+        {
+            if (!isPulsing)
+                return;
+
+            isPulsing = false;
+
+            scaleCase.KillActive();
+            scaleCase = RectTransform.DOScale(1f, duration).SetEasing(easing);
+        }
+
+        private void PulseUp(float scale, float duration, Ease.Type easing)
+        {
+            scaleCase.KillActive();
+            scaleCase = RectTransform.DOScale(scale, duration).SetEasing(easing).OnComplete(() =>
+            {
+                if (!isPulsing)
+                    return;
+
+                scaleCase = RectTransform.DOScale(1f, duration).SetEasing(easing).OnComplete(() =>
+                {
+                    if (!isPulsing)
+                        return;
+
+                    PulseUp(scale, duration, easing);
+                });
+            });
+        }
+
         public void AnimateClear(float duration, Ease.Type easing, SimpleCallback onComplete)
         {
             KillTweens();
@@ -75,6 +115,8 @@ namespace Watermelon
 
         public void KillTweens()
         {
+            isPulsing = false;
+
             moveCase.KillActive();
             scaleCase.KillActive();
         }

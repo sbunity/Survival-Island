@@ -116,6 +116,20 @@ namespace Watermelon
 
         public bool HasAvailableMove()
         {
+            return FindMoves(null);
+        }
+
+        public bool CollectMoves(List<Match3Move> result)
+        {
+            return FindMoves(result);
+        }
+
+        private bool FindMoves(List<Match3Move> result)
+        {
+            result?.Clear();
+
+            var found = false;
+
             for (var y = 0; y < Rows; y++)
             {
                 for (var x = 0; x < Columns; x++)
@@ -123,14 +137,28 @@ namespace Watermelon
                     var cell = new Vector2Int(x, y);
 
                     if (x + 1 < Columns && CreatesMatch(cell, new Vector2Int(x + 1, y)))
-                        return true;
+                    {
+                        if (result == null)
+                            return true;
+
+                        result.Add(new Match3Move { From = cell, To = new Vector2Int(x + 1, y) });
+
+                        found = true;
+                    }
 
                     if (y + 1 < Rows && CreatesMatch(cell, new Vector2Int(x, y + 1)))
-                        return true;
+                    {
+                        if (result == null)
+                            return true;
+
+                        result.Add(new Match3Move { From = cell, To = new Vector2Int(x, y + 1) });
+
+                        found = true;
+                    }
                 }
             }
 
-            return false;
+            return found;
         }
 
         public void Shuffle()
