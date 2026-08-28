@@ -16,6 +16,11 @@ namespace Watermelon
 
         [SerializeField, Range(0f, 1f)] float fadeAlpha = 0f;
 
+        [BoxGroup("Intro", "Intro")]
+        [SerializeField] MinigameIntroElement topBarIntro;
+        [BoxGroup("Intro")]
+        [SerializeField, Min(0f)] float introStepInterval = 0.3f;
+
         [Space]
         [SerializeField] MinigameBackground background;
         [SerializeField] Image iconImage;
@@ -63,6 +68,8 @@ namespace Watermelon
         private SimpleCallback closedCallback;
 
         private MinigameView activeView;
+
+        private readonly MinigameIntroSequence introSequence = new MinigameIntroSequence();
 
         private bool isSettled;
 
@@ -114,6 +121,8 @@ namespace Watermelon
         {
             SettleIfNeeded(MinigameResult.Abandoned);
 
+            introSequence.Stop();
+
             resultFadeCase.KillActive();
             resultPanelCase.KillActive();
 
@@ -133,6 +142,8 @@ namespace Watermelon
 
         protected override void OnUnload()
         {
+            introSequence.Stop();
+
             StopView();
             SettleIfNeeded(MinigameResult.Abandoned);
             ClearView();
@@ -187,11 +198,38 @@ namespace Watermelon
 
             activeView.gameObject.SetActive(true);
             activeView.Finished += OnGameFinished;
-            activeView.Run(context);
+
+            activeView.Prepare(context);
+
+            PlayIntro();
+        }
+
+        private void PlayIntro()
+        {
+            introSequence.Clear();
+
+            if (topBarIntro != null)
+            {
+                topBarIntro.Hide();
+
+                introSequence.Add(MinigameIntroStage.Frame, topBarIntro.Reveal);
+            }
+
+            activeView.BuildIntro(introSequence);
+
+            introSequence.Play(introStepInterval, StartGame);
+        }
+
+        private void StartGame()
+        {
+            if (activeView != null)
+                activeView.Run();
         }
 
         private void OnGameFinished(MinigameResult result)
         {
+            introSequence.Stop();
+
             SettleIfNeeded(result);
 
             ShowResult(result);

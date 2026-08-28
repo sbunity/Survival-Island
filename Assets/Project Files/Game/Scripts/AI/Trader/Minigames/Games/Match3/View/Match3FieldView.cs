@@ -84,7 +84,7 @@ namespace Watermelon
         public int Rows => settings != null ? settings.Rows : 0;
         public RectTransform TilesRoot => tilesRoot;
 
-        public void Build(Match3Board board, Sprite[] icons, Match3Settings settings)
+        public void Build(Sprite[] icons, Match3Settings settings)
         {
             this.settings = settings;
             tileIcons = icons;
@@ -98,6 +98,15 @@ namespace Watermelon
             ReleaseAll();
 
             tiles = new Match3TileView[settings.Columns * settings.Rows];
+        }
+
+        public void SpawnTiles(Match3Board board, bool animated = true)
+        {
+            if (settings == null || tiles == null)
+                return;
+
+            ClearHint();
+            ReleaseAll();
 
             for (var y = 0; y < settings.Rows; y++)
             {
@@ -106,7 +115,10 @@ namespace Watermelon
                     var cell = new Vector2Int(x, y);
                     var tile = Rent(board.Get(cell));
 
-                    tile.PlaceAt(CellToPosition(cell));
+                    if (animated)
+                        tile.AnimateSpawn(CellToPosition(cell), spawnDuration, spawnEasing);
+                    else
+                        tile.PlaceAt(CellToPosition(cell));
 
                     SetTile(cell, tile);
                 }

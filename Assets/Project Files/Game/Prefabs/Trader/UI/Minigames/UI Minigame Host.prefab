@@ -1604,6 +1604,8 @@ MonoBehaviour:
   contentRoot: {fileID: 1830647629440316339}
   closeButton: {fileID: 7452291268609322253}
   fadeAlpha: 0
+  topBarIntro: {fileID: 7936532407321603824}
+  introStepInterval: 0.3
   background: {fileID: 2858625713687102562}
   iconImage: {fileID: 2207546253588583684}
   titleText: {fileID: 2623995997625807685}
@@ -1633,6 +1635,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6502502830049502702}
+  - component: {fileID: 6516005810824182463}
+  - component: {fileID: 7936532407321603824}
   m_Layer: 0
   m_Name: Top Bar
   m_TagString: Untagged
@@ -1664,6 +1668,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -138}
   m_SizeDelta: {x: 0, y: 260}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!225 &6516005810824182463
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960615364237807378}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &7936532407321603824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960615364237807378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d0bc2b292ace1448cb9a555cd28c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MinigameIntroElement
+  canvasGroup: {fileID: 6516005810824182463}
+  duration: 0.25
+  hiddenScale: 0.85
+  easing: 26
 --- !u!1 &8677118299865822711
 GameObject:
   m_ObjectHideFlags: 0

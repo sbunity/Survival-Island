@@ -9,6 +9,11 @@ namespace Watermelon
         [SerializeField] Match3FieldInput input;
         [SerializeField] Match3Hud hud;
 
+        [BoxGroup("Intro", "Intro")]
+        [SerializeField] MinigameIntroElement fieldIntro;
+        [BoxGroup("Intro")]
+        [SerializeField] MinigameIntroElement hudIntro;
+
         [BoxGroup("Timing", "Timing")]
         [SerializeField, Min(0f)] float finishDelay = 0.35f;
         [BoxGroup("Timing")]
@@ -35,7 +40,7 @@ namespace Watermelon
             this.settings = settings;
         }
 
-        protected override void OnRun(MinigameContext context)
+        protected override void OnPrepare(MinigameContext context)
         {
             if (settings == null || settings.TilePool.IsNullOrEmpty())
             {
@@ -51,9 +56,47 @@ namespace Watermelon
             board = new Match3Board(settings.Columns, settings.Rows, tileCurrencies.Length, context.Random);
             board.Fill();
 
-            field.Build(board, BuildIcons(), settings);
+            field.Build(BuildIcons(), settings);
 
             hud.Setup(GetIcon(tileCurrencies[objective.TileId]), 0, objective.Required, movesLeft);
+
+            input.ResetState();
+            input.IsEnabled = false;
+
+            isBusy = true;
+            idleTime = 0f;
+
+            if (fieldIntro != null)
+                fieldIntro.Hide();
+
+            if (hudIntro != null)
+                hudIntro.Hide();
+        }
+
+        protected override void OnBuildIntro(MinigameIntroSequence sequence)
+        {
+            if (board == null)
+                return;
+
+            if (fieldIntro != null)
+                sequence.Add(MinigameIntroStage.Board, fieldIntro.Reveal);
+
+            if (hudIntro != null)
+                sequence.Add(MinigameIntroStage.Hud, hudIntro.Reveal);
+
+            sequence.Add(MinigameIntroStage.Pieces, SpawnStartingTiles);
+        }
+
+        private void SpawnStartingTiles()
+        {
+            if (board != null)
+                field.SpawnTiles(board);
+        }
+
+        protected override void OnRun()
+        {
+            if (board == null)
+                return;
 
             input.ResetState();
             input.SwapRequested += OnSwapRequested;
