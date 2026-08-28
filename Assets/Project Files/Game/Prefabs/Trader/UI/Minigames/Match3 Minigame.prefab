@@ -171,6 +171,7 @@ MonoBehaviour:
   fallDurationPerCell: 0.07
   maxFallDuration: 0.32
   spawnDuration: 0.2
+  spawnDelay: 0.1
   stepPause: 0.05
   swapEasing: 15
   fallEasing: 1

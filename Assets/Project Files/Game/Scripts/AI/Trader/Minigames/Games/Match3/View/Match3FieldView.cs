@@ -22,6 +22,8 @@ namespace Watermelon
         [BoxGroup("Animation")]
         [SerializeField, Min(0.01f)] float spawnDuration = 0.2f;
         [BoxGroup("Animation")]
+        [SerializeField, Min(0f)] float spawnDelay = 0.1f;
+        [BoxGroup("Animation")]
         [SerializeField, Min(0f)] float stepPause = 0.05f;
 
         [BoxGroup("Easing", "Easing")]
@@ -287,9 +289,12 @@ namespace Watermelon
             Schedule(clearDuration, () =>
             {
                 var fallDuration = ApplyMoves(step);
-                ApplySpawns(step);
 
-                var settleDuration = Mathf.Max(fallDuration, step.Spawns.Count > 0 ? spawnDuration : 0f) + stepPause;
+                var spawnStart = fallDuration + spawnDelay;
+
+                ApplySpawns(step, spawnStart);
+
+                var settleDuration = Mathf.Max(fallDuration, step.Spawns.Count > 0 ? spawnStart + spawnDuration : 0f) + stepPause;
 
                 Schedule(settleDuration, () => PlayStep(resolution, index + 1, onStepResolved, onComplete));
             });
@@ -331,14 +336,14 @@ namespace Watermelon
             return longest;
         }
 
-        private void ApplySpawns(Match3Step step)
+        private void ApplySpawns(Match3Step step, float delay)
         {
             for (var i = 0; i < step.Spawns.Count; i++)
             {
                 var spawn = step.Spawns[i];
                 var tile = Rent(spawn.TileId);
 
-                tile.AnimateSpawn(CellToPosition(spawn.Cell), spawnDuration, spawnEasing);
+                tile.AnimateSpawn(CellToPosition(spawn.Cell), spawnDuration, spawnEasing, delay);
 
                 SetTile(spawn.Cell, tile);
             }

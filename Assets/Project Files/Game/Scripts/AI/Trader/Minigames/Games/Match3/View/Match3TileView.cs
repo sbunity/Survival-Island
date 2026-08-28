@@ -50,14 +50,14 @@ namespace Watermelon
             moveCase = RectTransform.DOAnchoredPosition(position, duration).SetEasing(easing);
         }
 
-        public void AnimateSpawn(Vector2 position, float duration, Ease.Type easing)
+        public void AnimateSpawn(Vector2 position, float duration, Ease.Type easing, float delay = 0f)
         {
             KillTweens();
 
             RectTransform.anchoredPosition = position;
             RectTransform.localScale = Vector3.zero;
 
-            scaleCase = RectTransform.DOScale(1f, duration).SetEasing(easing);
+            scaleCase = RectTransform.DOScale(1f, duration, delay).SetEasing(easing);
         }
 
         public void AnimateScale(float target, float duration, Ease.Type easing)
