@@ -4958,6 +4958,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefba80d2d74b2240a8cc06c16950d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &102269379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 102269380}
+  m_Layer: 0
+  m_Name: Waypoint 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &102269380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102269379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.58, y: -0.5, z: 11.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643736238}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &105351912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45049,6 +45080,21 @@ PrefabInstance:
       propertyPath: 'rescueLinkedTiles.Array.data[5]'
       value: 
       objectReference: {fileID: 1696516300}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: rescueReturnWaypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: 'rescueReturnWaypoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 810508724}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: 'rescueReturnWaypoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 102269380}
     - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -46696,6 +46742,37 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1194062014}
   m_SourcePrefab: {fileID: 100100000, guid: b50802db207ba154fb317460a34d17bb, type: 3}
+--- !u!1 &810508723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 810508724}
+  m_Layer: 0
+  m_Name: Waypoint 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &810508724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810508723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.53, y: -0.5, z: 17.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1643736238}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &810734603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106198,6 +106275,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1641222216}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1643736237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643736238}
+  m_Layer: 0
+  m_Name: Trader Rescue Route
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643736238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643736237}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 810508724}
+  - {fileID: 102269380}
+  m_Father: {fileID: 1780791335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1643915378
 GameObject:
   m_ObjectHideFlags: 0
@@ -114041,6 +114151,7 @@ Transform:
   - {fileID: 773305256}
   - {fileID: 476499837}
   - {fileID: 509374562}
+  - {fileID: 1643736238}
   - {fileID: 433935209}
   m_Father: {fileID: 2625476478768325108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

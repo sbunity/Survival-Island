@@ -42,6 +42,10 @@ namespace Watermelon
         [SerializeField, Min(0f)] float rotationSpeed = 8f;
         [BoxGroup("Movement")]
         [SerializeField, Min(0.01f)] float waypointThreshold = 0.35f;
+        [BoxGroup("Movement")]
+        [SerializeField, Min(0.1f)] float groundSampleDistance = 2f;
+        [BoxGroup("Movement")]
+        [SerializeField, Min(0.1f)] float groundSnapSpeed = 10f;
 
         [BoxGroup("Trading")]
         [SerializeField] TraderOffersDatabase offersDatabase;
@@ -83,6 +87,8 @@ namespace Watermelon
         [SerializeField, Min(0.1f)] float escortArriveDistance = 1.5f;
         [BoxGroup("Rescue")]
         [SerializeField, Min(0f)] float escortPauseDuration = 0.5f;
+        [BoxGroup("Rescue")]
+        [SerializeField] Transform[] rescueReturnWaypoints;
 
         public BaseWorldBehavior LinkedWorldBehavior { get; set; }
 
@@ -231,8 +237,7 @@ namespace Watermelon
                     break;
 
                 case Phase.SailingIn:
-                    UpdateSwimmingState();
-                    if (MoveAlongPath())
+                    if (MoveAlongPath(swimSpeed))
                         ArriveAtBase();
                     break;
 
@@ -248,8 +253,7 @@ namespace Watermelon
                     break;
 
                 case Phase.SailingOut:
-                    UpdateSwimmingState();
-                    if (MoveAlongPath())
+                    if (MoveAlongPath(swimSpeed))
                         ArriveAtIsland();
                     break;
             }
@@ -399,7 +403,7 @@ namespace Watermelon
                     break;
 
                 case RescueState.GoingHome:
-                    if (MoveTowardsPoint(islandPosition, escortArriveDistance))
+                    if (MoveAlongPath(escortMoveSpeed))
                         ArriveHomeAfterRescue();
                     break;
             }
@@ -416,16 +420,7 @@ namespace Watermelon
 
         private bool MoveTowardsPoint(Vector3 target, float arriveDistance)
         {
-            swimming = IsOverWater();
-            SetSwimming(swimming);
-
-            transform.position = Vector3.MoveTowards(transform.position, target, escortMoveSpeed * Time.deltaTime);
-
-            var direction = target - transform.position;
-            direction.y = 0f;
-
-            if (direction.sqrMagnitude > 0.0001f)
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+            StepTowards(target, escortMoveSpeed);
 
             var planarOffset = target - transform.position;
             planarOffset.y = 0f;
@@ -446,6 +441,7 @@ namespace Watermelon
         private void StartGoingHome()
         {
             SetMoving(true);
+            BuildRescueReturnPath();
             rescueState = RescueState.GoingHome;
         }
 
@@ -479,49 +475,57 @@ namespace Watermelon
         #region Movement
         private void BuildPathToBase()
         {
-            path.Clear();
-
-            if (!routeWaypoints.IsNullOrEmpty())
-            {
-                for (var i = 0; i < routeWaypoints.Length; i++)
-                    if (routeWaypoints[i] != null)
-                        path.Add(routeWaypoints[i].position);
-            }
-
-            path.Add(basePoint.position);
-            pathIndex = 0;
+            BuildPath(routeWaypoints, false, basePoint.position);
         }
 
         private void BuildPathToIsland()
         {
-            path.Clear();
+            BuildPath(routeWaypoints, true, islandPosition);
+        }
 
-            if (!routeWaypoints.IsNullOrEmpty())
+        private void BuildRescueReturnPath()
+        {
+            if (rescueReturnWaypoints.IsNullOrEmpty())
             {
-                for (var i = routeWaypoints.Length - 1; i >= 0; i--)
-                    if (routeWaypoints[i] != null)
-                        path.Add(routeWaypoints[i].position);
+                BuildPathToIsland();
+                return;
             }
 
-            path.Add(islandPosition);
+            BuildPath(rescueReturnWaypoints, false, islandPosition);
+        }
+
+        private void BuildPath(Transform[] waypoints, bool reversed, Vector3 destination)
+        {
+            path.Clear();
+
+            if (!waypoints.IsNullOrEmpty())
+            {
+                for (var i = 0; i < waypoints.Length; i++)
+                {
+                    var waypoint = waypoints[reversed ? waypoints.Length - 1 - i : i];
+
+                    if (waypoint != null)
+                        path.Add(waypoint.position);
+                }
+            }
+
+            path.Add(destination);
             pathIndex = 0;
         }
 
-        private bool MoveAlongPath()
+        private bool MoveAlongPath(float speed)
         {
             if (pathIndex >= path.Count)
                 return true;
 
             var target = path[pathIndex];
-            transform.position = Vector3.MoveTowards(transform.position, target, swimSpeed * Time.deltaTime);
 
-            var direction = target - transform.position;
-            direction.y = 0f;
+            StepTowards(target, speed);
 
-            if (direction.sqrMagnitude > 0.0001f)
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+            var planarOffset = target - transform.position;
+            planarOffset.y = 0f;
 
-            if ((transform.position - target).sqrMagnitude <= waypointThreshold * waypointThreshold)
+            if (planarOffset.sqrMagnitude <= waypointThreshold * waypointThreshold)
             {
                 pathIndex++;
                 return pathIndex >= path.Count;
@@ -530,10 +534,35 @@ namespace Watermelon
             return false;
         }
 
-        private void UpdateSwimmingState()
+        private void StepTowards(Vector3 target, float speed)
         {
-            swimming = IsOverWater();
+            var position = transform.position;
+
+            target.y = position.y;
+
+            transform.position = Vector3.MoveTowards(position, target, speed * Time.deltaTime);
+
+            var direction = target - transform.position;
+            direction.y = 0f;
+
+            if (direction.sqrMagnitude > 0.0001f)
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
+
+            UpdateGrounding();
+        }
+
+        private void UpdateGrounding()
+        {
+            var isOnMesh = NavMesh.SamplePosition(transform.position, out var hit, groundSampleDistance, NavMesh.AllAreas);
+
+            swimming = !isOnMesh || hit.mask == WATER_AREA_MASK;
             SetSwimming(swimming);
+
+            var surfaceHeight = swimming ? waterLevel : hit.position.y;
+
+            var position = transform.position;
+            position.y = Mathf.Lerp(position.y, surfaceHeight, Time.deltaTime * groundSnapSpeed);
+            transform.position = position;
         }
 
         private void UpdateWaterVisuals()
@@ -560,14 +589,6 @@ namespace Watermelon
                     waterTrailPlaying = false;
                 }
             }
-        }
-
-        private bool IsOverWater()
-        {
-            if (NavMesh.SamplePosition(transform.position, out var hit, 2f, NavMesh.AllAreas))
-                return hit.mask == WATER_AREA_MASK;
-
-            return true;
         }
 
         private void PlaceOnIsland()
@@ -751,27 +772,40 @@ namespace Watermelon
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.cyan;
+            DrawRouteGizmo(transform.position, routeWaypoints, basePoint != null ? basePoint.position : (Vector3?)null);
 
-            var previous = transform.position;
+            if (rescueReturnWaypoints.IsNullOrEmpty())
+                return;
 
-            if (!routeWaypoints.IsNullOrEmpty())
+            Gizmos.color = Color.yellow;
+            DrawRouteGizmo(transform.position, rescueReturnWaypoints, null, true);
+        }
+
+        private static void DrawRouteGizmo(Vector3 start, Transform[] waypoints, Vector3? destination, bool reversed = false)
+        {
+            var previous = start;
+
+            if (!waypoints.IsNullOrEmpty())
             {
-                for (var i = 0; i < routeWaypoints.Length; i++)
+                for (var i = 0; i < waypoints.Length; i++)
                 {
-                    if (routeWaypoints[i] == null)
+                    var waypoint = waypoints[reversed ? waypoints.Length - 1 - i : i];
+
+                    if (waypoint == null)
                         continue;
 
-                    Gizmos.DrawLine(previous, routeWaypoints[i].position);
-                    Gizmos.DrawWireSphere(routeWaypoints[i].position, 0.4f);
-                    previous = routeWaypoints[i].position;
+                    Gizmos.DrawLine(previous, waypoint.position);
+                    Gizmos.DrawWireSphere(waypoint.position, 0.4f);
+
+                    previous = waypoint.position;
                 }
             }
 
-            if (basePoint != null)
-            {
-                Gizmos.DrawLine(previous, basePoint.position);
-                Gizmos.DrawWireSphere(basePoint.position, 0.5f);
-            }
+            if (!destination.HasValue)
+                return;
+
+            Gizmos.DrawLine(previous, destination.Value);
+            Gizmos.DrawWireSphere(destination.Value, 0.5f);
         }
 
         private enum Phase
