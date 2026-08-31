@@ -23,8 +23,11 @@ namespace Watermelon
         [SerializeField, ReadOnly] float selectedInterval;
         [Tooltip("Seconds already elapsed within the current interval.")]
         [SerializeField, ReadOnly] float secondsElapsed;
+        [Tooltip("Seconds left before a raid that came due while the player was busy is finally spawned.")]
+        [SerializeField, ReadOnly] float resumeDelay;
 
         private const float SpawnRetryDelay = 5f;
+        private const float ResumeDelay = 1f;
 
         private PeriodicRaidSave save;
         private bool isInitialised;
@@ -80,6 +83,18 @@ namespace Watermelon
 
             if (save.SecondsElapsed < save.SelectedInterval)
                 return;
+
+            if (RaidSuppression.IsSuppressed)
+            {
+                resumeDelay = ResumeDelay;
+                return;
+            }
+
+            if (resumeDelay > 0f)
+            {
+                resumeDelay = Mathf.Max(0f, resumeDelay - Time.deltaTime);
+                return;
+            }
 
             var count = Random.Range(enemyCountRange.x, enemyCountRange.y + 1);
 

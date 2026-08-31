@@ -171,6 +171,7 @@ namespace Watermelon
             holdsMovementLock = true;
 
             MovementLock.Acquire();
+            RaidSuppression.Acquire();
         }
 
         private void ReleaseLock()
@@ -181,6 +182,7 @@ namespace Watermelon
             holdsMovementLock = false;
 
             MovementLock.Release();
+            RaidSuppression.Release();
         }
     }
 }

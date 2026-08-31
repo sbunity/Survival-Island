@@ -17,9 +17,6 @@ namespace Watermelon
         [BoxGroup("Match3 Field")]
         [SerializeField, Min(3)] int rows = 6;
 
-        // Playable area inside the field sprite, in normalized sprite space (0..1, origin at the bottom-left).
-        // Cells are laid out uniformly inside this rect, so it also handles non-square cells and sprites
-        // whose drawn grid is not centered on the texture.
         [BoxGroup("Match3 Field")]
         [SerializeField] Rect gridRect = new(0.0651f, 0.1161f, 0.8672f, 0.8253f);
 
