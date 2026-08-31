@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Watermelon
 {
@@ -9,6 +10,8 @@ namespace Watermelon
     {
         private static List<NavMeshSurface> navMeshSurfaces = new List<NavMeshSurface>();
         public static List<NavMeshSurface> NavMeshSurface => navMeshSurfaces;
+
+        private static readonly List<NavMeshObstacle> parkedCarvers = new();
 
         private static bool isNavMeshCalculated;
         public static bool IsNavMeshCalculated => isNavMeshCalculated;
@@ -76,6 +79,8 @@ namespace Watermelon
         {
             AsyncOperation updateOperation;
 
+            ParkCarvers();
+
             foreach(var navMeshSurface in navMeshSurfaces)
             {
                 updateOperation = navMeshSurface.UpdateNavMesh(navMeshSurface.navMeshData);
@@ -86,7 +91,41 @@ namespace Watermelon
                 }
             }
 
+            yield return null;
+
+            ReleaseCarvers();
+
             onRecalculated?.Invoke();
+        }
+
+        private static void ParkCarvers()
+        {
+            ReleaseCarvers();
+
+            var obstacles = Object.FindObjectsByType<NavMeshObstacle>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+
+            for (var i = 0; i < obstacles.Length; i++)
+            {
+                var obstacle = obstacles[i];
+
+                if (!obstacle.carving)
+                    continue;
+
+                obstacle.carving = false;
+
+                parkedCarvers.Add(obstacle);
+            }
+        }
+
+        private static void ReleaseCarvers()
+        {
+            for (var i = 0; i < parkedCarvers.Count; i++)
+            {
+                if (parkedCarvers[i] != null)
+                    parkedCarvers[i].carving = true;
+            }
+
+            parkedCarvers.Clear();
         }
 
         public static void InvokeOrSubscribe(SimpleCallback callback)
@@ -109,6 +148,8 @@ namespace Watermelon
 
                 updateCoroutine = null;
             }
+
+            ReleaseCarvers();
 
             navMeshRecalculating = false;
             pendingRecalculation = false;

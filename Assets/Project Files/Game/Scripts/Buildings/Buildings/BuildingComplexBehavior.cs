@@ -1,14 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
-
 namespace Watermelon
 {
     public class BuildingComplexBehavior : AbstractComplexBehavior<BuildingBehavior, PurchasePoint>, IGroundOpenable
     {
-        private List<NavMeshObstacle> obstacles = new List<NavMeshObstacle>();
-
         private bool openingFromGroundStream;
 
         public override void Awake()
@@ -16,7 +9,6 @@ namespace Watermelon
             base.Awake();
 
             unlockable.SetComplex(this);
-            GetComponentsInChildren(true, obstacles);
         }
 
         private void OnEnable()
@@ -27,7 +19,7 @@ namespace Watermelon
             if (!NavMeshController.IsNavMeshCalculated)
                 return;
 
-            RebuildNavMeshAndRefreshCarving();
+            NavMeshController.CalculateNavMesh();
         }
 
         public override void Init()
@@ -49,38 +41,6 @@ namespace Watermelon
                 return;
 
             InitialiseReconstruction(true);
-        }
-
-        public override void Purchase()
-        {
-            base.Purchase();
-
-            RebuildNavMeshAndRefreshCarving();
-        }
-
-        public override void Construct()
-        {
-            base.Construct();
-
-            RebuildNavMeshAndRefreshCarving();
-        }
-
-        private void RebuildNavMeshAndRefreshCarving()
-        {
-            for (int i = 0; i < obstacles.Count; i++)
-            {
-                if (obstacles[i] != null)
-                    obstacles[i].carveOnlyStationary = true;
-            }
-
-            NavMeshController.CalculateNavMesh(() =>
-            {
-                for (int i = 0; i < obstacles.Count; i++)
-                {
-                    if (obstacles[i] != null)
-                        obstacles[i].carveOnlyStationary = false;
-                }
-            });
         }
 
         public void OnGroundOpen(bool immediately = false)
