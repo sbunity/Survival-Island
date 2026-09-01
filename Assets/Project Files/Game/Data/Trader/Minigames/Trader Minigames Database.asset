@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.TraderMinigamesDatabase
   minigames:
   - {fileID: 11400000, guid: ec738d9c14c69934b979a7c85cb68973, type: 2}
+  - {fileID: 11400000, guid: e40a7b3c951d4a6b8f27c0de5136b982, type: 2}

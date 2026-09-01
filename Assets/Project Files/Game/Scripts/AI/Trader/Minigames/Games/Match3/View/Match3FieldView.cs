@@ -66,10 +66,7 @@ namespace Watermelon
         private Sprite[] tileIcons;
         private Match3Settings settings;
 
-        private Vector2 gridSize;
-        private Vector2 gridCenter;
-        private Vector2 cellSize;
-        private float tileSize;
+        private MinigameGridLayout grid;
 
         private bool hasSelection;
         private Vector2Int selectedCell;
@@ -132,60 +129,27 @@ namespace Watermelon
 
             var parent = fieldRoot.parent as RectTransform;
             var available = parent != null ? parent.rect.size : fieldRoot.rect.size;
+            var aspect = MinigameGridLayout.GetAspect(fieldImage != null ? fieldImage.sprite : null);
 
-            var sprite = fieldImage != null ? fieldImage.sprite : null;
-            var aspect = sprite != null && sprite.rect.height > 0f ? sprite.rect.width / sprite.rect.height : 1f;
+            grid = new MinigameGridLayout(available, aspect, settings.GridRect, settings.Columns, settings.Rows, settings.TileScale);
 
-            var width = available.x;
-            var height = width / aspect;
-
-            if (height > available.y)
-            {
-                height = available.y;
-                width = height * aspect;
-            }
-
-            fieldRoot.sizeDelta = new Vector2(width, height);
+            fieldRoot.sizeDelta = grid.FieldSize;
 
             tilesRoot.anchorMin = new Vector2(0.5f, 0.5f);
             tilesRoot.anchorMax = new Vector2(0.5f, 0.5f);
             tilesRoot.pivot = new Vector2(0.5f, 0.5f);
             tilesRoot.anchoredPosition = Vector2.zero;
-            tilesRoot.sizeDelta = new Vector2(width, height);
-
-            var grid = settings.GridRect;
-
-            gridSize = new Vector2(width * Mathf.Max(0.01f, grid.width), height * Mathf.Max(0.01f, grid.height));
-            gridCenter = new Vector2(width * (grid.center.x - 0.5f), height * (grid.center.y - 0.5f));
-            cellSize = new Vector2(gridSize.x / settings.Columns, gridSize.y / settings.Rows);
-            tileSize = Mathf.Min(cellSize.x, cellSize.y) * Mathf.Max(0.05f, settings.TileScale);
+            tilesRoot.sizeDelta = grid.FieldSize;
         }
 
         public Vector2 CellToPosition(Vector2Int cell)
         {
-            return new Vector2(
-                gridCenter.x - gridSize.x * 0.5f + cellSize.x * (cell.x + 0.5f),
-                gridCenter.y + gridSize.y * 0.5f - cellSize.y * (cell.y + 0.5f));
+            return grid.CellToPosition(cell);
         }
 
         public bool TryGetCell(Vector2 localPoint, out Vector2Int cell)
         {
-            cell = Vector2Int.zero;
-
-            if (settings == null || cellSize.x <= 0f || cellSize.y <= 0f)
-                return false;
-
-            var local = localPoint - gridCenter;
-
-            var x = Mathf.FloorToInt((local.x + gridSize.x * 0.5f) / cellSize.x);
-            var y = Mathf.FloorToInt((gridSize.y * 0.5f - local.y) / cellSize.y);
-
-            if (x < 0 || x >= settings.Columns || y < 0 || y >= settings.Rows)
-                return false;
-
-            cell = new Vector2Int(x, y);
-
-            return true;
+            return grid.TryGetCell(localPoint, out cell);
         }
 
         public void SetSelected(Vector2Int cell)
@@ -306,7 +270,7 @@ namespace Watermelon
                 if (tile == null)
                     continue;
 
-                tile.AnimateMove(gridCenter, shuffleGatherDuration, shuffleGatherEasing);
+                tile.AnimateMove(grid.GridCenter, shuffleGatherDuration, shuffleGatherEasing);
                 tile.AnimateScale(shuffleGatherScale, shuffleGatherDuration, shuffleGatherEasing);
             }
 
@@ -322,14 +286,14 @@ namespace Watermelon
                         if (tile == null)
                         {
                             tile = Rent(board.Get(cell));
-                            tile.PlaceAt(gridCenter);
+                            tile.PlaceAt(grid.GridCenter);
                             tile.SetScale(shuffleGatherScale);
 
                             SetTile(cell, tile);
                         }
                         else
                         {
-                            tile.Setup(GetIcon(board.Get(cell)), tileSize);
+                            tile.Setup(GetIcon(board.Get(cell)), grid.CellExtent);
                         }
 
                         tile.AnimateMove(CellToPosition(cell), shuffleSpreadDuration, shuffleSpreadEasing);
@@ -482,7 +446,7 @@ namespace Watermelon
 
             tile.gameObject.SetActive(true);
             tile.transform.SetParent(tilesRoot, false);
-            tile.Setup(GetIcon(tileId), tileSize);
+            tile.Setup(GetIcon(tileId), grid.CellExtent);
 
             return tile;
         }
@@ -541,7 +505,7 @@ namespace Watermelon
                     if (tile == null)
                         continue;
 
-                    tile.Resize(tileSize);
+                    tile.Resize(grid.CellExtent);
                     tile.PlaceAt(CellToPosition(cell));
                 }
             }

@@ -56,7 +56,7 @@ namespace Watermelon
 
         public abstract MinigameView CreateView(Transform parent);
 
-        public virtual Resource[] RollReward()
+        public virtual Resource[] RollReward(int seed)
         {
             return reward;
         }
@@ -79,15 +79,15 @@ namespace Watermelon
                 ? affordable[Random.Range(0, affordable.Count)]
                 : stakeCurrencies[Random.Range(0, stakeCurrencies.Length)];
 
-            return new Resource(currency, SnapAmount(stakeAmountRange.Random()));
+            return new Resource(currency, SnapAmount(stakeAmountRange.Random(), stakeAmountStep));
         }
 
-        private int SnapAmount(int amount)
+        protected static int SnapAmount(int amount, int step)
         {
-            if (stakeAmountStep <= 1)
+            if (step <= 1)
                 return Mathf.Max(1, amount);
 
-            return Mathf.Max(stakeAmountStep, Mathf.RoundToInt(amount / (float)stakeAmountStep) * stakeAmountStep);
+            return Mathf.Max(step, Mathf.RoundToInt(amount / (float)step) * step);
         }
 
         #region Editor

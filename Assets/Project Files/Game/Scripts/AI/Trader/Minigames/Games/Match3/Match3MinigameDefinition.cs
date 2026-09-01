@@ -48,10 +48,10 @@ namespace Watermelon
         [BoxGroup("Match3 Rules")]
         [SerializeField] DuoInt goalAmountRange = new(15, 25);
 
-        public override Resource[] RollReward()
+        public override Resource[] RollReward(int seed)
         {
             if (tilePool.IsNullOrEmpty())
-                return base.RollReward();
+                return base.RollReward(seed);
 
             var currency = tilePool[Random.Range(0, tilePool.Length)];
 
