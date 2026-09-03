@@ -132,6 +132,8 @@ namespace Watermelon
 
         public bool IsTrading => isInitialised && CurrentPhase == Phase.AtBase;
 
+        public bool CanInteract => IsTrading && !RaidState.IsRaidActive;
+
         public void OnWorldLoaded()
         {
             islandPosition = transform.position;
@@ -146,6 +148,8 @@ namespace Watermelon
             minigameSlot.Initialise(minigamesDatabase, traderSave);
             minigameSlot.Changed += OnMinigameSlotChanged;
 
+            RaidState.Changed += OnRaidStateChanged;
+
             if (tradeButton != null)
                 tradeButton.Clicked += OpenTradeWindow;
 
@@ -155,6 +159,8 @@ namespace Watermelon
                 RestoreState();
 
             isInitialised = true;
+
+            RefreshTradeAvailability();
         }
 
         public void OnWorldUnloaded()
@@ -164,6 +170,8 @@ namespace Watermelon
             rescueGate.Dispose();
 
             minigameLauncher.Abort();
+
+            RaidState.Changed -= OnRaidStateChanged;
 
             minigameSlot.Changed -= OnMinigameSlotChanged;
             minigameSlot.Dispose();
@@ -285,6 +293,8 @@ namespace Watermelon
             EnsureOffersGenerated();
 
             tradeButton.Activate();
+            RefreshTradeAvailability();
+
             Save();
         }
 
@@ -657,7 +667,7 @@ namespace Watermelon
 
         public bool TryPurchase(int activeIndex)
         {
-            if (CurrentPhase != Phase.AtBase || GetOfferRemaining(activeIndex) <= 0 || !CanAfford(activeIndex))
+            if (!CanInteract || GetOfferRemaining(activeIndex) <= 0 || !CanAfford(activeIndex))
                 return false;
 
             var offer = GetActiveOffer(activeIndex);
@@ -691,6 +701,9 @@ namespace Watermelon
 
         public void PlayMinigame()
         {
+            if (!CanInteract)
+                return;
+
             minigameLauncher.TryLaunch(this);
         }
 
@@ -738,13 +751,34 @@ namespace Watermelon
 
         private void OpenTradeWindow()
         {
-            if (CurrentPhase != Phase.AtBase)
+            if (!CanInteract)
                 return;
 
             var page = UIController.GetPage<UITrader>();
             page.SetTrader(this);
 
             UIController.ShowPage<UITrader>();
+        }
+
+        private void OnDestroy()
+        {
+            RaidState.Changed -= OnRaidStateChanged;
+        }
+
+        private void OnRaidStateChanged()
+        {
+            RefreshTradeAvailability();
+        }
+
+        private void RefreshTradeAvailability()
+        {
+            var isRaidActive = RaidState.IsRaidActive;
+
+            if (tradeButton != null)
+                tradeButton.SetInteractable(!isRaidActive);
+
+            if (isRaidActive)
+                CloseTradeWindowIfOpen();
         }
 
         private void CloseTradeWindowIfOpen()

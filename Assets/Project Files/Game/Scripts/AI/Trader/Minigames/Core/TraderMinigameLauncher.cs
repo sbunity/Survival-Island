@@ -151,7 +151,7 @@ namespace Watermelon
 
         private static void ReopenTradePanel(WanderingTraderBehavior trader)
         {
-            if (trader == null || !trader.IsTrading)
+            if (trader == null || !trader.CanInteract)
                 return;
 
             if (!UIController.HasPage<UITrader>())

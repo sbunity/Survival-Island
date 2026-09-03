@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Watermelon
 {
@@ -16,15 +17,20 @@ namespace Watermelon
 
         public event SimpleCallback Clicked;
 
+        public bool IsInteractable { get; private set; } = true;
+
         private TweenCase canvasAppearCase;
         private Vector3 canvasDefaultScale;
         private bool isActive;
 
         private Transform cameraTransform;
+        private Button button;
 
         private void Awake()
         {
             worldSpaceButtonRef.AddOnClickListener(OnButtonClicked);
+
+            button = worldSpaceButtonRef.GetComponent<Button>();
 
             canvasDefaultScale = canvasRef.transform.localScale;
             canvasRef.enabled = false;
@@ -75,6 +81,17 @@ namespace Watermelon
             DistanceToggle.RemoveObject(this);
         }
 
+        public void SetInteractable(bool value)
+        {
+            if (IsInteractable == value)
+                return;
+
+            IsInteractable = value;
+
+            if (button != null)
+                button.interactable = value;
+        }
+
         public void PlayerEnteredZone()
         {
             canvasRef.enabled = true;
@@ -99,7 +116,7 @@ namespace Watermelon
 
         private void OnButtonClicked()
         {
-            if (!isActive || !IsDistanceToggleInCloseMode)
+            if (!isActive || !IsInteractable || !IsDistanceToggleInCloseMode)
                 return;
 
             Clicked?.Invoke();

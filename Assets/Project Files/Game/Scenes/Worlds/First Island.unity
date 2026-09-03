@@ -45017,6 +45017,16 @@ PrefabInstance:
       objectReference: {fileID: 476499837}
     - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
+      propertyPath: maxTradeTime
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: minTradeTime
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098528135632288001, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
       propertyPath: capturedPoint
       value: 
       objectReference: {fileID: 433935209}

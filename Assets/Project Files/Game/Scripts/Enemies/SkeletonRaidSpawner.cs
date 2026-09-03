@@ -48,6 +48,7 @@ namespace Watermelon
         private readonly List<Transform> spawnPoints = new List<Transform>();
 
         private int activeEnemyCount;
+        private bool holdsRaidState;
 
         public bool SpawnWave() => SpawnWave(enemyCount);
 
@@ -96,6 +97,8 @@ namespace Watermelon
             TotalSpawned = aliveEnemies.Count;
             IsActive = TotalSpawned > 0;
 
+            SetRaidStateHeld(IsActive);
+
             return IsActive;
         }
 
@@ -118,6 +121,21 @@ namespace Watermelon
             aliveEnemies.Clear();
             deathHandlers.Clear();
             IsActive = false;
+
+            SetRaidStateHeld(false);
+        }
+
+        private void SetRaidStateHeld(bool value)
+        {
+            if (holdsRaidState == value)
+                return;
+
+            holdsRaidState = value;
+
+            if (value)
+                RaidState.Acquire();
+            else
+                RaidState.Release();
         }
 
         private void OnEnemyDied(BaseEnemyBehavior enemy)
@@ -133,6 +151,9 @@ namespace Watermelon
             if (aliveEnemies.Count == 0)
             {
                 IsActive = false;
+
+                SetRaidStateHeld(false);
+
                 WaveCleared?.Invoke();
             }
         }
