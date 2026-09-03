@@ -83,6 +83,14 @@ namespace Watermelon
                 items[i].SetSelected(items[i].Symbol == symbol);
         }
 
+        public void Toggle(int symbol)
+        {
+            if (SelectedSymbol == symbol)
+                ClearSelection();
+            else
+                Select(symbol);
+        }
+
         public void ClearSelection()
         {
             SelectedSymbol = SudokuBoard.EMPTY;

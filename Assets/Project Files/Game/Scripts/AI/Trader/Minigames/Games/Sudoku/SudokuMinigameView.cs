@@ -223,7 +223,7 @@ namespace Watermelon
                 return;
             }
 
-            palette.Select(symbol);
+            palette.Toggle(symbol);
             field.SetHighlightedSymbol(palette.SelectedSymbol);
         }
 
