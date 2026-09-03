@@ -24,6 +24,8 @@ namespace Watermelon
         private readonly List<UITraderOfferItem> items = new List<UITraderOfferItem>();
         private UITraderMinigameItem minigameItem;
 
+        private WanderingTraderBehavior subscribedTrader;
+
         private bool holdsMovementLock;
 
         public override void Init()
@@ -46,15 +48,15 @@ namespace Watermelon
             panelRectTransform.anchoredPosition = HIDE_POSITION;
             panelRectTransform.DOAnchoredPosition(DEFAULT_POSITION, 0.4f).SetEasing(Ease.Type.CircOut);
 
-            RebuildItems();
+            Subscribe();
+            BuildItems();
 
             NotifyOpened();
         }
 
         protected override void OnHide()
         {
-            if (trader != null)
-                trader.OffersChanged -= OnOffersChanged;
+            Unsubscribe();
 
             fadeImage.DOFade(0, 0.4f);
             panelRectTransform.DOAnchoredPosition(HIDE_POSITION, 0.4f).SetEasing(Ease.Type.CircIn).OnComplete(delegate
@@ -68,11 +70,13 @@ namespace Watermelon
 
         protected override void OnUnload()
         {
+            Unsubscribe();
             ReleaseMovementLock();
         }
 
         private void OnDestroy()
         {
+            Unsubscribe();
             ReleaseMovementLock();
         }
 
@@ -96,54 +100,146 @@ namespace Watermelon
             MovementLock.Release();
         }
 
-        private void RebuildItems()
+        #region Trader Subscription
+        private void Subscribe()
         {
-            ClearItems();
+            if (subscribedTrader == trader)
+                return;
+
+            Unsubscribe();
 
             if (trader == null)
                 return;
 
-            trader.OffersChanged -= OnOffersChanged;
-            trader.OffersChanged += OnOffersChanged;
+            subscribedTrader = trader;
 
-            RebuildMinigameItem();
+            subscribedTrader.OffersChanged += OnTraderChanged;
+            subscribedTrader.MinigameChanged += OnTraderChanged;
+        }
+
+        private void Unsubscribe()
+        {
+            if (subscribedTrader == null)
+                return;
+
+            subscribedTrader.OffersChanged -= OnTraderChanged;
+            subscribedTrader.MinigameChanged -= OnTraderChanged;
+
+            subscribedTrader = null;
+        }
+        #endregion
+
+        #region Items
+        private void OnTraderChanged()
+        {
+            if (HasLayoutChanged())
+                BuildItems();
+            else
+                RedrawItems();
+        }
+
+        private bool HasLayoutChanged()
+        {
+            if (trader == null)
+                return items.Count > 0 || minigameItem != null;
+
+            if (HasMinigame() != (minigameItem != null))
+                return true;
+
+            var shownCount = 0;
 
             for (var i = 0; i < trader.ActiveOfferCount; i++)
             {
                 if (trader.GetOfferRemaining(i) <= 0)
                     continue;
 
-                var itemObject = Instantiate(offerItemPrefab, contentTransform);
-                itemObject.SetActive(true);
+                if (shownCount >= items.Count || items[shownCount] == null || items[shownCount].OfferIndex != i)
+                    return true;
 
-                var item = itemObject.GetComponent<UITraderOfferItem>();
+                shownCount++;
+            }
+
+            return shownCount != items.Count;
+        }
+
+        private bool HasMinigame()
+        {
+            if (minigameItemPrefab == null || trader == null)
+                return false;
+
+            var slot = trader.MinigameSlot;
+
+            return slot != null && slot.HasGame;
+        }
+
+        private void BuildItems()
+        {
+            ClearItems();
+
+            if (trader == null)
+                return;
+
+            if (HasMinigame())
+            {
+                minigameItem = CreateItem<UITraderMinigameItem>(minigameItemPrefab);
+                minigameItem.Init(this, trader.MinigameSlot);
+                minigameItem.gameObject.SetActive(true);
+            }
+
+            for (var i = 0; i < trader.ActiveOfferCount; i++)
+            {
+                if (trader.GetOfferRemaining(i) <= 0)
+                    continue;
+
+                var item = CreateItem<UITraderOfferItem>(offerItemPrefab);
                 item.Init(this, trader, i);
+                item.gameObject.SetActive(true);
 
                 items.Add(item);
             }
         }
 
-        private void RebuildMinigameItem()
+        private void RedrawItems()
         {
-            if (minigameItemPrefab == null)
-                return;
+            if (minigameItem != null)
+                minigameItem.Redraw();
 
-            var slot = trader.MinigameSlot;
-            if (slot == null || !slot.HasGame)
-                return;
-
-            var itemObject = Instantiate(minigameItemPrefab, contentTransform);
-            itemObject.SetActive(true);
-            itemObject.transform.SetAsFirstSibling();
-
-            minigameItem = itemObject.GetComponent<UITraderMinigameItem>();
-            minigameItem.Init(this, slot);
+            for (var i = 0; i < items.Count; i++)
+                if (items[i] != null)
+                    items[i].Redraw();
         }
 
-        private void OnOffersChanged()
+        private T CreateItem<T>(GameObject prefab) where T : Component
         {
-            RebuildItems();
+            var itemObject = Instantiate(prefab, contentTransform);
+            itemObject.SetActive(false);
+
+            return itemObject.GetComponent<T>();
         }
+
+        private void ClearItems()
+        {
+            if (minigameItem != null)
+            {
+                DestroyItem(minigameItem.gameObject);
+
+                minigameItem = null;
+            }
+
+            for (var i = 0; i < items.Count; i++)
+                if (items[i] != null)
+                    DestroyItem(items[i].gameObject);
+
+            items.Clear();
+        }
+
+        private static void DestroyItem(GameObject itemObject)
+        {
+            itemObject.SetActive(false);
+
+            Destroy(itemObject);
+        }
+        #endregion
 
         public void PurchaseOffer(int offerIndex)
         {
@@ -155,22 +251,6 @@ namespace Watermelon
         {
             if (trader != null)
                 trader.PlayMinigame();
-        }
-
-        private void ClearItems()
-        {
-            if (minigameItem != null)
-            {
-                Destroy(minigameItem.gameObject);
-
-                minigameItem = null;
-            }
-
-            for (var i = 0; i < items.Count; i++)
-                if (items[i] != null)
-                    Destroy(items[i].gameObject);
-
-            items.Clear();
         }
 
         private void OnCloseButtonClicked()

@@ -19,6 +19,7 @@ namespace Watermelon
         private UITrader page;
         private WanderingTraderBehavior trader;
         private int offerIndex;
+        public int OfferIndex => offerIndex;
 
         public void Init(UITrader page, WanderingTraderBehavior trader, int offerIndex)
         {

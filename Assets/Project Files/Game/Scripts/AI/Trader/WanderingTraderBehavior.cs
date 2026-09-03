@@ -93,6 +93,7 @@ namespace Watermelon
         public BaseWorldBehavior LinkedWorldBehavior { get; set; }
 
         public event SimpleCallback OffersChanged;
+        public event SimpleCallback MinigameChanged;
 
         public Transform Transform => transform;
         public bool IsRescued => traderSave != null && traderSave.IsRescued;
@@ -685,7 +686,7 @@ namespace Watermelon
 
         private void OnMinigameSlotChanged()
         {
-            OffersChanged?.Invoke();
+            MinigameChanged?.Invoke();
         }
 
         public void PlayMinigame()
