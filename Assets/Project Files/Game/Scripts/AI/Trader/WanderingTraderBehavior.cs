@@ -150,6 +150,8 @@ namespace Watermelon
             minigameSlot.Initialise(minigamesDatabase, traderSave);
             minigameSlot.Changed += OnMinigameSlotChanged;
 
+            minigameLauncher.Finished += OnMinigameFinished;
+
             RaidState.Changed += OnRaidStateChanged;
 
             if (tradeButton != null)
@@ -171,6 +173,7 @@ namespace Watermelon
 
             rescueGate.Dispose();
 
+            minigameLauncher.Finished -= OnMinigameFinished;
             minigameLauncher.Abort();
 
             RaidState.Changed -= OnRaidStateChanged;
@@ -255,7 +258,7 @@ namespace Watermelon
                 case Phase.AtBase:
                     swimming = false;
 
-                    if (!minigameSlot.IsBusy)
+                    if (!IsMinigameSessionActive)
                     {
                         traderSave.VisitTimeLeft -= Time.deltaTime;
                         if (traderSave.VisitTimeLeft <= 0f)
@@ -691,15 +694,35 @@ namespace Watermelon
 
             OffersChanged?.Invoke();
 
-            if (AreAllOffersExhausted() && !minigameSlot.IsBusy)
-                StartSailingToIsland();
+            TryLeaveEarly();
 
             return true;
         }
 
+        private void TryLeaveEarly()
+        {
+            if (!isInitialised || CurrentPhase != Phase.AtBase)
+                return;
+
+            if (IsMinigameSessionActive)
+                return;
+
+            if (!AreAllOffersExhausted() || !minigameSlot.IsSettled)
+                return;
+
+            StartSailingToIsland();
+        }
+
+        private bool IsMinigameSessionActive => minigameSlot.IsBusy || minigameLauncher.IsRunning;
+
         private void OnMinigameSlotChanged()
         {
             MinigameChanged?.Invoke();
+        }
+
+        private void OnMinigameFinished()
+        {
+            TryLeaveEarly();
         }
 
         public void PlayMinigame()

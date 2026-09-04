@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Watermelon
 {
@@ -22,6 +22,8 @@ namespace Watermelon
         public MinigameSlotState State => save != null ? (MinigameSlotState)save.MinigameState : MinigameSlotState.Available;
 
         public bool IsPlayable => HasGame && !IsBusy && State == MinigameSlotState.Available;
+
+        public bool IsSettled => !HasGame || (!IsBusy && State != MinigameSlotState.Available);
 
         public void Initialise(TraderMinigamesDatabase database, TraderSave save)
         {

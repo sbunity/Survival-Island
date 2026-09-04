@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Watermelon
 {
@@ -15,6 +15,8 @@ namespace Watermelon
 
         private bool isRunning;
         public bool IsRunning => isRunning;
+
+        public event SimpleCallback Finished;
 
         public bool TryLaunch(WanderingTraderBehavior trader)
         {
@@ -124,6 +126,8 @@ namespace Watermelon
             slot = null;
 
             RestoreGameHud();
+
+            Finished?.Invoke();
 
             if (reopenPanel)
                 ReopenTradePanel(trader);
