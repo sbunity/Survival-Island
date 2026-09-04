@@ -29,8 +29,8 @@ namespace Watermelon
         [SerializeField] UIWorldChangePopUp worldTransitionPopUp;
         public UIWorldChangePopUp WorldTransitionPopUp => worldTransitionPopUp;
 
-        [SerializeField] UIBaseAttackPopup baseAttackPopup;
-        public UIBaseAttackPopup BaseAttackPopup => baseAttackPopup;
+        [SerializeField] HudBannerStack bannerStack;
+        public HudBannerStack BannerStack => bannerStack;
         
         [Space]
         [SerializeField] Button upgradesButton;
@@ -84,7 +84,7 @@ namespace Watermelon
 
             tutorialCanvasController.Init();
             worldTransitionPopUp.Initialise();
-            baseAttackPopup.Initialise();
+            bannerStack.Initialise();
 
             backgroundImage.color = Color.white;
 

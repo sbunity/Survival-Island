@@ -165,11 +165,15 @@ namespace Watermelon
             isInitialised = true;
 
             RefreshTradeAvailability();
+
+            UpdatePresence();
         }
 
         public void OnWorldUnloaded()
         {
             isInitialised = false;
+
+            UpdatePresence();
 
             rescueGate.Dispose();
 
@@ -300,6 +304,8 @@ namespace Watermelon
             tradeButton.Activate();
             RefreshTradeAvailability();
 
+            UpdatePresence();
+
             Save();
         }
 
@@ -312,6 +318,8 @@ namespace Watermelon
 
             tradeButton.Deactivate();
             CloseTradeWindowIfOpen();
+
+            UpdatePresence();
 
             Save();
         }
@@ -330,6 +338,8 @@ namespace Watermelon
             traderSave.OfferRemaining.Clear();
 
             minigameSlot.Clear();
+
+            UpdatePresence();
 
             Save();
         }
@@ -371,6 +381,8 @@ namespace Watermelon
                 tradeButton.Deactivate();
 
             rescueGate.Initialise(rescueLinkedTiles, rescueLinkedBuildings, OnRescueAreaUnlocked);
+
+            UpdatePresence();
         }
 
         private void OnRescueAreaUnlocked()
@@ -395,6 +407,8 @@ namespace Watermelon
             SetSitting(false);
             SetMoving(true);
             rescueState = RescueState.RunningToPlayer;
+
+            UpdatePresence();
 
             return true;
         }
@@ -479,6 +493,9 @@ namespace Watermelon
             minigameSlot.Clear();
 
             rescueState = RescueState.None;
+
+            UpdatePresence();
+
             Save();
         }
 
@@ -789,11 +806,18 @@ namespace Watermelon
         private void OnDestroy()
         {
             RaidState.Changed -= OnRaidStateChanged;
+
+            TraderPresence.SetAtBase(this, false);
         }
 
         private void OnRaidStateChanged()
         {
             RefreshTradeAvailability();
+        }
+
+        private void UpdatePresence()
+        {
+            TraderPresence.SetAtBase(this, IsTrading && rescueState == RescueState.None);
         }
 
         private void RefreshTradeAvailability()
