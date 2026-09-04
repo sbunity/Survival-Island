@@ -45107,8 +45107,18 @@ PrefabInstance:
       objectReference: {fileID: 102269380}
     - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000008829686
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.196
+      value: -3.25
       objectReference: {fileID: 0}
     - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
@@ -45117,8 +45127,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.9775223
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.21083201
+      objectReference: {fileID: 0}
+    - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -24.342
       objectReference: {fileID: 0}
     - target: {fileID: 3142367149930284109, guid: fbb8a8a16c272f54ca3883bf4ed78ef5,
         type: 3}
@@ -142208,8 +142233,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 18863360}
     - {fileID: 1820117116}
+    - {fileID: 18863360}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0

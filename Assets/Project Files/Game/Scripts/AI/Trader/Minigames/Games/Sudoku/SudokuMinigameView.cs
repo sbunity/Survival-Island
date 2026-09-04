@@ -49,7 +49,7 @@ namespace Watermelon
                 return;
             }
 
-            difficulty = SudokuDifficulty.Pick(settings.Difficulties, context.Seed);
+            difficulty = MinigameDifficultyPicker.Pick(settings.Difficulties, context.Seed);
 
             if (difficulty == null)
             {

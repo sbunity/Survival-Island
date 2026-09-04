@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c4c990ce4447bbb91f3c8a42d59d07, type: 3}
+  m_Name: Shell Game Minigame
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ShellMinigameDefinition
+  id: 4c7f21ab-9d63-4f08-b5e2-0a1c8d67f394
+  title: Shell Game
+  icon: {fileID: 0}
+  description: Find the shell that still hides the prize
+  background: {fileID: 0}
+  stage: 2
+  weight: 1
+  stakeType: 1
+  reward: []
+  stakeCurrencies: 0100000002000000030000006400000065000000
+  stakeAmountRange:
+    firstValue: 10
+    secondValue: 30
+  stakeAmountStep: 5
+  winMultiplier: 2
+  viewPrefab: {fileID: 8200000000000000002, guid: 0d59e7a3b46c4f81b2ad5c9e1f803a72,
+    type: 3}
+  tableSprite: {fileID: 21300000, guid: 6137788e97998f347b00b3b583b5f2e4, type: 3}
+  shellSprite: {fileID: 21300000, guid: a24244a9315b23c43a8be7341a26bd7b, type: 3}
+  slotsRect:
+    serializedVersion: 2
+    x: 0.1775
+    y: 0.524
+    width: 0.645
+    height: 0.28
+  shellScale: 1
+  prizeScale: 0.5
+  difficulties:
+  - title: Normal
+    weight: 1
+    rewardMultiplier: 1
+    shellCount: 3
+    swapCount:
+      firstValue: 7
+      secondValue: 10
+    swapDuration: 0.42
+    swapInterval: 0.07

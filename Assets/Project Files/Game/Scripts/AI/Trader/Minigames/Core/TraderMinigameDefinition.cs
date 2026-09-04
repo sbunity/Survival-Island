@@ -52,13 +52,17 @@ namespace Watermelon
 
         [BoxGroup("Stake")]
         [SerializeField, ShowIf("IsWagerStake"), Min(1f)] float winMultiplier = 2f;
-        public float WinMultiplier => winMultiplier;
 
         public abstract MinigameView CreateView(Transform parent);
 
         public virtual Resource[] RollReward(int seed)
         {
             return reward;
+        }
+
+        public virtual float RollWinMultiplier(int seed)
+        {
+            return winMultiplier;
         }
 
         public Resource RollStake()

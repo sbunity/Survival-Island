@@ -27,6 +27,7 @@ namespace Watermelon
         [SerializeField] TMP_Text titleText;
         [SerializeField] TMP_Text descriptionText;
         [SerializeField] TMP_Text stakeText;
+        [SerializeField] TMP_Text wagerBadgeText;
 
         [BoxGroup("Result Popup", "Result Popup")]
         [SerializeField] GameObject resultPopup;
@@ -48,13 +49,17 @@ namespace Watermelon
         [SerializeField, Range(0f, 1f)] float resultFadeAlpha = 0.5f;
 
         [BoxGroup("Captions", "Captions")]
-        [SerializeField] string stakeCaptionFormat = "Bet: {0}";
+        [SerializeField] string wagerCaptionFormat = "Bet {0} to win {1}";
+        [BoxGroup("Captions")]
+        [SerializeField] string wagerBadgeCaption = "Bet game";
         [BoxGroup("Captions")]
         [SerializeField] string prizeCaptionFormat = "Prize: {0}";
         [BoxGroup("Captions")]
         [SerializeField] string winCaption = "You won!";
         [BoxGroup("Captions")]
         [SerializeField] string loseCaption = "You lost";
+        [BoxGroup("Captions")]
+        [SerializeField] string lostStakeFormat = "Lost {0}";
         [BoxGroup("Captions")]
         [SerializeField] string winButtonCaption = "Collect";
         [BoxGroup("Captions")]
@@ -152,6 +157,8 @@ namespace Watermelon
             settledCallback = null;
         }
 
+        private bool IsWager => stakeRule != null && stakeRule.Type == MinigameStakeType.Wager && stakeRule.Stake.amount > 0;
+
         private void BuildHeader()
         {
             if (definition == null)
@@ -174,9 +181,15 @@ namespace Watermelon
 
             if (stakeText != null)
             {
-                stakeText.text = stakeRule != null && stakeRule.Stake.amount > 0
-                    ? string.Format(stakeCaptionFormat, TraderResourceFormat.Format(stakeRule.Stake))
+                stakeText.text = IsWager
+                    ? string.Format(wagerCaptionFormat, TraderResourceFormat.Format(stakeRule.Stake), TraderResourceFormat.Format(stakeRule.Prize))
                     : string.Format(prizeCaptionFormat, TraderResourceFormat.Format(stakeRule?.Prize));
+            }
+
+            if (wagerBadgeText != null)
+            {
+                wagerBadgeText.text = wagerBadgeCaption;
+                wagerBadgeText.gameObject.SetActive(IsWager);
             }
         }
 
@@ -253,8 +266,15 @@ namespace Watermelon
 
             if (resultRewardText != null)
             {
-                resultRewardText.text = result.IsWin && stakeRule != null ? TraderResourceFormat.Format(stakeRule.Prize) : string.Empty;
-                resultRewardText.gameObject.SetActive(result.IsWin);
+                var payout = string.Empty;
+
+                if (result.IsWin && stakeRule != null)
+                    payout = TraderResourceFormat.Format(stakeRule.Prize);
+                else if (IsWager)
+                    payout = string.Format(lostStakeFormat, TraderResourceFormat.Format(stakeRule.Stake));
+
+                resultRewardText.text = payout;
+                resultRewardText.gameObject.SetActive(!string.IsNullOrEmpty(payout));
             }
 
             if (resultButtonText != null)

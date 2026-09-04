@@ -167,7 +167,7 @@ namespace Watermelon
                 return;
             }
 
-            stakeRule = MinigameStakeRuleFactory.Create(definition, new Resource(save.MinigameStakeCurrency, save.MinigameStakeAmount), save.MinigameReward);
+            stakeRule = MinigameStakeRuleFactory.Create(definition, save.MinigameSeed, new Resource(save.MinigameStakeCurrency, save.MinigameStakeAmount), save.MinigameReward);
         }
     }
 }

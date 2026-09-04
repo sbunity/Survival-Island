@@ -50,7 +50,7 @@ namespace Watermelon
             if (pool.IsNullOrEmpty())
                 return base.RollReward(seed);
 
-            var difficulty = SudokuDifficulty.Pick(difficulties, seed);
+            var difficulty = MinigameDifficultyPicker.Pick(difficulties, seed);
             var multiplier = difficulty != null ? difficulty.RewardMultiplier : 1f;
 
             var currency = pool[Random.Range(0, pool.Length)];
