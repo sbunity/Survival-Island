@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -30,6 +30,7 @@ namespace Watermelon
         private static readonly Color PanelColor = new Color(0.05f, 0.05f, 0.07f, 0.93f);
         private static readonly Color ButtonColor = new Color(0.20f, 0.45f, 0.85f, 1f);
         private static readonly Color AddAllButtonColor = new Color(0.20f, 0.65f, 0.35f, 1f);
+        private static readonly Color TraderButtonColor = new Color(0.85f, 0.55f, 0.15f, 1f);
 
         private GameObject panelObject;
         private bool isPanelVisible;
@@ -147,6 +148,24 @@ namespace Watermelon
                     CurrencyController.Add(currencyType, LargeAmount, "cheat");
                 }
             }, 0, 110, 30, AddAllButtonColor, expandWidth: true);
+
+            CreateButton(panelRect, "Call Trader Button", "CALL TRADER", CallTrader, 0, 110, 30, TraderButtonColor, expandWidth: true);
+        }
+
+        private void CallTrader()
+        {
+            var traders = FindObjectsByType<WanderingTraderBehavior>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+
+            for (var i = 0; i < traders.Length; i++)
+            {
+                if (traders[i].CheatCallToBase())
+                {
+                    Debug.Log("[Cheats] Trader is heading to the base.");
+                    return;
+                }
+            }
+
+            Debug.Log("[Cheats] There is no trader to call - he is still captured, already sailing in or trading at the base.");
         }
 
         private RectTransform CreateScrollView(Transform parent, out RectTransform content)

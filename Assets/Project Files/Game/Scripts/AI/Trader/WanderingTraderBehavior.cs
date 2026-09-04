@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -123,6 +123,8 @@ namespace Watermelon
         private bool waterTrailPlaying;
 
         private bool isInitialised;
+
+        private bool cheatCallPending;
 
         private Phase CurrentPhase
         {
@@ -319,7 +321,8 @@ namespace Watermelon
             swimming = false;
 
             CurrentPhase = Phase.Idle;
-            traderSave.TimeUntilArrival = GetRandomRestTime();
+            traderSave.TimeUntilArrival = cheatCallPending ? 0f : GetRandomRestTime();
+            cheatCallPending = false;
             traderSave.ActiveOfferIndices.Clear();
             traderSave.OfferRemaining.Clear();
 
@@ -786,6 +789,32 @@ namespace Watermelon
             var page = UIController.GetPage<UITrader>();
             if (page != null && page.IsPageDisplayed && page.CurrentTrader == this)
                 UIController.HidePage<UITrader>();
+        }
+        #endregion
+
+        #region Cheats
+        public bool CheatCallToBase()
+        {
+            if (!isInitialised || traderSave == null)
+                return false;
+
+            if (rescueState != RescueState.None)
+                return false;
+
+            switch (CurrentPhase)
+            {
+                case Phase.Idle:
+                    traderSave.TimeUntilArrival = 0f;
+                    StartSailingToBase();
+                    return true;
+
+                case Phase.SailingOut:
+                    cheatCallPending = true;
+                    return true;
+
+                default:
+                    return false;
+            }
         }
         #endregion
 
