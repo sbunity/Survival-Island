@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfd4aada005ff040ac5f994f2fbd64e, type: 3}
+  m_Name: Treasure Hunt Minigame
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.TreasureHuntMinigameDefinition
+  id: b6d41f27-58ac-4c93-a0f5-2e7d19b4c8e0
+  title: Treasure Hunt
+  icon: {fileID: 0}
+  description: 'Dig the sand and listen: cold, warm or hot'
+  background: {fileID: 0}
+  stage: 1
+  weight: 1
+  stakeType: 0
+  reward: []
+  stakeCurrencies: 
+  stakeAmountRange:
+    firstValue: 10
+    secondValue: 30
+  stakeAmountStep: 5
+  winMultiplier: 2
+  viewPrefab: {fileID: 797959787544461007, guid: 94790763e290bfa4caaa224963f8d45f,
+    type: 3}
+  fieldSprite: {fileID: 21300000, guid: ea123af0eef98ce4781b62edfd07f6f0, type: 3}
+  buriedSprite: {fileID: 21300000, guid: 6797b9d1e9b57f5488d7cbf7f86d68b6, type: 3}
+  dugSprite: {fileID: 21300000, guid: 84c1151e7ff84aa4190e7754d7ae0327, type: 3}
+  gridRect:
+    serializedVersion: 2
+    x: 0.0814
+    y: 0.0738
+    width: 0.8443
+    height: 0.8368
+  cellScale: 1
+  prizeScale: 0.6
+  distanceMode: 0
+  hintBands:
+  - caption: Hot
+    maxDistance: 1
+    color: {r: 0.85, g: 0.27, b: 0.15, a: 1}
+  - caption: Warm
+    maxDistance: 2
+    color: {r: 0.92, g: 0.6, b: 0.13, a: 1}
+  - caption: Cold
+    maxDistance: 2147483647
+    color: {r: 0.2, g: 0.48, b: 0.8, a: 1}
+  difficulties:
+  - title: Normal
+    weight: 1
+    rewardMultiplier: 1
+    columns: 5
+    rows: 5
+    digs: 6
+    hintBands: []
+  rewardPool: 04000000320000003300000034000000
+  rewardAmountRange:
+    firstValue: 20
+    secondValue: 40
+  rewardAmountStep: 5

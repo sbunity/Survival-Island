@@ -2,7 +2,7 @@
   "mcpServers": {
     "ai-game-developer": {
       "type": "http",
-      "url": "http://localhost:25176"
+      "url": "http://localhost:25176/p/ef424e0a"
     }
   }
 }
