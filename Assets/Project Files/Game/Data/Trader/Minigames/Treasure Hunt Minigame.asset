@@ -59,7 +59,7 @@ MonoBehaviour:
     rows: 5
     digs: 6
     hintBands: []
-  rewardPool: 04000000320000003300000034000000
+  rewardPool: 320000003300000034000000
   rewardAmountRange:
     firstValue: 20
     secondValue: 40
