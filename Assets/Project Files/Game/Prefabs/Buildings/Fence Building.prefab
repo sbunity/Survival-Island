@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.449113, y: 1.96, z: 0.7}
+  m_Size: {x: 2.449113, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4491107, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4491107, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.449324, y: 1.96, z: 0.7}
+  m_Size: {x: 2.449324, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -3565,7 +3565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4493237, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4493237, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -4275,7 +4275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.449323, y: 1.96, z: 0.7}
+  m_Size: {x: 2.449323, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -4324,7 +4324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4491131, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4491131, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -4553,7 +4553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4491138, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4491138, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -5476,7 +5476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4493237, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4493237, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -6391,7 +6391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4493237, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4493237, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -6893,7 +6893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4493237, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4493237, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -7502,7 +7502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4491138, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4491138, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -7716,7 +7716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4493241, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4493241, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -9197,7 +9197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4491134, y: 1.96, z: 0.7}
+  m_Size: {x: 2.4491134, y: 1.96, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -9915,7 +9915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.4491131, y: 1.9599999, z: 0.7}
+  m_Size: {x: 2.4491131, y: 1.9599999, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -10175,7 +10175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
   m_SerializedVersion: 0
-  m_Size: {x: 2.449111, y: 1.9599999, z: 0.7}
+  m_Size: {x: 2.449111, y: 1.9599999, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 5
   m_AffectedAgents: ffffffff
@@ -10297,7 +10297,7 @@ MonoBehaviour:
   buildNavMeshBand: 1
   navMeshAreaName: Fence
   navMeshBandLayer: Ground
-  bandWidth: 0.7
+  bandWidth: 0.5
   bandBottomOffset: -0.96
   bandTopOffset: 1
   bandChunkLength: 2

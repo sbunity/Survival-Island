@@ -1737,6 +1737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.BaseAttackController
   defensePoint: {fileID: 2030088017}
   defenseRadius: 15
+  anchorMergeDistance: 7.5
   alertCooldown: 5
 --- !u!1001 &22258441
 PrefabInstance:
@@ -116905,6 +116906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.BaseAttackController
   defensePoint: {fileID: 80865624}
   defenseRadius: 15
+  anchorMergeDistance: 7.5
   alertCooldown: 5
 --- !u!4 &1820374681 stripped
 Transform:
@@ -142331,8 +142333,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 1820117116}
     - {fileID: 18863360}
+    - {fileID: 1820117116}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
@@ -142534,6 +142536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.BaseAttackController
   defensePoint: {fileID: 1728899279}
   defenseRadius: 15
+  anchorMergeDistance: 7.5
   alertCooldown: 5
 --- !u!4 &4213884168711787106 stripped
 Transform:
@@ -142631,11 +142634,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1852887614}
     m_Modifications:
-    - target: {fileID: 2202720298862955212, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-        type: 3}
-      propertyPath: maxHealth
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 4601239638174519331, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
       propertyPath: m_LocalPosition.x

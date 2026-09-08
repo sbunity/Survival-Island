@@ -268,17 +268,15 @@ namespace Watermelon.AI
 
             if (combatTarget != null)
             {
-                var attackPosition = combatTarget.GetAttackPosition(target.transform.position);
-                var offset = attackPosition - target.transform.position;
-                offset.y = 0f;
-
-                if (offset.sqrMagnitude <= target.CombatRange * target.CombatRange)
+                if (target.CanAttack(combatTarget))
                 {
                     target.TryAttack();
                 }
                 else if (Time.time >= nextMovementRefreshTime)
                 {
                     nextMovementRefreshTime = Time.time + TARGET_MOVEMENT_REFRESH_DELAY;
+
+                    var attackPosition = combatTarget.GetAttackPosition(target.transform.position);
                     var movementPosition = controller.ClampMovementInsideDefenseRadius(attackPosition, target.CombatRange);
                     target.MoveToCombatPosition(movementPosition);
                 }
@@ -358,11 +356,7 @@ namespace Watermelon.AI
                 return;
             }
 
-            var attackPosition = combatTarget.GetAttackPosition(target.transform.position);
-            var offset = attackPosition - target.transform.position;
-            offset.y = 0f;
-
-            if (offset.sqrMagnitude <= target.CombatRange * target.CombatRange)
+            if (target.CanAttack(combatTarget))
             {
                 target.TryAttack();
             }

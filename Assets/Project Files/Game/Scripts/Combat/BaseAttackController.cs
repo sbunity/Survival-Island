@@ -13,6 +13,8 @@ namespace Watermelon
         [SerializeField, Min(0f)] float defenseRadius = 15f;
         public float DefenseRadius => defenseRadius;
 
+        [SerializeField, Min(0f)] float anchorMergeDistance = 7.5f;
+
         [SerializeField, Min(0f)] float alertCooldown = 5f;
         public float AlertCooldown => alertCooldown;
 
@@ -24,7 +26,7 @@ namespace Watermelon
         public IReadOnlyList<ICombatTarget> ActiveAttackers => activeAttackers;
 
         private readonly List<ICombatTarget> activeAttackers = new List<ICombatTarget>();
-        private readonly List<AttackAnchor> attackAnchors = new List<AttackAnchor>();
+        private readonly AttackAnchorSet attackAnchors = new AttackAnchorSet();
         private readonly Dictionary<BuildingBehavior, Action<DamageSource>> buildingHandlers = new Dictionary<BuildingBehavior, Action<DamageSource>>();
         private readonly List<HelperBehavior> helpers = new List<HelperBehavior>();
 
@@ -125,7 +127,7 @@ namespace Watermelon
             if (!activeAttackers.Contains(attacker))
                 activeAttackers.Add(attacker);
 
-            RegisterAnchor(building);
+            attackAnchors.Register(building, attacker.Transform.position, anchorMergeDistance, Time.time);
 
             if (!IsAlertActive)
                 BeginAlert();
@@ -133,46 +135,19 @@ namespace Watermelon
                 AssignAvailableHelpers();
         }
 
-        private void RegisterAnchor(BuildingBehavior building)
-        {
-            if (building == null)
-                return;
-
-            for (var i = 0; i < attackAnchors.Count; i++)
-            {
-                if (attackAnchors[i].Building != building)
-                    continue;
-
-                attackAnchors[i].Position = building.Transform.position;
-                attackAnchors[i].LastThreatTime = Time.time;
-                return;
-            }
-
-            attackAnchors.Add(new AttackAnchor
-            {
-                Building = building,
-                Position = building.Transform.position,
-                LastThreatTime = Time.time,
-            });
-        }
-
         private void RefreshAnchors()
         {
             CombatTargetRegistry.RemoveInvalidTargets();
 
-            for (var i = attackAnchors.Count - 1; i >= 0; i--)
+            var anchors = attackAnchors.Anchors;
+
+            for (var i = 0; i < anchors.Count; i++)
             {
-                var anchor = attackAnchors[i];
-
-                if (anchor.Building != null)
-                    anchor.Position = anchor.Building.Transform.position;
-
-                if (HasHostileNear(anchor.Position))
-                    anchor.LastThreatTime = Time.time;
-
-                if (Time.time >= anchor.LastThreatTime + alertCooldown)
-                    attackAnchors.RemoveAt(i);
+                if (HasHostileNear(anchors[i].Position))
+                    anchors[i].KeepAlive(Time.time);
             }
+
+            attackAnchors.RemoveExpired(Time.time, alertCooldown);
         }
 
         private void BeginAlert()
@@ -251,41 +226,13 @@ namespace Watermelon
         }
 
         public Vector3 GetNearestDefensePosition(Vector3 from)
-        {
-            var nearest = DefensePosition;
-            var nearestDistanceSqr = float.MaxValue;
-
-            for (var i = 0; i < attackAnchors.Count; i++)
-            {
-                var anchorPosition = attackAnchors[i].Position;
-
-                var offset = anchorPosition - from;
-                offset.y = 0f;
-
-                var distanceSqr = offset.sqrMagnitude;
-                if (distanceSqr >= nearestDistanceSqr)
-                    continue;
-
-                nearestDistanceSqr = distanceSqr;
-                nearest = anchorPosition;
-            }
-
-            return nearest;
-        }
+            => attackAnchors.GetNearest(from, DefensePosition);
 
         public bool IsInsideDefenseRadius(ICombatTarget target)
             => IsHostileAvailable(target) && IsInsideDefenseRadius(target.Transform.position);
 
         public bool IsInsideDefenseRadius(Vector3 position)
-        {
-            for (var i = 0; i < attackAnchors.Count; i++)
-            {
-                if (IsInsideRadius(attackAnchors[i].Position, position))
-                    return true;
-            }
-
-            return false;
-        }
+            => attackAnchors.IsInsideRadius(position, defenseRadius);
 
         public Vector3 ClampMovementInsideDefenseRadius(Vector3 position, float inset)
         {
@@ -329,13 +276,15 @@ namespace Watermelon
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(defensePoint != null ? defensePoint.position : transform.position, defenseRadius);
-        }
 
-        private class AttackAnchor
-        {
-            public BuildingBehavior Building;
-            public Vector3 Position;
-            public float LastThreatTime;
+            var anchors = attackAnchors.Anchors;
+
+            Gizmos.color = Color.yellow;
+            for (var i = 0; i < anchors.Count; i++)
+            {
+                Gizmos.DrawWireSphere(anchors[i].Position, defenseRadius);
+                Gizmos.DrawSphere(anchors[i].Position, 0.35f);
+            }
         }
     }
 }

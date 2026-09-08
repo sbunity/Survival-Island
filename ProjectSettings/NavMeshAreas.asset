@@ -16,7 +16,7 @@ NavMeshProjectSettings:
   - name: Shore
     cost: 1
   - name: Fence
-    cost: 1
+    cost: 3
   - name: 
     cost: 1
   - name: 

@@ -677,6 +677,24 @@ namespace Watermelon
             return FindNearestHostile(transform.position, aggroRadius) != null;
         }
 
+        public bool CanAttack(ICombatTarget target)
+        {
+            if (IsDead || IsRecovering || !IsCombatTargetValid(target))
+                return false;
+
+            var attackPosition = target.GetAttackPosition(transform.position);
+
+            return IsWithinCombatRange(attackPosition) && AttackLineOfSight.IsClear(transform.position, attackPosition);
+        }
+
+        private bool IsWithinCombatRange(Vector3 attackPosition)
+        {
+            var offset = attackPosition - transform.position;
+            offset.y = 0f;
+
+            return offset.sqrMagnitude <= combatRange * combatRange;
+        }
+
         public ICombatTarget FindNearestHostile(Vector3 origin, float radius)
         {
             CombatTargetRegistry.RemoveInvalidTargets();
@@ -713,7 +731,9 @@ namespace Watermelon
             }
 
             var attackPosition = combatTarget.GetAttackPosition(transform.position);
-            if ((attackPosition - transform.position).sqrMagnitude <= combatRange * combatRange)
+            var lineIsClear = AttackLineOfSight.IsClear(transform.position, attackPosition);
+
+            if (lineIsClear && IsWithinCombatRange(attackPosition))
             {
                 navMeshAgentBehaviour.Stop();
                 return true;
@@ -722,7 +742,7 @@ namespace Watermelon
             if (!navMeshAgentBehaviour.PathExists(attackPosition))
                 return false;
 
-            navMeshAgent.stoppingDistance = combatRange;
+            navMeshAgent.stoppingDistance = lineIsClear ? combatRange : 0f;
             navMeshAgentBehaviour.SetWaypoints(attackPosition);
             return true;
         }
@@ -753,12 +773,12 @@ namespace Watermelon
                 return false;
             }
 
+            if (!CanAttack(combatTarget))
+                return false;
+
             var attackPosition = combatTarget.GetAttackPosition(transform.position);
             var direction = attackPosition - transform.position;
             direction.y = 0f;
-
-            if (direction.sqrMagnitude > combatRange * combatRange)
-                return false;
 
             navMeshAgentBehaviour.Stop();
 
@@ -797,8 +817,7 @@ namespace Watermelon
                 return;
             }
 
-            var attackPosition = combatTarget.GetAttackPosition(transform.position);
-            if ((attackPosition - transform.position).sqrMagnitude > combatRange * combatRange)
+            if (!CanAttack(combatTarget))
                 return;
 
             var target = combatTarget;

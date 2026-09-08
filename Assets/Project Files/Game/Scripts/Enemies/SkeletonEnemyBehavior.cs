@@ -66,6 +66,9 @@ namespace Watermelon
             if ((attackPosition - transform.position).sqrMagnitude > ATTACK_RANGE * ATTACK_RANGE)
                 return;
 
+            if (!AttackLineOfSight.IsClear(transform.position, attackPosition))
+                return;
+
             target.TakeDamage(new DamageSource(damage, this), transform.position, true);
         }
 

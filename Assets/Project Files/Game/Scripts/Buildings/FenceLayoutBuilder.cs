@@ -49,7 +49,7 @@ namespace Watermelon
         [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
         [SerializeField] string navMeshBandLayer = "Ground";
         [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
-        [SerializeField] float bandWidth = 0.7f;
+        [SerializeField] float bandWidth = 0.5f;
         [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
         [SerializeField] float bandBottomOffset = -0.96f;
         [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
