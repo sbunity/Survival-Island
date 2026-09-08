@@ -142331,8 +142331,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 18863360}
     - {fileID: 1820117116}
+    - {fileID: 18863360}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
@@ -142631,6 +142631,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1852887614}
     m_Modifications:
+    - target: {fileID: 2202720298862955212, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: maxHealth
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 4601239638174519331, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -142679,6 +142684,31 @@ PrefabInstance:
     - target: {fileID: 4601239638174519331, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5606644902501419339, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8820011485750651152, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,

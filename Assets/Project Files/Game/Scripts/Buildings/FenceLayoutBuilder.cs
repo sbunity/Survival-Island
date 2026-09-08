@@ -1,6 +1,9 @@
 #pragma warning disable CS0414
 
+using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -15,6 +18,7 @@ namespace Watermelon
         private const float CURVATURE_EPSILON = 0.000001f;
         private const float MIN_STEP = 0.01f;
         private const int MAX_LOGS = 1000;
+        private const string BAND_ROOT_NAME = "NavMesh Band";
 
         [BoxFoldout("Fence Layout", "Fence Layout")]
         [SerializeField, Delayed] float gap = 0.05f;
@@ -38,6 +42,29 @@ namespace Watermelon
         [BoxFoldout("Fence Path", "Fence Path")]
         [SerializeField, ReadOnly] float arcSweep;
 
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] bool buildNavMeshBand = true;
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] string navMeshAreaName = "Fence";
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] string navMeshBandLayer = "Ground";
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] float bandWidth = 0.7f;
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] float bandBottomOffset = -0.96f;
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] float bandTopOffset = 1f;
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] float bandChunkLength = 2f;
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] float bandExtensionStart;
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] float bandExtensionEnd;
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField] bool autoBakeNavMesh = true;
+        [BoxFoldout("Fence NavMesh", "Fence NavMesh")]
+        [SerializeField, ReadOnly] int bandVolumes;
+
         [SerializeField, HideInInspector] float[] profileDistance;
         [SerializeField, HideInInspector] float[] profileHeight;
 
@@ -55,16 +82,23 @@ namespace Watermelon
             public float TotalLength => Straight + ArcLength;
         }
 
+        private struct BandBox
+        {
+            public Vector3 Position;
+            public float Yaw;
+            public Vector3 Size;
+        }
+
         private void Reset()
         {
             logsParent = transform.Find("Fence/Opened");
 
             CapturePath();
 
-            if (TryGetLogs(out var first, out _, out var count))
+            if (TryGetLogs(out var logs))
             {
-                logWidth = MeasureLogWidth(first);
-                gap = pathLength / (count - 1) - logWidth;
+                logWidth = MeasureLogWidth(logs[0]);
+                gap = pathLength / (logs.Count - 1) - logWidth;
             }
         }
 
@@ -92,8 +126,11 @@ namespace Watermelon
         [Button("Capture path from logs")]
         public void CapturePath()
         {
-            if (!TryGetLogs(out var first, out var last, out var count))
+            if (!TryGetLogs(out var logs))
                 return;
+
+            var first = logs[0];
+            var last = logs[logs.Count - 1];
 
             var sweep = Mathf.DeltaAngle(0f, last.localEulerAngles.y) * Mathf.Deg2Rad;
             var deltaZ = last.localPosition.z - first.localPosition.z;
@@ -113,7 +150,7 @@ namespace Watermelon
             if (!TryBuildPath(out var path))
                 return;
 
-            CaptureHeightProfile(path, count);
+            CaptureHeightProfile(path, logs);
             WriteBackPathInfo(path);
         }
 
@@ -123,7 +160,7 @@ namespace Watermelon
             if (Application.isPlaying)
                 return;
 
-            if (!TryGetLogs(out var first, out var last, out var count))
+            if (!TryGetLogs(out var logs))
                 return;
 
             if (straightLength < 0f)
@@ -133,16 +170,16 @@ namespace Watermelon
                 return;
 
             if (profileDistance == null || profileDistance.Length < 2)
-                CaptureHeightProfile(path, count);
+                CaptureHeightProfile(path, logs);
 
             WarnIfPrefabInstance();
 
-            var startPosition = first.localPosition;
-            var startRotation = first.localRotation;
-            var endPosition = last.localPosition;
-            var endRotation = last.localRotation;
+            var startPosition = logs[0].localPosition;
+            var startRotation = logs[0].localRotation;
+            var endPosition = logs[logs.Count - 1].localPosition;
+            var endRotation = logs[logs.Count - 1].localRotation;
 
-            logWidth = MeasureLogWidth(first);
+            logWidth = MeasureLogWidth(logs[0]);
 
             var length = path.TotalLength;
             var targetStep = Mathf.Max(logWidth + gap, MIN_STEP);
@@ -152,14 +189,15 @@ namespace Watermelon
 
             Undo.RecordObject(this, "Rebuild Fence");
 
-            ResizeLogs(wanted, first);
+            ResizeLogs(logs, wanted);
+            logs = CollectLogs();
 
             for (var i = 0; i < wanted; i++)
             {
                 var distance = step * i;
                 Sample(path, distance, out var x, out var z, out var yaw);
 
-                var log = logsParent.GetChild(i);
+                var log = logs[i];
 
                 Undo.RecordObject(log, "Rebuild Fence");
                 Undo.RecordObject(log.gameObject, "Rebuild Fence");
@@ -169,15 +207,15 @@ namespace Watermelon
                 log.localRotation = Quaternion.Euler(0f, yaw, 0f);
             }
 
-            var newFirst = logsParent.GetChild(0);
-            newFirst.localPosition = startPosition;
-            newFirst.localRotation = startRotation;
+            logs[0].localPosition = startPosition;
+            logs[0].localRotation = startRotation;
 
-            var newLast = logsParent.GetChild(wanted - 1);
-            newLast.localPosition = endPosition;
-            newLast.localRotation = endRotation;
+            logs[wanted - 1].localPosition = endPosition;
+            logs[wanted - 1].localRotation = endRotation;
 
-            RefreshAppearAnimation();
+            RefreshAppearAnimation(logs);
+
+            var bandChanged = ApplyBand(path);
 
             gap = step - logWidth;
             spacing = step;
@@ -186,6 +224,9 @@ namespace Watermelon
 
             EditorUtility.SetDirty(this);
             MarkDirty();
+
+            if (bandChanged && autoBakeNavMesh)
+                RequestNavMeshBake();
         }
 
         private int PickIntervals(float length, float targetStep)
@@ -206,19 +247,29 @@ namespace Watermelon
             return intervals;
         }
 
-        private void ResizeLogs(int wanted, Transform template)
+        private void ResizeLogs(List<Transform> logs, int wanted)
         {
-            while (logsParent.childCount < wanted)
-            {
-                var copy = Instantiate(template.gameObject, logsParent);
-                copy.transform.SetAsLastSibling();
+            var band = FindBand();
+            var template = logs[0];
 
-                Undo.RegisterCreatedObjectUndo(copy, "Rebuild Fence");
+            for (var i = logs.Count - 1; i >= wanted; i--)
+            {
+                Undo.DestroyObjectImmediate(logs[i].gameObject);
             }
 
-            for (var i = logsParent.childCount - 1; i >= wanted; i--)
+            var current = Mathf.Min(logs.Count, wanted);
+
+            while (current < wanted)
             {
-                Undo.DestroyObjectImmediate(logsParent.GetChild(i).gameObject);
+                var copy = Instantiate(template.gameObject, logsParent);
+
+                if (band != null && band.parent == logsParent)
+                    copy.transform.SetSiblingIndex(band.GetSiblingIndex());
+                else
+                    copy.transform.SetAsLastSibling();
+
+                Undo.RegisterCreatedObjectUndo(copy, "Rebuild Fence");
+                current++;
             }
         }
 
@@ -226,8 +277,11 @@ namespace Watermelon
         {
             path = default;
 
-            if (!TryGetLogs(out var first, out var last, out _))
+            if (!TryGetLogs(out var logs))
                 return false;
+
+            var first = logs[0];
+            var last = logs[logs.Count - 1];
 
             path.StartX = first.localPosition.x;
             path.StartZ = first.localPosition.z;
@@ -277,34 +331,32 @@ namespace Watermelon
             yawDegrees = theta * Mathf.Rad2Deg;
         }
 
-        private void CaptureHeightProfile(PathData path, int count)
+        private void CaptureHeightProfile(PathData path, List<Transform> logs)
         {
-            profileDistance = new float[count];
-            profileHeight = new float[count];
+            profileDistance = new float[logs.Count];
+            profileHeight = new float[logs.Count];
 
             var walked = 0f;
 
-            for (var i = 0; i < count; i++)
+            for (var i = 0; i < logs.Count; i++)
             {
-                var log = logsParent.GetChild(i);
-
                 if (i > 0)
                 {
-                    var previous = logsParent.GetChild(i - 1).localPosition;
-                    var current = log.localPosition;
+                    var previous = logs[i - 1].localPosition;
+                    var current = logs[i].localPosition;
 
                     walked += new Vector2(current.x - previous.x, current.z - previous.z).magnitude;
                 }
 
                 profileDistance[i] = walked;
-                profileHeight[i] = log.localPosition.y;
+                profileHeight[i] = logs[i].localPosition.y;
             }
 
             if (walked > MIN_STEP)
             {
                 var scale = path.TotalLength / walked;
 
-                for (var i = 0; i < count; i++)
+                for (var i = 0; i < logs.Count; i++)
                 {
                     profileDistance[i] *= scale;
                 }
@@ -338,7 +390,7 @@ namespace Watermelon
             return profileHeight[last];
         }
 
-        private void RefreshAppearAnimation()
+        private void RefreshAppearAnimation(List<Transform> logs)
         {
             var appearAnimation = GetComponentInChildren<ScaleAnimationForUnlockable>(true);
 
@@ -351,11 +403,11 @@ namespace Watermelon
             if (objectsToAppear == null)
                 return;
 
-            objectsToAppear.arraySize = logsParent.childCount;
+            objectsToAppear.arraySize = logs.Count;
 
-            for (var i = 0; i < logsParent.childCount; i++)
+            for (var i = 0; i < logs.Count; i++)
             {
-                objectsToAppear.GetArrayElementAtIndex(i).objectReferenceValue = logsParent.GetChild(i);
+                objectsToAppear.GetArrayElementAtIndex(i).objectReferenceValue = logs[i];
             }
 
             serializedAnimation.ApplyModifiedProperties();
@@ -368,31 +420,50 @@ namespace Watermelon
             arcSweep = path.Curvature * path.ArcLength * Mathf.Rad2Deg;
         }
 
-        private bool TryGetLogs(out Transform first, out Transform last, out int count)
+        private Transform FindBand()
         {
-            first = null;
-            last = null;
-            count = 0;
+            return logsParent != null ? logsParent.Find(BAND_ROOT_NAME) : null;
+        }
 
+        private List<Transform> CollectLogs()
+        {
+            var logs = new List<Transform>();
+
+            if (logsParent == null)
+                return logs;
+
+            for (var i = 0; i < logsParent.childCount; i++)
+            {
+                var child = logsParent.GetChild(i);
+
+                if (child.name == BAND_ROOT_NAME)
+                    continue;
+
+                logs.Add(child);
+            }
+
+            return logs;
+        }
+
+        private bool TryGetLogs(out List<Transform> logs)
+        {
             if (logsParent == null)
                 logsParent = transform.Find("Fence/Opened");
 
             if (logsParent == null)
             {
                 Debug.LogError("[Fence] Logs parent is not set and Fence/Opened was not found.", this);
+                logs = null;
                 return false;
             }
 
-            count = logsParent.childCount;
+            logs = CollectLogs();
 
-            if (count < 2)
+            if (logs.Count < 2)
             {
                 Debug.LogError("[Fence] Needs at least two logs to work with.", this);
                 return false;
             }
-
-            first = logsParent.GetChild(0);
-            last = logsParent.GetChild(count - 1);
 
             return true;
         }
@@ -407,6 +478,195 @@ namespace Watermelon
             var meshRenderer = log.GetComponent<Renderer>();
 
             return meshRenderer != null ? meshRenderer.bounds.size.x : 0f;
+        }
+
+        private List<BandBox> BuildBandBoxes(PathData path)
+        {
+            var boxes = new List<BandBox>();
+            var start = -Mathf.Max(0f, bandExtensionStart);
+            var length = path.TotalLength + Mathf.Max(0f, bandExtensionEnd) - start;
+            var chunks = Mathf.Max(1, Mathf.CeilToInt(length / Mathf.Max(0.25f, bandChunkLength)));
+            var chunkLength = length / chunks;
+
+            for (var i = 0; i < chunks; i++)
+            {
+                var from = start + chunkLength * i;
+                var to = start + chunkLength * (i + 1);
+                var middle = (from + to) * 0.5f;
+
+                Sample(path, from, out var fromX, out var fromZ, out _);
+                Sample(path, to, out var toX, out var toZ, out _);
+                Sample(path, middle, out var midX, out var midZ, out var yaw);
+
+                var chord = new Vector2(toX - fromX, toZ - fromZ).magnitude;
+                var height = HeightAt(middle);
+                var bottom = height + bandBottomOffset;
+                var top = height + bandTopOffset;
+
+                boxes.Add(new BandBox
+                {
+                    Position = new Vector3(midX, (bottom + top) * 0.5f, midZ),
+                    Yaw = yaw,
+                    Size = new Vector3(chord * 1.25f, Mathf.Max(0.05f, top - bottom), bandWidth)
+                });
+            }
+
+            return boxes;
+        }
+
+        private bool ApplyBand(PathData path)
+        {
+            var band = FindBand();
+
+            if (!buildNavMeshBand)
+            {
+                bandVolumes = 0;
+
+                if (band == null)
+                    return false;
+
+                Undo.DestroyObjectImmediate(band.gameObject);
+                return true;
+            }
+
+            var area = NavMesh.GetAreaFromName(navMeshAreaName);
+
+            if (area < 0)
+            {
+                Debug.LogError("[Fence] NavMesh area '" + navMeshAreaName + "' does not exist. Add it in Navigation > Areas.", this);
+                return false;
+            }
+
+            var layer = LayerMask.NameToLayer(navMeshBandLayer);
+
+            if (layer < 0)
+            {
+                Debug.LogError("[Fence] Layer '" + navMeshBandLayer + "' does not exist.", this);
+                return false;
+            }
+
+            var boxes = BuildBandBoxes(path);
+            var changed = false;
+
+            if (band == null)
+            {
+                var holder = new GameObject(BAND_ROOT_NAME);
+                holder.transform.SetParent(logsParent, false);
+                holder.transform.SetAsLastSibling();
+
+                Undo.RegisterCreatedObjectUndo(holder, "Rebuild Fence");
+                band = holder.transform;
+                changed = true;
+            }
+
+            while (band.childCount < boxes.Count)
+            {
+                var volumeObject = new GameObject(BAND_ROOT_NAME);
+                volumeObject.transform.SetParent(band, false);
+                volumeObject.AddComponent<NavMeshModifierVolume>();
+
+                Undo.RegisterCreatedObjectUndo(volumeObject, "Rebuild Fence");
+                changed = true;
+            }
+
+            for (var i = band.childCount - 1; i >= boxes.Count; i--)
+            {
+                Undo.DestroyObjectImmediate(band.GetChild(i).gameObject);
+                changed = true;
+            }
+
+            for (var i = 0; i < boxes.Count; i++)
+            {
+                var child = band.GetChild(i);
+                var volume = child.GetComponent<NavMeshModifierVolume>();
+
+                if (volume == null)
+                {
+                    volume = Undo.AddComponent<NavMeshModifierVolume>(child.gameObject);
+                    changed = true;
+                }
+
+                var box = boxes[i];
+                var rotation = Quaternion.Euler(0f, box.Yaw, 0f);
+
+                child.gameObject.name = "NavMesh Band " + (i + 1).ToString("D2");
+
+                if (child.gameObject.layer != layer)
+                {
+                    Undo.RecordObject(child.gameObject, "Rebuild Fence");
+                    child.gameObject.layer = layer;
+                    changed = true;
+                }
+
+                if ((child.localPosition - box.Position).sqrMagnitude > 0.000001f ||
+                    Quaternion.Angle(child.localRotation, rotation) > 0.001f)
+                {
+                    Undo.RecordObject(child, "Rebuild Fence");
+                    child.localPosition = box.Position;
+                    child.localRotation = rotation;
+                    changed = true;
+                }
+
+                if ((volume.size - box.Size).sqrMagnitude > 0.000001f || volume.area != area ||
+                    volume.center != Vector3.zero)
+                {
+                    Undo.RecordObject(volume, "Rebuild Fence");
+                    volume.size = box.Size;
+                    volume.center = Vector3.zero;
+                    volume.area = area;
+                    changed = true;
+                }
+            }
+
+            bandVolumes = boxes.Count;
+
+            return changed;
+        }
+
+        [Button("Bake NavMesh")]
+        public void RequestNavMeshBake()
+        {
+            if (Application.isPlaying)
+                return;
+
+            if (PrefabStageUtility.GetCurrentPrefabStage() != null)
+            {
+                Debug.Log("[Fence] NavMesh band updated. Save the prefab, then bake the World NavMesh from the scene.", this);
+                return;
+            }
+
+            var surface = GetComponentInParent<NavMeshSurface>(true);
+
+            if (surface == null)
+            {
+                Debug.LogWarning("[Fence] No NavMeshSurface above the fence - nothing to bake.", this);
+                return;
+            }
+
+            if (surface.navMeshData == null)
+            {
+                Debug.LogWarning("[Fence] '" + surface.name + "' has no baked data yet. Bake it once from its own inspector.", this);
+                return;
+            }
+
+            var data = surface.navMeshData;
+            var operation = surface.UpdateNavMesh(data);
+
+            EditorApplication.CallbackFunction onUpdate = null;
+            onUpdate = () =>
+            {
+                if (operation != null && !operation.isDone)
+                    return;
+
+                EditorApplication.update -= onUpdate;
+
+                EditorUtility.SetDirty(data);
+                AssetDatabase.SaveAssets();
+
+                Debug.Log("[Fence] NavMesh rebaked on '" + surface.name + "'.", surface);
+            };
+
+            EditorApplication.update += onUpdate;
         }
 
         private void WarnIfPrefabInstance()

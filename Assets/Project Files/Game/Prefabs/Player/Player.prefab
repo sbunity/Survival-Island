@@ -302,11 +302,7 @@ MonoBehaviour:
   characterCollider: {fileID: 5577258237470985338}
   healthBehavior: {fileID: 5608929066197099979}
   swimmingEnergyBehavior: {fileID: 5805134724302698131}
-  health: 100
   swimmingEnergy: 100
-  damage:
-    firstValue: 10
-    secondValue: 15
   jumpHighDifference: 0.5
   hittableTrigger: {fileID: 4361123139236256820}
   resourcesTrigger: {fileID: 8552651871648669896}
@@ -390,7 +386,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 0.2
   m_BaseOffset: 0
-  m_WalkableMask: 29
+  m_WalkableMask: 61
   m_ObstacleAvoidanceType: 4
 --- !u!136 &5577258237470985338
 CapsuleCollider:

@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
+  helperData: {fileID: 0}
   defaultGraphics: {fileID: 0}
   customRestPoint: {fileID: 0}
   specialOpeningLogic: 0
@@ -138,6 +139,7 @@ MonoBehaviour:
   waitForExternalRelease: 0
   availableTasks: -1
   tasksDistance: 0
+  idleUnitsPerMinute: 6
   maxHealth: 100
   healthBehavior: {fileID: 4965752313698598960}
   regenerationDelay: 5
@@ -146,6 +148,7 @@ MonoBehaviour:
   combatDamage: 1
   combatRange: 1.25
   combatCooldown: 0.6
+  aggroRadius: 6
   emoteBehavior:
     canvasGroup: {fileID: 5696167514470813183}
     emoteImage: {fileID: 6745383921120782133}
@@ -217,7 +220,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 5
   m_BaseOffset: 0
-  m_WalkableMask: 23
+  m_WalkableMask: 55
   m_ObstacleAvoidanceType: 4
 --- !u!136 &1255062433819571005
 CapsuleCollider:
