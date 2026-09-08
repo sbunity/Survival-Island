@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 7540370}
   - component: {fileID: 7540371}
   m_Layer: 0
-  m_Name: M #40 - planks craft building
+  m_Name: M #41 - planks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5175,7 +5175,7 @@ GameObject:
   - component: {fileID: 118880451}
   - component: {fileID: 118880452}
   m_Layer: 0
-  m_Name: M #41 - defeat skeleton boss
+  m_Name: M #42 - defeat skeleton boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6231,7 +6231,7 @@ GameObject:
   - component: {fileID: 137583847}
   - component: {fileID: 137583848}
   m_Layer: 0
-  m_Name: M #43 - raft construction
+  m_Name: M #44 - raft construction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6790,7 +6790,7 @@ GameObject:
   - component: {fileID: 147546715}
   - component: {fileID: 147546716}
   m_Layer: 0
-  m_Name: M #44 - leave the island
+  m_Name: M #45 - leave the island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11697,7 +11697,7 @@ GameObject:
   - component: {fileID: 261071232}
   - component: {fileID: 261071233}
   m_Layer: 0
-  m_Name: M #31 - bricks craft building
+  m_Name: M #32 - bricks craft building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18299,7 +18299,7 @@ GameObject:
   - component: {fileID: 362938667}
   - component: {fileID: 362938668}
   m_Layer: 0
-  m_Name: M #37 - cooking place 3 building
+  m_Name: M #38 - cooking place 3 building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35814,18 +35814,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 561219960}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &561219962 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5559803731737192703, guid: 7ca1e102d3cf25b4b8d37dd29e61236f,
-    type: 3}
-  m_PrefabInstance: {fileID: 561219960}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefba80d2d74b2240a8cc06c16950d4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &563598929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36621,7 +36609,7 @@ GameObject:
   - component: {fileID: 574753932}
   - component: {fileID: 574753933}
   m_Layer: 0
-  m_Name: M #30 - open chest in cave
+  m_Name: M #31 - open chest in cave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37984,7 +37972,7 @@ GameObject:
   - component: {fileID: 604482800}
   - component: {fileID: 604482801}
   m_Layer: 0
-  m_Name: M #34 - ramp #1 build
+  m_Name: M #35 - ramp #1 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40424,7 +40412,7 @@ GameObject:
   - component: {fileID: 658929541}
   - component: {fileID: 658929542}
   m_Layer: 0
-  m_Name: M #28 - bridge #2
+  m_Name: M #29 - bridge #2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43397,6 +43385,88 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5664a03959e85d74eb8e406349a34f6c, type: 3}
+--- !u!1 &729073380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 729073381}
+  - component: {fileID: 729073382}
+  m_Layer: 0
+  m_Name: M #28 - fence building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &729073381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729073380}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1318192806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &729073382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729073380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.BuildingMission
+  id: a3c13abe-bb9a-4589-8bc3-f2ba9c8403b9
+  title: Build the fence
+  rewardType: 0
+  resourceReward:
+    currencyType: 0
+    amount: 50
+  toolsReward:
+    interactionToUnlock: 0
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  genericReward:
+    uiRewardInfo:
+      headerText: YOU UNLOCKED
+      previewIcon: {fileID: 0}
+      mainText: 
+      buttonText: AWESOME
+  useCustomTargetPosition: 0
+  customTargetPosition: {fileID: 0}
+  cameraPreviewAtStart: 0
+  showPositionPointer: 1
+  pointerPositionOffset: {x: 15.54, y: 4, z: -0.17}
+  showGuidingLine: 0
+  guidingLineTargetOffset: {x: 0, y: 0, z: 0}
+  showGuidingArrow: 0
+  guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
+  isTargetInSubworld: 0
+  subworldEntrance: {fileID: 0}
+  subworldBehavior: {fileID: 0}
+  onMissionStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onMissionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  buildingComplex: {fileID: 5887550163182312484}
 --- !u!1001 &729292085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50936,7 +51006,7 @@ GameObject:
   - component: {fileID: 886913863}
   - component: {fileID: 886913864}
   m_Layer: 0
-  m_Name: M #32 - craft bricks
+  m_Name: M #33 - craft bricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72946,7 +73016,7 @@ GameObject:
   - component: {fileID: 1094698899}
   - component: {fileID: 1094698900}
   m_Layer: 0
-  m_Name: M #38 - ramp #2 build
+  m_Name: M #39 - ramp #2 build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76105,7 +76175,7 @@ GameObject:
   - component: {fileID: 1156361327}
   - component: {fileID: 1156361328}
   m_Layer: 0
-  m_Name: M #39 - stone generator building
+  m_Name: M #40 - stone generator building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83506,6 +83576,7 @@ Transform:
   - {fileID: 1044371288}
   - {fileID: 122126396}
   - {fileID: 725824177}
+  - {fileID: 729073381}
   - {fileID: 658929541}
   - {fileID: 1956794514}
   - {fileID: 574753932}
@@ -86538,6 +86609,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 735787372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394381896 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5559803731737192703, guid: 5664a03959e85d74eb8e406349a34f6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 331997102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefba80d2d74b2240a8cc06c16950d4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1394694170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99300,7 +99383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
-  requiredMissionId: d4f7a2b1-3c8e-4a6f-9b12-7e5c0a1d8f34
+  requiredMissionId: a3c13abe-bb9a-4589-8bc3-f2ba9c8403b9
 --- !u!114 &1580915842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114903,7 +114986,7 @@ PrefabInstance:
     - target: {fileID: 7171497236361992713, guid: c87fe70fe4dd17e47acd12da76bbf25f,
         type: 3}
       propertyPath: offset.x
-      value: -0.029999733
+      value: 2.46
       objectReference: {fileID: 0}
     - target: {fileID: 7171497236361992713, guid: c87fe70fe4dd17e47acd12da76bbf25f,
         type: 3}
@@ -114913,7 +114996,7 @@ PrefabInstance:
     - target: {fileID: 7171497236361992713, guid: c87fe70fe4dd17e47acd12da76bbf25f,
         type: 3}
       propertyPath: offset.z
-      value: -0.9699993
+      value: 1.8700008
       objectReference: {fileID: 0}
     - target: {fileID: 7171497236361992713, guid: c87fe70fe4dd17e47acd12da76bbf25f,
         type: 3}
@@ -114924,11 +115007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: tileBehavior
       value: 
-      objectReference: {fileID: 561219962}
+      objectReference: {fileID: 1394381896}
     - target: {fileID: 7675609221943524213, guid: c87fe70fe4dd17e47acd12da76bbf25f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.97
+      value: -6.68
       objectReference: {fileID: 0}
     - target: {fileID: 7675609221943524213, guid: c87fe70fe4dd17e47acd12da76bbf25f,
         type: 3}
@@ -114938,7 +115021,7 @@ PrefabInstance:
     - target: {fileID: 7675609221943524213, guid: c87fe70fe4dd17e47acd12da76bbf25f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.03
+      value: -28.97
       objectReference: {fileID: 0}
     - target: {fileID: 7675609221943524213, guid: c87fe70fe4dd17e47acd12da76bbf25f,
         type: 3}
@@ -118459,7 +118542,7 @@ GameObject:
   - component: {fileID: 1859535999}
   - component: {fileID: 1859536000}
   m_Layer: 0
-  m_Name: M #36 - pumpkins harvest
+  m_Name: M #37 - pumpkins harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126123,7 +126206,7 @@ GameObject:
   - component: {fileID: 1914649784}
   - component: {fileID: 1914649785}
   m_Layer: 0
-  m_Name: M #42 - iron harvest
+  m_Name: M #43 - iron harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127338,7 +127421,7 @@ GameObject:
   - component: {fileID: 1956794514}
   - component: {fileID: 1956794515}
   m_Layer: 0
-  m_Name: M #29 - save the trader
+  m_Name: M #30 - save the trader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128881,7 +128964,7 @@ GameObject:
   - component: {fileID: 1989989903}
   - component: {fileID: 1989989904}
   m_Layer: 0
-  m_Name: M #35 - find pumpkins
+  m_Name: M #36 - find pumpkins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139458,7 +139541,7 @@ GameObject:
   - component: {fileID: 2093265913}
   - component: {fileID: 2093265914}
   m_Layer: 0
-  m_Name: M #33 - upg player harvest
+  m_Name: M #34 - upg player harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141354,12 +141437,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredMissionId: c26df37a-5003-4ffc-afec-ae5f9af33812
---- !u!1 &417064114255403132 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8846149799012810592, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-    type: 3}
-  m_PrefabInstance: {fileID: 6597385074239248450}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &438512383339899028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142503,19 +142580,18 @@ MonoBehaviour:
   radomDelay:
     firstValue: 0
     secondValue: 0.2
---- !u!114 &5887550163182312485
+--- !u!114 &5887550163182312484 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7729195832344074911, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6597385074239248450}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417064114255403132}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b192bdef6b69ea47b10c5ba976eb001, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a0478ee749e1f242939310ff614cb77, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.ObjectEnablerByMission
-  requiredMissionId: d4f7a2b1-3c8e-4a6f-9b12-7e5c0a1d8f34
+  m_EditorClassIdentifier: 
 --- !u!4 &6500091011057322860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2732193871771152125, guid: be4e4e90948f3c24c9f0b4af506005c3,
@@ -142610,6 +142686,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6635211250091135726, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -142643,11 +142724,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8846149799012810592, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5887550163182312485}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd, type: 3}
 --- !u!1001 &7656147523151992326
 PrefabInstance:
