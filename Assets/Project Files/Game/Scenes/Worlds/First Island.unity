@@ -142681,36 +142681,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5606644902501419339, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6635211250091135726, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6993699130910668979, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8820011485750651152, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
       propertyPath: tileBehavior
