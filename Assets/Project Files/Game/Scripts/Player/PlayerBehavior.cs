@@ -8,8 +8,10 @@ using Watermelon.GlobalUpgrades;
 
 namespace Watermelon
 {
-    public class PlayerBehavior : MonoBehaviour, ICharacter, ICombatTarget, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IResourceCarrier, IHitter, IRaftPassenger
+    public class PlayerBehavior : MonoBehaviour, ICharacter, ICombatTarget, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IResourceCarrier, IHitter, IRaftPassenger, IBarrierCrosser
     {
+        private const float MIN_CROSSING_SPEED = 0.05f;
+
         private static readonly int FULL_FLOATING_TEXT_HASH = "Floating".GetHashCode();
         private static readonly int FULL_FLOATING_TEXT_DELAY = 2;
 
@@ -786,6 +788,45 @@ namespace Watermelon
             return transform.position;
         }
 
+        #region Barrier crossing
+
+        Vector3 IBarrierCrosser.Position => transform.position;
+
+        public bool TryGetCrossing(IBarrier barrier, out BarrierCrossing crossing)
+        {
+            crossing = default;
+
+            if (barrier == null || !IsMovementEnabled || Health == null || Health.IsDepleted)
+                return false;
+
+            var control = Control.CurrentControl;
+
+            if (control == null || !control.IsMovementInputNonZero)
+                return false;
+
+            var input = control.MovementInput;
+            input.y = 0f;
+
+            if (input.sqrMagnitude < 0.0025f)
+                return false;
+
+            if (!barrier.Project(transform.position, out var alongPath, out var sideOffset))
+                return false;
+
+            var normal = barrier.GetNormal(alongPath);
+            var closingRate = -Mathf.Sign(sideOffset) * (input.x * normal.x + input.z * normal.z);
+
+            if (closingRate <= 0f)
+                return false;
+
+            var closingSpeed = Mathf.Max(closingRate * maxSpeed, MIN_CROSSING_SPEED);
+
+            crossing = new BarrierCrossing(alongPath, Mathf.Abs(sideOffset) / closingSpeed);
+            return true;
+        }
+
+        #endregion
+
         private void HealthRestorationUpdate()
         {
             if (!Health.IsFull && Time.time > lastTimeGotHit + 5)
@@ -1073,9 +1114,16 @@ namespace Watermelon
             GlobalUpgradesEventsHandler.OnUpgraded -= OnUpgraded;
         }
 
+        private void OnEnable()
+        {
+            BarrierCrosserRegistry.Register(this);
+        }
+
         private void OnDisable()
         {
             ResourceCarrierRegistry.Evict(this);
+
+            BarrierCrosserRegistry.Unregister(this);
         }
 
         private void OnDestroy()
@@ -1083,6 +1131,7 @@ namespace Watermelon
             ResourceCarrierRegistry.Evict(this);
 
             CombatTargetRegistry.Unregister(this);
+            BarrierCrosserRegistry.Unregister(this);
 
             inventory.Unload();
 

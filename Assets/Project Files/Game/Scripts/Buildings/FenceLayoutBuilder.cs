@@ -71,17 +71,6 @@ namespace Watermelon
 #if UNITY_EDITOR
         private bool rebuildScheduled;
 
-        private struct PathData
-        {
-            public float StartX;
-            public float StartZ;
-            public float Straight;
-            public float Curvature;
-            public float ArcLength;
-
-            public float TotalLength => Straight + ArcLength;
-        }
-
         private struct BandBox
         {
             public Vector3 Position;
@@ -195,7 +184,7 @@ namespace Watermelon
             for (var i = 0; i < wanted; i++)
             {
                 var distance = step * i;
-                Sample(path, distance, out var x, out var z, out var yaw);
+                path.Sample(distance, out var x, out var z, out var yaw);
 
                 var log = logs[i];
 
@@ -273,65 +262,17 @@ namespace Watermelon
             }
         }
 
-        private bool TryBuildPath(out PathData path)
+        private bool TryBuildPath(out FencePath path)
         {
             path = default;
 
             if (!TryGetLogs(out var logs))
                 return false;
 
-            var first = logs[0];
-            var last = logs[logs.Count - 1];
-
-            path.StartX = first.localPosition.x;
-            path.StartZ = first.localPosition.z;
-            path.Straight = straightLength;
-
-            var deltaX = last.localPosition.x - (path.StartX + path.Straight);
-            var deltaZ = last.localPosition.z - path.StartZ;
-            var chordSqr = deltaX * deltaX + deltaZ * deltaZ;
-
-            if (chordSqr < CURVATURE_EPSILON)
-                return false;
-
-            path.Curvature = -2f * deltaZ / chordSqr;
-
-            if (Mathf.Abs(path.Curvature) < CURVATURE_EPSILON)
-            {
-                path.Curvature = 0f;
-                path.ArcLength = deltaX;
-            }
-            else
-            {
-                var theta = Mathf.Atan2(path.Curvature * deltaX, 1f + path.Curvature * deltaZ);
-
-                if (theta * path.Curvature < 0f)
-                    theta += Mathf.Sign(path.Curvature) * 2f * Mathf.PI;
-
-                path.ArcLength = theta / path.Curvature;
-            }
-
-            return path.TotalLength > MIN_STEP;
+            return FencePath.TryCreate(logs[0].localPosition, logs[logs.Count - 1].localPosition, straightLength, out path);
         }
 
-        private static void Sample(PathData path, float distance, out float x, out float z, out float yawDegrees)
-        {
-            if (distance <= path.Straight || path.Curvature == 0f)
-            {
-                x = path.StartX + distance;
-                z = path.StartZ;
-                yawDegrees = 0f;
-                return;
-            }
-
-            var theta = path.Curvature * (distance - path.Straight);
-
-            x = path.StartX + path.Straight + Mathf.Sin(theta) / path.Curvature;
-            z = path.StartZ + (Mathf.Cos(theta) - 1f) / path.Curvature;
-            yawDegrees = theta * Mathf.Rad2Deg;
-        }
-
-        private void CaptureHeightProfile(PathData path, List<Transform> logs)
+        private void CaptureHeightProfile(FencePath path, List<Transform> logs)
         {
             profileDistance = new float[logs.Count];
             profileHeight = new float[logs.Count];
@@ -413,11 +354,16 @@ namespace Watermelon
             serializedAnimation.ApplyModifiedProperties();
         }
 
-        private void WriteBackPathInfo(PathData path)
+        private void WriteBackPathInfo(FencePath path)
         {
             pathLength = path.TotalLength;
-            arcRadius = Mathf.Abs(path.Curvature) > CURVATURE_EPSILON ? 1f / path.Curvature : 0f;
-            arcSweep = path.Curvature * path.ArcLength * Mathf.Rad2Deg;
+            arcRadius = path.Radius;
+            arcSweep = path.SweepDegrees;
+
+            var gate = logsParent != null ? logsParent.GetComponent<FenceGateController>() : null;
+
+            if (gate != null)
+                gate.SetPath(path);
         }
 
         private Transform FindBand()
@@ -480,7 +426,7 @@ namespace Watermelon
             return meshRenderer != null ? meshRenderer.bounds.size.x : 0f;
         }
 
-        private List<BandBox> BuildBandBoxes(PathData path)
+        private List<BandBox> BuildBandBoxes(FencePath path)
         {
             var boxes = new List<BandBox>();
             var start = -Mathf.Max(0f, bandExtensionStart);
@@ -494,9 +440,9 @@ namespace Watermelon
                 var to = start + chunkLength * (i + 1);
                 var middle = (from + to) * 0.5f;
 
-                Sample(path, from, out var fromX, out var fromZ, out _);
-                Sample(path, to, out var toX, out var toZ, out _);
-                Sample(path, middle, out var midX, out var midZ, out var yaw);
+                path.Sample(from, out var fromX, out var fromZ, out _);
+                path.Sample(to, out var toX, out var toZ, out _);
+                path.Sample(middle, out var midX, out var midZ, out var yaw);
 
                 var chord = new Vector2(toX - fromX, toZ - fromZ).magnitude;
                 var height = HeightAt(middle);
@@ -514,7 +460,7 @@ namespace Watermelon
             return boxes;
         }
 
-        private bool ApplyBand(PathData path)
+        private bool ApplyBand(FencePath path)
         {
             var band = FindBand();
 

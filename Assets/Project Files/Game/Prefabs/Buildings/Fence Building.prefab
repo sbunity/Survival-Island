@@ -1998,6 +1998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415203423492899592}
+  - component: {fileID: 2544960403837314439}
   m_Layer: 0
   m_Name: Opened
   m_TagString: Untagged
@@ -2098,6 +2099,33 @@ Transform:
   - {fileID: 8624783400861140117}
   m_Father: {fileID: 668722703729393424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2544960403837314439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012364543348340626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e8d19b41da372428d28c41175cbe18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.FenceGateController
+  path:
+    startX: 0
+    startZ: 0
+    straightLength: 13.719954
+    curvature: 0.023208661
+    arcLength: 12.671931
+  sectionLength: 2
+  boundaryMargin: 0.4
+  sectionsAmount: 14
+  openLeadSeconds: 0.5
+  maxOpenDistance: 3
+  occupancyWidth: 0.9
+  closeDelay: 1.2
+  pollInterval: 0.1
+  drawGizmos: 1
 --- !u!1 &2094740305207030937
 GameObject:
   m_ObjectHideFlags: 0

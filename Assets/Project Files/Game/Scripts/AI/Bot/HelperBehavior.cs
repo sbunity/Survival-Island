@@ -5,8 +5,13 @@ using Watermelon.AI;
 
 namespace Watermelon
 {
-    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IResourceCarrier, IWorldElement, ICharacter, ICombatTarget, IGuardedRescueTarget, IRaftPassenger
+    public class HelperBehavior : MonoBehaviour, INavMeshAgent, ICharacterGraphics<HelperGraphics>, IHitter, IResourceGiver, IResourceCarrier, IWorldElement, ICharacter, ICombatTarget, IGuardedRescueTarget, IRaftPassenger, IBarrierCrosser
     {
+        private const int MAX_PATH_CORNERS = 16;
+        private const float MIN_CROSSING_SPEED = 0.05f;
+
+        private readonly Vector3[] pathCorners = new Vector3[MAX_PATH_CORNERS];
+
         public static readonly int MOVEMENT_MULTIPLIER_HASH = Animator.StringToHash("Movement Multiplier");
 
         public static readonly int WAITING_HASH = Animator.StringToHash("Opening");
@@ -351,9 +356,16 @@ namespace Watermelon
             isInitialised = false;
         }
 
+        private void OnEnable()
+        {
+            BarrierCrosserRegistry.Register(this);
+        }
+
         private void OnDisable()
         {
             ResourceCarrierRegistry.Evict(this);
+
+            BarrierCrosserRegistry.Unregister(this);
         }
 
         private void OnDestroy()
@@ -361,6 +373,7 @@ namespace Watermelon
             ResourceCarrierRegistry.Evict(this);
 
             CombatTargetRegistry.Unregister(this);
+            BarrierCrosserRegistry.Unregister(this);
         }
 
         private void OnOpeningAreaUnlocked()
@@ -694,6 +707,58 @@ namespace Watermelon
 
             return offset.sqrMagnitude <= combatRange * combatRange;
         }
+
+        #region Barrier crossing
+
+        Vector3 IBarrierCrosser.Position => transform.position;
+
+        public bool TryGetCrossing(IBarrier barrier, out BarrierCrossing crossing)
+        {
+            crossing = default;
+
+            if (barrier == null || IsDead || !isActiveAndEnabled)
+                return false;
+
+            if (navMeshAgent == null || !navMeshAgent.isActiveAndEnabled || !navMeshAgent.hasPath)
+                return false;
+
+            var cornersAmount = navMeshAgent.path.GetCornersNonAlloc(pathCorners);
+
+            if (cornersAmount < 2 || !barrier.Project(pathCorners[0], out _, out var previousSide))
+                return false;
+
+            var walked = 0f;
+
+            for (var i = 1; i < cornersAmount; i++)
+            {
+                var from = pathCorners[i - 1];
+                var to = pathCorners[i];
+
+                if (!barrier.Project(to, out _, out var side))
+                    return false;
+
+                if (previousSide * side < 0f)
+                {
+                    var blend = Mathf.Abs(previousSide) / Mathf.Max(Mathf.Abs(previousSide) + Mathf.Abs(side), Mathf.Epsilon);
+                    var point = Vector3.Lerp(from, to, blend);
+
+                    if (!barrier.Project(point, out var alongPath, out _))
+                        return false;
+
+                    var distance = walked + Vector3.Distance(from, point);
+
+                    crossing = new BarrierCrossing(alongPath, distance / Mathf.Max(navMeshAgent.speed, MIN_CROSSING_SPEED));
+                    return true;
+                }
+
+                walked += Vector3.Distance(from, to);
+                previousSide = side;
+            }
+
+            return false;
+        }
+
+        #endregion
 
         public ICombatTarget FindNearestHostile(Vector3 origin, float radius)
         {
