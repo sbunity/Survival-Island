@@ -142333,8 +142333,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 1820117116}
     - {fileID: 18863360}
+    - {fileID: 1820117116}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
@@ -142642,7 +142642,7 @@ PrefabInstance:
     - target: {fileID: 2544960403837314439, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
       propertyPath: animationType
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4601239638174519331, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -53,7 +53,7 @@ namespace Watermelon
             appliedDepth = sinkDepth > 0f ? sinkDepth : tallest + depthMargin;
         }
 
-        public override void SetLogOpen(int logIndex, bool isOpen, float distanceFromCentre)
+        public override void SetLogOpen(int logIndex, bool isOpen, in FenceLogOpenContext context)
         {
             if (logs == null || logIndex < 0 || logIndex >= logs.Count)
                 return;
@@ -68,7 +68,7 @@ namespace Watermelon
             var target = isOpen ? closedHeights[logIndex] - appliedDepth : closedHeights[logIndex];
             var duration = isOpen ? openDuration : closeDuration;
             var easing = isOpen ? openEasing : closeEasing;
-            var delay = staggerPerMetre * Mathf.Max(0f, distanceFromCentre);
+            var delay = staggerPerMetre * Mathf.Max(0f, context.DistanceFromCentre);
 
             tweens[logIndex] = log.DOLocalMoveY(target, duration, delay).SetEasing(easing);
         }

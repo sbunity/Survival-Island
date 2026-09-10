@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Watermelon
@@ -6,6 +6,8 @@ namespace Watermelon
     [DisallowMultipleComponent]
     public class FenceGateController : MonoBehaviour, IBarrier
     {
+        private const float SIDE_EPSILON = 0.001f;
+
         [SerializeField, HideInInspector] FencePath path;
 
         [BoxFoldout("Animation", "Animation")]
@@ -18,6 +20,10 @@ namespace Watermelon
         [BoxFoldout("Animation", "Animation")]
         [ShowIf("EditorIsFadeSelected")]
         [SerializeField] FenceGateFadeAnimation fadeAnimation = new FenceGateFadeAnimation();
+
+        [BoxFoldout("Animation", "Animation")]
+        [ShowIf("EditorIsRotateSelected")]
+        [SerializeField] FenceGateRotateAnimation rotateAnimation = new FenceGateRotateAnimation();
 
         [BoxFoldout("Opening", "Opening")]
         [SerializeField, Min(1)] int openingLogs = 4;
@@ -65,6 +71,7 @@ namespace Watermelon
             {
                 FenceGateAnimationType.Sink => sinkAnimation,
                 FenceGateAnimationType.Fade => fadeAnimation,
+                FenceGateAnimationType.Rotate => rotateAnimation,
                 _ => null,
             };
 
@@ -78,6 +85,11 @@ namespace Watermelon
         private bool EditorIsFadeSelected()
         {
             return animationType == FenceGateAnimationType.Fade;
+        }
+
+        private bool EditorIsRotateSelected()
+        {
+            return animationType == FenceGateAnimationType.Rotate;
         }
 
         private void OnEnable()
@@ -105,8 +117,7 @@ namespace Watermelon
 
             activeAnimation = resolved;
 
-            if (activeAnimation != null)
-                activeAnimation.Initialise(logs);
+            activeAnimation?.Initialise(logs);
         }
 
         private void CloseEverything()
@@ -204,19 +215,22 @@ namespace Watermelon
             {
                 var crosser = BarrierCrosserRegistry.GetCrosser(i);
 
-                if (crosser == null || !TryGetDesiredCentre(crosser, out var centre))
+                if (crosser == null || !TryGetDesiredOpening(crosser, out var centre, out var side))
                     continue;
 
                 var opening = FindOpening(crosser);
 
                 if (opening == null)
                 {
-                    openings.Add(new Opening { Owner = crosser, Centre = centre, IsAlive = true });
+                    openings.Add(new Opening { Owner = crosser, Centre = centre, Side = side, IsAlive = true });
                     continue;
                 }
 
                 if (Mathf.Abs(opening.Centre - centre) > OpeningHalfWidth * centreDriftTolerance)
                     opening.Centre = centre;
+
+                if (Mathf.Abs(side) > SIDE_EPSILON)
+                    opening.Side = side;
 
                 opening.IsAlive = true;
             }
@@ -230,14 +244,19 @@ namespace Watermelon
             openingsAmount = openings.Count;
         }
 
-        private bool TryGetDesiredCentre(IBarrierCrosser crosser, out float centre)
+        private bool TryGetDesiredOpening(IBarrierCrosser crosser, out float centre, out float side)
         {
             centre = 0f;
+            side = 0f;
 
             if (TryProjectNearRun(crosser.Position, out var alongPath, out var sideOffset) &&
                 Mathf.Abs(sideOffset) <= occupancyWidth)
             {
                 centre = alongPath;
+
+                if (Mathf.Abs(sideOffset) > SIDE_EPSILON)
+                    side = -Mathf.Sign(sideOffset);
+
                 return true;
             }
 
@@ -248,6 +267,8 @@ namespace Watermelon
                 return false;
 
             centre = crossing.AlongPath;
+            side = crossing.Side;
+
             return true;
         }
 
@@ -264,6 +285,7 @@ namespace Watermelon
                 {
                     logStates[j].IsCovered = true;
                     logStates[j].DistanceFromCentre = Mathf.Abs(logStates[j].AlongPath - openings[i].Centre);
+                    logStates[j].Side = openings[i].Side;
                 }
             }
 
@@ -282,7 +304,7 @@ namespace Watermelon
 
                     state.IsOpen = true;
 
-                    activeAnimation?.SetLogOpen(i, true, state.DistanceFromCentre);
+                    activeAnimation?.SetLogOpen(i, true, new FenceLogOpenContext(state.DistanceFromCentre, state.Side));
 
                     continue;
                 }
@@ -292,8 +314,7 @@ namespace Watermelon
 
                 state.IsOpen = false;
 
-                if (activeAnimation != null)
-                    activeAnimation.SetLogOpen(i, false, state.DistanceFromCentre);
+                activeAnimation?.SetLogOpen(i, false, new FenceLogOpenContext(state.DistanceFromCentre, state.Side));
             }
         }
 
@@ -410,12 +431,14 @@ namespace Watermelon
             public bool IsCovered;
             public float CloseAtTime;
             public float DistanceFromCentre;
+            public float Side;
         }
 
         private class Opening
         {
             public IBarrierCrosser Owner;
             public float Centre;
+            public float Side;
             public bool IsAlive;
         }
     }

@@ -7,10 +7,13 @@ namespace Watermelon
         public float AlongPath { get; }
         public float SecondsToReach { get; }
 
-        public BarrierCrossing(float alongPath, float secondsToReach)
+        public float Side { get; }
+
+        public BarrierCrossing(float alongPath, float secondsToReach, float side)
         {
             AlongPath = alongPath;
             SecondsToReach = secondsToReach;
+            Side = side;
         }
     }
 

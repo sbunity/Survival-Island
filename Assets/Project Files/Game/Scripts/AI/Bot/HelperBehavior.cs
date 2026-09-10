@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using Watermelon.AI;
@@ -747,7 +747,7 @@ namespace Watermelon
 
                     var distance = walked + Vector3.Distance(from, point);
 
-                    crossing = new BarrierCrossing(alongPath, distance / Mathf.Max(navMeshAgent.speed, MIN_CROSSING_SPEED));
+                    crossing = new BarrierCrossing(alongPath, distance / Mathf.Max(navMeshAgent.speed, MIN_CROSSING_SPEED), Mathf.Sign(side));
                     return true;
                 }
 

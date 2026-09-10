@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -814,14 +814,15 @@ namespace Watermelon
                 return false;
 
             var normal = barrier.GetNormal(alongPath);
-            var closingRate = -Mathf.Sign(sideOffset) * (input.x * normal.x + input.z * normal.z);
+            var travelAlongNormal = input.x * normal.x + input.z * normal.z;
+            var closingRate = -Mathf.Sign(sideOffset) * travelAlongNormal;
 
             if (closingRate <= 0f)
                 return false;
 
             var closingSpeed = Mathf.Max(closingRate * maxSpeed, MIN_CROSSING_SPEED);
 
-            crossing = new BarrierCrossing(alongPath, Mathf.Abs(sideOffset) / closingSpeed);
+            crossing = new BarrierCrossing(alongPath, Mathf.Abs(sideOffset) / closingSpeed, Mathf.Sign(travelAlongNormal));
             return true;
         }
 

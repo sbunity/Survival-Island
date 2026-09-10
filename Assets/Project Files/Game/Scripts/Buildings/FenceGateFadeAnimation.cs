@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,7 +64,7 @@ namespace Watermelon
                 Debug.LogWarning("[Fence] The fade animation has no transparent material assigned - logs will stay solid.");
         }
 
-        public override void SetLogOpen(int logIndex, bool isOpen, float distanceFromCentre)
+        public override void SetLogOpen(int logIndex, bool isOpen, in FenceLogOpenContext context)
         {
             if (renderers == null || logIndex < 0 || logIndex >= renderers.Length)
                 return;
@@ -78,7 +78,7 @@ namespace Watermelon
             var target = isOpen ? openAlpha : 1f;
             var duration = isOpen ? toTransparentDuration : toSolidDuration;
             var easing = isOpen ? toTransparentEasing : toSolidEasing;
-            var delay = staggerPerMetre * Mathf.Max(0f, distanceFromCentre);
+            var delay = staggerPerMetre * Mathf.Max(0f, context.DistanceFromCentre);
 
             if (isOpen)
                 ApplyTransparentMaterial(index);

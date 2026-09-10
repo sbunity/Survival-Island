@@ -9,6 +9,20 @@ namespace Watermelon
         None = 0,
         Sink = 1,
         Fade = 2,
+        Rotate = 3,
+    }
+
+    public readonly struct FenceLogOpenContext
+    {
+        public float DistanceFromCentre { get; }
+
+        public float CrossingSide { get; }
+
+        public FenceLogOpenContext(float distanceFromCentre, float crossingSide)
+        {
+            DistanceFromCentre = distanceFromCentre;
+            CrossingSide = crossingSide;
+        }
     }
 
     [Serializable]
@@ -18,7 +32,7 @@ namespace Watermelon
 
         public abstract void Initialise(IReadOnlyList<Transform> logs);
 
-        public abstract void SetLogOpen(int logIndex, bool isOpen, float distanceFromCentre);
+        public abstract void SetLogOpen(int logIndex, bool isOpen, in FenceLogOpenContext context);
 
         public abstract void SnapAllClosed();
     }
