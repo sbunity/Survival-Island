@@ -6,57 +6,111 @@ namespace Watermelon
     [DisallowMultipleComponent]
     public class FenceGateController : MonoBehaviour, IBarrier
     {
-        private const float MIN_SECTION_LENGTH = 0.5f;
-
         [SerializeField, HideInInspector] FencePath path;
 
-        [BoxFoldout("Sections", "Sections")]
-        [SerializeField, Min(MIN_SECTION_LENGTH)] float sectionLength = 2f;
-        [BoxFoldout("Sections", "Sections")]
-        [SerializeField, Min(0f)] float boundaryMargin = 0.4f;
-        [BoxFoldout("Sections", "Sections")]
-        [SerializeField, ReadOnly] int sectionsAmount;
+        [BoxFoldout("Animation", "Animation")]
+        [SerializeField] FenceGateAnimationType animationType = FenceGateAnimationType.Sink;
+
+        [BoxFoldout("Animation", "Animation")]
+        [ShowIf("EditorIsSinkSelected")]
+        [SerializeField] FenceGateSinkAnimation sinkAnimation = new FenceGateSinkAnimation();
 
         [BoxFoldout("Opening", "Opening")]
-        [SerializeField, Min(0f)] float openLeadSeconds = 0.5f;
+        [SerializeField, Min(1)] int openingLogs = 4;
+        [BoxFoldout("Opening", "Opening")]
+        [SerializeField, Min(0f)] float openLeadMargin = 0.35f;
+        [BoxFoldout("Opening", "Opening")]
+        [SerializeField, Min(0f)] float occupancyWidth = 0.6f;
         [BoxFoldout("Opening", "Opening")]
         [SerializeField, Min(0f)] float maxOpenDistance = 3f;
         [BoxFoldout("Opening", "Opening")]
-        [SerializeField, Min(0f)] float occupancyWidth = 0.9f;
-        [BoxFoldout("Opening", "Opening")]
-        [SerializeField, Min(0f)] float closeDelay = 1.2f;
-        [BoxFoldout("Opening", "Opening")]
-        [SerializeField, Min(0.02f)] float pollInterval = 0.1f;
+        [SerializeField, Range(0f, 1f)] float centreDriftTolerance = 0.5f;
+
+        [BoxFoldout("Closing", "Closing")]
+        [SerializeField, Min(0f)] float closeDelay = 0.8f;
+        [BoxFoldout("Closing", "Closing")]
+        [SerializeField, Min(0.02f)] float pollInterval = 0.05f;
 
         [BoxFoldout("Debug", "Debug")]
         [SerializeField] bool drawGizmos = true;
+        [BoxFoldout("Debug", "Debug")]
+        [SerializeField, ReadOnly] int logsAmount;
+        [BoxFoldout("Debug", "Debug")]
+        [SerializeField, ReadOnly] int openingsAmount;
 
-        private readonly List<SectionState> sections = new List<SectionState>();
+        private readonly List<Transform> logs = new();
+        private readonly List<LogState> logStates = new();
+        private readonly List<Opening> openings = new();
+
+        private FenceGateAnimation activeAnimation;
         private float nextPollTime;
+        private float logSpacing;
+        private bool isInitialised;
 
         public FencePath Path => path;
-
-        public int SectionCount => GetSectionCountForLength();
-        public float SectionSpan => SectionCount > 0 ? path.TotalLength / SectionCount : 0f;
-
         public float Length => path.TotalLength;
+        public int LogCount => logs.Count;
+
+        public float OpeningHalfWidth => Mathf.Clamp(openingLogs, 1, Mathf.Max(1, logs.Count)) * logSpacing * 0.5f;
+
+        private float LeadSeconds => (activeAnimation != null ? activeAnimation.Duration : 0f) + openLeadMargin;
+
+        private FenceGateAnimation ResolveAnimation()
+        {
+            return animationType switch
+            {
+                FenceGateAnimationType.Sink => sinkAnimation,
+                _ => null,
+            };
+
+        }
+
+        private bool EditorIsSinkSelected()
+        {
+            return animationType == FenceGateAnimationType.Sink;
+        }
 
         private void OnEnable()
         {
-            EnsureSections();
+            Initialise();
             nextPollTime = 0f;
         }
 
         private void OnDisable()
         {
-            for (var i = 0; i < sections.Count; i++)
-            {
-                if (!sections[i].IsOpen)
-                    continue;
+            CloseEverything();
+        }
 
-                sections[i].IsOpen = false;
-                OnSectionClosed(i, true);
+        private void OnValidate()
+        {
+            if (!Application.isPlaying || !isInitialised)
+                return;
+
+            var resolved = ResolveAnimation();
+
+            if (ReferenceEquals(resolved, activeAnimation))
+                return;
+
+            CloseEverything();
+
+            activeAnimation = resolved;
+
+            if (activeAnimation != null)
+                activeAnimation.Initialise(logs);
+        }
+
+        private void CloseEverything()
+        {
+            for (var i = 0; i < logStates.Count; i++)
+            {
+                logStates[i].IsOpen = false;
+                logStates[i].IsCovered = false;
             }
+
+            openings.Clear();
+            openingsAmount = 0;
+
+            activeAnimation?.SnapAllClosed();
         }
 
         private void Update()
@@ -69,138 +123,196 @@ namespace Watermelon
             Refresh();
         }
 
-        private void Refresh()
+        private void Initialise()
         {
-            EnsureSections();
+            logs.Clear();
+            logStates.Clear();
+            openings.Clear();
 
-            if (sections.Count == 0)
+            isInitialised = false;
+            logsAmount = 0;
+            openingsAmount = 0;
+
+            if (!path.IsValid)
                 return;
 
-            for (var i = 0; i < sections.Count; i++)
-                sections[i].IsWanted = false;
+            var found = new List<KeyValuePair<float, Transform>>();
 
+            for (var i = 0; i < transform.childCount; i++)
+            {
+                var child = transform.GetChild(i);
+
+                if (child.GetComponent<MeshRenderer>() == null)
+                    continue;
+
+                if (!path.Project(child.localPosition, out var alongPath, out _))
+                    continue;
+
+                found.Add(new KeyValuePair<float, Transform>(alongPath, child));
+            }
+
+            found.Sort((a, b) => a.Key.CompareTo(b.Key));
+
+            for (var i = 0; i < found.Count; i++)
+            {
+                logs.Add(found[i].Value);
+                logStates.Add(new LogState { AlongPath = found[i].Key });
+            }
+
+            logsAmount = logs.Count;
+            isInitialised = logs.Count > 0;
+
+            if (!isInitialised)
+                return;
+
+            logSpacing = logs.Count > 1
+                ? (logStates[logs.Count - 1].AlongPath - logStates[0].AlongPath) / (logs.Count - 1)
+                : path.TotalLength;
+
+            activeAnimation = ResolveAnimation();
+
+            activeAnimation?.Initialise(logs);
+        }
+
+        private void Refresh()
+        {
+            if (!isInitialised)
+                return;
+
+            UpdateOpenings();
+            ApplyCoverage();
+        }
+
+        private void UpdateOpenings()
+        {
             BarrierCrosserRegistry.RemoveInvalidCrossers();
+
+            for (var i = 0; i < openings.Count; i++)
+                openings[i].IsAlive = false;
 
             for (var i = 0; i < BarrierCrosserRegistry.Count; i++)
             {
                 var crosser = BarrierCrosserRegistry.GetCrosser(i);
 
-                if (crosser == null)
+                if (crosser == null || !TryGetDesiredCentre(crosser, out var centre))
                     continue;
 
-                MarkOccupied(crosser);
-                MarkApproaching(crosser);
+                var opening = FindOpening(crosser);
+
+                if (opening == null)
+                {
+                    openings.Add(new Opening { Owner = crosser, Centre = centre, IsAlive = true });
+                    continue;
+                }
+
+                if (Mathf.Abs(opening.Centre - centre) > OpeningHalfWidth * centreDriftTolerance)
+                    opening.Centre = centre;
+
+                opening.IsAlive = true;
             }
 
-            ApplyWantedState();
-        }
-
-        private void MarkOccupied(IBarrierCrosser crosser)
-        {
-            if (!TryProjectNearRun(crosser.Position, out var alongPath, out var sideOffset))
-                return;
-
-            if (Mathf.Abs(sideOffset) > occupancyWidth)
-                return;
-
-            WantSectionAt(alongPath);
-        }
-
-        private void MarkApproaching(IBarrierCrosser crosser)
-        {
-            if (!crosser.TryGetCrossing(this, out var crossing))
-                return;
-
-            if (crossing.SecondsToReach > openLeadSeconds)
-                return;
-
-            WantSectionAt(crossing.AlongPath);
-        }
-
-        private void WantSectionAt(float alongPath)
-        {
-            var index = GetSectionIndex(alongPath);
-
-            if (index < 0 || index >= sections.Count)
-                return;
-
-            sections[index].IsWanted = true;
-
-            var span = SectionSpan;
-            var offsetInSection = alongPath - index * span;
-
-            if (offsetInSection < boundaryMargin && index > 0)
-                sections[index - 1].IsWanted = true;
-
-            if (span - offsetInSection < boundaryMargin && index < sections.Count - 1)
-                sections[index + 1].IsWanted = true;
-        }
-
-        private void ApplyWantedState()
-        {
-            for (var i = 0; i < sections.Count; i++)
+            for (var i = openings.Count - 1; i >= 0; i--)
             {
-                var section = sections[i];
+                if (!openings[i].IsAlive)
+                    openings.RemoveAt(i);
+            }
 
-                if (section.IsWanted)
+            openingsAmount = openings.Count;
+        }
+
+        private bool TryGetDesiredCentre(IBarrierCrosser crosser, out float centre)
+        {
+            centre = 0f;
+
+            if (TryProjectNearRun(crosser.Position, out var alongPath, out var sideOffset) &&
+                Mathf.Abs(sideOffset) <= occupancyWidth)
+            {
+                centre = alongPath;
+                return true;
+            }
+
+            if (!crosser.TryGetCrossing(this, out var crossing))
+                return false;
+
+            if (crossing.SecondsToReach > LeadSeconds)
+                return false;
+
+            centre = crossing.AlongPath;
+            return true;
+        }
+
+        private void ApplyCoverage()
+        {
+            for (var i = 0; i < logStates.Count; i++)
+                logStates[i].IsCovered = false;
+
+            for (var i = 0; i < openings.Count; i++)
+            {
+                GetOpeningRange(openings[i].Centre, out var first, out var count);
+
+                for (var j = first; j < first + count; j++)
                 {
-                    section.CloseAtTime = Time.time + closeDelay;
+                    logStates[j].IsCovered = true;
+                    logStates[j].DistanceFromCentre = Mathf.Abs(logStates[j].AlongPath - openings[i].Centre);
+                }
+            }
 
-                    if (section.IsOpen)
+            var now = Time.time;
+
+            for (var i = 0; i < logStates.Count; i++)
+            {
+                var state = logStates[i];
+
+                if (state.IsCovered)
+                {
+                    state.CloseAtTime = now + closeDelay;
+
+                    if (state.IsOpen)
                         continue;
 
-                    section.IsOpen = true;
-                    OnSectionOpened(i);
+                    state.IsOpen = true;
+
+                    activeAnimation?.SetLogOpen(i, true, state.DistanceFromCentre);
 
                     continue;
                 }
 
-                if (!section.IsOpen || Time.time < section.CloseAtTime)
+                if (!state.IsOpen || now < state.CloseAtTime)
                     continue;
 
-                section.IsOpen = false;
-                OnSectionClosed(i, false);
+                state.IsOpen = false;
+
+                if (activeAnimation != null)
+                    activeAnimation.SetLogOpen(i, false, state.DistanceFromCentre);
             }
         }
 
-        protected virtual void OnSectionOpened(int index)
+        private void GetOpeningRange(float centre, out int first, out int count)
         {
-            // Anim()
+            count = Mathf.Clamp(openingLogs, 1, logs.Count);
+
+            var insertion = 0;
+
+            while (insertion < logStates.Count && logStates[insertion].AlongPath < centre)
+                insertion++;
+
+            first = Mathf.Clamp(insertion - count / 2, 0, logs.Count - count);
         }
 
-        protected virtual void OnSectionClosed(int index, bool immediately)
+        private Opening FindOpening(IBarrierCrosser crosser)
         {
-            // Anim()
+            for (var i = 0; i < openings.Count; i++)
+            {
+                if (ReferenceEquals(openings[i].Owner, crosser))
+                    return openings[i];
+            }
+
+            return null;
         }
 
-        public bool IsSectionOpen(int index)
+        public bool IsLogOpen(int index)
         {
-            return index >= 0 && index < sections.Count && sections[index].IsOpen;
-        }
-
-        public int GetSectionIndex(float alongPath)
-        {
-            var count = SectionCount;
-            var span = SectionSpan;
-
-            if (count == 0 || span <= 0f)
-                return -1;
-
-            return Mathf.Clamp(Mathf.FloorToInt(alongPath / span), 0, count - 1);
-        }
-
-        public bool TryGetSectionCentre(int index, out Vector3 worldPosition)
-        {
-            worldPosition = Vector3.zero;
-
-            if (index < 0 || index >= sections.Count)
-                return false;
-
-            var span = SectionSpan;
-            var local = path.SamplePosition((index + 0.5f) * span, 0f);
-
-            worldPosition = transform.TransformPoint(local);
-            return true;
+            return index >= 0 && index < logStates.Count && logStates[index].IsOpen;
         }
 
         #region IBarrier
@@ -234,34 +346,10 @@ namespace Watermelon
             return offsetX * offsetX + offsetZ * offsetZ <= maxOpenDistance * maxOpenDistance;
         }
 
-        private void EnsureSections()
-        {
-            var count = GetSectionCountForLength();
-
-            if (sections.Count == count)
-                return;
-
-            sections.Clear();
-
-            for (var i = 0; i < count; i++)
-                sections.Add(new SectionState());
-
-            sectionsAmount = count;
-        }
-
-        private int GetSectionCountForLength()
-        {
-            if (!path.IsValid)
-                return 0;
-
-            return Mathf.Max(1, Mathf.CeilToInt(path.TotalLength / Mathf.Max(MIN_SECTION_LENGTH, sectionLength)));
-        }
-
 #if UNITY_EDITOR
         public void SetPath(FencePath value)
         {
             path = value;
-            sectionsAmount = GetSectionCountForLength();
 
             UnityEditor.EditorUtility.SetDirty(this);
         }
@@ -272,29 +360,53 @@ namespace Watermelon
             if (!drawGizmos || !path.IsValid)
                 return;
 
-            var count = SectionCount;
-            var span = SectionSpan;
+            Gizmos.color = new Color(1f, 0.6f, 0.1f);
 
-            for (var i = 0; i < count; i++)
+            var steps = Mathf.Max(2, Mathf.CeilToInt(path.TotalLength));
+            var previous = transform.TransformPoint(path.SamplePosition(0f, 0f));
+
+            for (var i = 1; i <= steps; i++)
             {
-                Gizmos.color = IsSectionOpen(i) ? Color.green : new Color(1f, 0.6f, 0.1f);
+                var next = transform.TransformPoint(path.SamplePosition(path.TotalLength * i / steps, 0f));
 
-                var from = transform.TransformPoint(path.SamplePosition(i * span, 0f));
-                var to = transform.TransformPoint(path.SamplePosition((i + 1) * span, 0f));
-
-                Gizmos.DrawLine(from + Vector3.up * 2f, to + Vector3.up * 2f);
-                Gizmos.DrawLine(from, from + Vector3.up * 2f);
+                Gizmos.DrawLine(previous, next);
+                previous = next;
             }
 
-            var end = transform.TransformPoint(path.SamplePosition(path.TotalLength, 0f));
-            Gizmos.DrawLine(end, end + Vector3.up * 2f);
+            Gizmos.color = Color.green;
+
+            for (var i = 0; i < logStates.Count; i++)
+            {
+                if (!logStates[i].IsOpen)
+                    continue;
+
+                var point = transform.TransformPoint(path.SamplePosition(logStates[i].AlongPath, 0f));
+                Gizmos.DrawLine(point, point + Vector3.up * 2.5f);
+            }
+
+            Gizmos.color = Color.cyan;
+
+            for (var i = 0; i < openings.Count; i++)
+            {
+                var point = transform.TransformPoint(path.SamplePosition(openings[i].Centre, 0f));
+                Gizmos.DrawWireSphere(point + Vector3.up * 2.5f, 0.3f);
+            }
         }
 
-        private class SectionState
+        private class LogState
         {
+            public float AlongPath;
             public bool IsOpen;
-            public bool IsWanted;
+            public bool IsCovered;
             public float CloseAtTime;
+            public float DistanceFromCentre;
+        }
+
+        private class Opening
+        {
+            public IBarrierCrosser Owner;
+            public float Centre;
+            public bool IsAlive;
         }
     }
 }
