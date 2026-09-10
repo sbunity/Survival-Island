@@ -2117,15 +2117,34 @@ MonoBehaviour:
     straightLength: 13.719954
     curvature: 0.023208661
     arcLength: 12.671931
-  sectionLength: 2
-  boundaryMargin: 0.4
-  sectionsAmount: 14
-  openLeadSeconds: 0.5
-  maxOpenDistance: 3
+  animationType: 1
+  sinkAnimation:
+    sinkDepth: 0
+    depthMargin: 0.15
+    openDuration: 0.25
+    closeDuration: 0.3
+    staggerPerMetre: 0.05
+    openEasing: 4
+    closeEasing: 26
+  fadeAnimation:
+    transparentMaterial: {fileID: 2100000, guid: 9191907054839f84e84bd40fab5dbfc7,
+      type: 2}
+    openAlpha: 0.35
+    toTransparentDuration: 0.25
+    toSolidDuration: 0.3
+    staggerPerMetre: 0.05
+    toTransparentEasing: 2
+    toSolidEasing: 1
+  openingLogs: 4
+  openLeadMargin: 0.35
   occupancyWidth: 0.9
+  maxOpenDistance: 3
+  centreDriftTolerance: 0.5
   closeDelay: 1.2
   pollInterval: 0.1
   drawGizmos: 1
+  logsAmount: 0
+  openingsAmount: 0
 --- !u!1 &2094740305207030937
 GameObject:
   m_ObjectHideFlags: 0

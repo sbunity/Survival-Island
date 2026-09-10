@@ -15,6 +15,10 @@ namespace Watermelon
         [ShowIf("EditorIsSinkSelected")]
         [SerializeField] FenceGateSinkAnimation sinkAnimation = new FenceGateSinkAnimation();
 
+        [BoxFoldout("Animation", "Animation")]
+        [ShowIf("EditorIsFadeSelected")]
+        [SerializeField] FenceGateFadeAnimation fadeAnimation = new FenceGateFadeAnimation();
+
         [BoxFoldout("Opening", "Opening")]
         [SerializeField, Min(1)] int openingLogs = 4;
         [BoxFoldout("Opening", "Opening")]
@@ -60,6 +64,7 @@ namespace Watermelon
             return animationType switch
             {
                 FenceGateAnimationType.Sink => sinkAnimation,
+                FenceGateAnimationType.Fade => fadeAnimation,
                 _ => null,
             };
 
@@ -68,6 +73,11 @@ namespace Watermelon
         private bool EditorIsSinkSelected()
         {
             return animationType == FenceGateAnimationType.Sink;
+        }
+
+        private bool EditorIsFadeSelected()
+        {
+            return animationType == FenceGateAnimationType.Fade;
         }
 
         private void OnEnable()

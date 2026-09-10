@@ -8,6 +8,7 @@ namespace Watermelon
     {
         None = 0,
         Sink = 1,
+        Fade = 2,
     }
 
     [Serializable]
