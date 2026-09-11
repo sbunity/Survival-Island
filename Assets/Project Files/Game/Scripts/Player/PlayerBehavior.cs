@@ -11,6 +11,9 @@ namespace Watermelon
     public class PlayerBehavior : MonoBehaviour, ICharacter, ICombatTarget, ICharacterGraphics<PlayerGraphics>, IResourceGiver, IResourceTaker, IResourceCarrier, IHitter, IRaftPassenger, IBarrierCrosser
     {
         private const float MIN_CROSSING_SPEED = 0.05f;
+        private const float CONTACT_DISTANCE = 0.15f;
+        private const float MIN_CROSSING_DIRECTION = 0.05f;
+        private const int AIM_REFINEMENT_STEPS = 2;
 
         private static readonly int FULL_FLOATING_TEXT_HASH = "Floating".GetHashCode();
         private static readonly int FULL_FLOATING_TEXT_DELAY = 2;
@@ -792,6 +795,11 @@ namespace Watermelon
 
         Vector3 IBarrierCrosser.Position => transform.position;
 
+        private static float SignOrZero(float value)
+        {
+            return Mathf.Abs(value) < MIN_CROSSING_DIRECTION ? 0f : Mathf.Sign(value);
+        }
+
         public bool TryGetCrossing(IBarrier barrier, out BarrierCrossing crossing)
         {
             crossing = default;
@@ -813,16 +821,59 @@ namespace Watermelon
             if (!barrier.Project(transform.position, out var alongPath, out var sideOffset))
                 return false;
 
+            var direction = input.normalized;
             var normal = barrier.GetNormal(alongPath);
-            var travelAlongNormal = input.x * normal.x + input.z * normal.z;
-            var closingRate = -Mathf.Sign(sideOffset) * travelAlongNormal;
+            var towards = Vector3.Dot(direction, normal);
 
-            if (closingRate <= 0f)
+            if (Mathf.Abs(sideOffset) <= CONTACT_DISTANCE)
+            {
+                var slide = Vector3.Dot(direction, Vector3.Cross(Vector3.up, normal));
+
+                crossing = new BarrierCrossing(
+                    alongPath,
+                    0f,
+                    SignOrZero(towards),
+                    SignOrZero(slide));
+
+                return true;
+            }
+
+            if (Mathf.Abs(towards) < MIN_CROSSING_DIRECTION)
                 return false;
 
-            var closingSpeed = Mathf.Max(closingRate * maxSpeed, MIN_CROSSING_SPEED);
+            if (-Mathf.Sign(sideOffset) * towards <= 0f)
+                return false;
 
-            crossing = new BarrierCrossing(alongPath, Mathf.Abs(sideOffset) / closingSpeed, Mathf.Sign(travelAlongNormal));
+            var travel = Mathf.Max(0f, -sideOffset / towards);
+
+            for (var step = 0; step < AIM_REFINEMENT_STEPS; step++)
+            {
+                if (!barrier.Project(transform.position + direction * travel, out var guessAlongPath, out var residual))
+                    break;
+
+                var guessTowards = Vector3.Dot(direction, barrier.GetNormal(guessAlongPath));
+
+                if (Mathf.Abs(guessTowards) < MIN_CROSSING_DIRECTION)
+                    break;
+
+                travel = Mathf.Max(0f, travel - residual / guessTowards);
+            }
+
+            var crossingPoint = transform.position + direction * travel;
+
+            if (!barrier.Project(crossingPoint, out var crossingAlongPath, out _))
+                return false;
+
+            var onRun = barrier.GetPoint(crossingAlongPath);
+            var missX = crossingPoint.x - onRun.x;
+            var missZ = crossingPoint.z - onRun.z;
+
+            if (missX * missX + missZ * missZ > CONTACT_DISTANCE * CONTACT_DISTANCE)
+                return false;
+
+            var speed = Mathf.Max(input.magnitude * maxSpeed, MIN_CROSSING_SPEED);
+
+            crossing = new BarrierCrossing(crossingAlongPath, travel / speed, Mathf.Sign(towards));
             return true;
         }
 

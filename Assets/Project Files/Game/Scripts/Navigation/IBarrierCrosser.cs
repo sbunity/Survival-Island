@@ -9,11 +9,14 @@ namespace Watermelon
 
         public float Side { get; }
 
-        public BarrierCrossing(float alongPath, float secondsToReach, float side)
+        public float SlideDirection { get; }
+
+        public BarrierCrossing(float alongPath, float secondsToReach, float side, float slideDirection = 0f)
         {
             AlongPath = alongPath;
             SecondsToReach = secondsToReach;
             Side = side;
+            SlideDirection = slideDirection;
         }
     }
 

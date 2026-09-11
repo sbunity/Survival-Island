@@ -32,8 +32,6 @@ namespace Watermelon
         [BoxFoldout("Opening", "Opening")]
         [SerializeField, Min(0f)] float occupancyWidth = 0.6f;
         [BoxFoldout("Opening", "Opening")]
-        [SerializeField, Min(0f)] float maxOpenDistance = 3f;
-        [BoxFoldout("Opening", "Opening")]
         [SerializeField, Range(0f, 1f)] float centreDriftTolerance = 0.5f;
 
         [BoxFoldout("Closing", "Closing")]
@@ -215,24 +213,33 @@ namespace Watermelon
             {
                 var crosser = BarrierCrosserRegistry.GetCrosser(i);
 
-                if (crosser == null || !TryGetDesiredOpening(crosser, out var centre, out var side))
+                if (crosser == null)
                     continue;
 
                 var opening = FindOpening(crosser);
 
-                if (opening == null)
+                if (TryGetIntendedCrossing(crosser, out var crossing))
                 {
-                    openings.Add(new Opening { Owner = crosser, Centre = centre, Side = side, IsAlive = true });
+                    var centre = GetOpeningCentre(crossing);
+
+                    if (opening == null)
+                    {
+                        openings.Add(new Opening { Owner = crosser, Centre = centre, Side = crossing.Side, IsAlive = true });
+                        continue;
+                    }
+
+                    if (Mathf.Abs(opening.Centre - centre) > OpeningHalfWidth * centreDriftTolerance)
+                        opening.Centre = centre;
+
+                    if (Mathf.Abs(crossing.Side) > SIDE_EPSILON)
+                        opening.Side = crossing.Side;
+
+                    opening.IsAlive = true;
                     continue;
                 }
 
-                if (Mathf.Abs(opening.Centre - centre) > OpeningHalfWidth * centreDriftTolerance)
-                    opening.Centre = centre;
-
-                if (Mathf.Abs(side) > SIDE_EPSILON)
-                    opening.Side = side;
-
-                opening.IsAlive = true;
+                if (opening != null && IsInsideOpening(opening, crosser.Position))
+                    opening.IsAlive = true;
             }
 
             for (var i = openings.Count - 1; i >= 0; i--)
@@ -244,32 +251,14 @@ namespace Watermelon
             openingsAmount = openings.Count;
         }
 
-        private bool TryGetDesiredOpening(IBarrierCrosser crosser, out float centre, out float side)
+        private bool TryGetIntendedCrossing(IBarrierCrosser crosser, out BarrierCrossing crossing)
         {
-            centre = 0f;
-            side = 0f;
+            return crosser.TryGetCrossing(this, out crossing) && crossing.SecondsToReach <= LeadSeconds;
+        }
 
-            if (TryProjectNearRun(crosser.Position, out var alongPath, out var sideOffset) &&
-                Mathf.Abs(sideOffset) <= occupancyWidth)
-            {
-                centre = alongPath;
-
-                if (Mathf.Abs(sideOffset) > SIDE_EPSILON)
-                    side = -Mathf.Sign(sideOffset);
-
-                return true;
-            }
-
-            if (!crosser.TryGetCrossing(this, out var crossing))
-                return false;
-
-            if (crossing.SecondsToReach > LeadSeconds)
-                return false;
-
-            centre = crossing.AlongPath;
-            side = crossing.Side;
-
-            return true;
+        private float GetOpeningCentre(BarrierCrossing crossing)
+        {
+            return crossing.AlongPath + crossing.SlideDirection * OpeningHalfWidth;
         }
 
         private void ApplyCoverage()
@@ -358,23 +347,31 @@ namespace Watermelon
             return transform.TransformDirection(path.GetNormal(alongPath)).normalized;
         }
 
+        public Vector3 GetPoint(float alongPath)
+        {
+            return transform.TransformPoint(path.SamplePosition(alongPath, 0f));
+        }
+
         #endregion
 
-        private bool TryProjectNearRun(Vector3 worldPoint, out float alongPath, out float sideOffset)
+        private bool IsInsideOpening(Opening opening, Vector3 worldPoint)
         {
-            alongPath = 0f;
-            sideOffset = 0f;
-
-            var local = transform.InverseTransformPoint(worldPoint);
-
-            if (!path.Project(local, out alongPath, out sideOffset))
+            if (!Project(worldPoint, out var alongPath, out _))
                 return false;
 
-            var onPath = path.SamplePosition(alongPath, 0f);
-            var offsetX = local.x - onPath.x;
-            var offsetZ = local.z - onPath.z;
+            if (Mathf.Abs(alongPath - opening.Centre) > OpeningHalfWidth)
+                return false;
 
-            return offsetX * offsetX + offsetZ * offsetZ <= maxOpenDistance * maxOpenDistance;
+            return HorizontalDistanceToRun(worldPoint, alongPath) <= occupancyWidth;
+        }
+
+        private float HorizontalDistanceToRun(Vector3 worldPoint, float alongPath)
+        {
+            var onRun = GetPoint(alongPath);
+            var offsetX = worldPoint.x - onRun.x;
+            var offsetZ = worldPoint.z - onRun.z;
+
+            return Mathf.Sqrt(offsetX * offsetX + offsetZ * offsetZ);
         }
 
 #if UNITY_EDITOR
