@@ -8,7 +8,7 @@ namespace Watermelon
     public class FenceGateSinkAnimation : FenceGateAnimation
     {
         [SerializeField, Min(0f)] float sinkDepth;
-        [SerializeField, Min(0f)] float depthMargin = 0.15f;
+        [SerializeField, Min(0f)] float exposedHeight = 0.35f;
 
         [Space]
         [SerializeField, Min(0.05f)] float openDuration = 0.25f;
@@ -50,7 +50,7 @@ namespace Watermelon
                     tallest = Mathf.Max(tallest, logRenderer.bounds.size.y);
             }
 
-            appliedDepth = sinkDepth > 0f ? sinkDepth : tallest + depthMargin;
+            appliedDepth = sinkDepth > 0f ? sinkDepth : Mathf.Max(0f, tallest - exposedHeight);
         }
 
         public override void SetLogOpen(int logIndex, bool isOpen, in FenceLogOpenContext context)
