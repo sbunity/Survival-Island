@@ -99366,7 +99366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.PeriodicRaidScheduler
   spawner: {fileID: 812600211}
-  enemyCountRange: {x: 8, y: 16}
+  enemyCountRange: {x: 8, y: 14}
   intervalRange: {x: 240, y: 360}
   uniqueSaveID: eb2bb3b3-f844-421c-9be7-23c78af14c0e
   selectedInterval: 0
@@ -142634,6 +142634,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1852887614}
     m_Modifications:
+    - target: {fileID: 2202720298862955212, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1200
+      objectReference: {fileID: 0}
     - target: {fileID: 2544960403837314439, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
       propertyPath: logsAmount
