@@ -22,6 +22,8 @@ namespace Watermelon
         /// <summary>Deactivates all active objects, returning them to the pool.</summary>
         public void ReturnToPoolEverything(bool resetParent = false);
 
+        public void ReturnToPool(GameObject pooledObject);
+
         /// <summary>Destroys all pooled objects and unregisters the pool. Note: this method is performance heavy.</summary>
         public void Clear();
     }

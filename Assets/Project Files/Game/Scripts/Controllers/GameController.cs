@@ -173,6 +173,8 @@ namespace Watermelon
 
         public static void UnloadWorld(SimpleCallback onUnloaded)
         {
+            CurrencyCloud.Unload();
+
             Tween.RemoveAll();
 
             NavigationHelper.Unload();

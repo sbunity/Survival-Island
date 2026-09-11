@@ -6,13 +6,20 @@ namespace Watermelon
 {
     public class CurrencyCloud : MonoBehaviour
     {
+        private const string CLOUD_LAYER_NAME = "[CURRENCY CLOUD LAYER]";
+
         [SerializeField] Data[] floatingCloudCases;
 
         private static Dictionary<int, Data> floatingCloudLink = new Dictionary<int, Data>();
         private static List<Animation> activeClouds = new List<Animation>();
 
+        private static RectTransform cloudLayer;
+        public static RectTransform CloudLayer => cloudLayer;
+
         private void Start()
         {
+            cloudLayer = CreateCloudLayer();
+
             for (int i = 0; i < floatingCloudCases.Length; i++)
             {
                 RegisterCase(floatingCloudCases[i]);
@@ -55,16 +62,56 @@ namespace Watermelon
             }
 
             floatingCloudLink.Clear();
+
+            if (cloudLayer != null)
+            {
+                Destroy(cloudLayer.gameObject);
+
+                cloudLayer = null;
+            }
+        }
+
+        private static RectTransform CreateCloudLayer()
+        {
+            var mainCanvas = UIController.MainCanvas;
+            if (mainCanvas == null)
+            {
+                Debug.LogError("[Currency Cloud]: Main canvas isn't initialized, cloud elements have no layer to fly in.");
+
+                return null;
+            }
+
+            var layerObject = new GameObject(CLOUD_LAYER_NAME);
+
+            var layerTransform = layerObject.AddComponent<RectTransform>();
+            layerTransform.SetParent(mainCanvas.transform, false);
+            layerTransform.anchorMin = Vector2.zero;
+            layerTransform.anchorMax = Vector2.one;
+            layerTransform.offsetMin = Vector2.zero;
+            layerTransform.offsetMax = Vector2.zero;
+            layerTransform.localScale = Vector3.one;
+            layerTransform.SetAsLastSibling();
+
+            var layerCanvasGroup = layerObject.AddComponent<CanvasGroup>();
+            layerCanvasGroup.interactable = false;
+            layerCanvasGroup.blocksRaycasts = false;
+
+            return layerTransform;
         }
 
         public static void Unload()
         {
-            for (int i = 0; i < activeClouds.Count; i++)
-            {
-                activeClouds[i].Clear();
-            }
+            if (activeClouds.Count == 0)
+                return;
+
+            var cloudsToAbort = activeClouds.ToArray();
 
             activeClouds.Clear();
+
+            for (var i = 0; i < cloudsToAbort.Length; i++)
+            {
+                cloudsToAbort[i].Abort();
+            }
         }
 
         public static void RegisterCase(CurrencyCloudSettings settings)
@@ -77,8 +124,8 @@ namespace Watermelon
                 return;
             }
 
-            Data data = new Data(settings);
-            data.Init();
+            var data = new Data(settings);
+            data.Init(cloudLayer);
 
             floatingCloudLink.Add(cloudHash, data);
         }
@@ -93,7 +140,7 @@ namespace Watermelon
                 return;
             }
 
-            floatingCloudCase.Init();
+            floatingCloudCase.Init(cloudLayer);
 
             floatingCloudLink.Add(cloudHash, floatingCloudCase);
         }
@@ -111,10 +158,11 @@ namespace Watermelon
                 return;
             }
 
-            Animation animation = new Animation(floatingCloudLink[hash], rectTransform, targetTransform, elementsAmount, onCurrencyHittedTarget);
-            animation.PlayAnimation();
+            var animation = new Animation(floatingCloudLink[hash], rectTransform, targetTransform, elementsAmount, onCurrencyHittedTarget);
 
             activeClouds.Add(animation);
+
+            animation.PlayAnimation();
         }
 
         public static void OnAnimationFinished(Animation animation)
@@ -161,9 +209,9 @@ namespace Watermelon
                 collectClipHandler = new AudioClipHandler(AudioType.Sound, 1.0f);
             }
 
-            public void Init()
+            public void Init(Transform objectsContainer)
             {
-                pool = new Pool(prefab, "CurrencyCloud_" + name);
+                pool = new Pool(prefab, "CurrencyCloud_" + name, objectsContainer);
             }
 
             public void Destroy()
@@ -175,134 +223,224 @@ namespace Watermelon
 
         public class Animation
         {
-            private Data floatingCloudData;
-            private RectTransform rectTransform;
-            private RectTransform targetTransform;
-            private int elementsAmount;
-            private List<RectTransform> elementsList = new List<RectTransform>();
-            private SimpleCallback onCurrencyHittedTarget;
+            private const float FADE_IN_DURATION = 0.2f;
+            private const float SCATTER_DURATION_MIN = 0.6f;
+            private const float SCATTER_DURATION_MAX = 0.8f;
+            private const float GATHER_DELAY = 0.1f;
+            private const float GATHER_DURATION = 0.5f;
+            private const float GATHER_SCALE = 0.3f;
+            private const float TARGET_PUNCH_SCALE = 1.2f;
+            private const float TARGET_PUNCH_DURATION = 0.15f;
+            private const float TARGET_RESET_DURATION = 0.1f;
 
-            private Transform fakeTargetTransform;
+            private readonly Data floatingCloudData;
+            private readonly RectTransform spawnTransform;
+            private readonly RectTransform targetTransform;
+            private readonly Transform flightParent;
+            private readonly int elementsAmount;
+            private readonly SimpleCallback onCurrencyHittedTarget;
+
+            private readonly List<Element> flyingElements = new List<Element>();
 
             private TweenCaseCollection tweenCaseCollection;
+            private TweenCase targetPunchCase;
+
+            private bool currencyHittedTarget;
+            private bool isReleased;
+
+            public bool IsReleased => isReleased;
 
             public Animation(Data floatingCloudData, RectTransform rectTransform, RectTransform targetTransform, int elementsAmount, SimpleCallback onCurrencyHittedTarget)
             {
                 this.floatingCloudData = floatingCloudData;
-                this.rectTransform = rectTransform;
+                this.spawnTransform = rectTransform;
                 this.targetTransform = targetTransform;
                 this.elementsAmount = elementsAmount;
-                this.elementsList = new List<RectTransform>();
                 this.onCurrencyHittedTarget = onCurrencyHittedTarget;
 
-                GameObject fakeTargetObject = new GameObject("Fake Target");
-                fakeTargetTransform = fakeTargetObject.transform;
-                fakeTargetTransform.SetParent(targetTransform.parent);
-                fakeTargetTransform.position = targetTransform.position;
-                fakeTargetTransform.localScale = targetTransform.localScale;
-                fakeTargetTransform.localRotation = targetTransform.localRotation;
+                flightParent = cloudLayer != null ? cloudLayer : targetTransform.parent;
             }
 
             public void PlayAnimation()
             {
-                RectTransform targetRectTransform = targetTransform;
-
                 tweenCaseCollection = Tween.BeginTweenCaseCollection();
 
                 if (floatingCloudData.AppearAudioClip != null)
                     floatingCloudData.AppearClipHandler.Play(floatingCloudData.AppearAudioClip);
 
-                float cloudRadius = floatingCloudData.CloudRadius;
-                Vector3 centerPoint = rectTransform.position;
-
-                int finishedElementsAmount = 0;
-
-                bool currencyHittedTarget = false;
-                for (int i = 0; i < elementsAmount; i++)
+                for (var i = 0; i < elementsAmount; i++)
                 {
-                    TweenCase currencyTweenCase = null;
-                    GameObject elementObject = floatingCloudData.Pool.GetPooledObject();
+                    var element = TakeElement();
+                    if (element == null)
+                        continue;
 
-                    RectTransform elementRectTransform = (RectTransform)elementObject.transform;
+                    flyingElements.Add(element);
 
-                    elementRectTransform.SetParent(fakeTargetTransform);
-                    elementRectTransform.position = centerPoint;
-                    elementRectTransform.localRotation = Quaternion.identity;
-                    elementRectTransform.localScale = Vector3.one;
-
-                    elementsList.Add(elementRectTransform);
-
-                    Image elementImage = elementObject.GetComponent<Image>();
-                    elementImage.color = Color.white.SetAlpha(0);
-
-                    float moveTime = Random.Range(0.6f, 0.8f);
-
-                    elementImage.DOFade(1, 0.2f, unscaledTime: true);
-                    elementRectTransform.DOAnchoredPosition(elementRectTransform.anchoredPosition + (Random.insideUnitCircle * cloudRadius), moveTime, unscaledTime: true).SetEasing(Ease.Type.CubicOut).OnComplete(delegate
-                    {
-                        tweenCaseCollection.AddTween(Tween.DelayedCall(0.1f, delegate
-                        {
-                            tweenCaseCollection.AddTween(elementRectTransform.DOScale(0.3f, 0.5f, unscaledTime: true).SetEasing(Ease.Type.ExpoIn));
-                            tweenCaseCollection.AddTween(elementRectTransform.DOLocalMove(Vector3.zero, 0.5f, unscaledTime: true).SetEasing(Ease.Type.SineIn).OnComplete(delegate
-                            {
-                                if (!currencyHittedTarget)
-                                {
-                                    if (onCurrencyHittedTarget != null)
-                                        onCurrencyHittedTarget.Invoke();
-
-                                    currencyHittedTarget = true;
-                                }
-
-                                bool punchTarget = true;
-                                if (currencyTweenCase != null)
-                                {
-                                    if (currencyTweenCase.State < 0.8f)
-                                    {
-                                        punchTarget = false;
-                                    }
-                                    else
-                                    {
-                                        currencyTweenCase.Kill();
-                                    }
-                                }
-
-                                if (punchTarget)
-                                {
-                                    if (floatingCloudData.CollectAudioClip != null)
-                                        floatingCloudData.CollectClipHandler.Play(floatingCloudData.CollectAudioClip);
-
-                                    currencyTweenCase = targetRectTransform.DOScale(1.2f, 0.15f, unscaledTime: true).OnComplete(delegate
-                                    {
-                                        currencyTweenCase = targetRectTransform.DOScale(1.0f, 0.1f, unscaledTime: true);
-                                        tweenCaseCollection.AddTween(currencyTweenCase);
-                                    });
-
-                                    tweenCaseCollection.AddTween(currencyTweenCase);
-                                }
-
-                                elementObject.transform.SetParent(floatingCloudData.Pool.ObjectsContainer);
-                                elementObject.SetActive(false);
-
-                                finishedElementsAmount++;
-                                if (finishedElementsAmount >= elementsAmount)
-                                {
-                                    CurrencyCloud.OnAnimationFinished(this);
-                                    GameObject.Destroy(fakeTargetTransform.gameObject);
-                                }
-                            }));
-                        }, unscaledTime: true));
-                    });
+                    PlayScatter(element);
                 }
 
                 Tween.EndTweenCaseCollection();
+
+                if (flyingElements.Count == 0)
+                {
+                    OnTweensFinished();
+
+                    return;
+                }
+
+                tweenCaseCollection.OnComplete(OnTweensFinished);
             }
 
-            public void Clear()
+            public void Abort()
             {
-                tweenCaseCollection.Kill();
+                tweenCaseCollection?.Kill();
 
-                if (fakeTargetTransform != null)
-                    GameObject.Destroy(fakeTargetTransform.gameObject);
+                Release();
+            }
+
+            public void Release()
+            {
+                if (isReleased)
+                    return;
+
+                isReleased = true;
+
+                for (var i = 0; i < flyingElements.Count; i++)
+                {
+                    ReturnToPool(flyingElements[i]);
+                }
+
+                flyingElements.Clear();
+
+                ResetTarget();
+            }
+
+            private void OnTweensFinished()
+            {
+                Release();
+
+                CurrencyCloud.OnAnimationFinished(this);
+            }
+
+            private Element TakeElement()
+            {
+                var elementObject = floatingCloudData.Pool.GetPooledObject();
+                if (elementObject == null)
+                    return null;
+
+                var elementTransform = (RectTransform)elementObject.transform;
+                elementTransform.SetParent(flightParent);
+                elementTransform.position = spawnTransform.position;
+                elementTransform.localRotation = Quaternion.identity;
+                elementTransform.localScale = Vector3.one;
+
+                var element = new Element(elementObject, elementTransform, elementObject.GetComponent<Image>());
+
+                if (element.Image != null)
+                    element.Image.color = Color.white.SetAlpha(0);
+
+                return element;
+            }
+
+            private void PlayScatter(Element element)
+            {
+                if (element.Image != null)
+                    element.Image.DOFade(1, FADE_IN_DURATION, unscaledTime: true);
+
+                var scatterPosition = element.RectTransform.anchoredPosition + Random.insideUnitCircle * floatingCloudData.CloudRadius;
+                var scatterDuration = Random.Range(SCATTER_DURATION_MIN, SCATTER_DURATION_MAX);
+
+                element.RectTransform.DOAnchoredPosition(scatterPosition, scatterDuration, unscaledTime: true).SetEasing(Ease.Type.CubicOut).OnComplete(delegate
+                {
+                    ScheduleGather(element);
+                });
+            }
+
+            private void ScheduleGather(Element element)
+            {
+                tweenCaseCollection.AddTween(Tween.DelayedCall(GATHER_DELAY, delegate
+                {
+                    PlayGather(element);
+                }, unscaledTime: true));
+            }
+
+            private void PlayGather(Element element)
+            {
+                tweenCaseCollection.AddTween(element.RectTransform.DOScale(GATHER_SCALE, GATHER_DURATION, unscaledTime: true).SetEasing(Ease.Type.ExpoIn));
+
+                var gatherPosition = targetTransform != null ? targetTransform.position : element.RectTransform.position;
+
+                tweenCaseCollection.AddTween(element.RectTransform.DOMove(gatherPosition, GATHER_DURATION, unscaledTime: true).SetEasing(Ease.Type.SineIn).OnComplete(delegate
+                {
+                    OnElementReachedTarget(element);
+                }));
+            }
+
+            private void OnElementReachedTarget(Element element)
+            {
+                if (!currencyHittedTarget)
+                {
+                    currencyHittedTarget = true;
+
+                    onCurrencyHittedTarget?.Invoke();
+                }
+
+                PunchTarget();
+
+                flyingElements.Remove(element);
+
+                ReturnToPool(element);
+            }
+
+            private void PunchTarget()
+            {
+                if (targetTransform == null)
+                    return;
+
+                if (floatingCloudData.CollectAudioClip != null)
+                    floatingCloudData.CollectClipHandler.Play(floatingCloudData.CollectAudioClip);
+
+                targetPunchCase.KillActive();
+
+                targetPunchCase = targetTransform.DOScale(TARGET_PUNCH_SCALE, TARGET_PUNCH_DURATION, unscaledTime: true).OnComplete(delegate
+                {
+                    targetPunchCase = targetTransform.DOScale(1.0f, TARGET_RESET_DURATION, unscaledTime: true);
+
+                    tweenCaseCollection.AddTween(targetPunchCase);
+                });
+
+                tweenCaseCollection.AddTween(targetPunchCase);
+            }
+
+            private void ResetTarget()
+            {
+                if (targetPunchCase == null)
+                    return;
+
+                targetPunchCase.KillActive();
+                targetPunchCase = null;
+
+                if (targetTransform != null)
+                    targetTransform.localScale = Vector3.one;
+            }
+
+            private void ReturnToPool(Element element)
+            {
+                floatingCloudData.Pool?.ReturnToPool(element.PooledObject);
+            }
+
+            private class Element
+            {
+                public GameObject PooledObject { get; }
+                public RectTransform RectTransform { get; }
+                public Image Image { get; }
+
+                public Element(GameObject elementObject, RectTransform rectTransform, Image image)
+                {
+                    PooledObject = elementObject;
+                    RectTransform = rectTransform;
+                    Image = image;
+                }
             }
         }
     }

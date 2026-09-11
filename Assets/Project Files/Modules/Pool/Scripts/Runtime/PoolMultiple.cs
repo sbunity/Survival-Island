@@ -19,6 +19,8 @@ namespace Watermelon
 
         public string Name => name;
 
+        private Transform DefaultParent => objectsContainer != null ? objectsContainer : PoolManager.DefaultContainer;
+
         private List<List<GameObject>> multiPooledObjects;
         private bool inited = false;
         private int totalWeight;
@@ -126,7 +128,10 @@ namespace Watermelon
 
                 if (pooledObject == null)
                 {
-                    Debug.LogError(string.Format("[Pool]: A pooled object ({0}) was destroyed externally. This may indicate that an object was not properly returned to the pool, or its parent object was destroyed. Please review your object management logic to prevent unintended object destruction.", name));
+                    PoolDiagnostics.LogDestroyedObject(name);
+
+                    objectsList.RemoveAt(i);
+                    i--;
 
                     continue;
                 }
@@ -174,14 +179,26 @@ namespace Watermelon
             {
                 for (int j = 0; j < multiPooledObjects[i].Count; j++)
                 {
+                    if (multiPooledObjects[i][j] == null)
+                        continue;
+
                     if (resetParent)
                     {
-                        multiPooledObjects[i][j].transform.SetParent(objectsContainer != null ? objectsContainer : PoolManager.DefaultContainer);
+                        multiPooledObjects[i][j].transform.SetParent(DefaultParent);
                     }
 
                     multiPooledObjects[i][j].SetActive(false);
                 }
             }
+        }
+
+        public void ReturnToPool(GameObject pooledObject)
+        {
+            if (pooledObject == null)
+                return;
+
+            pooledObject.transform.SetParent(DefaultParent);
+            pooledObject.SetActive(false);
         }
 
         /// <summary>
@@ -195,7 +212,8 @@ namespace Watermelon
             {
                 for (int j = 0; j < multiPooledObjects[i].Count; j++)
                 {
-                    UnityEngine.Object.Destroy(multiPooledObjects[i][j]);
+                    if (multiPooledObjects[i][j] != null)
+                        UnityEngine.Object.Destroy(multiPooledObjects[i][j]);
                 }
 
                 multiPooledObjects[i].Clear();

@@ -24,6 +24,8 @@ namespace Watermelon
 
         public Transform ObjectsContainer => PoolManager.GetContainer(objectsContainer);
 
+        private Transform DefaultParent => objectsContainer != null ? objectsContainer : PoolManager.DefaultContainer;
+
         private bool inited = false;
 
         private List<T> pooledObjects;
@@ -119,7 +121,10 @@ namespace Watermelon
 
                 if (pooledComponent == null || pooledComponent.gameObject == null)
                 {
-                    Debug.LogError(string.Format("[Pool]: A pooled object ({0}) was destroyed externally. This may indicate that an object was not properly returned to the pool, or its parent object was destroyed. Please review your object management logic to prevent unintended object destruction.", name));
+                    PoolDiagnostics.LogDestroyedObject(name);
+
+                    pooledObjects.RemoveAt(i);
+                    i--;
 
                     continue;
                 }
@@ -152,9 +157,12 @@ namespace Watermelon
             {
                 T pooledComponent = pooledObjects[i];
 
-                if (pooledComponent == null)
+                if (pooledComponent == null || pooledComponent.gameObject == null)
                 {
-                    Debug.LogError(string.Format("[Pool]: A pooled object ({0}) was destroyed externally. This may indicate that an object was not properly returned to the pool, or its parent object was destroyed. Please review your object management logic to prevent unintended object destruction.", name));
+                    PoolDiagnostics.LogDestroyedObject(name);
+
+                    pooledObjects.RemoveAt(i);
+                    i--;
 
                     continue;
                 }
@@ -218,13 +226,25 @@ namespace Watermelon
 
             for (int i = 0; i < pooledObjects.Count; i++)
             {
+                if (pooledObjects[i] == null)
+                    continue;
+
                 if (resetParent)
                 {
-                    pooledObjects[i].transform.SetParent(objectsContainer != null ? objectsContainer : PoolManager.DefaultContainer);
+                    pooledObjects[i].transform.SetParent(DefaultParent);
                 }
 
                 pooledObjects[i].gameObject.SetActive(false);
             }
+        }
+
+        public void ReturnToPool(GameObject pooledObject)
+        {
+            if (pooledObject == null)
+                return;
+
+            pooledObject.transform.SetParent(DefaultParent);
+            pooledObject.SetActive(false);
         }
 
         public void Clear()
