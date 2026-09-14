@@ -12,6 +12,7 @@ namespace Watermelon
         private readonly Vector2 HIDE_POSITION = new Vector2(0, -2000);
 
         [SerializeField] VerticalLayoutGroup verticalLayoutGroup;
+        public VerticalLayoutGroup ContentLayoutGroup => verticalLayoutGroup;
 
         [Space]
         [SerializeField] Image fadeImage;
@@ -35,6 +36,8 @@ namespace Watermelon
 
         private int SelectedItemId { get; set; }
         private UpgradeUIPanel SelectedItem => UpgradeUIPanels[SelectedItemId];
+
+        private UpgradeUIPanel selectedItem;
         public Transform ContentTransform => contentTransform;
 
         private UIGame mainPage;
@@ -58,6 +61,7 @@ namespace Watermelon
         public override void Init()
         {
             upgradeHelper = new UpgradePanelHelper(this);
+            upgradeHelper.OrderChanged += OnUpgradesOrderChanged;
 
             mainPage = UIController.GetPage<UIGame>();
 
@@ -69,9 +73,30 @@ namespace Watermelon
 
         private void OnDestroy()
         {
+            upgradeHelper.OrderChanged -= OnUpgradesOrderChanged;
             upgradeHelper.Unload();
 
             GlobalUpgradesEventsHandler.OnUpgraded -= upgradeHelper.OnUpgraded;
+        }
+
+        private void OnUpgradesOrderChanged(bool animated)
+        {
+            if (selectedItem != null)
+            {
+                var newIndex = UpgradeUIPanels.IndexOf(selectedItem);
+
+                if (newIndex >= 0)
+                    SelectedItemId = newIndex;
+            }
+
+            if (!animated || UpgradeUIPanels.Count == 0)
+                return;
+
+            if (UpgradeUIPanels[0].Upgrade.IsHighlighted && contentTransform.anchoredPosition.y > 1.0f)
+            {
+                scrollCase.KillActive();
+                scrollCase = contentTransform.DOAnchoredPosition(Vector2.zero, 0.35f).SetEasing(Ease.Type.CubicOut);
+            }
         }
 
         public void RegisterUpgrades(List<IUpgrade> upgrades)
@@ -100,7 +125,8 @@ namespace Watermelon
 
             SelectedItemId = 0;
 
-            UpgradeUIPanels[SelectedItemId].OnSelect();
+            selectedItem = UpgradeUIPanels[SelectedItemId];
+            selectedItem.OnSelect();
 
             contentTransform.anchoredPosition = new Vector2(0, 0);
 
@@ -117,6 +143,8 @@ namespace Watermelon
 
             contentTransform.sizeDelta = contentTransform.sizeDelta.SetY(contentSize);
 
+            upgradeHelper.CaptureSlots();
+
             Control.DisableMovementControl();
 
             UIGamepadButton.DisableAllTags();
@@ -127,6 +155,8 @@ namespace Watermelon
 
         protected override void OnHide()
         {
+            upgradeHelper.Hide();
+
             GlobalUpgradesEventsHandler.OnUpgraded -= upgradeHelper.OnUpgraded;
             
             mainPage.Joystick.ShowVisuals();
@@ -141,6 +171,8 @@ namespace Watermelon
             {
                 UpgradeUIPanels[i].Disable();
             }
+
+            selectedItem = null;
 
             Control.EnableMovementControl();
         }
@@ -165,7 +197,8 @@ namespace Watermelon
 
                         SelectedItemId++;
 
-                        UpgradeUIPanels[SelectedItemId].OnSelect();
+                        selectedItem = UpgradeUIPanels[SelectedItemId];
+                        selectedItem.OnSelect();
 
                         scrollCase.KillActive();
 
@@ -183,7 +216,8 @@ namespace Watermelon
 
                         SelectedItemId--;
 
-                        UpgradeUIPanels[SelectedItemId].OnSelect();
+                        selectedItem = UpgradeUIPanels[SelectedItemId];
+                        selectedItem.OnSelect();
 
                         scrollCase.KillActive();
 

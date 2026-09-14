@@ -64,11 +64,11 @@ namespace Watermelon
             if (upgrade.UpgradeLevel >= upgradeLevel)
             {
                 FinishMission();
+
+                return;
             }
-            else
-            {
-                StartMission();
-            }
+
+            StartMission();
 
             if (upgradeType == UpgradeType.Global)
                 GlobalUpgradesEventsHandler.OnUpgraded += OnGlobalUpgradeMade;
@@ -123,7 +123,8 @@ namespace Watermelon
                 gameUI.StopUpgradesButtonHighlight();
             }
 
-            upgrade.IsHighlighted = false;
+            if (upgrade != null)
+                upgrade.IsHighlighted = false;
         }
 
         public override string GetFormattedProgress()

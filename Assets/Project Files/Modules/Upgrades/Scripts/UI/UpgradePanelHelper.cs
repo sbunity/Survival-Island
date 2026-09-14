@@ -1,44 +1,43 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Watermelon.GlobalUpgrades;
 
 namespace Watermelon
 {
     public class UpgradePanelHelper
     {
-        private List<UpgradeUIPanel> upgradeUIPanels;
-        public List<UpgradeUIPanel> UpgradeUIPanels => upgradeUIPanels;
+        private readonly List<UpgradeUIPanel> registeredPanels = new();
+        private readonly List<IUpgrade> upgrades = new();
+
+        private readonly List<UpgradeUIPanel> displayedPanels = new();
+
+        public List<UpgradeUIPanel> UpgradeUIPanels => displayedPanels;
+        public List<IUpgrade> Upgrades => upgrades;
 
         private Pool upgradesUIPool;
         public Pool UpgradesUIPool => upgradesUIPool;
 
-        private List<IUpgrade> upgrades;
-        public List<IUpgrade> Upgrades => upgrades;
-
         private IUpgradePanel panel;
+
+        private bool isShown;
+
+        private Vector2 firstSlotPosition;
+        private float slotStep;
+        private bool areSlotsCaptured;
+
+        public event SimpleBoolCallback OrderChanged;
 
         public UpgradePanelHelper(IUpgradePanel panel)
         {
             this.panel = panel;
 
             upgradesUIPool = new Pool(panel.UpgradeUIPrefab, panel.UpgradeUIPrefab.name, panel.ContentTransform);
-
-            upgrades = new List<IUpgrade>();
-            upgradeUIPanels = new List<UpgradeUIPanel>();
         }
 
         public void Unload()
         {
-            if(upgradeUIPanels.IsNullOrEmpty())
-            {
-                foreach(UpgradeUIPanel panel in upgradeUIPanels)
-                {
-                    panel.Disable();
-                }
-
-                upgradeUIPanels.Clear();
-            }
+            Reset();
 
             upgradesUIPool?.Destroy();
         }
@@ -60,87 +59,171 @@ namespace Watermelon
             UpgradeUIPanel upgradeUIPanel = upgradeUIObject.GetComponent<UpgradeUIPanel>();
             upgradeUIPanel.Initialise(upgrade);
 
-            UpgradeUIPanels.Add(upgradeUIPanel);
-            Upgrades.Add(upgrade);
-        }
+            registeredPanels.Add(upgradeUIPanel);
+            displayedPanels.Add(upgradeUIPanel);
+            upgrades.Add(upgrade);
 
-        public void Show()
-        {
-            for (int i = 0; i < UpgradeUIPanels.Count; i++)
-            {
-                UpgradeUIPanels[i].gameObject.SetActive(true);
-
-                IUpgrade upgrade = UpgradeUIPanels[i].Upgrade;
-                   
-                if (upgrade.IsHighlighted)
-                {
-                    UpgradeUIPanels[i].BackgroundImage.color = panel.HighlightedColor;
-                    UpgradeUIPanels[i].transform.SetAsFirstSibling();
-
-                    var highlightedPanel = UpgradeUIPanels[i];
-                    UpgradeUIPanels.RemoveAt(i);
-                    UpgradeUIPanels.Insert(0, highlightedPanel);
-                }
-                else
-                {
-                    UpgradeUIPanels[i].BackgroundImage.color = panel.DefaultColor;
-                }
-            }
-        }
-
-        public void Redraw(bool animation)
-        {
-            for (int i = 0; i < UpgradeUIPanels.Count; i++)
-            {
-                UpgradeUIPanels[i].Redraw();
-
-                if (animation)
-                {
-                    int index = i;
-
-                    UpgradeUIPanels[i].CanvasGroup.alpha = 0.0f;
-
-                    Tween.DelayedCall(0.2f + i * 0.09f, delegate
-                    {
-                        UpgradeUIPanels[index].CanvasGroup.DOFade(1.0f, 0.6f).SetEasing(Ease.Type.SineOut);
-                    });
-                }
-                else
-                {
-                    UpgradeUIPanels[i].CanvasGroup.alpha = 1.0f;
-                }
-            }
-
-
+            upgrade.HighlightChanged += OnHighlightChanged;
         }
 
         public void Reset()
         {
+            Hide();
+
+            for (var i = 0; i < upgrades.Count; i++)
+            {
+                upgrades[i].HighlightChanged -= OnHighlightChanged;
+            }
+
+            for (var i = 0; i < registeredPanels.Count; i++)
+            {
+                registeredPanels[i].Disable();
+            }
+
             upgradesUIPool.ReturnToPoolEverything();
-            UpgradeUIPanels.Clear();
-            Upgrades.Clear();
+
+            registeredPanels.Clear();
+            displayedPanels.Clear();
+            upgrades.Clear();
+
+            areSlotsCaptured = false;
+        }
+
+        public void Show()
+        {
+            isShown = true;
+
+            for (var i = 0; i < registeredPanels.Count; i++)
+            {
+                registeredPanels[i].gameObject.SetActive(true);
+            }
+
+            RebuildDisplayedOrder();
+
+            ApplyOrder(false);
+        }
+
+        public void Hide()
+        {
+            isShown = false;
+        }
+
+        public void CaptureSlots()
+        {
+            var layoutGroup = panel.ContentLayoutGroup;
+
+            if (layoutGroup == null || displayedPanels.Count == 0)
+                return;
+
+            layoutGroup.enabled = true;
+
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)panel.ContentTransform);
+
+            firstSlotPosition = displayedPanels[0].Rect.anchoredPosition;
+
+            slotStep = displayedPanels.Count > 1
+                ? firstSlotPosition.y - displayedPanels[1].Rect.anchoredPosition.y
+                : displayedPanels[0].Height + layoutGroup.spacing;
+
+            areSlotsCaptured = true;
+
+            layoutGroup.enabled = false;
+        }
+
+        public void Redraw(bool animation)
+        {
+            for (var i = 0; i < displayedPanels.Count; i++)
+            {
+                displayedPanels[i].Redraw();
+
+                if (animation)
+                {
+                    var index = i;
+
+                    displayedPanels[i].CanvasGroup.alpha = 0.0f;
+
+                    Tween.DelayedCall(0.2f + i * 0.09f, delegate
+                    {
+                        displayedPanels[index].CanvasGroup.DOFade(1.0f, 0.6f).SetEasing(Ease.Type.SineOut);
+                    });
+                }
+                else
+                {
+                    displayedPanels[i].CanvasGroup.alpha = 1.0f;
+                }
+            }
         }
 
         public void OnUpgraded(GlobalUpgradeType upgradeType, AbstactGlobalUpgrade upgrade)
         {
             if (panel.ShowAllAfterUpgrade)
             {
-                for (int i = 0; i < Upgrades.Count; i++)
+                for (var i = 0; i < registeredPanels.Count; i++)
                 {
-                    UpgradeUIPanels[i].BackgroundImage.color = panel.DefaultColor;
-                    UpgradeUIPanels[i].gameObject.SetActive(true);
-                    UpgradeUIPanels[i].Redraw();
+                    registeredPanels[i].gameObject.SetActive(true);
                 }
 
                 panel.ShowAllAfterUpgrade = false;
+
+                RebuildDisplayedOrder();
+                ApplyOrder(false);
             }
-            else
+
+            for (var i = 0; i < registeredPanels.Count; i++)
             {
-                for (int i = 0; i < Upgrades.Count; i++)
-                {
-                    UpgradeUIPanels[i].Redraw();
-                }
+                registeredPanels[i].Redraw();
             }
+        }
+
+        private void OnHighlightChanged()
+        {
+            if (!isShown)
+                return;
+
+            RebuildDisplayedOrder();
+
+            ApplyOrder(true);
+        }
+
+        private void RebuildDisplayedOrder()
+        {
+            displayedPanels.Clear();
+
+            for (var i = 0; i < registeredPanels.Count; i++)
+            {
+                if (registeredPanels[i].Upgrade.IsHighlighted)
+                    displayedPanels.Add(registeredPanels[i]);
+            }
+
+            for (var i = 0; i < registeredPanels.Count; i++)
+            {
+                if (!registeredPanels[i].Upgrade.IsHighlighted)
+                    displayedPanels.Add(registeredPanels[i]);
+            }
+        }
+
+        private void ApplyOrder(bool animated)
+        {
+            for (var i = 0; i < displayedPanels.Count; i++)
+            {
+                var upgradePanel = displayedPanels[i];
+
+                upgradePanel.transform.SetSiblingIndex(i);
+
+                var isHighlighted = upgradePanel.Upgrade.IsHighlighted;
+                var color = isHighlighted ? panel.HighlightedColor : panel.DefaultColor;
+
+                var slotPosition = areSlotsCaptured ? GetSlotPosition(i) : upgradePanel.Rect.anchoredPosition;
+
+                upgradePanel.ApplySlot(slotPosition, color, isHighlighted, animated && areSlotsCaptured);
+            }
+
+            OrderChanged?.Invoke(animated && areSlotsCaptured);
+        }
+
+        private Vector2 GetSlotPosition(int index)
+        {
+            return new Vector2(firstSlotPosition.x, firstSlotPosition.y - slotStep * index);
         }
     }
 }

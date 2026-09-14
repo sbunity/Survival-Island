@@ -17,6 +17,9 @@ namespace Watermelon.GlobalUpgrades
         void UpgradeStage();
 
         bool IsHighlighted { get; set; }
+
+        event SimpleCallback HighlightChanged;
+
         public int UpgradeLevel { get; }
     }
 }

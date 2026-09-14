@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Watermelon
 {
@@ -8,7 +9,10 @@ namespace Watermelon
     {
         GameObject UpgradeUIPrefab { get; }
         Transform ContentTransform { get; }
-        bool ShowAllAfterUpgrade { get; set;  } 
+
+        VerticalLayoutGroup ContentLayoutGroup { get; }
+
+        bool ShowAllAfterUpgrade { get; set;  }
         Color DefaultColor { get; }
         Color HighlightedColor { get; }
     }

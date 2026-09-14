@@ -11,6 +11,10 @@ namespace Watermelon
     {
         private const string LEVEL = "LVL {0}";
 
+        private const float SLIDE_DURATION = 0.35f;
+        private const float COLOR_DURATION = 0.25f;
+        private const float POP_SCALE = 1.05f;
+
         [SerializeField] RectTransform rect;
         public float Height => rect.sizeDelta.y;
 
@@ -54,6 +58,12 @@ namespace Watermelon
         public IUpgrade Upgrade => upgrade;
 
         private Currency currency;
+
+        private bool isHighlighted;
+
+        private TweenCase slideCase;
+        private TweenCase colorCase;
+        private TweenCase popCase;
 
         private void Awake()
         {
@@ -108,6 +118,11 @@ namespace Watermelon
             // Get component
             canvasGroup = GetComponent<CanvasGroup>();
             priceCanvasGroup = priceText.GetComponent<CanvasGroup>();
+
+            KillVisualTweens();
+
+            isHighlighted = upgrade.IsHighlighted;
+            transform.localScale = Vector3.one;
 
             // Redraw panel
             Redraw();
@@ -218,10 +233,56 @@ namespace Watermelon
             }
         }
 
+        public void ApplySlot(Vector2 slotPosition, Color color, bool highlighted, bool animated)
+        {
+            slideCase.KillActive();
+            colorCase.KillActive();
+
+            var becameHighlighted = highlighted && !isHighlighted;
+
+            isHighlighted = highlighted;
+
+            if (!animated)
+            {
+                popCase.KillActive();
+
+                transform.localScale = Vector3.one;
+                Rect.anchoredPosition = slotPosition;
+                backgroundImage.color = color;
+
+                return;
+            }
+
+            if (Rect.anchoredPosition != slotPosition)
+                slideCase = Rect.DOAnchoredPosition(slotPosition, SLIDE_DURATION).SetEasing(Ease.Type.CubicOut);
+
+            if (backgroundImage.color != color)
+                colorCase = backgroundImage.DOColor(color, COLOR_DURATION).SetEasing(Ease.Type.SineOut);
+
+            if (becameHighlighted)
+            {
+                popCase.KillActive();
+
+                transform.localScale = Vector3.one;
+                popCase = transform.DOPushScale(Vector3.one * POP_SCALE, Vector3.one, 0.16f, 0.24f, Ease.Type.SineOut, Ease.Type.SineInOut);
+            }
+        }
+
+        private void KillVisualTweens()
+        {
+            slideCase.KillActive();
+            colorCase.KillActive();
+            popCase.KillActive();
+        }
+
         public void Disable()
         {
             if (currency != null) currency.OnCurrencyChanged -= OnCurrencyAmountChanged;
             currency = null;
+
+            KillVisualTweens();
+
+            transform.localScale = Vector3.one;
 
             OnDeselect();
         }

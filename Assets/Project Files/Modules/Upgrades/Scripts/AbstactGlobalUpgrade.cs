@@ -40,7 +40,23 @@ namespace Watermelon.GlobalUpgrades
         public event SimpleCallback OnUpgraded;
 
         public UpgradeType Type => UpgradeType.Global;
-        public bool IsHighlighted { get; set; }
+
+        public event SimpleCallback HighlightChanged;
+
+        private bool isHighlighted;
+        public bool IsHighlighted
+        {
+            get => isHighlighted;
+            set
+            {
+                if (isHighlighted == value)
+                    return;
+
+                isHighlighted = value;
+
+                HighlightChanged?.Invoke();
+            }
+        }
 
         protected void InvokeOnUpgraded()
         {
