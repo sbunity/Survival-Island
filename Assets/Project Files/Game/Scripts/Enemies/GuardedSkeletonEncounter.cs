@@ -3,17 +3,28 @@ using UnityEngine.AI;
 
 namespace Watermelon
 {
-    public class GuardedSkeletonEncounter : MonoBehaviour
+    public class GuardedSkeletonEncounter : MonoBehaviour, IWorldElement, INavMeshAgent
     {
         private const int CHASE_DESTINATION_UPDATE_RATE = 10;
 
         [SerializeField] Transform spawnPoint;
         [SerializeField, Min(0.5f)] float stateMachineHandoffDistance = 4.5f;
 
-        public Vector3 Position => (spawnPoint != null ? spawnPoint : transform).position;
-        public bool IsCompleted { get; private set; }
+        [Space]
+        [SerializeField] MonoBehaviour rescueTargetBehaviour;
 
-        public event SimpleCallback EnemyDied;
+        public int InitialisationOrder => -10;
+        public BaseWorldBehavior LinkedWorldBehavior { get; set; }
+
+        public Vector3 Position => (spawnPoint != null ? spawnPoint : transform).position;
+
+        public IGuardedRescueTarget RescueTarget => rescueTarget;
+
+        public bool IsCleared { get; private set; }
+
+        public event SimpleCallback Cleared;
+
+        private IGuardedRescueTarget rescueTarget;
 
         private SkeletonEnemyBehavior enemy;
         private SkeletonStateMachine stateMachine;
@@ -25,11 +36,63 @@ namespace Watermelon
         private bool isLockedAttackLoopActive;
         private bool isChasingPlayer;
 
-        public bool Begin(bool startLocked)
+        #region World Lifecycle
+
+        public void OnWorldLoaded()
+        {
+            IsCleared = false;
+
+            rescueTarget = rescueTargetBehaviour as IGuardedRescueTarget;
+
+            if (rescueTarget == null)
+            {
+                Debug.LogError("[Guarded Skeleton Encounter] Rescue target is missing or does not implement IGuardedRescueTarget.", this);
+                return;
+            }
+
+            if (!rescueTarget.WaitForExternalRelease)
+            {
+                Debug.LogError("[Guarded Skeleton Encounter] Enable \"Wait For External Release\" on the linked rescue target.", rescueTargetBehaviour);
+
+                rescueTarget = null;
+                return;
+            }
+
+            if (!rescueTarget.IsAwaitingRescue)
+            {
+                SetCleared();
+                return;
+            }
+
+            rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
+            rescueTarget.RescueAreaUnlocked += OnRescueAreaUnlocked;
+        }
+
+        public void OnNavMeshInitialised()
+        {
+            if (rescueTarget == null || IsCleared)
+                return;
+
+            if (!Begin(!rescueTarget.IsRescueAreaUnlocked))
+                rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
+        }
+
+        public void OnWorldUnloaded()
+        {
+            if (rescueTarget != null)
+                rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
+
+            Stop();
+
+            rescueTarget = null;
+        }
+
+        #endregion
+
+        private bool Begin(bool startLocked)
         {
             Stop();
 
-            IsCompleted = false;
             isCombatUnlocked = !startLocked;
 
             var pooledEnemy = GameController.Data.EnemiesDatabase.GetEnemyBehavior(EnemyType.Skeleton);
@@ -74,12 +137,23 @@ namespace Watermelon
             return true;
         }
 
-        public void UnlockCombat()
+        private void OnRescueAreaUnlocked()
+        {
+            if (rescueTarget != null)
+                rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
+
+            UnlockCombat();
+        }
+
+        private void UnlockCombat()
         {
             if (isCombatUnlocked)
                 return;
 
             isCombatUnlocked = true;
+
+            if (enemy == null)
+                return;
 
             StopLockedAttackLoop();
             enemy.SetTargetDamageEnabled(true);
@@ -89,7 +163,7 @@ namespace Watermelon
                 BeginAggroHandoff();
         }
 
-        public void Stop()
+        private void Stop()
         {
             isRunning = false;
             isChasingPlayer = false;
@@ -221,11 +295,31 @@ namespace Watermelon
 
             isRunning = false;
             isChasingPlayer = false;
-            IsCompleted = true;
 
             ClearEnemyReferences();
 
-            EnemyDied?.Invoke();
+            ReleaseRescueTarget();
+
+            SetCleared();
+        }
+
+        private void ReleaseRescueTarget()
+        {
+            if (rescueTarget == null || rescueTarget.IsRescued)
+                return;
+
+            if (!rescueTarget.TryRelease())
+                Debug.LogError("[Guarded Skeleton Encounter] Rescue target cannot be released before its area is unlocked.", rescueTargetBehaviour);
+        }
+
+        private void SetCleared()
+        {
+            if (IsCleared)
+                return;
+
+            IsCleared = true;
+
+            Cleared?.Invoke();
         }
 
         private void SetEnemyHittable(bool isHittable)
@@ -264,5 +358,34 @@ namespace Watermelon
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(Position, 0.5f);
         }
+
+        #region INavMeshAgent
+
+        public void OnNavMeshWaypointChanged(Vector3 targetPoint)
+        {
+
+        }
+
+        public void OnNavMeshAgentStartedMovement(Vector3 targetPoint)
+        {
+
+        }
+
+        public void OnNavMeshAgentStopped()
+        {
+
+        }
+
+        public void OnNavMeshWarpStarted()
+        {
+
+        }
+
+        public void OnNavMeshWarpFinished()
+        {
+
+        }
+
+        #endregion
     }
 }

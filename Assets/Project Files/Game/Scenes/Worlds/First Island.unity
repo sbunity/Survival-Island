@@ -49542,6 +49542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.GuardedSkeletonEncounter
   spawnPoint: {fileID: 0}
   stateMachineHandoffDistance: 4.5
+  rescueTargetBehaviour: {fileID: 1327118833}
 --- !u!1 &855913578
 GameObject:
   m_ObjectHideFlags: 0
@@ -78257,6 +78258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.GuardedSkeletonEncounter
   spawnPoint: {fileID: 0}
   stateMachineHandoffDistance: 4.5
+  rescueTargetBehaviour: {fileID: 773305257}
 --- !u!4 &1205112830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3672125828744499954, guid: 5664a03959e85d74eb8e406349a34f6c,
@@ -98695,7 +98697,6 @@ MonoBehaviour:
   onMissionCompleted:
     m_PersistentCalls:
       m_Calls: []
-  rescueTargetBehaviour: {fileID: 1327118833}
   encounter: {fileID: 855640420}
 --- !u!1001 &1568522817
 PrefabInstance:
@@ -127493,7 +127494,6 @@ MonoBehaviour:
   onMissionCompleted:
     m_PersistentCalls:
       m_Calls: []
-  rescueTargetBehaviour: {fileID: 773305257}
   encounter: {fileID: 1203055599}
 --- !u!114 &1960183816 stripped
 MonoBehaviour:
@@ -142320,9 +142320,13 @@ MonoBehaviour:
   - {fileID: 1134825939}
   - {fileID: 275783025}
   - {fileID: 1836896734}
+  - {fileID: 855640420}
+  - {fileID: 1203055599}
   registeredNavmeshElements:
   - {fileID: 1327118833}
   - {fileID: 1862239977}
+  - {fileID: 855640420}
+  - {fileID: 1203055599}
   environmentPresetType: 0
   spawnPoint: {fileID: 247124221}
   helpersRestZone: {fileID: 71126579}

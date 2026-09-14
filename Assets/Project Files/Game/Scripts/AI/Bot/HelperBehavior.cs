@@ -220,6 +220,7 @@ namespace Watermelon
 
         bool IGuardedRescueTarget.IsRescued => IsOpened;
         bool IGuardedRescueTarget.IsRescueAreaUnlocked => isOpeningAreaUnlocked;
+        bool IGuardedRescueTarget.IsAwaitingRescue => isInitialised && isPresent && !hasRelocated && !IsOpened;
         event SimpleCallback IGuardedRescueTarget.RescueAreaUnlocked
         {
             add => OpeningAreaUnlocked += value;

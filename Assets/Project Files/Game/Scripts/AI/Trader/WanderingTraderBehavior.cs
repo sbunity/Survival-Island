@@ -99,6 +99,7 @@ namespace Watermelon
         public bool IsRescued => traderSave != null && traderSave.IsRescued;
         public bool IsRescueAreaUnlocked => rescueGate.IsUnlocked;
         public bool WaitForExternalRelease => true;
+        public bool IsAwaitingRescue => isInitialised && requiresRescue && !IsRescued;
         public event SimpleCallback RescueAreaUnlocked;
 
         private readonly RescueAreaGate rescueGate = new RescueAreaGate();

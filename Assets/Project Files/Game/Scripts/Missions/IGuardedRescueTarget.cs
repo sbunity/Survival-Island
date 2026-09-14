@@ -12,6 +12,8 @@ namespace Watermelon
 
         bool WaitForExternalRelease { get; }
 
+        bool IsAwaitingRescue { get; }
+
         event SimpleCallback RescueAreaUnlocked;
 
         bool TryRelease();

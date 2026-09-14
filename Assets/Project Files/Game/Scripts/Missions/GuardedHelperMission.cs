@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Watermelon
 {
@@ -8,16 +7,11 @@ namespace Watermelon
         public override MissionUICase.Type MissionUIType => MissionUICase.Type.Task;
 
         [BoxGroup("Guarded Rescue Mission Special", "Guarded Rescue Mission Special")]
-        [FormerlySerializedAs("helperBehavior")]
-        [SerializeField] MonoBehaviour rescueTargetBehaviour;
-
-        [BoxGroup("Guarded Rescue Mission Special")]
         [SerializeField] GuardedSkeletonEncounter encounter;
         public GuardedSkeletonEncounter Encounter => encounter;
 
-        private IGuardedRescueTarget rescueTarget;
-
         private Save save;
+        private bool isSubscribed;
 
         public override void Initialise()
         {
@@ -47,33 +41,19 @@ namespace Watermelon
             if (missionStage == Stage.Collected)
                 return;
 
-            rescueTarget = rescueTargetBehaviour as IGuardedRescueTarget;
-
-            if (rescueTarget == null || encounter == null)
+            if (encounter == null)
             {
-                Debug.LogError("[Guarded Rescue Mission] Rescue target (must implement IGuardedRescueTarget) or encounter reference is missing.", this);
+                Debug.LogError("[Guarded Rescue Mission] Encounter reference is missing.", this);
                 return;
             }
 
-            if (!rescueTarget.WaitForExternalRelease)
+            if (encounter.IsCleared)
             {
-                Debug.LogError("[Guarded Rescue Mission] Enable 'Wait For External Release' on the linked rescue target.", rescueTargetBehaviour);
+                FinishMission();
                 return;
             }
 
-            rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
-            rescueTarget.RescueAreaUnlocked += OnRescueAreaUnlocked;
-            encounter.EnemyDied -= OnEnemyDied;
-            encounter.EnemyDied += OnEnemyDied;
-
-            var startLocked = !rescueTarget.IsRescued && !rescueTarget.IsRescueAreaUnlocked;
-
-            if (!encounter.Begin(startLocked))
-            {
-                rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
-                encounter.EnemyDied -= OnEnemyDied;
-                return;
-            }
+            Subscribe();
 
             StartMission();
         }
@@ -82,33 +62,40 @@ namespace Watermelon
         {
             base.Deactivate();
 
-            if (rescueTarget != null)
-                rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
-
-            if (encounter != null)
-            {
-                encounter.EnemyDied -= OnEnemyDied;
-                encounter.Stop();
-            }
+            Unsubscribe();
         }
 
-        private void OnRescueAreaUnlocked()
+        public override void Unload()
         {
-            rescueTarget.RescueAreaUnlocked -= OnRescueAreaUnlocked;
+            base.Unload();
 
-            isDirty = true;
-            encounter.UnlockCombat();
+            Unsubscribe();
         }
 
-        private void OnEnemyDied()
+        private void Subscribe()
         {
-            if (!rescueTarget.IsRescued && !rescueTarget.TryRelease())
-            {
-                Debug.LogError("[Guarded Rescue Mission] Rescue target cannot be released before its area is unlocked.", rescueTargetBehaviour);
+            if (isSubscribed || encounter == null)
                 return;
-            }
 
+            encounter.Cleared += OnEncounterCleared;
+            isSubscribed = true;
+        }
+
+        private void Unsubscribe()
+        {
+            if (!isSubscribed || encounter == null)
+                return;
+
+            encounter.Cleared -= OnEncounterCleared;
+            isSubscribed = false;
+        }
+
+        private void OnEncounterCleared()
+        {
             isDirty = true;
+
+            Unsubscribe();
+
             FinishMission();
         }
 
@@ -116,15 +103,15 @@ namespace Watermelon
             => "";
 
         public override float GetProgress()
-            => missionStage == Stage.Finished || missionStage == Stage.Collected ? 1.0f : 0.0f;
+        {
+            if (missionStage == Stage.Finished || missionStage == Stage.Collected)
+                return 1.0f;
+
+            return encounter != null && encounter.IsCleared ? 1.0f : 0.0f;
+        }
 
         public override Vector3 GetDefaultPreviewPosition()
-        {
-            if (encounter != null)
-                return encounter.Position;
-
-            return rescueTargetBehaviour != null ? rescueTargetBehaviour.transform.position : transform.position;
-        }
+            => encounter != null ? encounter.Position : transform.position;
 
         #region Development
 
