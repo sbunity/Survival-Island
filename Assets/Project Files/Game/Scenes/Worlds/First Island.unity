@@ -6231,6 +6231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137583847}
   - component: {fileID: 137583848}
+  - component: {fileID: 137583849}
   m_Layer: 0
   m_Name: M #44 - raft construction
   m_TagString: Untagged
@@ -6303,6 +6304,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   buildingComplex: {fileID: 7656147523151992328}
+--- !u!114 &137583849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137583846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ecc08195566143b6a8b099a9466e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MissionWorldUnlocker
+  mission: {fileID: 137583848}
+  worldsToUnlock: 01000000
 --- !u!1001 &138251277
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -19,15 +19,18 @@ MonoBehaviour:
       name: First Island
     id: d89f969c-bed9-4d47-8dba-48ef683c36f2
     displayName: First
+    unlockedByDefault: 1
   - scene:
       scene: {fileID: 102900000, guid: 20e642fb56e753744b2a6f7d6c4283cb, type: 3}
       path: Assets/Project Files/Game/Scenes/Worlds/Second Island.unity
       name: Second Island
     id: 76840b51-f550-442e-a66f-3759aaf770ba
     displayName: Second
+    unlockedByDefault: 0
   - scene:
       scene: {fileID: 102900000, guid: bb43525c1452438448302ab1867c8e4c, type: 3}
       path: Assets/Project Files/Game/Scenes/Worlds/Third Island.unity
       name: Third Island
     id: 98f1f92c-35ef-4693-bb11-09680c7a86f2
     displayName: Third
+    unlockedByDefault: 0

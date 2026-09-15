@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Watermelon
 {
@@ -21,7 +21,10 @@ namespace Watermelon
         {
             if (other.CompareTag(PhysicsHelper.TAG_PLAYER))
             {
-                UIGame gameUI = UIController.GetPage<UIGame>();
+                if (!WorldController.HasTravelDestinations())
+                    return;
+
+                var gameUI = UIController.GetPage<UIGame>();
 
                 gameUI.WorldTransitionPopUp.Show(OnDestinationSelected);
             }

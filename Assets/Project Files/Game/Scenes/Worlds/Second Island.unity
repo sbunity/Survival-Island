@@ -57211,6 +57211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213514744}
   - component: {fileID: 1213514745}
+  - component: {fileID: 1213514746}
   m_Layer: 0
   m_Name: M #01 - tent building
   m_TagString: Untagged
@@ -57283,6 +57284,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   buildingComplex: {fileID: 1564688150}
+--- !u!114 &1213514746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213514743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101ecc08195566143b6a8b099a9466e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MissionWorldUnlocker
+  mission: {fileID: 1213514745}
+  worldsToUnlock: 02000000
 --- !u!1001 &1213946127
 PrefabInstance:
   m_ObjectHideFlags: 0

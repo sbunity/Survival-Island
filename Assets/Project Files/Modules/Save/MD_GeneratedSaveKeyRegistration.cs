@@ -56,6 +56,7 @@ namespace Watermelon
             SaveKeyMap.Register(typeof(Watermelon.WorldChangeMission.Save), "Watermelon.WorldChangeMission+Save");
             SaveKeyMap.Register(typeof(Watermelon.WorldGlobalSave), "Watermelon.WorldGlobalSave");
             SaveKeyMap.Register(typeof(Watermelon.WorldSave), "Watermelon.WorldSave");
+            SaveKeyMap.Register(typeof(Watermelon.WorldUnlockSave), "Watermelon.WorldUnlockSave");
         }
     }
 }

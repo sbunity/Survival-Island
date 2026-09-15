@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -95,6 +95,8 @@ namespace Watermelon
             {
                 SaveController.DeleteFile(worldData.ID);
             }
+
+            WorldController.ResetWorldUnlocks();
 
             Overlay.Show(0.3f, () =>
             {

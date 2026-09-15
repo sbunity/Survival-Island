@@ -26,6 +26,26 @@ namespace Watermelon
             return worlds[0];
         }
 
+        public bool TryGetWorldByID(string id, out WorldData worldData)
+        {
+            worldData = null;
+
+            if (string.IsNullOrEmpty(id) || worlds.IsNullOrEmpty())
+                return false;
+
+            foreach (var world in worlds)
+            {
+                if (world == null || world.ID != id)
+                    continue;
+
+                worldData = world;
+
+                return true;
+            }
+
+            return false;
+        }
+
         public WorldData GetWorldByIndex(int index)
         {
             if (worlds.IsInRange(index))

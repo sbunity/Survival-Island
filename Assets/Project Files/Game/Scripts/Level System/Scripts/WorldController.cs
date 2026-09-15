@@ -25,12 +25,24 @@ namespace Watermelon
         public static WorldBehavior WorldBehavior { get; private set; }
 
         public static event SimpleCallback OnWorldLoaded;
+        public static event WorldDataCallback OnWorldUnlocked;
+
+        private static readonly List<WorldData> travelDestinationsBuffer = new List<WorldData>();
 
         public void Initialise()
         {
             worldController = this;
 
             worldGlobalSave = SaveController.GetSaveObject<WorldGlobalSave>("worldGlobal");
+
+            var worlds = database.Worlds;
+            if (!worlds.IsNullOrEmpty())
+            {
+                foreach (var world in worlds)
+                {
+                    world?.Initialise();
+                }
+            }
 
             string worldID = worldGlobalSave.worldID;
             if (string.IsNullOrEmpty(worldID))
@@ -192,7 +204,67 @@ namespace Watermelon
             var currentWorldID = CurrentWorld != null ? CurrentWorld.ID : string.Empty;
 
             worldController.database.GetWorldsExcept(currentWorldID, result);
+
+            for (var i = result.Count - 1; i >= 0; i--)
+            {
+                if (!result[i].IsUnlocked)
+                    result.RemoveAt(i);
+            }
         }
+
+        public static bool HasTravelDestinations()
+        {
+            GetTravelDestinations(travelDestinationsBuffer);
+
+            var hasDestinations = travelDestinationsBuffer.Count > 0;
+
+            travelDestinationsBuffer.Clear();
+
+            return hasDestinations;
+        }
+
+        #region Unlocks
+
+        public static bool IsWorldUnlocked(string worldID)
+        {
+            return worldController.database.TryGetWorldByID(worldID, out WorldData worldData) && worldData.IsUnlocked;
+        }
+
+        public static void UnlockWorld(string worldID)
+        {
+            if (!worldController.database.TryGetWorldByID(worldID, out WorldData worldData))
+            {
+                Debug.LogError(string.Format("[Worlds]: can't unlock an unknown world '{0}'.", worldID));
+
+                return;
+            }
+
+            UnlockWorld(worldData);
+        }
+
+        public static void UnlockWorld(WorldData worldData)
+        {
+            if (worldData == null || worldData.IsUnlocked)
+                return;
+
+            worldData.Unlock();
+
+            OnWorldUnlocked?.Invoke(worldData);
+        }
+
+        public static void ResetWorldUnlocks()
+        {
+            var worlds = worldController.database.Worlds;
+            if (worlds.IsNullOrEmpty())
+                return;
+
+            foreach (WorldData worldData in worlds)
+            {
+                worldData?.Lock();
+            }
+        }
+
+        #endregion
 
         public static bool IsWorldExists(int worldIndex)
         {
