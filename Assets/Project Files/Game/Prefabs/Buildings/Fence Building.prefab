@@ -2120,7 +2120,7 @@ MonoBehaviour:
   animationType: 1
   sinkAnimation:
     sinkDepth: 0
-    depthMargin: 0.15
+    exposedHeight: 0.35
     openDuration: 0.25
     closeDuration: 0.3
     staggerPerMetre: 0.05
@@ -2135,10 +2135,17 @@ MonoBehaviour:
     staggerPerMetre: 0.05
     toTransparentEasing: 2
     toSolidEasing: 1
+  rotateAnimation:
+    liftAngle: 95
+    pivotOffset: 0
+    openDuration: 0.3
+    closeDuration: 0.35
+    staggerPerMetre: 0.05
+    openEasing: 5
+    closeEasing: 4
   openingLogs: 4
   openLeadMargin: 0.35
   occupancyWidth: 0.9
-  maxOpenDistance: 3
   centreDriftTolerance: 0.5
   closeDelay: 1.2
   pollInterval: 0.1
@@ -5021,6 +5028,7 @@ MonoBehaviour:
   openedVisuals: {fileID: 2012364543348340626}
   closedVisuals: {fileID: 6635211250091135726}
   unlockAnimation: {fileID: 8501351364909850935}
+  gateController: {fileID: 2544960403837314439}
 --- !u!1 &3824661966540503309
 GameObject:
   m_ObjectHideFlags: 0

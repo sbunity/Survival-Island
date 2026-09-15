@@ -92,13 +92,28 @@ namespace Watermelon
 
         private void OnEnable()
         {
-            Initialise();
-            nextPollTime = 0f;
+            Rebind();
         }
 
         private void OnDisable()
         {
+            Unbind();
+        }
+
+        public void Rebind()
+        {
+            Unbind();
+
+            Initialise();
+
+            nextPollTime = 0f;
+        }
+
+        public void Unbind()
+        {
             CloseEverything();
+
+            isInitialised = false;
         }
 
         private void OnValidate()
