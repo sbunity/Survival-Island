@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -184,6 +185,13 @@ namespace Watermelon
         public static WorldData GetWorldData(int worldIndex)
         {
             return worldController.database.GetWorldByIndex(worldIndex);
+        }
+
+        public static void GetTravelDestinations(List<WorldData> result)
+        {
+            var currentWorldID = CurrentWorld != null ? CurrentWorld.ID : string.Empty;
+
+            worldController.database.GetWorldsExcept(currentWorldID, result);
         }
 
         public static bool IsWorldExists(int worldIndex)

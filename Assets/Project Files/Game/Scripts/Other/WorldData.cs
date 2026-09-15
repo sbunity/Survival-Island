@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Watermelon
 {
+    public delegate void WorldDataCallback(WorldData worldData);
+
     [System.Serializable]
     public class WorldData
     {
@@ -11,5 +13,8 @@ namespace Watermelon
         [UniqueID]
         [SerializeField] string id;
         public string ID => id;
+
+        [SerializeField] string displayName;
+        public string DisplayName => string.IsNullOrEmpty(displayName) ? scene.Name : displayName;
     }
 }

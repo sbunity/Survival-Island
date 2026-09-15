@@ -18,23 +18,16 @@ MonoBehaviour:
       path: Assets/Project Files/Game/Scenes/Worlds/First Island.unity
       name: First Island
     id: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    displayName: First
   - scene:
       scene: {fileID: 102900000, guid: 20e642fb56e753744b2a6f7d6c4283cb, type: 3}
       path: Assets/Project Files/Game/Scenes/Worlds/Second Island.unity
       name: Second Island
     id: 76840b51-f550-442e-a66f-3759aaf770ba
+    displayName: Second
   - scene:
       scene: {fileID: 102900000, guid: bb43525c1452438448302ab1867c8e4c, type: 3}
       path: Assets/Project Files/Game/Scenes/Worlds/Third Island.unity
       name: Third Island
     id: 98f1f92c-35ef-4693-bb11-09680c7a86f2
-  - scene:
-      scene: {fileID: 102900000, guid: 099600eb61093244fbc0ea52b433e03d, type: 3}
-      path: Assets/Project Files/Game/Scenes/Worlds/World 1 [Full Demo].unity
-      name: 'World 1 [Full Demo]'
-    id: world1
-  - scene:
-      scene: {fileID: 102900000, guid: b987323407a93a541963884fe5cb7501, type: 3}
-      path: Assets/Project Files/Game/Scenes/Worlds/World 2 [Alt Demo].unity
-      name: 'World 2 [Alt Demo]'
-    id: world2
+    displayName: Third

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Watermelon
 {
@@ -42,6 +43,28 @@ namespace Watermelon
             }
 
             return worlds[0];
+        }
+
+        public void GetWorldsExcept(string excludedID, List<WorldData> result)
+        {
+            if (result == null)
+                return;
+
+            result.Clear();
+
+            if (worlds.IsNullOrEmpty())
+                return;
+
+            foreach (WorldData world in worlds)
+            {
+                if (world == null)
+                    continue;
+
+                if (!string.IsNullOrEmpty(excludedID) && world.ID == excludedID)
+                    continue;
+
+                result.Add(world);
+            }
         }
 
         public bool IsWorldExists(int index)

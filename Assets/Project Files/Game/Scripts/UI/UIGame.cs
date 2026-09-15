@@ -113,6 +113,11 @@ namespace Watermelon
             NotifyClosed();
         }
 
+        protected override void OnUnload()
+        {
+            worldTransitionPopUp.Unload();
+        }
+
         public void SetHudVisible(bool isVisible, float duration = 0.25f)
         {
             if (hudCanvasGroup == null)

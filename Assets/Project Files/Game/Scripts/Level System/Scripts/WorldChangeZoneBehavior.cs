@@ -4,26 +4,17 @@ namespace Watermelon
 {
     public class WorldChangeZoneBehavior : MonoBehaviour, IGroundOpenable
     {
-        [WorldPicker]
-        [SerializeField] int worldIndex;
-        public int WorldIndex => worldIndex;
-
         [SerializeField] WorldChangeSpecialBehavior changeSpecialBehavior;
 
         [SerializeField] WorldTravelManifest travelManifest;
 
         private Vector3 defaultScale;
 
-        private WorldData worldData;
-        public WorldData WorldData => worldData;
-
         public event SimpleCallback OnWorldChangeZoneEntered;
 
         private void Awake()
         {
             defaultScale = transform.localScale;
-
-            worldData = WorldController.GetWorldData(worldIndex);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -32,49 +23,49 @@ namespace Watermelon
             {
                 UIGame gameUI = UIController.GetPage<UIGame>();
 
-                gameUI.WorldTransitionPopUp.Show(() =>
-                {
-                    if(changeSpecialBehavior != null)
-                    {
-                        if (travelManifest != null)
-                            changeSpecialBehavior.SetPassengers(travelManifest.CollectPassengers());
-
-                        changeSpecialBehavior.OnWorldChanged(() =>
-                        {
-                            LoadNextWorld();
-                        });
-                    }
-                    else
-                    {
-                        LoadNextWorld();
-                    }
-
-                    enabled = false;
-                });
+                gameUI.WorldTransitionPopUp.Show(OnDestinationSelected);
             }
         }
 
-        private void LoadNextWorld()
+        private void OnDestinationSelected(WorldData destinationWorld)
         {
-            if(worldData != null)
+            if (destinationWorld == null)
             {
-                OnWorldChangeZoneEntered?.Invoke();
+                Debug.LogError("Destination world is missing!", gameObject);
 
+                return;
+            }
+
+            enabled = false;
+
+            if (changeSpecialBehavior != null)
+            {
                 if (travelManifest != null)
-                    travelManifest.CommitTravel(worldData.ID);
+                    changeSpecialBehavior.SetPassengers(travelManifest.CollectPassengers());
 
-                GameController.LoadWorld(worldData.ID);
+                changeSpecialBehavior.OnWorldChanged(() =>
+                {
+                    LoadWorld(destinationWorld);
+                });
             }
             else
             {
-                Debug.LogError("Incorrect world index!", gameObject);
+                LoadWorld(destinationWorld);
             }
+        }
+
+        private void LoadWorld(WorldData destinationWorld)
+        {
+            OnWorldChangeZoneEntered?.Invoke();
+
+            if (travelManifest != null)
+                travelManifest.CommitTravel(destinationWorld.ID);
+
+            GameController.LoadWorld(destinationWorld.ID);
         }
 
         public void OnGroundOpen(bool immediately)
         {
-            ValidateWorldIndex();
-
             gameObject.SetActive(true);
 
             if (immediately)
@@ -95,8 +86,6 @@ namespace Watermelon
 
         public void OnGroundHidden(bool immediately)
         {
-            ValidateWorldIndex();
-
             if (immediately)
             {
                 gameObject.SetActive(false);
@@ -104,14 +93,6 @@ namespace Watermelon
             else
             {
                 transform.DOScale(0, 0.3f).SetEasing(Ease.Type.SineOut).OnComplete(() => gameObject.SetActive(false));
-            }
-        }
-
-        private void ValidateWorldIndex()
-        {
-            if (!WorldController.IsWorldExists(worldIndex))
-            {
-                Debug.LogError("Incorrect world index!", gameObject);
             }
         }
     }
