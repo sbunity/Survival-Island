@@ -14,6 +14,9 @@ namespace Watermelon
         [SerializeField] RectTransform contentTransform;
         [SerializeField] Button closeButton;
 
+        [Header("Scroll Rect")]
+        [SerializeField] ScrollRect scrollRect;
+
         [Space]
         [SerializeField] GameObject offerItemPrefab;
         [SerializeField] GameObject minigameItemPrefab;
@@ -50,6 +53,9 @@ namespace Watermelon
 
             Subscribe();
             BuildItems();
+
+            scrollRect.StopMovement();
+            contentTransform.anchoredPosition = Vector2.zero;
 
             NotifyOpened();
         }

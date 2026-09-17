@@ -660,6 +660,7 @@ MonoBehaviour:
   panelRectTransform: {fileID: 4029175334709077804}
   contentTransform: {fileID: 509111570684863380}
   closeButton: {fileID: 7452291268609322253}
+  scrollRect: {fileID: 5197910825321379889}
   offerItemPrefab: {fileID: 9207283223754027654, guid: 28e91e10c02e1b645af2ea100bd56911,
     type: 3}
   minigameItemPrefab: {fileID: 9207283223754027654, guid: 8193040e6f1af694c8ea2a3a2ec70722,
@@ -764,6 +765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509111570684863380}
   - component: {fileID: 6211437998096175810}
+  - component: {fileID: 1824475619678129735}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -816,3 +818,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1824475619678129735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697570402927197889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
