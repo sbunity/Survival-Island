@@ -8,7 +8,9 @@ namespace Watermelon
         private ResourceSourceBehavior resourceSource;
         public ResourceSourceBehavior ResourceSource => resourceSource;
 
-        public GatheringTask(HelperTaskType type, ResourceSourceBehavior resourceSource, int defaultPriority = 0) : base(type, resourceSource.transform, defaultPriority, true)
+        public const float APPROACH_DISTANCE = 1f;
+
+        public GatheringTask(HelperTaskType type, ResourceSourceBehavior resourceSource, int defaultPriority = 0) : base(type, resourceSource.transform, defaultPriority, true, APPROACH_DISTANCE)
         {
             this.resourceSource = resourceSource;
         }

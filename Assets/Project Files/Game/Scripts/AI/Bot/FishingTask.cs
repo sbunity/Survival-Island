@@ -7,7 +7,9 @@ namespace Watermelon
         private FishingPlaceBehavior fishingPlaceBehavior;
         public FishingPlaceBehavior FishingPlaceBehavior => fishingPlaceBehavior;
 
-        public FishingTask(FishingPlaceBehavior fishingPlaceBehavior) : base(HelperTaskType.Fishing, fishingPlaceBehavior.transform)
+        public const float APPROACH_DISTANCE = 1f;
+
+        public FishingTask(FishingPlaceBehavior fishingPlaceBehavior) : base(HelperTaskType.Fishing, fishingPlaceBehavior.transform, offsetRadius: APPROACH_DISTANCE)
         {
             this.fishingPlaceBehavior = fishingPlaceBehavior;
         }

@@ -203,10 +203,10 @@ namespace Watermelon
 
         public bool IsPatrolMovementStalled()
         {
-            if (!Agent.isActiveAndEnabled || !Agent.isOnNavMesh)
+            if (!Agent.isActiveAndEnabled)
                 return false;
 
-            return patrolStallDetector.Tick(Agent);
+            return patrolStallDetector.Tick(Agent) != NavStallVerdict.Moving;
         }
 
         public float GetPatrolWaitDuration()

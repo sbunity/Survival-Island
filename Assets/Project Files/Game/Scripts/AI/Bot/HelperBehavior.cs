@@ -177,6 +177,8 @@ namespace Watermelon
         private bool isStoringResourcesActive;
         public bool IsStoringResourcesActive => isStoringResourcesActive;
 
+        private bool isSnappingActive;
+
         private BaseTask activeTask;
         public BaseTask ActiveTask => activeTask;
 
@@ -339,6 +341,8 @@ namespace Watermelon
             SaveHealth();
             CombatTargetRegistry.Unregister(this);
             ClearCombatTarget();
+
+            StopSnapping();
 
             navMeshAgentBehaviour.Unload();
 
@@ -513,6 +517,8 @@ namespace Watermelon
             DisableSittingAnimation();
             emoteBehavior.Hide();
 
+            StopSnapping();
+
             navMeshAgentBehaviour.Stop();
             navMeshAgent.stoppingDistance = defaultStoppingDistance;
             navMeshAgentBehaviour.Warp(GetRestPosition());
@@ -575,16 +581,42 @@ namespace Watermelon
 
         public void SnapToHittable(IHitable hitableTarget)
         {
-            if (hitableTarget != null)
-            {
-                Vector3 lookAt = (hitableTarget.SnappingTransform.position - transform.position).SetY(0).normalized;
+            if (hitableTarget == null)
+                return;
 
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookAt), Time.deltaTime * hitableTarget.SnappingSpeedMultiplier);
-                if (hitableTarget.HasSnappingDistance)
-                {
-                    transform.position = Vector3.Lerp(transform.position, hitableTarget.SnappingTransform.position.SetY(transform.position.y) - lookAt * hitableTarget.SnappingDistance, Time.deltaTime * hitableTarget.SnappingSpeedMultiplier);
-                }
+            var lookAt = (hitableTarget.SnappingTransform.position - transform.position).SetY(0).normalized;
+
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookAt), Time.deltaTime * hitableTarget.SnappingSpeedMultiplier);
+
+            if (!hitableTarget.HasSnappingDistance)
+                return;
+
+            if (!isSnappingActive)
+            {
+                isSnappingActive = true;
+
+                navMeshAgentBehaviour.SetTransformDrivenExternally(true);
             }
+
+            transform.position = Vector3.Lerp(transform.position, hitableTarget.SnappingTransform.position.SetY(transform.position.y) - lookAt * hitableTarget.SnappingDistance, Time.deltaTime * hitableTarget.SnappingSpeedMultiplier);
+        }
+
+        public void StopSnapping()
+        {
+            if (!isSnappingActive)
+                return;
+
+            isSnappingActive = false;
+
+            navMeshAgentBehaviour.SetTransformDrivenExternally(false);
+        }
+
+        public void ReportTaskUnreachable()
+        {
+            if (activeTask != null && LinkedWorldBehavior != null && LinkedWorldBehavior.TaskHandler != null)
+                LinkedWorldBehavior.TaskHandler.SuppressTask(this, activeTask);
+
+            UnlinkActiveTask();
         }
 
         #region Graphics
@@ -610,6 +642,8 @@ namespace Watermelon
         public void OnNavMeshAgentStartedMovement(Vector3 targetPoint)
         {
             isRunning = true;
+
+            StopSnapping();
 
             characterAnimator.SetFloat(MOVEMENT_MULTIPLIER_HASH, navMeshAgent.velocity.magnitude / navMeshAgent.speed);
         }
@@ -809,8 +843,8 @@ namespace Watermelon
                 return false;
 
             navMeshAgent.stoppingDistance = lineIsClear ? combatRange : 0f;
-            navMeshAgentBehaviour.SetWaypoints(attackPosition);
-            return true;
+
+            return navMeshAgentBehaviour.SetWaypoints(attackPosition);
         }
 
         public bool MoveToCombatPosition(Vector3 position)
@@ -825,8 +859,8 @@ namespace Watermelon
                 return false;
 
             navMeshAgent.stoppingDistance = 0f;
-            navMeshAgentBehaviour.SetWaypoints(position);
-            return true;
+
+            return navMeshAgentBehaviour.SetWaypoints(position);
         }
 
         public bool TryAttack()
@@ -924,6 +958,8 @@ namespace Watermelon
 
             CombatTargetRegistry.Unregister(this);
             ClearCombatTarget();
+
+            StopSnapping();
 
             navMeshAgentBehaviour.Stop();
             navMeshAgent.enabled = false;

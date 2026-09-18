@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using Watermelon.AI;
 
 namespace Watermelon
 {
@@ -11,17 +8,32 @@ namespace Watermelon
         private static readonly Vector3[] DEFAULT_WAYPOINTS_ARRAY = new Vector3[1] { Vector3.zero };
 
         private const int RECOVERY_ATTEMPTS = 2;
+        private const int OFF_MESH_RECOVERY_ATTEMPTS = 2;
+
+        private const float OFF_MESH_SEARCH_RADIUS = 3f;
+        private const float DESTINATION_EPSILON_SQR = 0.04f;
+
+        private const float RETRY_BUDGET_RESET_DELAY = 10f;
 
         private bool isMoving;
         public bool IsMoving => isMoving;
+
+        public bool IsOnNavMesh => navMeshAgent != null && navMeshAgent.isActiveAndEnabled && navMeshAgent.isOnNavMesh;
+
+        public float AgentRadius => navMeshAgent != null ? navMeshAgent.radius : 0f;
 
         private Vector3[] waypoints;
         private int currentWaypointIndex = 0;
 
         private Vector3 currentPoint;
+        private bool hasDestination;
+        private float lastFailureTime = float.NegativeInfinity;
 
         private NavStallDetector stallDetector;
         private int recoveryAttempts;
+        private int offMeshRecoveryAttempts;
+
+        private bool isTransformDrivenExternally;
 
         private NavMeshAgent navMeshAgent;
         private INavMeshAgent navMeshAgentBehaviour;
@@ -40,45 +52,113 @@ namespace Watermelon
             waypoints = DEFAULT_WAYPOINTS_ARRAY;
 
             isMoving = false;
+            hasDestination = false;
+
             navMeshAgent.enabled = false;
         }
 
         public void Unload()
         {
             isMoving = false;
+            hasDestination = false;
+
+            PathFinished = null;
+
+            stallDetector.Reset();
+
+            isTransformDrivenExternally = false;
+
             navMeshAgent.enabled = false;
         }
 
-        public void SetWaypoints(params Vector3[] positions)
+        #region Movement
+
+        public bool SetWaypoints(params Vector3[] positions)
         {
-            isMoving = true;
+            if (navMeshAgent == null || positions.IsNullOrEmpty())
+                return false;
 
             navMeshAgent.enabled = true;
+
+            if (!navMeshAgent.isOnNavMesh && !TryRestoreToNavMesh())
+            {
+                isMoving = false;
+
+                PathFinished = null;
+
+                return false;
+            }
 
             PathFinished = null;
 
             waypoints = positions;
-
-            currentPoint = positions[0];
             currentWaypointIndex = 0;
 
-            ResetStallTracking();
+            var nextPoint = positions[0];
 
-            if (navMeshAgent.isOnNavMesh)
+            var destinationChanged = !hasDestination || (nextPoint - currentPoint).sqrMagnitude > DESTINATION_EPSILON_SQR;
+            var retryBudgetExpired = Time.time - lastFailureTime > RETRY_BUDGET_RESET_DELAY;
+
+            currentPoint = nextPoint;
+            hasDestination = true;
+
+            stallDetector.Reset();
+            offMeshRecoveryAttempts = 0;
+
+            if (destinationChanged || retryBudgetExpired)
+                recoveryAttempts = 0;
+
+            SetTransformDrivenExternally(false);
+
+            if (navMeshAgent.isStopped)
+                navMeshAgent.isStopped = false;
+
+            if (!navMeshAgent.SetDestination(currentPoint))
             {
-                if (navMeshAgent.isStopped)
-                    navMeshAgent.isStopped = false;
+                isMoving = false;
 
-                navMeshAgent.SetDestination(currentPoint);
+                navMeshAgentBehaviour.OnNavMeshAgentStopped();
 
-                navMeshAgentBehaviour.OnNavMeshAgentStartedMovement(currentPoint);
+                return false;
             }
+
+            isMoving = true;
+
+            navMeshAgentBehaviour.OnNavMeshAgentStartedMovement(currentPoint);
+
+            return true;
         }
 
-        private void ResetStallTracking()
+        public bool MoveToTarget(Vector3 targetPosition, float desiredDistance)
         {
-            stallDetector.Reset();
-            recoveryAttempts = 0;
+            if (!TryResolveApproachPoint(targetPosition, desiredDistance, out Vector3 approachPoint))
+                return false;
+
+            return SetWaypoints(approachPoint);
+        }
+
+        public bool TrySnapToNavMesh(Vector3 position, out Vector3 point)
+        {
+            var areaMask = navMeshAgent != null ? navMeshAgent.areaMask : NavMesh.AllAreas;
+
+            return ApproachPointResolver.TrySnapToNavMesh(position, OFF_MESH_SEARCH_RADIUS, areaMask, out point);
+        }
+
+        public bool TryResolveApproachPoint(Vector3 targetPosition, float desiredDistance, out Vector3 point)
+        {
+            point = targetPosition;
+
+            if (navMeshAgent == null)
+                return false;
+
+            var request = new ApproachRequest(
+                targetPosition,
+                navMeshAgent.transform.position,
+                desiredDistance,
+                navMeshAgent.radius,
+                navMeshAgent.areaMask);
+
+            return ApproachPointResolver.TryResolve(request, out point);
         }
 
         public void Update()
@@ -86,18 +166,74 @@ namespace Watermelon
             if (!isMoving)
                 return;
 
-            if (!navMeshAgent.isActiveAndEnabled || navMeshAgent.pathPending)
+            if (navMeshAgent == null || !navMeshAgent.isActiveAndEnabled)
                 return;
 
-            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+            var verdict = stallDetector.Tick(navMeshAgent);
+
+            if (verdict == NavStallVerdict.OffNavMesh)
             {
-                OnWaypointReached();
+                HandleOffNavMesh();
 
                 return;
             }
 
-            if (stallDetector.Tick(navMeshAgent))
+            if (navMeshAgent.pathPending)
+                return;
+
+            if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+            {
+                if (navMeshAgent.pathStatus == NavMeshPathStatus.PathComplete)
+                {
+                    OnWaypointReached();
+                }
+                else
+                {
+                    FailMovement();
+                }
+
+                return;
+            }
+
+            if (verdict == NavStallVerdict.Stalled)
                 OnStalled();
+        }
+
+        private void HandleOffNavMesh()
+        {
+            if (offMeshRecoveryAttempts >= OFF_MESH_RECOVERY_ATTEMPTS)
+            {
+                FailMovement();
+
+                return;
+            }
+
+            offMeshRecoveryAttempts++;
+
+            if (TryRestoreToNavMesh())
+            {
+                navMeshAgent.SetDestination(currentPoint);
+
+                return;
+            }
+
+            FailMovement();
+        }
+
+        private bool TryRestoreToNavMesh()
+        {
+            if (navMeshAgent == null || !navMeshAgent.isActiveAndEnabled)
+                return false;
+
+            if (navMeshAgent.isOnNavMesh)
+                return true;
+
+            if (!ApproachPointResolver.TrySnapToNavMesh(navMeshAgent.transform.position, OFF_MESH_SEARCH_RADIUS, navMeshAgent.areaMask, out Vector3 point))
+                return false;
+
+            navMeshAgent.Warp(point);
+
+            return navMeshAgent.isOnNavMesh;
         }
 
         private void OnStalled()
@@ -105,16 +241,26 @@ namespace Watermelon
             if (recoveryAttempts < RECOVERY_ATTEMPTS)
             {
                 recoveryAttempts++;
+
                 stallDetector.Reset();
-                navMeshAgent.SetDestination(currentPoint);
+
+                if (navMeshAgent.isOnNavMesh)
+                    navMeshAgent.SetDestination(currentPoint);
 
                 return;
             }
 
-            isMoving = false;
+            FailMovement();
+        }
 
-            if (navMeshAgent.isActiveAndEnabled)
-                navMeshAgent.isStopped = true;
+        private void FailMovement()
+        {
+            isMoving = false;
+            lastFailureTime = Time.time;
+
+            PathFinished = null;
+
+            StopAgent();
 
             navMeshAgentBehaviour.OnNavMeshAgentStopped();
 
@@ -124,90 +270,133 @@ namespace Watermelon
         private void OnWaypointReached()
         {
             currentWaypointIndex++;
+
             if (currentWaypointIndex >= waypoints.Length)
             {
                 isMoving = false;
 
-                if (navMeshAgent.isActiveAndEnabled)
-                    navMeshAgent.isStopped = true;
+                StopAgent();
 
                 navMeshAgentBehaviour.OnNavMeshAgentStopped();
 
-                PathFinished?.Invoke();
+                var pathFinished = PathFinished;
                 PathFinished = null;
+
+                pathFinished?.Invoke();
 
                 return;
             }
 
             currentPoint = waypoints[currentWaypointIndex];
 
-            navMeshAgent.SetDestination(currentPoint);
-
             ResetStallTracking();
+
+            navMeshAgent.SetDestination(currentPoint);
 
             navMeshAgentBehaviour.OnNavMeshWaypointChanged(currentPoint);
         }
 
+        private void ResetStallTracking()
+        {
+            stallDetector.Reset();
+
+            recoveryAttempts = 0;
+            offMeshRecoveryAttempts = 0;
+        }
+
         public void Stop()
         {
+            PathFinished = null;
+
             if (!isMoving)
                 return;
 
             isMoving = false;
 
-            if (navMeshAgent.isActiveAndEnabled)
-                navMeshAgent.isStopped = true;
+            StopAgent();
 
             navMeshAgentBehaviour.OnNavMeshAgentStopped();
-
-            PathFinished = null;
         }
+
+        private void StopAgent()
+        {
+            if (navMeshAgent != null && navMeshAgent.isActiveAndEnabled && navMeshAgent.isOnNavMesh)
+                navMeshAgent.isStopped = true;
+        }
+
+        #endregion
+
+        #region Interaction snapping
+
+        public void SetTransformDrivenExternally(bool isDrivenExternally)
+        {
+            if (navMeshAgent == null || !navMeshAgent.isActiveAndEnabled)
+                return;
+
+            if (isTransformDrivenExternally == isDrivenExternally)
+                return;
+
+            isTransformDrivenExternally = isDrivenExternally;
+
+            if (isDrivenExternally)
+            {
+                navMeshAgent.updatePosition = false;
+
+                return;
+            }
+
+            if (navMeshAgent.isOnNavMesh)
+                navMeshAgent.nextPosition = navMeshAgent.transform.position;
+
+            navMeshAgent.updatePosition = true;
+        }
+
+        #endregion
+
+        #region Warp
 
         public void Warp(Vector3 position, Quaternion quaternion)
         {
-            navMeshAgentBehaviour.OnNavMeshWarpStarted();
+            Warp(position);
 
-            navMeshAgent.Warp(position);
             navMeshAgent.transform.rotation = quaternion;
-
-            navMeshAgentBehaviour.OnNavMeshWarpFinished();
         }
 
         public void Warp(Vector3 position)
         {
             navMeshAgentBehaviour.OnNavMeshWarpStarted();
 
-            navMeshAgent.Warp(position);
+            SetTransformDrivenExternally(false);
+
+            if (!ApproachPointResolver.TrySnapToNavMesh(position, OFF_MESH_SEARCH_RADIUS, navMeshAgent.areaMask, out Vector3 navMeshPosition))
+                navMeshPosition = position;
+
+            navMeshAgent.Warp(navMeshPosition);
+
+            ResetStallTracking();
 
             navMeshAgentBehaviour.OnNavMeshWarpFinished();
         }
 
         public void Warp(Transform destinationTransform)
         {
-            navMeshAgentBehaviour.OnNavMeshWarpStarted();
-
-            navMeshAgent.Warp(destinationTransform.position);
-            navMeshAgent.transform.rotation = destinationTransform.rotation;
-
-            navMeshAgentBehaviour.OnNavMeshWarpFinished();
+            Warp(destinationTransform.position, destinationTransform.rotation);
         }
 
         public void Warp(Transform destinationTransform, Quaternion quaternion)
         {
-            navMeshAgentBehaviour.OnNavMeshWarpStarted();
-
-            navMeshAgent.Warp(destinationTransform.position);
-            navMeshAgent.transform.rotation = quaternion;
-
-            navMeshAgentBehaviour.OnNavMeshWarpFinished();
+            Warp(destinationTransform.position, quaternion);
         }
+
+        #endregion
 
         public bool PathExists(Vector3 point)
         {
-            // Calculate the path from the current position to the target position
+            if (navMeshAgent == null || !navMeshAgent.isActiveAndEnabled || !navMeshAgent.isOnNavMesh)
+                return false;
+
             if (NavMesh.CalculatePath(navMeshAgent.transform.position, point, navMeshAgent.areaMask, path))
             {
-                // Check if the path status is complete
                 if (path.status == NavMeshPathStatus.PathComplete)
                 {
                     return true;

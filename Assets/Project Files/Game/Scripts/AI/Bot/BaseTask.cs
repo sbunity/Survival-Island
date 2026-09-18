@@ -96,20 +96,21 @@ namespace Watermelon
 
         public virtual bool IsPathExists(HelperBehavior helperBehavior)
         {
-            Transform taskTransform = targetTransform;
-            if (taskTransform != null)
+            var taskTransform = targetTransform;
+            if (taskTransform == null)
+                return false;
+
+            var navMeshAgentBehaviour = helperBehavior.NavMeshAgentBehaviour;
+
+            if (offsetRadius > 0)
             {
-                if(offsetRadius > 0)
-                {
-                    Vector3 direction = (helperBehavior.transform.position - taskTransform.position).normalized;
+                if (!navMeshAgentBehaviour.TryResolveApproachPoint(taskTransform.position, offsetRadius, out Vector3 approachPoint))
+                    return false;
 
-                    return helperBehavior.NavMeshAgentBehaviour.PathExists(taskTransform.position + (direction * offsetRadius));
-                }
-
-                return helperBehavior.NavMeshAgentBehaviour.PathExists(taskTransform.position);
+                return navMeshAgentBehaviour.PathExists(approachPoint);
             }
 
-            return false;
+            return navMeshAgentBehaviour.PathExists(taskTransform.position);
         }
 
         public virtual bool IsTypeAvailable(HelperTaskType availableTasks)

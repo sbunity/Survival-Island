@@ -7,7 +7,7 @@ namespace Watermelon.AI
     public class HelperStateMachine : AbstractStateMachine<HelperStateMachine.State>
     {
         private const float TASK_UPDATE_DELAY = 3.0f;
-        
+
         private HelperBehavior helperBehavior;
         private NavMeshAgentBehaviour navMeshAgentBehaviour;
 
@@ -206,14 +206,15 @@ namespace Watermelon.AI
         {
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             navMeshAgent.Stop();
+            target.StopSnapping();
             target.Graphics.InteractionAnimations.Disable();
             target.ShowRecoveryHealthbar();
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
             if (target.UpdateRecovery(Time.deltaTime))
                 InvokeOnFinished();
@@ -233,17 +234,18 @@ namespace Watermelon.AI
         {
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             defendTask = target.ActiveTask as DefendBaseTask;
             controller = defendTask?.Controller;
             nextMovementRefreshTime = Time.time;
 
             navMeshAgent.Stop();
+            target.StopSnapping();
             target.ClearCombatTarget();
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
             if (defendTask == null || controller == null || !defendTask.Validate(target))
             {
@@ -303,7 +305,7 @@ namespace Watermelon.AI
                 navMeshAgent.SetWaypoints(defensePosition);
         }
 
-        public override void OnEnd()
+        protected override void OnExit()
         {
             navMeshAgent.Stop();
             target.ClearCombatTarget();
@@ -325,17 +327,18 @@ namespace Watermelon.AI
         {
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             leashOrigin = target.transform.position;
             nextMovementRefreshTime = Time.time;
 
             navMeshAgent.Stop();
+            target.StopSnapping();
 
             AcquireTarget();
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
             if (target.IsDead || target.IsRecovering)
             {
@@ -363,7 +366,9 @@ namespace Watermelon.AI
             else if (Time.time >= nextMovementRefreshTime)
             {
                 nextMovementRefreshTime = Time.time + MOVEMENT_REFRESH_DELAY;
-                target.MoveToCombatTarget();
+
+                if (!target.MoveToCombatTarget())
+                    target.ClearCombatTarget();
             }
         }
 
@@ -388,7 +393,7 @@ namespace Watermelon.AI
             return offset.sqrMagnitude <= target.AggroRadius * target.AggroRadius;
         }
 
-        public override void OnEnd()
+        protected override void OnExit()
         {
             navMeshAgent.Stop();
             target.ClearCombatTarget();
@@ -404,7 +409,7 @@ namespace Watermelon.AI
 
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             isSitting = false;
 
@@ -419,7 +424,24 @@ namespace Watermelon.AI
         private void MoveToRestPosition()
         {
             navMeshAgent.Stop();
-            navMeshAgent.SetWaypoints(target.GetRestPosition());
+            target.StopSnapping();
+
+            var restPosition = target.GetRestPosition();
+
+            if (!navMeshAgent.TrySnapToNavMesh(restPosition, out restPosition))
+            {
+                Rest();
+
+                return;
+            }
+
+            if (!navMeshAgent.SetWaypoints(restPosition))
+            {
+                Rest();
+
+                return;
+            }
+
             navMeshAgent.PathFinished += RestPositionReached;
         }
 
@@ -428,17 +450,25 @@ namespace Watermelon.AI
             if (isSitting)
                 return;
 
-            MoveToRestPosition();
+            Rest();
         }
 
         private void RestPositionReached()
         {
+            Rest();
+        }
+
+        private void Rest()
+        {
+            if (isSitting)
+                return;
+
             isSitting = true;
 
             target.ActivateSittingAnimation();
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
             if(isSitting)
             {
@@ -453,7 +483,7 @@ namespace Watermelon.AI
             }
         }
 
-        public override void OnEnd()
+        protected override void OnExit()
         {
             isSitting = false;
 
@@ -467,53 +497,58 @@ namespace Watermelon.AI
 
     public class FishingState : HelperStateBehavior
     {
+        private const float INTERACTION_DISTANCE = 2f;
+
         private FishingPlaceBehavior fishingPlace;
 
         private bool isGathering;
+        private float lastHealth;
+
+        protected override float MaxDuration => HelperStateTimeouts.GATHERING;
 
         public FishingState(HelperBehavior helperBehavior) : base(helperBehavior)
         {
 
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             isGathering = false;
+
             navMeshAgent.Stop();
+            target.StopSnapping();
 
-            BaseTask task = target.ActiveTask;
-            if (task != null)
-            {
-                FishingTask fishingTask = (FishingTask)task;
-                if (fishingTask != null)
-                {
-                    fishingPlace = fishingTask.FishingPlaceBehavior;
-
-                    target.SetTargetHitableObject(fishingPlace);
-
-                    Vector3 direction = (target.transform.position - fishingPlace.transform.position).normalized;
-
-                    navMeshAgent.SetWaypoints(fishingPlace.transform.position + direction);
-                    navMeshAgent.PathFinished += OnResourceReached;
-                }
-                else
-                {
-                    InvokeOnFinished();
-                }
-            }
-            else
+            if (target.ActiveTask is not FishingTask fishingTask)
             {
                 InvokeOnFinished();
+
+                return;
             }
+
+            fishingPlace = fishingTask.FishingPlaceBehavior;
+            lastHealth = fishingPlace.Health;
+
+            target.SetTargetHitableObject(fishingPlace);
+
+            if (!navMeshAgent.MoveToTarget(fishingPlace.transform.position, fishingTask.OffsetRadius))
+            {
+                OnWatchdogTimeout();
+
+                return;
+            }
+
+            navMeshAgent.PathFinished += OnResourceReached;
         }
 
         private void OnResourceReached()
         {
-            if (fishingPlace.Health > 0 && Vector3.Distance(target.transform.position, fishingPlace.transform.position) <= 2.0f)
+            if (fishingPlace.Health > 0 && Vector3.Distance(target.transform.position, fishingPlace.transform.position) <= INTERACTION_DISTANCE)
             {
                 isGathering = true;
 
                 navMeshAgent.Stop();
+
+                KeepAlive();
 
                 fishingPlace.ActivateInteractionAnimation(target.Graphics.InteractionAnimations);
             }
@@ -523,8 +558,11 @@ namespace Watermelon.AI
             }
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
+            if (navMeshAgent.IsMoving)
+                KeepAlive();
+
             if (fishingPlace != null && fishingPlace.Health <= 0)
             {
                 InvokeOnFinished();
@@ -541,13 +579,22 @@ namespace Watermelon.AI
 
             if (isGathering)
             {
+                if (fishingPlace.Health < lastHealth)
+                {
+                    lastHealth = fishingPlace.Health;
+
+                    KeepAlive();
+                }
+
                 target.SnapToHittable(fishingPlace);
             }
         }
 
-        public override void OnEnd()
+        protected override void OnExit()
         {
             target.Graphics.InteractionAnimations.Disable();
+
+            target.StopSnapping();
 
             navMeshAgent.Stop();
 
@@ -559,53 +606,58 @@ namespace Watermelon.AI
 
     public class GatheringState : HelperStateBehavior
     {
+        private const float INTERACTION_DISTANCE = 2f;
+
         private ResourceSourceBehavior targetResource;
 
         private bool isGathering;
+        private float lastHealth;
+
+        protected override float MaxDuration => HelperStateTimeouts.GATHERING;
 
         public GatheringState(HelperBehavior helperBehavior) : base(helperBehavior)
         {
 
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             isGathering = false;
+
             navMeshAgent.Stop();
+            target.StopSnapping();
 
-            BaseTask task = target.ActiveTask;
-            if(task != null)
-            {
-                GatheringTask geatheringTask = (GatheringTask)task;
-                if(geatheringTask != null)
-                {
-                    targetResource = geatheringTask.ResourceSource;
-
-                    target.SetTargetHitableObject(targetResource);
-
-                    Vector3 direction = (target.transform.position - targetResource.transform.position).normalized;
-
-                    navMeshAgent.SetWaypoints(targetResource.transform.position + direction);
-                    navMeshAgent.PathFinished += OnResourceReached;
-                }
-                else
-                {
-                    InvokeOnFinished();
-                }
-            }
-            else
+            if (target.ActiveTask is not GatheringTask gatheringTask)
             {
                 InvokeOnFinished();
+
+                return;
             }
+
+            targetResource = gatheringTask.ResourceSource;
+            lastHealth = targetResource.Health;
+
+            target.SetTargetHitableObject(targetResource);
+
+            if (!navMeshAgent.MoveToTarget(targetResource.transform.position, gatheringTask.OffsetRadius))
+            {
+                OnWatchdogTimeout();
+
+                return;
+            }
+
+            navMeshAgent.PathFinished += OnResourceReached;
         }
 
         private void OnResourceReached()
         {
-            if(targetResource.Health > 0 && Vector3.Distance(target.transform.position, targetResource.transform.position) <= 2.0f)
+            if(targetResource.Health > 0 && Vector3.Distance(target.transform.position, targetResource.transform.position) <= INTERACTION_DISTANCE)
             {
                 isGathering = true;
 
                 navMeshAgent.Stop();
+
+                KeepAlive();
 
                 targetResource.ActivateInteractionAnimation(target.Graphics.InteractionAnimations);
             }
@@ -615,8 +667,11 @@ namespace Watermelon.AI
             }
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
+            if (navMeshAgent.IsMoving)
+                KeepAlive();
+
             if (targetResource != null && targetResource.Health <= 0)
             {
                 InvokeOnFinished();
@@ -633,13 +688,22 @@ namespace Watermelon.AI
 
             if(isGathering)
             {
+                if (targetResource.Health < lastHealth)
+                {
+                    lastHealth = targetResource.Health;
+
+                    KeepAlive();
+                }
+
                 target.SnapToHittable(targetResource);
             }
         }
 
-        public override void OnEnd()
+        protected override void OnExit()
         {
             target.Graphics.InteractionAnimations.Disable();
+
+            target.StopSnapping();
 
             navMeshAgent.Stop();
 
@@ -654,52 +718,65 @@ namespace Watermelon.AI
         private ResourceStorageBuildingBehavior targetStorage;
 
         private bool storageReached;
+        private float lastDeliveryTime;
+
+        protected override float MaxDuration => HelperStateTimeouts.STORING;
 
         public StoringState(HelperBehavior helperBehavior) : base(helperBehavior)
         {
 
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             navMeshAgent.Stop();
+            target.StopSnapping();
 
-            BaseTask task = target.ActiveTask;
-            if (task != null)
-            {
-                StoreResourcesTask storeResourcesTask = (StoreResourcesTask)task;
-                if (storeResourcesTask != null)
-                {
-                    targetStorage = storeResourcesTask.StorageBuildingBehavior;
-
-                    Transform targetTransform = targetStorage.Storage.ResourceTakingPoint.transform;
-
-                    storageReached = false;
-
-                    Vector3 randomOffset = UnityEngine.Random.insideUnitSphere;
-                    randomOffset.y = 0;
-
-                    navMeshAgent.SetWaypoints(targetTransform.transform.position + randomOffset);
-                    navMeshAgent.PathFinished += OnStorageReached;
-                }
-                else
-                {
-                    InvokeOnFinished();
-                }
-            }
-            else
+            if (target.ActiveTask is not StoreResourcesTask storeResourcesTask)
             {
                 InvokeOnFinished();
+
+                return;
             }
+
+            targetStorage = storeResourcesTask.StorageBuildingBehavior;
+
+            storageReached = false;
+            lastDeliveryTime = target.LastTimeResourceGiven;
+
+            if (!MoveToTakingPoint(targetStorage.Storage.ResourceTakingPoint.transform.position))
+            {
+                OnWatchdogTimeout();
+
+                return;
+            }
+
+            navMeshAgent.PathFinished += OnStorageReached;
+        }
+
+        private bool MoveToTakingPoint(Vector3 takingPointPosition)
+        {
+            var randomOffset = UnityEngine.Random.insideUnitSphere;
+            randomOffset.y = 0;
+
+            if (navMeshAgent.TrySnapToNavMesh(takingPointPosition + randomOffset, out Vector3 destination))
+                return navMeshAgent.SetWaypoints(destination);
+
+            return navMeshAgent.SetWaypoints(takingPointPosition);
         }
 
         private void OnStorageReached()
         {
             storageReached = true;
+
+            KeepAlive();
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
+            if (navMeshAgent.IsMoving)
+                KeepAlive();
+
             if (target.ActiveTask == null || !target.ActiveTask.IsActive || !targetStorage.IsOperational)
             {
                 InvokeOnFinished();
@@ -720,13 +797,20 @@ namespace Watermelon.AI
                 return;
             }
 
+            if (target.LastTimeResourceGiven > lastDeliveryTime)
+            {
+                lastDeliveryTime = target.LastTimeResourceGiven;
+
+                KeepAlive();
+            }
+
             if(!storageReached && !navMeshAgent.IsMoving)
             {
                 InvokeOnFinished();
             }
         }
 
-        public override void OnEnd()
+        protected override void OnExit()
         {
             navMeshAgent.Stop();
 
@@ -739,52 +823,65 @@ namespace Watermelon.AI
         private ResourceConverterBuildingBehavior targetStorage;
 
         private bool storageReached;
+        private float lastDeliveryTime;
+
+        protected override float MaxDuration => HelperStateTimeouts.STORING;
 
         public ConverterStoringState(HelperBehavior helperBehavior) : base(helperBehavior)
         {
 
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             navMeshAgent.Stop();
+            target.StopSnapping();
 
-            BaseTask task = target.ActiveTask;
-            if (task != null)
-            {
-                ConverterStoringTask converterStoringTask = (ConverterStoringTask)task;
-                if (converterStoringTask != null)
-                {
-                    targetStorage = converterStoringTask.ResourceConverter;
-
-                    Transform targetTransform = targetStorage.InStorage.ResourceTakingPoint.transform;
-
-                    storageReached = false;
-
-                    Vector3 randomOffset = UnityEngine.Random.insideUnitSphere;
-                    randomOffset.y = 0;
-
-                    navMeshAgent.SetWaypoints(targetTransform.transform.position + randomOffset);
-                    navMeshAgent.PathFinished += OnStorageReached;
-                }
-                else
-                {
-                    InvokeOnFinished();
-                }
-            }
-            else
+            if (target.ActiveTask is not ConverterStoringTask converterStoringTask)
             {
                 InvokeOnFinished();
+
+                return;
             }
+
+            targetStorage = converterStoringTask.ResourceConverter;
+
+            storageReached = false;
+            lastDeliveryTime = target.LastTimeResourceGiven;
+
+            if (!MoveToTakingPoint(targetStorage.InStorage.ResourceTakingPoint.transform.position))
+            {
+                OnWatchdogTimeout();
+
+                return;
+            }
+
+            navMeshAgent.PathFinished += OnStorageReached;
+        }
+
+        private bool MoveToTakingPoint(Vector3 takingPointPosition)
+        {
+            var randomOffset = UnityEngine.Random.insideUnitSphere;
+            randomOffset.y = 0;
+
+            if (navMeshAgent.TrySnapToNavMesh(takingPointPosition + randomOffset, out Vector3 destination))
+                return navMeshAgent.SetWaypoints(destination);
+
+            return navMeshAgent.SetWaypoints(takingPointPosition);
         }
 
         private void OnStorageReached()
         {
             storageReached = true;
+
+            KeepAlive();
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
+            if (navMeshAgent.IsMoving)
+                KeepAlive();
+
             if (target.ActiveTask == null || !target.ActiveTask.IsActive || !targetStorage.IsOperational)
             {
                 InvokeOnFinished();
@@ -805,13 +902,20 @@ namespace Watermelon.AI
                 return;
             }
 
+            if (target.LastTimeResourceGiven > lastDeliveryTime)
+            {
+                lastDeliveryTime = target.LastTimeResourceGiven;
+
+                KeepAlive();
+            }
+
             if (!storageReached && !navMeshAgent.IsMoving)
             {
                 InvokeOnFinished();
             }
         }
 
-        public override void OnEnd()
+        protected override void OnExit()
         {
             navMeshAgent.Stop();
 
@@ -825,43 +929,45 @@ namespace Watermelon.AI
 
         private ConstructionPointBehavior targetConstructionPoint;
         private bool isBuilding;
+        private int lastHitsMade;
+
+        protected override float MaxDuration => HelperStateTimeouts.BUILDING;
 
         public BuildingState(HelperBehavior helperBehavior) : base(helperBehavior)
         {
 
         }
 
-        public override void OnStart()
+        protected override void OnEnter()
         {
             navMeshAgent.Stop();
+            target.StopSnapping();
 
             isBuilding = false;
 
-            BaseTask task = target.ActiveTask;
-            if (task != null)
-            {
-                ConstructionTask constructionTask = (ConstructionTask)task;
-                if (constructionTask != null)
-                {
-                    targetConstructionPoint = constructionTask.ConstructionPointBehavior;
-
-                    target.SetTargetHitableObject(targetConstructionPoint);
-
-                    navMeshAgent.SetWaypoints(GetApproachPosition());
-                    navMeshAgent.PathFinished += OnBuildingReached;
-                }
-                else
-                {
-                    InvokeOnFinished();
-                }
-            }
-            else
+            if (target.ActiveTask is not ConstructionTask constructionTask)
             {
                 InvokeOnFinished();
+
+                return;
             }
+
+            targetConstructionPoint = constructionTask.ConstructionPointBehavior;
+            lastHitsMade = targetConstructionPoint.HitsMade;
+
+            target.SetTargetHitableObject(targetConstructionPoint);
+
+            if (!MoveToApproachPosition())
+            {
+                OnWatchdogTimeout();
+
+                return;
+            }
+
+            navMeshAgent.PathFinished += OnBuildingReached;
         }
 
-        private Vector3 GetApproachPosition()
+        private bool MoveToApproachPosition()
         {
             var helperPosition = target.transform.position;
 
@@ -873,7 +979,15 @@ namespace Watermelon.AI
             if (direction == Vector3.zero)
                 direction = target.transform.forward;
 
-            return surfacePoint.SetY(helperPosition.y) + direction * BUILDING_STANDOFF_DISTANCE;
+            var approachPosition = surfacePoint.SetY(helperPosition.y) + direction * BUILDING_STANDOFF_DISTANCE;
+
+            if (navMeshAgent.TrySnapToNavMesh(approachPosition, out Vector3 destination) && navMeshAgent.SetWaypoints(destination))
+                return true;
+
+            var extents = targetConstructionPoint.BoxCollider.bounds.extents;
+            var approachDistance = Mathf.Max(extents.x, extents.z) + BUILDING_STANDOFF_DISTANCE;
+
+            return navMeshAgent.MoveToTarget(targetConstructionPoint.transform.position, approachDistance);
         }
 
         private void OnBuildingReached()
@@ -885,16 +999,22 @@ namespace Watermelon.AI
                     targetConstructionPoint.ActivateInteractionAnimation(target.Graphics.InteractionAnimations);
                 }
 
-                Vector3 lookAt = (targetConstructionPoint.transform.position - target.transform.position).SetY(0).normalized;
+                var lookAt = (targetConstructionPoint.transform.position - target.transform.position).SetY(0).normalized;
 
-                target.transform.rotation = Quaternion.LookRotation(lookAt);
+                if (lookAt.sqrMagnitude > Mathf.Epsilon)
+                    target.transform.rotation = Quaternion.LookRotation(lookAt);
 
                 isBuilding = true;
+
+                KeepAlive();
             }
         }
 
-        public override void OnUpdate()
+        protected override void OnTick()
         {
+            if (navMeshAgent.IsMoving)
+                KeepAlive();
+
             if(Target.ActiveTask == null || !Target.ActiveTask.IsActive)
             {
                 InvokeOnFinished();
@@ -918,13 +1038,22 @@ namespace Watermelon.AI
 
             if (isBuilding && targetConstructionPoint != null)
             {
+                if (targetConstructionPoint.HitsMade > lastHitsMade)
+                {
+                    lastHitsMade = targetConstructionPoint.HitsMade;
+
+                    KeepAlive();
+                }
+
                 target.SnapToHittable(targetConstructionPoint);
             }
         }
 
-        public override void OnEnd()
+        protected override void OnExit()
         {
             navMeshAgent.Stop();
+
+            target.StopSnapping();
 
             target.Graphics.InteractionAnimations.Disable();
 
@@ -934,26 +1063,10 @@ namespace Watermelon.AI
         }
     }
 
-    public class WaitingState : HelperStateBehavior
+    public static class HelperStateTimeouts
     {
-        public WaitingState(HelperBehavior helperBehavior) : base(helperBehavior)
-        {
-
-        }
-
-        public override void OnStart()
-        {
-            navMeshAgent.Stop();
-        }
-
-        public override void OnUpdate()
-        {
-
-        }
-
-        public override void OnEnd()
-        {
-
-        }
+        public const float GATHERING = 15f;
+        public const float STORING = 15f;
+        public const float BUILDING = 20f;
     }
 }
