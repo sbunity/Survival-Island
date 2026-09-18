@@ -26780,7 +26780,7 @@ MonoBehaviour:
   customTargetPosition: {fileID: 0}
   cameraPreviewAtStart: 0
   showPositionPointer: 1
-  pointerPositionOffset: {x: 0, y: 4, z: 0}
+  pointerPositionOffset: {x: 2.2, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
   showGuidingArrow: 0
