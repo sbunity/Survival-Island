@@ -95,7 +95,7 @@ namespace Watermelon
             if (chestBehavior.IsUnlocked)
                 return;
 
-#if MODULE_MONETIZATION
+#if MODULE_ADS
             AdsManager.ShowRewardBasedVideo((reward) =>
             {
                 if (reward)
@@ -106,7 +106,7 @@ namespace Watermelon
                 }
             });
 #else
-            Debug.LogWarning("Monetization module is missing!");
+            Debug.LogWarning("Ads module is missing - granting the reward without an ad!");
 
             chestBehavior.UnlockChest();
 

@@ -211,7 +211,7 @@ namespace Watermelon
             if (items.Count == 0)
                 return;
 
-#if MODULE_MONETIZATION
+#if MODULE_ADS
             AdsManager.ShowRewardBasedVideo((success) =>
             {
                 if (success)
@@ -222,7 +222,7 @@ namespace Watermelon
                 }
             });
 #else
-            Debug.LogWarning("Monetization module is missing!");
+            Debug.LogWarning("Ads module is missing - granting the reward without an ad!");
 
             CurrencyController.Add(CurrencyType.Coins, CalculateAllMoney() * 3);
 

@@ -217,7 +217,7 @@ namespace Watermelon
             {
                 AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
-#if MODULE_MONETIZATION
+#if MODULE_ADS
                 AdsManager.ShowRewardBasedVideo((reward) =>
                 {
                     if (reward)
@@ -227,8 +227,8 @@ namespace Watermelon
                 });
 #else
                 upgrade.UpgradeStage();
-                
-                Debug.LogWarning("Monetization module is missing!");
+
+                Debug.LogWarning("Ads module is missing - granting the upgrade without an ad!");
 #endif
             }
         }

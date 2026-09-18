@@ -13,9 +13,7 @@ namespace Watermelon
 
         protected override void Click()
         {
-#if MODULE_MONETIZATION
             IAPManager.RestorePurchases();
-#endif
 
             // Play button sound
             AudioController.PlaySound(AudioController.GetClip("button_sound"));

@@ -258,9 +258,7 @@ namespace Watermelon
 
             AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
-#if MODULE_MONETIZATION
             UIStore.OpenAsOverlay();
-#endif
         }
 
         private void OnPauseButtonClicked()
