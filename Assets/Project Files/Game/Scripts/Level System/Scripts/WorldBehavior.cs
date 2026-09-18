@@ -26,6 +26,8 @@ namespace Watermelon
 
         [SerializeField] bool restoreHungerPointsOnFirstTimeLoad;
 
+        private IWorldTravelPoint[] travelPoints;
+
         private void Awake()
         {
             WorldController.SetWorld(this);
@@ -34,6 +36,8 @@ namespace Watermelon
         public override void Initialise()
         {
             base.Initialise();
+
+            travelPoints = GetComponentsInChildren<IWorldTravelPoint>(true);
 
             WorldData worldData = WorldController.CurrentWorld;
 
@@ -91,6 +95,41 @@ namespace Watermelon
             base.Unload();
 
             EnvironmentController.OnWorldUnloaded();
+        }
+
+        public bool TryGetTravelPointPosition(Vector3 origin, out Vector3 position)
+        {
+            position = Vector3.zero;
+
+            if (travelPoints.IsNullOrEmpty())
+                return false;
+
+            var closestDistance = float.MaxValue;
+            var isPointFound = false;
+            var isFoundPointAvailable = false;
+
+            foreach (var travelPoint in travelPoints)
+            {
+                if (travelPoint == null)
+                    continue;
+
+                var isAvailable = travelPoint.IsTravelPointAvailable;
+
+                if (isPointFound && isFoundPointAvailable && !isAvailable)
+                    continue;
+
+                var distance = (travelPoint.TravelPointPosition - origin).sqrMagnitude;
+
+                if (isPointFound && isAvailable == isFoundPointAvailable && distance >= closestDistance)
+                    continue;
+
+                position = travelPoint.TravelPointPosition;
+                closestDistance = distance;
+                isFoundPointAvailable = isAvailable;
+                isPointFound = true;
+            }
+
+            return isPointFound;
         }
 
         public void RegisterAndRecalculateNavMesh(SimpleCallback onWorldLoaded)

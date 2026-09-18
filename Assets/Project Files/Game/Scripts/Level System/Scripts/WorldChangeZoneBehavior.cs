@@ -2,13 +2,16 @@
 
 namespace Watermelon
 {
-    public class WorldChangeZoneBehavior : MonoBehaviour, IGroundOpenable
+    public class WorldChangeZoneBehavior : MonoBehaviour, IGroundOpenable, IWorldTravelPoint
     {
         [SerializeField] WorldChangeSpecialBehavior changeSpecialBehavior;
 
         [SerializeField] WorldTravelManifest travelManifest;
 
         private Vector3 defaultScale;
+
+        public Vector3 TravelPointPosition => transform.position;
+        public bool IsTravelPointAvailable => isActiveAndEnabled;
 
         public event SimpleCallback OnWorldChangeZoneEntered;
 

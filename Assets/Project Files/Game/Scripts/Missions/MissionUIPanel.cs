@@ -21,6 +21,8 @@ namespace Watermelon
 
         private Mission activeMission;
 
+        private SimpleCallback messageClickCallback;
+
         private MissionUICase[] missionUICases;
         private MissionUICase activeUICase;
 
@@ -44,15 +46,18 @@ namespace Watermelon
                 missionUICases[i].ParentObject.SetActive(false);
             }
 
+            clickHandler.onClick.RemoveListener(OnMissionClicked);
             clickHandler.onClick.AddListener(OnMissionClicked);
 
-            UIGame gameUI = UIController.GetPage<UIGame>();
+            if (floatingCloundSpawn == null)
+            {
+                var gameUI = UIController.GetPage<UIGame>();
 
-            // Creating positions for currency reward cloud
-            GameObject spawn = new GameObject("[floating cloud spawn]");
-            spawn.transform.position = rewardText.transform.position;
-            spawn.transform.SetParent(gameUI.transform);
-            floatingCloundSpawn = spawn.AddComponent<RectTransform>();
+                var spawn = new GameObject("[floating cloud spawn]");
+                spawn.transform.position = rewardText.transform.position;
+                spawn.transform.SetParent(gameUI.transform);
+                floatingCloundSpawn = spawn.AddComponent<RectTransform>();
+            }
         }
 
         public void Unload()
@@ -97,32 +102,94 @@ namespace Watermelon
 
         private void OnMissionClicked()
         {
-            if (activeMission != null)
+            if (activeMission == null)
             {
-                AudioController.PlaySound(AudioController.GetClip("button_sound"));
-
-                if (activeMission.MissionStage == Mission.Stage.Active)
+                if (messageClickCallback != null)
                 {
-                    activeMission.DoCameraPreview();
+                    AudioController.PlaySound(AudioController.GetClip("button_sound"));
+
+                    messageClickCallback.Invoke();
+                }
+
+                return;
+            }
+
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
+
+            if (activeMission.MissionStage == Mission.Stage.Active)
+            {
+                activeMission.DoCameraPreview();
 
 #if MODULE_HAPTIC
-                    Haptic.Play(Haptic.HAPTIC_LIGHT);
+                Haptic.Play(Haptic.HAPTIC_LIGHT);
 #endif
 
-                }
-                else if (activeMission.MissionStage == Mission.Stage.Finished && activeMission.RewardType == MissionRewardType.Resources)
-                {
-                    MissionsController.CompleteMission();
+            }
+            else if (activeMission.MissionStage == Mission.Stage.Finished && activeMission.RewardType == MissionRewardType.Resources)
+            {
+                MissionsController.CompleteMission();
 
 #if MODULE_HAPTIC
-                    Haptic.Play(Haptic.HAPTIC_MEDIUM);
+                Haptic.Play(Haptic.HAPTIC_MEDIUM);
 #endif
 
-                }
             }
         }
 
         public void ActivateMission(Mission mission)
+        {
+            PrepareForNewContent();
+
+            activeMission = mission;
+            activeMission.OnStageChanged += OnStageChanged;
+
+            if (activeMission.MissionStage == Mission.Stage.Finished)
+            {
+                ActivateReward();
+            }
+            else
+            {
+                ActivateUIPanel(mission.MissionUIType);
+
+                activeUICase.Activate(mission);
+
+                activeUICase.SetTitle(string.Format(activeMission.Title));
+                activeUICase.UpdateUI();
+            }
+        }
+
+        public void ShowMessage(string message, SimpleCallback onClicked)
+        {
+            gameObject.SetActive(true);
+
+            PrepareForNewContent();
+
+            messageClickCallback = onClicked;
+
+            ActivateUIPanel(MissionUICase.Type.Task);
+
+            activeUICase.ShowMessage(message);
+        }
+
+        public void HideMessage()
+        {
+            if (messageClickCallback == null)
+                return;
+
+            messageClickCallback = null;
+
+            if (activeUICase != null)
+            {
+                activeUICase.ParentObject.SetActive(false);
+                activeUICase.Disable();
+
+                activeUICase = null;
+            }
+
+            backgroundObj.SetActive(false);
+        }
+
+        private void PrepareForNewContent()
         {
             // if panel was disabled - run appear animation
             if (!backgroundObj.activeSelf)
@@ -135,10 +202,14 @@ namespace Watermelon
             previewIconObject.SetActive(true);
             missionCompletePanel.SetActive(false);
 
+            messageClickCallback = null;
+
             if (activeMission != null)
             {
                 // Unload previous mission
                 activeMission.OnStageChanged -= OnStageChanged;
+
+                activeMission = null;
             }
 
             if (activeUICase != null)
@@ -146,22 +217,8 @@ namespace Watermelon
                 // Disable previous mission type UI
                 activeUICase.ParentObject.SetActive(false);
                 activeUICase.Disable();
-            }
 
-            activeMission = mission;
-            activeMission.OnStageChanged += OnStageChanged;
-
-            if (activeMission.MissionStage == Mission.Stage.Finished)
-            {
-                ActivateReward();
-            }
-            else
-            {
-                // Enable panel
-                ActivateUIPanel(mission.MissionUIType, mission);
-
-                activeUICase.SetTitle(string.Format(activeMission.Title));
-                activeUICase.UpdateUI();
+                activeUICase = null;
             }
         }
 
@@ -265,14 +322,13 @@ namespace Watermelon
             }
         }
 
-        private void ActivateUIPanel(MissionUICase.Type panelType, Mission mission)
+        private void ActivateUIPanel(MissionUICase.Type panelType)
         {
             for (int i = 0; i < missionUICases.Length; i++)
             {
                 if (missionUICases[i].MissionType == panelType)
                 {
                     missionUICases[i].ParentObject.SetActive(true);
-                    missionUICases[i].Activate(mission);
 
                     activeUICase = missionUICases[i];
 
@@ -311,6 +367,11 @@ namespace Watermelon
         public virtual void Disable()
         {
 
+        }
+
+        public virtual void ShowMessage(string message)
+        {
+            SetTitle(message);
         }
 
         public virtual void UpdateUI()
@@ -536,6 +597,14 @@ namespace Watermelon
             // making default title empty, as description text will take the entire panel
             uiPanel.SetTitle(string.Empty);
             descriptionText.text = mission.Title;
+        }
+
+        public override void ShowMessage(string message)
+        {
+            mission = null;
+
+            titleText.text = string.Empty;
+            descriptionText.text = message;
         }
 
         public override void UpdateUI()

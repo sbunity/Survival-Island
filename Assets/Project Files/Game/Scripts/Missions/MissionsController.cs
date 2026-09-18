@@ -17,6 +17,8 @@ namespace Watermelon
         private static MissionUIPanel missionUIPanel;
         private static UIMissionRewardPopUp missionRewardPopUp;
 
+        private static CrossWorldMissionHint crossWorldHint;
+
         private static TweenCase completeTweenCase;
 
         public static event SimpleCallback OnNextMissionStarted;
@@ -34,16 +36,11 @@ namespace Watermelon
 
         public void Initialise(Mission[] missions)
         {
-            if (missions == null)
-                return;
-
-            // if missions are disabled using Actions menu - works only in the editor
             if (MissionsActionMenu.AreMissionsDisabled())
                 return;
 
-            MissionsController.missions = missions;
+            MissionsController.missions = missions ?? new Mission[0];
 
-            // Get game ui and initialise missions panel
             UIGame gameUI = UIController.GetPage<UIGame>();
 
             missionUIPanel = gameUI.MissionUIPanel;
@@ -51,16 +48,25 @@ namespace Watermelon
 
             missionRewardPopUp = gameUI.MissionRewardPopUp;
 
-            for (int i = 0; i < missions.Length; i++)
+            for (var i = 0; i < MissionsController.missions.Length; i++)
             {
-                missions[i].Initialise();
+                MissionsController.missions[i].Initialise();
             }
+
+            crossWorldHint = new CrossWorldMissionHint(missionUIPanel);
+
+            WorldController.OnWorldUnlocked -= OnWorldUnlocked;
+            WorldController.OnWorldUnlocked += OnWorldUnlocked;
         }
 
         private static void Activate(int index)
         {
             if (activeMission != null)
                 activeMission.Deactivate();
+
+            crossWorldHint?.Hide();
+
+            WorldMissionsProgress.SetMissionsCompleted(WorldController.CurrentWorld.ID, false);
 
             activeMission = missions[index];
             activeMission.Activate();
@@ -185,8 +191,33 @@ namespace Watermelon
             // if last mission is completed
             else
             {
-                missionUIPanel.gameObject.SetActive(false);
+                activeMission = null;
+
+                WorldMissionsProgress.SetMissionsCompleted(WorldController.CurrentWorld.ID, true);
+
+                RefreshCrossWorldHint();
             }
+        }
+
+        private static void RefreshCrossWorldHint()
+        {
+            if (crossWorldHint == null)
+                return;
+
+            if (activeMission != null)
+            {
+                crossWorldHint.Hide();
+
+                return;
+            }
+
+            if (!crossWorldHint.Show())
+                missionUIPanel.gameObject.SetActive(false);
+        }
+
+        private static void OnWorldUnlocked(WorldData worldData)
+        {
+            RefreshCrossWorldHint();
         }
 
         public static void MissionFinished()
@@ -203,9 +234,15 @@ namespace Watermelon
         {
             if (!isInitialised) return;
 
+            WorldController.OnWorldUnlocked -= OnWorldUnlocked;
+
+            crossWorldHint?.Unload();
+            crossWorldHint = null;
+
             missionUIPanel.Unload();
 
             activeMission?.Deactivate();
+            activeMission = null;
 
             if(!missions.IsNullOrEmpty())
             {
@@ -213,8 +250,9 @@ namespace Watermelon
                 {
                     missions[i].Unload();
                 }
-                missions = null;
             }
+
+            missions = null;
         }
     }
 
