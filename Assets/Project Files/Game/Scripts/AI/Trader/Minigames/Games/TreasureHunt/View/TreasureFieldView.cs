@@ -12,6 +12,7 @@ namespace Watermelon
         [SerializeField] Image fieldImage;
         [SerializeField] RectTransform cellsRoot;
         [SerializeField] TreasureCellView cellPrefab;
+        [SerializeField] Vector2 fieldOffset;
 
         [BoxGroup("Animation", "Animation")]
         [SerializeField, Min(0.01f)] float spawnDuration = 0.22f;
@@ -58,6 +59,8 @@ namespace Watermelon
 
         private TreasureHuntSettings settings;
         private MinigameGridLayout grid;
+
+        private static readonly Vector2 CENTER = new(0.5f, 0.5f);
 
         private TreasureCellView[] cells;
 
@@ -177,13 +180,18 @@ namespace Watermelon
 
             grid = new MinigameGridLayout(available, aspect, gridRect, columns, rows, cellScale);
 
+            fieldRoot.anchorMin = CENTER;
+            fieldRoot.anchorMax = CENTER;
+            fieldRoot.pivot = CENTER;
             fieldRoot.sizeDelta = grid.FieldSize;
+            fieldRoot.anchoredPosition = MinigameStackLayout.FitGrid(
+                fieldRoot.parent as RectTransform, grid, grid.ResolveOffset(fieldOffset));
 
-            cellsRoot.anchorMin = new Vector2(0.5f, 0.5f);
-            cellsRoot.anchorMax = new Vector2(0.5f, 0.5f);
-            cellsRoot.pivot = new Vector2(0.5f, 0.5f);
+            cellsRoot.anchorMin = CENTER;
+            cellsRoot.anchorMax = CENTER;
+            cellsRoot.pivot = CENTER;
             cellsRoot.sizeDelta = grid.FieldSize;
-            cellsRoot.anchoredPosition = cellsOffset;
+            cellsRoot.anchoredPosition = grid.ResolveOffset(cellsOffset);
         }
 
         public bool TryGetCell(Vector2 localPoint, out Vector2Int cell) => grid.TryGetCell(localPoint, out cell);
@@ -206,7 +214,12 @@ namespace Watermelon
                 return;
 
             hasCellsOffset = true;
-            cellsOffset = cellsRoot.anchoredPosition;
+
+            var authored = cellsRoot.sizeDelta;
+
+            cellsOffset = new Vector2(
+                authored.x > 0f ? cellsRoot.anchoredPosition.x / authored.x : 0f,
+                authored.y > 0f ? cellsRoot.anchoredPosition.y / authored.y : 0f);
         }
 
         private Vector2Int ToCell(int index) => new(index % columns, index / columns);

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8200000000000000001}
   - component: {fileID: 8200000000000000002}
+  - component: {fileID: 8921852868274606913}
   m_Layer: 5
   m_Name: Shell Game Minigame
   m_TagString: Untagged
@@ -58,6 +59,31 @@ MonoBehaviour:
   shuffleDelay: 0.4
   missHold: 0.7
   finishDelay: 0.9
+--- !u!114 &8921852868274606913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc488bd6cd59734d956f7f1ce2d2994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MinigameStackLayout
+  header: {fileID: 8200000000000000011}
+  headerHeight: 90
+  headerTopGap: 106
+  body: {fileID: 8200000000000000051}
+  bodyTopGap: -26
+  bodyBottomGap: 20
+  bodySideGap: -120
+  footer: {fileID: 0}
+  footerHeight: 0
+  footerBottomGap: 0
+  referenceHeight: 1440
+  minGapScale: 0.3
+  minBodyHeight: 320
 --- !u!1 &8100000000000000002
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,9 +267,9 @@ MonoBehaviour:
   m_fontSize: 44
   m_fontSizeBase: 44
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 24
+  m_fontSizeMax: 44
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -340,6 +366,7 @@ MonoBehaviour:
   shellPrefab: {fileID: 8100000000000000104, guid: 7c4a91b0e5d34f2ea6c81d7b39f04e55,
     type: 3}
   prizeImage: {fileID: 8200000000000000083}
+  fieldOffset: {x: 0, y: 0}
   spawnDuration: 0.26
   spawnStagger: 0.08
   spawnEasing: 26

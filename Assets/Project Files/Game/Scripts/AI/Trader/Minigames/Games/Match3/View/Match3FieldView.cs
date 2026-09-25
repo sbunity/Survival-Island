@@ -11,6 +11,8 @@ namespace Watermelon
         [SerializeField] RectTransform tilesRoot;
         [SerializeField] Match3TileView tilePrefab;
 
+        [SerializeField] Vector2 fieldOffset;
+
         [BoxGroup("Animation", "Animation")]
         [SerializeField, Min(0.01f)] float swapDuration = 0.18f;
         [BoxGroup("Animation")]
@@ -59,6 +61,8 @@ namespace Watermelon
         [SerializeField, Min(0.01f)] float hintPulseDuration = 0.4f;
         [BoxGroup("Hint")]
         [SerializeField] Ease.Type hintEasing = Ease.Type.SineInOut;
+
+        private static readonly Vector2 CENTER = new(0.5f, 0.5f);
 
         private Match3TileView[] tiles;
         private readonly Stack<Match3TileView> pool = new Stack<Match3TileView>();
@@ -133,11 +137,16 @@ namespace Watermelon
 
             grid = new MinigameGridLayout(available, aspect, settings.GridRect, settings.Columns, settings.Rows, settings.TileScale);
 
+            fieldRoot.anchorMin = CENTER;
+            fieldRoot.anchorMax = CENTER;
+            fieldRoot.pivot = CENTER;
             fieldRoot.sizeDelta = grid.FieldSize;
+            fieldRoot.anchoredPosition = MinigameStackLayout.FitGrid(
+                fieldRoot.parent as RectTransform, grid, grid.ResolveOffset(fieldOffset));
 
-            tilesRoot.anchorMin = new Vector2(0.5f, 0.5f);
-            tilesRoot.anchorMax = new Vector2(0.5f, 0.5f);
-            tilesRoot.pivot = new Vector2(0.5f, 0.5f);
+            tilesRoot.anchorMin = CENTER;
+            tilesRoot.anchorMax = CENTER;
+            tilesRoot.pivot = CENTER;
             tilesRoot.anchoredPosition = Vector2.zero;
             tilesRoot.sizeDelta = grid.FieldSize;
         }

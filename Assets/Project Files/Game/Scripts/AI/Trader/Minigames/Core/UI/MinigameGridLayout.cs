@@ -42,6 +42,15 @@ namespace Watermelon
             CellExtent = Mathf.Min(CellSize.x, CellSize.y) * Mathf.Max(0.05f, cellScale);
         }
 
+        public Vector2 ResolveOffset(Vector2 normalizedOffset)
+        {
+            return new Vector2(normalizedOffset.x * FieldSize.x, normalizedOffset.y * FieldSize.y);
+        }
+
+        public float GetGridTop(Vector2 fieldPosition) => fieldPosition.y + GridCenter.y + GridSize.y * 0.5f;
+
+        public float GetGridBottom(Vector2 fieldPosition) => fieldPosition.y + GridCenter.y - GridSize.y * 0.5f;
+
         public Vector2 CellToPosition(Vector2Int cell) => CellToPosition(cell.x, cell.y);
 
         public Vector2 CellToPosition(int x, int y)

@@ -171,7 +171,7 @@ MonoBehaviour:
     fieldOfView: 60
     nearClipPlane: 0.1
     farClipPlane: 70
-    followOffset: {x: 0, y: 6, z: -4.5}
+    followOffset: {x: 0, y: 6, z: -4.38}
     simpleRotation: {x: 55, y: 0, z: 0}
   verticalSmoothTime: 0
   verticalSnapThreshold: 0

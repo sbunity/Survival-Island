@@ -10,6 +10,7 @@ namespace Watermelon
         [SerializeField] RectTransform shellsRoot;
         [SerializeField] ShellView shellPrefab;
         [SerializeField] Image prizeImage;
+        [SerializeField] Vector2 fieldOffset;
 
         [BoxGroup("Animation", "Animation")]
         [SerializeField, Min(0.01f)] float spawnDuration = 0.26f;
@@ -65,6 +66,8 @@ namespace Watermelon
 
         private ShellSettings settings;
         private MinigameGridLayout grid;
+
+        private static readonly Vector2 CENTER = new(0.5f, 0.5f);
 
         private ShellView[] shells;
         private int slotCount;
@@ -240,11 +243,16 @@ namespace Watermelon
 
             grid = new MinigameGridLayout(available, aspect, slotsRect, slotCount, 1, shellScale);
 
+            tableRoot.anchorMin = CENTER;
+            tableRoot.anchorMax = CENTER;
+            tableRoot.pivot = CENTER;
             tableRoot.sizeDelta = grid.FieldSize;
+            tableRoot.anchoredPosition = MinigameStackLayout.FitGrid(
+                tableRoot.parent as RectTransform, grid, grid.ResolveOffset(fieldOffset));
 
-            shellsRoot.anchorMin = new Vector2(0.5f, 0.5f);
-            shellsRoot.anchorMax = new Vector2(0.5f, 0.5f);
-            shellsRoot.pivot = new Vector2(0.5f, 0.5f);
+            shellsRoot.anchorMin = CENTER;
+            shellsRoot.anchorMax = CENTER;
+            shellsRoot.pivot = CENTER;
             shellsRoot.sizeDelta = grid.FieldSize;
 
             shellsRoot.anchoredPosition = shellsOffset * TableFitScale(available, aspect);

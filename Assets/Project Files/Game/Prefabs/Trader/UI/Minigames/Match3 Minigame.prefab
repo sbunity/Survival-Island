@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228886507401702388}
   - component: {fileID: 5927192843654547826}
+  - component: {fileID: 5526586702003048521}
   m_Layer: 0
   m_Name: Match3 Minigame
   m_TagString: Untagged
@@ -58,6 +59,31 @@ MonoBehaviour:
   finishDelay: 0.35
   hintDelay: 4
   shuffleDelay: 0.5
+--- !u!114 &5526586702003048521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874499275987020677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc488bd6cd59734d956f7f1ce2d2994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MinigameStackLayout
+  header: {fileID: 5568364841790472529}
+  headerHeight: 220
+  headerTopGap: 0
+  body: {fileID: 428393601228391527}
+  bodyTopGap: -110
+  bodyBottomGap: 200
+  bodySideGap: 30
+  footer: {fileID: 0}
+  footerHeight: 0
+  footerBottomGap: 0
+  referenceHeight: 1440
+  minGapScale: 0.3
+  minBodyHeight: 320
 --- !u!1 &3700706417132044341
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,6 +228,7 @@ MonoBehaviour:
   tilesRoot: {fileID: 7439570410218256500}
   tilePrefab: {fileID: 6159045416606107446, guid: 7932b1d30f6758d4e86caab57d4a1dd9,
     type: 3}
+  fieldOffset: {x: 0, y: 0}
   swapDuration: 0.18
   clearDuration: 0.14
   fallDurationPerCell: 0.07
@@ -348,9 +375,9 @@ MonoBehaviour:
   m_fontSize: 48
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 26
+  m_fontSizeMax: 48
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -596,9 +623,9 @@ MonoBehaviour:
   m_fontSize: 56
   m_fontSizeBase: 56
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 31
+  m_fontSizeMax: 56
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512

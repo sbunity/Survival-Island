@@ -10,6 +10,7 @@ namespace Watermelon
         [SerializeField] Image fieldImage;
         [SerializeField] RectTransform cellsRoot;
         [SerializeField] SudokuCellView cellPrefab;
+        [SerializeField] Vector2 fieldOffset;
 
         [BoxGroup("Animation", "Animation")]
         [SerializeField, Min(0.01f)] float spawnDuration = 0.22f;
@@ -49,6 +50,8 @@ namespace Watermelon
         [SerializeField] Color matchColor = new Color(1f, 1f, 1f, 0.28f);
         [BoxGroup("Highlights")]
         [SerializeField] Color errorColor = new Color(1f, 0.3f, 0.28f, 0.6f);
+
+        private static readonly Vector2 CENTER = new(0.5f, 0.5f);
 
         private SudokuCellView[] cells;
         private readonly Stack<SudokuCellView> pool = new Stack<SudokuCellView>();
@@ -136,11 +139,16 @@ namespace Watermelon
 
             grid = new MinigameGridLayout(available, aspect, gridRect, layout.Size, layout.Size, cellScale);
 
+            fieldRoot.anchorMin = CENTER;
+            fieldRoot.anchorMax = CENTER;
+            fieldRoot.pivot = CENTER;
             fieldRoot.sizeDelta = grid.FieldSize;
+            fieldRoot.anchoredPosition = MinigameStackLayout.FitGrid(
+                fieldRoot.parent as RectTransform, grid, grid.ResolveOffset(fieldOffset));
 
-            cellsRoot.anchorMin = new Vector2(0.5f, 0.5f);
-            cellsRoot.anchorMax = new Vector2(0.5f, 0.5f);
-            cellsRoot.pivot = new Vector2(0.5f, 0.5f);
+            cellsRoot.anchorMin = CENTER;
+            cellsRoot.anchorMax = CENTER;
+            cellsRoot.pivot = CENTER;
             cellsRoot.anchoredPosition = Vector2.zero;
             cellsRoot.sizeDelta = grid.FieldSize;
         }

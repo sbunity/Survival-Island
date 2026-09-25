@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000002222222222222}
   - component: {fileID: 1000003333333333333}
+  - component: {fileID: 9102144005636552162}
   m_Layer: 5
   m_Name: Sudoku Minigame
   m_TagString: Untagged
@@ -59,6 +60,31 @@ MonoBehaviour:
   hudIntro: {fileID: 1000008888888888888}
   paletteIntro: {fileID: 1000039999999999996}
   finishDelay: 0.45
+--- !u!114 &9102144005636552162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000001111111111111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc488bd6cd59734d956f7f1ce2d2994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MinigameStackLayout
+  header: {fileID: 1000005555555555555}
+  headerHeight: 240
+  headerTopGap: 58
+  body: {fileID: 1000023333333333331}
+  bodyTopGap: -88
+  bodyBottomGap: 20
+  bodySideGap: 25
+  footer: {fileID: 1000036666666666663}
+  footerHeight: 150
+  footerBottomGap: 70
+  referenceHeight: 1440
+  minGapScale: 0.3
+  minBodyHeight: 320
 --- !u!1 &1000004444444444444
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,9 +335,9 @@ MonoBehaviour:
   m_fontSize: 40
   m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 22
+  m_fontSizeMax: 40
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -447,9 +473,9 @@ MonoBehaviour:
   m_fontSize: 52
   m_fontSizeBase: 52
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 29
+  m_fontSizeMax: 52
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -545,6 +571,7 @@ MonoBehaviour:
   cellsRoot: {fileID: 1000034444444444441}
   cellPrefab: {fileID: 1000003333333333333, guid: 3f1c8a5d47b04e2ea1c6b90d17e5c440,
     type: 3}
+  fieldOffset: {x: 0, y: 0}
   spawnDuration: 0.22
   spawnStagger: 0.02
   spawnEasing: 26

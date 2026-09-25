@@ -14,6 +14,19 @@ namespace Watermelon
         [SerializeField] RectTransform contentRoot;
         [SerializeField] Button closeButton;
 
+        [BoxGroup("Frame", "Frame")]
+        [SerializeField] RectTransform topBar;
+        [BoxGroup("Frame")]
+        [SerializeField] float topBarTopGap = 138f;
+        [BoxGroup("Frame")]
+        [SerializeField] float contentBottomGap = 40f;
+        [BoxGroup("Frame")]
+        [SerializeField] float contentTopGap;
+        [BoxGroup("Frame")]
+        [SerializeField, Min(1f)] float referencePanelHeight = 1920f;
+        [BoxGroup("Frame")]
+        [SerializeField, Range(0f, 1f)] float minGapScale = 0.3f;
+
         [SerializeField, Range(0f, 1f)] float fadeAlpha = 0f;
 
         [BoxGroup("Intro", "Intro")]
@@ -112,6 +125,7 @@ namespace Watermelon
             panelRectTransform.DOAnchoredPosition(DEFAULT_POSITION, 0.3f).SetEasing(Ease.Type.CircOut);
 
             BuildHeader();
+            LayoutFrame();
 
             HideResult();
 
@@ -158,6 +172,65 @@ namespace Watermelon
         }
 
         private bool IsWager => stakeRule != null && stakeRule.Type == MinigameStakeType.Wager && stakeRule.Stake.amount > 0;
+
+        private void OnRectTransformDimensionsChange() => LayoutFrame();
+
+        private void LayoutFrame()
+        {
+            if (panelRectTransform == null || contentRoot == null)
+                return;
+
+            var panelHeight = panelRectTransform.rect.height;
+
+            if (panelHeight <= 0f)
+                return;
+
+            var scale = Mathf.Clamp(panelHeight / referencePanelHeight, minGapScale, 1f);
+
+            var contentTop = 0f;
+
+            if (topBar != null)
+            {
+                var barHeight = topBar.rect.height;
+                var barTop = topBarTopGap * scale;
+
+                topBar.offsetMax = new Vector2(topBar.offsetMax.x, -barTop);
+                topBar.offsetMin = new Vector2(topBar.offsetMin.x, -barTop - barHeight);
+
+                contentTop = MeasureUsedHeight(topBar) + contentTopGap * scale;
+            }
+
+            contentRoot.offsetMax = new Vector2(contentRoot.offsetMax.x, -contentTop);
+            contentRoot.offsetMin = new Vector2(contentRoot.offsetMin.x, contentBottomGap * scale);
+        }
+
+        private float MeasureUsedHeight(RectTransform bar)
+        {
+            var lowest = float.MaxValue;
+
+            for (var i = 0; i < bar.childCount; i++)
+            {
+                var child = (RectTransform)bar.GetChild(i);
+
+                if (!child.gameObject.activeSelf)
+                    continue;
+
+                lowest = Mathf.Min(lowest, GetBottomInPanelSpace(child));
+            }
+
+            if (lowest >= float.MaxValue)
+                lowest = GetBottomInPanelSpace(bar);
+
+            return Mathf.Max(0f, panelRectTransform.rect.yMax - lowest);
+        }
+
+        private float GetBottomInPanelSpace(RectTransform target)
+        {
+            var corners = new Vector3[4];
+            target.GetWorldCorners(corners);
+
+            return panelRectTransform.InverseTransformPoint(corners[0]).y;
+        }
 
         private void BuildHeader()
         {
