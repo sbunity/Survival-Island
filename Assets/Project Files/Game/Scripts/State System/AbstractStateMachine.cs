@@ -44,11 +44,16 @@ namespace Watermelon
         /// </summary>
         public void StartMachine()
         {
+            if (IsPlaying)
+                StopMachine();
+
             IsPlaying = true;
 
-            CurrentState = startState;
+            CurrentState = ResolveInitialState();
             StartState();
         }
+
+        protected virtual T ResolveInitialState() => startState;
 
         /// <summary>
         /// The StartState method retrieves the EnemyStateBehavior for the current state, subscribes to the OnFinished event of the state, and calls the OnStart method of the state.

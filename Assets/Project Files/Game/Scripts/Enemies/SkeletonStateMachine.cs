@@ -46,12 +46,19 @@ namespace Watermelon
             startState = State.Patrolling;
         }
 
+        protected override State ResolveInitialState()
+        {
+            enemy.RefreshTargetSelection(true);
+
+            return enemy.ShouldEngage() ? State.Attacking : startState;
+        }
+
         private bool PatrolStateTransition(out State nextState)
         {
             nextState = State.Attacking;
 
             enemy.RefreshTargetSelection();
-            return enemy.IsCurrentTargetWithin(5f);
+            return enemy.ShouldEngage();
         }
 
         private bool IdleStateTransition(out State nextState) 
@@ -65,7 +72,7 @@ namespace Watermelon
                 return false;
 
             enemy.RefreshTargetSelection();
-            return !enemy.HasAvailableTarget() || !enemy.IsCurrentTargetWithin(10f);
+            return enemy.ShouldDisengage();
         }
 
         public enum State

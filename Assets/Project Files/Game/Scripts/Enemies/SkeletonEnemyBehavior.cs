@@ -19,11 +19,17 @@ namespace Watermelon
 
         [BoxFoldout("Combat", label: "Combat")]
         [SerializeField, Min(0f)] float aggroRadius = 10f;
+        [BoxFoldout("Combat", label: "Combat")]
+        [SerializeField, Min(0f)] float deaggroRadius = 13f;
 
         [BoxFoldout("Patrol", label: "Patrol")]
         [SerializeField, Min(0.5f)] float patrolRadius = 4f;
         [BoxFoldout("Patrol", label: "Patrol")]
         [SerializeField] Vector2 patrolWaitDuration = new(0.5f, 1.5f);
+
+        public float AggroRadius => aggroRadius > 0f ? aggroRadius : float.MaxValue;
+
+        public float DeaggroRadius => aggroRadius > 0f ? Mathf.Max(aggroRadius, deaggroRadius) : float.MaxValue;
 
         public float PatrolRetryDelay => PATROL_RETRY_DELAY;
         public float AttackRange => ATTACK_RANGE;
@@ -46,7 +52,7 @@ namespace Watermelon
 
             patrolPath = new NavMeshPath();
             chasePath = new NavMeshPath();
-            targetSelector = new SkeletonTargetSelector(Agent, aggroRadius);
+            targetSelector = new SkeletonTargetSelector(Agent, DeaggroRadius);
 
             animationCallbacks.Add(EnemyAnimationEventType.SpawnEnded, OnSpawnAnimationEnded);
             animationCallbacks.Add(EnemyAnimationEventType.Hit, OnHit);
@@ -80,6 +86,10 @@ namespace Watermelon
             nextTargetSelectionFrame = Time.frameCount + TARGET_SELECTION_UPDATE_RATE;
             targetSelector.Refresh(transform.position, IsAttackAnimationPlaying);
         }
+
+        public bool ShouldEngage() => IsCurrentTargetWithin(AggroRadius);
+
+        public bool ShouldDisengage() => !HasAvailableTarget() || !IsCurrentTargetWithin(DeaggroRadius);
 
         public bool HasAvailableTarget()
         {
