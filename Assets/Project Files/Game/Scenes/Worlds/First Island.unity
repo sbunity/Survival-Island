@@ -142743,6 +142743,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7729195832344074911, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
+      propertyPath: cost.Array.data[2].amount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8820011485750651152, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
       propertyPath: tileBehavior
