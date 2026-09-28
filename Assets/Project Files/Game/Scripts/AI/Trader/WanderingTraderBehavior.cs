@@ -161,12 +161,12 @@ namespace Watermelon
             if (tradeButton != null)
                 tradeButton.Clicked += OpenTradeWindow;
 
+            isInitialised = true;
+
             if (requiresRescue && !traderSave.IsRescued)
                 EnterCapturedState();
             else
                 RestoreState();
-
-            isInitialised = true;
 
             RefreshTradeAvailability();
 
@@ -211,11 +211,7 @@ namespace Watermelon
                     break;
 
                 case Phase.SailingIn:
-                    transform.position = islandPosition;
-                    SetSitting(false);
-                    BuildPathToBase();
-                    SetMoving(true);
-                    tradeButton.Deactivate();
+                    ArriveAtBase();
                     break;
 
                 case Phase.AtBase:
@@ -228,11 +224,7 @@ namespace Watermelon
                     break;
 
                 case Phase.SailingOut:
-                    transform.position = basePoint.position;
-                    SetSitting(false);
-                    BuildPathToIsland();
-                    SetMoving(true);
-                    tradeButton.Deactivate();
+                    ArriveAtIsland();
                     break;
             }
         }
