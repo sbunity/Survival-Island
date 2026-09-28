@@ -21,31 +21,31 @@ MonoBehaviour:
     currencyType: 0
     previewSprite: {fileID: 0}
     maxHealth: 70
-  - price: 40
+  - price: 350
     currencyType: 0
     previewSprite: {fileID: 0}
     maxHealth: 85
-  - price: 80
+  - price: 750
     currencyType: 0
     previewSprite: {fileID: 0}
     maxHealth: 100
-  - price: 140
+  - price: 1200
     currencyType: 0
     previewSprite: {fileID: 0}
     maxHealth: 120
-  - price: 300
+  - price: 1600
     currencyType: 0
     previewSprite: {fileID: 0}
     maxHealth: 145
-  - price: 500
+  - price: 2000
     currencyType: 0
     previewSprite: {fileID: 0}
     maxHealth: 175
-  - price: 900
+  - price: 2500
     currencyType: 0
     previewSprite: {fileID: 0}
     maxHealth: 210
-  - price: 1500
+  - price: 3000
     currencyType: 0
     previewSprite: {fileID: 0}
     maxHealth: 250
