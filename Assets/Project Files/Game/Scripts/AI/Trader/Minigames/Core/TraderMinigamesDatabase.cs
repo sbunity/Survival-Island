@@ -19,7 +19,7 @@ namespace Watermelon
             var totalWeight = 0f;
             for (var i = 0; i < minigames.Length; i++)
             {
-                if (minigames[i] != null)
+                if (IsPickable(minigames[i]))
                     totalWeight += minigames[i].Weight;
             }
 
@@ -30,7 +30,7 @@ namespace Watermelon
 
             for (var i = 0; i < minigames.Length; i++)
             {
-                if (minigames[i] == null)
+                if (!IsPickable(minigames[i]))
                     continue;
 
                 roll -= minigames[i].Weight;
@@ -40,6 +40,11 @@ namespace Watermelon
             }
 
             return null;
+        }
+
+        private static bool IsPickable(TraderMinigameDefinition definition)
+        {
+            return definition != null && definition.IsAvailable();
         }
 
         public TraderMinigameDefinition GetByID(string id)

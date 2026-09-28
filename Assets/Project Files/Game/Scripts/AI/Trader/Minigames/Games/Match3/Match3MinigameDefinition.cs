@@ -48,12 +48,15 @@ namespace Watermelon
         [BoxGroup("Match3 Rules")]
         [SerializeField] DuoInt goalAmountRange = new(15, 25);
 
+        public override bool IsAvailable()
+        {
+            return IsRewardPoolAvailable(tilePool);
+        }
+
         public override Resource[] RollReward(int seed)
         {
-            if (tilePool.IsNullOrEmpty())
+            if (!ResourceUnlocks.TryPickUnlocked(tilePool, out CurrencyType currency))
                 return base.RollReward(seed);
-
-            var currency = tilePool[Random.Range(0, tilePool.Length)];
 
             return new[] { new Resource(currency, Mathf.Max(1, goalAmountRange.Random())) };
         }

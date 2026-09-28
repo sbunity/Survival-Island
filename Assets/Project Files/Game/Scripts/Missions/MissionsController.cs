@@ -51,6 +51,9 @@ namespace Watermelon
             for (var i = 0; i < MissionsController.missions.Length; i++)
             {
                 MissionsController.missions[i].Initialise();
+
+                if (MissionsController.missions[i].MissionStage == Mission.Stage.Collected)
+                    MissionProgress.MarkCompleted(MissionsController.missions[i].ID);
             }
 
             crossWorldHint = new CrossWorldMissionHint(missionUIPanel);

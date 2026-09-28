@@ -148,6 +148,9 @@ namespace Watermelon
 
             traderSave = SaveController.GetSaveObject<TraderSave>(LinkedWorldBehavior.WorldData.ID, "trader_" + id);
 
+            if (offersDatabase != null)
+                offersDatabase.Initialise();
+
             minigameSlot.Initialise(minigamesDatabase, traderSave);
             minigameSlot.Changed += OnMinigameSlotChanged;
 

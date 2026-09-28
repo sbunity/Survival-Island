@@ -50,15 +50,19 @@ namespace Watermelon
         [BoxGroup("Treasure Reward")]
         [SerializeField, Min(1)] int rewardAmountStep = 5;
 
+        public override bool IsAvailable()
+        {
+            return IsRewardPoolAvailable(rewardPool);
+        }
+
         public override Resource[] RollReward(int seed)
         {
-            if (rewardPool.IsNullOrEmpty())
+            if (!ResourceUnlocks.TryPickUnlocked(rewardPool, out CurrencyType currency))
                 return base.RollReward(seed);
 
             var difficulty = MinigameDifficultyPicker.Pick(difficulties, seed);
             var multiplier = difficulty != null ? difficulty.RewardMultiplier : 1f;
 
-            var currency = rewardPool[Random.Range(0, rewardPool.Length)];
             var amount = Mathf.RoundToInt(rewardAmountRange.Random() * multiplier);
 
             return new[] { new Resource(currency, SnapAmount(amount, rewardAmountStep)) };

@@ -183,6 +183,9 @@ namespace Watermelon
 
             missionStage = stage;
 
+            if (stage == Stage.Collected)
+                MissionProgress.MarkCompleted(id);
+
             StageChanged(stage);
 
             OnStageChanged?.Invoke(previousStage, stage);

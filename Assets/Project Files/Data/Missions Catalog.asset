@@ -1,0 +1,300 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e0d731e3af9ff468e72555cb2786b1, type: 3}
+  m_Name: Missions Catalog
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MissionsCatalog
+  entries:
+  - missionId: b4b4d0f4-2c15-40bf-a837-d9d8466263bd
+    missionName: M #01 - loot the shipwreck
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 1
+  - missionId: bfb5ea19-371c-4684-8553-4ea61e501344
+    missionName: M #02 - tent building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 2
+  - missionId: 67cf59cb-32b4-43af-b38a-829e3f04a4e9
+    missionName: M #03 - wood harvest
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 3
+  - missionId: 7eeabcff-440c-4044-b49c-107a0596abde
+    missionName: M #04 - stone harvest
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 4
+  - missionId: 69925f56-c9f5-4bd0-98c9-c260eca64738
+    missionName: M #05 - cooking place building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 5
+  - missionId: 2cd4e8db-90fa-49f5-a7c3-ddbc512a18d1
+    missionName: M #06 - berries harvest
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 6
+  - missionId: 3a7ecd45-b1da-46d9-97d1-8036e2eac343
+    missionName: M #07 - jam cooking
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 7
+  - missionId: df257601-b51e-4a99-8558-1b6a5156d0c8
+    missionName: M #08 - scissors craft table building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 8
+  - missionId: 352b09c3-e3d2-4686-9c1b-4eefe52d57d6
+    missionName: M #09 - craft scissors
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 9
+  - missionId: 3efd8a51-a7b9-4d34-ab69-726550afe2c9
+    missionName: M #10 - clean the land
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 10
+  - missionId: abe860c2-dd08-4e80-b7a7-931a4a1a8ac8
+    missionName: M #11 - save helper #1
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 11
+  - missionId: 33e052ba-10d8-4213-886a-9f5b79350132
+    missionName: M #12 - res storage
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 12
+  - missionId: 94903708-297e-45c8-9d0f-493312e2b6b6
+    missionName: M #13 - upg craft storage
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 13
+  - missionId: 03de7819-5c0c-442c-ac39-0f67af4e56d2
+    missionName: M #14 - upg player speed
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 14
+  - missionId: ccef317c-aa02-49d0-b851-9be3c3924990
+    missionName: M #15 - food storage building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 15
+  - missionId: 988f6309-3073-4415-ad50-17399aec8edc
+    missionName: M #16 - upg craft speed
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 16
+  - missionId: d749e259-0033-45ab-b291-930fda715909
+    missionName: M #17 - coconut harvest
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 17
+  - missionId: 8cc627ea-096a-45c5-87b7-f570f163a764
+    missionName: M #18 - wood gen building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 18
+  - missionId: c5d36653-8b07-4c92-ac9c-53848263490a
+    missionName: M #19 - cooking place upgrade
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 19
+  - missionId: ba96a839-da10-48dc-b53a-6fb8bb73beb3
+    missionName: M #20 - cook new food
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 20
+  - missionId: ec90485e-e843-46ff-9ea1-de5dea27605a
+    missionName: M #21 - helper #2
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 21
+  - missionId: c26df37a-5003-4ffc-afec-ae5f9af33812
+    missionName: M #22 - grass harvest
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 22
+  - missionId: baf72f22-9f52-4466-ab52-3a3b3a52b2b8
+    missionName: M #23 - rope craft building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 23
+  - missionId: 58fb3b39-78fc-484d-a1c8-92aef3b55706
+    missionName: M #24 - fishing rod recipe
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 24
+  - missionId: 9303c333-68b5-4670-ad39-d064da66e546
+    missionName: M #25 - fishing
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 25
+  - missionId: df51629a-6c96-4100-9685-3eab09dd63fd
+    missionName: M #26 - cooking place 2 building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 26
+  - missionId: d4f7a2b1-3c8e-4a6f-9b12-7e5c0a1d8f34
+    missionName: M #27 - defend the base raid
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 27
+  - missionId: a3c13abe-bb9a-4589-8bc3-f2ba9c8403b9
+    missionName: M #28 - fence building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 28
+  - missionId: 2825f3f7-2abf-4ece-bd36-f544a862a67b
+    missionName: M #29 - bridge #2
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 29
+  - missionId: c75d8655-b1b2-4e7c-a650-212012330647
+    missionName: M #30 - save the trader
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 30
+  - missionId: 2f9c5ded-ad43-4f02-9149-f062f2c23607
+    missionName: M #31 - open chest in cave
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 31
+  - missionId: 015df514-0ab2-4b71-a67c-3e683ebafe26
+    missionName: M #32 - bricks craft building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 32
+  - missionId: 950c46de-9a64-46a0-8fcc-ac3188f8f4f6
+    missionName: M #33 - craft bricks
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 33
+  - missionId: c1caa241-e059-4489-b796-cc9162c33c80
+    missionName: M #34 - upg player harvest
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 34
+  - missionId: 7442fc88-0f5f-415b-9f86-b2a614de2a1e
+    missionName: M #35 - ramp #1 build
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 35
+  - missionId: 50c93a69-fb0c-44a5-9d6e-9ffd2033da51
+    missionName: M #36 - find pumpkins
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 36
+  - missionId: 68f9c6db-1b45-4811-b211-68b6d4792db3
+    missionName: M #37 - pumpkins harvest
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 37
+  - missionId: be937be1-460b-4b2e-beb8-c7c268dba950
+    missionName: M #38 - cooking place 3 building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 38
+  - missionId: f20c95fe-fe54-4960-bf4e-b83730e418f0
+    missionName: M #39 - ramp #2 build
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 39
+  - missionId: 12384991-da16-43b8-85cb-16993759d281
+    missionName: M #40 - stone generator building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 40
+  - missionId: f88667d7-09d7-4e1e-a952-7d38adb7d54e
+    missionName: M #41 - planks craft building
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 41
+  - missionId: a0a84898-c3de-4706-b048-9fb70c512aa2
+    missionName: M #42 - defeat skeleton boss
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 42
+  - missionId: fd5dbf65-3691-4fbc-9569-5a653944f845
+    missionName: M #43 - iron harvest
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 43
+  - missionId: 927523e9-b689-49f2-a518-0b465574704d
+    missionName: M #44 - raft construction
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 44
+  - missionId: 8222c461-6f5c-4ca5-b712-7f6bcc5b3ed2
+    missionName: M #45 - leave the island
+    worldId: d89f969c-bed9-4d47-8dba-48ef683c36f2
+    worldName: First
+    order: 45
+  - missionId: 990eb02a-daf6-416b-97d9-11676fb1dff6
+    missionName: M #01 - tent building
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 1
+  - missionId: 505e1303-07cf-4ada-a704-7fd9529b93c0
+    missionName: M #02 - cooking place building
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 2
+  - missionId: 1494f9a5-debf-41ca-8e5f-5d137d91759f
+    missionName: M #03 - ramp #1 build
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 3
+  - missionId: 50f49a2a-f250-48ea-a9ab-ed57fe62f098
+    missionName: M #04 - scissors craft table building
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 4
+  - missionId: b04302d9-069f-4e15-af7a-aa1cae9109d9
+    missionName: M #05 - craft scissors
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 5
+  - missionId: 03d67f68-d0a6-4664-8b9e-3359e5c9f6fc
+    missionName: M #06 - res storage
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 6
+  - missionId: d6a4438a-65f8-4332-8d26-6ebddcff4064
+    missionName: M #07 - bridge #1
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 7
+  - missionId: 7eee44d9-609c-4dd6-a4e8-a7ba5d5c0c13
+    missionName: M #08 - bridge #2
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 8
+  - missionId: ffefd469-6663-420e-b5e8-af90ec83d1a0
+    missionName: M #09 - ramp #2 build
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 9
+  - missionId: 8111f12b-f1e0-4ada-89bf-ca46df74bab4
+    missionName: M #10 - ramp #3 build
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 10
+  - missionId: 767239e7-07e7-460d-92b4-54a9f7091d3e
+    missionName: M #11 - bridge #3
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 11
+  - missionId: 4774a91d-ecc0-479f-b04f-0782f49fe3af
+    missionName: M #12 - ramp #4 build
+    worldId: 76840b51-f550-442e-a66f-3759aaf770ba
+    worldName: Second
+    order: 12

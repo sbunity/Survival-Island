@@ -44,7 +44,8 @@ namespace Watermelon
             {
                 Resolve();
 
-                return;
+                if (HasGame)
+                    return;
             }
 
             var picked = database.GetRandom();
@@ -170,6 +171,9 @@ namespace Watermelon
             }
 
             stakeRule = MinigameStakeRuleFactory.Create(definition, save.MinigameSeed, new Resource(save.MinigameStakeCurrency, save.MinigameStakeAmount), save.MinigameReward);
+
+            if (stakeRule != null && !ResourceUnlocks.AreAllUnlocked(stakeRule.Prize))
+                Clear();
         }
     }
 }

@@ -10,5 +10,7 @@ namespace Watermelon
 
         [SerializeField] Resource[] receive;
         public Resource[] Receive => receive;
+
+        public bool IsUnlocked => ResourceUnlocks.AreAllUnlocked(give) && ResourceUnlocks.AreAllUnlocked(receive);
     }
 }

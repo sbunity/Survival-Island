@@ -43,17 +43,21 @@ namespace Watermelon
         [BoxGroup("Sudoku Reward")]
         [SerializeField, Min(1)] int rewardAmountStep = 5;
 
+        private CurrencyType[] RewardPool => rewardPool.IsNullOrEmpty() ? symbolPool : rewardPool;
+
+        public override bool IsAvailable()
+        {
+            return IsRewardPoolAvailable(RewardPool);
+        }
+
         public override Resource[] RollReward(int seed)
         {
-            var pool = rewardPool.IsNullOrEmpty() ? symbolPool : rewardPool;
-
-            if (pool.IsNullOrEmpty())
+            if (!ResourceUnlocks.TryPickUnlocked(RewardPool, out CurrencyType currency))
                 return base.RollReward(seed);
 
             var difficulty = MinigameDifficultyPicker.Pick(difficulties, seed);
             var multiplier = difficulty != null ? difficulty.RewardMultiplier : 1f;
 
-            var currency = pool[Random.Range(0, pool.Length)];
             var amount = Mathf.RoundToInt(rewardAmountRange.Random() * multiplier);
 
             return new[] { new Resource(currency, SnapAmount(amount, rewardAmountStep)) };

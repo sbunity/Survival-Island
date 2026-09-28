@@ -1,15 +1,11 @@
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace Watermelon
 {
     [CustomPropertyDrawer(typeof(MissionPickerAttribute))]
     public class MissionPickerPropertyDrawer : PropertyDrawer
     {
-        private MissionsHolder missionsHolder;
-        private Mission[] missions;
-        private GUIContent[] displayedOptions;
-
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             if (property.propertyType != SerializedPropertyType.String)
@@ -19,43 +15,38 @@ namespace Watermelon
                 return;
             }
 
-            if (missionsHolder == null)
+            string[] ids = MissionPickerSource.Ids;
+            GUIContent[] options = MissionPickerSource.Options;
+
+            if (ids.Length <= 1)
             {
-                missionsHolder = GameObject.FindFirstObjectByType<MissionsHolder>();
-                if(missionsHolder != null)
-                {
-                    missions = missionsHolder.GetComponentsInChildren<Mission>();
-                    displayedOptions = new GUIContent[missions.Length];
+                EditorGUI.HelpBox(position, "Missions can't be found, rebuild the catalog: Tools/Missions/Rebuild Missions Catalog", MessageType.Warning);
 
-                    for(int i = 0; i < missions.Length; i++)
-                    {
-                        displayedOptions[i] = new GUIContent(missions[i].name);
-                    }
-                }
-                else
-                {
-                    EditorGUI.HelpBox(position, "MissionsHolder can't be found!", MessageType.Error);
-
-                    return;
-                }
+                return;
             }
 
             EditorGUI.BeginProperty(position, label, property);
 
-            if (missions.Length > 0)
-            {
-                int selectedMission = System.Array.FindIndex(missions, x => x.ID == property.stringValue);
+            int selectedIndex = System.Array.IndexOf(ids, property.stringValue);
 
-                int tempIndex = EditorGUI.Popup(position, label, selectedMission, displayedOptions);
-                if (selectedMission != tempIndex)
-                {
-                    property.stringValue = missions[tempIndex].ID;
-                }
-            }
-            else
+            if (selectedIndex < 0)
             {
-                EditorGUI.HelpBox(position, "Missions can't be found on the scene!", MessageType.Error);
+                GUIContent[] extendedOptions = new GUIContent[options.Length + 1];
+                System.Array.Copy(options, extendedOptions, options.Length);
+                extendedOptions[options.Length] = new GUIContent(string.Format("Missing ({0})", property.stringValue));
+
+                options = extendedOptions;
+                selectedIndex = options.Length - 1;
             }
+
+            bool hasLabel = label != null && (!string.IsNullOrEmpty(label.text) || label.image != null);
+
+            int newIndex = hasLabel
+                ? EditorGUI.Popup(position, label, selectedIndex, options)
+                : EditorGUI.Popup(position, selectedIndex, options);
+
+            if (newIndex != selectedIndex && newIndex >= 0 && newIndex < ids.Length)
+                property.stringValue = ids[newIndex];
 
             EditorGUI.EndProperty();
         }

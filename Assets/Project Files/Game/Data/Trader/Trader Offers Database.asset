@@ -87,3 +87,55 @@ MonoBehaviour:
       amount: 6
   minOffersPerVisit: 3
   maxOffersPerVisit: 4
+  unlockRules:
+  - currency: 0
+    mode: 0
+    missionId: 
+  - currency: 1
+    mode: 0
+    missionId: 
+  - currency: 2
+    mode: 0
+    missionId: 
+  - currency: 3
+    mode: 0
+    missionId: c26df37a-5003-4ffc-afec-ae5f9af33812
+  - currency: 100
+    mode: 0
+    missionId: 2cd4e8db-90fa-49f5-a7c3-ddbc512a18d1
+  - currency: 50
+    mode: 1
+    missionId: f88667d7-09d7-4e1e-a952-7d38adb7d54e
+  - currency: 51
+    mode: 1
+    missionId: 015df514-0ab2-4b71-a67c-3e683ebafe26
+  - currency: 52
+    mode: 1
+    missionId: baf72f22-9f52-4466-ab52-3a3b3a52b2b8
+  - currency: 101
+    mode: 1
+    missionId: d749e259-0033-45ab-b291-930fda715909
+  - currency: 102
+    mode: 1
+    missionId: 68f9c6db-1b45-4811-b211-68b6d4792db3
+  - currency: 103
+    mode: 1
+    missionId: 9303c333-68b5-4670-ad39-d064da66e546
+  - currency: 150
+    mode: 2
+    missionId: 69925f56-c9f5-4bd0-98c9-c260eca64738
+  - currency: 151
+    mode: 2
+    missionId: c5d36653-8b07-4c92-ac9c-53848263490a
+  - currency: 152
+    mode: 2
+    missionId: df51629a-6c96-4100-9685-3eab09dd63fd
+  - currency: 153
+    mode: 2
+    missionId: be937be1-460b-4b2e-beb8-c7c268dba950
+  - currency: 500
+    mode: 2
+    missionId: 
+  - currency: 4
+    mode: 2
+    missionId: fd5dbf65-3691-4fbc-9569-5a653944f845

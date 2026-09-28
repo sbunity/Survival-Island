@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 33e052ba-10d8-4213-886a-9f5b79350132
+  id: 03d67f68-d0a6-4664-8b9e-3359e5c9f6fc
   title: Construct storage
   rewardType: 0
   resourceReward:
@@ -26757,7 +26757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2825f3f7-2abf-4ece-bd36-f544a862a67b
+  id: d6a4438a-65f8-4332-8d26-6ebddcff4064
   title: Build the bridge
   rewardType: 0
   resourceReward:
@@ -47391,7 +47391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 69925f56-c9f5-4bd0-98c9-c260eca64738
+  id: 505e1303-07cf-4ada-a704-7fd9529b93c0
   title: Build Cooking Place
   rewardType: 0
   resourceReward:
@@ -57246,7 +57246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: bfb5ea19-371c-4684-8553-4ea61e501344
+  id: 990eb02a-daf6-416b-97d9-11676fb1dff6
   title: Build the tent
   rewardType: 0
   resourceReward:
@@ -78679,7 +78679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4741a408d3b4b3842906f9ff091e494b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 352b09c3-e3d2-4686-9c1b-4eefe52d57d6
+  id: b04302d9-069f-4e15-af7a-aa1cae9109d9
   title: Craft scissors
   rewardType: 0
   resourceReward:
@@ -86400,7 +86400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: df257601-b51e-4a99-8558-1b6a5156d0c8
+  id: 50f49a2a-f250-48ea-a9ab-ed57fe62f098
   title: Build Scissors Craft Table
   rewardType: 0
   resourceReward:
@@ -97190,7 +97190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b644b9400beb4a64daaea31434d5e440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 7442fc88-0f5f-415b-9f86-b2a614de2a1e
+  id: 1494f9a5-debf-41ca-8e5f-5d137d91759f
   title: Build the ramp
   rewardType: 0
   resourceReward:

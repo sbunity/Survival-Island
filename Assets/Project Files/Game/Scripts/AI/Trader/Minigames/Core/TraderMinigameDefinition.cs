@@ -55,6 +55,13 @@ namespace Watermelon
 
         public abstract MinigameView CreateView(Transform parent);
 
+        public virtual bool IsAvailable()
+        {
+            return stakeType == MinigameStakeType.Wager
+                ? ResourceUnlocks.HasAnyUnlocked(stakeCurrencies)
+                : ResourceUnlocks.AreAllUnlocked(reward);
+        }
+
         public virtual Resource[] RollReward(int seed)
         {
             return reward;
@@ -70,20 +77,32 @@ namespace Watermelon
             if (stakeType != MinigameStakeType.Wager || stakeCurrencies.IsNullOrEmpty())
                 return default;
 
+            var available = new List<CurrencyType>();
+
+            if (ResourceUnlocks.FilterUnlocked(stakeCurrencies, available) == 0)
+                return default;
+
             var minAmount = Mathf.Min(stakeAmountRange.firstValue, stakeAmountRange.secondValue);
 
             var affordable = new List<CurrencyType>();
-            for (var i = 0; i < stakeCurrencies.Length; i++)
+            for (var i = 0; i < available.Count; i++)
             {
-                if (CurrencyController.HasAmount(stakeCurrencies[i], minAmount))
-                    affordable.Add(stakeCurrencies[i]);
+                if (CurrencyController.HasAmount(available[i], minAmount))
+                    affordable.Add(available[i]);
             }
 
             var currency = affordable.Count > 0
                 ? affordable[Random.Range(0, affordable.Count)]
-                : stakeCurrencies[Random.Range(0, stakeCurrencies.Length)];
+                : available[Random.Range(0, available.Count)];
 
             return new Resource(currency, SnapAmount(stakeAmountRange.Random(), stakeAmountStep));
+        }
+
+        protected bool IsRewardPoolAvailable(CurrencyType[] pool)
+        {
+            return pool.IsNullOrEmpty()
+                ? ResourceUnlocks.AreAllUnlocked(reward)
+                : ResourceUnlocks.HasAnyUnlocked(pool);
         }
 
         protected static int SnapAmount(int amount, int step)
