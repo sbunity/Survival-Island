@@ -62,6 +62,7 @@ MonoBehaviour:
   tapSound: {fileID: 8300000, guid: 43778771ca132fe44baa768ab4be8bc2, type: 3}
   winSound: {fileID: 8300000, guid: d3985b0189041494da3163bc98b899c9, type: 3}
   loseSound: {fileID: 8300000, guid: 5ec892ad6cd89da4e8fd8a8f0e4de84f, type: 3}
+  dropSound: {fileID: 8300000, guid: 6af939db648aefe4dae3791feb644bb0, type: 3}
   swapSound: {fileID: 8300000, guid: b6a7b7918206e0541a29e3ca529b2c05, type: 3}
   swapPitchClamp:
     firstValue: 0.7

@@ -30,6 +30,8 @@ namespace Watermelon
         [SerializeField] AudioClip loseSound;
 
         [BoxGroup("Audio")]
+        [SerializeField] AudioClip dropSound;
+        [BoxGroup("Audio")]
         [SerializeField] AudioClip swapSound;
         [BoxGroup("Audio")]
         [SerializeField] DuoFloat swapPitchClamp = new(0.7f, 1.7f);
@@ -145,6 +147,8 @@ namespace Watermelon
         {
             table.HidePrize();
             table.DropAll();
+
+            PlaySoundDelayed(dropSound, table.LiftDuration);
 
             Schedule(table.LiftDuration + shuffleDelay, StartShuffle);
         }
