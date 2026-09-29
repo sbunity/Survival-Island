@@ -18,7 +18,7 @@ MonoBehaviour:
   description: Find the shell that still hides the prize
   background: {fileID: 0}
   stage: 2
-  weight: 1
+  weight: 0
   stakeType: 1
   reward: []
   stakeCurrencies: 0100000002000000030000006400000065000000

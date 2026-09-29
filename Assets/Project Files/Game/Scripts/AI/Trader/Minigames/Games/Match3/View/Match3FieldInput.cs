@@ -12,6 +12,8 @@ namespace Watermelon
 
         public event SimpleCallback Interacted;
 
+        public event SimpleCallback Selected;
+
         public bool IsEnabled { get; set; }
 
         private bool isPressed;
@@ -122,6 +124,8 @@ namespace Watermelon
             selectedCell = cell;
 
             field.SetSelected(cell);
+
+            Selected?.Invoke();
         }
 
         private void ClearSelection()

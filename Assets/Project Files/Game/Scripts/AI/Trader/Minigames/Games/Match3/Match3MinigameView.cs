@@ -21,6 +21,24 @@ namespace Watermelon
         [BoxGroup("Timing")]
         [SerializeField, Min(0f)] float shuffleDelay = 0.5f;
 
+        [BoxGroup("Audio", "Audio")]
+        [SerializeField] AudioClip selectSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip swapSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip invalidSwapSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip shuffleSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip matchSound;
+        [BoxGroup("Audio")]
+        [SerializeField] DuoFloat matchPitchRange = new(1f, 1.6f);
+        [BoxGroup("Audio")]
+        [SerializeField, Min(1)] int matchPitchSteps = 5;
+
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip objectiveSound;
+
         private Match3Settings settings;
         private Match3Board board;
         private Match3Objective objective;
@@ -30,6 +48,7 @@ namespace Watermelon
         private bool isBusy;
 
         private float idleTime;
+        private int cascadeStep;
         private readonly List<Match3Move> moveBuffer = new List<Match3Move>();
 
         private TweenCase finishCase;
@@ -101,6 +120,7 @@ namespace Watermelon
             input.ResetState();
             input.SwapRequested += OnSwapRequested;
             input.Interacted += OnPlayerInteracted;
+            input.Selected += OnTileSelected;
             input.IsEnabled = true;
 
             isBusy = false;
@@ -118,6 +138,7 @@ namespace Watermelon
             {
                 input.SwapRequested -= OnSwapRequested;
                 input.Interacted -= OnPlayerInteracted;
+                input.Selected -= OnTileSelected;
             }
 
             if (field != null)
@@ -195,6 +216,19 @@ namespace Watermelon
             HideHint();
         }
 
+        private void OnTileSelected()
+        {
+            PlaySound(selectSound);
+        }
+
+        private static void PlaySound(AudioClip clip, float pitch = 1f)
+        {
+            if (clip == null)
+                return;
+
+            AudioController.PlaySound(clip, 1f, pitch);
+        }
+
         private void OnSwapRequested(Vector2Int from, Vector2Int to)
         {
             if (!IsRunning || isBusy)
@@ -202,10 +236,16 @@ namespace Watermelon
 
             var resolution = board.Swap(from, to);
 
+            cascadeStep = 0;
+
+            PlaySound(swapSound);
+
             Lock();
 
             if (!resolution.IsValid)
             {
+                PlaySound(invalidSwapSound);
+
                 field.PlayInvalidSwap(from, to, Unlock);
 
                 return;
@@ -219,12 +259,23 @@ namespace Watermelon
 
         private void OnStepResolved(Match3Step step)
         {
+            if (step.Cleared.Count > 0)
+            {
+                PlaySound(matchSound, matchPitchRange.Lerp(Mathf.Clamp01((float)cascadeStep / matchPitchSteps)));
+
+                cascadeStep++;
+            }
+
             var previous = objective.Collected;
 
             objective.Report(step.Cleared);
 
             if (objective.Collected != previous)
+            {
                 hud.SetProgress(objective.Collected, objective.Required);
+
+                PlaySound(objectiveSound);
+            }
         }
 
         private void OnResolutionFinished()
@@ -265,6 +316,8 @@ namespace Watermelon
 
                 if (!board.Shuffle())
                     Debug.LogWarning("[Match3]: the tile mix cannot be arranged into a playable board.", this);
+
+                PlaySound(shuffleSound);
 
                 field.PlayShuffle(board, Unlock);
             });

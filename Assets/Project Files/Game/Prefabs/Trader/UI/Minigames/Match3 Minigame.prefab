@@ -59,6 +59,16 @@ MonoBehaviour:
   finishDelay: 0.35
   hintDelay: 4
   shuffleDelay: 0.5
+  selectSound: {fileID: 8300000, guid: 43778771ca132fe44baa768ab4be8bc2, type: 3}
+  swapSound: {fileID: 8300000, guid: b6a7b7918206e0541a29e3ca529b2c05, type: 3}
+  invalidSwapSound: {fileID: 8300000, guid: 5ec892ad6cd89da4e8fd8a8f0e4de84f, type: 3}
+  shuffleSound: {fileID: 8300000, guid: fe3494b152ea5574282d24fdd561b115, type: 3}
+  matchSound: {fileID: 8300000, guid: 3dbd24b5d7b3fbd4bb3ea636183fe178, type: 3}
+  matchPitchRange:
+    firstValue: 1
+    secondValue: 1.6
+  matchPitchSteps: 5
+  objectiveSound: {fileID: 8300000, guid: d3985b0189041494da3163bc98b899c9, type: 3}
 --- !u!114 &5526586702003048521
 MonoBehaviour:
   m_ObjectHideFlags: 0
