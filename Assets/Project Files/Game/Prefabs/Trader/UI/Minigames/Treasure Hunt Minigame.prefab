@@ -58,6 +58,12 @@ MonoBehaviour:
   winDelay: 1
   revealDelay: 0.6
   loseDelay: 1.2
+  digSound: {fileID: 8300000, guid: 1008ae36777e6954fb50092d3f34b498, type: 3}
+  digPitchRange:
+    firstValue: 1.3
+    secondValue: 0.8
+  rejectSound: {fileID: 8300000, guid: 6af939db648aefe4dae3791feb644bb0, type: 3}
+  treasureSound: {fileID: 8300000, guid: d3985b0189041494da3163bc98b899c9, type: 3}
 --- !u!114 &5752879708772395648
 MonoBehaviour:
   m_ObjectHideFlags: 0

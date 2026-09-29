@@ -18,7 +18,7 @@ MonoBehaviour:
   description: Collect the requested resource in rows of three
   background: {fileID: 0}
   stage: 1
-  weight: 0
+  weight: 1
   stakeType: 0
   reward: []
   stakeCurrencies: 

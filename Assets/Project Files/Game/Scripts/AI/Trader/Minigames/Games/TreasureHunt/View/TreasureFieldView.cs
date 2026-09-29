@@ -55,6 +55,8 @@ namespace Watermelon
 
         public float SpawnDuration => spawnDuration + spawnStagger * Mathf.Max(0, CellCount - 1);
 
+        public float DigDuration => digDuration;
+
         public int CellCount => columns * rows;
 
         private TreasureHuntSettings settings;

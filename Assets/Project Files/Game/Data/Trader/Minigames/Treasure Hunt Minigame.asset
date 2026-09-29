@@ -18,7 +18,7 @@ MonoBehaviour:
   description: 'Dig the sand and listen: cold, warm or hot'
   background: {fileID: 0}
   stage: 1
-  weight: 0
+  weight: 1
   stakeType: 0
   reward: []
   stakeCurrencies: 

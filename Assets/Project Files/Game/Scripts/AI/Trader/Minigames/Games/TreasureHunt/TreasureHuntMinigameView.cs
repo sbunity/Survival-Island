@@ -19,6 +19,16 @@ namespace Watermelon
         [BoxGroup("Timing")]
         [SerializeField, Min(0f)] float loseDelay = 1.2f;
 
+        [BoxGroup("Audio", "Audio")]
+        [SerializeField] AudioClip digSound;
+
+        [BoxGroup("Audio")]
+        [SerializeField] DuoFloat digPitchRange = new(1.3f, 0.8f);
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip rejectSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip treasureSound;
+
         private TreasureHuntSettings settings;
         private TreasureHuntDifficulty difficulty;
 
@@ -28,6 +38,7 @@ namespace Watermelon
         private TreasureHintResolver resolver;
 
         private TweenCase stepCase;
+        private TweenCase audioCase;
 
         public void Configure(TreasureHuntSettings settings)
         {
@@ -110,6 +121,7 @@ namespace Watermelon
         protected override void OnStop()
         {
             stepCase.KillActive();
+            audioCase.KillActive();
 
             if (field == null)
                 return;
@@ -133,6 +145,8 @@ namespace Watermelon
             {
                 field.PlayReject(cell);
 
+                PlaySound(rejectSound);
+
                 return;
             }
 
@@ -143,12 +157,16 @@ namespace Watermelon
 
             field.PlayDig(cell, GetBandColor(hint.BandIndex));
 
+            PlaySound(digSound, GetDigPitch(hint.BandIndex));
+
             hud.SetDigsLeft(board.DigsLeft);
 
             if (board.IsFound)
             {
                 field.IsInputEnabled = false;
                 field.ShowPrize(cell);
+
+                PlaySoundDelayed(treasureSound, field.DigDuration);
 
                 hud.ShowFound();
 
@@ -172,6 +190,8 @@ namespace Watermelon
             field.PlayDig(board.Treasure, GetBandColor(0));
             field.ShowPrize(board.Treasure);
 
+            PlaySound(digSound, GetDigPitch(0));
+
             hud.ShowOutOfDigs();
 
             Schedule(loseDelay, () => FinishGame(false));
@@ -190,6 +210,33 @@ namespace Watermelon
             var band = GetBand(index);
 
             return band != null ? band.Color : Color.white;
+        }
+
+        private float GetDigPitch(int bandIndex)
+        {
+            var count = bands != null ? bands.Length : 0;
+
+            if (count <= 1 || bandIndex < 0)
+                return digPitchRange.firstValue;
+
+            return digPitchRange.Lerp(Mathf.Clamp01((float)bandIndex / (count - 1)));
+        }
+
+        private static void PlaySound(AudioClip clip, float pitch = 1f)
+        {
+            if (clip == null)
+                return;
+
+            AudioController.PlaySound(clip, 1f, pitch);
+        }
+
+        private void PlaySoundDelayed(AudioClip clip, float delay)
+        {
+            if (clip == null)
+                return;
+
+            audioCase.KillActive();
+            audioCase = Tween.DelayedCall(delay, () => AudioController.PlaySound(clip));
         }
 
         private void Schedule(float delay, SimpleCallback callback)
@@ -211,6 +258,7 @@ namespace Watermelon
         protected override void OnDestroy()
         {
             stepCase.KillActive();
+            audioCase.KillActive();
 
             base.OnDestroy();
         }
