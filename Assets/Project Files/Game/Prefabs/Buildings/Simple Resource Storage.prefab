@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a2d5756ac96be4eb44a10475b86bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceCanvas: {fileID: 5803778248563427550}
+  resourceCanvas: {fileID: 0}
   resourceTakingPoint: {fileID: 7443099732530277580}
   resourceGivingPoint: {fileID: 5455009645735352857}
+  customFlyingResourceAnimation: {fileID: 0}
 --- !u!1 &3787930547945113425
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,10 +102,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 7745369502488109410}
   background: {fileID: 0}
-  lockedPanel: {fileID: 0}
+  canvasHideDistance: 6
   resourceIndicatorPrefab: {fileID: 8642050798657312374, guid: e3426ad2d5567694691a3f712b2e4a08,
     type: 3}
   indicatorsContainer: {fileID: 3493916669088343518}
+  emptyStorageIndicator: {fileID: 0}
+  emptyStorageText: {fileID: 0}
 --- !u!223 &7745369502488109410
 Canvas:
   m_ObjectHideFlags: 0
@@ -202,6 +205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carrierType: 1
   cooldown: 0.1
+  rangePadding: 1
+  overrideResourceSpawnPoint: 0
+  resourceSpawnPoint: {fileID: 0}
 --- !u!114 &7443099732530277580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +222,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carrierType: 2
   cooldown: 0.1
+  rangePadding: 1
+  overrideResourceDestination: 0
+  resourceDestinationPoint: {fileID: 0}
 --- !u!135 &7649465517471342930
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -231,7 +240,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

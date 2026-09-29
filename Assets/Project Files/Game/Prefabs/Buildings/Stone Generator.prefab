@@ -1165,11 +1165,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 410092388864386377, guid: 732aba55c7e190a448b2d629f2a84966,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 2.41
-      objectReference: {fileID: 0}
     - target: {fileID: 697348096893432208, guid: 732aba55c7e190a448b2d629f2a84966,
         type: 3}
       propertyPath: m_Name
@@ -1250,31 +1245,6 @@ PrefabInstance:
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
       value: 1801810542
       objectReference: {fileID: 0}
-    - target: {fileID: 4562385058734072837, guid: 732aba55c7e190a448b2d629f2a84966,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562385058734072837, guid: 732aba55c7e190a448b2d629f2a84966,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562385058734072837, guid: 732aba55c7e190a448b2d629f2a84966,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4562385058734072837, guid: 732aba55c7e190a448b2d629f2a84966,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4567359558912953284, guid: 732aba55c7e190a448b2d629f2a84966,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4762193452919339843, guid: 732aba55c7e190a448b2d629f2a84966,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1340,16 +1310,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6452829010347992175, guid: 732aba55c7e190a448b2d629f2a84966,
-        type: 3}
-      propertyPath: m_Radius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452829010347992175, guid: 732aba55c7e190a448b2d629f2a84966,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8751717760114643035, guid: 732aba55c7e190a448b2d629f2a84966,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1362,9 +1322,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1820937975238826525, guid: 732aba55c7e190a448b2d629f2a84966, type: 3}
+    - {fileID: 6452829010347992175, guid: 732aba55c7e190a448b2d629f2a84966, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 273460728326405862, guid: 732aba55c7e190a448b2d629f2a84966,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7899237098417231316}
   m_SourcePrefab: {fileID: 100100000, guid: 732aba55c7e190a448b2d629f2a84966, type: 3}
 --- !u!4 &1089169814365336530 stripped
 Transform:
@@ -1384,6 +1349,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c81d4f5a071dcb42b2489fd4ba115d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4956724112809955389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 273460728326405862, guid: 732aba55c7e190a448b2d629f2a84966,
+    type: 3}
+  m_PrefabInstance: {fileID: 5116745881391771355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7899237098417231316
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4956724112809955389}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.8, y: 3, z: 3.8}
+  m_Center: {x: 1.81, y: 1, z: -0.06}
 --- !u!114 &6962476846575945622 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2854713206872877389, guid: 732aba55c7e190a448b2d629f2a84966,

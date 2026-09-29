@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carrierType: 3
   cooldown: 0.1
+  rangePadding: 1
   overrideResourceDestination: 1
   resourceDestinationPoint: {fileID: 776089498011951274}
 --- !u!65 &966408042377039909
@@ -69,8 +70,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 1, z: 1.8}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.9, y: 3, z: 3.8}
+  m_Center: {x: -0.21899998, y: 1, z: 0}
 --- !u!1 &1788614864420773566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,8 +1614,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 2, z: 1.8}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.9, y: 3, z: 3.8}
+  m_Center: {x: -0.15000004, y: 1, z: 0}
 --- !u!4 &8188343074414484022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5197109337073278217, guid: 732aba55c7e190a448b2d629f2a84966,
