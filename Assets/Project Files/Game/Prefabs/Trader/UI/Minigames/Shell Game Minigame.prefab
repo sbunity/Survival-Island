@@ -59,6 +59,15 @@ MonoBehaviour:
   shuffleDelay: 0.4
   missHold: 0.7
   finishDelay: 0.9
+  tapSound: {fileID: 8300000, guid: 43778771ca132fe44baa768ab4be8bc2, type: 3}
+  winSound: {fileID: 8300000, guid: d3985b0189041494da3163bc98b899c9, type: 3}
+  loseSound: {fileID: 8300000, guid: 5ec892ad6cd89da4e8fd8a8f0e4de84f, type: 3}
+  swapSound: {fileID: 8300000, guid: b6a7b7918206e0541a29e3ca529b2c05, type: 3}
+  swapPitchClamp:
+    firstValue: 0.7
+    secondValue: 1.7
+  swapPitchVariation: 0.06
+  swapVolume: 0.85
 --- !u!114 &8921852868274606913
 MonoBehaviour:
   m_ObjectHideFlags: 0

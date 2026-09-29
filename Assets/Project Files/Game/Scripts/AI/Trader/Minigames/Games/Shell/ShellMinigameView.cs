@@ -22,6 +22,22 @@ namespace Watermelon
         [BoxGroup("Timing")]
         [SerializeField, Min(0f)] float finishDelay = 0.9f;
 
+        [BoxGroup("Audio", "Audio")]
+        [SerializeField] AudioClip tapSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip winSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip loseSound;
+
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip swapSound;
+        [BoxGroup("Audio")]
+        [SerializeField] DuoFloat swapPitchClamp = new(0.7f, 1.7f);
+        [BoxGroup("Audio")]
+        [SerializeField, Range(0f, 0.3f)] float swapPitchVariation = 0.06f;
+        [BoxGroup("Audio")]
+        [SerializeField, Range(0f, 1f)] float swapVolume = 0.85f;
+
         private ShellSettings settings;
         private ShellDifficulty difficulty;
 
@@ -30,6 +46,7 @@ namespace Watermelon
         private int swapIndex;
 
         private TweenCase stepCase;
+        private TweenCase audioCase;
 
         public void Configure(ShellSettings settings)
         {
@@ -104,6 +121,7 @@ namespace Watermelon
         protected override void OnStop()
         {
             stepCase.KillActive();
+            audioCase.KillActive();
 
             if (table == null)
                 return;
@@ -152,6 +170,8 @@ namespace Watermelon
             board.Apply(swap);
             table.PlaySwap(swap, difficulty.SwapDuration);
 
+            PlaySwapSound(difficulty.SwapDuration);
+
             Schedule(difficulty.SwapDuration + difficulty.SwapInterval, PlayNextSwap);
         }
 
@@ -169,6 +189,8 @@ namespace Watermelon
 
             table.IsInputEnabled = false;
 
+            PlaySound(tapSound);
+
             var isWin = board.IsPrize(shell.Slot);
 
             hud.SetPhase(isWin ? ShellPhase.Won : ShellPhase.Lost);
@@ -179,10 +201,14 @@ namespace Watermelon
             {
                 table.ShowPrize(board.PrizeSlot);
 
+                PlaySoundDelayed(winSound, table.LiftDuration);
+
                 Schedule(table.LiftDuration + finishDelay, () => FinishGame(true));
 
                 return;
             }
+
+            PlaySoundDelayed(loseSound, table.LiftDuration);
 
             Schedule(table.LiftDuration + missHold, ShowMissedShell);
         }
@@ -192,7 +218,39 @@ namespace Watermelon
             table.Lift(board.PrizeSlot);
             table.ShowPrize(board.PrizeSlot);
 
+            PlaySoundDelayed(loseSound, table.LiftDuration);
+
             Schedule(table.LiftDuration + finishDelay, () => FinishGame(false));
+        }
+
+        private void PlaySwapSound(float duration)
+        {
+            if (swapSound == null)
+                return;
+
+            var pitch = swapPitchClamp.Clamp(swapSound.length / Mathf.Max(0.01f, duration));
+
+            if (swapPitchVariation > 0f)
+                pitch *= 1f + Random.Range(-swapPitchVariation, swapPitchVariation);
+
+            AudioController.PlaySound(swapSound, swapVolume, pitch);
+        }
+
+        private static void PlaySound(AudioClip clip)
+        {
+            if (clip == null)
+                return;
+
+            AudioController.PlaySound(clip);
+        }
+
+        private void PlaySoundDelayed(AudioClip clip, float delay)
+        {
+            if (clip == null)
+                return;
+
+            audioCase.KillActive();
+            audioCase = Tween.DelayedCall(delay, () => AudioController.PlaySound(clip));
         }
 
         private void Schedule(float delay, SimpleCallback callback)
@@ -214,6 +272,7 @@ namespace Watermelon
         protected override void OnDestroy()
         {
             stepCase.KillActive();
+            audioCase.KillActive();
 
             base.OnDestroy();
         }
