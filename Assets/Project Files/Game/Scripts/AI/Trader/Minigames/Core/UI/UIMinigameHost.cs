@@ -78,6 +78,11 @@ namespace Watermelon
         [BoxGroup("Captions")]
         [SerializeField] string loseButtonCaption = "Good luck next time";
 
+        [BoxGroup("Audio", "Audio")]
+        [SerializeField, Range(0f, 1f)] float musicDuckVolume = 0.6f;
+        [BoxGroup("Audio")]
+        [SerializeField, Min(0.01f)] float musicDuckDuration = 0.3f;
+
         private TraderMinigameDefinition definition;
         private IMinigameStakeRule stakeRule;
         private MinigameContext context;
@@ -93,6 +98,8 @@ namespace Watermelon
 
         private TweenCase resultFadeCase;
         private TweenCase resultPanelCase;
+
+        private MusicSource duckedMusicSource;
 
         public override void Init()
         {
@@ -133,6 +140,8 @@ namespace Watermelon
 
             SpawnView();
 
+            DuckMusic();
+
             NotifyOpened();
         }
 
@@ -141,6 +150,8 @@ namespace Watermelon
             SettleIfNeeded(MinigameResult.Abandoned);
 
             introSequence.Stop();
+
+            RestoreMusic();
 
             resultFadeCase.KillActive();
             resultPanelCase.KillActive();
@@ -163,12 +174,36 @@ namespace Watermelon
         {
             introSequence.Stop();
 
+            RestoreMusic();
+
             StopView();
             SettleIfNeeded(MinigameResult.Abandoned);
             ClearView();
 
             closedCallback = null;
             settledCallback = null;
+        }
+
+        private void DuckMusic()
+        {
+            MusicSource musicSource = MusicSource.ActiveMusicSource;
+
+            if (musicSource == null)
+                return;
+
+            duckedMusicSource = musicSource;
+            duckedMusicSource.Fade(musicDuckVolume, musicDuckDuration);
+        }
+
+        private void RestoreMusic()
+        {
+            if (duckedMusicSource == null)
+                return;
+
+            if (duckedMusicSource.IsActive())
+                duckedMusicSource.Fade(1f, musicDuckDuration);
+
+            duckedMusicSource = null;
         }
 
         private bool IsWager => stakeRule != null && stakeRule.Type == MinigameStakeType.Wager && stakeRule.Stake.amount > 0;
@@ -355,7 +390,7 @@ namespace Watermelon
 
             PlayResultAppearance();
 
-            AudioController.PlaySound(AudioController.GetClip(result.IsWin ? "reward" : "button_sound"), 0.7f);
+            AudioController.PlaySound(AudioController.GetClip(result.IsWin ? "reward" : "player_death_sound"), 0.7f);
         }
 
         private void PlayResultAppearance()
