@@ -60,6 +60,10 @@ MonoBehaviour:
   hudIntro: {fileID: 1000008888888888888}
   paletteIntro: {fileID: 1000039999999999996}
   finishDelay: 0.45
+  selectSound: {fileID: 8300000, guid: 43778771ca132fe44baa768ab4be8bc2, type: 3}
+  rejectSound: {fileID: 8300000, guid: 6af939db648aefe4dae3791feb644bb0, type: 3}
+  placeSound: {fileID: 8300000, guid: 3dbd24b5d7b3fbd4bb3ea636183fe178, type: 3}
+  mistakeSound: {fileID: 8300000, guid: 5ec892ad6cd89da4e8fd8a8f0e4de84f, type: 3}
 --- !u!114 &9102144005636552162
 MonoBehaviour:
   m_ObjectHideFlags: 0

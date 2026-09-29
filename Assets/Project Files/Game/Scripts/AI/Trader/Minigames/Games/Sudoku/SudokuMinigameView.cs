@@ -19,6 +19,15 @@ namespace Watermelon
         [BoxGroup("Timing", "Timing")]
         [SerializeField, Min(0f)] float finishDelay = 0.45f;
 
+        [BoxGroup("Audio", "Audio")]
+        [SerializeField] AudioClip selectSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip rejectSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip placeSound;
+        [BoxGroup("Audio")]
+        [SerializeField] AudioClip mistakeSound;
+
         private SudokuSettings settings;
         private SudokuDifficulty difficulty;
         private SudokuBoard board;
@@ -193,7 +202,7 @@ namespace Watermelon
 
             if (!board.IsEmpty(cell))
             {
-                field.PlayReject(cell);
+                PlayReject(cell);
 
                 return;
             }
@@ -225,6 +234,8 @@ namespace Watermelon
 
             palette.Toggle(symbol);
             field.SetHighlightedSymbol(palette.SelectedSymbol);
+
+            PlaySound(selectSound);
         }
 
         private void SelectCell(Vector2Int cell)
@@ -233,6 +244,15 @@ namespace Watermelon
             selectedCell = cell;
 
             field.SetSelectedCell(cell);
+
+            PlaySound(selectSound);
+        }
+
+        private void PlayReject(Vector2Int cell)
+        {
+            field.PlayReject(cell);
+
+            PlaySound(rejectSound);
         }
 
         private void ClearCellSelection()
@@ -250,7 +270,7 @@ namespace Watermelon
             switch (board.Place(cell, symbol))
             {
                 case SudokuPlacement.Rejected:
-                    field.PlayReject(cell);
+                    PlayReject(cell);
                     return;
 
                 case SudokuPlacement.Correct:
@@ -267,6 +287,8 @@ namespace Watermelon
         {
             field.PlayPlace(cell, symbol);
 
+            PlaySound(placeSound);
+
             palette.SetRemaining(symbol, board.CountRemaining(symbol));
             field.SetHighlightedSymbol(palette.SelectedSymbol);
 
@@ -276,6 +298,8 @@ namespace Watermelon
 
         private void OnSymbolRefused(Vector2Int cell, int symbol)
         {
+            PlaySound(mistakeSound);
+
             livesLeft--;
 
             hud.SetLives(livesLeft);
@@ -295,6 +319,14 @@ namespace Watermelon
 
                 Unlock();
             });
+        }
+
+        private static void PlaySound(AudioClip clip)
+        {
+            if (clip == null)
+                return;
+
+            AudioController.PlaySound(clip);
         }
 
         private void FinishDelayed(bool isWin)
