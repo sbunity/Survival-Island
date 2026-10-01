@@ -30239,7 +30239,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -35738,7 +35738,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -36684,7 +36684,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 1
   subworldEntrance: {fileID: 874980604}
@@ -38047,7 +38047,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 5, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -40487,7 +40487,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -43774,7 +43774,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -59771,7 +59771,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -73092,7 +73092,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -81618,7 +81618,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -88140,7 +88140,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -91501,7 +91501,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -98701,7 +98701,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -126452,7 +126452,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -127498,7 +127498,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -129040,7 +129040,7 @@ MonoBehaviour:
   pointerPositionOffset: {x: 0, y: 4, z: 0}
   showGuidingLine: 0
   guidingLineTargetOffset: {x: 0, y: 0, z: 0}
-  showGuidingArrow: 0
+  showGuidingArrow: 1
   guidingArrowTargetOffset: {x: 0, y: 0, z: 0}
   isTargetInSubworld: 0
   subworldEntrance: {fileID: 0}
@@ -142352,8 +142352,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 1820117116}
     - {fileID: 18863360}
+    - {fileID: 1820117116}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
