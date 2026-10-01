@@ -10,6 +10,7 @@ namespace Watermelon
 
         [Space]
         [SerializeField] GameObject previewIconObject;
+        [SerializeField] GameObject tapHintObject;
         [SerializeField] GameObject missionCompletePanel;
         [SerializeField] TextMeshProUGUI rewardText;
         [SerializeField] GameObject backgroundObj;
@@ -200,6 +201,7 @@ namespace Watermelon
 
             backgroundObj.SetActive(true);
             previewIconObject.SetActive(true);
+            tapHintObject.SetActive(true);
             missionCompletePanel.SetActive(false);
 
             messageClickCallback = null;
@@ -246,6 +248,7 @@ namespace Watermelon
             if (activeMission != null)
             {
                 previewIconObject.SetActive(false);
+                tapHintObject.SetActive(false);
 
                 if (!missionCompletePanel.activeSelf)
                 {
