@@ -897,6 +897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
         type: 3}
+      propertyPath: constructionHitsRequired
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
+        type: 3}
       propertyPath: cost.Array.data[0].amount
       value: 120
       objectReference: {fileID: 0}
@@ -29388,7 +29393,7 @@ PrefabInstance:
     - target: {fileID: 6735064403796600729, guid: be4e4e90948f3c24c9f0b4af506005c3,
         type: 3}
       propertyPath: constructionHitsRequired
-      value: 25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6735064403796600729, guid: be4e4e90948f3c24c9f0b4af506005c3,
         type: 3}
@@ -49099,6 +49104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 25115567727027729, guid: dd9ec47e2d168f64dac2cbea0366e64f,
         type: 3}
+      propertyPath: constructionHitsRequired
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 25115567727027729, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+        type: 3}
       propertyPath: cost.Array.data[0].amount
       value: 200
       objectReference: {fileID: 0}
@@ -51797,7 +51807,7 @@ PrefabInstance:
     - target: {fileID: 2585449629886448675, guid: ade2243f7bee35646a321dabf0dcb566,
         type: 3}
       propertyPath: constructionHitsRequired
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2585449629886448675, guid: ade2243f7bee35646a321dabf0dcb566,
         type: 3}
@@ -77910,6 +77920,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
         type: 3}
+      propertyPath: constructionHitsRequired
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
+        type: 3}
       propertyPath: cost.Array.data[0].amount
       value: 200
       objectReference: {fileID: 0}
@@ -85897,6 +85912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: id
       value: f6cca7b7-1c79-417c-bde0-ee25e3374170
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
+        type: 3}
+      propertyPath: constructionHitsRequired
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1658801280850867999, guid: d647b0fb526674e43b8426eed94e0137,
         type: 3}
@@ -112916,6 +112936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: cost.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 25115567727027729, guid: dd9ec47e2d168f64dac2cbea0366e64f,
+        type: 3}
+      propertyPath: constructionHitsRequired
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 25115567727027729, guid: dd9ec47e2d168f64dac2cbea0366e64f,
         type: 3}
@@ -141622,6 +141647,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6735064403796600729, guid: be4e4e90948f3c24c9f0b4af506005c3,
         type: 3}
+      propertyPath: constructionHitsRequired
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735064403796600729, guid: be4e4e90948f3c24c9f0b4af506005c3,
+        type: 3}
       propertyPath: cost.Array.data[0].amount
       value: 5
       objectReference: {fileID: 0}
@@ -142745,6 +142775,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7729195832344074911, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
         type: 3}
+      propertyPath: constructionHitsRequired
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729195832344074911, guid: 4c6fa24bcb4b82e4ebb61c4151d809dd,
+        type: 3}
       propertyPath: cost.Array.data[2].amount
       value: 20
       objectReference: {fileID: 0}
@@ -143100,6 +143135,11 @@ PrefabInstance:
         type: 3}
       propertyPath: cost.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154107048037249495, guid: ac20425b8ea2c854292180d3faea72fb,
+        type: 3}
+      propertyPath: constructionHitsRequired
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 9154107048037249495, guid: ac20425b8ea2c854292180d3faea72fb,
         type: 3}
