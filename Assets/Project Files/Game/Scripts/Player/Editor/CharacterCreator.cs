@@ -79,6 +79,9 @@ namespace Watermelon
                 characterAnimator.applyRootMotion = false;
 
                 characterAnimator.gameObject.AddComponent<PlayerAnimationHandler>();
+
+                if (HandFingersSync.IsRequired(characterAnimator))
+                    characterAnimator.gameObject.AddComponent<HandFingersSync>();
             }
 
             characterObject.SetActive(true);

@@ -116,7 +116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6806958759667517581, guid: a27115cdccb922f4c957259e2b65930a,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 7b75d44195421154c9c7064a88b08f95, type: 2}
     m_RemovedComponents: []
@@ -131,6 +131,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5672365731704015314}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a27115cdccb922f4c957259e2b65930a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1168575279438040285}
   m_SourcePrefab: {fileID: 100100000, guid: a27115cdccb922f4c957259e2b65930a, type: 3}
 --- !u!1 &431852333444459883 stripped
 GameObject:
@@ -150,6 +154,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de10e82e3d915f046a757b9e1af8677e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1168575279438040285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431852333444459883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6090afe4d3349e94cbbe518cb85f8a1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.HandFingersSync
 --- !u!4 &1060016913898354641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a27115cdccb922f4c957259e2b65930a,
