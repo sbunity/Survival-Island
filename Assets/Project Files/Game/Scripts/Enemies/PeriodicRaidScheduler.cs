@@ -4,10 +4,10 @@ namespace Watermelon
 {
     public class PeriodicRaidScheduler : MonoBehaviour
     {
-        [SerializeField] SkeletonRaidSpawner spawner;
+        [SerializeField] RaidSpawner spawner;
 
         [Header("Raid Size")]
-        [Tooltip("Random number of skeletons per raid (inclusive on both ends).")]
+        [Tooltip("Random number of enemies per raid (inclusive on both ends). The spawner may clamp it, e.g. to the number of distinct pirate models.")]
         [SerializeField] Vector2Int enemyCountRange = new Vector2Int(4, 8);
 
         [Header("Interval")]

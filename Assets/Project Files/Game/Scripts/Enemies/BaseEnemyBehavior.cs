@@ -107,32 +107,64 @@ namespace Watermelon
             Health.Initialise(health);
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             animator.SetFloat(MOVEMENT_NULTIPLIER_HASH, agent.velocity.magnitude / agent.speed);
         }
 
-        public void Spawn(Transform spawnPoint)
+        public void Spawn(Transform spawnPoint) => Spawn(spawnPoint.position, spawnPoint.rotation, spawnPoint);
+
+        protected void Spawn(Vector3 position, Quaternion rotation, Transform home)
         {
             disableAfterDeathTweenCase.KillActive();
 
-            SpawnPoint = spawnPoint;
+            SpawnPoint = home;
 
-            transform.position = spawnPoint.position;
-            transform.rotation = spawnPoint.rotation;
+            transform.position = position;
+            transform.rotation = rotation;
             transform.localScale = Vector3.one;
 
             Health.Restore();
-            Health.Show();
 
             agent.avoidancePriority = Random.Range(30, 71);
-            agent.Warp(spawnPoint.position);
+            agent.Warp(position);
 
             IsDead = false;
 
-            CombatTargetRegistry.Register(this);
+            SetCombatPresence(EntersCombatOnSpawn);
 
             OnSpawned();
+        }
+
+        protected virtual bool EntersCombatOnSpawn => true;
+
+        protected void EnterCombat()
+        {
+            if (!IsDead)
+                SetCombatPresence(true);
+        }
+
+        private void SetCombatPresence(bool value)
+        {
+            if (characterCollider != null)
+                characterCollider.enabled = value;
+
+            if (value)
+            {
+                Health.Show();
+                CombatTargetRegistry.Register(this);
+            }
+            else
+            {
+                Health.ForceHide();
+                CombatTargetRegistry.Unregister(this);
+            }
+        }
+
+        protected void BindGraphics(Animator animator, Renderer bodyRenderer)
+        {
+            this.animator = animator;
+            this.bodyRenderer = bodyRenderer;
         }
 
         public void TakeDamage(DamageSource source, Vector3 position, bool shouldFlash = false)

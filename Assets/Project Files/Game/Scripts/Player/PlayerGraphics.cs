@@ -8,6 +8,7 @@ namespace Watermelon
 
         [BoxGroup("References")]
         [SerializeField] Renderer bodyRenderer;
+        public Renderer BodyRenderer => bodyRenderer;
 
         [BoxFoldout("Particles", label: "Particles")]
         [SerializeField] ParticleSystem dust;

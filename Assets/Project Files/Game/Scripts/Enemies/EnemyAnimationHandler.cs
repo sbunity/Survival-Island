@@ -9,6 +9,8 @@ namespace Watermelon
     {
         [SerializeField] BaseEnemyBehavior enemy;
 
+        public void Initialise(BaseEnemyBehavior enemy) => this.enemy = enemy;
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void SpawnEnded() => enemy.ReceiveAnimationEvent(EnemyAnimationEventType.SpawnEnded);
 

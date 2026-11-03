@@ -7,8 +7,8 @@ namespace Watermelon
         public override MissionUICase.Type MissionUIType => MissionUICase.Type.Collect;
 
         [BoxGroup("Defeat Raid Mission Special", "Defeat Raid Mission Special")]
-        [SerializeField] SkeletonRaidSpawner spawner;
-        public SkeletonRaidSpawner Spawner => spawner;
+        [SerializeField] RaidSpawner spawner;
+        public RaidSpawner Spawner => spawner;
 
         private Save save;
 

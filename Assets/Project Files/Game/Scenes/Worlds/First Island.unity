@@ -47029,10 +47029,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.SkeletonRaidSpawner
   enemyType: 1
+  enemyCount: 10
   lineStart: {fileID: 1776633634}
   lineEnd: {fileID: 209678763}
   facingTarget: {fileID: 1728899279}
-  enemyCount: 10
   navMeshSampleDistance: 3
 --- !u!4 &812600212
 Transform:
@@ -142382,8 +142382,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 1820117116}
     - {fileID: 18863360}
+    - {fileID: 1820117116}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0

@@ -6,6 +6,7 @@ namespace Watermelon
 {
     public enum EnemyType 
     {
-        Skeleton = 1
+        Skeleton = 1,
+        Pirate = 2,
     }
 }
