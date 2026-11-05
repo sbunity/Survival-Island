@@ -98,32 +98,32 @@ PrefabInstance:
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[0].localOffset.x
-      value: -0.004
+      value: -0.042
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[0].localOffset.y
-      value: 0.017
+      value: 0.042
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[0].localOffset.z
-      value: 0.229
+      value: 0.088
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[1].localOffset.x
-      value: -0.043
+      value: -0.057
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[1].localOffset.y
-      value: -0.015
+      value: 0.119
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[1].localOffset.z
-      value: 0.176
+      value: 0.008
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
@@ -188,32 +188,32 @@ PrefabInstance:
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[0].localEulerAngles.x
-      value: 14.5
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[0].localEulerAngles.y
-      value: 15.5
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[0].localEulerAngles.z
-      value: 69
+      value: 76.9
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[1].localEulerAngles.x
-      value: 35
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[1].localEulerAngles.y
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
       propertyPath: interactionAnimations.toolOfsetData.Array.data[1].localEulerAngles.z
-      value: 65
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 496146647442977262, guid: 7d4cd56625169ff4ea81b0965201a461,
         type: 3}
@@ -367,11 +367,11 @@ MonoBehaviour:
     toolOfsetData:
     - tool: {fileID: 4434665423986997734, guid: 52265e301aa584a46ab3417adfb4fdc1,
         type: 3}
-      localOffset: {x: -0.004, y: 0.017, z: 0.229}
-      localEulerAngles: {x: 14.5, y: 15.5, z: 69}
+      localOffset: {x: -0.042, y: 0.042, z: 0.088}
+      localEulerAngles: {x: 37.5, y: 19, z: 76.9}
     - tool: {fileID: 253860727473416993, guid: bf2f76f18e44f1d41a1ff129dd9d9b56, type: 3}
-      localOffset: {x: -0.043, y: -0.015, z: 0.176}
-      localEulerAngles: {x: 35, y: 0, z: 65}
+      localOffset: {x: -0.057, y: 0.119, z: 0.008}
+      localEulerAngles: {x: 43, y: 12, z: 71}
     - tool: {fileID: 3983599116061671533, guid: 50c9c25380ada0b4f8dfe26bf8855073,
         type: 3}
       localOffset: {x: -0.043, y: 0.06, z: 0.07}

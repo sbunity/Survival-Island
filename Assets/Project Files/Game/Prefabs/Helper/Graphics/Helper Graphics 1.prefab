@@ -410,11 +410,11 @@ MonoBehaviour:
     toolOfsetData:
     - tool: {fileID: 4434665423986997734, guid: 52265e301aa584a46ab3417adfb4fdc1,
         type: 3}
-      localOffset: {x: -0.004, y: 0.017, z: 0.229}
-      localEulerAngles: {x: 14.5, y: 15.5, z: 69}
+      localOffset: {x: -0.042, y: 0.042, z: 0.088}
+      localEulerAngles: {x: 37.5, y: 19, z: 76.9}
     - tool: {fileID: 253860727473416993, guid: bf2f76f18e44f1d41a1ff129dd9d9b56, type: 3}
-      localOffset: {x: -0.043, y: -0.015, z: 0.176}
-      localEulerAngles: {x: 35, y: 0, z: 65}
+      localOffset: {x: -0.057, y: 0.119, z: 0.008}
+      localEulerAngles: {x: 43, y: 12, z: 71}
     - tool: {fileID: 3983599116061671533, guid: 50c9c25380ada0b4f8dfe26bf8855073,
         type: 3}
       localOffset: {x: -0.043, y: 0.06, z: 0.07}
@@ -471,11 +471,11 @@ MonoBehaviour:
     toolOfsetData:
     - tool: {fileID: 4434665423986997734, guid: 52265e301aa584a46ab3417adfb4fdc1,
         type: 3}
-      localOffset: {x: -0.004, y: 0.017, z: 0.229}
-      localEulerAngles: {x: 14.5, y: 15.5, z: 69}
+      localOffset: {x: -0.042, y: 0.042, z: 0.088}
+      localEulerAngles: {x: 37.5, y: 19, z: 76.9}
     - tool: {fileID: 253860727473416993, guid: bf2f76f18e44f1d41a1ff129dd9d9b56, type: 3}
-      localOffset: {x: -0.043, y: -0.015, z: 0.176}
-      localEulerAngles: {x: 35, y: 0, z: 65}
+      localOffset: {x: -0.057, y: 0.119, z: 0.008}
+      localEulerAngles: {x: 43, y: 12, z: 71}
     - tool: {fileID: 3983599116061671533, guid: 50c9c25380ada0b4f8dfe26bf8855073,
         type: 3}
       localOffset: {x: -0.043, y: 0.06, z: 0.07}
