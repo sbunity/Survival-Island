@@ -1,0 +1,5796 @@
+﻿#include "pch-cpp.hpp"
+
+
+
+
+
+struct VirtualActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename T1>
+struct VirtualActionInvoker1
+{
+	typedef void (*Action)(void*, T1, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+template <typename T1, typename T2>
+struct VirtualActionInvoker2
+{
+	typedef void (*Action)(void*, T1, T2, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1, T2 p2)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
+	}
+};
+template <typename R>
+struct VirtualFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename R, typename T1>
+struct VirtualFuncInvoker1
+{
+	typedef R (*Func)(void*, T1, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+struct InterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+
+struct AsyncLocal_1_t1D3339EA4C8650D2DEDDF9553E5C932B3DC2CCFD;
+struct Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C;
+struct Comparison_1_t62E531E7B8260E2C6C2718C3BDB8CF8655139645;
+struct ConcurrentQueue_1_t38466BAF2E0933882FAC022407D638F7900CEED4;
+struct ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E;
+struct Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54;
+struct Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907;
+struct Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0;
+struct Dictionary_2_tEFC8016EC28460E6CE058A5F413FAB656883AA5F;
+struct EventHandler_1_t5D3FC4609BD8133ED1226D6D49A1D8076B16A9ED;
+struct IEqualityComparer_1_tDBFC8496F14612776AF930DBF84AFE7D06D1F0E9;
+struct KeyCollection_t67721B3C4A61E86B9C83DC77D599900211F511C2;
+struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73;
+struct List_1_tF9D88C946600C782EE786A252258C0AA97BD019A;
+struct Segment_t3ABE51CD8494216053375DA492F57A0F6F8423BC;
+struct TaskSocketAsyncEventArgs_1_tEB937620E5B15D91E5BFEFFA707CF800930F8401;
+struct Task_1_t4C228DE57804012969575431CFF12D57C875552D;
+struct UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2;
+struct UnityAction_1_t9C30BCD020745BF400CBACF22C6F34ADBA2DDA6A;
+struct ValueCollection_tB6AA13A2D5397E5F8AA1374EAA62A545869F9F5B;
+struct EntryU5BU5D_t7D2802DC12B78DF18A44397E0CE945B287396DF6;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct GUIStyleU5BU5D_t1BA4BCF4D4D32DF07E9B84F1750D964DF33B0FEC;
+struct HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71;
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
+struct Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D;
+struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
+struct UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83;
+struct AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45;
+struct AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03;
+struct AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0;
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
+struct BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7;
+struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
+struct CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2;
+struct CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0;
+struct DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90;
+struct Delegate_t;
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+struct DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F;
+struct EditorHapticWrapper_tAB93C77F467BB610B60465A106291C9B29F31E0A;
+struct EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293;
+struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095;
+struct EndPoint_t6233F4E2EB9F0F2D36E187F12BE050E6D8B73564;
+struct Exception_t;
+struct ExecutionContext_t9D6EDFD92F0B2D391751963E2D77A8B03CB81710;
+struct Font_tC95270EA3198038970422D78B74A7F2E218A96B6;
+struct GUISettings_tF2CA7E8B9F62F1FC013BFF053B5FA2709EBA3847;
+struct GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9;
+struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580;
+struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95;
+struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
+struct GlobalJavaObjectRef_t20D8E5AAFC2EB2518FCABBF40465855E797FF0D8;
+struct Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87;
+struct HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646;
+struct HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47;
+struct HapticHandler_tC94CFE0C0243379D08E19B058F2E03F460B9D78E;
+struct HapticInitModule_t0F1D7886478D7AF62135BD67FCF041ADE7DC61B6;
+struct HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597;
+struct HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE;
+struct HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B;
+struct HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96;
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
+struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
+struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
+struct IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388;
+struct IOSHapticWrapper_t2C08F65FAAE83B4FEA5FD47E2F64182678A58B98;
+struct IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484;
+struct IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB;
+struct IPlayerEditorConnectionNative_tDFA5BC770DAA5BE37CBA1CF47281702FB064CCF3;
+struct IPrincipal_tE7AF5096287F6C3472585E124CB38FF2A51EAB5F;
+struct InitModule_tAB59C22C9D48F281C236CA2963EDA5BDE72E0314;
+struct InternalThread_tF40B7BFCBD60C82BD8475A22FF5186CA10293687;
+struct LocalDataStoreHolder_t789DD474AE5141213C2105CE57830ECFC2D3C03F;
+struct LocalDataStoreMgr_t205F1783D5CC2B148E829B5882E5406FF9A3AC1E;
+struct MessageEventArgs_t34F726E6463615C0A460FB5CBCCB92F84D83D4F9;
+struct MethodInfo_t;
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
+struct MulticastDelegate_t;
+struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A;
+struct PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53;
+struct PlayerEditorConnectionEvents_tF92F4A9A0EDAB7D3D544AE9B0F3F925C4E48B7CB;
+struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5;
+struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+struct SafeSocketHandle_t5A597D30D951E736B750ED09D5B3AB72F98407EE;
+struct SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2;
+struct SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F;
+struct SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A;
+struct Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E;
+struct String_t;
+struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F;
+struct ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2;
+struct UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8;
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t57A83ECAA672F5C98192DDD082640E27981BF35E;
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct WebGLHapticWrapper_t06E18A27FD6FF7E230815C13CABABC157A41ACDD;
+struct U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53;
+struct U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2;
+struct AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2;
+struct SkinChangedDelegate_tA6D456E853D58AD2EF8A599F543C7E5BA8E94B98;
+struct U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2;
+struct CachedEventArgs_tF0692E89962FD1A045B17BC985F838C11FB6822C;
+struct Int32TaskSocketAsyncEventArgs_t36C5FC82499ED9DAFE7F05C38EF92D77A0B248E9;
+struct U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B;
+
+IL2CPP_EXTERN_C RuntimeClass* AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_tF9D88C946600C782EE786A252258C0AA97BD019A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t5EBBDC0C96F2C1F17CC6116F0E352691A257DA98____01ACE43BCA5900258B77FB640EB4543838B9C3DE1CC8FB98107CB4FCC1C39214_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t5EBBDC0C96F2C1F17CC6116F0E352691A257DA98____678B3A0A6E5854997DE9ED3F93982DC16F4E93A8A1B74541747B0D6F2A1DA9C1_FieldInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral09DF0F4EA30887D5D6E2833D4C620AAAB11E1C34;
+IL2CPP_EXTERN_C String_t* _stringLiteral0A1BBC6B94C8C5D08D14BF2B5462AB0E5A499EDA;
+IL2CPP_EXTERN_C String_t* _stringLiteral0D038D56F2BAF76EDB3B4C7691B8FF02A0252879;
+IL2CPP_EXTERN_C String_t* _stringLiteral1057AAF5EE3CDF423CF6BCC588476E559687CDE6;
+IL2CPP_EXTERN_C String_t* _stringLiteral1645079AF0AD68877D5774BC81695A708DB69E30;
+IL2CPP_EXTERN_C String_t* _stringLiteral1B6FBCE7BC364CC377FA6F5113EBAE52F97F5FE9;
+IL2CPP_EXTERN_C String_t* _stringLiteral31D05622204BE22BE61BEEAE7EADEAF4075A439D;
+IL2CPP_EXTERN_C String_t* _stringLiteral371079FEEB74DAFB4598BB2FE3E0D66C97FC84E0;
+IL2CPP_EXTERN_C String_t* _stringLiteral3D079C3282CD7D084E678D9C90C09135FD4E8F75;
+IL2CPP_EXTERN_C String_t* _stringLiteral4C30A9608160E78B7E37EDB396CD08E671C8BC31;
+IL2CPP_EXTERN_C String_t* _stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078;
+IL2CPP_EXTERN_C String_t* _stringLiteral539BF70A0C220F8B37B7E6E1365B33D2F988BBC6;
+IL2CPP_EXTERN_C String_t* _stringLiteral587F7BDE7A90CCA6181A36EBC50606A56E49B786;
+IL2CPP_EXTERN_C String_t* _stringLiteral5AE3B99E35D377E24C5A9BDAD49A8574B1D803C5;
+IL2CPP_EXTERN_C String_t* _stringLiteral6F3A546110ACB3B3F94FCA3B0E1A0440FED7872E;
+IL2CPP_EXTERN_C String_t* _stringLiteral88CF80A1774463880D925329A29099F33B85F099;
+IL2CPP_EXTERN_C String_t* _stringLiteral8A45D0D8311C8D73121FDD6C8B401E1AD3C58E0E;
+IL2CPP_EXTERN_C String_t* _stringLiteral8B983133C476E84E06D0813B8B52F2D1FAD2C022;
+IL2CPP_EXTERN_C String_t* _stringLiteral8F4D5C427CFA5FCCBD38E02EBC6722093CAA1EDD;
+IL2CPP_EXTERN_C String_t* _stringLiteral9276CDDD31F62B72833CF966128D33E727B1F67D;
+IL2CPP_EXTERN_C String_t* _stringLiteral943C8FF538819688439782F2AEDB69F222317B17;
+IL2CPP_EXTERN_C String_t* _stringLiteral996430AB1219869666B45814CA370C998C55A879;
+IL2CPP_EXTERN_C String_t* _stringLiteral9A053A49693D46963A63E83B4F75CF40EED8D8FD;
+IL2CPP_EXTERN_C String_t* _stringLiteralA3078991A785F525EC966EBDA86DE4072906CF37;
+IL2CPP_EXTERN_C String_t* _stringLiteralAD904CD65590DA24A7A6BBE5A5B7CEDE4EE1CC35;
+IL2CPP_EXTERN_C String_t* _stringLiteralCEA7D15BD7D3108714FE5FE1861D75886730D5F1;
+IL2CPP_EXTERN_C String_t* _stringLiteralD31F238E2BFDF2B26F149401362C247796BED93E;
+IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+IL2CPP_EXTERN_C String_t* _stringLiteralE0C07794D9D8D1547EF130F005ABD901FE8F5136;
+IL2CPP_EXTERN_C String_t* _stringLiteralE16AE91AE9872676A8136179F6C78A80DCD62F37;
+IL2CPP_EXTERN_C String_t* _stringLiteralE3A105D59F493421481242819787FDF8AA700AF8;
+IL2CPP_EXTERN_C String_t* _stringLiteralE7D210279F10E019D0D11C68DC0D8DFA81933584;
+IL2CPP_EXTERN_C String_t* _stringLiteralEE1F68BD8C1D064F560E7C4624916B2EBE312022;
+IL2CPP_EXTERN_C String_t* _stringLiteralF3A873405B93E0F91DED4A54DD0216AA2ABAC09B;
+IL2CPP_EXTERN_C String_t* _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9;
+IL2CPP_EXTERN_C String_t* _stringLiteralFEC3E1C71B71E838CF08C2E80C486287EA83983E;
+IL2CPP_EXTERN_C const RuntimeMethod* AndroidHapticWrapper_U3CInitU3Eb__3_0_mF27E638612A1ABE3834E1B9BB7BC5066C4CD4497_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_GetStatic_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m740F3401DEA4A75BADD753EFF71D2328B4147BFC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Array_Sort_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m3C71A679C0FFA6F7015634C8F785A36FE3B04593_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ConcurrentQueue_1_Enqueue_mCFA14FE2B9D147552CD2F7F340F53A0284BB92B8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ConcurrentQueue_1_TryDequeue_m176C65C9DCE178799C348336E14CB35C748E9421_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ConcurrentQueue_1__ctor_m89BBD6C7776D544A0D57C1322765E6D9BC513CB1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* CoreExtensions_IsNullOrEmpty_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m92F1565B9BF841ABEC384C85C5F344B680431A9D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Add_m3EE4C8C1C9E10F3A3BD8C7974C6CA3EC6CF54A70_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_ContainsKey_m38D7D27B521C5BA98FE44DA03BC48038247FADF5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m929638D3726B538AC1A2956B29F8917C99681FF3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_get_Item_m6F659CE5F6E380A0834A66E0AC39CE775491004F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HapticNetworkReceiver_BroadcastLoop_m812B64A70323E773DBA933843B9587F5A16BDAB5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HapticNetworkReceiver_ReceiveLoop_m7B8A42DFA2AB1FDDA7669F9944D84515AD5D6440_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HapticTestReceiver_OnPlayPattern_m34859F1EA62BD85D5759727BB691F434AFF62DD5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisHapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_mE2B77A7D5EDFE2205B1A808CE3FAFAA7D10DCC2C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_ToArray_m8F215FE5D98A9A41546F2FD6AB5A741A5B6F1D92_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m2EBA73E03CE51821DFC1880E09649FFBFC3ABA75_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SaveController_GetSaveObject_TisHapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B_m5BAAD80B2E6D3929D5D4E1AAB969D6A680EF5623_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CInitAsyncU3Ed__2_System_Collections_IEnumerator_Reset_mC44EA22FCBB1C924E70E740480A54282917D8D23_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3C_ctorU3Eb__8_0_mAC9939DDC09285B59CC3F42A7FEA1B296856FA54_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass4_0_U3CPlayU3Eb__0_m0E72AC1D891905209177716D95F8DAD2C8174DED_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass5_0_U3CPlayU3Eb__0_mE899320283067FC98F07BF1B0191DB209C814111_RuntimeMethod_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
+struct Exception_t_marshaled_com;
+struct Exception_t_marshaled_pinvoke;
+struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com;
+struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke;
+struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_marshaled_com;
+struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_marshaled_pinvoke;
+struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_com;
+
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71;
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
+struct Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+struct U3CModuleU3E_t8A885C36BA3929FB7651BE7A5641CD24F562A9D4 
+{
+};
+struct ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E  : public RuntimeObject
+{
+	RuntimeObject* ____crossSegmentLock;
+	Segment_t3ABE51CD8494216053375DA492F57A0F6F8423BC* ____tail;
+	Segment_t3ABE51CD8494216053375DA492F57A0F6F8423BC* ____head;
+};
+struct Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_t7D2802DC12B78DF18A44397E0CE945B287396DF6* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_t67721B3C4A61E86B9C83DC77D599900211F511C2* ____keys;
+	ValueCollection_tB6AA13A2D5397E5F8AA1374EAA62A545869F9F5B* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_tF9D88C946600C782EE786A252258C0AA97BD019A  : public RuntimeObject
+{
+	Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct U3CPrivateImplementationDetailsU3E_t5EBBDC0C96F2C1F17CC6116F0E352691A257DA98  : public RuntimeObject
+{
+};
+struct AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0  : public RuntimeObject
+{
+	GlobalJavaObjectRef_t20D8E5AAFC2EB2518FCABBF40465855E797FF0D8* ___m_jobject;
+	GlobalJavaObjectRef_t20D8E5AAFC2EB2518FCABBF40465855E797FF0D8* ___m_jclass;
+};
+struct BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7  : public RuntimeObject
+{
+};
+struct CriticalFinalizerObject_t1DCAB623CAEA6529A96F5F3EDE3C7048A6E313C9  : public RuntimeObject
+{
+};
+struct DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F  : public RuntimeObject
+{
+	float ___firstValue;
+	float ___secondValue;
+};
+struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095  : public RuntimeObject
+{
+	int32_t ___m_codePage;
+	CodePageDataItem_t52460FA30AE37F4F26ACB81055E58002262F19F2* ___dataItem;
+	bool ___m_deserializedFromEverett;
+	bool ___m_isReadOnly;
+	EncoderFallback_tD2C40CE114AA9D8E1F7196608B2D088548015293* ___encoderFallback;
+	DecoderFallback_t7324102215E4ED41EC065C02EB501CB0BC23CD90* ___decoderFallback;
+};
+struct EndPoint_t6233F4E2EB9F0F2D36E187F12BE050E6D8B73564  : public RuntimeObject
+{
+};
+struct Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87  : public RuntimeObject
+{
+	bool ___isActive;
+	HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B* ___save;
+	BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* ___wrapper;
+};
+struct HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646  : public RuntimeObject
+{
+	float ___duration;
+	float ___intensity;
+};
+struct HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47  : public RuntimeObject
+{
+	float ___Intensity;
+	float ___Sharpness;
+	float ___StartTime;
+	float ___Duration;
+};
+struct HapticHandler_tC94CFE0C0243379D08E19B058F2E03F460B9D78E  : public RuntimeObject
+{
+	float ___duration;
+	float ___intensity;
+	bool ___advancedSettings;
+	float ___minDelay;
+	bool ___dynamicIntensity;
+	DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* ___intensityRange;
+	int32_t ___intensitySteps;
+	float ___intensityResetTime;
+	float ___lastPlayedTime;
+	int32_t ___currentIntensityStep;
+	float ___lastIntensityStepTime;
+};
+struct HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE  : public RuntimeObject
+{
+	String_t* ___id;
+	HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* ___pattern;
+};
+struct HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B  : public RuntimeObject
+{
+	bool ___IsActive;
+};
+struct IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484  : public RuntimeObject
+{
+	uint32_t ____addressOrScopeId;
+	UInt16U5BU5D_tEB7C42D811D999D2AA815BADC3FCCDD9C67B3F83* ____numbers;
+	String_t* ____toString;
+	int32_t ____hashCode;
+};
+struct MessageEventArgs_t34F726E6463615C0A460FB5CBCCB92F84D83D4F9  : public RuntimeObject
+{
+	int32_t ___playerId;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___data;
+};
+struct String_t  : public RuntimeObject
+{
+	int32_t ____stringLength;
+	Il2CppChar ____firstChar;
+};
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t57A83ECAA672F5C98192DDD082640E27981BF35E  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+struct U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53  : public RuntimeObject
+{
+	AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* ___U3CU3E4__this;
+	float ___duration;
+	float ___intensity;
+};
+struct U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2  : public RuntimeObject
+{
+	AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* ___U3CU3E4__this;
+	int32_t ___patternHash;
+};
+struct AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2  : public RuntimeObject
+{
+	Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* ___U3CPatternU3Ek__BackingField;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___U3CAmplitudesU3Ek__BackingField;
+};
+struct U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___owner;
+	HapticInitModule_t0F1D7886478D7AF62135BD67FCF041ADE7DC61B6* ___U3CU3E4__this;
+};
+struct U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B  : public RuntimeObject
+{
+};
+struct AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45  : public BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7
+{
+	Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* ___registeredPatterns;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___vibrationService;
+	int32_t ___sdkVersion;
+};
+struct AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03  : public AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0
+{
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	bool ___m_value;
+};
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
+{
+	uint8_t ___m_value;
+};
+struct Color_tD001788D726C3A7F1379BEED0260B9591F440C1F 
+{
+	float ___r;
+	float ___g;
+	float ___b;
+	float ___a;
+};
+struct Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F 
+{
+	double ___m_value;
+};
+struct EditorHapticWrapper_tAB93C77F467BB610B60465A106291C9B29F31E0A  : public BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct Guid_t 
+{
+	int32_t ____a;
+	int16_t ____b;
+	int16_t ____c;
+	uint8_t ____d;
+	uint8_t ____e;
+	uint8_t ____f;
+	uint8_t ____g;
+	uint8_t ____h;
+	uint8_t ____i;
+	uint8_t ____j;
+	uint8_t ____k;
+};
+struct IOSHapticWrapper_t2C08F65FAAE83B4FEA5FD47E2F64182678A58B98  : public BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7
+{
+};
+struct IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB  : public EndPoint_t6233F4E2EB9F0F2D36E187F12BE050E6D8B73564
+{
+	IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ____address;
+	int32_t ____port;
+};
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	int32_t ___m_value;
+};
+struct Int64_t092CFB123BE63C28ACDAF65C68F21A526050DBA3 
+{
+	int64_t ___m_value;
+};
+struct IntPtr_t 
+{
+	void* ___m_value;
+};
+struct Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D 
+{
+	float ___m_XMin;
+	float ___m_YMin;
+	float ___m_Width;
+	float ___m_Height;
+};
+struct Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C 
+{
+	float ___m_value;
+};
+struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F  : public CriticalFinalizerObject_t1DCAB623CAEA6529A96F5F3EDE3C7048A6E313C9
+{
+	InternalThread_tF40B7BFCBD60C82BD8475A22FF5186CA10293687* ___internal_thread;
+	RuntimeObject* ___m_ThreadStartArg;
+	RuntimeObject* ___pending_exception;
+	MulticastDelegate_t* ___m_Delegate;
+	ExecutionContext_t9D6EDFD92F0B2D391751963E2D77A8B03CB81710* ___m_ExecutionContext;
+	bool ___m_ExecutionContextBelongsToOuterScope;
+	RuntimeObject* ___principal;
+	int32_t ___principal_version;
+};
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
+	};
+};
+struct WebGLHapticWrapper_t06E18A27FD6FF7E230815C13CABABC157A41ACDD  : public BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7
+{
+};
+#pragma pack(push, tp, 1)
+struct __StaticArrayInitTypeSizeU3D1144_t60E458583B24DFC876B488917556AEF5A3ED43A3 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D1144_t60E458583B24DFC876B488917556AEF5A3ED43A3__padding[1144];
+	};
+};
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
+struct __StaticArrayInitTypeSizeU3D489_tC2EE74E7DD93A10660513ACF1FE41B3A690C2EC3 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D489_tC2EE74E7DD93A10660513ACF1FE41B3A690C2EC3__padding[489];
+	};
+};
+#pragma pack(pop, tp)
+struct MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B 
+{
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___FilePathsData;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	bool ___IsEditorOnly;
+};
+struct MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshaled_pinvoke
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshaled_com
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct AddressFamily_t01AA8C9FD15E4727B241F1F453D88444337C7524 
+{
+	int32_t ___value__;
+};
+struct Delegate_t  : public RuntimeObject
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	RuntimeObject* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	bool ___method_is_virtual;
+};
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Exception_t  : public RuntimeObject
+{
+	String_t* ____className;
+	String_t* ____message;
+	RuntimeObject* ____data;
+	Exception_t* ____innerException;
+	String_t* ____helpURL;
+	RuntimeObject* ____stackTrace;
+	String_t* ____stackTraceString;
+	String_t* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	RuntimeObject* ____dynamicMethods;
+	int32_t ____HResult;
+	String_t* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_pinvoke
+{
+	char* ____className;
+	char* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_pinvoke* ____innerException;
+	char* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	char* ____stackTraceString;
+	char* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	char* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_com
+{
+	Il2CppChar* ____className;
+	Il2CppChar* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_com* ____innerException;
+	Il2CppChar* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	Il2CppChar* ____stackTraceString;
+	Il2CppChar* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	Il2CppChar* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95  : public RuntimeObject
+{
+	intptr_t ___m_Ptr;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_SourceStyle;
+};
+struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke
+{
+	intptr_t ___m_Ptr;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_marshaled_pinvoke* ___m_SourceStyle;
+};
+struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com
+{
+	intptr_t ___m_Ptr;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_marshaled_com* ___m_SourceStyle;
+};
+struct LogCategory_t971F89A130D955BEDA787A601B5459AD3B4B047B 
+{
+	int32_t ___value__;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C  : public RuntimeObject
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+	intptr_t ___m_CachedPtr;
+};
+struct ProtocolType_t104D087F8C40460E0FE8D38659949AEA910CD20A 
+{
+	int32_t ___value__;
+};
+struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5  : public RuntimeObject
+{
+	intptr_t ___m_Ptr;
+	RuntimeObject* ___m_SourceStyle;
+};
+struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_pinvoke
+{
+	intptr_t ___m_Ptr;
+	Il2CppIUnknown* ___m_SourceStyle;
+};
+struct RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_com
+{
+	intptr_t ___m_Ptr;
+	Il2CppIUnknown* ___m_SourceStyle;
+};
+struct RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 
+{
+	intptr_t ___value;
+};
+struct SocketType_tEFAA48791CC7B43043CE5B1DE7A54F15DCFE3C52 
+{
+	int32_t ___value__;
+};
+struct TextAnchor_tA46E794186AC1CD0F22888652F589EBF7DFDF830 
+{
+	int32_t ___value__;
+};
+struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580  : public RuntimeObject
+{
+	intptr_t ___m_Ptr;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* ___m_Normal;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* ___m_Hover;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* ___m_Active;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* ___m_Focused;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* ___m_OnNormal;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* ___m_OnHover;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* ___m_OnActive;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* ___m_OnFocused;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* ___m_Border;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* ___m_Padding;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* ___m_Margin;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* ___m_Overflow;
+	String_t* ___m_Name;
+};
+struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_marshaled_pinvoke
+{
+	intptr_t ___m_Ptr;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke* ___m_Normal;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke* ___m_Hover;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke* ___m_Active;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke* ___m_Focused;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke* ___m_OnNormal;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke* ___m_OnHover;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke* ___m_OnActive;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke* ___m_OnFocused;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_pinvoke ___m_Border;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_pinvoke ___m_Padding;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_pinvoke ___m_Margin;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_pinvoke ___m_Overflow;
+	char* ___m_Name;
+};
+struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_marshaled_com
+{
+	intptr_t ___m_Ptr;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com* ___m_Normal;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com* ___m_Hover;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com* ___m_Active;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com* ___m_Focused;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com* ___m_OnNormal;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com* ___m_OnHover;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com* ___m_OnActive;
+	GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_com* ___m_OnFocused;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_com* ___m_Border;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_com* ___m_Padding;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_com* ___m_Margin;
+	RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5_marshaled_com* ___m_Overflow;
+	Il2CppChar* ___m_Name;
+};
+struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct MulticastDelegate_t  : public Delegate_t
+{
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates;
+};
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates;
+};
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates;
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_pinvoke : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+};
+struct Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E  : public RuntimeObject
+{
+	CachedEventArgs_tF0692E89962FD1A045B17BC985F838C11FB6822C* ____cachedTaskEventArgs;
+	bool ___is_closed;
+	bool ___is_listening;
+	bool ___useOverlappedIO;
+	int32_t ___linger_timeout;
+	int32_t ___addressFamily;
+	int32_t ___socketType;
+	int32_t ___protocolType;
+	SafeSocketHandle_t5A597D30D951E736B750ED09D5B3AB72F98407EE* ___m_Handle;
+	EndPoint_t6233F4E2EB9F0F2D36E187F12BE050E6D8B73564* ___seed_endpoint;
+	SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2* ___ReadSem;
+	SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2* ___WriteSem;
+	bool ___is_blocking;
+	bool ___is_bound;
+	bool ___is_connected;
+	int32_t ___m_IntCleanedUp;
+	bool ___connect_in_progress;
+	int32_t ___ID;
+};
+struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
+{
+};
+struct UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8  : public RuntimeObject
+{
+	Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* ___m_ClientSocket;
+	bool ___m_Active;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___m_Buffer;
+	int32_t ___m_Family;
+	bool ___m_CleanedUp;
+	bool ___m_IsBroadcast;
+};
+struct Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C  : public MulticastDelegate_t
+{
+};
+struct UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2  : public MulticastDelegate_t
+{
+};
+struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+	Font_tC95270EA3198038970422D78B74A7F2E218A96B6* ___m_Font;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_box;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_button;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_toggle;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_label;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_textField;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_textArea;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_window;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_horizontalSlider;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_horizontalSliderThumb;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_horizontalSliderThumbExtent;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_verticalSlider;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_verticalSliderThumb;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_verticalSliderThumbExtent;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_SliderMixed;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_horizontalScrollbar;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_horizontalScrollbarThumb;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_horizontalScrollbarLeftButton;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_horizontalScrollbarRightButton;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_verticalScrollbar;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_verticalScrollbarThumb;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_verticalScrollbarUpButton;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_verticalScrollbarDownButton;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___m_ScrollView;
+	GUIStyleU5BU5D_t1BA4BCF4D4D32DF07E9B84F1750D964DF33B0FEC* ___m_CustomStyles;
+	GUISettings_tF2CA7E8B9F62F1FC013BFF053B5FA2709EBA3847* ___m_Settings;
+	Dictionary_2_tEFC8016EC28460E6CE058A5F413FAB656883AA5F* ___m_Styles;
+};
+struct InitModule_tAB59C22C9D48F281C236CA2963EDA5BDE72E0314  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+};
+struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+struct PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+	PlayerEditorConnectionEvents_tF92F4A9A0EDAB7D3D544AE9B0F3F925C4E48B7CB* ___m_PlayerEditorConnectionEvents;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___m_connectedPlayers;
+	bool ___m_IsInitilized;
+};
+struct SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F  : public MulticastDelegate_t
+{
+};
+struct SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A  : public MulticastDelegate_t
+{
+};
+struct ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2  : public MulticastDelegate_t
+{
+};
+struct HapticInitModule_t0F1D7886478D7AF62135BD67FCF041ADE7DC61B6  : public InitModule_tAB59C22C9D48F281C236CA2963EDA5BDE72E0314
+{
+};
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+	CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B* ___m_CancellationTokenSource;
+};
+struct HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* ___receiver;
+	UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* ___broadcaster;
+	Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* ___receiveThread;
+	Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* ___broadcastThread;
+	ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E* ___pendingMessages;
+	bool ___running;
+	String_t* ___localIP;
+};
+struct HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* ___hapticWrapper;
+};
+struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_StaticFields
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___s_emptyArray;
+};
+struct List_1_tF9D88C946600C782EE786A252258C0AA97BD019A_StaticFields
+{
+	Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* ___s_emptyArray;
+};
+struct U3CPrivateImplementationDetailsU3E_t5EBBDC0C96F2C1F17CC6116F0E352691A257DA98_StaticFields
+{
+	__StaticArrayInitTypeSizeU3D489_tC2EE74E7DD93A10660513ACF1FE41B3A690C2EC3 ___01ACE43BCA5900258B77FB640EB4543838B9C3DE1CC8FB98107CB4FCC1C39214;
+	__StaticArrayInitTypeSizeU3D1144_t60E458583B24DFC876B488917556AEF5A3ED43A3 ___678B3A0A6E5854997DE9ED3F93982DC16F4E93A8A1B74541747B0D6F2A1DA9C1;
+};
+struct AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_StaticFields
+{
+	bool ___enableDebugPrints;
+};
+struct Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095_StaticFields
+{
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___defaultEncoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___unicodeEncoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___bigEndianUnicode;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___utf7Encoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___utf8Encoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___utf32Encoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___asciiEncoding;
+	Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* ___latin1Encoding;
+	Dictionary_2_t87EDE08B2E48F793A22DE50D6B3CC2E7EBB2DB54* ___encodings;
+	RuntimeObject* ___s_InternalSyncObject;
+};
+struct Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields
+{
+	Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* ___instance;
+	HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* ___HAPTIC_LIGHT;
+	HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* ___HAPTIC_MEDIUM;
+	HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* ___HAPTIC_HARD;
+	HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___PATTERN_LIGHT;
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* ___StateChanged;
+};
+struct IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_StaticFields
+{
+	IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___Any;
+	IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___Loopback;
+	IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___Broadcast;
+	IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___None;
+	IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___IPv6Any;
+	IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___IPv6Loopback;
+	IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___IPv6None;
+};
+struct String_t_StaticFields
+{
+	String_t* ___Empty;
+};
+struct U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_StaticFields
+{
+	U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B* ___U3CU3E9;
+	Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* ___U3CU3E9__8_0;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	String_t* ___TrueString;
+	String_t* ___FalseString;
+};
+struct Guid_t_StaticFields
+{
+	Guid_t ___Empty;
+};
+struct IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_StaticFields
+{
+	IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* ___Any;
+	IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* ___IPv6Any;
+};
+struct IntPtr_t_StaticFields
+{
+	intptr_t ___Zero;
+};
+struct Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_StaticFields
+{
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___kZero;
+};
+struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_StaticFields
+{
+	LocalDataStoreMgr_t205F1783D5CC2B148E829B5882E5406FF9A3AC1E* ___s_LocalDataStoreMgr;
+	AsyncLocal_1_t1D3339EA4C8650D2DEDDF9553E5C932B3DC2CCFD* ___s_asyncLocalCurrentCulture;
+	AsyncLocal_1_t1D3339EA4C8650D2DEDDF9553E5C932B3DC2CCFD* ___s_asyncLocalCurrentUICulture;
+};
+struct Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_ThreadStaticFields
+{
+	LocalDataStoreHolder_t789DD474AE5141213C2105CE57830ECFC2D3C03F* ___s_LocalDataStore;
+	CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* ___m_CurrentCulture;
+	CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* ___m_CurrentUICulture;
+	Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* ___current_thread;
+};
+struct Exception_t_StaticFields
+{
+	RuntimeObject* ___s_EDILock;
+};
+struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_StaticFields
+{
+	bool ___showKeyboardFocus;
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___s_None;
+};
+struct Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E_StaticFields
+{
+	EventHandler_1_t5D3FC4609BD8133ED1226D6D49A1D8076B16A9ED* ___AcceptCompletedHandler;
+	EventHandler_1_t5D3FC4609BD8133ED1226D6D49A1D8076B16A9ED* ___ReceiveCompletedHandler;
+	EventHandler_1_t5D3FC4609BD8133ED1226D6D49A1D8076B16A9ED* ___SendCompletedHandler;
+	TaskSocketAsyncEventArgs_1_tEB937620E5B15D91E5BFEFFA707CF800930F8401* ___s_rentedSocketSentinel;
+	Int32TaskSocketAsyncEventArgs_t36C5FC82499ED9DAFE7F05C38EF92D77A0B248E9* ___s_rentedInt32Sentinel;
+	Task_1_t4C228DE57804012969575431CFF12D57C875552D* ___s_zeroTask;
+	RuntimeObject* ___s_InternalSyncObject;
+	bool ___s_SupportsIPv4;
+	bool ___s_SupportsIPv6;
+	bool ___s_OSSupportsIPv6;
+	bool ___s_Initialized;
+	bool ___s_LoggingEnabled;
+	bool ___s_PerfCountersEnabled;
+	AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___AcceptAsyncCallback;
+	IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388* ___BeginAcceptCallback;
+	IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388* ___BeginAcceptReceiveCallback;
+	AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___ConnectAsyncCallback;
+	IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388* ___BeginConnectCallback;
+	AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___DisconnectAsyncCallback;
+	IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388* ___BeginDisconnectCallback;
+	AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___ReceiveAsyncCallback;
+	IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388* ___BeginReceiveCallback;
+	IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388* ___BeginReceiveGenericCallback;
+	AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___ReceiveFromAsyncCallback;
+	IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388* ___BeginReceiveFromCallback;
+	AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___SendAsyncCallback;
+	IOAsyncCallback_tDBBA8BBDA6B203613680E77BD4AD6320A1268388* ___BeginSendGenericCallback;
+	AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___SendToAsyncCallback;
+};
+struct GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9_StaticFields
+{
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___ms_Error;
+	SkinChangedDelegate_tA6D456E853D58AD2EF8A599F543C7E5BA8E94B98* ___m_SkinChanged;
+	GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* ___current;
+};
+struct PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53_StaticFields
+{
+	RuntimeObject* ___connectionNative;
+	PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53* ___s_Instance;
+};
+struct HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_StaticFields
+{
+	Guid_t ___PlayPatternMessage;
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
+{
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+	inline uint8_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+struct HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71  : public RuntimeArray
+{
+	ALIGN_FIELD (8) HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* m_Items[1];
+
+	inline HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeArray
+{
+	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+
+	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D  : public RuntimeArray
+{
+	ALIGN_FIELD (8) int64_t m_Items[1];
+
+	inline int64_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline int64_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, int64_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline int64_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline int64_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, int64_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C  : public RuntimeArray
+{
+	ALIGN_FIELD (8) int32_t m_Items[1];
+
+	inline int32_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline int32_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, int32_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline int32_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline int32_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, int32_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SaveController_GetSaveObject_TisRuntimeObject_mE2F2846180A8CC473B682131A299BC089F340277_gshared (String_t* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ConcurrentQueue_1_TryDequeue_m04C6B697D83A4AA4BAD38344201C140ED7DC5CAA_gshared (ConcurrentQueue_1_t38466BAF2E0933882FAC022407D638F7900CEED4* __this, RuntimeObject** ___0_result, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConcurrentQueue_1_Enqueue_m6E14BFDDF046BB59B8EEF4A398D5AB7F4720D0A4_gshared (ConcurrentQueue_1_t38466BAF2E0933882FAC022407D638F7900CEED4* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared (String_t* ___0_json, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConcurrentQueue_1__ctor_m45A2A2E43BA42D4368773A687E7BB6CBCD510345_gshared (ConcurrentQueue_1_t38466BAF2E0933882FAC022407D638F7900CEED4* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAction_1__ctor_m0C2FC6B483B474AE9596A43EBA7FF6E85503A92A_gshared (UnityAction_1_t9C30BCD020745BF400CBACF22C6F34ADBA2DDA6A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m92E9AB321FBD7147CA109C822D99C8B0610C27B7_gshared (Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mED5C451F158CDDD2B3F4B0720CD248DA9DB27B25_gshared (Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907* __this, int32_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_mAF1EF7DA16BD70E252EA5C4B0F74DE519A02CBCD_gshared (Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907* __this, int32_t ___0_key, RuntimeObject* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidJavaObject_GetStatic_TisRuntimeObject_m4EF4E4761A0A6E99E0A298F653E8129B1494E4C9_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidJavaObject_Call_TisRuntimeObject_mA5AF1A9E0463CE91F0ACB6AC2FE0C1922B579EF7_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AndroidJavaObject_GetStatic_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m740F3401DEA4A75BADD753EFF71D2328B4147BFC_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Comparison_1__ctor_mC1E8799BBCE317B612875123C9C894BD470BFE6A_gshared (Comparison_1_t62E531E7B8260E2C6C2718C3BDB8CF8655139645* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Sort_TisRuntimeObject_mFC83E20748A5276FAA7611C2DCFCAE00737CF389_gshared (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_array, Comparison_1_t62E531E7B8260E2C6C2718C3BDB8CF8655139645* ___1_comparison, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m2EBA73E03CE51821DFC1880E09649FFBFC3ABA75_gshared (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_gshared (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_gshared_inline (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, int64_t ___0_item, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_gshared_inline (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* List_1_ToArray_m8F215FE5D98A9A41546F2FD6AB5A741A5B6F1D92_gshared (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_gshared (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidJavaObject_CallStatic_TisRuntimeObject_mCAFE27630F6092C4910E14592B050DACFCBE146F_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Dictionary_2_get_Item_mC3FEA647E750C27367C990777D8890E0E712E514_gshared (Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907* __this, int32_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CoreExtensions_IsNullOrEmpty_TisRuntimeObject_m24716821898F2B0C72F8F6C8D0474BB04D2DC1AC_gshared (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_array, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_mAE92ED7C1F3B1E0BB409F462197C47FD982345E1_gshared (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, int64_t ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m378B392086AAB6F400944FA9839516326B3F7BB8_gshared (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method) ;
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00 (Delegate_t* ___0_a, Delegate_t* ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3 (Delegate_t* ___0_source, Delegate_t* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Haptic_get_IsInitialized_mBD08E138DC18FF06D52848577A0BA749649AE326 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Haptic_IsInstanceExists_mF615C95085DD40FBC49F9829A3C4412D2B5FA95B (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SaveController_MarkAsSaveIsRequired_mC43B6B31B2FF7F8FED774FB1D5DE5D0CFC752928 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LogManager_Log_mB169A704597005B16580AE92FBE3FA5C30F19C1B (String_t* ___0_message, int32_t ___1_category, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SimpleBoolCallback_Invoke_m013ADEFF6A3841A201C4713689D6EBE4A8720C31_inline (SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* __this, bool ___0_value, const RuntimeMethod* method) ;
+inline HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B* SaveController_GetSaveObject_TisHapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B_m5BAAD80B2E6D3929D5D4E1AAB969D6A680EF5623 (String_t* ___0_key, const RuntimeMethod* method)
+{
+	return ((  HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B* (*) (String_t*, const RuntimeMethod*))SaveController_GetSaveObject_TisRuntimeObject_mE2F2846180A8CC473B682131A299BC089F340277_gshared)(___0_key, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* Haptic_GetPlatformWrapper_mB8C5F6B6A6A6F30C842A0056C2A841DD44522503 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF (String_t* ___0_message, int32_t ___1_category, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float HapticData_get_Duration_m31C04B75A81ABF7CF3E626F054C53E9FA7BE8746_inline (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float HapticData_get_Intensity_mC6409AA60208FD931D6C8F54F504FCBF87FF174E_inline (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_Play_mC8070C549980F140E84EB24AA755A4A477A8F869 (float ___0_duration, float ___1_intensity, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Haptic_get_IsActive_m598BB53CEE81EEF6FC8714F75817BE9141FF89BF (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticWrapper__ctor_mE835005D0F73FF6FC9E39FB9A4FC806B0F5A2C26 (AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticData__ctor_m58E039974F05E49F303E17B00C9D44FF9B0B4E3C (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* __this, float ___0_duration, float ___1_intensity, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticEvent__ctor_m4A723C102DDA4BF0D02E13F99FB07826DCE8DFD8 (HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticPattern__ctor_m68D1651CDCB541AD1C3CFDF275755E832C8E77AD (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* __this, String_t* ___0_id, HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* ___1_pattern, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_timeSinceLevelLoad_m65C386103A91B172781032CA1A6FFDEC8CFBA921 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DuoFloat_Lerp_m204D01E4E8D19C3C9998CB9282499935FA67AB34 (DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* __this, float ___0_t, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DuoFloat__ctor_mAF682087AB96794ECA8DE82A9F20DCA139217789 (DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* __this, float ___0_firstValue, float ___1_secondValue, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitAsyncU3Ed__2__ctor_m1A489F5A55E51109A3D65C72510CE4DD7C2E60A8 (U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InitModule__ctor_mB63BC2AB083368E4563EE0132B818D5A85573879 (InitModule_tAB59C22C9D48F281C236CA2963EDA5BDE72E0314* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic__ctor_m1205D288450DFEEBD823E3E3A7B534139E9B0820 (Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_set_IsActive_mE66B3AA7FF7D63D04E3B4BF1C0C65DD6BB3788B8 (bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* HapticNetworkReceiver_GetLocalIP_m44D52D2F90C0F84C46A4F401B652D36E681D8CE5 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThreadStart__ctor_m35CE51F76358F20E4A0C8F2963C3AE14E5FF7E71 (ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread__ctor_m1FA23A179DF4F5B659689D6FA40DE903086212E2 (Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* __this, ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2* ___0_start, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_set_IsBackground_m45F00BD4C46F9B8A7C46A20A170B22BABB8FBA30 (Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void Thread_Start_m2230799AA331CA9ACEF49D5500281D0C1A9F72FA (Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* __this, const RuntimeMethod* method) ;
+inline bool ConcurrentQueue_1_TryDequeue_m176C65C9DCE178799C348336E14CB35C748E9421 (ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E* __this, String_t** ___0_result, const RuntimeMethod* method)
+{
+	return ((  bool (*) (ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E*, String_t**, const RuntimeMethod*))ConcurrentQueue_1_TryDequeue_m04C6B697D83A4AA4BAD38344201C140ED7DC5CAA_gshared)(__this, ___0_result, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_PlayPattern_m32AC8A114671BC6756349ABD18573F51071B0A85 (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, String_t* ___0_json, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UdpClient_Close_m5441019910E37A7F7B8610A46769004E614FF5B6 (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_Unload_m0D85ADFEFF5108D7ABCB5A7A2B3B2F9CF941C7CC (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UdpClient__ctor_m6DCF61B7A404114E51B86974B1B4E028F45C3442 (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* __this, int32_t ___0_port, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IPEndPoint__ctor_m902C98F9E3F36B20B3C2E030AA91B62E2BC7A85A (IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* __this, IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* ___0_address, int32_t ___1_port, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* UdpClient_Receive_mC682A8DE6CD86CEFA3CE52852574FD3437EC7DA9 (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* __this, IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB** ___0_remoteEP, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9 (const RuntimeMethod* method) ;
+inline void ConcurrentQueue_1_Enqueue_mCFA14FE2B9D147552CD2F7F340F53A0284BB92B8 (ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E* __this, String_t* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E*, String_t*, const RuntimeMethod*))ConcurrentQueue_1_Enqueue_m6E14BFDDF046BB59B8EEF4A398D5AB7F4720D0A4_gshared)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UdpClient__ctor_m0F676D3E94A3C7B908DE1FBDF08FEB36894F100E (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UdpClient_set_EnableBroadcast_m688F1E60EF735B1882A69C9AB606225DC2049188 (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UdpClient_Send_m4DCD3993D7ED39C174F8FC8F653DD30F1BDF47B9 (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_dgram, int32_t ___1_bytes, IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* ___2_endPoint, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Thread_Sleep_m71DE163765BF465EC4A0163F2ED4D43143094549 (int32_t ___0_millisecondsTimeout, const RuntimeMethod* method) ;
+inline HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* JsonUtility_FromJson_TisHapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_mE2B77A7D5EDFE2205B1A808CE3FAFAA7D10DCC2C (String_t* ___0_json, const RuntimeMethod* method)
+{
+	return ((  HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* (*) (String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared)(___0_json, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_RegisterPattern_mE7D85053ACB27B8D101C5A300CCBBC80A8094117 (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_hapticPattern, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_Play_mA03F9649520F7396E4627DA8EA3C73E374A81B82 (String_t* ___0_patternID, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* GUI_get_skin_m97EC9EB4628B311C0DB7DF9FB19FAD82D6790A1B (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* GUISkin_get_box_m21BE7FC56D903B95BAFAE8890425D330EA88D893 (GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIStyle__ctor_m17492C8BACB0D28C7701C11500A7132F11B5F04E (GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* __this, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___0_other, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIStyle_set_fontSize_m7F6DFD61AC55072C95DC3825B77FAE3F75F1CCFF (GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIStyle_set_alignment_mEDC62A775C9551DBD1FEE4043F115E034EF12937 (GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* GUIStyle_get_normal_mDEA2808FBD692E505784BD9E521738B4321BCA8F (GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIStyleState_set_textColor_m5868D12858E6402247953BCCDDA7A543BE6084F1 (GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987 (String_t* ___0_format, RuntimeObject* ___1_arg0, RuntimeObject* ___2_arg1, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUI_Box_mA7CD625644B152E88F757E4B51F12A827BE49E57 (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_position, String_t* ___1_text, GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___2_style, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Socket__ctor_m35F1F4B4872E251867DA16460F06E903A30E4595 (Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* __this, int32_t ___0_addressFamily, int32_t ___1_socketType, int32_t ___2_protocolType, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Socket_Connect_m993753041D265405B096790E1989EB5895A9CD5E (Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* __this, String_t* ___0_host, int32_t ___1_port, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EndPoint_t6233F4E2EB9F0F2D36E187F12BE050E6D8B73564* Socket_get_LocalEndPoint_m3A2B4E60F0096E2DB31F7C28EF3CDE148D256E26 (Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* IPEndPoint_get_Address_m72F783CB76E10E9DBDF680CCC1DAAED201BABB1C_inline (IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* __this, const RuntimeMethod* method) ;
+inline void ConcurrentQueue_1__ctor_m89BBD6C7776D544A0D57C1322765E6D9BC513CB1 (ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E* __this, const RuntimeMethod* method)
+{
+	((  void (*) (ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E*, const RuntimeMethod*))ConcurrentQueue_1__ctor_m45A2A2E43BA42D4368773A687E7BB6CBCD510345_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53* PlayerConnection_get_instance_mF08ABE514910AD8B105D42561CF97CBF135ABD3B (const RuntimeMethod* method) ;
+inline void UnityAction_1__ctor_m0D542CD6AC9BF19A26926782F3B43A5E71BDB1AB (UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2*, RuntimeObject*, intptr_t, const RuntimeMethod*))UnityAction_1__ctor_m0C2FC6B483B474AE9596A43EBA7FF6E85503A92A_gshared)(__this, ___0_object, ___1_method, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerConnection_Register_m8760D786583FD5793A2FCE5EEB8DDA17C649CF86 (PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53* __this, Guid_t ___0_messageId, UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2* ___1_callback, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerConnection_Unregister_m46303AD2C27A3A71B6569376E5C461AF1D0DFCE1 (PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53* __this, Guid_t ___0_messageId, UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2* ___1_callback, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Guid__ctor_mAE66BA1C43B4194F4F7991E2E30370E36CBBF830 (Guid_t* __this, String_t* ___0_g, const RuntimeMethod* method) ;
+inline void Dictionary_2__ctor_m929638D3726B538AC1A2956B29F8917C99681FF3 (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0*, const RuntimeMethod*))Dictionary_2__ctor_m92E9AB321FBD7147CA109C822D99C8B0610C27B7_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleCallback__ctor_m04CB2FCA2E02060AB815575D93F70A51542A7DE6 (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseHapticWrapper_Try_m54189A9B6B3515505D0B104815390EE8E6E2688E (BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* __this, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___0_action, String_t* ___1_errorMessage, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0__ctor_m86A1C7DE037F8B14DB0D3E3432E70F41B61EFE03 (U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_mD343C1F0D010F329204BEB9908AFDEE77B77F109 (U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* __this, const RuntimeMethod* method) ;
+inline bool Dictionary_2_ContainsKey_m38D7D27B521C5BA98FE44DA03BC48038247FADF5 (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* __this, int32_t ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0*, int32_t, const RuntimeMethod*))Dictionary_2_ContainsKey_mED5C451F158CDDD2B3F4B0720CD248DA9DB27B25_gshared)(__this, ___0_key, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___0_format, RuntimeObject* ___1_arg0, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticPattern__ctor_mBF1BE6E5AB6D2DE53A5E88607D3602D03C475162 (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_hapticPattern, const RuntimeMethod* method) ;
+inline void Dictionary_2_Add_m3EE4C8C1C9E10F3A3BD8C7974C6CA3EC6CF54A70 (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* __this, int32_t ___0_key, AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0*, int32_t, AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2*, const RuntimeMethod*))Dictionary_2_Add_mAF1EF7DA16BD70E252EA5C4B0F74DE519A02CBCD_gshared)(__this, ___0_key, ___1_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseHapticWrapper__ctor_mD98EFD783787101C68B59E0D2840AAE80E7EC676 (BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389 (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* __this, String_t* ___0_className, const RuntimeMethod* method) ;
+inline AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method)
+{
+	return ((  AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, const RuntimeMethod*))AndroidJavaObject_GetStatic_TisRuntimeObject_m4EF4E4761A0A6E99E0A298F653E8129B1494E4C9_gshared)(__this, ___0_fieldName, method);
+}
+inline AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method)
+{
+	return ((  AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*))AndroidJavaObject_Call_TisRuntimeObject_mA5AF1A9E0463CE91F0ACB6AC2FE0C1922B579EF7_gshared)(__this, ___0_methodName, ___1_args, method);
+}
+inline int32_t AndroidJavaObject_GetStatic_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m740F3401DEA4A75BADD753EFF71D2328B4147BFC (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, const RuntimeMethod*))AndroidJavaObject_GetStatic_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m740F3401DEA4A75BADD753EFF71D2328B4147BFC_gshared)(__this, ___0_fieldName, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* HapticPattern_get_Pattern_mFE7A9CDD6BB62FFE5F388284D5615932BF989D1C_inline (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Array_Clone_m66C9D0727C9BAA0995E4142F29B45BC03582E042 (RuntimeArray* __this, const RuntimeMethod* method) ;
+inline void Comparison_1__ctor_mA61FBFFB5E245E9EE4DCA2341F8A0C8D25D96174 (Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C*, RuntimeObject*, intptr_t, const RuntimeMethod*))Comparison_1__ctor_mC1E8799BBCE317B612875123C9C894BD470BFE6A_gshared)(__this, ___0_object, ___1_method, method);
+}
+inline void Array_Sort_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m3C71A679C0FFA6F7015634C8F785A36FE3B04593 (HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* ___0_array, Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* ___1_comparison, const RuntimeMethod* method)
+{
+	((  void (*) (HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71*, Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C*, const RuntimeMethod*))Array_Sort_TisRuntimeObject_mFC83E20748A5276FAA7611C2DCFCAE00737CF389_gshared)(___0_array, ___1_comparison, method);
+}
+inline void List_1__ctor_m2EBA73E03CE51821DFC1880E09649FFBFC3ABA75 (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A*, const RuntimeMethod*))List_1__ctor_m2EBA73E03CE51821DFC1880E09649FFBFC3ABA75_gshared)(__this, method);
+}
+inline void List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8 (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*, const RuntimeMethod*))List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) ;
+inline void List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_inline (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, int64_t ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A*, int64_t, const RuntimeMethod*))List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_gshared_inline)(__this, ___0_item, method);
+}
+inline void List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*, int32_t, const RuntimeMethod*))List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_gshared_inline)(__this, ___0_item, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) ;
+inline Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* List_1_ToArray_m8F215FE5D98A9A41546F2FD6AB5A741A5B6F1D92 (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, const RuntimeMethod* method)
+{
+	return ((  Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* (*) (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A*, const RuntimeMethod*))List_1_ToArray_m8F215FE5D98A9A41546F2FD6AB5A741A5B6F1D92_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AndroidHapticPattern_set_Pattern_m88725148F4D6A635A0F7178A48812F51BFD82384_inline (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* ___0_value, const RuntimeMethod* method) ;
+inline Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, const RuntimeMethod* method)
+{
+	return ((  Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* (*) (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*, const RuntimeMethod*))List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AndroidHapticPattern_set_Amplitudes_mD9E22369E4D9F560326E0E0417BE95B6EC1836E9_inline (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m51A0CA80063B363B33391FAF3C40A3F8C009209A (U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Single_CompareTo_m06F7868162EB392D3E99103D1A0BD27463C9E66F (float* __this, float ___0_value, const RuntimeMethod* method) ;
+inline AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method)
+{
+	return ((  AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*))AndroidJavaObject_CallStatic_TisRuntimeObject_mCAFE27630F6092C4910E14592B050DACFCBE146F_gshared)(__this, ___0_methodName, ___1_args, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Call_mDEF7846E2AB1C5379069BB21049ED55A9D837B1C (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
+inline AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* Dictionary_2_get_Item_m6F659CE5F6E380A0834A66E0AC39CE775491004F (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* __this, int32_t ___0_key, const RuntimeMethod* method)
+{
+	return ((  AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* (*) (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0*, int32_t, const RuntimeMethod*))Dictionary_2_get_Item_mC3FEA647E750C27367C990777D8890E0E712E514_gshared)(__this, ___0_key, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* AndroidHapticPattern_get_Pattern_mBEDD1A48342F2EFEBDFD96010DF3682DE9D568C8_inline (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* AndroidHapticPattern_get_Amplitudes_mF01215C7D8EE9365FF84AE09F3190DC80C85875A_inline (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogException_mAB3F4DC7297ED8FBB49DAA718B70E59A6B0171B0 (Exception_t* ___0_exception, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseHapticWrapper_Log_m9099C4794E0942072B9AC5FEC254C5E1B6BBF525 (BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* __this, String_t* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* JsonUtility_ToJson_m28CC6843B9D3723D88AD13EA3829B71FDE7826BA (RuntimeObject* ___0_obj, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+inline bool CoreExtensions_IsNullOrEmpty_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m92F1565B9BF841ABEC384C85C5F344B680431A9D (HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* ___0_array, const RuntimeMethod* method)
+{
+	return ((  bool (*) (HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71*, const RuntimeMethod*))CoreExtensions_IsNullOrEmpty_TisRuntimeObject_m24716821898F2B0C72F8F6C8D0474BB04D2DC1AC_gshared)(___0_array, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) ;
+inline void List_1_AddWithResize_mAE92ED7C1F3B1E0BB409F462197C47FD982345E1 (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, int64_t ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A*, int64_t, const RuntimeMethod*))List_1_AddWithResize_mAE92ED7C1F3B1E0BB409F462197C47FD982345E1_gshared)(__this, ___0_item, method);
+}
+inline void List_1_AddWithResize_m378B392086AAB6F400944FA9839516326B3F7BB8 (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*, int32_t, const RuntimeMethod*))List_1_AddWithResize_m378B392086AAB6F400944FA9839516326B3F7BB8_gshared)(__this, ___0_item, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106670
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mA10F1EFE7E4C7E3AC789627546394E6DB51424AD (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t5EBBDC0C96F2C1F17CC6116F0E352691A257DA98____01ACE43BCA5900258B77FB640EB4543838B9C3DE1CC8FB98107CB4FCC1C39214_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t5EBBDC0C96F2C1F17CC6116F0E352691A257DA98____678B3A0A6E5854997DE9ED3F93982DC16F4E93A8A1B74541747B0D6F2A1DA9C1_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)1144));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t5EBBDC0C96F2C1F17CC6116F0E352691A257DA98____678B3A0A6E5854997DE9ED3F93982DC16F4E93A8A1B74541747B0D6F2A1DA9C1_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
+		(&V_0)->___FilePathsData = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)489));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = L_3;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t5EBBDC0C96F2C1F17CC6116F0E352691A257DA98____01ACE43BCA5900258B77FB640EB4543838B9C3DE1CC8FB98107CB4FCC1C39214_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
+		(&V_0)->___TypesData = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___TypesData), (void*)L_4);
+		(&V_0)->___TotalFiles = ((int32_t)14);
+		(&V_0)->___TotalTypes = ((int32_t)15);
+		(&V_0)->___IsEditorOnly = (bool)0;
+		MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B L_6 = V_0;
+		V_1 = L_6;
+		goto IL_005f;
+	}
+
+IL_005f:
+	{
+		MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B L_7 = V_1;
+		return L_7;
+	}
+}
+// Method Definition Index: 106671
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m646A2EECF317A49914F47604E0F2C685CDA700CF (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t57A83ECAA672F5C98192DDD082640E27981BF35E* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshal_pinvoke(const MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B& unmarshaled, MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshaled_pinvoke& marshaled)
+{
+	marshaled.___FilePathsData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___FilePathsData);
+	marshaled.___TypesData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___TypesData);
+	marshaled.___TotalTypes = unmarshaled.___TotalTypes;
+	marshaled.___TotalFiles = unmarshaled.___TotalFiles;
+	marshaled.___IsEditorOnly = static_cast<int32_t>(unmarshaled.___IsEditorOnly);
+}
+IL2CPP_EXTERN_C void MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshal_pinvoke_back(const MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshaled_pinvoke& marshaled, MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B& unmarshaled)
+{
+	unmarshaled.___FilePathsData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___FilePathsData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData));
+	unmarshaled.___TypesData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___TypesData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData));
+	int32_t unmarshaledTotalTypes_temp_2 = 0;
+	unmarshaledTotalTypes_temp_2 = marshaled.___TotalTypes;
+	unmarshaled.___TotalTypes = unmarshaledTotalTypes_temp_2;
+	int32_t unmarshaledTotalFiles_temp_3 = 0;
+	unmarshaledTotalFiles_temp_3 = marshaled.___TotalFiles;
+	unmarshaled.___TotalFiles = unmarshaledTotalFiles_temp_3;
+	bool unmarshaledIsEditorOnly_temp_4 = false;
+	unmarshaledIsEditorOnly_temp_4 = static_cast<bool>(marshaled.___IsEditorOnly);
+	unmarshaled.___IsEditorOnly = unmarshaledIsEditorOnly_temp_4;
+}
+IL2CPP_EXTERN_C void MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshal_pinvoke_cleanup(MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshaled_pinvoke& marshaled)
+{
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___FilePathsData);
+	marshaled.___FilePathsData = NULL;
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___TypesData);
+	marshaled.___TypesData = NULL;
+}
+IL2CPP_EXTERN_C void MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshal_com(const MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B& unmarshaled, MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshaled_com& marshaled)
+{
+	marshaled.___FilePathsData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___FilePathsData);
+	marshaled.___TypesData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___TypesData);
+	marshaled.___TotalTypes = unmarshaled.___TotalTypes;
+	marshaled.___TotalFiles = unmarshaled.___TotalFiles;
+	marshaled.___IsEditorOnly = static_cast<int32_t>(unmarshaled.___IsEditorOnly);
+}
+IL2CPP_EXTERN_C void MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshal_com_back(const MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshaled_com& marshaled, MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B& unmarshaled)
+{
+	unmarshaled.___FilePathsData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___FilePathsData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData));
+	unmarshaled.___TypesData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___TypesData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData));
+	int32_t unmarshaledTotalTypes_temp_2 = 0;
+	unmarshaledTotalTypes_temp_2 = marshaled.___TotalTypes;
+	unmarshaled.___TotalTypes = unmarshaledTotalTypes_temp_2;
+	int32_t unmarshaledTotalFiles_temp_3 = 0;
+	unmarshaledTotalFiles_temp_3 = marshaled.___TotalFiles;
+	unmarshaled.___TotalFiles = unmarshaledTotalFiles_temp_3;
+	bool unmarshaledIsEditorOnly_temp_4 = false;
+	unmarshaledIsEditorOnly_temp_4 = static_cast<bool>(marshaled.___IsEditorOnly);
+	unmarshaled.___IsEditorOnly = unmarshaledIsEditorOnly_temp_4;
+}
+IL2CPP_EXTERN_C void MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshal_com_cleanup(MonoScriptData_tED453DF2801FB5A6F787E3C1E688BD6F0F50AE8B_marshaled_com& marshaled)
+{
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___FilePathsData);
+	marshaled.___FilePathsData = NULL;
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___TypesData);
+	marshaled.___TypesData = NULL;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106672
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_add_StateChanged_m04612FB7033AC18FF0FF989835B9FAFCDC6AEF70 (SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* V_0 = NULL;
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* V_1 = NULL;
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_0 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___StateChanged;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_1 = V_0;
+		V_1 = L_1;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_2 = V_1;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00(L_2, L_3, NULL);
+		V_2 = ((SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*)CastclassSealed((RuntimeObject*)L_4, SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_5 = V_2;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_6 = V_1;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_7;
+		L_7 = InterlockedCompareExchangeImpl<SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*>((&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___StateChanged), L_5, L_6);
+		V_0 = L_7;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_8 = V_0;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_9 = V_1;
+		if ((!(((RuntimeObject*)(SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*)L_8) == ((RuntimeObject*)(SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 106673
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_remove_StateChanged_m20A6867E7933BFE4565B5CF95BED70C72A1391F1 (SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* V_0 = NULL;
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* V_1 = NULL;
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_0 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___StateChanged;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_1 = V_0;
+		V_1 = L_1;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_2 = V_1;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3(L_2, L_3, NULL);
+		V_2 = ((SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*)CastclassSealed((RuntimeObject*)L_4, SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_5 = V_2;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_6 = V_1;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_7;
+		L_7 = InterlockedCompareExchangeImpl<SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*>((&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___StateChanged), L_5, L_6);
+		V_0 = L_7;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_8 = V_0;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_9 = V_1;
+		if ((!(((RuntimeObject*)(SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*)L_8) == ((RuntimeObject*)(SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 106674
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Haptic_get_IsActive_m598BB53CEE81EEF6FC8714F75817BE9141FF89BF (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:40>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = Haptic_get_IsInitialized_mBD08E138DC18FF06D52848577A0BA749649AE326(NULL);
+		if (!L_0)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_1 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_1);
+		bool L_2 = L_1->___isActive;
+		G_B3_0 = ((int32_t)(L_2));
+		goto IL_0014;
+	}
+
+IL_0013:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0014:
+	{
+		return (bool)G_B3_0;
+	}
+}
+// Method Definition Index: 106675
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_set_IsActive_mE66B3AA7FF7D63D04E3B4BF1C0C65DD6BB3788B8 (bool ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8A45D0D8311C8D73121FDD6C8B401E1AD3C58E0E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8F4D5C427CFA5FCCBD38E02EBC6722093CAA1EDD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE7D210279F10E019D0D11C68DC0D8DFA81933584);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	String_t* G_B4_0 = NULL;
+	String_t* G_B3_0 = NULL;
+	String_t* G_B5_0 = NULL;
+	String_t* G_B5_1 = NULL;
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* G_B7_0 = NULL;
+	SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* G_B6_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:43>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = Haptic_IsInstanceExists_mF615C95085DD40FBC49F9829A3C4412D2B5FA95B(NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:43>
+		goto IL_0062;
+	}
+
+IL_000f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:45>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_2 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		bool L_3 = ___0_value;
+		NullCheck(L_2);
+		L_2->___isActive = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:46>
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_4 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_4);
+		HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B* L_5 = L_4->___save;
+		bool L_6 = ___0_value;
+		NullCheck(L_5);
+		L_5->___IsActive = L_6;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:48>
+		SaveController_MarkAsSaveIsRequired_mC43B6B31B2FF7F8FED774FB1D5DE5D0CFC752928(NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:50>
+		bool L_7 = ___0_value;
+		if (L_7)
+		{
+			G_B4_0 = _stringLiteralE7D210279F10E019D0D11C68DC0D8DFA81933584;
+			goto IL_003f;
+		}
+		G_B3_0 = _stringLiteralE7D210279F10E019D0D11C68DC0D8DFA81933584;
+	}
+	{
+		G_B5_0 = _stringLiteral8A45D0D8311C8D73121FDD6C8B401E1AD3C58E0E;
+		G_B5_1 = G_B3_0;
+		goto IL_0044;
+	}
+
+IL_003f:
+	{
+		G_B5_0 = _stringLiteral8F4D5C427CFA5FCCBD38E02EBC6722093CAA1EDD;
+		G_B5_1 = G_B4_0;
+	}
+
+IL_0044:
+	{
+		String_t* L_8;
+		L_8 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B5_1, G_B5_0, NULL);
+		LogManager_Log_mB169A704597005B16580AE92FBE3FA5C30F19C1B(L_8, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:52>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_9 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___StateChanged;
+		SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* L_10 = L_9;
+		if (L_10)
+		{
+			G_B7_0 = L_10;
+			goto IL_005b;
+		}
+		G_B6_0 = L_10;
+	}
+	{
+		goto IL_0062;
+	}
+
+IL_005b:
+	{
+		bool L_11 = ___0_value;
+		NullCheck(G_B7_0);
+		SimpleBoolCallback_Invoke_m013ADEFF6A3841A201C4713689D6EBE4A8720C31_inline(G_B7_0, L_11, NULL);
+	}
+
+IL_0062:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:53>
+		return;
+	}
+}
+// Method Definition Index: 106676
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Haptic_get_IsInitialized_mBD08E138DC18FF06D52848577A0BA749649AE326 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:57>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_0 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		return (bool)((!(((RuntimeObject*)(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+	}
+}
+// Method Definition Index: 106677
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic__ctor_m1205D288450DFEEBD823E3E3A7B534139E9B0820 (Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SaveController_GetSaveObject_TisHapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B_m5BAAD80B2E6D3929D5D4E1AAB969D6A680EF5623_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1B6FBCE7BC364CC377FA6F5113EBAE52F97F5FE9);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE0C07794D9D8D1547EF130F005ABD901FE8F5136);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:63>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:65>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance), (void*)__this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:67>
+		HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B* L_0;
+		L_0 = SaveController_GetSaveObject_TisHapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B_m5BAAD80B2E6D3929D5D4E1AAB969D6A680EF5623(_stringLiteralE0C07794D9D8D1547EF130F005ABD901FE8F5136, SaveController_GetSaveObject_TisHapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B_m5BAAD80B2E6D3929D5D4E1AAB969D6A680EF5623_RuntimeMethod_var);
+		__this->___save = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___save), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:68>
+		HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B* L_1 = __this->___save;
+		NullCheck(L_1);
+		bool L_2 = L_1->___IsActive;
+		__this->___isActive = L_2;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:70>
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_3;
+		L_3 = Haptic_GetPlatformWrapper_mB8C5F6B6A6A6F30C842A0056C2A841DD44522503(NULL);
+		__this->___wrapper = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___wrapper), (void*)L_3);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:72>
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_4 = __this->___wrapper;
+		V_0 = (bool)((((RuntimeObject*)(BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7*)L_4) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_5 = V_0;
+		if (!L_5)
+		{
+			goto IL_0056;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:74>
+		LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF(_stringLiteral1B6FBCE7BC364CC377FA6F5113EBAE52F97F5FE9, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:75>
+		goto IL_0073;
+	}
+
+IL_0056:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:78>
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_6 = __this->___wrapper;
+		NullCheck(L_6);
+		VirtualActionInvoker0::Invoke(4, L_6);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:79>
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_7 = __this->___wrapper;
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_8 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___PATTERN_LIGHT;
+		NullCheck(L_7);
+		VirtualActionInvoker1< HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* >::Invoke(7, L_7, L_8);
+	}
+
+IL_0073:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:80>
+		return;
+	}
+}
+// Method Definition Index: 106678
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_RegisterPattern_mE7D85053ACB27B8D101C5A300CCBBC80A8094117 (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_hapticPattern, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:87>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = Haptic_IsInstanceExists_mF615C95085DD40FBC49F9829A3C4412D2B5FA95B(NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:87>
+		goto IL_0033;
+	}
+
+IL_000f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:88>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_2 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_3 = L_2->___wrapper;
+		V_1 = (bool)((((RuntimeObject*)(BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:88>
+		goto IL_0033;
+	}
+
+IL_0022:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:90>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_5 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_5);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_6 = L_5->___wrapper;
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_7 = ___0_hapticPattern;
+		NullCheck(L_6);
+		VirtualActionInvoker1< HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* >::Invoke(7, L_6, L_7);
+	}
+
+IL_0033:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:91>
+		return;
+	}
+}
+// Method Definition Index: 106679
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_Play_mEDEE08134CE00B63769C88136F752E96236822AE (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* ___0_hapticData, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:96>
+		HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* L_0 = ___0_hapticData;
+		NullCheck(L_0);
+		float L_1;
+		L_1 = HapticData_get_Duration_m31C04B75A81ABF7CF3E626F054C53E9FA7BE8746_inline(L_0, NULL);
+		HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* L_2 = ___0_hapticData;
+		NullCheck(L_2);
+		float L_3;
+		L_3 = HapticData_get_Intensity_mC6409AA60208FD931D6C8F54F504FCBF87FF174E_inline(L_2, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_Play_mC8070C549980F140E84EB24AA755A4A477A8F869(L_1, L_3, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:97>
+		return;
+	}
+}
+// Method Definition Index: 106680
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_Play_mC8070C549980F140E84EB24AA755A4A477A8F869 (float ___0_duration, float ___1_intensity, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:102>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = Haptic_get_IsActive_m598BB53CEE81EEF6FC8714F75817BE9141FF89BF(NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:102>
+		goto IL_0045;
+	}
+
+IL_000f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:103>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_2 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_3 = L_2->___wrapper;
+		V_1 = (bool)((((RuntimeObject*)(BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:103>
+		goto IL_0045;
+	}
+
+IL_0022:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:104>
+		float L_5 = ___0_duration;
+		V_2 = (bool)((((int32_t)((!(((float)L_5) <= ((float)(0.0f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_6 = V_2;
+		if (!L_6)
+		{
+			goto IL_0033;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:104>
+		goto IL_0045;
+	}
+
+IL_0033:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:106>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_7 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_7);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_8 = L_7->___wrapper;
+		float L_9 = ___0_duration;
+		float L_10 = ___1_intensity;
+		NullCheck(L_8);
+		VirtualActionInvoker2< float, float >::Invoke(5, L_8, L_9, L_10);
+	}
+
+IL_0045:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:107>
+		return;
+	}
+}
+// Method Definition Index: 106681
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_Play_m9D00C6AC69679C698ECFAE1D6D84F3F2528E1E69 (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_pattern, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:112>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = Haptic_get_IsActive_m598BB53CEE81EEF6FC8714F75817BE9141FF89BF(NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:112>
+		goto IL_0038;
+	}
+
+IL_000f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:113>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_2 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_3 = L_2->___wrapper;
+		V_1 = (bool)((((RuntimeObject*)(BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:113>
+		goto IL_0038;
+	}
+
+IL_0022:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:115>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_5 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_5);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_6 = L_5->___wrapper;
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_7 = ___0_pattern;
+		NullCheck(L_7);
+		String_t* L_8;
+		L_8 = HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline(L_7, NULL);
+		NullCheck(L_6);
+		VirtualActionInvoker1< String_t* >::Invoke(6, L_6, L_8);
+	}
+
+IL_0038:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:116>
+		return;
+	}
+}
+// Method Definition Index: 106682
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_Play_mA03F9649520F7396E4627DA8EA3C73E374A81B82 (String_t* ___0_patternID, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:121>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = Haptic_get_IsActive_m598BB53CEE81EEF6FC8714F75817BE9141FF89BF(NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:121>
+		goto IL_0033;
+	}
+
+IL_000f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:122>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_2 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_3 = L_2->___wrapper;
+		V_1 = (bool)((((RuntimeObject*)(BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:122>
+		goto IL_0033;
+	}
+
+IL_0022:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:124>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_5 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_5);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_6 = L_5->___wrapper;
+		String_t* L_7 = ___0_patternID;
+		NullCheck(L_6);
+		VirtualActionInvoker1< String_t* >::Invoke(6, L_6, L_7);
+	}
+
+IL_0033:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:125>
+		return;
+	}
+}
+// Method Definition Index: 106683
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic_Unload_m0D85ADFEFF5108D7ABCB5A7A2B3B2F9CF941C7CC (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:130>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance = (Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance), (void*)(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:131>
+		((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___StateChanged = (SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___StateChanged), (void*)(SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:132>
+		return;
+	}
+}
+// Method Definition Index: 106684
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Haptic_IsInstanceExists_mF615C95085DD40FBC49F9829A3C4412D2B5FA95B (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFEC3E1C71B71E838CF08C2E80C486287EA83983E);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:136>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_0 = ((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((((RuntimeObject*)(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:138>
+		LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF(_stringLiteralFEC3E1C71B71E838CF08C2E80C486287EA83983E, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:139>
+		V_1 = (bool)0;
+		goto IL_0022;
+	}
+
+IL_001e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:142>
+		V_1 = (bool)1;
+		goto IL_0022;
+	}
+
+IL_0022:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:143>
+		bool L_2 = V_1;
+		return L_2;
+	}
+}
+// Method Definition Index: 106685
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* Haptic_GetPlatformWrapper_mB8C5F6B6A6A6F30C842A0056C2A841DD44522503 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* V_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:152>
+		AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* L_0 = (AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45*)il2cpp_codegen_object_new(AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45_il2cpp_TypeInfo_var);
+		AndroidHapticWrapper__ctor_mE835005D0F73FF6FC9E39FB9A4FC806B0F5A2C26(L_0, NULL);
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:158>
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_1 = V_0;
+		return L_1;
+	}
+}
+// Method Definition Index: 106686
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Haptic__cctor_mB284B561638352013A595DBBC8EE8705BEFF9217 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1057AAF5EE3CDF423CF6BCC588476E559687CDE6);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:15>
+		HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* L_0 = (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646*)il2cpp_codegen_object_new(HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646_il2cpp_TypeInfo_var);
+		HapticData__ctor_m58E039974F05E49F303E17B00C9D44FF9B0B4E3C(L_0, (0.140000001f), (0.400000006f), NULL);
+		((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___HAPTIC_LIGHT = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___HAPTIC_LIGHT), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:17>
+		HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* L_1 = (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646*)il2cpp_codegen_object_new(HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646_il2cpp_TypeInfo_var);
+		HapticData__ctor_m58E039974F05E49F303E17B00C9D44FF9B0B4E3C(L_1, (0.140000001f), (0.600000024f), NULL);
+		((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___HAPTIC_MEDIUM = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___HAPTIC_MEDIUM), (void*)L_1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:19>
+		HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* L_2 = (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646*)il2cpp_codegen_object_new(HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646_il2cpp_TypeInfo_var);
+		HapticData__ctor_m58E039974F05E49F303E17B00C9D44FF9B0B4E3C(L_2, (0.140000001f), (0.800000012f), NULL);
+		((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___HAPTIC_HARD = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___HAPTIC_HARD), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:22>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:23>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:24>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Haptic.cs:25>
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_3 = (HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71*)(HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71*)SZArrayNew(HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71_il2cpp_TypeInfo_var, (uint32_t)1);
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_4 = L_3;
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_5 = (HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47*)il2cpp_codegen_object_new(HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_il2cpp_TypeInfo_var);
+		HapticEvent__ctor_m4A723C102DDA4BF0D02E13F99FB07826DCE8DFD8(L_5, NULL);
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_6 = L_5;
+		NullCheck(L_6);
+		L_6->___Duration = (0.300000012f);
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_7 = L_6;
+		NullCheck(L_7);
+		L_7->___Intensity = (1.0f);
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_8 = L_7;
+		NullCheck(L_8);
+		L_8->___Sharpness = (0.0f);
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_9 = L_8;
+		NullCheck(L_9);
+		L_9->___StartTime = (0.0f);
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, L_9);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(0), (HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47*)L_9);
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_10 = (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE*)il2cpp_codegen_object_new(HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_il2cpp_TypeInfo_var);
+		HapticPattern__ctor_m68D1651CDCB541AD1C3CFDF275755E832C8E77AD(L_10, _stringLiteral1057AAF5EE3CDF423CF6BCC588476E559687CDE6, L_4, NULL);
+		((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___PATTERN_LIGHT = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&((Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_StaticFields*)il2cpp_codegen_static_fields_for(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var))->___PATTERN_LIGHT), (void*)L_10);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106687
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float HapticData_get_Duration_m31C04B75A81ABF7CF3E626F054C53E9FA7BE8746 (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:15>
+		float L_0 = __this->___duration;
+		return L_0;
+	}
+}
+// Method Definition Index: 106688
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float HapticData_get_Intensity_mC6409AA60208FD931D6C8F54F504FCBF87FF174E (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:17>
+		float L_0 = __this->___intensity;
+		return L_0;
+	}
+}
+// Method Definition Index: 106689
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticData__ctor_m58E039974F05E49F303E17B00C9D44FF9B0B4E3C (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* __this, float ___0_duration, float ___1_intensity, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:11>
+		__this->___duration = (0.0500000007f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:12>
+		__this->___intensity = (0.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:19>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:21>
+		float L_0 = ___0_duration;
+		__this->___duration = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:22>
+		float L_1 = ___1_intensity;
+		__this->___intensity = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:23>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106690
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticEvent__ctor_m4A723C102DDA4BF0D02E13F99FB07826DCE8DFD8 (HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106691
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticHandler_Play_mC2AAB34AF01E0EC57AF32E30D0532B09CE2ECE7F (HapticHandler_tC94CFE0C0243379D08E19B058F2E03F460B9D78E* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:36>
+		bool L_0 = __this->___advancedSettings;
+		V_0 = L_0;
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_00ba;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:38>
+		float L_2;
+		L_2 = Time_get_timeSinceLevelLoad_m65C386103A91B172781032CA1A6FFDEC8CFBA921(NULL);
+		float L_3 = __this->___lastPlayedTime;
+		float L_4 = __this->___minDelay;
+		V_1 = (bool)((((float)L_2) < ((float)((float)il2cpp_codegen_add(L_3, L_4))))? 1 : 0);
+		bool L_5 = V_1;
+		if (!L_5)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:38>
+		goto IL_00ce;
+	}
+
+IL_002c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:40>
+		float L_6;
+		L_6 = Time_get_timeSinceLevelLoad_m65C386103A91B172781032CA1A6FFDEC8CFBA921(NULL);
+		__this->___lastPlayedTime = L_6;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:42>
+		bool L_7 = __this->___dynamicIntensity;
+		V_2 = L_7;
+		bool L_8 = V_2;
+		if (!L_8)
+		{
+			goto IL_00a3;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:44>
+		int32_t L_9 = __this->___currentIntensityStep;
+		__this->___currentIntensityStep = ((int32_t)il2cpp_codegen_add(L_9, 1));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:46>
+		float L_10;
+		L_10 = Time_get_timeSinceLevelLoad_m65C386103A91B172781032CA1A6FFDEC8CFBA921(NULL);
+		float L_11 = __this->___lastIntensityStepTime;
+		V_3 = (bool)((((float)L_10) > ((float)L_11))? 1 : 0);
+		bool L_12 = V_3;
+		if (!L_12)
+		{
+			goto IL_0068;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:47>
+		__this->___currentIntensityStep = 0;
+	}
+
+IL_0068:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:49>
+		float L_13;
+		L_13 = Time_get_timeSinceLevelLoad_m65C386103A91B172781032CA1A6FFDEC8CFBA921(NULL);
+		float L_14 = __this->___intensityResetTime;
+		__this->___lastIntensityStepTime = ((float)il2cpp_codegen_add(L_13, L_14));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:51>
+		float L_15 = __this->___duration;
+		DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* L_16 = __this->___intensityRange;
+		int32_t L_17 = __this->___currentIntensityStep;
+		int32_t L_18 = __this->___intensitySteps;
+		NullCheck(L_16);
+		float L_19;
+		L_19 = DuoFloat_Lerp_m204D01E4E8D19C3C9998CB9282499935FA67AB34(L_16, ((float)(((float)L_17)/((float)L_18))), NULL);
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_Play_mC8070C549980F140E84EB24AA755A4A477A8F869(L_15, L_19, NULL);
+		goto IL_00b7;
+	}
+
+IL_00a3:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:55>
+		float L_20 = __this->___duration;
+		float L_21 = __this->___intensity;
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_Play_mC8070C549980F140E84EB24AA755A4A477A8F869(L_20, L_21, NULL);
+	}
+
+IL_00b7:
+	{
+		goto IL_00ce;
+	}
+
+IL_00ba:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:60>
+		float L_22 = __this->___duration;
+		float L_23 = __this->___intensity;
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_Play_mC8070C549980F140E84EB24AA755A4A477A8F869(L_22, L_23, NULL);
+	}
+
+IL_00ce:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:62>
+		return;
+	}
+}
+// Method Definition Index: 106692
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticHandler__ctor_m8E5469A4ED88C4CA8073F5659C5291C6DF382C8C (HapticHandler_tC94CFE0C0243379D08E19B058F2E03F460B9D78E* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:10>
+		__this->___duration = (0.100000001f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:13>
+		__this->___intensity = (0.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:23>
+		DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* L_0 = (DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F*)il2cpp_codegen_object_new(DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var);
+		DuoFloat__ctor_mAF682087AB96794ECA8DE82A9F20DCA139217789(L_0, (0.200000003f), (1.0f), NULL);
+		__this->___intensityRange = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___intensityRange), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:25>
+		__this->___intensitySteps = ((int32_t)10);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:27>
+		__this->___intensityResetTime = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticHandler.cs:29>
+		__this->___lastPlayedTime = (-(std::numeric_limits<float>::max)());
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106693
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* HapticInitModule_get_ModuleName_mF8D60653D3B95D0ECB896760A3AA2A19F80778F7 (HapticInitModule_t0F1D7886478D7AF62135BD67FCF041ADE7DC61B6* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCEA7D15BD7D3108714FE5FE1861D75886730D5F1);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticInitModule.cs:12>
+		return _stringLiteralCEA7D15BD7D3108714FE5FE1861D75886730D5F1;
+	}
+}
+// Method Definition Index: 106694
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HapticInitModule_InitAsync_m2E33380594DBCF2C593FF51D2D76470A35E38720 (HapticInitModule_t0F1D7886478D7AF62135BD67FCF041ADE7DC61B6* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_owner, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* L_0 = (U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2*)il2cpp_codegen_object_new(U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2_il2cpp_TypeInfo_var);
+		U3CInitAsyncU3Ed__2__ctor_m1A489F5A55E51109A3D65C72510CE4DD7C2E60A8(L_0, 0, NULL);
+		U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* L_2 = L_1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = ___0_owner;
+		NullCheck(L_2);
+		L_2->___owner = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&L_2->___owner), (void*)L_3);
+		return L_2;
+	}
+}
+// Method Definition Index: 106695
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInitModule__ctor_m716C26F1DF1CC8BB7F52A4BEF29C640AD87FF60A (HapticInitModule_t0F1D7886478D7AF62135BD67FCF041ADE7DC61B6* __this, const RuntimeMethod* method) 
+{
+	{
+		InitModule__ctor_mB63BC2AB083368E4563EE0132B818D5A85573879(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106696
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitAsyncU3Ed__2__ctor_m1A489F5A55E51109A3D65C72510CE4DD7C2E60A8 (U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 106697
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitAsyncU3Ed__2_System_IDisposable_Dispose_mD4722766010CC9DCF9037ACA9A42959D8CFEFFF7 (U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 106698
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CInitAsyncU3Ed__2_MoveNext_mFF21AE74F79C9333B0C28F156AD777D19058CFB0 (U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		goto IL_000e;
+	}
+
+IL_000c:
+	{
+		goto IL_0010;
+	}
+
+IL_000e:
+	{
+		return (bool)0;
+	}
+
+IL_0010:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticInitModule.cs:16>
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_2 = (Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87*)il2cpp_codegen_object_new(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic__ctor_m1205D288450DFEEBD823E3E3A7B534139E9B0820(L_2, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticInitModule.cs:18>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 106699
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitAsyncU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3AA2A0E9D006653940D896AAA7EC2E1EE6137076 (U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 106700
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitAsyncU3Ed__2_System_Collections_IEnumerator_Reset_mC44EA22FCBB1C924E70E740480A54282917D8D23 (U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CInitAsyncU3Ed__2_System_Collections_IEnumerator_Reset_mC44EA22FCBB1C924E70E740480A54282917D8D23_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 106701
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitAsyncU3Ed__2_System_Collections_IEnumerator_get_Current_m19BA0DFB86123E45EAFBC9578EA1CD2F99CDE7A3 (U3CInitAsyncU3Ed__2_tBA8B977FC13D561ACA7FB3B9D753CF14F9DBC1F2* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106702
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_Awake_m0B70A91AC0F18C6E9575AD6DE4647CD27444C85D (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:31>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		bool L_0;
+		L_0 = Haptic_get_IsInitialized_mBD08E138DC18FF06D52848577A0BA749649AE326(NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:32>
+		Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87* L_2 = (Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87*)il2cpp_codegen_object_new(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic__ctor_m1205D288450DFEEBD823E3E3A7B534139E9B0820(L_2, NULL);
+	}
+
+IL_0013:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:34>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_set_IsActive_mE66B3AA7FF7D63D04E3B4BF1C0C65DD6BB3788B8((bool)1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:35>
+		String_t* L_3;
+		L_3 = HapticNetworkReceiver_GetLocalIP_m44D52D2F90C0F84C46A4F401B652D36E681D8CE5(NULL);
+		__this->___localIP = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___localIP), (void*)L_3);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:36>
+		return;
+	}
+}
+// Method Definition Index: 106703
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_Start_m338501015049EA04B5A2749229535E35A6415F9F (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticNetworkReceiver_BroadcastLoop_m812B64A70323E773DBA933843B9587F5A16BDAB5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticNetworkReceiver_ReceiveLoop_m7B8A42DFA2AB1FDDA7669F9944D84515AD5D6440_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:40>
+		il2cpp_codegen_memory_barrier();
+		__this->___running = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:41>
+		ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2* L_0 = (ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2*)il2cpp_codegen_object_new(ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2_il2cpp_TypeInfo_var);
+		ThreadStart__ctor_m35CE51F76358F20E4A0C8F2963C3AE14E5FF7E71(L_0, __this, (intptr_t)((void*)HapticNetworkReceiver_ReceiveLoop_m7B8A42DFA2AB1FDDA7669F9944D84515AD5D6440_RuntimeMethod_var), NULL);
+		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_1 = (Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F*)il2cpp_codegen_object_new(Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_il2cpp_TypeInfo_var);
+		Thread__ctor_m1FA23A179DF4F5B659689D6FA40DE903086212E2(L_1, L_0, NULL);
+		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_2 = L_1;
+		NullCheck(L_2);
+		Thread_set_IsBackground_m45F00BD4C46F9B8A7C46A20A170B22BABB8FBA30(L_2, (bool)1, NULL);
+		__this->___receiveThread = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___receiveThread), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:42>
+		ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2* L_3 = (ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2*)il2cpp_codegen_object_new(ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2_il2cpp_TypeInfo_var);
+		ThreadStart__ctor_m35CE51F76358F20E4A0C8F2963C3AE14E5FF7E71(L_3, __this, (intptr_t)((void*)HapticNetworkReceiver_BroadcastLoop_m812B64A70323E773DBA933843B9587F5A16BDAB5_RuntimeMethod_var), NULL);
+		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_4 = (Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F*)il2cpp_codegen_object_new(Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_il2cpp_TypeInfo_var);
+		Thread__ctor_m1FA23A179DF4F5B659689D6FA40DE903086212E2(L_4, L_3, NULL);
+		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_5 = L_4;
+		NullCheck(L_5);
+		Thread_set_IsBackground_m45F00BD4C46F9B8A7C46A20A170B22BABB8FBA30(L_5, (bool)1, NULL);
+		__this->___broadcastThread = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___broadcastThread), (void*)L_5);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:43>
+		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_6 = __this->___receiveThread;
+		NullCheck(L_6);
+		Thread_Start_m2230799AA331CA9ACEF49D5500281D0C1A9F72FA(L_6, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:44>
+		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_7 = __this->___broadcastThread;
+		NullCheck(L_7);
+		Thread_Start_m2230799AA331CA9ACEF49D5500281D0C1A9F72FA(L_7, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:45>
+		return;
+	}
+}
+// Method Definition Index: 106704
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_Update_m1FBFE158ECDD50A8E2167E7997A4902AE0E78B74 (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConcurrentQueue_1_TryDequeue_m176C65C9DCE178799C348336E14CB35C748E9421_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	bool V_1 = false;
+	{
+	}
+
+IL_0001:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:49>
+		ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E* L_0 = __this->___pendingMessages;
+		NullCheck(L_0);
+		bool L_1;
+		L_1 = ConcurrentQueue_1_TryDequeue_m176C65C9DCE178799C348336E14CB35C748E9421(L_0, (&V_0), ConcurrentQueue_1_TryDequeue_m176C65C9DCE178799C348336E14CB35C748E9421_RuntimeMethod_var);
+		V_1 = L_1;
+		bool L_2 = V_1;
+		if (!L_2)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:50>
+		String_t* L_3 = V_0;
+		HapticNetworkReceiver_PlayPattern_m32AC8A114671BC6756349ABD18573F51071B0A85(__this, L_3, NULL);
+		goto IL_0001;
+	}
+
+IL_001c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:51>
+		return;
+	}
+}
+// Method Definition Index: 106705
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_OnDestroy_m707E058DFBA3ED7495198CAE5D4F6FF21BED0D33 (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* G_B2_0 = NULL;
+	UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* G_B1_0 = NULL;
+	UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* G_B5_0 = NULL;
+	UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* G_B4_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:55>
+		il2cpp_codegen_memory_barrier();
+		__this->___running = (bool)0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:56>
+		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_0 = __this->___receiver;
+		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_1 = L_0;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_0016;
+		}
+		G_B1_0 = L_1;
+	}
+	{
+		goto IL_001c;
+	}
+
+IL_0016:
+	{
+		NullCheck(G_B2_0);
+		UdpClient_Close_m5441019910E37A7F7B8610A46769004E614FF5B6(G_B2_0, NULL);
+	}
+
+IL_001c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:57>
+		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_2 = __this->___broadcaster;
+		UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_3 = L_2;
+		if (L_3)
+		{
+			G_B5_0 = L_3;
+			goto IL_0028;
+		}
+		G_B4_0 = L_3;
+	}
+	{
+		goto IL_002e;
+	}
+
+IL_0028:
+	{
+		NullCheck(G_B5_0);
+		UdpClient_Close_m5441019910E37A7F7B8610A46769004E614FF5B6(G_B5_0, NULL);
+	}
+
+IL_002e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:58>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_Unload_m0D85ADFEFF5108D7ABCB5A7A2B3B2F9CF941C7CC(NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:59>
+		return;
+	}
+}
+// Method Definition Index: 106706
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_ReceiveLoop_m7B8A42DFA2AB1FDDA7669F9944D84515AD5D6440 (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConcurrentQueue_1_Enqueue_mCFA14FE2B9D147552CD2F7F340F53A0284BB92B8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* V_0 = NULL;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_1 = NULL;
+	bool V_2 = false;
+	Exception_t* V_3 = NULL;
+	bool V_4 = false;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	{
+	}
+	try
+	{
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:67>
+			UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_0 = (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8*)il2cpp_codegen_object_new(UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8_il2cpp_TypeInfo_var);
+			UdpClient__ctor_m6DCF61B7A404114E51B86974B1B4E028F45C3442(L_0, ((int32_t)7878), NULL);
+			__this->___receiver = L_0;
+			Il2CppCodeGenWriteBarrier((void**)(&__this->___receiver), (void*)L_0);
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:68>
+			il2cpp_codegen_runtime_class_init_inline(IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var);
+			IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* L_1 = ((IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_StaticFields*)il2cpp_codegen_static_fields_for(IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var))->___Any;
+			IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* L_2 = (IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB*)il2cpp_codegen_object_new(IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_il2cpp_TypeInfo_var);
+			IPEndPoint__ctor_m902C98F9E3F36B20B3C2E030AA91B62E2BC7A85A(L_2, L_1, 0, NULL);
+			V_0 = L_2;
+			goto IL_0047_1;
+		}
+
+IL_0020_1:
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:71>
+			UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_3 = __this->___receiver;
+			NullCheck(L_3);
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4;
+			L_4 = UdpClient_Receive_mC682A8DE6CD86CEFA3CE52852574FD3437EC7DA9(L_3, (&V_0), NULL);
+			V_1 = L_4;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:72>
+			ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E* L_5 = __this->___pendingMessages;
+			Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_6;
+			L_6 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7 = V_1;
+			NullCheck(L_6);
+			String_t* L_8;
+			L_8 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_6, L_7);
+			NullCheck(L_5);
+			ConcurrentQueue_1_Enqueue_mCFA14FE2B9D147552CD2F7F340F53A0284BB92B8(L_5, L_8, ConcurrentQueue_1_Enqueue_mCFA14FE2B9D147552CD2F7F340F53A0284BB92B8_RuntimeMethod_var);
+		}
+
+IL_0047_1:
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:69>
+			bool L_9 = __this->___running;
+			il2cpp_codegen_memory_barrier();
+			V_2 = L_9;
+			bool L_10 = V_2;
+			if (L_10)
+			{
+				goto IL_0020_1;
+			}
+		}
+		{
+			goto IL_007f;
+		}
+	}
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_0056;
+		}
+		throw e;
+	}
+
+CATCH_0056:
+	{
+		{
+			Exception_t* L_11 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:75>
+			V_3 = L_11;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:75>
+			bool L_12 = __this->___running;
+			il2cpp_codegen_memory_barrier();
+			V_4 = L_12;
+			bool L_13 = V_4;
+			if (!L_13)
+			{
+				goto IL_007c;
+			}
+		}
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:75>
+			Exception_t* L_14 = V_3;
+			NullCheck(L_14);
+			String_t* L_15;
+			L_15 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_14);
+			String_t* L_16;
+			L_16 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralEE1F68BD8C1D064F560E7C4624916B2EBE312022)), L_15, NULL);
+			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
+			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_16, NULL);
+		}
+
+IL_007c:
+		{
+			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
+			goto IL_007f;
+		}
+	}
+
+IL_007f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:76>
+		return;
+	}
+}
+// Method Definition Index: 106707
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_BroadcastLoop_m812B64A70323E773DBA933843B9587F5A16BDAB5 (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE16AE91AE9872676A8136179F6C78A80DCD62F37);
+		s_Il2CppMethodInitialized = true;
+	}
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_0 = NULL;
+	IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* V_1 = NULL;
+	bool V_2 = false;
+	Exception_t* V_3 = NULL;
+	bool V_4 = false;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	{
+	}
+	try
+	{
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:82>
+			UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_0 = (UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8*)il2cpp_codegen_object_new(UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8_il2cpp_TypeInfo_var);
+			UdpClient__ctor_m0F676D3E94A3C7B908DE1FBDF08FEB36894F100E(L_0, NULL);
+			__this->___broadcaster = L_0;
+			Il2CppCodeGenWriteBarrier((void**)(&__this->___broadcaster), (void*)L_0);
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:83>
+			UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_1 = __this->___broadcaster;
+			NullCheck(L_1);
+			UdpClient_set_EnableBroadcast_m688F1E60EF735B1882A69C9AB606225DC2049188(L_1, (bool)1, NULL);
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:84>
+			Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_2;
+			L_2 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
+			String_t* L_3 = __this->___localIP;
+			String_t* L_4;
+			L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralE16AE91AE9872676A8136179F6C78A80DCD62F37, L_3, NULL);
+			NullCheck(L_2);
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5;
+			L_5 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_2, L_4);
+			V_0 = L_5;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:85>
+			il2cpp_codegen_runtime_class_init_inline(IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var);
+			IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* L_6 = ((IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_StaticFields*)il2cpp_codegen_static_fields_for(IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484_il2cpp_TypeInfo_var))->___Broadcast;
+			IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* L_7 = (IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB*)il2cpp_codegen_object_new(IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_il2cpp_TypeInfo_var);
+			IPEndPoint__ctor_m902C98F9E3F36B20B3C2E030AA91B62E2BC7A85A(L_7, L_6, ((int32_t)7879), NULL);
+			V_1 = L_7;
+			goto IL_0065_1;
+		}
+
+IL_0047_1:
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:88>
+			UdpClient_t03C5278D44ADD98C3A506D8EA5445309FDF1F5B8* L_8 = __this->___broadcaster;
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = V_0;
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_10 = V_0;
+			NullCheck(L_10);
+			IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* L_11 = V_1;
+			NullCheck(L_8);
+			int32_t L_12;
+			L_12 = UdpClient_Send_m4DCD3993D7ED39C174F8FC8F653DD30F1BDF47B9(L_8, L_9, ((int32_t)(((RuntimeArray*)L_10)->max_length)), L_11, NULL);
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:89>
+			Thread_Sleep_m71DE163765BF465EC4A0163F2ED4D43143094549(((int32_t)2000), NULL);
+		}
+
+IL_0065_1:
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:86>
+			bool L_13 = __this->___running;
+			il2cpp_codegen_memory_barrier();
+			V_2 = L_13;
+			bool L_14 = V_2;
+			if (L_14)
+			{
+				goto IL_0047_1;
+			}
+		}
+		{
+			goto IL_009d;
+		}
+	}
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_0074;
+		}
+		throw e;
+	}
+
+CATCH_0074:
+	{
+		{
+			Exception_t* L_15 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:92>
+			V_3 = L_15;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:92>
+			bool L_16 = __this->___running;
+			il2cpp_codegen_memory_barrier();
+			V_4 = L_16;
+			bool L_17 = V_4;
+			if (!L_17)
+			{
+				goto IL_009a;
+			}
+		}
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:92>
+			Exception_t* L_18 = V_3;
+			NullCheck(L_18);
+			String_t* L_19;
+			L_19 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_18);
+			String_t* L_20;
+			L_20 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9276CDDD31F62B72833CF966128D33E727B1F67D)), L_19, NULL);
+			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
+			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_20, NULL);
+		}
+
+IL_009a:
+		{
+			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
+			goto IL_009d;
+		}
+	}
+
+IL_009d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:93>
+		return;
+	}
+}
+// Method Definition Index: 106708
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_PlayPattern_m32AC8A114671BC6756349ABD18573F51071B0A85 (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, String_t* ___0_json, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisHapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_mE2B77A7D5EDFE2205B1A808CE3FAFAA7D10DCC2C_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* V_0 = NULL;
+	bool V_1 = false;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:99>
+		String_t* L_0 = ___0_json;
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_1;
+		L_1 = JsonUtility_FromJson_TisHapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_mE2B77A7D5EDFE2205B1A808CE3FAFAA7D10DCC2C(L_0, JsonUtility_FromJson_TisHapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_mE2B77A7D5EDFE2205B1A808CE3FAFAA7D10DCC2C_RuntimeMethod_var);
+		V_0 = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:100>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_3 = V_0;
+		NullCheck(L_3);
+		String_t* L_4;
+		L_4 = HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline(L_3, NULL);
+		bool L_5;
+		L_5 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_4, NULL);
+		G_B3_0 = ((int32_t)(L_5));
+		goto IL_0019;
+	}
+
+IL_0018:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_0019:
+	{
+		V_1 = (bool)G_B3_0;
+		bool L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:100>
+		goto IL_0032;
+	}
+
+IL_001f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:102>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_7 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		Haptic_RegisterPattern_mE7D85053ACB27B8D101C5A300CCBBC80A8094117(L_7, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:103>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_8 = V_0;
+		NullCheck(L_8);
+		String_t* L_9;
+		L_9 = HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline(L_8, NULL);
+		Haptic_Play_mA03F9649520F7396E4627DA8EA3C73E374A81B82(L_9, NULL);
+	}
+
+IL_0032:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:104>
+		return;
+	}
+}
+// Method Definition Index: 106709
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver_OnGUI_m358D4634A4E2F2A3F5623F28C0CC3095202A12C3 (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6F3A546110ACB3B3F94FCA3B0E1A0440FED7872E);
+		s_Il2CppMethodInitialized = true;
+	}
+	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* V_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:110>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:111>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:112>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:113>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:114>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:115>
+		il2cpp_codegen_runtime_class_init_inline(GUI_tA9CDB3D69DB13D51AD83ABDB587EF95947EC2D2A_il2cpp_TypeInfo_var);
+		GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9* L_0;
+		L_0 = GUI_get_skin_m97EC9EB4628B311C0DB7DF9FB19FAD82D6790A1B(NULL);
+		NullCheck(L_0);
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_1;
+		L_1 = GUISkin_get_box_m21BE7FC56D903B95BAFAE8890425D330EA88D893(L_0, NULL);
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_2 = (GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580*)il2cpp_codegen_object_new(GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_il2cpp_TypeInfo_var);
+		GUIStyle__ctor_m17492C8BACB0D28C7701C11500A7132F11B5F04E(L_2, L_1, NULL);
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_3 = L_2;
+		NullCheck(L_3);
+		GUIStyle_set_fontSize_m7F6DFD61AC55072C95DC3825B77FAE3F75F1CCFF(L_3, ((int32_t)14), NULL);
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_4 = L_3;
+		NullCheck(L_4);
+		GUIStyle_set_alignment_mEDC62A775C9551DBD1FEE4043F115E034EF12937(L_4, 4, NULL);
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_5 = L_4;
+		NullCheck(L_5);
+		GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95* L_6;
+		L_6 = GUIStyle_get_normal_mDEA2808FBD692E505784BD9E521738B4321BCA8F(L_5, NULL);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7;
+		L_7 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
+		NullCheck(L_6);
+		GUIStyleState_set_textColor_m5868D12858E6402247953BCCDDA7A543BE6084F1(L_6, L_7, NULL);
+		V_0 = L_5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:116>
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_8;
+		memset((&L_8), 0, sizeof(L_8));
+		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline((&L_8), (10.0f), (10.0f), (300.0f), (32.0f), NULL);
+		String_t* L_9 = __this->___localIP;
+		int32_t L_10 = ((int32_t)7878);
+		RuntimeObject* L_11 = Box(il2cpp_defaults.int32_class, &L_10);
+		String_t* L_12;
+		L_12 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral6F3A546110ACB3B3F94FCA3B0E1A0440FED7872E, L_9, L_11, NULL);
+		GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* L_13 = V_0;
+		GUI_Box_mA7CD625644B152E88F757E4B51F12A827BE49E57(L_8, L_12, L_13, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:117>
+		return;
+	}
+}
+// Method Definition Index: 106710
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* HapticNetworkReceiver_GetLocalIP_m44D52D2F90C0F84C46A4F401B652D36E681D8CE5 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral996430AB1219869666B45814CA370C998C55A879);
+		s_Il2CppMethodInitialized = true;
+	}
+	Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* V_0 = NULL;
+	String_t* V_1 = NULL;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	{
+	}
+	try
+	{
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:123>
+			Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* L_0 = (Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E*)il2cpp_codegen_object_new(Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E_il2cpp_TypeInfo_var);
+			Socket__ctor_m35F1F4B4872E251867DA16460F06E903A30E4595(L_0, 2, 2, ((int32_t)17), NULL);
+			V_0 = L_0;
+		}
+		{
+			auto __finallyBlock = il2cpp::utils::Finally([&]
+			{
+
+FINALLY_0036_1:
+				{
+					{
+						Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* L_1 = V_0;
+						if (!L_1)
+						{
+							goto IL_0040_1;
+						}
+					}
+					{
+						Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* L_2 = V_0;
+						NullCheck(L_2);
+						InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_2);
+					}
+
+IL_0040_1:
+					{
+						return;
+					}
+				}
+			});
+			try
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:125>
+				Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* L_3 = V_0;
+				NullCheck(L_3);
+				Socket_Connect_m993753041D265405B096790E1989EB5895A9CD5E(L_3, _stringLiteral996430AB1219869666B45814CA370C998C55A879, ((int32_t)65530), NULL);
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:126>
+				Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* L_4 = V_0;
+				NullCheck(L_4);
+				EndPoint_t6233F4E2EB9F0F2D36E187F12BE050E6D8B73564* L_5;
+				L_5 = Socket_get_LocalEndPoint_m3A2B4E60F0096E2DB31F7C28EF3CDE148D256E26(L_4, NULL);
+				NullCheck(((IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB*)CastclassClass((RuntimeObject*)L_5, IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_il2cpp_TypeInfo_var)));
+				IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* L_6;
+				L_6 = IPEndPoint_get_Address_m72F783CB76E10E9DBDF680CCC1DAAED201BABB1C_inline(((IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB*)CastclassClass((RuntimeObject*)L_5, IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB_il2cpp_TypeInfo_var)), NULL);
+				NullCheck(L_6);
+				String_t* L_7;
+				L_7 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_6);
+				V_1 = L_7;
+				goto IL_004b;
+			}
+			catch(Il2CppExceptionWrapper& e)
+			{
+				__finallyBlock.StoreException(e.ex);
+			}
+		}
+	}
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (il2cpp_defaults.object_class, il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_0041;
+		}
+		throw e;
+	}
+
+CATCH_0041:
+	{
+		RuntimeObject* L_8 = ((RuntimeObject*)IL2CPP_GET_ACTIVE_EXCEPTION(RuntimeObject*));;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:129>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:129>
+		V_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral88CF80A1774463880D925329A29099F33B85F099));
+		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
+		goto IL_004b;
+	}
+
+IL_004b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:130>
+		String_t* L_9 = V_1;
+		return L_9;
+	}
+}
+// Method Definition Index: 106711
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticNetworkReceiver__ctor_m27AB1AAA24A6E9DF45FCC33C6DDEAE772F10747A (HapticNetworkReceiver_t6D76E90D4C725277B9E1D342C9920D999B395597* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConcurrentQueue_1__ctor_m89BBD6C7776D544A0D57C1322765E6D9BC513CB1_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:25>
+		ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E* L_0 = (ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E*)il2cpp_codegen_object_new(ConcurrentQueue_1_t5FC3B6978FAD20F80C05DC1CC2B9F6FAD0ABA64E_il2cpp_TypeInfo_var);
+		ConcurrentQueue_1__ctor_m89BBD6C7776D544A0D57C1322765E6D9BC513CB1(L_0, ConcurrentQueue_1__ctor_m89BBD6C7776D544A0D57C1322765E6D9BC513CB1_RuntimeMethod_var);
+		__this->___pendingMessages = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pendingMessages), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticNetworkReceiver.cs:27>
+		__this->___localIP = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___localIP), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106712
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticPattern.cs:16>
+		String_t* L_0 = __this->___id;
+		return L_0;
+	}
+}
+// Method Definition Index: 106713
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* HapticPattern_get_Pattern_mFE7A9CDD6BB62FFE5F388284D5615932BF989D1C (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticPattern.cs:18>
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_0 = __this->___pattern;
+		return L_0;
+	}
+}
+// Method Definition Index: 106714
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticPattern__ctor_m68D1651CDCB541AD1C3CFDF275755E832C8E77AD (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* __this, String_t* ___0_id, HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* ___1_pattern, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticPattern.cs:20>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticPattern.cs:22>
+		String_t* L_0 = ___0_id;
+		__this->___id = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___id), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticPattern.cs:23>
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_1 = ___1_pattern;
+		__this->___pattern = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pattern), (void*)L_1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticPattern.cs:24>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106715
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticSave_OnBeforeSave_m66449249443F2073BDA6FC359DD2A8826B1B9DDE (HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticSave.cs:15>
+		return;
+	}
+}
+// Method Definition Index: 106716
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticSave__ctor_m22C9A756F9F929899BDF771FE2AA4B76099BCC0C (HapticSave_tB67A0793850CE8BEEF902825021A9ABF54A4C99B* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticSave.cs:10>
+		__this->___IsActive = (bool)1;
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106717
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticTestReceiver_Awake_m19AD144BE851D072FB8A03DE4AD5C3D39C5E36ED (HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:23>
+		il2cpp_codegen_runtime_class_init_inline(Haptic_t8F9FA317E0D2466EEDFE72A7FF7B240F759F2A87_il2cpp_TypeInfo_var);
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_0;
+		L_0 = Haptic_GetPlatformWrapper_mB8C5F6B6A6A6F30C842A0056C2A841DD44522503(NULL);
+		__this->___hapticWrapper = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___hapticWrapper), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:24>
+		return;
+	}
+}
+// Method Definition Index: 106718
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticTestReceiver_OnEnable_m7F99C66081231BF016F18F0DF6C69C57D5FE5402 (HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticTestReceiver_OnPlayPattern_m34859F1EA62BD85D5759727BB691F434AFF62DD5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:28>
+		PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53* L_0;
+		L_0 = PlayerConnection_get_instance_mF08ABE514910AD8B105D42561CF97CBF135ABD3B(NULL);
+		il2cpp_codegen_runtime_class_init_inline(HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var);
+		Guid_t L_1 = ((HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_StaticFields*)il2cpp_codegen_static_fields_for(HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var))->___PlayPatternMessage;
+		UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2* L_2 = (UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2*)il2cpp_codegen_object_new(UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2_il2cpp_TypeInfo_var);
+		UnityAction_1__ctor_m0D542CD6AC9BF19A26926782F3B43A5E71BDB1AB(L_2, __this, (intptr_t)((void*)HapticTestReceiver_OnPlayPattern_m34859F1EA62BD85D5759727BB691F434AFF62DD5_RuntimeMethod_var), NULL);
+		NullCheck(L_0);
+		PlayerConnection_Register_m8760D786583FD5793A2FCE5EEB8DDA17C649CF86(L_0, L_1, L_2, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:29>
+		return;
+	}
+}
+// Method Definition Index: 106719
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticTestReceiver_OnDisable_m153651EB356272C8783C8E5733DA23FC496A3E31 (HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticTestReceiver_OnPlayPattern_m34859F1EA62BD85D5759727BB691F434AFF62DD5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:33>
+		PlayerConnection_tE21E6206D6FC40F07B3842D83BCB0732C9244E53* L_0;
+		L_0 = PlayerConnection_get_instance_mF08ABE514910AD8B105D42561CF97CBF135ABD3B(NULL);
+		il2cpp_codegen_runtime_class_init_inline(HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var);
+		Guid_t L_1 = ((HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_StaticFields*)il2cpp_codegen_static_fields_for(HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var))->___PlayPatternMessage;
+		UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2* L_2 = (UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2*)il2cpp_codegen_object_new(UnityAction_1_tE32574C71B51DFED36AB235C69E2777243DCB5D2_il2cpp_TypeInfo_var);
+		UnityAction_1__ctor_m0D542CD6AC9BF19A26926782F3B43A5E71BDB1AB(L_2, __this, (intptr_t)((void*)HapticTestReceiver_OnPlayPattern_m34859F1EA62BD85D5759727BB691F434AFF62DD5_RuntimeMethod_var), NULL);
+		NullCheck(L_0);
+		PlayerConnection_Unregister_m46303AD2C27A3A71B6569376E5C461AF1D0DFCE1(L_0, L_1, L_2, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:34>
+		return;
+	}
+}
+// Method Definition Index: 106720
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticTestReceiver_OnPlayPattern_m34859F1EA62BD85D5759727BB691F434AFF62DD5 (HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96* __this, MessageEventArgs_t34F726E6463615C0A460FB5CBCCB92F84D83D4F9* ___0_args, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisHapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_mE2B77A7D5EDFE2205B1A808CE3FAFAA7D10DCC2C_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* V_1 = NULL;
+	bool V_2 = false;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:38>
+		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_0;
+		L_0 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
+		MessageEventArgs_t34F726E6463615C0A460FB5CBCCB92F84D83D4F9* L_1 = ___0_args;
+		NullCheck(L_1);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = L_1->___data;
+		NullCheck(L_0);
+		String_t* L_3;
+		L_3 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(34, L_0, L_2);
+		V_0 = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:39>
+		String_t* L_4 = V_0;
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_5;
+		L_5 = JsonUtility_FromJson_TisHapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_mE2B77A7D5EDFE2205B1A808CE3FAFAA7D10DCC2C(L_4, JsonUtility_FromJson_TisHapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE_mE2B77A7D5EDFE2205B1A808CE3FAFAA7D10DCC2C_RuntimeMethod_var);
+		V_1 = L_5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:40>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_7 = V_1;
+		NullCheck(L_7);
+		String_t* L_8;
+		L_8 = HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline(L_7, NULL);
+		bool L_9;
+		L_9 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_8, NULL);
+		G_B3_0 = ((int32_t)(L_9));
+		goto IL_002a;
+	}
+
+IL_0029:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_002a:
+	{
+		V_2 = (bool)G_B3_0;
+		bool L_10 = V_2;
+		if (!L_10)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:40>
+		goto IL_004f;
+	}
+
+IL_0030:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:42>
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_11 = __this->___hapticWrapper;
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_12 = V_1;
+		NullCheck(L_11);
+		VirtualActionInvoker1< HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* >::Invoke(7, L_11, L_12);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:43>
+		BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* L_13 = __this->___hapticWrapper;
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_14 = V_1;
+		NullCheck(L_14);
+		String_t* L_15;
+		L_15 = HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline(L_14, NULL);
+		NullCheck(L_13);
+		VirtualActionInvoker1< String_t* >::Invoke(6, L_13, L_15);
+	}
+
+IL_004f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:44>
+		return;
+	}
+}
+// Method Definition Index: 106721
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticTestReceiver__ctor_mA673479FAD2E7FC9A9C930FEA1DDD2CF0B61597E (HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 106722
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticTestReceiver__cctor_mA0838945422FC903EB7C03A45A0FF87701C072CE (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA3078991A785F525EC966EBDA86DE4072906CF37);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticTestReceiver.cs:17>
+		Guid_t L_0;
+		memset((&L_0), 0, sizeof(L_0));
+		Guid__ctor_mAE66BA1C43B4194F4F7991E2E30370E36CBBF830((&L_0), _stringLiteralA3078991A785F525EC966EBDA86DE4072906CF37, NULL);
+		((HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_StaticFields*)il2cpp_codegen_static_fields_for(HapticTestReceiver_t82CED732A95148C38C46D02B29CD87E367BD0D96_il2cpp_TypeInfo_var))->___PlayPatternMessage = L_0;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106723
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticWrapper_Init_mB21762347A33C62DD566BB2296740C47446868BD (AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidHapticWrapper_U3CInitU3Eb__3_0_mF27E638612A1ABE3834E1B9BB7BC5066C4CD4497_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m929638D3726B538AC1A2956B29F8917C99681FF3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0D038D56F2BAF76EDB3B4C7691B8FF02A0252879);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:15>
+		Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* L_0 = (Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0*)il2cpp_codegen_object_new(Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m929638D3726B538AC1A2956B29F8917C99681FF3(L_0, Dictionary_2__ctor_m929638D3726B538AC1A2956B29F8917C99681FF3_RuntimeMethod_var);
+		__this->___registeredPatterns = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___registeredPatterns), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:18>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:19>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:20>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:21>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:22>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:23>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:24>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:25>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:26>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:27>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:28>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:29>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:30>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:31>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:32>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_1 = (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A*)il2cpp_codegen_object_new(SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		SimpleCallback__ctor_m04CB2FCA2E02060AB815575D93F70A51542A7DE6(L_1, __this, (intptr_t)((void*)AndroidHapticWrapper_U3CInitU3Eb__3_0_mF27E638612A1ABE3834E1B9BB7BC5066C4CD4497_RuntimeMethod_var), NULL);
+		BaseHapticWrapper_Try_m54189A9B6B3515505D0B104815390EE8E6E2688E(__this, L_1, _stringLiteral0D038D56F2BAF76EDB3B4C7691B8FF02A0252879, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:34>
+		return;
+	}
+}
+// Method Definition Index: 106724
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticWrapper_Play_m27A15A41C5C2ED3810D4A847125395D0635A3E96 (AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* __this, float ___0_duration, float ___1_intensity, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass4_0_U3CPlayU3Eb__0_m0E72AC1D891905209177716D95F8DAD2C8174DED_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF3A873405B93E0F91DED4A54DD0216AA2ABAC09B);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* V_0 = NULL;
+	bool V_1 = false;
+	{
+		U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* L_0 = (U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53_il2cpp_TypeInfo_var);
+		U3CU3Ec__DisplayClass4_0__ctor_m86A1C7DE037F8B14DB0D3E3432E70F41B61EFE03(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* L_1 = V_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* L_2 = V_0;
+		float L_3 = ___0_duration;
+		NullCheck(L_2);
+		L_2->___duration = L_3;
+		U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* L_4 = V_0;
+		float L_5 = ___1_intensity;
+		NullCheck(L_4);
+		L_4->___intensity = L_5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:38>
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_6 = __this->___vibrationService;
+		V_1 = (bool)((((RuntimeObject*)(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)L_6) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_7 = V_1;
+		if (!L_7)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:38>
+		goto IL_0043;
+	}
+
+IL_002b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:41>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:42>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:43>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:44>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:45>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:46>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:47>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:48>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:49>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:50>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:51>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:52>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:53>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:54>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:55>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:56>
+		U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* L_8 = V_0;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_9 = (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A*)il2cpp_codegen_object_new(SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		SimpleCallback__ctor_m04CB2FCA2E02060AB815575D93F70A51542A7DE6(L_9, L_8, (intptr_t)((void*)U3CU3Ec__DisplayClass4_0_U3CPlayU3Eb__0_m0E72AC1D891905209177716D95F8DAD2C8174DED_RuntimeMethod_var), NULL);
+		BaseHapticWrapper_Try_m54189A9B6B3515505D0B104815390EE8E6E2688E(__this, L_9, _stringLiteralF3A873405B93E0F91DED4A54DD0216AA2ABAC09B, NULL);
+	}
+
+IL_0043:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:58>
+		return;
+	}
+}
+// Method Definition Index: 106725
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticWrapper_Play_m5B0F765E3580D7A2352A1E7ECBE217BC945D3D1E (AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* __this, String_t* ___0_patternID, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_m38D7D27B521C5BA98FE44DA03BC48038247FADF5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass5_0_U3CPlayU3Eb__0_mE899320283067FC98F07BF1B0191DB209C814111_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral539BF70A0C220F8B37B7E6E1365B33D2F988BBC6);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	{
+		U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* L_0 = (U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2_il2cpp_TypeInfo_var);
+		U3CU3Ec__DisplayClass5_0__ctor_mD343C1F0D010F329204BEB9908AFDEE77B77F109(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* L_1 = V_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:62>
+		U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* L_2 = V_0;
+		String_t* L_3 = ___0_patternID;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(2, L_3);
+		NullCheck(L_2);
+		L_2->___patternHash = L_4;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:64>
+		Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* L_5 = __this->___registeredPatterns;
+		U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* L_6 = V_0;
+		NullCheck(L_6);
+		int32_t L_7 = L_6->___patternHash;
+		NullCheck(L_5);
+		bool L_8;
+		L_8 = Dictionary_2_ContainsKey_m38D7D27B521C5BA98FE44DA03BC48038247FADF5(L_5, L_7, Dictionary_2_ContainsKey_m38D7D27B521C5BA98FE44DA03BC48038247FADF5_RuntimeMethod_var);
+		V_1 = (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_1;
+		if (!L_9)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:64>
+		goto IL_0061;
+	}
+
+IL_0034:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:66>
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_10 = __this->___vibrationService;
+		V_2 = (bool)((((RuntimeObject*)(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)L_10) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_11 = V_2;
+		if (!L_11)
+		{
+			goto IL_0043;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:66>
+		goto IL_0061;
+	}
+
+IL_0043:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:69>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:70>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:71>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:72>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:73>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:74>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:75>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:76>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:77>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:78>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:79>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:80>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:81>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:82>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:83>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:84>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:85>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:86>
+		U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* L_12 = V_0;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_13 = (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A*)il2cpp_codegen_object_new(SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		SimpleCallback__ctor_m04CB2FCA2E02060AB815575D93F70A51542A7DE6(L_13, L_12, (intptr_t)((void*)U3CU3Ec__DisplayClass5_0_U3CPlayU3Eb__0_mE899320283067FC98F07BF1B0191DB209C814111_RuntimeMethod_var), NULL);
+		String_t* L_14 = ___0_patternID;
+		String_t* L_15;
+		L_15 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral539BF70A0C220F8B37B7E6E1365B33D2F988BBC6, L_14, NULL);
+		BaseHapticWrapper_Try_m54189A9B6B3515505D0B104815390EE8E6E2688E(__this, L_13, L_15, NULL);
+	}
+
+IL_0061:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:88>
+		return;
+	}
+}
+// Method Definition Index: 106726
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticWrapper_RegisterPattern_m1DBE4B44C1AF5204DBDC498228B030E31E3271D9 (AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* __this, HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_pattern, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_m3EE4C8C1C9E10F3A3BD8C7974C6CA3EC6CF54A70_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_m38D7D27B521C5BA98FE44DA03BC48038247FADF5_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:92>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_0 = ___0_pattern;
+		NullCheck(L_0);
+		String_t* L_1;
+		L_1 = HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline(L_0, NULL);
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(2, L_1);
+		V_0 = L_2;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:94>
+		Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* L_3 = __this->___registeredPatterns;
+		int32_t L_4 = V_0;
+		NullCheck(L_3);
+		bool L_5;
+		L_5 = Dictionary_2_ContainsKey_m38D7D27B521C5BA98FE44DA03BC48038247FADF5(L_3, L_4, Dictionary_2_ContainsKey_m38D7D27B521C5BA98FE44DA03BC48038247FADF5_RuntimeMethod_var);
+		V_1 = L_5;
+		bool L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:94>
+		goto IL_0032;
+	}
+
+IL_001f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:96>
+		Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* L_7 = __this->___registeredPatterns;
+		int32_t L_8 = V_0;
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_9 = ___0_pattern;
+		AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* L_10 = (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2*)il2cpp_codegen_object_new(AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2_il2cpp_TypeInfo_var);
+		AndroidHapticPattern__ctor_mBF1BE6E5AB6D2DE53A5E88607D3602D03C475162(L_10, L_9, NULL);
+		NullCheck(L_7);
+		Dictionary_2_Add_m3EE4C8C1C9E10F3A3BD8C7974C6CA3EC6CF54A70(L_7, L_8, L_10, Dictionary_2_Add_m3EE4C8C1C9E10F3A3BD8C7974C6CA3EC6CF54A70_RuntimeMethod_var);
+	}
+
+IL_0032:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:97>
+		return;
+	}
+}
+// Method Definition Index: 106727
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticWrapper__ctor_mE835005D0F73FF6FC9E39FB9A4FC806B0F5A2C26 (AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* __this, const RuntimeMethod* method) 
+{
+	{
+		BaseHapticWrapper__ctor_mD98EFD783787101C68B59E0D2840AAE80E7EC676(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 106728
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticWrapper_U3CInitU3Eb__3_0_mF27E638612A1ABE3834E1B9BB7BC5066C4CD4497 (AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_GetStatic_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m740F3401DEA4A75BADD753EFF71D2328B4147BFC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral09DF0F4EA30887D5D6E2833D4C620AAAB11E1C34);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral943C8FF538819688439782F2AEDB69F222317B17);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9A053A49693D46963A63E83B4F75CF40EED8D8FD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD31F238E2BFDF2B26F149401362C247796BED93E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9);
+		s_Il2CppMethodInitialized = true;
+	}
+	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* V_0 = NULL;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_1 = NULL;
+	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* V_2 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:20>
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_0 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_0, _stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078, NULL);
+		V_0 = L_0;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_003b:
+			{
+				{
+					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_1 = V_0;
+					if (!L_1)
+					{
+						goto IL_0045;
+					}
+				}
+				{
+					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_2 = V_0;
+					NullCheck(L_2);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_2);
+				}
+
+IL_0045:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:22>
+			AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_3 = V_0;
+			NullCheck(L_3);
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4;
+			L_4 = AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD(L_3, _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9, AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+			V_1 = L_4;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:24>
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_5 = V_1;
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_7 = L_6;
+			NullCheck(L_7);
+			ArrayElementTypeCheck (L_7, _stringLiteral943C8FF538819688439782F2AEDB69F222317B17);
+			(L_7)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)_stringLiteral943C8FF538819688439782F2AEDB69F222317B17);
+			NullCheck(L_5);
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_8;
+			L_8 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_5, _stringLiteral9A053A49693D46963A63E83B4F75CF40EED8D8FD, L_7, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
+			__this->___vibrationService = L_8;
+			Il2CppCodeGenWriteBarrier((void**)(&__this->___vibrationService), (void*)L_8);
+			goto IL_0046;
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0046:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:28>
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_9 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_9, _stringLiteralD31F238E2BFDF2B26F149401362C247796BED93E, NULL);
+		V_2 = L_9;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0066:
+			{
+				{
+					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_10 = V_2;
+					if (!L_10)
+					{
+						goto IL_0070;
+					}
+				}
+				{
+					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_11 = V_2;
+					NullCheck(L_11);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_11);
+				}
+
+IL_0070:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:30>
+			AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_12 = V_2;
+			NullCheck(L_12);
+			int32_t L_13;
+			L_13 = AndroidJavaObject_GetStatic_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m740F3401DEA4A75BADD753EFF71D2328B4147BFC(L_12, _stringLiteral09DF0F4EA30887D5D6E2833D4C620AAAB11E1C34, AndroidJavaObject_GetStatic_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m740F3401DEA4A75BADD753EFF71D2328B4147BFC_RuntimeMethod_var);
+			__this->___sdkVersion = L_13;
+			goto IL_0071;
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0071:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:32>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106729
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* AndroidHapticPattern_get_Pattern_mBEDD1A48342F2EFEBDFD96010DF3682DE9D568C8 (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:101>
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_0 = __this->___U3CPatternU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 106730
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticPattern_set_Pattern_m88725148F4D6A635A0F7178A48812F51BFD82384 (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:101>
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_0 = ___0_value;
+		__this->___U3CPatternU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CPatternU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 106731
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* AndroidHapticPattern_get_Amplitudes_mF01215C7D8EE9365FF84AE09F3190DC80C85875A (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:102>
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___U3CAmplitudesU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 106732
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticPattern_set_Amplitudes_mD9E22369E4D9F560326E0E0417BE95B6EC1836E9 (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:102>
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = ___0_value;
+		__this->___U3CAmplitudesU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAmplitudesU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 106733
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidHapticPattern__ctor_mBF1BE6E5AB6D2DE53A5E88607D3602D03C475162 (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_hapticPattern, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Sort_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m3C71A679C0FFA6F7015634C8F785A36FE3B04593_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_ToArray_m8F215FE5D98A9A41546F2FD6AB5A741A5B6F1D92_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m2EBA73E03CE51821DFC1880E09649FFBFC3ABA75_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tF9D88C946600C782EE786A252258C0AA97BD019A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3C_ctorU3Eb__8_0_mAC9939DDC09285B59CC3F42A7FEA1B296856FA54_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* V_0 = NULL;
+	List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* V_1 = NULL;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* V_2 = NULL;
+	float V_3 = 0.0f;
+	int32_t V_4 = 0;
+	HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* V_5 = NULL;
+	float V_6 = 0.0f;
+	bool V_7 = false;
+	bool V_8 = false;
+	bool V_9 = false;
+	bool V_10 = false;
+	Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* G_B2_0 = NULL;
+	HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* G_B2_1 = NULL;
+	Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* G_B1_0 = NULL;
+	HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* G_B1_1 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:104>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:107>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_0 = ___0_hapticPattern;
+		NullCheck(L_0);
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_1;
+		L_1 = HapticPattern_get_Pattern_mFE7A9CDD6BB62FFE5F388284D5615932BF989D1C_inline(L_0, NULL);
+		NullCheck((RuntimeArray*)L_1);
+		RuntimeObject* L_2;
+		L_2 = Array_Clone_m66C9D0727C9BAA0995E4142F29B45BC03582E042((RuntimeArray*)L_1, NULL);
+		V_0 = ((HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71*)Castclass((RuntimeObject*)L_2, HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71_il2cpp_TypeInfo_var));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:108>
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_3 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var);
+		Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* L_4 = ((U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var))->___U3CU3E9__8_0;
+		Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* L_5 = L_4;
+		if (L_5)
+		{
+			G_B2_0 = L_5;
+			G_B2_1 = L_3;
+			goto IL_0039;
+		}
+		G_B1_0 = L_5;
+		G_B1_1 = L_3;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var);
+		U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B* L_6 = ((U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var))->___U3CU3E9;
+		Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* L_7 = (Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C*)il2cpp_codegen_object_new(Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C_il2cpp_TypeInfo_var);
+		Comparison_1__ctor_mA61FBFFB5E245E9EE4DCA2341F8A0C8D25D96174(L_7, L_6, (intptr_t)((void*)U3CU3Ec_U3C_ctorU3Eb__8_0_mAC9939DDC09285B59CC3F42A7FEA1B296856FA54_RuntimeMethod_var), NULL);
+		Comparison_1_t73DDDD4E3855A2F9E129664D3497B226882EC49C* L_8 = L_7;
+		((U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var))->___U3CU3E9__8_0 = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var))->___U3CU3E9__8_0), (void*)L_8);
+		G_B2_0 = L_8;
+		G_B2_1 = G_B1_1;
+	}
+
+IL_0039:
+	{
+		Array_Sort_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m3C71A679C0FFA6F7015634C8F785A36FE3B04593(G_B2_1, G_B2_0, Array_Sort_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m3C71A679C0FFA6F7015634C8F785A36FE3B04593_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:110>
+		List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* L_9 = (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A*)il2cpp_codegen_object_new(List_1_tF9D88C946600C782EE786A252258C0AA97BD019A_il2cpp_TypeInfo_var);
+		List_1__ctor_m2EBA73E03CE51821DFC1880E09649FFBFC3ABA75(L_9, List_1__ctor_m2EBA73E03CE51821DFC1880E09649FFBFC3ABA75_RuntimeMethod_var);
+		V_1 = L_9;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:111>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_10 = (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*)il2cpp_codegen_object_new(List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
+		List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8(L_10, List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
+		V_2 = L_10;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:113>
+		V_3 = (0.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:115>
+		V_4 = 0;
+		goto IL_0119;
+	}
+
+IL_0059:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:117>
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_11 = V_0;
+		int32_t L_12 = V_4;
+		NullCheck(L_11);
+		int32_t L_13 = L_12;
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_14 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
+		V_5 = L_14;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:120>
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_15 = V_5;
+		NullCheck(L_15);
+		float L_16 = L_15->___Duration;
+		V_6 = L_16;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:121>
+		int32_t L_17 = V_4;
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_18 = V_0;
+		NullCheck(L_18);
+		V_7 = (bool)((((int32_t)L_17) < ((int32_t)((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_18)->max_length)), 1))))? 1 : 0);
+		bool L_19 = V_7;
+		if (!L_19)
+		{
+			goto IL_0094;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:122>
+		float L_20 = V_6;
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_21 = V_0;
+		int32_t L_22 = V_4;
+		NullCheck(L_21);
+		int32_t L_23 = ((int32_t)il2cpp_codegen_add(L_22, 1));
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_24 = (L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_23));
+		NullCheck(L_24);
+		float L_25 = L_24->___StartTime;
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_26 = V_5;
+		NullCheck(L_26);
+		float L_27 = L_26->___StartTime;
+		float L_28;
+		L_28 = Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline(L_20, ((float)il2cpp_codegen_subtract(L_25, L_27)), NULL);
+		V_6 = L_28;
+	}
+
+IL_0094:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:124>
+		float L_29 = V_6;
+		V_8 = (bool)((((int32_t)((!(((float)L_29) <= ((float)(0.0f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_30 = V_8;
+		if (!L_30)
+		{
+			goto IL_00a8;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:124>
+		goto IL_0113;
+	}
+
+IL_00a8:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:127>
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_31 = V_5;
+		NullCheck(L_31);
+		float L_32 = L_31->___StartTime;
+		float L_33 = V_3;
+		V_9 = (bool)((((float)L_32) > ((float)L_33))? 1 : 0);
+		bool L_34 = V_9;
+		if (!L_34)
+		{
+			goto IL_00d9;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:129>
+		List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* L_35 = V_1;
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_36 = V_5;
+		NullCheck(L_36);
+		float L_37 = L_36->___StartTime;
+		float L_38 = V_3;
+		NullCheck(L_35);
+		List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_inline(L_35, il2cpp_codegen_cast_double_to_int<int64_t>(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_37, L_38)), (1000.0f)))), List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:130>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_39 = V_2;
+		NullCheck(L_39);
+		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_39, 0, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+	}
+
+IL_00d9:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:133>
+		List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* L_40 = V_1;
+		float L_41 = V_6;
+		NullCheck(L_40);
+		List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_inline(L_40, il2cpp_codegen_cast_double_to_int<int64_t>(((float)il2cpp_codegen_multiply(L_41, (1000.0f)))), List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:134>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_42 = V_2;
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_43 = V_5;
+		NullCheck(L_43);
+		float L_44 = L_43->___Intensity;
+		float L_45;
+		L_45 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline((1.0f), (255.0f), L_44, NULL);
+		NullCheck(L_42);
+		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_42, il2cpp_codegen_cast_double_to_int<int32_t>(L_45), List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:136>
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_46 = V_5;
+		NullCheck(L_46);
+		float L_47 = L_46->___StartTime;
+		float L_48 = V_6;
+		V_3 = ((float)il2cpp_codegen_add(L_47, L_48));
+	}
+
+IL_0113:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:115>
+		int32_t L_49 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_49, 1));
+	}
+
+IL_0119:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:115>
+		int32_t L_50 = V_4;
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_51 = V_0;
+		NullCheck(L_51);
+		V_10 = (bool)((((int32_t)L_50) < ((int32_t)((int32_t)(((RuntimeArray*)L_51)->max_length))))? 1 : 0);
+		bool L_52 = V_10;
+		if (L_52)
+		{
+			goto IL_0059;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:139>
+		List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* L_53 = V_1;
+		NullCheck(L_53);
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_54;
+		L_54 = List_1_ToArray_m8F215FE5D98A9A41546F2FD6AB5A741A5B6F1D92(L_53, List_1_ToArray_m8F215FE5D98A9A41546F2FD6AB5A741A5B6F1D92_RuntimeMethod_var);
+		AndroidHapticPattern_set_Pattern_m88725148F4D6A635A0F7178A48812F51BFD82384_inline(__this, L_54, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:140>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_55 = V_2;
+		NullCheck(L_55);
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_56;
+		L_56 = List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA(L_55, List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_RuntimeMethod_var);
+		AndroidHapticPattern_set_Amplitudes_mD9E22369E4D9F560326E0E0417BE95B6EC1836E9_inline(__this, L_56, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:141>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106734
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m1D724F54E4669B72A1B67DFAFFD4111EC8FAA8D9 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B* L_0 = (U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B*)il2cpp_codegen_object_new(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var);
+		U3CU3Ec__ctor_m51A0CA80063B363B33391FAF3C40A3F8C009209A(L_0, NULL);
+		((U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var))->___U3CU3E9 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B_il2cpp_TypeInfo_var))->___U3CU3E9), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 106735
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m51A0CA80063B363B33391FAF3C40A3F8C009209A (U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 106736
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3C_ctorU3Eb__8_0_mAC9939DDC09285B59CC3F42A7FEA1B296856FA54 (U3CU3Ec_tA1253B98CA857EADD82EAD7A36C92A84AF88ED2B* __this, HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* ___0_a, HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* ___1_b, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:108>
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_0 = ___0_a;
+		NullCheck(L_0);
+		float* L_1 = (float*)(&L_0->___StartTime);
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_2 = ___1_b;
+		NullCheck(L_2);
+		float L_3 = L_2->___StartTime;
+		int32_t L_4;
+		L_4 = Single_CompareTo_m06F7868162EB392D3E99103D1A0BD27463C9E66F(L_1, L_3, NULL);
+		return L_4;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106737
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0__ctor_m86A1C7DE037F8B14DB0D3E3432E70F41B61EFE03 (U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 106738
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3CPlayU3Eb__0_m0E72AC1D891905209177716D95F8DAD2C8174DED (U3CU3Ec__DisplayClass4_0_t3DAC34F38B4A0D05371364FC0FFB2387A0577F53* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1645079AF0AD68877D5774BC81695A708DB69E30);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3D079C3282CD7D084E678D9C90C09135FD4E8F75);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8B983133C476E84E06D0813B8B52F2D1FAD2C022);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* V_1 = NULL;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_2 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:43>
+		AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* L_0 = __this->___U3CU3E4__this;
+		NullCheck(L_0);
+		int32_t L_1 = L_0->___sdkVersion;
+		V_0 = (bool)((((int32_t)((((int32_t)L_1) < ((int32_t)((int32_t)26)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_009d;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:45>
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_3 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_3, _stringLiteral3D079C3282CD7D084E678D9C90C09135FD4E8F75, NULL);
+		V_1 = L_3;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_008f:
+			{
+				{
+					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_4 = V_1;
+					if (!L_4)
+					{
+						goto IL_0099;
+					}
+				}
+				{
+					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_5 = V_1;
+					NullCheck(L_5);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_5);
+				}
+
+IL_0099:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:47>
+			AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_6 = V_1;
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_7 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_8 = L_7;
+			float L_9 = __this->___duration;
+			int64_t L_10 = il2cpp_codegen_cast_double_to_int<int64_t>(((float)il2cpp_codegen_multiply(L_9, (1000.0f))));
+			RuntimeObject* L_11 = Box(il2cpp_defaults.int64_class, &L_10);
+			NullCheck(L_8);
+			ArrayElementTypeCheck (L_8, L_11);
+			(L_8)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_11);
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_12 = L_8;
+			float L_13 = __this->___intensity;
+			float L_14;
+			L_14 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline((1.0f), (255.0f), L_13, NULL);
+			int32_t L_15 = il2cpp_codegen_cast_double_to_int<int32_t>(L_14);
+			RuntimeObject* L_16 = Box(il2cpp_defaults.int32_class, &L_15);
+			NullCheck(L_12);
+			ArrayElementTypeCheck (L_12, L_16);
+			(L_12)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_16);
+			NullCheck(L_6);
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_17;
+			L_17 = AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63(L_6, _stringLiteral8B983133C476E84E06D0813B8B52F2D1FAD2C022, L_12, AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63_RuntimeMethod_var);
+			V_2 = L_17;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:49>
+			AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* L_18 = __this->___U3CU3E4__this;
+			NullCheck(L_18);
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_19 = L_18->___vibrationService;
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_20 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_21 = L_20;
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_22 = V_2;
+			NullCheck(L_21);
+			ArrayElementTypeCheck (L_21, L_22);
+			(L_21)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_22);
+			NullCheck(L_19);
+			AndroidJavaObject_Call_mDEF7846E2AB1C5379069BB21049ED55A9D837B1C(L_19, _stringLiteral1645079AF0AD68877D5774BC81695A708DB69E30, L_21, NULL);
+			goto IL_009a;
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_009a:
+	{
+		goto IL_00c9;
+	}
+
+IL_009d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:54>
+		AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* L_23 = __this->___U3CU3E4__this;
+		NullCheck(L_23);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_24 = L_23->___vibrationService;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_25 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_26 = L_25;
+		float L_27 = __this->___duration;
+		float L_28 = L_27;
+		RuntimeObject* L_29 = Box(il2cpp_defaults.single_class, &L_28);
+		NullCheck(L_26);
+		ArrayElementTypeCheck (L_26, L_29);
+		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_29);
+		NullCheck(L_24);
+		AndroidJavaObject_Call_mDEF7846E2AB1C5379069BB21049ED55A9D837B1C(L_24, _stringLiteral1645079AF0AD68877D5774BC81695A708DB69E30, L_26, NULL);
+	}
+
+IL_00c9:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:56>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106739
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_mD343C1F0D010F329204BEB9908AFDEE77B77F109 (U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 106740
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3CPlayU3Eb__0_mE899320283067FC98F07BF1B0191DB209C814111 (U3CU3Ec__DisplayClass5_0_t844102CD3E0E11B552715C44FCE93DFC0615CAD2* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Item_m6F659CE5F6E380A0834A66E0AC39CE775491004F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1645079AF0AD68877D5774BC81695A708DB69E30);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3D079C3282CD7D084E678D9C90C09135FD4E8F75);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE3A105D59F493421481242819787FDF8AA700AF8);
+		s_Il2CppMethodInitialized = true;
+	}
+	AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* V_0 = NULL;
+	bool V_1 = false;
+	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* V_2 = NULL;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_3 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:71>
+		AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* L_0 = __this->___U3CU3E4__this;
+		NullCheck(L_0);
+		Dictionary_2_tAA3B70D1343F4FB6D004BB173E51063910BE5EB0* L_1 = L_0->___registeredPatterns;
+		int32_t L_2 = __this->___patternHash;
+		NullCheck(L_1);
+		AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* L_3;
+		L_3 = Dictionary_2_get_Item_m6F659CE5F6E380A0834A66E0AC39CE775491004F(L_1, L_2, Dictionary_2_get_Item_m6F659CE5F6E380A0834A66E0AC39CE775491004F_RuntimeMethod_var);
+		V_0 = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:73>
+		AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* L_4 = __this->___U3CU3E4__this;
+		NullCheck(L_4);
+		int32_t L_5 = L_4->___sdkVersion;
+		V_1 = (bool)((((int32_t)((((int32_t)L_5) < ((int32_t)((int32_t)26)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_0099;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:75>
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_7 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
+		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_7, _stringLiteral3D079C3282CD7D084E678D9C90C09135FD4E8F75, NULL);
+		V_2 = L_7;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_008b:
+			{
+				{
+					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_8 = V_2;
+					if (!L_8)
+					{
+						goto IL_0095;
+					}
+				}
+				{
+					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_9 = V_2;
+					NullCheck(L_9);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_9);
+				}
+
+IL_0095:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:77>
+			AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_10 = V_2;
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_11 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)3);
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_12 = L_11;
+			AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* L_13 = V_0;
+			NullCheck(L_13);
+			Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_14;
+			L_14 = AndroidHapticPattern_get_Pattern_mBEDD1A48342F2EFEBDFD96010DF3682DE9D568C8_inline(L_13, NULL);
+			NullCheck(L_12);
+			ArrayElementTypeCheck (L_12, L_14);
+			(L_12)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_14);
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_15 = L_12;
+			AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* L_16 = V_0;
+			NullCheck(L_16);
+			Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_17;
+			L_17 = AndroidHapticPattern_get_Amplitudes_mF01215C7D8EE9365FF84AE09F3190DC80C85875A_inline(L_16, NULL);
+			NullCheck(L_15);
+			ArrayElementTypeCheck (L_15, L_17);
+			(L_15)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_17);
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_18 = L_15;
+			int32_t L_19 = (-1);
+			RuntimeObject* L_20 = Box(il2cpp_defaults.int32_class, &L_19);
+			NullCheck(L_18);
+			ArrayElementTypeCheck (L_18, L_20);
+			(L_18)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_20);
+			NullCheck(L_10);
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_21;
+			L_21 = AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63(L_10, _stringLiteralE3A105D59F493421481242819787FDF8AA700AF8, L_18, AndroidJavaObject_CallStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m398EA96C1DE1BB885F2B1DD0E00E8BBA86B49E63_RuntimeMethod_var);
+			V_3 = L_21;
+			//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:79>
+			AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* L_22 = __this->___U3CU3E4__this;
+			NullCheck(L_22);
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_23 = L_22->___vibrationService;
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_24 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_25 = L_24;
+			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_26 = V_3;
+			NullCheck(L_25);
+			ArrayElementTypeCheck (L_25, L_26);
+			(L_25)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_26);
+			NullCheck(L_23);
+			AndroidJavaObject_Call_mDEF7846E2AB1C5379069BB21049ED55A9D837B1C(L_23, _stringLiteral1645079AF0AD68877D5774BC81695A708DB69E30, L_25, NULL);
+			goto IL_0096;
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0096:
+	{
+		goto IL_00c9;
+	}
+
+IL_0099:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:84>
+		AndroidHapticWrapper_tE8B72BC23AB93B38310467298E93635CD32D5F45* L_27 = __this->___U3CU3E4__this;
+		NullCheck(L_27);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_28 = L_27->___vibrationService;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_29 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_30 = L_29;
+		AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* L_31 = V_0;
+		NullCheck(L_31);
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_32;
+		L_32 = AndroidHapticPattern_get_Pattern_mBEDD1A48342F2EFEBDFD96010DF3682DE9D568C8_inline(L_31, NULL);
+		NullCheck(L_30);
+		ArrayElementTypeCheck (L_30, L_32);
+		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_32);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_33 = L_30;
+		int32_t L_34 = (-1);
+		RuntimeObject* L_35 = Box(il2cpp_defaults.int32_class, &L_34);
+		NullCheck(L_33);
+		ArrayElementTypeCheck (L_33, L_35);
+		(L_33)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_35);
+		NullCheck(L_28);
+		AndroidJavaObject_Call_mDEF7846E2AB1C5379069BB21049ED55A9D837B1C(L_28, _stringLiteral1645079AF0AD68877D5774BC81695A708DB69E30, L_33, NULL);
+	}
+
+IL_00c9:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:86>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106745
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseHapticWrapper_Log_m9099C4794E0942072B9AC5FEC254C5E1B6BBF525 (BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* __this, String_t* ___0_message, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral587F7BDE7A90CCA6181A36EBC50606A56E49B786);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/BaseHapticWrapper.cs:24>
+		String_t* L_0 = ___0_message;
+		String_t* L_1;
+		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral587F7BDE7A90CCA6181A36EBC50606A56E49B786, L_0, NULL);
+		LogManager_Log_mB169A704597005B16580AE92FBE3FA5C30F19C1B(L_1, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/BaseHapticWrapper.cs:25>
+		return;
+	}
+}
+// Method Definition Index: 106746
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseHapticWrapper_Try_m54189A9B6B3515505D0B104815390EE8E6E2688E (BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* __this, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___0_action, String_t* ___1_errorMessage, const RuntimeMethod* method) 
+{
+	Exception_t* V_0 = NULL;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	{
+	}
+	try
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/BaseHapticWrapper.cs:31>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_0 = ___0_action;
+		NullCheck(L_0);
+		SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline(L_0, NULL);
+		goto IL_0029;
+	}
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_000c;
+		}
+		throw e;
+	}
+
+CATCH_000c:
+	{
+		Exception_t* L_1 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/BaseHapticWrapper.cs:33>
+		V_0 = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/BaseHapticWrapper.cs:35>
+		String_t* L_2 = ___1_errorMessage;
+		String_t* L_3;
+		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralAD904CD65590DA24A7A6BBE5A5B7CEDE4EE1CC35)), L_2, NULL);
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_3, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/BaseHapticWrapper.cs:36>
+		Exception_t* L_4 = V_0;
+		Debug_LogException_mAB3F4DC7297ED8FBB49DAA718B70E59A6B0171B0(L_4, NULL);
+		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
+		goto IL_0029;
+	}
+
+IL_0029:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/BaseHapticWrapper.cs:38>
+		return;
+	}
+}
+// Method Definition Index: 106747
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseHapticWrapper__ctor_mD98EFD783787101C68B59E0D2840AAE80E7EC676 (BaseHapticWrapper_tCDF88955BE3C0A70F80BA7B6133C6CECDF30A8E7* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106748
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorHapticWrapper_Init_mCB7958A3FC273EDFB9B1C5483B5AC5CFFA92F258 (EditorHapticWrapper_tAB93C77F467BB610B60465A106291C9B29F31E0A* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5AE3B99E35D377E24C5A9BDAD49A8574B1D803C5);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs:9>
+		BaseHapticWrapper_Log_m9099C4794E0942072B9AC5FEC254C5E1B6BBF525(__this, _stringLiteral5AE3B99E35D377E24C5A9BDAD49A8574B1D803C5, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs:10>
+		return;
+	}
+}
+// Method Definition Index: 106749
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorHapticWrapper_Play_mD5958F65CB836349B9B87902E1955A71F2EEFB46 (EditorHapticWrapper_tAB93C77F467BB610B60465A106291C9B29F31E0A* __this, float ___0_duration, float ___1_intensity, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral31D05622204BE22BE61BEEAE7EADEAF4075A439D);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs:14>
+		float L_0 = ___0_duration;
+		float L_1 = L_0;
+		RuntimeObject* L_2 = Box(il2cpp_defaults.single_class, &L_1);
+		float L_3 = ___1_intensity;
+		float L_4 = L_3;
+		RuntimeObject* L_5 = Box(il2cpp_defaults.single_class, &L_4);
+		String_t* L_6;
+		L_6 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral31D05622204BE22BE61BEEAE7EADEAF4075A439D, L_2, L_5, NULL);
+		BaseHapticWrapper_Log_m9099C4794E0942072B9AC5FEC254C5E1B6BBF525(__this, L_6, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs:15>
+		return;
+	}
+}
+// Method Definition Index: 106750
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorHapticWrapper_Play_m9ACE657DB56EA74D69CC1C6B8DD534D6BEA11E3D (EditorHapticWrapper_tAB93C77F467BB610B60465A106291C9B29F31E0A* __this, String_t* ___0_patternID, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0A1BBC6B94C8C5D08D14BF2B5462AB0E5A499EDA);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs:19>
+		String_t* L_0 = ___0_patternID;
+		String_t* L_1;
+		L_1 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral0A1BBC6B94C8C5D08D14BF2B5462AB0E5A499EDA, L_0, NULL);
+		BaseHapticWrapper_Log_m9099C4794E0942072B9AC5FEC254C5E1B6BBF525(__this, L_1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs:20>
+		return;
+	}
+}
+// Method Definition Index: 106751
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorHapticWrapper_RegisterPattern_m190CD3F68201B75CC2787DCCC63DA5FEC3AD6143 (EditorHapticWrapper_tAB93C77F467BB610B60465A106291C9B29F31E0A* __this, HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_pattern, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4C30A9608160E78B7E37EDB396CD08E671C8BC31);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs:24>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_0 = ___0_pattern;
+		NullCheck(L_0);
+		String_t* L_1;
+		L_1 = HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline(L_0, NULL);
+		String_t* L_2;
+		L_2 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral4C30A9608160E78B7E37EDB396CD08E671C8BC31, L_1, NULL);
+		BaseHapticWrapper_Log_m9099C4794E0942072B9AC5FEC254C5E1B6BBF525(__this, L_2, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/EditorHapticWrapper.cs:25>
+		return;
+	}
+}
+// Method Definition Index: 106752
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorHapticWrapper__ctor_m6ADA0AD23F6CEC8ED9494E42ED6737387BA06FBD (EditorHapticWrapper_tAB93C77F467BB610B60465A106291C9B29F31E0A* __this, const RuntimeMethod* method) 
+{
+	{
+		BaseHapticWrapper__ctor_mD98EFD783787101C68B59E0D2840AAE80E7EC676(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106753
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSHapticWrapper_Init_mB7329E7ED39F5BA7619C70E663108AE71C82142B (IOSHapticWrapper_t2C08F65FAAE83B4FEA5FD47E2F64182678A58B98* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/IOSHapticWrapper.cs:27>
+		return;
+	}
+}
+// Method Definition Index: 106754
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSHapticWrapper_Play_mC0C124E051063272106141B6A5314F64B252DBA4 (IOSHapticWrapper_t2C08F65FAAE83B4FEA5FD47E2F64182678A58B98* __this, float ___0_duration, float ___1_intensity, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/IOSHapticWrapper.cs:34>
+		return;
+	}
+}
+// Method Definition Index: 106755
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSHapticWrapper_Play_m4D063D370DDD11C119B401F6349194F6F8237D1C (IOSHapticWrapper_t2C08F65FAAE83B4FEA5FD47E2F64182678A58B98* __this, String_t* ___0_patternID, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/IOSHapticWrapper.cs:41>
+		return;
+	}
+}
+// Method Definition Index: 106756
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSHapticWrapper_RegisterPattern_mAA364BC7C17770EE1748CE34FCA58CAF58C9291E (IOSHapticWrapper_t2C08F65FAAE83B4FEA5FD47E2F64182678A58B98* __this, HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_pattern, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral371079FEEB74DAFB4598BB2FE3E0D66C97FC84E0);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/IOSHapticWrapper.cs:45>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_0 = ___0_pattern;
+		String_t* L_1;
+		L_1 = JsonUtility_ToJson_m28CC6843B9D3723D88AD13EA3829B71FDE7826BA(L_0, NULL);
+		V_0 = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/IOSHapticWrapper.cs:47>
+		String_t* L_2 = V_0;
+		bool L_3;
+		L_3 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_2, NULL);
+		V_1 = L_3;
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/IOSHapticWrapper.cs:49>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_5 = ___0_pattern;
+		NullCheck(L_5);
+		String_t* L_6;
+		L_6 = HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline(L_5, NULL);
+		String_t* L_7;
+		L_7 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral371079FEEB74DAFB4598BB2FE3E0D66C97FC84E0, L_6, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_7, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/IOSHapticWrapper.cs:51>
+		goto IL_002b;
+	}
+
+IL_002b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/IOSHapticWrapper.cs:57>
+		return;
+	}
+}
+// Method Definition Index: 106757
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSHapticWrapper__ctor_mE5596A8AB10474B627D06A75001E9D3382348136 (IOSHapticWrapper_t2C08F65FAAE83B4FEA5FD47E2F64182678A58B98* __this, const RuntimeMethod* method) 
+{
+	{
+		BaseHapticWrapper__ctor_mD98EFD783787101C68B59E0D2840AAE80E7EC676(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106758
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebGLHapticWrapper_Init_mEC0EEE22EEC24F8F89E0B8E8BD6B5A9B21EDE3BB (WebGLHapticWrapper_t06E18A27FD6FF7E230815C13CABABC157A41ACDD* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:30>
+		return;
+	}
+}
+// Method Definition Index: 106759
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebGLHapticWrapper_Play_m504FDE25FF554E694A30493B7E1A82CF39D67FC0 (WebGLHapticWrapper_t06E18A27FD6FF7E230815C13CABABC157A41ACDD* __this, float ___0_duration, float ___1_intensity, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:39>
+		return;
+	}
+}
+// Method Definition Index: 106760
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebGLHapticWrapper_Play_m81B84CA721A859D1BCEC0F650DA6ED6987CC1C9D (WebGLHapticWrapper_t06E18A27FD6FF7E230815C13CABABC157A41ACDD* __this, String_t* ___0_patternID, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:48>
+		return;
+	}
+}
+// Method Definition Index: 106761
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebGLHapticWrapper_RegisterPattern_m45B8102D58316A9ADA6FBEC9DEEE4E7D02B32171 (WebGLHapticWrapper_t06E18A27FD6FF7E230815C13CABABC157A41ACDD* __this, HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_pattern, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:59>
+		return;
+	}
+}
+// Method Definition Index: 106762
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* WebGLHapticWrapper_ConvertToVibrationPattern_mB59557E72BD470C3EDA4C2745D1BFBACDE3D7BD1 (WebGLHapticWrapper_t06E18A27FD6FF7E230815C13CABABC157A41ACDD* __this, HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* ___0_hapticPattern, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CoreExtensions_IsNullOrEmpty_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m92F1565B9BF841ABEC384C85C5F344B680431A9D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* V_0 = NULL;
+	HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* V_1 = NULL;
+	bool V_2 = false;
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* V_3 = NULL;
+	int32_t V_4 = 0;
+	HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* V_5 = NULL;
+	int32_t V_6 = 0;
+	bool V_7 = false;
+	float V_8 = 0.0f;
+	int32_t V_9 = 0;
+	bool V_10 = false;
+	bool V_11 = false;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:63>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_0 = ___0_hapticPattern;
+		if (!L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_1 = ___0_hapticPattern;
+		NullCheck(L_1);
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_2;
+		L_2 = HapticPattern_get_Pattern_mFE7A9CDD6BB62FFE5F388284D5615932BF989D1C_inline(L_1, NULL);
+		bool L_3;
+		L_3 = CoreExtensions_IsNullOrEmpty_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m92F1565B9BF841ABEC384C85C5F344B680431A9D(L_2, CoreExtensions_IsNullOrEmpty_TisHapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47_m92F1565B9BF841ABEC384C85C5F344B680431A9D_RuntimeMethod_var);
+		G_B3_0 = ((int32_t)(L_3));
+		goto IL_0012;
+	}
+
+IL_0011:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_0012:
+	{
+		V_2 = (bool)G_B3_0;
+		bool L_4 = V_2;
+		if (!L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:64>
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_5 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)0);
+		V_3 = L_5;
+		goto IL_00cb;
+	}
+
+IL_0022:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:66>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_6 = (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*)il2cpp_codegen_object_new(List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
+		List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8(L_6, List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
+		V_0 = L_6;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:68>
+		HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* L_7 = ___0_hapticPattern;
+		NullCheck(L_7);
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_8;
+		L_8 = HapticPattern_get_Pattern_mFE7A9CDD6BB62FFE5F388284D5615932BF989D1C_inline(L_7, NULL);
+		V_1 = L_8;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:69>
+		V_4 = 0;
+		goto IL_00b2;
+	}
+
+IL_0034:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:71>
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_9 = V_1;
+		int32_t L_10 = V_4;
+		NullCheck(L_9);
+		int32_t L_11 = L_10;
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_12 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
+		V_5 = L_12;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:74>
+		int32_t L_13 = V_4;
+		V_7 = (bool)((((int32_t)L_13) > ((int32_t)0))? 1 : 0);
+		bool L_14 = V_7;
+		if (!L_14)
+		{
+			goto IL_008e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:76>
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_15 = V_1;
+		int32_t L_16 = V_4;
+		NullCheck(L_15);
+		int32_t L_17 = ((int32_t)il2cpp_codegen_subtract(L_16, 1));
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_18 = (L_15)->GetAt(static_cast<il2cpp_array_size_t>(L_17));
+		NullCheck(L_18);
+		float L_19 = L_18->___StartTime;
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_20 = V_1;
+		int32_t L_21 = V_4;
+		NullCheck(L_20);
+		int32_t L_22 = ((int32_t)il2cpp_codegen_subtract(L_21, 1));
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_23 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
+		NullCheck(L_23);
+		float L_24 = L_23->___Duration;
+		V_8 = ((float)il2cpp_codegen_add(L_19, L_24));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:77>
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_25 = V_5;
+		NullCheck(L_25);
+		float L_26 = L_25->___StartTime;
+		float L_27 = V_8;
+		int32_t L_28;
+		L_28 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_26, L_27)), (1000.0f))), NULL);
+		V_9 = L_28;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:78>
+		int32_t L_29 = V_9;
+		V_10 = (bool)((((int32_t)L_29) > ((int32_t)0))? 1 : 0);
+		bool L_30 = V_10;
+		if (!L_30)
+		{
+			goto IL_008d;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:80>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_31 = V_0;
+		int32_t L_32 = V_9;
+		NullCheck(L_31);
+		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_31, L_32, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+	}
+
+IL_008d:
+	{
+	}
+
+IL_008e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:85>
+		HapticEvent_t643CD28F1AC4235C4B960A0623D78ED90FC69C47* L_33 = V_5;
+		NullCheck(L_33);
+		float L_34 = L_33->___Duration;
+		int32_t L_35;
+		L_35 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)il2cpp_codegen_multiply(L_34, (1000.0f))), NULL);
+		V_6 = L_35;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:86>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_36 = V_0;
+		int32_t L_37 = V_6;
+		NullCheck(L_36);
+		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_36, L_37, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:69>
+		int32_t L_38 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_38, 1));
+	}
+
+IL_00b2:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:69>
+		int32_t L_39 = V_4;
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_40 = V_1;
+		NullCheck(L_40);
+		V_11 = (bool)((((int32_t)L_39) < ((int32_t)((int32_t)(((RuntimeArray*)L_40)->max_length))))? 1 : 0);
+		bool L_41 = V_11;
+		if (L_41)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:89>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_42 = V_0;
+		NullCheck(L_42);
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_43;
+		L_43 = List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA(L_42, List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_RuntimeMethod_var);
+		V_3 = L_43;
+		goto IL_00cb;
+	}
+
+IL_00cb:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/WebGLHapticWrapper.cs:90>
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_44 = V_3;
+		return L_44;
+	}
+}
+// Method Definition Index: 106763
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebGLHapticWrapper__ctor_m8B61C668105C951651FD1C35EFBEC8699DCFCF66 (WebGLHapticWrapper_t06E18A27FD6FF7E230815C13CABABC157A41ACDD* __this, const RuntimeMethod* method) 
+{
+	{
+		BaseHapticWrapper__ctor_mD98EFD783787101C68B59E0D2840AAE80E7EC676(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Method Definition Index: 100207
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SimpleBoolCallback_Invoke_m013ADEFF6A3841A201C4713689D6EBE4A8720C31_inline (SimpleBoolCallback_tC1DF024DCF99862B0C4BE303883FB862590D345F* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, bool, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_value, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 106687
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float HapticData_get_Duration_m31C04B75A81ABF7CF3E626F054C53E9FA7BE8746_inline (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:15>
+		float L_0 = __this->___duration;
+		return L_0;
+	}
+}
+// Method Definition Index: 106688
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float HapticData_get_Intensity_mC6409AA60208FD931D6C8F54F504FCBF87FF174E_inline (HapticData_t5A6F0F236AE549759ADDD851DB3925E23577C646* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticData.cs:17>
+		float L_0 = __this->___intensity;
+		return L_0;
+	}
+}
+// Method Definition Index: 106712
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* HapticPattern_get_ID_m2547ACA67CAA2ED038E83FA33D7376D06718C0CC_inline (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticPattern.cs:16>
+		String_t* L_0 = __this->___id;
+		return L_0;
+	}
+}
+// Method Definition Index: 62317
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) 
+{
+	{
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
+		memset((&L_0), 0, sizeof(L_0));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (1.0f), (1.0f), (1.0f), (1.0f), NULL);
+		return L_0;
+	}
+}
+// Method Definition Index: 60969
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_x;
+		__this->___m_XMin = L_0;
+		float L_1 = ___1_y;
+		__this->___m_YMin = L_1;
+		float L_2 = ___2_width;
+		__this->___m_Width = L_2;
+		float L_3 = ___3_height;
+		__this->___m_Height = L_3;
+		return;
+	}
+}
+// Method Definition Index: 58116
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* IPEndPoint_get_Address_m72F783CB76E10E9DBDF680CCC1DAAED201BABB1C_inline (IPEndPoint_t2F09CBA7A808B67724B4E2954EEDC46D910F4ECB* __this, const RuntimeMethod* method) 
+{
+	{
+		IPAddress_t2F4486449B0D73FF2D3B36A9FE5E9C3F63116484* L_0 = __this->____address;
+		return L_0;
+	}
+}
+// Method Definition Index: 106713
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* HapticPattern_get_Pattern_mFE7A9CDD6BB62FFE5F388284D5615932BF989D1C_inline (HapticPattern_t18258BB5BF971F35E9A5B2E5A228603B54229ADE* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/HapticPattern.cs:18>
+		HapticEventU5BU5D_tCE78E62309660217CE20FF00FBB064D92CD7AC71* L_0 = __this->___pattern;
+		return L_0;
+	}
+}
+// Method Definition Index: 62540
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float G_B3_0 = 0.0f;
+	{
+		float L_0 = ___0_a;
+		float L_1 = ___1_b;
+		if ((((float)L_0) < ((float)L_1)))
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		float L_2 = ___1_b;
+		G_B3_0 = L_2;
+		goto IL_0009;
+	}
+
+IL_0008:
+	{
+		float L_3 = ___0_a;
+		G_B3_0 = L_3;
+	}
+
+IL_0009:
+	{
+		V_0 = G_B3_0;
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		float L_4 = V_0;
+		return L_4;
+	}
+}
+// Method Definition Index: 62559
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = ___0_a;
+		float L_1 = ___1_b;
+		float L_2 = ___0_a;
+		float L_3 = ___2_t;
+		float L_4;
+		L_4 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_3, NULL);
+		V_0 = ((float)il2cpp_codegen_add(L_0, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_1, L_2)), L_4))));
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		float L_5 = V_0;
+		return L_5;
+	}
+}
+// Method Definition Index: 106730
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AndroidHapticPattern_set_Pattern_m88725148F4D6A635A0F7178A48812F51BFD82384_inline (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:101>
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_0 = ___0_value;
+		__this->___U3CPatternU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CPatternU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 106732
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AndroidHapticPattern_set_Amplitudes_mD9E22369E4D9F560326E0E0417BE95B6EC1836E9_inline (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:102>
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = ___0_value;
+		__this->___U3CAmplitudesU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAmplitudesU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 106729
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* AndroidHapticPattern_get_Pattern_mBEDD1A48342F2EFEBDFD96010DF3682DE9D568C8_inline (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:101>
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_0 = __this->___U3CPatternU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 106731
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* AndroidHapticPattern_get_Amplitudes_mF01215C7D8EE9365FF84AE09F3190DC80C85875A_inline (AndroidHapticPattern_t9A2DA321B122EE4DDD057D2FB7B8F18FF2F52BB2* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Haptic/Scripts/Runtime/Wrapper/AndroidHapticWrapper.cs:102>
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___U3CAmplitudesU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 100195
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 62554
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		float L_0 = ___0_f;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_1;
+		L_1 = bankers_round(((double)L_0));
+		V_0 = il2cpp_codegen_cast_double_to_int<int32_t>(L_1);
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_2 = V_0;
+		return L_2;
+	}
+}
+// Method Definition Index: 11591
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m3AB938BCFAB883339EB05C02B33852D44401AA86_gshared_inline (List_1_tF9D88C946600C782EE786A252258C0AA97BD019A* __this, int64_t ___0_item, const RuntimeMethod* method) 
+{
+	Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = __this->____version;
+		__this->____version = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_1 = __this->____items;
+		V_0 = L_1;
+		int32_t L_2 = __this->____size;
+		V_1 = L_2;
+		int32_t L_3 = V_1;
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_4 = V_0;
+		NullCheck(L_4);
+		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		int32_t L_5 = V_1;
+		__this->____size = ((int32_t)il2cpp_codegen_add(L_5, 1));
+		Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* L_6 = V_0;
+		int32_t L_7 = V_1;
+		int64_t L_8 = ___0_item;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (int64_t)L_8);
+		return;
+	}
+
+IL_0034:
+	{
+		int64_t L_9 = ___0_item;
+		List_1_AddWithResize_mAE92ED7C1F3B1E0BB409F462197C47FD982345E1(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 14));
+		return;
+	}
+}
+// Method Definition Index: 11591
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_gshared_inline (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___0_item, const RuntimeMethod* method) 
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = __this->____version;
+		__this->____version = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1 = __this->____items;
+		V_0 = L_1;
+		int32_t L_2 = __this->____size;
+		V_1 = L_2;
+		int32_t L_3 = V_1;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_4 = V_0;
+		NullCheck(L_4);
+		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		int32_t L_5 = V_1;
+		__this->____size = ((int32_t)il2cpp_codegen_add(L_5, 1));
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_6 = V_0;
+		int32_t L_7 = V_1;
+		int32_t L_8 = ___0_item;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (int32_t)L_8);
+		return;
+	}
+
+IL_0034:
+	{
+		int32_t L_9 = ___0_item;
+		List_1_AddWithResize_m378B392086AAB6F400944FA9839516326B3F7BB8(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 14));
+		return;
+	}
+}
+// Method Definition Index: 62285
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_r;
+		__this->___r = L_0;
+		float L_1 = ___1_g;
+		__this->___g = L_1;
+		float L_2 = ___2_b;
+		__this->___b = L_2;
+		float L_3 = ___3_a;
+		__this->___a = L_3;
+		return;
+	}
+}
+// Method Definition Index: 62558
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	float V_1 = 0.0f;
+	bool V_2 = false;
+	{
+		float L_0 = ___0_value;
+		V_0 = (bool)((((float)L_0) < ((float)(0.0f)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		V_1 = (0.0f);
+		goto IL_002d;
+	}
+
+IL_0015:
+	{
+		float L_2 = ___0_value;
+		V_2 = (bool)((((float)L_2) > ((float)(1.0f)))? 1 : 0);
+		bool L_3 = V_2;
+		if (!L_3)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		V_1 = (1.0f);
+		goto IL_002d;
+	}
+
+IL_0029:
+	{
+		float L_4 = ___0_value;
+		V_1 = L_4;
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		float L_5 = V_1;
+		return L_5;
+	}
+}

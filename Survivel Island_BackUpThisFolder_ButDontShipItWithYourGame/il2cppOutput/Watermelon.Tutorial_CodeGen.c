@@ -1,0 +1,165 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m61552C0460CA9B921777485322BCA98F032FCDC3 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m0B0F76AF479B87A7901E00D1C8B905A9E3DA28AF (void);
+extern void BaseTutorial_get_IsActive_m300EDB30E54363EC3230E7EBDB87096F71B95776 (void);
+extern void BaseTutorial_get_IsFinished_mDCAEAD0AF1732940B414D4B8259EE2AB3AFD5BA0 (void);
+extern void BaseTutorial_get_IsInitialised_mCACC65BFA13612A247822BA8CF58BF19CA5F535C (void);
+extern void BaseTutorial_Init_mE6AFE8F3536556CD0FC0BA59599015CAEF401E85 (void);
+extern void BaseTutorial_StartTutorial_m036709DA82B112E2DA01F312A8CD09DF492AE2F6 (void);
+extern void BaseTutorial_FinishTutorial_m086B83AEF68111C3AF3CA77C9B253EF46E005508 (void);
+extern void BaseTutorial_Unload_mCAEACF9C3B9FC3C6547193F0FD8852504C9B371E (void);
+extern void BaseTutorial_OnUnloaded_m5B2DC897BAEC0F2CC819BE47FB16264631D0F4E5 (void);
+extern void BaseTutorial__ctor_mB020CB4CC621E7FFC2BA73403ADEB47E3E45935F (void);
+extern void TutorialBaseSave_OnBeforeSave_mF9EA80B512C9D862DCD0DD7B437E447E37F2D898 (void);
+extern void TutorialBaseSave__ctor_m15287CC6C2D848D5D2A98802BBD02F8C495CE100 (void);
+extern void TutorialCanvasController_Init_m8C444F2CE1BEF91EFC62893582AA718260D6146E (void);
+extern void TutorialCanvasController_OnDestroy_mB7ED470DCB8ADEC332EC0F3904F984D1D5F7356C (void);
+extern void TutorialCanvasController_ActivatePointer_m421B2075A4617E9F2269BA409BC84B5463BF228B (void);
+extern void TutorialCanvasController_RepositionPointer_m2CB3FED119281E4B4C654F47EFF66312AF7FB94C (void);
+extern void TutorialCanvasController_ActivateTutorialCanvas_mF61DF5D413721A51AAC3F408E2DCC15CE161C085 (void);
+extern void TutorialCanvasController_ResetTutorialCanvas_m35CA259CCAA10002D4F3AAA99E75B40CE7F29EFD (void);
+extern void TutorialCanvasController_ResetPointer_m058E0C5B2931E022650A8458DD55080362E474B6 (void);
+extern void TutorialCanvasController_AlignToCorner_m5457E497AF911CB982A25A24F6867BFDD5E7BC29 (void);
+extern void TutorialCanvasController__ctor_m5E9552CA14424CBE574BA79A39184B2AE7ADC0FF (void);
+extern void TutorialCanvasController__cctor_mC17D4215075C2727BBE3489082D73C28565FB025 (void);
+extern void TransformCase__ctor_mA94340510835E4E9FD7FF7846D2CEC47A10EFE04 (void);
+extern void TransformCase_SetNewParent_m348A8CA2599D39DD9CBFC8E3B49F11B399940FA4 (void);
+extern void TransformCase_Reset_m926D61A98D95793BD8BF2291594631A5EE895991 (void);
+extern void TransformCase_Destroy_m67EA0B15B71A20C0919AE825575A74D82CC6257D (void);
+extern void U3CU3Ec__DisplayClass12_0__ctor_mFF684E9125C9317462DF2A9D849172B702FBF863 (void);
+extern void U3CU3Ec__DisplayClass12_0_U3CSetNewParentU3Eb__1_mEDF08724A0759F6B61485DFC99328A64D641D399 (void);
+extern void U3CU3Ec__DisplayClass12_0_U3CSetNewParentU3Eg__ApplyNewPositionU7C0_m6F278CDEE1AEA5FC609F14CC0F908DA94142F8AA (void);
+extern void TutorialController_Init_m4708A784DA3C3FAFFE48ED8438C699B9D28400D1 (void);
+extern void TutorialController_OnDestroy_mD4C694B2E39E71398AD03023CDA8E57CB2602BF1 (void);
+extern void TutorialController_OnSceneSaving_mF98545F7397EFDC7C1344BB8DE8A1974F1FDBDBE (void);
+extern void TutorialController__ctor_m51FF358BC46BB98E0F78E17E5528854613DADD30 (void);
+extern void TutorialHelper_IsTutorialSkipped_m49EB946DE8186A751F6374F932A73F396C0BEB66 (void);
+static Il2CppMethodPointer s_methodPointers[40] = 
+{
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m61552C0460CA9B921777485322BCA98F032FCDC3,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m0B0F76AF479B87A7901E00D1C8B905A9E3DA28AF,
+	BaseTutorial_get_IsActive_m300EDB30E54363EC3230E7EBDB87096F71B95776,
+	BaseTutorial_get_IsFinished_mDCAEAD0AF1732940B414D4B8259EE2AB3AFD5BA0,
+	BaseTutorial_get_IsInitialised_mCACC65BFA13612A247822BA8CF58BF19CA5F535C,
+	BaseTutorial_Init_mE6AFE8F3536556CD0FC0BA59599015CAEF401E85,
+	BaseTutorial_StartTutorial_m036709DA82B112E2DA01F312A8CD09DF492AE2F6,
+	BaseTutorial_FinishTutorial_m086B83AEF68111C3AF3CA77C9B253EF46E005508,
+	NULL,
+	NULL,
+	NULL,
+	BaseTutorial_Unload_mCAEACF9C3B9FC3C6547193F0FD8852504C9B371E,
+	BaseTutorial_OnUnloaded_m5B2DC897BAEC0F2CC819BE47FB16264631D0F4E5,
+	BaseTutorial__ctor_mB020CB4CC621E7FFC2BA73403ADEB47E3E45935F,
+	TutorialBaseSave_OnBeforeSave_mF9EA80B512C9D862DCD0DD7B437E447E37F2D898,
+	TutorialBaseSave__ctor_m15287CC6C2D848D5D2A98802BBD02F8C495CE100,
+	TutorialCanvasController_Init_m8C444F2CE1BEF91EFC62893582AA718260D6146E,
+	TutorialCanvasController_OnDestroy_mB7ED470DCB8ADEC332EC0F3904F984D1D5F7356C,
+	TutorialCanvasController_ActivatePointer_m421B2075A4617E9F2269BA409BC84B5463BF228B,
+	TutorialCanvasController_RepositionPointer_m2CB3FED119281E4B4C654F47EFF66312AF7FB94C,
+	TutorialCanvasController_ActivateTutorialCanvas_mF61DF5D413721A51AAC3F408E2DCC15CE161C085,
+	TutorialCanvasController_ResetTutorialCanvas_m35CA259CCAA10002D4F3AAA99E75B40CE7F29EFD,
+	TutorialCanvasController_ResetPointer_m058E0C5B2931E022650A8458DD55080362E474B6,
+	TutorialCanvasController_AlignToCorner_m5457E497AF911CB982A25A24F6867BFDD5E7BC29,
+	TutorialCanvasController__ctor_m5E9552CA14424CBE574BA79A39184B2AE7ADC0FF,
+	TutorialCanvasController__cctor_mC17D4215075C2727BBE3489082D73C28565FB025,
+	TransformCase__ctor_mA94340510835E4E9FD7FF7846D2CEC47A10EFE04,
+	TransformCase_SetNewParent_m348A8CA2599D39DD9CBFC8E3B49F11B399940FA4,
+	TransformCase_Reset_m926D61A98D95793BD8BF2291594631A5EE895991,
+	TransformCase_Destroy_m67EA0B15B71A20C0919AE825575A74D82CC6257D,
+	U3CU3Ec__DisplayClass12_0__ctor_mFF684E9125C9317462DF2A9D849172B702FBF863,
+	U3CU3Ec__DisplayClass12_0_U3CSetNewParentU3Eb__1_mEDF08724A0759F6B61485DFC99328A64D641D399,
+	U3CU3Ec__DisplayClass12_0_U3CSetNewParentU3Eg__ApplyNewPositionU7C0_m6F278CDEE1AEA5FC609F14CC0F908DA94142F8AA,
+	TutorialController_Init_m4708A784DA3C3FAFFE48ED8438C699B9D28400D1,
+	TutorialController_OnDestroy_mD4C694B2E39E71398AD03023CDA8E57CB2602BF1,
+	NULL,
+	NULL,
+	TutorialController_OnSceneSaving_mF98545F7397EFDC7C1344BB8DE8A1974F1FDBDBE,
+	TutorialController__ctor_m51FF358BC46BB98E0F78E17E5528854613DADD30,
+	TutorialHelper_IsTutorialSkipped_m49EB946DE8186A751F6374F932A73F396C0BEB66,
+};
+static const int32_t s_InvokerIndices[40] = 
+{
+	31473,
+	18593,
+	18129,
+	18129,
+	18129,
+	18593,
+	18593,
+	18593,
+	-1,
+	-1,
+	-1,
+	18593,
+	18593,
+	18593,
+	18593,
+	18593,
+	18593,
+	18593,
+	26514,
+	29768,
+	23960,
+	31407,
+	31407,
+	23973,
+	18593,
+	31407,
+	14169,
+	7341,
+	18593,
+	18593,
+	18593,
+	18593,
+	18593,
+	18593,
+	18593,
+	-1,
+	-1,
+	18593,
+	18593,
+	31245,
+};
+static const Il2CppTokenRangePair s_rgctxIndices[2] = 
+{
+	{ 0x06000024, { 0, 1 } },
+	{ 0x06000025, { 1, 2 } },
+};
+extern const uint32_t g_rgctx_T_t12221456DEEB7C1EC2408D19B4151FB32C24347C;
+extern const uint32_t g_rgctx_TutorialController_GetTutorial_TisT_t7F04CB980CB3C4E4BEF1C03FAC6E5950EFF535BD_mF78EEC8FB85B1691EFDBE17EA60A873817903E67;
+extern const uint32_t g_rgctx_T_t7F04CB980CB3C4E4BEF1C03FAC6E5950EFF535BD;
+static const Il2CppRGCTXDefinition s_rgctxValues[3] = 
+{
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t12221456DEEB7C1EC2408D19B4151FB32C24347C },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_TutorialController_GetTutorial_TisT_t7F04CB980CB3C4E4BEF1C03FAC6E5950EFF535BD_mF78EEC8FB85B1691EFDBE17EA60A873817903E67 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t7F04CB980CB3C4E4BEF1C03FAC6E5950EFF535BD },
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Watermelon_Tutorial_CodeGenModule;
+const Il2CppCodeGenModule g_Watermelon_Tutorial_CodeGenModule = 
+{
+	"Watermelon.Tutorial.dll",
+	40,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	2,
+	s_rgctxIndices,
+	3,
+	s_rgctxValues,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

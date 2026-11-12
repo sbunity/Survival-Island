@@ -1,0 +1,105 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m377CD2431E5955D6A44ACA14D866673EC3A52917 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m168BCEC35960ECA4501D1BEA64E85BD51E8720DE (void);
+extern void CustomBackendCloudHandler_get_IsAvailable_mF2F91D513C0FE0E0525DA42473DABAA909F0D9BE (void);
+extern void CustomBackendCloudHandler__ctor_mC19DD1C9F645F1D8C3A85C3D314ED6739BDC7A3D (void);
+extern void CustomBackendCloudHandler_Init_mEF86D691AF2DB9A01BF6F68FC032889CEEA38E05 (void);
+extern void CustomBackendCloudHandler_Download_mBE2AF784908C0A2AFAA6FDBCAA07EBC497FFE6A2 (void);
+extern void CustomBackendCloudHandler_HandleDownloadResponse_m9095A2E27FB91C8094BD49F25B6E6F18C916167C (void);
+extern void CustomBackendCloudHandler_Upload_m0E12C49E43D1B9E69825D88AA5779A5161CB0196 (void);
+extern void CustomBackendCloudHandler_HandleUploadResponse_m3E293FACA8E21E6C3456775EA55DA02086210B31 (void);
+extern void CustomBackendCloudHandler_Delete_m91F796CFE74EFC4885D4E4587A2DB39A1AC97AE2 (void);
+extern void CustomBackendCloudHandler_HandleDeleteResponse_mBC138A5E8EAE89639279738C9CAE9F23310AF39C (void);
+extern void CloudSavePayload__ctor_m763F9558B5EAA19CCF03416B810EA16FB273F431 (void);
+extern void CloudSaveResponse__ctor_m8344EF73D7C86440FD212676A55088CE550F5A99 (void);
+extern void U3CU3Ec__DisplayClass11_0__ctor_mA692B300095FD5E6900228810537C337F53B80CC (void);
+extern void U3CU3Ec__DisplayClass11_0_U3CDeleteU3Eb__0_mB7DAA7128D74C6C405F45249770386ABF220537E (void);
+extern void U3CU3Ec__DisplayClass7_0__ctor_mA503BF309B0B94C698573390B6ABB72FC5A0772C (void);
+extern void U3CU3Ec__DisplayClass7_0_U3CDownloadU3Eb__0_m9874CD2B9A32BF93546AFAB6C17F0E6AB4488803 (void);
+extern void U3CU3Ec__DisplayClass9_0__ctor_m14D80F0F590916B08BEF75D9C67A02EDC0D93BAF (void);
+extern void U3CU3Ec__DisplayClass9_0_U3CUploadU3Eb__0_m475726E948DD9C31C77D25F3CA79F0B35CDDC2BD (void);
+extern void CustomBackendSaveHandler_OnUserConsentReceived_mD6B576505C763C94FFEB8AD989FAE1BF0F41CD9C (void);
+extern void CustomBackendSaveHandler_GetConfiguredHandler_m5BD91E7F80DB4639F6C887F15BC1C7254344F88B (void);
+extern void CustomBackendSaveHandler_GetSyncTimeout_mC871504C242CEEF6DBBA5AE83C1478801CB81EB3 (void);
+extern void CustomBackendSaveHandler__ctor_mD8758F9CA5B83945E9441DF281213F94BBCD0545 (void);
+static Il2CppMethodPointer s_methodPointers[23] = 
+{
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m377CD2431E5955D6A44ACA14D866673EC3A52917,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m168BCEC35960ECA4501D1BEA64E85BD51E8720DE,
+	CustomBackendCloudHandler_get_IsAvailable_mF2F91D513C0FE0E0525DA42473DABAA909F0D9BE,
+	CustomBackendCloudHandler__ctor_mC19DD1C9F645F1D8C3A85C3D314ED6739BDC7A3D,
+	CustomBackendCloudHandler_Init_mEF86D691AF2DB9A01BF6F68FC032889CEEA38E05,
+	CustomBackendCloudHandler_Download_mBE2AF784908C0A2AFAA6FDBCAA07EBC497FFE6A2,
+	CustomBackendCloudHandler_HandleDownloadResponse_m9095A2E27FB91C8094BD49F25B6E6F18C916167C,
+	CustomBackendCloudHandler_Upload_m0E12C49E43D1B9E69825D88AA5779A5161CB0196,
+	CustomBackendCloudHandler_HandleUploadResponse_m3E293FACA8E21E6C3456775EA55DA02086210B31,
+	CustomBackendCloudHandler_Delete_m91F796CFE74EFC4885D4E4587A2DB39A1AC97AE2,
+	CustomBackendCloudHandler_HandleDeleteResponse_mBC138A5E8EAE89639279738C9CAE9F23310AF39C,
+	CloudSavePayload__ctor_m763F9558B5EAA19CCF03416B810EA16FB273F431,
+	CloudSaveResponse__ctor_m8344EF73D7C86440FD212676A55088CE550F5A99,
+	U3CU3Ec__DisplayClass11_0__ctor_mA692B300095FD5E6900228810537C337F53B80CC,
+	U3CU3Ec__DisplayClass11_0_U3CDeleteU3Eb__0_mB7DAA7128D74C6C405F45249770386ABF220537E,
+	U3CU3Ec__DisplayClass7_0__ctor_mA503BF309B0B94C698573390B6ABB72FC5A0772C,
+	U3CU3Ec__DisplayClass7_0_U3CDownloadU3Eb__0_m9874CD2B9A32BF93546AFAB6C17F0E6AB4488803,
+	U3CU3Ec__DisplayClass9_0__ctor_m14D80F0F590916B08BEF75D9C67A02EDC0D93BAF,
+	U3CU3Ec__DisplayClass9_0_U3CUploadU3Eb__0_m475726E948DD9C31C77D25F3CA79F0B35CDDC2BD,
+	CustomBackendSaveHandler_OnUserConsentReceived_mD6B576505C763C94FFEB8AD989FAE1BF0F41CD9C,
+	CustomBackendSaveHandler_GetConfiguredHandler_m5BD91E7F80DB4639F6C887F15BC1C7254344F88B,
+	CustomBackendSaveHandler_GetSyncTimeout_mC871504C242CEEF6DBBA5AE83C1478801CB81EB3,
+	CustomBackendSaveHandler__ctor_mD8758F9CA5B83945E9441DF281213F94BBCD0545,
+};
+static const int32_t s_InvokerIndices[23] = 
+{
+	31472,
+	18593,
+	18129,
+	7380,
+	18593,
+	7380,
+	3497,
+	2471,
+	3497,
+	7380,
+	3497,
+	18593,
+	18593,
+	18593,
+	14169,
+	18593,
+	14169,
+	18593,
+	14169,
+	18593,
+	18356,
+	18483,
+	18593,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Watermelon_Save_CodeGenModule;
+const Il2CppCodeGenModule g_Watermelon_Save_CodeGenModule = 
+{
+	"Watermelon.Save.dll",
+	23,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

@@ -1,0 +1,651 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void EmbeddedAttribute__ctor_m72B1593DB80D9B6A77E2B643552C6733EE020CD5 (void);
+extern void NullableAttribute__ctor_mDC9E34099FE48938CFF13C1C372C91691791F77F (void);
+extern void NullableAttribute__ctor_m630AE3A603DD1646A3D88EE0B38E26CEB3EDFB1B (void);
+extern void NullableContextAttribute__ctor_m74D094A5D86B3DBCFBE25011B29681CF9194ECF5 (void);
+extern void NullablePublicOnlyAttribute__ctor_m8BC7A9945F37C60E1EEFB98E2F7A1021061FB882 (void);
+extern void RefSafetyRulesAttribute__ctor_m58A6D302FB5655E68DDB6A7BC183FF906042CF1E (void);
+extern void DynamicallyAccessedMembersAttribute__ctor_m7760E4F7631E285911173312244B22D9B8DDF3A0 (void);
+extern void DynamicallyAccessedMembersAttribute_get_MemberTypes_m0DEFADE83EFA0E18D3776C09983D2A25DF0A7A8D (void);
+extern void StringSyntaxAttribute__ctor_mDD18177BA9CB707901518A50E96932FFFFAAF868 (void);
+extern void StringSyntaxAttribute__ctor_m91748C9269BF54326F8D6BB2A8795FB520986CEE (void);
+extern void StringSyntaxAttribute_get_Syntax_mEC9ACD65668C897403B39659EC834A41AE0A705C (void);
+extern void StringSyntaxAttribute_get_Arguments_m43A797FFD7EC9B8A1DF937F10B18A51296B00335 (void);
+extern void MemberNotNullAttribute__ctor_m91AF53BB933348643F060A93FBB2914DF0540AF5 (void);
+extern void MemberNotNullAttribute__ctor_m1673F7AADC84DF2B39EB62664B5BECBA25A50A29 (void);
+extern void MemberNotNullAttribute_get_Members_m5E5915361703478E66205A3114492B8B76545A0E (void);
+extern void MemberNotNullWhenAttribute__ctor_mB65D6D777EEB05B9B9A12A84A55CB21BF53DE795 (void);
+extern void MemberNotNullWhenAttribute__ctor_m600554061757A7335D7F328A1B5B2062608829F6 (void);
+extern void MemberNotNullWhenAttribute_get_ReturnValue_m3FD6DCCDD23733555141FF21484C4765C9ACC40D (void);
+extern void MemberNotNullWhenAttribute_get_Members_m16C717095CC1C8AE11E1407A553F9ED8AAB13DB1 (void);
+extern void ActivatorUtilities_CreateInstance_mBA0A226E521EC864B1ECA2706E520B4E303C06E6 (void);
+extern void ActivatorUtilities_GetServiceOrCreateInstance_m73F4A28AD17C7D04B5CB607A1DAE4782BDEFFA9C (void);
+extern void ConstructorMatcher__ctor_m2A876A496310A3615DA238359A35665AC4F58BF2 (void);
+extern void ConstructorMatcher_Match_mAD81318EA3F6A7F94CEDE82322F5DA9D26DFEDCC (void);
+extern void ConstructorMatcher_CreateInstance_m04286FDF0C5CFB9B4E49DB22EB208F7DF0C3154C (void);
+extern void ParameterDefaultValue_TryGetDefaultValue_m386B67FD66A3395501D1C3F1C6C3080C907B529F (void);
+extern void ParameterDefaultValue_CheckHasDefaultValue_m8515CBF9531E84401EEE3E3E6E5913E780B1CC98 (void);
+extern void ParameterDefaultValue_CreateValueType_m08496919EF0D201F81B0EC3C54A1044F3D53C564 (void);
+extern void BaseConnectionContext_get_ConnectionClosed_m50249BBBDEFA2836CA3ABEC8C7300FE10EBBEF7C (void);
+extern void BaseConnectionContext_set_ConnectionClosed_mC211F7A657D7D48AB439328DA59E8D65BF7CE6B6 (void);
+extern void BaseConnectionContext_get_LocalEndPoint_mB2BDEF46065E32C7AA8E109B6DA8F1264A43F359 (void);
+extern void BaseConnectionContext_set_LocalEndPoint_mF34FCBDCDF1BD94DCBFE5A593F74B8BFBA3C157A (void);
+extern void BaseConnectionContext_get_RemoteEndPoint_m21EE5B78B30CA1ACADF93D49D2C348C21107E2E2 (void);
+extern void BaseConnectionContext_set_RemoteEndPoint_m5216368D0109015C006CB2C341A526CD439B8B1D (void);
+extern void BaseConnectionContext_DisposeAsync_m16A3DB0D5D857D173ED394CC087CF083271D9B15 (void);
+extern void BaseConnectionContext__ctor_m12224E58C2C9D3103BEFC62C9290ED983B945C82 (void);
+extern void ConnectionBuilder_get_ApplicationServices_m6D7F40F3F9A919FFA05F7BB254F39E3FFF026CF0 (void);
+extern void ConnectionBuilder__ctor_m65A2A33E1921B8012A62F148201B1488CC6DC2BA (void);
+extern void ConnectionBuilder_Use_mC964FB5F6186D99CD92AC9ECF68B9599442EF60D (void);
+extern void ConnectionBuilder_Build_mF9E6894DE78259FD9171C2F3F9DDB8E157A8B7B3 (void);
+extern void U3CU3Ec__cctor_m674E9C57E281ACFEA28716018CCD6D84FC141180 (void);
+extern void U3CU3Ec__ctor_m61553AB28F9C1700926273E5B6C2071E85402F92 (void);
+extern void U3CU3Ec_U3CBuildU3Eb__6_0_m2B7C3F95D1DD2F81B27C8861E617EB06BD5F5657 (void);
+extern void ConnectionBuilderExtensions_Use_mB982FFAADCA3B4B84B4BD4AACBAA76F8A306265F (void);
+extern void ConnectionBuilderExtensions_Use_mFCA8FDF030C768319FAF680E8BD7B694982916CB (void);
+extern void ConnectionBuilderExtensions_Run_mFD1FF70BF1F2B503D16CD3DA95D845CCF0213FDC (void);
+extern void U3CU3Ec__DisplayClass1_0__ctor_m79A75EE96033E88DAD52A1DDED25806F4C535FAE (void);
+extern void U3CU3Ec__DisplayClass1_0_U3CUseU3Eb__0_mE8DFE1C507B597F8095743CD17C1DB33A18E8080 (void);
+extern void U3CU3Ec__DisplayClass1_1__ctor_mCBF3723E8C26921B897F090B5EEC571659091F5B (void);
+extern void U3CU3Ec__DisplayClass1_1_U3CUseU3Eb__1_m6524645637133127E18FA818698B0324176F0F32 (void);
+extern void U3CU3Ec__DisplayClass1_2__ctor_mC18DD9070585687190968F6DC54A9586CEEC68CC (void);
+extern void U3CU3Ec__DisplayClass1_2_U3CUseU3Eb__2_m42687403694FB9387883C65886B4391726610B37 (void);
+extern void U3CU3Ec__DisplayClass2_0__ctor_mC2EE79CC78588AB178E39ABB6F30E37936A551AA (void);
+extern void U3CU3Ec__DisplayClass2_0_U3CUseU3Eb__0_m7BD00CCFC8540E9C10CB6DF7644E8E169F455577 (void);
+extern void U3CU3Ec__DisplayClass2_1__ctor_m073D180D45C8D6C602B213201D51417FC92D3535 (void);
+extern void U3CU3Ec__DisplayClass2_1_U3CUseU3Eb__1_mEC24EB7F9E55AD5CE630823EBEAD650AADF807FA (void);
+extern void U3CU3Ec__DisplayClass3_0__ctor_m9180A51654B1AFE1149450E006F746BFD7CAC5B4 (void);
+extern void U3CU3Ec__DisplayClass3_0_U3CRunU3Eb__0_m9C2A05DD90789D8CA285D7344094E01DAEDD3990 (void);
+extern void U3CU3Ec__DisplayClass3_0_U3CRunU3Eb__1_m2E7E4C228A92F63625035CE3EE704E6BDC232974 (void);
+extern void ConnectionContext_Abort_m187EBF4B59ADAB100128D9F5375FCBC799795C3E (void);
+extern void ConnectionContext_Abort_m11B8826DD89942C28AA87F12673C85D9C3857003 (void);
+extern void ConnectionContext__ctor_m524B6301BC7651330FD746C06D52943DC6A658F1 (void);
+extern void ConnectionDelegate__ctor_mD96F5DC967928F61763C1028F4FE3DA937652A0B (void);
+extern void ConnectionDelegate_Invoke_mCDFB1AA4E52F725CA4C3DAC2F0A256313AB8EACA (void);
+extern void ConnectionDelegate_BeginInvoke_mD8079838124F68BF72AFD1A1174B647715F39300 (void);
+extern void ConnectionDelegate_EndInvoke_m5B577972836BA26DC8BE0FD6E888B46DFF0B74B5 (void);
+extern void ConnectionHandler__ctor_mCF25B29D1A1BED46CB591616C3D5311ED8BE1D3F (void);
+extern void ConnectionItems__ctor_mA8E1C9ABA3732C84B2771AE883AEE893970CAAFF (void);
+extern void ConnectionItems__ctor_mA32F094EE2E64E1EEE292D7D002A7F0E08322625 (void);
+extern void ConnectionItems_get_Items_m3242E4609BF410DF3C24BD4A11426D42FADEE247 (void);
+extern void ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_get_Item_m3E539F5F082024D9C9C1C05007959F43C70707B0 (void);
+extern void ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_set_Item_mB8A547A8D77DD1EF7F8F1456C2E73C96F78A58F3 (void);
+extern void ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_Add_mA1F5F35309FF3F76190C69B02A3C1038EB691D06 (void);
+extern void ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_ContainsKey_mD8A8D8A6229EE9D8ECD17D2F3B76951BE89C0AAB (void);
+extern void ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_get_Keys_m6D2E8E1E113CF54C4C18D49A21B75268F2F22B11 (void);
+extern void ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_Remove_mEE29DE0189FFE068D9E9BD33A493D203FBA5299A (void);
+extern void ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_TryGetValue_m84DEF6697237BC0BB2E8688271BA8ECB69A8998F (void);
+extern void ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_get_Values_m959BF16407C77696EBA0A1C914C5E254D824C5A1 (void);
+extern void ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_Add_mA33E7CE8E06D274552355CBCDB70D64A759F223B (void);
+extern void ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_Clear_mA6C3EE3D9976888D112D02FA138E62C343AC6379 (void);
+extern void ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_Contains_mE58FE881577842C861D63EC7EA5E247E1F1D43FE (void);
+extern void ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_CopyTo_mDB4E9A837B4D7862E1D226973B8FC14131306C34 (void);
+extern void ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_get_Count_mB00DED9314842F3C59A7253E19594D8B8254583F (void);
+extern void ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_get_IsReadOnly_m62E3C0956E5BC903D3C0CCE23FAF35487D739B49 (void);
+extern void ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_Remove_mE196366C8CCAEBC0623FCE7C0262A5B9FCEC3A84 (void);
+extern void ConnectionItems_System_Collections_Generic_IEnumerableU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_GetEnumerator_m27F7357DE3E98A4A2B02B850A4C4E341BC84E206 (void);
+extern void ConnectionItems_System_Collections_IEnumerable_GetEnumerator_mCBC43504144BA9E05EA335AE2CBBAA984ED91203 (void);
+extern void DefaultConnectionContext__ctor_m3E247FCDA1822B16D66C9D3E10D6CADF231654E5 (void);
+extern void DefaultConnectionContext__ctor_m4A13BAFACB93E455F9CB0A7023EADF7F266EAB4D (void);
+extern void DefaultConnectionContext__ctor_mC6CD156F807ECD17A86998C8A5BFD8B738DF65AA (void);
+extern void DefaultConnectionContext_get_ConnectionId_mFE4D2EE4CEF248BC329A798F338D3BD37C5D11C2 (void);
+extern void DefaultConnectionContext_set_ConnectionId_m0B6A2A2877B3634DEA8CFEE96C1E68EA1811EB90 (void);
+extern void DefaultConnectionContext_get_Features_m4871BE0A814C3FC883C7532E3FDC4CECB2A99C4F (void);
+extern void DefaultConnectionContext_get_User_m1594C5B533A4FA9FB6F6F32F08A291C712477D49 (void);
+extern void DefaultConnectionContext_set_User_m5085F3D4895A860ADA910F9C3EECAB20A94DC60F (void);
+extern void DefaultConnectionContext_get_Items_m89D64BF0C824C59C97AABBC88E52D6BBADD6E448 (void);
+extern void DefaultConnectionContext_set_Items_m7CBF5439324F4368942814CBF503146E04D5390A (void);
+extern void DefaultConnectionContext_get_Application_mEAC443A62FCA4C8D7D7D3B5C44A784A40FCE7F3D (void);
+extern void DefaultConnectionContext_set_Application_mD12F1057D3F696617F745B322EBCC84BBF0FBC7B (void);
+extern void DefaultConnectionContext_get_Transport_mB8372F0615549EDD76441EAEED2B610A476BE427 (void);
+extern void DefaultConnectionContext_set_Transport_m26BD8933A03DB72AD196F5975FC6F7A475CF8B7F (void);
+extern void DefaultConnectionContext_get_ConnectionClosed_m630F31A479D8B82BEC9DF05E81E966844661704F (void);
+extern void DefaultConnectionContext_set_ConnectionClosed_mB952EA65FC2F501794B3681922E1485ED5B2DF24 (void);
+extern void DefaultConnectionContext_get_LocalEndPoint_mD4870196374E9B4E8979413DF02B2721024CA0DE (void);
+extern void DefaultConnectionContext_set_LocalEndPoint_m9BBF3E39F6E008D850F80F70920CD8E69982FBE7 (void);
+extern void DefaultConnectionContext_get_RemoteEndPoint_mE08ED855075BFEB9B2F519A7E1AFBB6D28FA42DD (void);
+extern void DefaultConnectionContext_set_RemoteEndPoint_m24D3F104CA7E656F5E21A2EEB793310AF2144095 (void);
+extern void DefaultConnectionContext_Abort_m10C80286CF1AC40A9A916C921789420EF1C58289 (void);
+extern void DefaultConnectionContext_DisposeAsync_mBB0C9592D72C476F0B19ED5F482C19BAC4D70715 (void);
+extern void U3CU3Ec__cctor_m94A0FBC3B4327A66576B074B628058088F721C95 (void);
+extern void U3CU3Ec__ctor_mEE86474018E27AD6885FB90887721D6BB425E2D3 (void);
+extern void U3CU3Ec_U3CAbortU3Eb__39_0_m341DA14C44D2DA972A0BE3C1A23ED1411F293D7B (void);
+extern void AddressInUseException__ctor_m1272EFAD276597A5D79F19696FCE64AC2AB75E49 (void);
+extern void AddressInUseException__ctor_mF1C44E1F39B92F10082958CBE4C4B882AAF804D3 (void);
+extern void ConnectionAbortedException__ctor_mDAFDC1E52BDE05FDF9802DC3AD9ADCBC3E257856 (void);
+extern void ConnectionAbortedException__ctor_mA4AA50CCA113597CACEF3E041F8C56B570EDB3C6 (void);
+extern void ConnectionAbortedException__ctor_m4CE001C63437A7CD710D50D56C5724B94A873FA3 (void);
+extern void ConnectionResetException__ctor_mF4FF4634D846DCF28410231D075595383B53234B (void);
+extern void ConnectionResetException__ctor_m1CEE23ED6348CBE6FE4D73DB009E842098CE7039 (void);
+extern void FileHandleEndPoint__ctor_mA6B0B0E0BFDD394F918366560181ED6F02A8BF02 (void);
+extern void FileHandleEndPoint_get_FileHandle_m5F471C1925E56D3CEF714A5117706F8ED998B87D (void);
+extern void FileHandleEndPoint_get_FileHandleType_mD9144737BFF7C39A5D9B1090EEB1B8286FB443F8 (void);
+extern void MultiplexedConnectionBuilder_get_ApplicationServices_m7E18656CCAD7488E6A8A6CFF8D878B624717643D (void);
+extern void MultiplexedConnectionBuilder__ctor_m8AA23B80CD94012CC2CF43F0CAC7180138D7E6CB (void);
+extern void MultiplexedConnectionBuilder_Use_mD45595E0D8891D3D516D03D16F10B0BDCFFF3367 (void);
+extern void MultiplexedConnectionBuilder_Build_mB79B4AF43BEAA1F2F84B16B50865E6B97B263444 (void);
+extern void U3CU3Ec__cctor_m61E8F559A4826F0F135764FDC7FF7054BA671D05 (void);
+extern void U3CU3Ec__ctor_m95BFD09C02FBBB0D2AC4EF1A03DFF2765351AAA1 (void);
+extern void U3CU3Ec_U3CBuildU3Eb__6_0_m0BD86E41D6483F303934FAC860905B6BD391AB31 (void);
+extern void MultiplexedConnectionContext__ctor_mCF88ACCD16D37769F1DC3F4D6529A90ED9C6B8F5 (void);
+extern void MultiplexedConnectionDelegate__ctor_m3CABB23E9F66F041AFD17C9FD93D14897E7ED822 (void);
+extern void MultiplexedConnectionDelegate_Invoke_mD668CDC78DC35852EFBB8F7B000AF93F14792EA7 (void);
+extern void MultiplexedConnectionDelegate_BeginInvoke_mD5F5D2CD5038F81889BEB763C0B8374E6CD9B44A (void);
+extern void MultiplexedConnectionDelegate_EndInvoke_mD54845CE20F53D1312C6B9D76A14CFEFCC459686 (void);
+extern void NamedPipeEndPoint__ctor_m1AA68A4C46899E6A992CCE8DEC8BE951C32C8E68 (void);
+extern void NamedPipeEndPoint__ctor_mAD52920969253D7BC7B57F45DFFE259B5BA4D85F (void);
+extern void NamedPipeEndPoint_get_ServerName_m903E34ABB59F199A6F7172D06DEFAA47CEA1A05C (void);
+extern void NamedPipeEndPoint_get_PipeName_mC5787F049762BACE6CF4E809A342B015C512BCDF (void);
+extern void NamedPipeEndPoint_ToString_m6E7C44FA62CEF21554EBBB38E3F1D4AB147958CC (void);
+extern void NamedPipeEndPoint_Equals_mB327ADAE957F432697AA1A49EB862B821CAA18F1 (void);
+extern void NamedPipeEndPoint_GetHashCode_m94E0FA906AB72701F8827FA76968866500D8112D (void);
+extern void UriEndPoint__ctor_mA7B5F0B6F746037FD4AE11A9DB78991E35A3C1A6 (void);
+extern void UriEndPoint_get_Uri_mA1AAB03A730B0161B041773C93E721FFF83EFE1E (void);
+extern void UriEndPoint_ToString_m48128BAAE86B79D1291968A703A6C4D3AFB381E4 (void);
+static Il2CppMethodPointer s_methodPointers[221] = 
+{
+	EmbeddedAttribute__ctor_m72B1593DB80D9B6A77E2B643552C6733EE020CD5,
+	NullableAttribute__ctor_mDC9E34099FE48938CFF13C1C372C91691791F77F,
+	NullableAttribute__ctor_m630AE3A603DD1646A3D88EE0B38E26CEB3EDFB1B,
+	NullableContextAttribute__ctor_m74D094A5D86B3DBCFBE25011B29681CF9194ECF5,
+	NullablePublicOnlyAttribute__ctor_m8BC7A9945F37C60E1EEFB98E2F7A1021061FB882,
+	RefSafetyRulesAttribute__ctor_m58A6D302FB5655E68DDB6A7BC183FF906042CF1E,
+	DynamicallyAccessedMembersAttribute__ctor_m7760E4F7631E285911173312244B22D9B8DDF3A0,
+	DynamicallyAccessedMembersAttribute_get_MemberTypes_m0DEFADE83EFA0E18D3776C09983D2A25DF0A7A8D,
+	StringSyntaxAttribute__ctor_mDD18177BA9CB707901518A50E96932FFFFAAF868,
+	StringSyntaxAttribute__ctor_m91748C9269BF54326F8D6BB2A8795FB520986CEE,
+	StringSyntaxAttribute_get_Syntax_mEC9ACD65668C897403B39659EC834A41AE0A705C,
+	StringSyntaxAttribute_get_Arguments_m43A797FFD7EC9B8A1DF937F10B18A51296B00335,
+	MemberNotNullAttribute__ctor_m91AF53BB933348643F060A93FBB2914DF0540AF5,
+	MemberNotNullAttribute__ctor_m1673F7AADC84DF2B39EB62664B5BECBA25A50A29,
+	MemberNotNullAttribute_get_Members_m5E5915361703478E66205A3114492B8B76545A0E,
+	MemberNotNullWhenAttribute__ctor_mB65D6D777EEB05B9B9A12A84A55CB21BF53DE795,
+	MemberNotNullWhenAttribute__ctor_m600554061757A7335D7F328A1B5B2062608829F6,
+	MemberNotNullWhenAttribute_get_ReturnValue_m3FD6DCCDD23733555141FF21484C4765C9ACC40D,
+	MemberNotNullWhenAttribute_get_Members_m16C717095CC1C8AE11E1407A553F9ED8AAB13DB1,
+	ActivatorUtilities_CreateInstance_mBA0A226E521EC864B1ECA2706E520B4E303C06E6,
+	NULL,
+	NULL,
+	ActivatorUtilities_GetServiceOrCreateInstance_m73F4A28AD17C7D04B5CB607A1DAE4782BDEFFA9C,
+	ConstructorMatcher__ctor_m2A876A496310A3615DA238359A35665AC4F58BF2,
+	ConstructorMatcher_Match_mAD81318EA3F6A7F94CEDE82322F5DA9D26DFEDCC,
+	ConstructorMatcher_CreateInstance_m04286FDF0C5CFB9B4E49DB22EB208F7DF0C3154C,
+	ParameterDefaultValue_TryGetDefaultValue_m386B67FD66A3395501D1C3F1C6C3080C907B529F,
+	ParameterDefaultValue_CheckHasDefaultValue_m8515CBF9531E84401EEE3E3E6E5913E780B1CC98,
+	ParameterDefaultValue_CreateValueType_m08496919EF0D201F81B0EC3C54A1044F3D53C564,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	BaseConnectionContext_get_ConnectionClosed_m50249BBBDEFA2836CA3ABEC8C7300FE10EBBEF7C,
+	BaseConnectionContext_set_ConnectionClosed_mC211F7A657D7D48AB439328DA59E8D65BF7CE6B6,
+	BaseConnectionContext_get_LocalEndPoint_mB2BDEF46065E32C7AA8E109B6DA8F1264A43F359,
+	BaseConnectionContext_set_LocalEndPoint_mF34FCBDCDF1BD94DCBFE5A593F74B8BFBA3C157A,
+	BaseConnectionContext_get_RemoteEndPoint_m21EE5B78B30CA1ACADF93D49D2C348C21107E2E2,
+	BaseConnectionContext_set_RemoteEndPoint_m5216368D0109015C006CB2C341A526CD439B8B1D,
+	NULL,
+	NULL,
+	BaseConnectionContext_DisposeAsync_m16A3DB0D5D857D173ED394CC087CF083271D9B15,
+	BaseConnectionContext__ctor_m12224E58C2C9D3103BEFC62C9290ED983B945C82,
+	ConnectionBuilder_get_ApplicationServices_m6D7F40F3F9A919FFA05F7BB254F39E3FFF026CF0,
+	ConnectionBuilder__ctor_m65A2A33E1921B8012A62F148201B1488CC6DC2BA,
+	ConnectionBuilder_Use_mC964FB5F6186D99CD92AC9ECF68B9599442EF60D,
+	ConnectionBuilder_Build_mF9E6894DE78259FD9171C2F3F9DDB8E157A8B7B3,
+	U3CU3Ec__cctor_m674E9C57E281ACFEA28716018CCD6D84FC141180,
+	U3CU3Ec__ctor_m61553AB28F9C1700926273E5B6C2071E85402F92,
+	U3CU3Ec_U3CBuildU3Eb__6_0_m2B7C3F95D1DD2F81B27C8861E617EB06BD5F5657,
+	NULL,
+	ConnectionBuilderExtensions_Use_mB982FFAADCA3B4B84B4BD4AACBAA76F8A306265F,
+	ConnectionBuilderExtensions_Use_mFCA8FDF030C768319FAF680E8BD7B694982916CB,
+	ConnectionBuilderExtensions_Run_mFD1FF70BF1F2B503D16CD3DA95D845CCF0213FDC,
+	U3CU3Ec__DisplayClass1_0__ctor_m79A75EE96033E88DAD52A1DDED25806F4C535FAE,
+	U3CU3Ec__DisplayClass1_0_U3CUseU3Eb__0_mE8DFE1C507B597F8095743CD17C1DB33A18E8080,
+	U3CU3Ec__DisplayClass1_1__ctor_mCBF3723E8C26921B897F090B5EEC571659091F5B,
+	U3CU3Ec__DisplayClass1_1_U3CUseU3Eb__1_m6524645637133127E18FA818698B0324176F0F32,
+	U3CU3Ec__DisplayClass1_2__ctor_mC18DD9070585687190968F6DC54A9586CEEC68CC,
+	U3CU3Ec__DisplayClass1_2_U3CUseU3Eb__2_m42687403694FB9387883C65886B4391726610B37,
+	U3CU3Ec__DisplayClass2_0__ctor_mC2EE79CC78588AB178E39ABB6F30E37936A551AA,
+	U3CU3Ec__DisplayClass2_0_U3CUseU3Eb__0_m7BD00CCFC8540E9C10CB6DF7644E8E169F455577,
+	U3CU3Ec__DisplayClass2_1__ctor_m073D180D45C8D6C602B213201D51417FC92D3535,
+	U3CU3Ec__DisplayClass2_1_U3CUseU3Eb__1_mEC24EB7F9E55AD5CE630823EBEAD650AADF807FA,
+	U3CU3Ec__DisplayClass3_0__ctor_m9180A51654B1AFE1149450E006F746BFD7CAC5B4,
+	U3CU3Ec__DisplayClass3_0_U3CRunU3Eb__0_m9C2A05DD90789D8CA285D7344094E01DAEDD3990,
+	U3CU3Ec__DisplayClass3_0_U3CRunU3Eb__1_m2E7E4C228A92F63625035CE3EE704E6BDC232974,
+	NULL,
+	NULL,
+	ConnectionContext_Abort_m187EBF4B59ADAB100128D9F5375FCBC799795C3E,
+	ConnectionContext_Abort_m11B8826DD89942C28AA87F12673C85D9C3857003,
+	ConnectionContext__ctor_m524B6301BC7651330FD746C06D52943DC6A658F1,
+	ConnectionDelegate__ctor_mD96F5DC967928F61763C1028F4FE3DA937652A0B,
+	ConnectionDelegate_Invoke_mCDFB1AA4E52F725CA4C3DAC2F0A256313AB8EACA,
+	ConnectionDelegate_BeginInvoke_mD8079838124F68BF72AFD1A1174B647715F39300,
+	ConnectionDelegate_EndInvoke_m5B577972836BA26DC8BE0FD6E888B46DFF0B74B5,
+	NULL,
+	ConnectionHandler__ctor_mCF25B29D1A1BED46CB591616C3D5311ED8BE1D3F,
+	ConnectionItems__ctor_mA8E1C9ABA3732C84B2771AE883AEE893970CAAFF,
+	ConnectionItems__ctor_mA32F094EE2E64E1EEE292D7D002A7F0E08322625,
+	ConnectionItems_get_Items_m3242E4609BF410DF3C24BD4A11426D42FADEE247,
+	ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_get_Item_m3E539F5F082024D9C9C1C05007959F43C70707B0,
+	ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_set_Item_mB8A547A8D77DD1EF7F8F1456C2E73C96F78A58F3,
+	ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_Add_mA1F5F35309FF3F76190C69B02A3C1038EB691D06,
+	ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_ContainsKey_mD8A8D8A6229EE9D8ECD17D2F3B76951BE89C0AAB,
+	ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_get_Keys_m6D2E8E1E113CF54C4C18D49A21B75268F2F22B11,
+	ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_Remove_mEE29DE0189FFE068D9E9BD33A493D203FBA5299A,
+	ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_TryGetValue_m84DEF6697237BC0BB2E8688271BA8ECB69A8998F,
+	ConnectionItems_System_Collections_Generic_IDictionaryU3CSystem_ObjectU2CSystem_ObjectU3E_get_Values_m959BF16407C77696EBA0A1C914C5E254D824C5A1,
+	ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_Add_mA33E7CE8E06D274552355CBCDB70D64A759F223B,
+	ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_Clear_mA6C3EE3D9976888D112D02FA138E62C343AC6379,
+	ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_Contains_mE58FE881577842C861D63EC7EA5E247E1F1D43FE,
+	ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_CopyTo_mDB4E9A837B4D7862E1D226973B8FC14131306C34,
+	ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_get_Count_mB00DED9314842F3C59A7253E19594D8B8254583F,
+	ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_get_IsReadOnly_m62E3C0956E5BC903D3C0CCE23FAF35487D739B49,
+	ConnectionItems_System_Collections_Generic_ICollectionU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_Remove_mE196366C8CCAEBC0623FCE7C0262A5B9FCEC3A84,
+	ConnectionItems_System_Collections_Generic_IEnumerableU3CSystem_Collections_Generic_KeyValuePairU3CSystem_ObjectU2CSystem_ObjectU3EU3E_GetEnumerator_m27F7357DE3E98A4A2B02B850A4C4E341BC84E206,
+	ConnectionItems_System_Collections_IEnumerable_GetEnumerator_mCBC43504144BA9E05EA335AE2CBBAA984ED91203,
+	DefaultConnectionContext__ctor_m3E247FCDA1822B16D66C9D3E10D6CADF231654E5,
+	DefaultConnectionContext__ctor_m4A13BAFACB93E455F9CB0A7023EADF7F266EAB4D,
+	DefaultConnectionContext__ctor_mC6CD156F807ECD17A86998C8A5BFD8B738DF65AA,
+	DefaultConnectionContext_get_ConnectionId_mFE4D2EE4CEF248BC329A798F338D3BD37C5D11C2,
+	DefaultConnectionContext_set_ConnectionId_m0B6A2A2877B3634DEA8CFEE96C1E68EA1811EB90,
+	DefaultConnectionContext_get_Features_m4871BE0A814C3FC883C7532E3FDC4CECB2A99C4F,
+	DefaultConnectionContext_get_User_m1594C5B533A4FA9FB6F6F32F08A291C712477D49,
+	DefaultConnectionContext_set_User_m5085F3D4895A860ADA910F9C3EECAB20A94DC60F,
+	DefaultConnectionContext_get_Items_m89D64BF0C824C59C97AABBC88E52D6BBADD6E448,
+	DefaultConnectionContext_set_Items_m7CBF5439324F4368942814CBF503146E04D5390A,
+	DefaultConnectionContext_get_Application_mEAC443A62FCA4C8D7D7D3B5C44A784A40FCE7F3D,
+	DefaultConnectionContext_set_Application_mD12F1057D3F696617F745B322EBCC84BBF0FBC7B,
+	DefaultConnectionContext_get_Transport_mB8372F0615549EDD76441EAEED2B610A476BE427,
+	DefaultConnectionContext_set_Transport_m26BD8933A03DB72AD196F5975FC6F7A475CF8B7F,
+	DefaultConnectionContext_get_ConnectionClosed_m630F31A479D8B82BEC9DF05E81E966844661704F,
+	DefaultConnectionContext_set_ConnectionClosed_mB952EA65FC2F501794B3681922E1485ED5B2DF24,
+	DefaultConnectionContext_get_LocalEndPoint_mD4870196374E9B4E8979413DF02B2721024CA0DE,
+	DefaultConnectionContext_set_LocalEndPoint_m9BBF3E39F6E008D850F80F70920CD8E69982FBE7,
+	DefaultConnectionContext_get_RemoteEndPoint_mE08ED855075BFEB9B2F519A7E1AFBB6D28FA42DD,
+	DefaultConnectionContext_set_RemoteEndPoint_m24D3F104CA7E656F5E21A2EEB793310AF2144095,
+	DefaultConnectionContext_Abort_m10C80286CF1AC40A9A916C921789420EF1C58289,
+	DefaultConnectionContext_DisposeAsync_mBB0C9592D72C476F0B19ED5F482C19BAC4D70715,
+	U3CU3Ec__cctor_m94A0FBC3B4327A66576B074B628058088F721C95,
+	U3CU3Ec__ctor_mEE86474018E27AD6885FB90887721D6BB425E2D3,
+	U3CU3Ec_U3CAbortU3Eb__39_0_m341DA14C44D2DA972A0BE3C1A23ED1411F293D7B,
+	AddressInUseException__ctor_m1272EFAD276597A5D79F19696FCE64AC2AB75E49,
+	AddressInUseException__ctor_mF1C44E1F39B92F10082958CBE4C4B882AAF804D3,
+	ConnectionAbortedException__ctor_mDAFDC1E52BDE05FDF9802DC3AD9ADCBC3E257856,
+	ConnectionAbortedException__ctor_mA4AA50CCA113597CACEF3E041F8C56B570EDB3C6,
+	ConnectionAbortedException__ctor_m4CE001C63437A7CD710D50D56C5724B94A873FA3,
+	ConnectionResetException__ctor_mF4FF4634D846DCF28410231D075595383B53234B,
+	ConnectionResetException__ctor_m1CEE23ED6348CBE6FE4D73DB009E842098CE7039,
+	FileHandleEndPoint__ctor_mA6B0B0E0BFDD394F918366560181ED6F02A8BF02,
+	FileHandleEndPoint_get_FileHandle_m5F471C1925E56D3CEF714A5117706F8ED998B87D,
+	FileHandleEndPoint_get_FileHandleType_mD9144737BFF7C39A5D9B1090EEB1B8286FB443F8,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	MultiplexedConnectionBuilder_get_ApplicationServices_m7E18656CCAD7488E6A8A6CFF8D878B624717643D,
+	MultiplexedConnectionBuilder__ctor_m8AA23B80CD94012CC2CF43F0CAC7180138D7E6CB,
+	MultiplexedConnectionBuilder_Use_mD45595E0D8891D3D516D03D16F10B0BDCFFF3367,
+	MultiplexedConnectionBuilder_Build_mB79B4AF43BEAA1F2F84B16B50865E6B97B263444,
+	U3CU3Ec__cctor_m61E8F559A4826F0F135764FDC7FF7054BA671D05,
+	U3CU3Ec__ctor_m95BFD09C02FBBB0D2AC4EF1A03DFF2765351AAA1,
+	U3CU3Ec_U3CBuildU3Eb__6_0_m0BD86E41D6483F303934FAC860905B6BD391AB31,
+	NULL,
+	NULL,
+	MultiplexedConnectionContext__ctor_mCF88ACCD16D37769F1DC3F4D6529A90ED9C6B8F5,
+	MultiplexedConnectionDelegate__ctor_m3CABB23E9F66F041AFD17C9FD93D14897E7ED822,
+	MultiplexedConnectionDelegate_Invoke_mD668CDC78DC35852EFBB8F7B000AF93F14792EA7,
+	MultiplexedConnectionDelegate_BeginInvoke_mD5F5D2CD5038F81889BEB763C0B8374E6CD9B44A,
+	MultiplexedConnectionDelegate_EndInvoke_mD54845CE20F53D1312C6B9D76A14CFEFCC459686,
+	NamedPipeEndPoint__ctor_m1AA68A4C46899E6A992CCE8DEC8BE951C32C8E68,
+	NamedPipeEndPoint__ctor_mAD52920969253D7BC7B57F45DFFE259B5BA4D85F,
+	NamedPipeEndPoint_get_ServerName_m903E34ABB59F199A6F7172D06DEFAA47CEA1A05C,
+	NamedPipeEndPoint_get_PipeName_mC5787F049762BACE6CF4E809A342B015C512BCDF,
+	NamedPipeEndPoint_ToString_m6E7C44FA62CEF21554EBBB38E3F1D4AB147958CC,
+	NamedPipeEndPoint_Equals_mB327ADAE957F432697AA1A49EB862B821CAA18F1,
+	NamedPipeEndPoint_GetHashCode_m94E0FA906AB72701F8827FA76968866500D8112D,
+	UriEndPoint__ctor_mA7B5F0B6F746037FD4AE11A9DB78991E35A3C1A6,
+	UriEndPoint_get_Uri_mA1AAB03A730B0161B041773C93E721FFF83EFE1E,
+	UriEndPoint_ToString_m48128BAAE86B79D1291968A703A6C4D3AFB381E4,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
+extern void ConstructorMatcher__ctor_m2A876A496310A3615DA238359A35665AC4F58BF2_AdjustorThunk (void);
+extern void ConstructorMatcher_Match_mAD81318EA3F6A7F94CEDE82322F5DA9D26DFEDCC_AdjustorThunk (void);
+extern void ConstructorMatcher_CreateInstance_m04286FDF0C5CFB9B4E49DB22EB208F7DF0C3154C_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[3] = 
+{
+	{ 0x06000018, ConstructorMatcher__ctor_m2A876A496310A3615DA238359A35665AC4F58BF2_AdjustorThunk },
+	{ 0x06000019, ConstructorMatcher_Match_mAD81318EA3F6A7F94CEDE82322F5DA9D26DFEDCC_AdjustorThunk },
+	{ 0x0600001A, ConstructorMatcher_CreateInstance_m04286FDF0C5CFB9B4E49DB22EB208F7DF0C3154C_AdjustorThunk },
+};
+static const int32_t s_InvokerIndices[221] = 
+{
+	18593,
+	13948,
+	14169,
+	13948,
+	13948,
+	14088,
+	14088,
+	18270,
+	14169,
+	7380,
+	18356,
+	18356,
+	14169,
+	14169,
+	18356,
+	6222,
+	6222,
+	18129,
+	18356,
+	23116,
+	-1,
+	-1,
+	25564,
+	14169,
+	11466,
+	12063,
+	24987,
+	24987,
+	29294,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	18132,
+	13951,
+	18356,
+	14169,
+	18356,
+	14169,
+	-1,
+	-1,
+	18577,
+	18593,
+	18356,
+	14169,
+	12063,
+	18356,
+	31407,
+	18593,
+	12063,
+	-1,
+	25564,
+	25564,
+	25564,
+	18593,
+	12063,
+	18593,
+	12063,
+	18593,
+	18356,
+	18593,
+	12063,
+	18593,
+	12063,
+	18593,
+	12063,
+	12063,
+	-1,
+	-1,
+	14169,
+	18593,
+	18593,
+	7370,
+	12063,
+	2998,
+	12063,
+	-1,
+	18593,
+	18593,
+	14169,
+	18356,
+	12063,
+	7380,
+	7380,
+	10116,
+	18356,
+	10116,
+	4666,
+	18356,
+	13044,
+	18593,
+	9274,
+	7368,
+	18270,
+	18129,
+	9274,
+	18356,
+	18356,
+	18593,
+	14169,
+	3497,
+	18356,
+	14169,
+	18356,
+	18356,
+	14169,
+	18356,
+	14169,
+	18356,
+	14169,
+	18356,
+	14169,
+	18132,
+	13951,
+	18356,
+	14169,
+	18356,
+	14169,
+	14169,
+	18577,
+	31407,
+	18593,
+	14169,
+	14169,
+	7380,
+	18593,
+	14169,
+	7380,
+	14169,
+	7380,
+	7567,
+	18570,
+	18270,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	18356,
+	14169,
+	12063,
+	18356,
+	31407,
+	18593,
+	12063,
+	-1,
+	-1,
+	18593,
+	7370,
+	12063,
+	2998,
+	12063,
+	14169,
+	7380,
+	18356,
+	18356,
+	18356,
+	10116,
+	18270,
+	14169,
+	18356,
+	18356,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+};
+static const Il2CppTokenRangePair s_rgctxIndices[3] = 
+{
+	{ 0x06000015, { 0, 2 } },
+	{ 0x06000016, { 2, 2 } },
+	{ 0x06000034, { 4, 2 } },
+};
+extern const uint32_t g_rgctx_T_t4EFA1CD955CEB61A9F95BC51A321894BFFA8953E;
+extern const uint32_t g_rgctx_T_t4EFA1CD955CEB61A9F95BC51A321894BFFA8953E;
+extern const uint32_t g_rgctx_T_tD08047DC9B74BFFF8748E19DB878FD25E0491DBA;
+extern const uint32_t g_rgctx_T_tD08047DC9B74BFFF8748E19DB878FD25E0491DBA;
+extern const uint32_t g_rgctx_ActivatorUtilities_GetServiceOrCreateInstance_TisTConnectionHandler_tCA646804B388110E54F4C2899F0CC6169924F73A_mD7B3649040FC826AF99368590A9779ED5971F35B;
+extern const uint32_t g_rgctx_TConnectionHandler_tCA646804B388110E54F4C2899F0CC6169924F73A;
+static const Il2CppRGCTXDefinition s_rgctxValues[6] = 
+{
+	{ (Il2CppRGCTXDataType)1, (const void *)&g_rgctx_T_t4EFA1CD955CEB61A9F95BC51A321894BFFA8953E },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t4EFA1CD955CEB61A9F95BC51A321894BFFA8953E },
+	{ (Il2CppRGCTXDataType)1, (const void *)&g_rgctx_T_tD08047DC9B74BFFF8748E19DB878FD25E0491DBA },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_tD08047DC9B74BFFF8748E19DB878FD25E0491DBA },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ActivatorUtilities_GetServiceOrCreateInstance_TisTConnectionHandler_tCA646804B388110E54F4C2899F0CC6169924F73A_mD7B3649040FC826AF99368590A9779ED5971F35B },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_TConnectionHandler_tCA646804B388110E54F4C2899F0CC6169924F73A },
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_AspNetCore_Connections_Abstractions_CodeGenModule;
+const Il2CppCodeGenModule g_Microsoft_AspNetCore_Connections_Abstractions_CodeGenModule = 
+{
+	"Microsoft.AspNetCore.Connections.Abstractions.dll",
+	221,
+	s_methodPointers,
+	3,
+	s_adjustorThunks,
+	s_InvokerIndices,
+	0,
+	NULL,
+	3,
+	s_rgctxIndices,
+	6,
+	s_rgctxValues,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

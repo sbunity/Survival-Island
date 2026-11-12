@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8659becd-3e3d-4dc8-8c24-5730041c9e42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Survival-Island/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survival-Island/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Data/Ads Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Data/Ads Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Modules/Advertisement/Scripts/Providers/LevelPlay/LevelPlay.ProviderDefine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Modules/Advertisement/Scripts/Providers/LevelPlay/LevelPlay.ProviderDefine.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project Files/Modules/Advertisement/Scripts/Providers/UnityAds.ProviderDefine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project Files/Modules/Advertisement/Scripts/Providers/UnityAds.ProviderDefine.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3LxXYv1aWCdsCa0qOKbYghJDmkZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "devV",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8659becd-3e3d-4dc8-8c24-5730041c9e42" name="Changes" comment="" />
+      <created>1794396743403</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794396743403</updated>
+    </task>
+    <servers />
+  </component>
+</project>

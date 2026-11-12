@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: test island
+  companyName: Survivel Island
+  productName: Survivel Island
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
@@ -169,7 +169,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.DefaultCompany.SurvivalIsland
+    Android: com.SurvivelIsland.SurvivelIsland
     Standalone: com.Default-Company.Survival-Island
     iPhone: com.DefaultCompany.test-island
   buildNumber:
@@ -501,6 +501,9 @@ PlayerSettings:
   - m_BuildTarget: iPhone
     m_StaticBatching: 1
     m_DynamicBatching: 0
+  - m_BuildTarget: Android
+    m_StaticBatching: 1
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -530,6 +533,9 @@ PlayerSettings:
   - serializedVersion: 3
     m_BuildTarget: iOS
     m_Formats: 03000000
+  - serializedVersion: 3
+    m_BuildTarget: Android
+    m_Formats: 01000000
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -796,7 +802,7 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_TMP;MODULE_ADS;MODULE_HAPTIC;MODULE_CURVE;UNITY_MCP_READY;UNITY_MCP_DEPS_3
+    Android: UNITY_POST_PROCESSING_STACK_V2;MODULE_INPUT_SYSTEM;MODULE_TMP;MODULE_ADS;MODULE_HAPTIC;MODULE_CURVE;MODULE_LEVELPLAY;LEVELPLAY_DEPENDENCIES_INSTALLED;URP_COMPATIBILITY_MODE;UNITY_MCP_READY;UNITY_MCP_DEPS_3
     EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY;UNITY_MCP_DEPS_3
     GameCoreScarlett: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY;UNITY_MCP_DEPS_3
     GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY;UNITY_MCP_DEPS_3
@@ -813,7 +819,7 @@ PlayerSettings:
     WebGL: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY;UNITY_MCP_DEPS_3
     Windows Store Apps: UNITY_MCP_READY;UNITY_MCP_DEPS_3
     XboxOne: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY;UNITY_MCP_DEPS_3
-    iPhone: MODULE_INPUT_SYSTEM;MODULE_TMP;MODULE_ADS;MODULE_HAPTIC;URP_COMPATIBILITY_MODE;MODULE_CURVE;UNITY_MCP_READY;UNITY_MCP_DEPS_3
+    iPhone: MODULE_INPUT_SYSTEM;MODULE_TMP;MODULE_ADS;MODULE_HAPTIC;URP_COMPATIBILITY_MODE;MODULE_CURVE;MODULE_LEVELPLAY;LEVELPLAY_DEPENDENCIES_INSTALLED;UNITY_MCP_READY;UNITY_MCP_DEPS_3
     tvOS: UNITY_POST_PROCESSING_STACK_V2;UNITY_MCP_READY;UNITY_MCP_DEPS_3
   additionalCompilerArguments: {}
   platformArchitecture: {}

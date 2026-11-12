@@ -1,0 +1,93 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void EmbeddedAttribute__ctor_m7221EFF8BF0C2E0F7852136351F165CA7E253CB9 (void);
+extern void RefSafetyRulesAttribute__ctor_m34A07AFE324770D40CD596FF63418B39C523B7A6 (void);
+extern void MemberNotNullAttribute__ctor_m2BE9F993BD6D6D9D1DA13A8B48574CA3DDB245BF (void);
+extern void MemberNotNullAttribute__ctor_m9130680D3D5FEE95DD793E4CB2B02D3DE96E961D (void);
+extern void MemberNotNullAttribute_get_Members_m2A27C8419C526969550225119B939CD308E9BF6B (void);
+extern void MemberNotNullWhenAttribute__ctor_mF7F46B90539B77ADE64875F78E513CEC1F3ADD9B (void);
+extern void MemberNotNullWhenAttribute__ctor_m39F7336E676AB7711FD1C5284B50451DA793B237 (void);
+extern void MemberNotNullWhenAttribute_get_ReturnValue_mF75201622EE9ECE18BEFAB2671CF16CC228FBB8F (void);
+extern void MemberNotNullWhenAttribute_get_Members_mAF35D6FC8FB5BF4E004A449E37D9462E42CE3354 (void);
+extern void LibraryImportAttribute__ctor_m866E06443355FFE1D38689E0E796F46F76C5A866 (void);
+extern void LibraryImportAttribute_get_LibraryName_m9F848A2C9A0D57510B362AC81C05BBD3DB8A5015 (void);
+extern void LibraryImportAttribute_get_EntryPoint_m56B41437BF5E81D4087C868216E4D005851C709B (void);
+extern void LibraryImportAttribute_set_EntryPoint_mC942DF6E4137C4CD47F18488A72FF91FBE789D71 (void);
+extern void LibraryImportAttribute_get_StringMarshalling_m76203EA4013E0FFB7E275C26D408BBD3CF8B718A (void);
+extern void LibraryImportAttribute_set_StringMarshalling_mE03529720C37443B19ED63F24F2AB8AB2F6D5F0C (void);
+extern void LibraryImportAttribute_get_StringMarshallingCustomType_mDF14D87A37B6732B2334DC3BFB55C07714430970 (void);
+extern void LibraryImportAttribute_set_StringMarshallingCustomType_m02405FBE502EFFFA721D84AA3835A9B09AFB666F (void);
+extern void LibraryImportAttribute_get_SetLastError_mE2E3D3655B3F3D0E78A2BE72D352981C0920C2AB (void);
+extern void LibraryImportAttribute_set_SetLastError_m089BCF451FD2A9592C0372670AA4ACB5A4843571 (void);
+static Il2CppMethodPointer s_methodPointers[19] = 
+{
+	EmbeddedAttribute__ctor_m7221EFF8BF0C2E0F7852136351F165CA7E253CB9,
+	RefSafetyRulesAttribute__ctor_m34A07AFE324770D40CD596FF63418B39C523B7A6,
+	MemberNotNullAttribute__ctor_m2BE9F993BD6D6D9D1DA13A8B48574CA3DDB245BF,
+	MemberNotNullAttribute__ctor_m9130680D3D5FEE95DD793E4CB2B02D3DE96E961D,
+	MemberNotNullAttribute_get_Members_m2A27C8419C526969550225119B939CD308E9BF6B,
+	MemberNotNullWhenAttribute__ctor_mF7F46B90539B77ADE64875F78E513CEC1F3ADD9B,
+	MemberNotNullWhenAttribute__ctor_m39F7336E676AB7711FD1C5284B50451DA793B237,
+	MemberNotNullWhenAttribute_get_ReturnValue_mF75201622EE9ECE18BEFAB2671CF16CC228FBB8F,
+	MemberNotNullWhenAttribute_get_Members_mAF35D6FC8FB5BF4E004A449E37D9462E42CE3354,
+	LibraryImportAttribute__ctor_m866E06443355FFE1D38689E0E796F46F76C5A866,
+	LibraryImportAttribute_get_LibraryName_m9F848A2C9A0D57510B362AC81C05BBD3DB8A5015,
+	LibraryImportAttribute_get_EntryPoint_m56B41437BF5E81D4087C868216E4D005851C709B,
+	LibraryImportAttribute_set_EntryPoint_mC942DF6E4137C4CD47F18488A72FF91FBE789D71,
+	LibraryImportAttribute_get_StringMarshalling_m76203EA4013E0FFB7E275C26D408BBD3CF8B718A,
+	LibraryImportAttribute_set_StringMarshalling_mE03529720C37443B19ED63F24F2AB8AB2F6D5F0C,
+	LibraryImportAttribute_get_StringMarshallingCustomType_mDF14D87A37B6732B2334DC3BFB55C07714430970,
+	LibraryImportAttribute_set_StringMarshallingCustomType_m02405FBE502EFFFA721D84AA3835A9B09AFB666F,
+	LibraryImportAttribute_get_SetLastError_mE2E3D3655B3F3D0E78A2BE72D352981C0920C2AB,
+	LibraryImportAttribute_set_SetLastError_m089BCF451FD2A9592C0372670AA4ACB5A4843571,
+};
+static const int32_t s_InvokerIndices[19] = 
+{
+	18593,
+	14088,
+	14169,
+	14169,
+	18356,
+	6222,
+	6222,
+	18129,
+	18356,
+	14169,
+	18356,
+	18356,
+	14169,
+	18270,
+	14088,
+	18356,
+	14169,
+	18129,
+	13948,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Microsoft_Bcl_AsyncInterfaces_CodeGenModule;
+const Il2CppCodeGenModule g_Microsoft_Bcl_AsyncInterfaces_CodeGenModule = 
+{
+	"Microsoft.Bcl.AsyncInterfaces.dll",
+	19,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

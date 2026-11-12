@@ -11,9 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ddb41bf72d53a48a6bdc593d706f94, type: 3}
   m_Name: Ads Settings
-  m_EditorClassIdentifier:
-  activeProvider: Dummy
-  debugMode: 0
+  m_EditorClassIdentifier: 
+  activeProvider: LevelPlay
+  debugMode: 1
   testDevices:
   - 91687A6357C9E0169C1471C98D0237EB
   loadAdsOnStart: 1
@@ -21,9 +21,9 @@ MonoBehaviour:
   interstitialEnabled: 1
   rewardedVideoEnabled: 1
   noAdsRewardSprite: {fileID: 21300000, guid: e9da7f14e336254428efd41f37278ab9, type: 3}
-  interstitialFirstStartDelay: 40
-  interstitialStartDelay: 40
-  interstitialShowingDelay: 30
+  interstitialFirstStartDelay: 20
+  interstitialStartDelay: 20
+  interstitialShowingDelay: 20
   loadingAdDuration: 0
   loadingMessage: Ad is loading..
   providerContainers:
@@ -60,10 +60,10 @@ MonoBehaviour:
     - rid: 4891284891244077058
       type: {class: LevelPlayContainer, ns: Watermelon, asm: Assembly-CSharp}
       data:
-        androidAppKey: 252d5cd7d
-        androidBannerID: l68xq1zy8q0i9swn
-        androidInterstitialID: 5k0of20pg9rge2kt
-        androidRVID: e7yv8g7d3x42d5af
+        androidAppKey: 297808565
+        androidBannerID: 24ovs4m0r1nunfg0
+        androidInterstitialID: xhhdkz14zb7kof7u
+        androidRVID: qbavkce9gsd8sp1n
         iOSAppKey: 250bef11d
         iOSBannerID: b21ddoagq1k738fs
         iOSInterstitialID: 1294xxzgqlrq6edz

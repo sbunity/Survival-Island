@@ -1,0 +1,8777 @@
+﻿#include "pch-cpp.hpp"
+
+
+
+
+
+struct VirtualActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename T1>
+struct VirtualActionInvoker1
+{
+	typedef void (*Action)(void*, T1, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+template <typename R>
+struct VirtualFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+struct GenericVirtualActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_virtual_invoke_data(method, obj, &invokeData);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename T1>
+struct GenericVirtualActionInvoker1
+{
+	typedef void (*Action)(void*, T1, const RuntimeMethod*);
+
+	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj, T1 p1)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_virtual_invoke_data(method, obj, &invokeData);
+		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+struct InterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename T1>
+struct InterfaceActionInvoker1
+{
+	typedef void (*Action)(void*, T1, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj, T1 p1)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+template <typename T1, typename T2>
+struct InterfaceActionInvoker2
+{
+	typedef void (*Action)(void*, T1, T2, const RuntimeMethod*);
+
+	static inline void Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj, T1 p1, T2 p2)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
+	}
+};
+template <typename R>
+struct InterfaceFuncInvoker0
+{
+	typedef R (*Func)(void*, const RuntimeMethod*);
+
+	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
+	{
+		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
+		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+struct GenericInterfaceActionInvoker0
+{
+	typedef void (*Action)(void*, const RuntimeMethod*);
+
+	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_interface_invoke_data(method, obj, &invokeData);
+		((Action)invokeData.methodPtr)(obj, invokeData.method);
+	}
+};
+template <typename T1>
+struct GenericInterfaceActionInvoker1
+{
+	typedef void (*Action)(void*, T1, const RuntimeMethod*);
+
+	static inline void Invoke (const RuntimeMethod* method, RuntimeObject* obj, T1 p1)
+	{
+		VirtualInvokeData invokeData;
+		il2cpp_codegen_get_generic_interface_invoke_data(method, obj, &invokeData);
+		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
+	}
+};
+
+struct Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404;
+struct Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8;
+struct Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA;
+struct Dictionary_2_t41479D9F29C6C1BC07FC7F8D3DD313D8A9A419E1;
+struct Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6;
+struct Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0;
+struct Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52;
+struct Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA;
+struct HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885;
+struct HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E;
+struct HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47;
+struct IEqualityComparer_1_t2CA7720C7ADCCDECD3B02E45878B4478619D5347;
+struct IEqualityComparer_1_t8462412415B8EAF01DFDF41EBDB4AD62ACE10271;
+struct IEqualityComparer_1_tAE94C8F24AD5B94D4EE85CA9FC59E3409D41CAF7;
+struct IEqualityComparer_1_t0C79004BFE79D9DBCE6C2250109D31D468A9A68E;
+struct IEqualityComparer_1_tCB6BD4D277FD4419904858349EA3448F096390AF;
+struct IReadOnlyDictionary_2_t86D8DEF8AA91F24A60724851ED9B8FCDA32B38DD;
+struct IReadOnlyList_1_tFC1535606D0FDFA5D7C26B354EF016DAA0B88963;
+struct KeyCollection_tA716BA8496900F44D752A40944CA0DCF66B7BAD7;
+struct KeyCollection_t9FD1B2D586AB65AE77AC88118EEBBAC8FBBAF4D0;
+struct KeyCollection_t7566871B2D31A4C3BE3AA55BBBABE9669E627B00;
+struct KeyCollection_t11B8CCCAE9B5857EB88D719F18F5DEE76427C580;
+struct List_1_tF6D13D87DD02D4EF3ECD7763371397BD6D1A2C0F;
+struct List_1_tE6BB71ABF15905EFA2BE92C38A2716547AEADB19;
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
+struct List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C;
+struct Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12;
+struct Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E;
+struct TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4;
+struct ValueCollection_t0F3CDE51F86239622C464290CE413781AC13CA62;
+struct ValueCollection_t0434EE386C6AC48448DC16F2C8D03B511F9AC3CB;
+struct ValueCollection_tC334F985B5241190B1632DCE0CB0087377C79CE1;
+struct ValueCollection_tF07F4A5FAA8B6ACC4E77239500C0151B24F1C9F8;
+struct ValueCollection_t4B5F7CC8175C432CD4331AAFE3A162472DFE92C8;
+struct EntryU5BU5D_t52376BF8E19B911FE54AA94ED2144BA3F04ABED3;
+struct EntryU5BU5D_t4680FB23B0B4673080FB94C197DD88477A1F99C5;
+struct EntryU5BU5D_t04B4D207BD5F7E3D9241806C9D4D71A7016B00D7;
+struct EntryU5BU5D_tC6E911FA17A9BB2DE95823B6B7B8CC42DCDE3B4C;
+struct SlotU5BU5D_tF596AD324082C553DB364C768406A40BB3C85343;
+struct SlotU5BU5D_t07B9710DAFF65556B173A365E17CBC7A9CF40851;
+struct SlotU5BU5D_t62678F74AA536A7AC1D6F93E9C8D647303EDFCD1;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A;
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
+struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct SecondarySpriteTextureU5BU5D_tC322D73EA4B9A8B747013A3584DEFEAFC0D87192;
+struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
+struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
+struct UIPageU5BU5D_t33D6E334149C75C92F2BB4DDEC1EB85E04FA659E;
+struct Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA;
+struct Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C;
+struct PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1;
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
+struct BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657;
+struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA;
+struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
+struct CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527;
+struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184;
+struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
+struct Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26;
+struct CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860;
+struct CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B;
+struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B;
+struct Delegate_t;
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+struct DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5;
+struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
+struct GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B;
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
+struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
+struct IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5;
+struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
+struct IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49;
+struct IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770;
+struct Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E;
+struct Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3;
+struct MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553;
+struct Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4;
+struct MethodInfo_t;
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
+struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A;
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
+struct Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470;
+struct OverlayPreInitializer_t6B0EA8EAB2F860021D6CD1682E1ED24BDF125359;
+struct RectMask2D_tACF92BE999C791A665BD1ADEABF5BCEB82846670;
+struct RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5;
+struct SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373;
+struct SafeAreaElement_t8B64F2DE1B5582295162D62146D93756A80E7060;
+struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+struct SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37;
+struct SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A;
+struct Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99;
+struct String_t;
+struct Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4;
+struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
+struct Type_t;
+struct UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA;
+struct UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18;
+struct UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7;
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t51A2A96D1C3CA4C1C700374179CB5794718F9F7B;
+struct VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE;
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132;
+struct PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254;
+struct CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD;
+struct WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC;
+struct U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489;
+struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
+struct U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C;
+struct ReapplyDrivenProperties_t3482EA130A01FF7EE2EEFE37F66A5215D08CFE24;
+struct U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638;
+struct PageCallback_tB109469A96FD014B01B51D47343D68F643405291;
+struct PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37;
+
+IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* RectTransformUtility_t65C00A84A72F17D78B81F2E7D88C2AA98AB61244_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t719A0A3C5CD5F5E69640E6F9E4E64D405236D7F2____20403775AD5554FEA2533D53BA10023E9FD3B53C7AD51A7674F1B938F8D1CF10_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t719A0A3C5CD5F5E69640E6F9E4E64D405236D7F2____C224CBDE54E7418EAB595432CA87E33C724750219CF859F1022C6E0DBF242717_FieldInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral1ACD5A00EBA327B1C8A9F271FFF54F448CC5270F;
+IL2CPP_EXTERN_C String_t* _stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001;
+IL2CPP_EXTERN_C String_t* _stringLiteral79BE6A85EAFCB9892C2645439C4852ABA26434A4;
+IL2CPP_EXTERN_C String_t* _stringLiteral849AA6A3FB74201F689E048799C3B265899153E5;
+IL2CPP_EXTERN_C String_t* _stringLiteral89C47ED691B89B006E458923CF0F906605DC763F;
+IL2CPP_EXTERN_C String_t* _stringLiteralB93F5E13E0AD8E8044D7D80E771F9A55F393D87F;
+IL2CPP_EXTERN_C String_t* _stringLiteralBE6E7D0823760F49D1B18B7BCDD19E38B1DA23AC;
+IL2CPP_EXTERN_C String_t* _stringLiteralD80DC9F9016B1E68CC8B57C3A57284FB28E77B22;
+IL2CPP_EXTERN_C String_t* _stringLiteralD886BF35F0B587324FB7707EB1F4440DD4D0C54F;
+IL2CPP_EXTERN_C String_t* _stringLiteralFDABD37D9FD1C58B1A77636B3721994D87583348;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisCanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B_m82FD65AA44C2243A4866779598E55571D3576DAE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m8D88AC7AC775DA9FE3783014A4448A8C60283FF1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_mD773970EFE7F022F1764B946090F20EDA5747872_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentsInChildren_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_mDB78EE513D37F4AFB2A67FA928CFC5EE960B0DAA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* CoreExtensions_IsNullOrEmpty_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_m770745F3470FEDBAAC24FA6E18ADBA23C420272E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Add_m4F47C18CFEDAB54D5628E805B0D6579AAD53CB6D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Add_mAA751E5109B5AB5C17BDA43F9968A5B3D3F92EC9_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_ContainsKey_m2B298C0786B22FC071ED51A5207F67EB7C5D0649_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_ContainsKey_m625C30E9962D06319F9BFE18464F130E7354D79A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Remove_m889968230F8E2E515F0113D46BB3CE8A7FF78FB5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Remove_mDFA1B1D49C5A2EC0CEC454181D2AF03641023E8A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Remove_mF2F9034A6072AEA10B25BDABC9E3D05F20CD897E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_TryGetValue_m52D59359A6589EE238383C5757FD071649FDAA97_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_TryGetValue_mE004572EBDFF849679C52AB0B5BEE2847268544C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m572277870319CF66320268BDAC7C26ACD9B74217_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m90717CCB68690A7577828EE09723F8B3C5B05167_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_mB409389286D75D819DEC0E92E1A99C79A3F4F48C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_mFE3A7C20E9815BEDD9EB6D52044494BF67998295_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_get_Values_m040534BCB2F486CE7A528714A553FE3D7D86E62F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_set_Item_m19939A7C035F2910914A45B3FEC17311A78CBB8C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_set_Item_m86CAB6A03777ACD7DFB7CCC2EFA35A476840D7DF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m8809033D555BC1DCF1C3A1305CBB424DE4F42097_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mFBDFA82181DBA00ACBD65938D09DEB086CAAF4B7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m03502D5E010405800A6A2FD950FF32C0D5EF4F2A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mBED14BECD6E95194791D11CD7EB0813F7C85721D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m85CB1C54F971036580F7F9D9C66E5865773559AD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mBD45F4BA44FD09AF03784E50E3194A5AF8EC0480_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m13C85FD585C0679530F8B35D0B39D965702FD0F5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisDummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5_mDA29E1BD89AF23E1EE3A148F1BA069C1D0B11A67_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m308DCE149216D4787C3E6147729C0DF79423E1BF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA327C9E1CA12BC531D587E7567F2067B96E6B6A0_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m771EB78FF8813B5AFF21AC0D252E5461943E6388_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_Add_m69AA32A31BC3001FE0F1C4DDAA04483462F39F69_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_Add_m7FCEE79D27F56186AF8DC3E34BD88294227C7090_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_GetEnumerator_m82777515B3B7F3853B6CA5F0DD6D06E105B5AD50_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_RemoveWhere_m7610D53CB3906D96BD5D254317C391863AF1F5B6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_Remove_m4E0DBD4CE9D61E8A4374984A7A7E24F29152F40B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_Remove_m88F1B4D1B158C65EE65465887E02CDC4C24AB00F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1__ctor_m73C0176B824C61D374CE302608362C3D17B136CC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1__ctor_mC1A0F89AA50607A3B9303A4F38BC4D57E6EEF82A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_get_Count_m16FF6E9136F088478194E5B586339A73549A0A84_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_mF2FD0CA86C51F3CCA16C37E21458BCFFA0D9D351_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_m396920112CB9E38A18B909CE8718679024EE961D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CApplySortingOrderNextFrameU3Ed__9_System_Collections_IEnumerator_Reset_m90B31D98FE4E61B7736C523B7847B014DD9E54B4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeCoroutineU3Ed__7_System_Collections_IEnumerator_Reset_mB636F3F54F128C58F996012C3348CC5459CD85A7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CApplySafeAreaU3Eb__22_0_m3E385D148DEFA984128E058847E804687F348949_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass5_0_U3CHideU3Eb__0_m88439581951BF3514C2E41736ADC667A177E22C5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ValueCollection_GetEnumerator_m4E213752D3A33BC8225460C69272A06F37D03906_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeType* IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_0_0_0_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
+struct Exception_t_marshaled_com;
+struct Exception_t_marshaled_pinvoke;
+
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1;
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+struct U3CModuleU3E_tC13AF453212CE4E5A71941D2491163CA3FF1106C 
+{
+};
+struct Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_t52376BF8E19B911FE54AA94ED2144BA3F04ABED3* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_tA716BA8496900F44D752A40944CA0DCF66B7BAD7* ____keys;
+	ValueCollection_t0434EE386C6AC48448DC16F2C8D03B511F9AC3CB* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_t4680FB23B0B4673080FB94C197DD88477A1F99C5* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_t9FD1B2D586AB65AE77AC88118EEBBAC8FBBAF4D0* ____keys;
+	ValueCollection_tC334F985B5241190B1632DCE0CB0087377C79CE1* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_t04B4D207BD5F7E3D9241806C9D4D71A7016B00D7* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_t7566871B2D31A4C3BE3AA55BBBABE9669E627B00* ____keys;
+	ValueCollection_tF07F4A5FAA8B6ACC4E77239500C0151B24F1C9F8* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_tC6E911FA17A9BB2DE95823B6B7B8CC42DCDE3B4C* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_t11B8CCCAE9B5857EB88D719F18F5DEE76427C580* ____keys;
+	ValueCollection_t4B5F7CC8175C432CD4331AAFE3A162472DFE92C8* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	SlotU5BU5D_tF596AD324082C553DB364C768406A40BB3C85343* ____slots;
+	int32_t ____count;
+	int32_t ____lastIndex;
+	int32_t ____freeList;
+	RuntimeObject* ____comparer;
+	int32_t ____version;
+	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
+};
+struct HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	SlotU5BU5D_t07B9710DAFF65556B173A365E17CBC7A9CF40851* ____slots;
+	int32_t ____count;
+	int32_t ____lastIndex;
+	int32_t ____freeList;
+	RuntimeObject* ____comparer;
+	int32_t ____version;
+	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
+};
+struct HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	SlotU5BU5D_t62678F74AA536A7AC1D6F93E9C8D647303EDFCD1* ____slots;
+	int32_t ____count;
+	int32_t ____lastIndex;
+	int32_t ____freeList;
+	RuntimeObject* ____comparer;
+	int32_t ____version;
+	SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ____siInfo;
+};
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D  : public RuntimeObject
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C  : public RuntimeObject
+{
+	UIPageU5BU5D_t33D6E334149C75C92F2BB4DDEC1EB85E04FA659E* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct ValueCollection_t0434EE386C6AC48448DC16F2C8D03B511F9AC3CB  : public RuntimeObject
+{
+	Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* ____dictionary;
+};
+struct U3CPrivateImplementationDetailsU3E_t719A0A3C5CD5F5E69640E6F9E4E64D405236D7F2  : public RuntimeObject
+{
+};
+struct CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527  : public RuntimeObject
+{
+	PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1* ___pages;
+	UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* ___controller;
+	Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* ___pagesMap;
+};
+struct MemberInfo_t  : public RuntimeObject
+{
+};
+struct Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470  : public RuntimeObject
+{
+	RuntimeObject* ___panel;
+};
+struct String_t  : public RuntimeObject
+{
+	int32_t ____stringLength;
+	Il2CppChar ____firstChar;
+};
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t51A2A96D1C3CA4C1C700374179CB5794718F9F7B  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D  : public RuntimeObject
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinvoke
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
+{
+};
+struct U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___canvas;
+	int32_t ___sortingOrder;
+	CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* ___U3CU3E4__this;
+};
+struct PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254  : public RuntimeObject
+{
+	UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___pagePrefab;
+	bool ___autoDestroy;
+};
+struct U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C  : public RuntimeObject
+{
+	RuntimeObject* ___panel;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___onCompleted;
+};
+struct U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638  : public RuntimeObject
+{
+};
+struct Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8 
+{
+	HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* ____set;
+	int32_t ____index;
+	int32_t ____version;
+	RuntimeObject* ____current;
+};
+struct Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA 
+{
+	HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* ____set;
+	int32_t ____index;
+	int32_t ____version;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ____current;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	bool ___m_value;
+};
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
+{
+	uint8_t ___m_value;
+};
+struct Color_tD001788D726C3A7F1379BEED0260B9591F440C1F 
+{
+	float ___r;
+	float ___g;
+	float ___b;
+	float ___a;
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	int32_t ___m_value;
+};
+struct IntPtr_t 
+{
+	void* ___m_value;
+};
+struct LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB 
+{
+	int32_t ___m_Mask;
+};
+struct Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D 
+{
+	float ___m_XMin;
+	float ___m_YMin;
+	float ___m_Width;
+	float ___m_Height;
+};
+struct Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C 
+{
+	float ___m_value;
+};
+struct Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 
+{
+	float ___x;
+	float ___y;
+};
+struct Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A 
+{
+	int32_t ___m_X;
+	int32_t ___m_Y;
+};
+struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+};
+struct Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+	float ___w;
+};
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
+	};
+};
+#pragma pack(push, tp, 1)
+struct __StaticArrayInitTypeSizeU3D1069_tE266094C010C4948B8C666AF0D0D1AAF7782E469 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D1069_tE266094C010C4948B8C666AF0D0D1AAF7782E469__padding[1069];
+	};
+};
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
+struct __StaticArrayInitTypeSizeU3D414_t6B026C9A9EE140A24B2D0AF9FD32EB1E757F7DB6 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D414_t6B026C9A9EE140A24B2D0AF9FD32EB1E757F7DB6__padding[414];
+	};
+};
+#pragma pack(pop, tp)
+struct MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D 
+{
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___FilePathsData;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	bool ___IsEditorOnly;
+};
+struct MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshaled_pinvoke
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshaled_com
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct Enumerator_t6637E273E74F207303F5201BFE6065EAD1EF638C 
+{
+	Dictionary_2_t41479D9F29C6C1BC07FC7F8D3DD313D8A9A419E1* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____currentValue;
+};
+struct Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985 
+{
+	Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* ____dictionary;
+	int32_t ____index;
+	int32_t ____version;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____currentValue;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B  : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D
+{
+	intptr_t ___m_Ptr;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B_marshaled_pinvoke : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinvoke
+{
+	intptr_t ___m_Ptr;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B_marshaled_com : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
+{
+	intptr_t ___m_Ptr;
+};
+struct Delegate_t  : public RuntimeObject
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	RuntimeObject* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	bool ___method_is_virtual;
+};
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Exception_t  : public RuntimeObject
+{
+	String_t* ____className;
+	String_t* ____message;
+	RuntimeObject* ____data;
+	Exception_t* ____innerException;
+	String_t* ____helpURL;
+	RuntimeObject* ____stackTrace;
+	String_t* ____stackTraceString;
+	String_t* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	RuntimeObject* ____dynamicMethods;
+	int32_t ____HResult;
+	String_t* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_pinvoke
+{
+	char* ____className;
+	char* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_pinvoke* ____innerException;
+	char* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	char* ____stackTraceString;
+	char* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	char* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_com
+{
+	Il2CppChar* ____className;
+	Il2CppChar* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_com* ____innerException;
+	Il2CppChar* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	Il2CppChar* ____stackTraceString;
+	Il2CppChar* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	Il2CppChar* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct LogCategory_t971F89A130D955BEDA787A601B5459AD3B4B047B 
+{
+	int32_t ___value__;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C  : public RuntimeObject
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+	intptr_t ___m_CachedPtr;
+};
+struct RenderMode_tB63553E26C26A0B62C47B995F86AC41768494633 
+{
+	int32_t ___value__;
+};
+struct RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 
+{
+	intptr_t ___value;
+};
+struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B 
+{
+	intptr_t ___value;
+};
+struct ScreenOrientation_t928A8AFB38625B9356E57BA75BBD90FA653DCFC2 
+{
+	int32_t ___value__;
+};
+struct ScaleMode_t75E9A207156237F5D22C180106611A6AEB45D765 
+{
+	int32_t ___value__;
+};
+struct ScreenMatchMode_t1BE0CA4F6DE4FDCD46F417DF0B7C1E6A19AB75ED 
+{
+	int32_t ___value__;
+};
+struct Unit_tAE478BD661DB092BBD04163BD94D5868EB99666F 
+{
+	int32_t ___value__;
+};
+struct U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	float ___targetAlpha;
+	float ___duration;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___onCompleted;
+	DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* ___U3CU3E4__this;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CcolorU3E5__1;
+	float ___U3CstartAlphaU3E5__2;
+	float ___U3CelapsedU3E5__3;
+};
+struct BlockingObjects_t102C088885358E52B8A917F94294644312B2AA79 
+{
+	int32_t ___value__;
+};
+struct FillMethod_t36837ED12068DF1582CC20489D571B0BCAA7AD19 
+{
+	int32_t ___value__;
+};
+struct Type_t81D6F138C2FC745112D5247CD91BD483EDFFC041 
+{
+	int32_t ___value__;
+};
+struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct MulticastDelegate_t  : public Delegate_t
+{
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates;
+};
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates;
+};
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates;
+};
+struct SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373  : public RuntimeObject
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___virtualResolution;
+	HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* ___registeredTransforms;
+	Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* ___extraOffsets;
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___lastSafeArea;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___lastScreenSize;
+	int32_t ___lastOrientation;
+	float ___U3CTopOffsetU3Ek__BackingField;
+	float ___U3CBottomOffsetU3Ek__BackingField;
+};
+struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
+{
+};
+struct Type_t  : public MemberInfo_t
+{
+	RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ____impl;
+};
+struct Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E  : public MulticastDelegate_t
+{
+};
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C  : public MulticastDelegate_t
+{
+};
+struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+struct SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A  : public MulticastDelegate_t
+{
+};
+struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct PageCallback_tB109469A96FD014B01B51D47343D68F643405291  : public MulticastDelegate_t
+{
+};
+struct PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37  : public MulticastDelegate_t
+{
+};
+struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+	uint32_t ___m_NonSerializedVersion;
+};
+struct Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+};
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+	CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B* ___m_CancellationTokenSource;
+};
+struct RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5  : public Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1
+{
+};
+struct BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loadingObject;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___canvas;
+};
+struct OverlayPreInitializer_t6B0EA8EAB2F860021D6CD1682E1ED24BDF125359  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* ___overlay;
+};
+struct SafeAreaElement_t8B64F2DE1B5582295162D62146D93756A80E7060  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___rectTransform;
+};
+struct UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+struct UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* ___cachedPages;
+	SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* ___notchSafeArea;
+	bool ___usePausePopups;
+	List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* ___pages;
+	Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* ___pagesLink;
+	HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* ___popupWindows;
+	List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* ___pausePopups;
+	Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* ___pageClosedCallbacks;
+};
+struct UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* ___registeredElements;
+	bool ___isPageDisplayed;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___canvas;
+	GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* ___graphicRaycaster;
+	String_t* ___defaultName;
+	IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* ___pageElements;
+	bool ___isCached;
+};
+struct BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832  : public UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D
+{
+	BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832* ___m_RootRaycaster;
+};
+struct CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B  : public UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D
+{
+	int32_t ___m_UiScaleMode;
+	float ___m_ReferencePixelsPerUnit;
+	float ___m_ScaleFactor;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___m_ReferenceResolution;
+	int32_t ___m_ScreenMatchMode;
+	float ___m_MatchWidthOrHeight;
+	int32_t ___m_PhysicalUnit;
+	float ___m_FallbackScreenDPI;
+	float ___m_DefaultSpriteDPI;
+	float ___m_DynamicPixelsPerUnit;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___m_Canvas;
+	float ___m_PrevScaleFactor;
+	float ___m_PrevReferencePixelsPerUnit;
+	bool ___m_PresetInfoIsWorld;
+};
+struct DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5  : public BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657
+{
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___image;
+	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___fadeCoroutine;
+};
+struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931  : public UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D
+{
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_Material;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___m_Color;
+	bool ___m_SkipLayoutUpdate;
+	bool ___m_SkipMaterialUpdate;
+	bool ___m_RaycastTarget;
+	bool ___m_RaycastTargetCache;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___m_RaycastPadding;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_RectTransform;
+	CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* ___m_CanvasRenderer;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___m_Canvas;
+	bool ___m_VertsDirty;
+	bool ___m_MaterialDirty;
+	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyLayoutCallback;
+	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyVertsCallback;
+	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyMaterialCallback;
+	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___m_CachedMesh;
+	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___m_CachedUvs;
+	TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4* ___m_ColorTweenRunner;
+	bool ___U3CuseLegacyMeshGenerationU3Ek__BackingField;
+};
+struct GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B  : public BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832
+{
+	bool ___m_IgnoreReversedGraphics;
+	int32_t ___m_BlockingObjects;
+	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___m_BlockingMask;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___m_Canvas;
+	List_1_tF6D13D87DD02D4EF3ECD7763371397BD6D1A2C0F* ___m_RaycastResults;
+};
+struct MaskableGraphic_tFC5B6BE351C90DE53744DF2A70940242774B361E  : public Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931
+{
+	bool ___m_ShouldRecalculateStencil;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_MaskMaterial;
+	RectMask2D_tACF92BE999C791A665BD1ADEABF5BCEB82846670* ___m_ParentMask;
+	bool ___m_Maskable;
+	bool ___m_IsMaskingGraphic;
+	bool ___m_IncludeForMasking;
+	CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8* ___m_OnCullStateChanged;
+	bool ___m_ShouldRecalculate;
+	int32_t ___m_StencilValue;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___m_Corners;
+};
+struct Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E  : public MaskableGraphic_tFC5B6BE351C90DE53744DF2A70940242774B361E
+{
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___m_Sprite;
+	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___m_OverrideSprite;
+	int32_t ___m_Type;
+	bool ___m_PreserveAspect;
+	bool ___m_FillCenter;
+	int32_t ___m_FillMethod;
+	float ___m_FillAmount;
+	bool ___m_FillClockwise;
+	int32_t ___m_FillOrigin;
+	float ___m_AlphaHitTestMinimumThreshold;
+	bool ___m_Tracked;
+	bool ___m_UseSpriteMesh;
+	float ___m_PixelsPerUnitMultiplier;
+	float ___m_CachedReferencePixelsPerUnit;
+	SecondarySpriteTextureU5BU5D_tC322D73EA4B9A8B747013A3584DEFEAFC0D87192* ___m_SecondaryTextures;
+};
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_StaticFields
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___s_emptyArray;
+};
+struct List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C_StaticFields
+{
+	UIPageU5BU5D_t33D6E334149C75C92F2BB4DDEC1EB85E04FA659E* ___s_emptyArray;
+};
+struct U3CPrivateImplementationDetailsU3E_t719A0A3C5CD5F5E69640E6F9E4E64D405236D7F2_StaticFields
+{
+	__StaticArrayInitTypeSizeU3D414_t6B026C9A9EE140A24B2D0AF9FD32EB1E757F7DB6 ___20403775AD5554FEA2533D53BA10023E9FD3B53C7AD51A7674F1B938F8D1CF10;
+	__StaticArrayInitTypeSizeU3D1069_tE266094C010C4948B8C666AF0D0D1AAF7782E469 ___C224CBDE54E7418EAB595432CA87E33C724750219CF859F1022C6E0DBF242717;
+};
+struct Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields
+{
+	Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* ___instance;
+};
+struct String_t_StaticFields
+{
+	String_t* ___Empty;
+};
+struct U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_StaticFields
+{
+	U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638* ___U3CU3E9;
+	Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* ___U3CU3E9__22_0;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	String_t* ___TrueString;
+	String_t* ___FalseString;
+};
+struct IntPtr_t_StaticFields
+{
+	intptr_t ___Zero;
+};
+struct Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_StaticFields
+{
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___kZero;
+};
+struct Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_StaticFields
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___zeroVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___oneVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___upVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___downVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___leftVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___rightVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___positiveInfinityVector;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___negativeInfinityVector;
+};
+struct Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_StaticFields
+{
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___s_Zero;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___s_One;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___s_Up;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___s_Down;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___s_Left;
+	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___s_Right;
+};
+struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___zeroVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___oneVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___upVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___downVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___leftVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rightVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___forwardVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___backVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___positiveInfinityVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___negativeInfinityVector;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticFields
+{
+	int32_t ___OffsetOfInstanceIDInCPlusPlusObject;
+};
+struct SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields
+{
+	SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* ___instance;
+};
+struct Type_t_StaticFields
+{
+	Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235* ___s_defaultBinder;
+	Il2CppChar ___Delimiter;
+	TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___EmptyTypes;
+	RuntimeObject* ___Missing;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterAttribute;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterName;
+	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterNameIgnoreCase;
+};
+struct Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184_StaticFields
+{
+	CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD* ___onPreCull;
+	CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD* ___onPreRender;
+	CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD* ___onPostRender;
+};
+struct Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields
+{
+	WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC* ___preWillRenderCanvases;
+	WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC* ___willRenderCanvases;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___U3CexternBeginRenderOverlaysU3Ek__BackingField;
+	Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* ___U3CexternRenderOverlaysBeforeU3Ek__BackingField;
+	Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___U3CexternEndRenderOverlaysU3Ek__BackingField;
+};
+struct RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_StaticFields
+{
+	ReapplyDrivenProperties_t3482EA130A01FF7EE2EEFE37F66A5215D08CFE24* ___reapplyDrivenProperties;
+};
+struct UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields
+{
+	UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* ___uiController;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___mainCanvas;
+	CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* ___U3CCanvasScalerU3Ek__BackingField;
+	float ___U3CScaleFactorU3Ek__BackingField;
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___mainCamera;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* ___PageOpened;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* ___PageClosed;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* ___PopupOpened;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* ___PopupClosed;
+};
+struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_StaticFields
+{
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___s_DefaultUI;
+	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___s_WhiteTexture;
+	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___s_Mesh;
+	VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* ___s_VertexHelper;
+};
+struct GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_StaticFields
+{
+	List_1_tF6D13D87DD02D4EF3ECD7763371397BD6D1A2C0F* ___s_SortedGraphics;
+};
+struct Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_StaticFields
+{
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___s_ETC1DefaultUI;
+	SecondarySpriteTextureU5BU5D_tC322D73EA4B9A8B747013A3584DEFEAFC0D87192* ___s_TempNewSecondaryTextures;
+	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___s_VertScratch;
+	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___s_UVScratch;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___s_Xy;
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___s_Uv;
+	List_1_tE6BB71ABF15905EFA2BE92C38A2716547AEADB19* ___m_TrackedTexturelessImages;
+	bool ___s_Initialized;
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
+{
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+	inline uint8_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+struct PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1  : public RuntimeArray
+{
+	ALIGN_FIELD (8) PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* m_Items[1];
+
+	inline PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Delegate_t* m_Items[1];
+
+	inline Delegate_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Delegate_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* m_Items[1];
+
+	inline Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A  : public RuntimeArray
+{
+	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+
+	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeArray
+{
+	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+
+	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_mF225F49F6BE54C39563CECD7C693F0AE4F0530E8_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, int32_t ___0_capacity, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_m703047C213F7AB55C9DC346596287773A1F670CD_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, RuntimeObject* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, RuntimeObject** ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeObject_m75BF3B0A3747B60491845FA41612FE7F795F0A59_gshared (RuntimeObject* ___0_original, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_parent, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSet_1__ctor_m9132EE1422BAA45E44B7FFF495F378790D36D90E_gshared (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m05F523BA9BEBF58F2272B2FED787AB93DAA6773B_gshared (Dictionary_2_t41479D9F29C6C1BC07FC7F8D3DD313D8A9A419E1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSet_1_Add_m2CD7657B3459B61DD4BBA47024AC71F7D319658B_gshared (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HashSet_1_Remove_mF1D84C0A2829DDA2A0CEE1D82A5B999B5F6627CB_gshared (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_mF30B801AA48FFBD9B95F320C393F85AEA8945E9A_gshared (Dictionary_2_t41479D9F29C6C1BC07FC7F8D3DD313D8A9A419E1* __this, RuntimeObject* ___0_key, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_Remove_m5359A59AD9E9B5D43B5915B69C392E9E4E173FAC_gshared (Dictionary_2_t41479D9F29C6C1BC07FC7F8D3DD313D8A9A419E1* __this, RuntimeObject* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueCollection_t0F3CDE51F86239622C464290CE413781AC13CA62* Dictionary_2_get_Values_m0F05FE3499EBC17711376BE0CE9D2503A1EA3050_gshared (Dictionary_2_t41479D9F29C6C1BC07FC7F8D3DD313D8A9A419E1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t6637E273E74F207303F5201BFE6065EAD1EF638C ValueCollection_GetEnumerator_m813A11F17F3724FA52AF9E5E6D6628D921CCBDA2_gshared (ValueCollection_t0F3CDE51F86239622C464290CE413781AC13CA62* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_m4477EEDD06AD19A298FE6AC09F0AAF9D41FF74BE_gshared (Enumerator_t6637E273E74F207303F5201BFE6065EAD1EF638C* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Enumerator_get_Current_m897E00BA84211EA048F43B04C5C25D71F88F1441_gshared_inline (Enumerator_t6637E273E74F207303F5201BFE6065EAD1EF638C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m561A5A28ADD9A59800500AF9469B7755A102F00E_gshared (Enumerator_t6637E273E74F207303F5201BFE6065EAD1EF638C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Predicate_1__ctor_m3E007299121A15DF80F4A210FF8C20E5DF688F20_gshared (Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HashSet_1_RemoveWhere_m8D29E1EEF73BF771A3EDC41907FCA953D66543C2_gshared (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12* ___0_match, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8 HashSet_1_GetEnumerator_m143B98FEED7E9CABA2C494AB2F04DAD60A504635_gshared (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mFB582AEAA2E73F3128B5571197BEDE256A83F657_gshared (Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m139A176CD271A0532D75BE08DA7831C8C45CE28F_gshared_inline (Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m27565F5ACCCC75C3DD34CC4CAE3E6AEFEB9144A6_gshared (Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t HashSet_1_get_Count_m41CC85EEB7855CEFA3BC7A32F115387939318ED3_gshared_inline (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, RuntimeObject* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_Remove_m5C7C45E75D951A75843F3F7AADD56ECD64F6BC86_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CoreExtensions_IsNullOrEmpty_TisRuntimeObject_m24716821898F2B0C72F8F6C8D0474BB04D2DC1AC_gshared (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_array, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Component_GetComponentsInChildren_TisRuntimeObject_m1F5B6FC0689B07D4FAAC0C605D9B2933A9B32543_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+inline void Dictionary_2__ctor_mFE3A7C20E9815BEDD9EB6D52044494BF67998295 (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* __this, int32_t ___0_capacity, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52*, int32_t, const RuntimeMethod*))Dictionary_2__ctor_mF225F49F6BE54C39563CECD7C693F0AE4F0530E8_gshared)(__this, ___0_capacity, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* PageData_get_PagePrefab_mC715E784E266B2D2CDE7A9369AF5BC0A41CBD962_inline (PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 (RuntimeObject* __this, const RuntimeMethod* method) ;
+inline bool Dictionary_2_ContainsKey_m625C30E9962D06319F9BFE18464F130E7354D79A (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* __this, Type_t* ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52*, Type_t*, const RuntimeMethod*))Dictionary_2_ContainsKey_m703047C213F7AB55C9DC346596287773A1F670CD_gshared)(__this, ___0_key, method);
+}
+inline void Dictionary_2_Add_m4F47C18CFEDAB54D5628E805B0D6579AAD53CB6D (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* __this, Type_t* ___0_key, PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52*, Type_t*, PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254*, const RuntimeMethod*))Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared)(__this, ___0_key, ___1_value, method);
+}
+inline bool Dictionary_2_TryGetValue_m52D59359A6589EE238383C5757FD071649FDAA97 (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* __this, Type_t* ___0_key, PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254** ___1_value, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52*, Type_t*, PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254**, const RuntimeMethod*))Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared)(__this, ___0_key, ___1_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* CachedPages_GetPageData_mB30F4D4674B3853663E92E48FDD34F8D635234F9 (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, Type_t* ___0_pageType, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___0_format, RuntimeObject* ___1_arg0, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+inline UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* Object_Instantiate_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_m396920112CB9E38A18B909CE8718679024EE961D (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_original, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_parent, const RuntimeMethod* method)
+{
+	return ((  UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* (*) (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m75BF3B0A3747B60491845FA41612FE7F795F0A59_gshared)(___0_original, ___1_parent, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_CacheComponents_mBA1ECF075A83033E52057D0792D6A0A677E26D18 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+inline Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Canvas_get_sortingOrder_mFA9AC878A11BBEE1716CF7E7DF52E0AAC570C451 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* UIPage_get_Canvas_mE853AFB23D04108B52DDD9BFFD82E60697B6C0DC_inline (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CachedPages_ApplySortingOrderNextFrame_m2682BBC114814913C36958C8539BAEA32C6845CD (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___0_canvas, int32_t ___1_sortingOrder, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___0_routine, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_PreparePage_m9F459678D5C83320346D753D07BBAE0D5C275C63 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_MarkAsCached_m3EE2D6F33D26D06697100F344457B2FEE17253C0 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_RegisterCachedPage_mA18FEF42ADF5CA9061853D31818A79A6D23DA60A (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, Type_t* ___0_pageType, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___1_page, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CApplySortingOrderNextFrameU3Ed__9__ctor_m742BE5B1D1D32932D3CE7AC871F41B60E4B99C4C (U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_overrideSorting_m155D936A457E7935683894150A0E5DBED2170F54 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_sortingOrder_m70D89DB61A3C0589C0FAB525E613DE9D0C799AAC (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Behaviour_get_enabled_mAAC9F15E9EBF552217A5AE2681589CC0BFA300C1 (Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A (Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, String_t* ___0_name, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_p, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* CoreExtensions_ResetLocal_m96DB1813180AAF080B57352A61F17D41C718B3BA (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_transform, const RuntimeMethod* method) ;
+inline RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* GameObject_AddComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m771EB78FF8813B5AFF21AC0D252E5461943E6388 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_set_sizeDelta_mC9A980EA6036E6725EF24CEDF3EE80A9B2B50EE5 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) ;
+inline Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* GameObject_AddComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA327C9E1CA12BC531D587E7567F2067B96E6B6A0 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DummyOverlayPanel_StopFade_m4665F4A840ED3C7F89CECB30623C985859573C03 (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DummyOverlayPanel_FadeCoroutine_mC21F82680DD66F39D0EA5FC15E2E4E0555611139 (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, float ___0_targetAlpha, float ___1_duration, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___2_onCompleted, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___0_routine, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeCoroutineU3Ed__7__ctor_mBEE803A5A01B55B3D455C66AFDBCDCA591492998 (U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseOverlayPanel__ctor_mE16BC90BFD94D4D255F80939EEFDEEC166213FF5 (BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Overlay_FindOverlayPanel_mCC2776CEE5A21EAEB73BB4D08DA007E6C83755DF (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_parentTransform, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Overlay_CreateDummyOverlay_mB447C09458450673842AC754C9C816F0F9DDA6E7 (Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_parentTransform, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m5915CA70BBC533CA37204D97271CCC0B17773A40 (U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleCallback__ctor_m04CB2FCA2E02060AB815575D93F70A51542A7DE6 (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Transform_GetEnumerator_mA7E1C882ACA0C33E284711CD09971DEA3FFEF404 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___0_handle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* Component_GetComponent_m4352437B839B9601EB007CAC1007C8E1FB8A427D (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, Type_t* ___0_type, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LayerMask_NameToLayer_m2764C530EDA9EC3226A36E3FD43E020B413AF139 (String_t* ___0_layerName, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_set_layer_m6E1AF478A2CC86BD222B96317BEB78B7D89B18D0 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+inline Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* GameObject_AddComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m13C85FD585C0679530F8B35D0B39D965702FD0F5 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_renderMode_mD73E953F8A115CF469508448A00D0EDAFAF5AB47 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+inline GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* GameObject_AddComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m308DCE149216D4787C3E6147729C0DF79423E1BF (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+inline DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* GameObject_AddComponent_TisDummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5_mDA29E1BD89AF23E1EE3A148F1BA069C1D0B11A67 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Overlay__ctor_m9BD918D0119C7A9026E52802178B02242AD6E2FC (Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_parentObject, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Overlay_Unload_m6B08B45186331042942EDDE0653D8E8A9113DF8B (Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* __this, const RuntimeMethod* method) ;
+inline void HashSet_1__ctor_m73C0176B824C61D374CE302608362C3D17B136CC (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* __this, const RuntimeMethod* method)
+{
+	((  void (*) (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E*, const RuntimeMethod*))HashSet_1__ctor_m9132EE1422BAA45E44B7FFF495F378790D36D90E_gshared)(__this, method);
+}
+inline void Dictionary_2__ctor_mB409389286D75D819DEC0E92E1A99C79A3F4F48C (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6*, const RuntimeMethod*))Dictionary_2__ctor_m05F523BA9BEBF58F2272B2FED787AB93DAA6773B_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D Rect_get_zero_m5341D8B63DEF1F4C308A685EEC8CFEA12A396C8D_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_zero_mF92C338E9CB9434105090E675E04D20A29649553_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RefreshInternal_mEA1A1C718DFB04F7F5E8C7A7A527415DDC04F0D5 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, bool ___0_force, const RuntimeMethod* method) ;
+inline bool HashSet_1_Add_m69AA32A31BC3001FE0F1C4DDAA04483462F39F69 (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_item, const RuntimeMethod* method)
+{
+	return ((  bool (*) (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E*, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*, const RuntimeMethod*))HashSet_1_Add_m2CD7657B3459B61DD4BBA47024AC71F7D319658B_gshared)(__this, ___0_item, method);
+}
+inline bool HashSet_1_Remove_m4E0DBD4CE9D61E8A4374984A7A7E24F29152F40B (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_item, const RuntimeMethod* method)
+{
+	return ((  bool (*) (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E*, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*, const RuntimeMethod*))HashSet_1_Remove_mF1D84C0A2829DDA2A0CEE1D82A5B999B5F6627CB_gshared)(__this, ___0_item, method);
+}
+inline void Dictionary_2_set_Item_m19939A7C035F2910914A45B3FEC17311A78CBB8C (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* __this, String_t* ___0_key, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6*, String_t*, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7, const RuntimeMethod*))Dictionary_2_set_Item_mF30B801AA48FFBD9B95F320C393F85AEA8945E9A_gshared)(__this, ___0_key, ___1_value, method);
+}
+inline bool Dictionary_2_Remove_mF2F9034A6072AEA10B25BDABC9E3D05F20CD897E (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* __this, String_t* ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6*, String_t*, const RuntimeMethod*))Dictionary_2_Remove_m5359A59AD9E9B5D43B5915B69C392E9E4E173FAC_gshared)(__this, ___0_key, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D Screen_get_safeArea_m2ADAD6C36CC5DB40CC2DAD300DD1DF7CA4DF2525 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Rect_op_Equality_mF2A038255CAF5F1E86079B9EE0FC96DE54307C1F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_lhs, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___1_rhs, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_orientation_mA6B22A441187D50831B2B18CA48A8F64BD1BD89E (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_ApplySafeArea_mB34ADCBB2C8795F7DA7E1C100704E451D1A3B032 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_rect, const RuntimeMethod* method) ;
+inline ValueCollection_t0434EE386C6AC48448DC16F2C8D03B511F9AC3CB* Dictionary_2_get_Values_m040534BCB2F486CE7A528714A553FE3D7D86E62F (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* __this, const RuntimeMethod* method)
+{
+	return ((  ValueCollection_t0434EE386C6AC48448DC16F2C8D03B511F9AC3CB* (*) (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6*, const RuntimeMethod*))Dictionary_2_get_Values_m0F05FE3499EBC17711376BE0CE9D2503A1EA3050_gshared)(__this, method);
+}
+inline Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985 ValueCollection_GetEnumerator_m4E213752D3A33BC8225460C69272A06F37D03906 (ValueCollection_t0434EE386C6AC48448DC16F2C8D03B511F9AC3CB* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985 (*) (ValueCollection_t0434EE386C6AC48448DC16F2C8D03B511F9AC3CB*, const RuntimeMethod*))ValueCollection_GetEnumerator_m813A11F17F3724FA52AF9E5E6D6628D921CCBDA2_gshared)(__this, method);
+}
+inline void Enumerator_Dispose_m8809033D555BC1DCF1C3A1305CBB424DE4F42097 (Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985*, const RuntimeMethod*))Enumerator_Dispose_m4477EEDD06AD19A298FE6AC09F0AAF9D41FF74BE_gshared)(__this, method);
+}
+inline Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Enumerator_get_Current_m85CB1C54F971036580F7F9D9C66E5865773559AD_inline (Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985* __this, const RuntimeMethod* method)
+{
+	return ((  Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 (*) (Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985*, const RuntimeMethod*))Enumerator_get_Current_m897E00BA84211EA048F43B04C5C25D71F88F1441_gshared_inline)(__this, method);
+}
+inline bool Enumerator_MoveNext_mBED14BECD6E95194791D11CD7EB0813F7C85721D (Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985*, const RuntimeMethod*))Enumerator_MoveNext_m561A5A28ADD9A59800500AF9469B7755A102F00E_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_y_mC733E8D49F3CE21B2A3D40A1B72D687F22C97F49_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_y_mDE91F4B98A6E8623EFB1250FF6526D5DB5855629_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_height_mD00038E6E06637137A5626CA8CD421924005BF03_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_position_m9B7E583E67443B6F4280A676E644BB0B9E7C4E38_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SafeAreaAdapter_set_TopOffset_mF17FE596BAF7A95663E2264B76BB9724FDC17413_inline (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SafeAreaAdapter_set_BottomOffset_mB446A62D985B572782ED85E6BDC004D253112372_inline (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, float ___0_value, const RuntimeMethod* method) ;
+inline void Predicate_1__ctor_m93F0D1AA8F3AB378C17C6F329C589FC7DBC9D8D2 (Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E*, RuntimeObject*, intptr_t, const RuntimeMethod*))Predicate_1__ctor_m3E007299121A15DF80F4A210FF8C20E5DF688F20_gshared)(__this, ___0_object, ___1_method, method);
+}
+inline int32_t HashSet_1_RemoveWhere_m7610D53CB3906D96BD5D254317C391863AF1F5B6 (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* __this, Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* ___0_match, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E*, Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E*, const RuntimeMethod*))HashSet_1_RemoveWhere_m8D29E1EEF73BF771A3EDC41907FCA953D66543C2_gshared)(__this, ___0_match, method);
+}
+inline Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA HashSet_1_GetEnumerator_m82777515B3B7F3853B6CA5F0DD6D06E105B5AD50 (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA (*) (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E*, const RuntimeMethod*))HashSet_1_GetEnumerator_m143B98FEED7E9CABA2C494AB2F04DAD60A504635_gshared)(__this, method);
+}
+inline void Enumerator_Dispose_mFBDFA82181DBA00ACBD65938D09DEB086CAAF4B7 (Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA*, const RuntimeMethod*))Enumerator_Dispose_mFB582AEAA2E73F3128B5571197BEDE256A83F657_gshared)(__this, method);
+}
+inline RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* Enumerator_get_Current_mBD45F4BA44FD09AF03784E50E3194A5AF8EC0480_inline (Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA* __this, const RuntimeMethod* method)
+{
+	return ((  RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* (*) (Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA*, const RuntimeMethod*))Enumerator_get_Current_m139A176CD271A0532D75BE08DA7831C8C45CE28F_gshared_inline)(__this, method);
+}
+inline bool Enumerator_MoveNext_m03502D5E010405800A6A2FD950FF32C0D5EF4F2A (Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA*, const RuntimeMethod*))Enumerator_MoveNext_m27565F5ACCCC75C3DD34CC4CAE3E6AEFEB9144A6_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF (String_t* ___0_message, int32_t ___1_category, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RegisterInternal_m90C58C2A945F502617B13EC02B28772997EE69EC (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rectTransform, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_UnregisterInternal_m56EF4D5552A87868E928153FF395012EB7E86DB8 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rectTransform, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_SetOffsetInternal_m81F2F1606519A93B33411B1B243718F3102C4D75 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, String_t* ___0_key, float ___1_bottom, float ___2_top, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RemoveOffsetInternal_m738834116F63746AEBE80B40D3E94516D257899B (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, String_t* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float SafeAreaAdapter_get_TopOffset_mF6E21296BED4474B62BAD829504641CD31784126_inline (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float SafeAreaAdapter_get_BottomOffset_mBD09AA818EEDE7FFF294C37B9FEEA67A488E1C4D_inline (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m128E61E8EE847DE54AF3552E6FE867F1BFE8AD49 (U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638* __this, const RuntimeMethod* method) ;
+inline RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RegisterRectTransform_m9B4E4A8E2013D27E341A5F54C6B92DC0EDB0E101 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rectTransform, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_UnregisterRectTransform_m84F449B65F49E5131B1932A5729AD7BBE62DC949 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rectTransform, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_Refresh_m357DFDC7CBFE2DD3F2D84CADF80C9ECB4B5632F4 (bool ___0_force, const RuntimeMethod* method) ;
+inline int32_t HashSet_1_get_Count_m16FF6E9136F088478194E5B586339A73549A0A84_inline (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47*, const RuntimeMethod*))HashSet_1_get_Count_m41CC85EEB7855CEFA3BC7A32F115387939318ED3_gshared_inline)(__this, method);
+}
+inline int32_t List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_inline (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00 (Delegate_t* ___0_a, Delegate_t* ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3 (Delegate_t* ___0_source, Delegate_t* ___1_value, const RuntimeMethod* method) ;
+inline CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* Component_GetComponent_TisCanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B_m82FD65AA44C2243A4866779598E55571D3576DAE (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UIController_set_CanvasScaler_mFC04287E45ADF834175A25AACB7ED9D39D1E1541_inline (CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* UIController_get_CanvasScaler_m0DAB93EE039A788DDA7B29C751265FA34BFA14D0_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIUtils_IsTablet_mC44AB4DD4C2FB5FF0FEFBEC3F6C15472D709CC70 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasScaler_set_matchWidthOrHeight_m44635DC3E4424255C312814C325A48E37E6B6E30 (CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* __this, float ___0_value, const RuntimeMethod* method) ;
+inline void HashSet_1__ctor_mC1A0F89AA50607A3B9303A4F38BC4D57E6EEF82A (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* __this, const RuntimeMethod* method)
+{
+	((  void (*) (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47*, const RuntimeMethod*))HashSet_1__ctor_m9132EE1422BAA45E44B7FFF495F378790D36D90E_gshared)(__this, method);
+}
+inline void List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602 (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
+inline void Dictionary_2__ctor_m572277870319CF66320268BDAC7C26ACD9B74217 (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, int32_t ___0_index, const RuntimeMethod* method) ;
+inline UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* Component_GetComponent_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_mD773970EFE7F022F1764B946090F20EDA5747872 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+inline bool Dictionary_2_ContainsKey_m2B298C0786B22FC071ED51A5207F67EB7C5D0649 (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* __this, Type_t* ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0*, Type_t*, const RuntimeMethod*))Dictionary_2_ContainsKey_m703047C213F7AB55C9DC346596287773A1F670CD_gshared)(__this, ___0_key, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+inline void Dictionary_2_Add_mAA751E5109B5AB5C17BDA43F9968A5B3D3F92EC9 (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* __this, Type_t* ___0_key, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0*, Type_t*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*))Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_gshared)(__this, ___0_key, ___1_value, method);
+}
+inline void List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_inline (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CachedPages_Init_m267C38A3899EA796A3A9A647ACED8C1F1A968119 (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* ___0_controller, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 CanvasScaler_get_referenceResolution_m79C03DD8CE6759B045928C5339A3C5E6220276B5 (CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UIController_set_ScaleFactor_mB4C745F05304FEA34F8106493F4D268FB12ACA8D_inline (float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_RecalculateScaleFactor_m3B65CAEA63F9A0B0B9E02431D194D25908CFB8F7 (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float UIController_get_ScaleFactor_mFDE78C23591D7F4DBA187471C682594E5AF85BFF_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter__ctor_mC8D0B5DDC35731A5A7C193D47F4E6FF80BC44BED (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_virtualResolution, const RuntimeMethod* method) ;
+inline UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* __this, int32_t ___0_index, const RuntimeMethod* method)
+{
+	return ((  UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* (*) (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___0_index, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool UIPage_get_IsPageDisplayed_m0004D64675E0AE6F04BD95D5A2DE847C2AE1F25F_inline (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_TriggerUnload_mC33FFD4B153ACD0FEFBB665A0BD9587C7A08B12F (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* UIPage_get_GraphicRaycaster_mE5707F61C970219BDD7DE4E20D2D41BF9AF6C345_inline (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_TriggerShow_m9BBC87B1C051A008B450403A8262C412F64C47D9 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_EnableCanvas_mA8789094CEE377FE2CF24130E5647E29F5924F83 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+inline void Dictionary_2_set_Item_m86CAB6A03777ACD7DFB7CCC2EFA35A476840D7DF (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_key, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A*, const RuntimeMethod*))Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared)(__this, ___0_key, ___1_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_TriggerHide_m0CDD3FDB20ED65A1AE83BA18FF8984B884993AC1 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_DisableCanvas_mC40C6B60975218023D94D3D77A5362DA09726291 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_inline (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method) ;
+inline bool HashSet_1_Remove_m88F1B4D1B158C65EE65465887E02CDC4C24AB00F (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_item, const RuntimeMethod* method)
+{
+	return ((  bool (*) (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*))HashSet_1_Remove_mF1D84C0A2829DDA2A0CEE1D82A5B999B5F6627CB_gshared)(__this, ___0_item, method);
+}
+inline bool List_1_Remove_mF2FD0CA86C51F3CCA16C37E21458BCFFA0D9D351 (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_item, const RuntimeMethod* method)
+{
+	return ((  bool (*) (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*))List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331 (float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_inline (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) ;
+inline bool Dictionary_2_TryGetValue_mE004572EBDFF849679C52AB0B5BEE2847268544C (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_key, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A** ___1_value, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A**, const RuntimeMethod*))Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared)(__this, ___0_key, ___1_value, method);
+}
+inline bool Dictionary_2_Remove_mDFA1B1D49C5A2EC0CEC454181D2AF03641023E8A (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*))Dictionary_2_Remove_m5C7C45E75D951A75843F3F7AADD56ECD64F6BC86_gshared)(__this, ___0_key, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool UIPage_get_IsCached_m477F3FEC4FB323BE6D57C51BD4CE26490807714B_inline (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PageData_get_AutoDestroy_m4775BB9CA15B24130353BC47E7D25B5830292910_inline (PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* __this, const RuntimeMethod* method) ;
+inline bool Dictionary_2_Remove_m889968230F8E2E515F0113D46BB3CE8A7FF78FB5 (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* __this, Type_t* ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0*, Type_t*, const RuntimeMethod*))Dictionary_2_Remove_m5C7C45E75D951A75843F3F7AADD56ECD64F6BC86_gshared)(__this, ___0_key, method);
+}
+inline bool HashSet_1_Add_m7FCEE79D27F56186AF8DC3E34BD88294227C7090 (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_item, const RuntimeMethod* method)
+{
+	return ((  bool (*) (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*))HashSet_1_Add_m2CD7657B3459B61DD4BBA47024AC71F7D319658B_gshared)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 RectTransformUtility_WorldToScreenPoint_mC8701032E223BA296C43799F4AEE98626686238F (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___0_cam, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_worldPoint, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_Unload_m55D2D928236885DBE56BD612319F201595987B02 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, const RuntimeMethod* method) ;
+inline void Dictionary_2__ctor_m90717CCB68690A7577828EE09723F8B3C5B05167 (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* __this, const RuntimeMethod* method) ;
+inline GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* Component_GetComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m8D88AC7AC775DA9FE3783014A4448A8C60283FF1 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+inline bool CoreExtensions_IsNullOrEmpty_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_m770745F3470FEDBAAC24FA6E18ADBA23C420272E (IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* ___0_array, const RuntimeMethod* method)
+{
+	return ((  bool (*) (IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A*, const RuntimeMethod*))CoreExtensions_IsNullOrEmpty_TisRuntimeObject_m24716821898F2B0C72F8F6C8D0474BB04D2DC1AC_gshared)(___0_array, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_OnPageOpened_m1ED3B5C2AE631DEC3079D073A2D2EEA16E3E7321 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_OnPageClosed_mFDF13FC7463749A73D27C0FB6688EB3463E96F19 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) ;
+inline IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* Component_GetComponentsInChildren_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_mDB78EE513D37F4AFB2A67FA928CFC5EE960B0DAA (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponentsInChildren_TisRuntimeObject_m1F5B6FC0689B07D4FAAC0C605D9B2933A9B32543_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIPage_NeedsElementsUpdate_mE5127C03CA207DB2AA810530848AC437E8278BBD (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* ___0_current, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* UIPage_ToComponentArray_m918677B79E29CC104B04205F1F4AE49CF94E1F86 (IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* ___0_elements, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeEditorUtils_SetDirty_mC1A4C4596BE2CC08BD923B566CC74E0AB1AD40EE (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) ;
+inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared)(__this, ___0_item, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105566
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m0243F1E23367F31D97E51966FD45B2B9E1D4F018 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t719A0A3C5CD5F5E69640E6F9E4E64D405236D7F2____20403775AD5554FEA2533D53BA10023E9FD3B53C7AD51A7674F1B938F8D1CF10_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t719A0A3C5CD5F5E69640E6F9E4E64D405236D7F2____C224CBDE54E7418EAB595432CA87E33C724750219CF859F1022C6E0DBF242717_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)1069));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t719A0A3C5CD5F5E69640E6F9E4E64D405236D7F2____C224CBDE54E7418EAB595432CA87E33C724750219CF859F1022C6E0DBF242717_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
+		(&V_0)->___FilePathsData = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)414));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = L_3;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t719A0A3C5CD5F5E69640E6F9E4E64D405236D7F2____20403775AD5554FEA2533D53BA10023E9FD3B53C7AD51A7674F1B938F8D1CF10_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
+		(&V_0)->___TypesData = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___TypesData), (void*)L_4);
+		(&V_0)->___TotalFiles = ((int32_t)13);
+		(&V_0)->___TotalTypes = ((int32_t)14);
+		(&V_0)->___IsEditorOnly = (bool)0;
+		MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D L_6 = V_0;
+		V_1 = L_6;
+		goto IL_005f;
+	}
+
+IL_005f:
+	{
+		MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D L_7 = V_1;
+		return L_7;
+	}
+}
+// Method Definition Index: 105567
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mD784032C1060D864BE221FFA333048D719FCEE9C (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t51A2A96D1C3CA4C1C700374179CB5794718F9F7B* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshal_pinvoke(const MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D& unmarshaled, MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshaled_pinvoke& marshaled)
+{
+	marshaled.___FilePathsData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___FilePathsData);
+	marshaled.___TypesData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___TypesData);
+	marshaled.___TotalTypes = unmarshaled.___TotalTypes;
+	marshaled.___TotalFiles = unmarshaled.___TotalFiles;
+	marshaled.___IsEditorOnly = static_cast<int32_t>(unmarshaled.___IsEditorOnly);
+}
+IL2CPP_EXTERN_C void MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshal_pinvoke_back(const MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshaled_pinvoke& marshaled, MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D& unmarshaled)
+{
+	unmarshaled.___FilePathsData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___FilePathsData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData));
+	unmarshaled.___TypesData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___TypesData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData));
+	int32_t unmarshaledTotalTypes_temp_2 = 0;
+	unmarshaledTotalTypes_temp_2 = marshaled.___TotalTypes;
+	unmarshaled.___TotalTypes = unmarshaledTotalTypes_temp_2;
+	int32_t unmarshaledTotalFiles_temp_3 = 0;
+	unmarshaledTotalFiles_temp_3 = marshaled.___TotalFiles;
+	unmarshaled.___TotalFiles = unmarshaledTotalFiles_temp_3;
+	bool unmarshaledIsEditorOnly_temp_4 = false;
+	unmarshaledIsEditorOnly_temp_4 = static_cast<bool>(marshaled.___IsEditorOnly);
+	unmarshaled.___IsEditorOnly = unmarshaledIsEditorOnly_temp_4;
+}
+IL2CPP_EXTERN_C void MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshal_pinvoke_cleanup(MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshaled_pinvoke& marshaled)
+{
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___FilePathsData);
+	marshaled.___FilePathsData = NULL;
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___TypesData);
+	marshaled.___TypesData = NULL;
+}
+IL2CPP_EXTERN_C void MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshal_com(const MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D& unmarshaled, MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshaled_com& marshaled)
+{
+	marshaled.___FilePathsData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___FilePathsData);
+	marshaled.___TypesData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___TypesData);
+	marshaled.___TotalTypes = unmarshaled.___TotalTypes;
+	marshaled.___TotalFiles = unmarshaled.___TotalFiles;
+	marshaled.___IsEditorOnly = static_cast<int32_t>(unmarshaled.___IsEditorOnly);
+}
+IL2CPP_EXTERN_C void MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshal_com_back(const MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshaled_com& marshaled, MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D& unmarshaled)
+{
+	unmarshaled.___FilePathsData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___FilePathsData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData));
+	unmarshaled.___TypesData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___TypesData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData));
+	int32_t unmarshaledTotalTypes_temp_2 = 0;
+	unmarshaledTotalTypes_temp_2 = marshaled.___TotalTypes;
+	unmarshaled.___TotalTypes = unmarshaledTotalTypes_temp_2;
+	int32_t unmarshaledTotalFiles_temp_3 = 0;
+	unmarshaledTotalFiles_temp_3 = marshaled.___TotalFiles;
+	unmarshaled.___TotalFiles = unmarshaledTotalFiles_temp_3;
+	bool unmarshaledIsEditorOnly_temp_4 = false;
+	unmarshaledIsEditorOnly_temp_4 = static_cast<bool>(marshaled.___IsEditorOnly);
+	unmarshaled.___IsEditorOnly = unmarshaledIsEditorOnly_temp_4;
+}
+IL2CPP_EXTERN_C void MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshal_com_cleanup(MonoScriptData_tA1D6AF2D9ADB908A025F32042B7653018D24A67D_marshaled_com& marshaled)
+{
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___FilePathsData);
+	marshaled.___FilePathsData = NULL;
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___TypesData);
+	marshaled.___TypesData = NULL;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105568
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1* CachedPages_get_Pages_m88572881F40726DC8A9F10C319BB3052C001B89D (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:17>
+		PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1* L_0 = __this->___pages;
+		return L_0;
+	}
+}
+// Method Definition Index: 105569
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CachedPages_Init_m267C38A3899EA796A3A9A647ACED8C1F1A968119 (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* ___0_controller, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_m4F47C18CFEDAB54D5628E805B0D6579AAD53CB6D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_m625C30E9962D06319F9BFE18464F130E7354D79A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_mFE3A7C20E9815BEDD9EB6D52044494BF67998295_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1* V_0 = NULL;
+	int32_t V_1 = 0;
+	PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* V_2 = NULL;
+	Type_t* V_3 = NULL;
+	bool V_4 = false;
+	bool V_5 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:24>
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_0 = ___0_controller;
+		__this->___controller = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___controller), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:26>
+		PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1* L_1 = __this->___pages;
+		NullCheck(L_1);
+		Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* L_2 = (Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52*)il2cpp_codegen_object_new(Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_mFE3A7C20E9815BEDD9EB6D52044494BF67998295(L_2, ((int32_t)(((RuntimeArray*)L_1)->max_length)), Dictionary_2__ctor_mFE3A7C20E9815BEDD9EB6D52044494BF67998295_RuntimeMethod_var);
+		__this->___pagesMap = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pagesMap), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:27>
+		PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1* L_3 = __this->___pages;
+		V_0 = L_3;
+		V_1 = 0;
+		goto IL_0074;
+	}
+
+IL_0027:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:27>
+		PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1* L_4 = V_0;
+		int32_t L_5 = V_1;
+		NullCheck(L_4);
+		int32_t L_6 = L_5;
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		V_2 = L_7;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:29>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_8 = V_2;
+		NullCheck(L_8);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_9;
+		L_9 = PageData_get_PagePrefab_mC715E784E266B2D2CDE7A9369AF5BC0A41CBD962_inline(L_8, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_10;
+		L_10 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:29>
+		goto IL_0070;
+	}
+
+IL_0040:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:31>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_12 = V_2;
+		NullCheck(L_12);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_13;
+		L_13 = PageData_get_PagePrefab_mC715E784E266B2D2CDE7A9369AF5BC0A41CBD962_inline(L_12, NULL);
+		NullCheck(L_13);
+		Type_t* L_14;
+		L_14 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_13, NULL);
+		V_3 = L_14;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:32>
+		Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* L_15 = __this->___pagesMap;
+		Type_t* L_16 = V_3;
+		NullCheck(L_15);
+		bool L_17;
+		L_17 = Dictionary_2_ContainsKey_m625C30E9962D06319F9BFE18464F130E7354D79A(L_15, L_16, Dictionary_2_ContainsKey_m625C30E9962D06319F9BFE18464F130E7354D79A_RuntimeMethod_var);
+		V_5 = (bool)((((int32_t)L_17) == ((int32_t)0))? 1 : 0);
+		bool L_18 = V_5;
+		if (!L_18)
+		{
+			goto IL_006f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:33>
+		Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* L_19 = __this->___pagesMap;
+		Type_t* L_20 = V_3;
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_21 = V_2;
+		NullCheck(L_19);
+		Dictionary_2_Add_m4F47C18CFEDAB54D5628E805B0D6579AAD53CB6D(L_19, L_20, L_21, Dictionary_2_Add_m4F47C18CFEDAB54D5628E805B0D6579AAD53CB6D_RuntimeMethod_var);
+	}
+
+IL_006f:
+	{
+	}
+
+IL_0070:
+	{
+		int32_t L_22 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_22, 1));
+	}
+
+IL_0074:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:27>
+		int32_t L_23 = V_1;
+		PageDataU5BU5D_tA8BD841A66231FE5424CC71AF557955EAA12DBA1* L_24 = V_0;
+		NullCheck(L_24);
+		if ((((int32_t)L_23) < ((int32_t)((int32_t)(((RuntimeArray*)L_24)->max_length)))))
+		{
+			goto IL_0027;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:35>
+		return;
+	}
+}
+// Method Definition Index: 105570
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CachedPages_HasPage_m964F6111D58576D5A89CDC7DDADAC108EDFE3095 (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, Type_t* ___0_pageType, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_m625C30E9962D06319F9BFE18464F130E7354D79A_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:40>
+		Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* L_0 = __this->___pagesMap;
+		Type_t* L_1 = ___0_pageType;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = Dictionary_2_ContainsKey_m625C30E9962D06319F9BFE18464F130E7354D79A(L_0, L_1, Dictionary_2_ContainsKey_m625C30E9962D06319F9BFE18464F130E7354D79A_RuntimeMethod_var);
+		V_0 = L_2;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:41>
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+// Method Definition Index: 105571
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* CachedPages_GetPageData_mB30F4D4674B3853663E92E48FDD34F8D635234F9 (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, Type_t* ___0_pageType, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_m52D59359A6589EE238383C5757FD071649FDAA97_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* V_0 = NULL;
+	PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* V_1 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:46>
+		Dictionary_2_tC4CD5B3E1F4E70DEE42A869541715DCEF272CB52* L_0 = __this->___pagesMap;
+		Type_t* L_1 = ___0_pageType;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = Dictionary_2_TryGetValue_m52D59359A6589EE238383C5757FD071649FDAA97(L_0, L_1, (&V_0), Dictionary_2_TryGetValue_m52D59359A6589EE238383C5757FD071649FDAA97_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:47>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_3 = V_0;
+		V_1 = L_3;
+		goto IL_0014;
+	}
+
+IL_0014:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:48>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_4 = V_1;
+		return L_4;
+	}
+}
+// Method Definition Index: 105572
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* CachedPages_InstantiateCachedPage_mEAB149FA6799A5CA56E5739EEAAF5EB556ECE3BF (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, Type_t* ___0_pageType, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_m396920112CB9E38A18B909CE8718679024EE961D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral79BE6A85EAFCB9892C2645439C4852ABA26434A4);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral849AA6A3FB74201F689E048799C3B265899153E5);
+		s_Il2CppMethodInitialized = true;
+	}
+	PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* V_0 = NULL;
+	UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* V_1 = NULL;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* V_2 = NULL;
+	bool V_3 = false;
+	UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* V_4 = NULL;
+	bool V_5 = false;
+	bool V_6 = false;
+	int32_t V_7 = 0;
+	bool V_8 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:56>
+		Type_t* L_0 = ___0_pageType;
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_1;
+		L_1 = CachedPages_GetPageData_mB30F4D4674B3853663E92E48FDD34F8D635234F9(__this, L_0, NULL);
+		V_0 = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:57>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_2 = V_0;
+		V_3 = (bool)((((RuntimeObject*)(PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254*)L_2) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_3 = V_3;
+		if (!L_3)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:59>
+		Type_t* L_4 = ___0_pageType;
+		String_t* L_5;
+		L_5 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral849AA6A3FB74201F689E048799C3B265899153E5, L_4, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_5, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:61>
+		V_4 = (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*)NULL;
+		goto IL_00e5;
+	}
+
+IL_002b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:64>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_6 = V_0;
+		NullCheck(L_6);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_7;
+		L_7 = PageData_get_PagePrefab_mC715E784E266B2D2CDE7A9369AF5BC0A41CBD962_inline(L_6, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_5 = L_8;
+		bool L_9 = V_5;
+		if (!L_9)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:66>
+		Type_t* L_10 = ___0_pageType;
+		String_t* L_11;
+		L_11 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral79BE6A85EAFCB9892C2645439C4852ABA26434A4, L_10, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_11, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:68>
+		V_4 = (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*)NULL;
+		goto IL_00e5;
+	}
+
+IL_0057:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:71>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_12 = V_0;
+		NullCheck(L_12);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_13;
+		L_13 = PageData_get_PagePrefab_mC715E784E266B2D2CDE7A9369AF5BC0A41CBD962_inline(L_12, NULL);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_14 = __this->___controller;
+		NullCheck(L_14);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
+		L_15 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_14, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_16;
+		L_16 = Object_Instantiate_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_m396920112CB9E38A18B909CE8718679024EE961D(L_13, L_15, Object_Instantiate_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_m396920112CB9E38A18B909CE8718679024EE961D_RuntimeMethod_var);
+		V_1 = L_16;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:72>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_17 = V_1;
+		NullCheck(L_17);
+		UIPage_CacheComponents_mBA1ECF075A83033E52057D0792D6A0A677E26D18(L_17, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:74>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_18 = V_0;
+		NullCheck(L_18);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_19;
+		L_19 = PageData_get_PagePrefab_mC715E784E266B2D2CDE7A9369AF5BC0A41CBD962_inline(L_18, NULL);
+		NullCheck(L_19);
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_20;
+		L_20 = Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2(L_19, Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var);
+		V_2 = L_20;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:75>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_21 = V_2;
+		bool L_22;
+		L_22 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_21, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_6 = L_22;
+		bool L_23 = V_6;
+		if (!L_23)
+		{
+			goto IL_00bd;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:77>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_24 = V_2;
+		NullCheck(L_24);
+		int32_t L_25;
+		L_25 = Canvas_get_sortingOrder_mFA9AC878A11BBEE1716CF7E7DF52E0AAC570C451(L_24, NULL);
+		V_7 = L_25;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:78>
+		int32_t L_26 = V_7;
+		V_8 = (bool)((!(((uint32_t)L_26) <= ((uint32_t)0)))? 1 : 0);
+		bool L_27 = V_8;
+		if (!L_27)
+		{
+			goto IL_00bc;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:79>
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_28 = __this->___controller;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_29 = V_1;
+		NullCheck(L_29);
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_30;
+		L_30 = UIPage_get_Canvas_mE853AFB23D04108B52DDD9BFFD82E60697B6C0DC_inline(L_29, NULL);
+		int32_t L_31 = V_7;
+		RuntimeObject* L_32;
+		L_32 = CachedPages_ApplySortingOrderNextFrame_m2682BBC114814913C36958C8539BAEA32C6845CD(__this, L_30, L_31, NULL);
+		NullCheck(L_28);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_33;
+		L_33 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(L_28, L_32, NULL);
+	}
+
+IL_00bc:
+	{
+	}
+
+IL_00bd:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:82>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_34 = V_1;
+		NullCheck(L_34);
+		UIPage_PreparePage_m9F459678D5C83320346D753D07BBAE0D5C275C63(L_34, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:83>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_35 = V_1;
+		NullCheck(L_35);
+		VirtualActionInvoker0::Invoke(7, L_35);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:84>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_36 = V_1;
+		NullCheck(L_36);
+		UIPage_MarkAsCached_m3EE2D6F33D26D06697100F344457B2FEE17253C0(L_36, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:86>
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_37 = __this->___controller;
+		Type_t* L_38 = ___0_pageType;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_39 = V_1;
+		NullCheck(L_37);
+		UIController_RegisterCachedPage_mA18FEF42ADF5CA9061853D31818A79A6D23DA60A(L_37, L_38, L_39, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:88>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_40 = V_1;
+		V_4 = L_40;
+		goto IL_00e5;
+	}
+
+IL_00e5:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:89>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_41 = V_4;
+		return L_41;
+	}
+}
+// Method Definition Index: 105573
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CachedPages_ApplySortingOrderNextFrame_m2682BBC114814913C36958C8539BAEA32C6845CD (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___0_canvas, int32_t ___1_sortingOrder, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* L_0 = (U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132*)il2cpp_codegen_object_new(U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132_il2cpp_TypeInfo_var);
+		U3CApplySortingOrderNextFrameU3Ed__9__ctor_m742BE5B1D1D32932D3CE7AC871F41B60E4B99C4C(L_0, 0, NULL);
+		U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* L_2 = L_1;
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_3 = ___0_canvas;
+		NullCheck(L_2);
+		L_2->___canvas = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&L_2->___canvas), (void*)L_3);
+		U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* L_4 = L_2;
+		int32_t L_5 = ___1_sortingOrder;
+		NullCheck(L_4);
+		L_4->___sortingOrder = L_5;
+		return L_4;
+	}
+}
+// Method Definition Index: 105574
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CachedPages__ctor_m16357D3B295102F6BDDF8D9EBA5E50E28BCB794C (CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105575
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* PageData_get_PagePrefab_mC715E784E266B2D2CDE7A9369AF5BC0A41CBD962 (PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:105>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_0 = __this->___pagePrefab;
+		return L_0;
+	}
+}
+// Method Definition Index: 105576
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PageData_get_AutoDestroy_m4775BB9CA15B24130353BC47E7D25B5830292910 (PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:109>
+		bool L_0 = __this->___autoDestroy;
+		return L_0;
+	}
+}
+// Method Definition Index: 105577
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PageData__ctor_m6232AF47CA8A705E6E044DDABA60801B4D452B8A (PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:107>
+		__this->___autoDestroy = (bool)1;
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105578
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CApplySortingOrderNextFrameU3Ed__9__ctor_m742BE5B1D1D32932D3CE7AC871F41B60E4B99C4C (U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 105579
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CApplySortingOrderNextFrameU3Ed__9_System_IDisposable_Dispose_m7B68B18062DA9978A5BC0FFD31175BDF08116E40 (U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 105580
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CApplySortingOrderNextFrameU3Ed__9_MoveNext_mA6EE9C59F75740A603B005162225ADB7CBCBF836 (U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) == ((int32_t)1)))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		goto IL_0016;
+	}
+
+IL_0012:
+	{
+		goto IL_0018;
+	}
+
+IL_0014:
+	{
+		goto IL_0030;
+	}
+
+IL_0016:
+	{
+		return (bool)0;
+	}
+
+IL_0018:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:93>
+		__this->___U3CU3E2__current = NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_0030:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:95>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_3 = __this->___canvas;
+		NullCheck(L_3);
+		Canvas_set_overrideSorting_m155D936A457E7935683894150A0E5DBED2170F54(L_3, (bool)1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:96>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_4 = __this->___canvas;
+		int32_t L_5 = __this->___sortingOrder;
+		NullCheck(L_4);
+		Canvas_set_sortingOrder_m70D89DB61A3C0589C0FAB525E613DE9D0C799AAC(L_4, L_5, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:97>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 105581
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CApplySortingOrderNextFrameU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA58C2FA9480A6FDB726793FE3661BAF1BAE60AC0 (U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 105582
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CApplySortingOrderNextFrameU3Ed__9_System_Collections_IEnumerator_Reset_m90B31D98FE4E61B7736C523B7847B014DD9E54B4 (U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CApplySortingOrderNextFrameU3Ed__9_System_Collections_IEnumerator_Reset_m90B31D98FE4E61B7736C523B7847B014DD9E54B4_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 105583
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CApplySortingOrderNextFrameU3Ed__9_System_Collections_IEnumerator_get_Current_m12448DCE05DC43F82A650D95A285AFB4B132B063 (U3CApplySortingOrderNextFrameU3Ed__9_t704B94EACEC71C91EA1CA4368FEB39D26C808132* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105587
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BaseOverlayPanel_get_IsActive_mB54B9D05E8BA25C3ECA61A3823E61719CCCD27F7 (BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/BaseOverlayPanel.cs:18>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = __this->___canvas;
+		NullCheck(L_0);
+		bool L_1;
+		L_1 = Behaviour_get_enabled_mAAC9F15E9EBF552217A5AE2681589CC0BFA300C1(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 105588
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseOverlayPanel_Awake_m36E9ACE7CBAF040C8A134E1A9B8DDBF64EF88C6A (BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/BaseOverlayPanel.cs:22>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0;
+		L_0 = Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2(__this, Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var);
+		__this->___canvas = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___canvas), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/BaseOverlayPanel.cs:23>
+		return;
+	}
+}
+// Method Definition Index: 105593
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseOverlayPanel_SetLoadingState_mE453D89A3B572C237AF5F43F14BF5D2EBEC21B72 (BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657* __this, bool ___0_state, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/BaseOverlayPanel.cs:33>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___loadingObject;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/BaseOverlayPanel.cs:34>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___loadingObject;
+		bool L_4 = ___0_state;
+		NullCheck(L_3);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, L_4, NULL);
+	}
+
+IL_001e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/BaseOverlayPanel.cs:35>
+		return;
+	}
+}
+// Method Definition Index: 105594
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseOverlayPanel_SetState_m61745150D18900C073C32B6D2FC6DB100BA1DCAE (BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657* __this, bool ___0_state, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/BaseOverlayPanel.cs:39>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = __this->___canvas;
+		bool L_1 = ___0_state;
+		NullCheck(L_0);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, L_1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/BaseOverlayPanel.cs:40>
+		return;
+	}
+}
+// Method Definition Index: 105595
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseOverlayPanel__ctor_mE16BC90BFD94D4D255F80939EEFDEEC166213FF5 (BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105596
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DummyOverlayPanel_Init_mDE89121AD457F2E05916B4A534C74E0EE67E4745 (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA327C9E1CA12BC531D587E7567F2067B96E6B6A0_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m771EB78FF8813B5AFF21AC0D252E5461943E6388_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1ACD5A00EBA327B1C8A9F271FFF54F448CC5270F);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* V_1 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:19>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88(L_0, _stringLiteral1ACD5A00EBA327B1C8A9F271FFF54F448CC5270F, NULL);
+		V_0 = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:20>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = V_0;
+		NullCheck(L_1);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_1, NULL);
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_3 = ((BaseOverlayPanel_t06C4DC51AD46AEF1E37E6B6CC92F44174D7A6657*)__this)->___canvas;
+		NullCheck(L_3);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_3, NULL);
+		NullCheck(L_2);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_2, L_4, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:21>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = V_0;
+		NullCheck(L_5);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_5, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
+		L_7 = CoreExtensions_ResetLocal_m96DB1813180AAF080B57352A61F17D41C718B3BA(L_6, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:23>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = V_0;
+		NullCheck(L_8);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_9;
+		L_9 = GameObject_AddComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m771EB78FF8813B5AFF21AC0D252E5461943E6388(L_8, GameObject_AddComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m771EB78FF8813B5AFF21AC0D252E5461943E6388_RuntimeMethod_var);
+		V_1 = L_9;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:24>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_10 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11;
+		memset((&L_11), 0, sizeof(L_11));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_11), (0.0f), (0.0f), NULL);
+		NullCheck(L_10);
+		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_10, L_11, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:25>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_12 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_13;
+		memset((&L_13), 0, sizeof(L_13));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_13), (1.0f), (1.0f), NULL);
+		NullCheck(L_12);
+		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_12, L_13, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:26>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_14 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_15;
+		L_15 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
+		NullCheck(L_14);
+		RectTransform_set_sizeDelta_mC9A980EA6036E6725EF24CEDF3EE80A9B2B50EE5(L_14, L_15, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:28>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = V_0;
+		NullCheck(L_16);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_17;
+		L_17 = GameObject_AddComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA327C9E1CA12BC531D587E7567F2067B96E6B6A0(L_16, GameObject_AddComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA327C9E1CA12BC531D587E7567F2067B96E6B6A0_RuntimeMethod_var);
+		__this->___image = L_17;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___image), (void*)L_17);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:29>
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_18 = __this->___image;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_19;
+		memset((&L_19), 0, sizeof(L_19));
+		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_19), (0.0f), (0.0f), (0.0f), (0.0f), NULL);
+		NullCheck(L_18);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_18, L_19);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:30>
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_20 = __this->___image;
+		NullCheck(L_20);
+		VirtualActionInvoker1< bool >::Invoke(25, L_20, (bool)1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:31>
+		return;
+	}
+}
+// Method Definition Index: 105597
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DummyOverlayPanel_Show_mDD1B7E49F58F1CE681FD160F923F03D6BC7E187C (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, float ___0_duration, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___1_onCompleted, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:35>
+		DummyOverlayPanel_StopFade_m4665F4A840ED3C7F89CECB30623C985859573C03(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:36>
+		float L_0 = ___0_duration;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_1 = ___1_onCompleted;
+		RuntimeObject* L_2;
+		L_2 = DummyOverlayPanel_FadeCoroutine_mC21F82680DD66F39D0EA5FC15E2E4E0555611139(__this, (1.0f), L_0, L_1, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
+		L_3 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_2, NULL);
+		__this->___fadeCoroutine = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___fadeCoroutine), (void*)L_3);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:37>
+		return;
+	}
+}
+// Method Definition Index: 105598
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DummyOverlayPanel_Hide_mE01A4C1215B846D98142DB9110A86FC33E8B143A (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, float ___0_duration, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___1_onCompleted, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:41>
+		DummyOverlayPanel_StopFade_m4665F4A840ED3C7F89CECB30623C985859573C03(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:42>
+		float L_0 = ___0_duration;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_1 = ___1_onCompleted;
+		RuntimeObject* L_2;
+		L_2 = DummyOverlayPanel_FadeCoroutine_mC21F82680DD66F39D0EA5FC15E2E4E0555611139(__this, (0.0f), L_0, L_1, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
+		L_3 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_2, NULL);
+		__this->___fadeCoroutine = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___fadeCoroutine), (void*)L_3);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:43>
+		return;
+	}
+}
+// Method Definition Index: 105599
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DummyOverlayPanel_Clear_m258DE3C7DAE5F41B3DD47C70DE0962610EDDE409 (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:47>
+		DummyOverlayPanel_StopFade_m4665F4A840ED3C7F89CECB30623C985859573C03(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:49>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
+		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:50>
+		return;
+	}
+}
+// Method Definition Index: 105600
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DummyOverlayPanel_StopFade_m4665F4A840ED3C7F89CECB30623C985859573C03 (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:54>
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->___fadeCoroutine;
+		V_0 = (bool)((!(((RuntimeObject*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:56>
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___fadeCoroutine;
+		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_2, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:57>
+		__this->___fadeCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___fadeCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
+	}
+
+IL_0024:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:59>
+		return;
+	}
+}
+// Method Definition Index: 105601
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DummyOverlayPanel_FadeCoroutine_mC21F82680DD66F39D0EA5FC15E2E4E0555611139 (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, float ___0_targetAlpha, float ___1_duration, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___2_onCompleted, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* L_0 = (U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489*)il2cpp_codegen_object_new(U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489_il2cpp_TypeInfo_var);
+		U3CFadeCoroutineU3Ed__7__ctor_mBEE803A5A01B55B3D455C66AFDBCDCA591492998(L_0, 0, NULL);
+		U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* L_2 = L_1;
+		float L_3 = ___0_targetAlpha;
+		NullCheck(L_2);
+		L_2->___targetAlpha = L_3;
+		U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* L_4 = L_2;
+		float L_5 = ___1_duration;
+		NullCheck(L_4);
+		L_4->___duration = L_5;
+		U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* L_6 = L_4;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_7 = ___2_onCompleted;
+		NullCheck(L_6);
+		L_6->___onCompleted = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&L_6->___onCompleted), (void*)L_7);
+		return L_6;
+	}
+}
+// Method Definition Index: 105602
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DummyOverlayPanel__ctor_m4787192BC661497CEC992D768D6391CF56C03660 (DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* __this, const RuntimeMethod* method) 
+{
+	{
+		BaseOverlayPanel__ctor_mE16BC90BFD94D4D255F80939EEFDEEC166213FF5(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105603
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeCoroutineU3Ed__7__ctor_mBEE803A5A01B55B3D455C66AFDBCDCA591492998 (U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 105604
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeCoroutineU3Ed__7_System_IDisposable_Dispose_mD64D3325ABFB66AF6A09036B8EC984F33E860795 (U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 105605
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFadeCoroutineU3Ed__7_MoveNext_m707254390C953AEA9B8F58679135AA6011FFA012 (U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* G_B13_0 = NULL;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* G_B12_0 = NULL;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) == ((int32_t)1)))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		goto IL_0019;
+	}
+
+IL_0012:
+	{
+		goto IL_001b;
+	}
+
+IL_0014:
+	{
+		goto IL_00bf;
+	}
+
+IL_0019:
+	{
+		return (bool)0;
+	}
+
+IL_001b:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:63>
+		DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* L_3 = __this->___U3CU3E4__this;
+		NullCheck(L_3);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_4 = L_3->___image;
+		NullCheck(L_4);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5;
+		L_5 = VirtualFuncInvoker0< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(22, L_4);
+		__this->___U3CcolorU3E5__1 = L_5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:64>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* L_6 = (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F*)(&__this->___U3CcolorU3E5__1);
+		float L_7 = L_6->___a;
+		__this->___U3CstartAlphaU3E5__2 = L_7;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:65>
+		__this->___U3CelapsedU3E5__3 = (0.0f);
+		goto IL_00c7;
+	}
+
+IL_0057:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:69>
+		float L_8 = __this->___U3CelapsedU3E5__3;
+		float L_9;
+		L_9 = Time_get_unscaledDeltaTime_mF057EECA857E5C0F90A3F910D26D3EE59F27C4B5(NULL);
+		__this->___U3CelapsedU3E5__3 = ((float)il2cpp_codegen_add(L_8, L_9));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:70>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* L_10 = (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F*)(&__this->___U3CcolorU3E5__1);
+		float L_11 = __this->___U3CstartAlphaU3E5__2;
+		float L_12 = __this->___targetAlpha;
+		float L_13 = __this->___U3CelapsedU3E5__3;
+		float L_14 = __this->___duration;
+		float L_15;
+		L_15 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_13/L_14)), NULL);
+		float L_16;
+		L_16 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_11, L_12, L_15, NULL);
+		L_10->___a = L_16;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:71>
+		DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* L_17 = __this->___U3CU3E4__this;
+		NullCheck(L_17);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_18 = L_17->___image;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_19 = __this->___U3CcolorU3E5__1;
+		NullCheck(L_18);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_18, L_19);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:72>
+		__this->___U3CU3E2__current = NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_00bf:
+	{
+		__this->___U3CU3E1__state = (-1);
+	}
+
+IL_00c7:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:67>
+		float L_20 = __this->___U3CelapsedU3E5__3;
+		float L_21 = __this->___duration;
+		V_1 = (bool)((((float)L_20) < ((float)L_21))? 1 : 0);
+		bool L_22 = V_1;
+		if (L_22)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:75>
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* L_23 = (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F*)(&__this->___U3CcolorU3E5__1);
+		float L_24 = __this->___targetAlpha;
+		L_23->___a = L_24;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:76>
+		DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* L_25 = __this->___U3CU3E4__this;
+		NullCheck(L_25);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_26 = L_25->___image;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_27 = __this->___U3CcolorU3E5__1;
+		NullCheck(L_26);
+		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_26, L_27);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:77>
+		DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* L_28 = __this->___U3CU3E4__this;
+		NullCheck(L_28);
+		L_28->___fadeCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_28->___fadeCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:79>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_29 = __this->___onCompleted;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_30 = L_29;
+		if (L_30)
+		{
+			G_B13_0 = L_30;
+			goto IL_011c;
+		}
+		G_B12_0 = L_30;
+	}
+	{
+		goto IL_0122;
+	}
+
+IL_011c:
+	{
+		NullCheck(G_B13_0);
+		SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline(G_B13_0, NULL);
+	}
+
+IL_0122:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/DummyOverlayPanel.cs:80>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 105606
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeCoroutineU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE232A5823A715DD82F2C9FEE1EBD44D8729EAB1D (U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 105607
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeCoroutineU3Ed__7_System_Collections_IEnumerator_Reset_mB636F3F54F128C58F996012C3348CC5459CD85A7 (U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFadeCoroutineU3Ed__7_System_Collections_IEnumerator_Reset_mB636F3F54F128C58F996012C3348CC5459CD85A7_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 105608
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeCoroutineU3Ed__7_System_Collections_IEnumerator_get_Current_mD7F84DE49FD125506CDCBE7057D6A6641DD1C837 (U3CFadeCoroutineU3Ed__7_tB19A46B3E4417C02A5AF4EA2E75F3A383BCD4489* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105616
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Overlay__ctor_m9BD918D0119C7A9026E52802178B02242AD6E2FC (Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_parentObject, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:20>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:22>
+		((Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields*)il2cpp_codegen_static_fields_for(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var))->___instance = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields*)il2cpp_codegen_static_fields_for(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var))->___instance), (void*)__this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:24>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_parentObject;
+		NullCheck(L_0);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_0, NULL);
+		RuntimeObject* L_2;
+		L_2 = Overlay_FindOverlayPanel_mCC2776CEE5A21EAEB73BB4D08DA007E6C83755DF(L_1, NULL);
+		__this->___panel = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___panel), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:26>
+		RuntimeObject* L_3 = __this->___panel;
+		V_0 = (bool)((((RuntimeObject*)(RuntimeObject*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_4 = V_0;
+		if (!L_4)
+		{
+			goto IL_003e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:27>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = ___0_parentObject;
+		NullCheck(L_5);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_5, NULL);
+		RuntimeObject* L_7;
+		L_7 = Overlay_CreateDummyOverlay_mB447C09458450673842AC754C9C816F0F9DDA6E7(__this, L_6, NULL);
+		__this->___panel = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___panel), (void*)L_7);
+	}
+
+IL_003e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:29>
+		RuntimeObject* L_8 = __this->___panel;
+		NullCheck(L_8);
+		InterfaceActionInvoker0::Invoke(1, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_8);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:31>
+		RuntimeObject* L_9 = __this->___panel;
+		NullCheck(L_9);
+		InterfaceActionInvoker1< bool >::Invoke(5, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_9, (bool)0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:32>
+		RuntimeObject* L_10 = __this->___panel;
+		NullCheck(L_10);
+		InterfaceActionInvoker1< bool >::Invoke(6, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_10, (bool)0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:33>
+		return;
+	}
+}
+// Method Definition Index: 105617
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Overlay_Show_m4CAF9E6A7668372114097DE1F57D85969EF2C367 (float ___0_duration, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___1_onCompleted, bool ___2_showLoadingAnimation, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD886BF35F0B587324FB7707EB1F4440DD4D0C54F);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:41>
+		Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* L_0 = ((Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields*)il2cpp_codegen_static_fields_for(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var))->___instance;
+		V_1 = (bool)((((RuntimeObject*)(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:41>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralD886BF35F0B587324FB7707EB1F4440DD4D0C54F, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:41>
+		goto IL_005c;
+	}
+
+IL_001b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:43>
+		Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* L_2 = ((Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields*)il2cpp_codegen_static_fields_for(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		RuntimeObject* L_3 = L_2->___panel;
+		V_0 = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:44>
+		RuntimeObject* L_4 = V_0;
+		V_2 = (bool)((((RuntimeObject*)(RuntimeObject*)L_4) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_5 = V_2;
+		if (!L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:44>
+		goto IL_005c;
+	}
+
+IL_0030:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:45>
+		RuntimeObject* L_6 = V_0;
+		NullCheck(L_6);
+		bool L_7;
+		L_7 = InterfaceFuncInvoker0< bool >::Invoke(0, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_6);
+		V_3 = L_7;
+		bool L_8 = V_3;
+		if (!L_8)
+		{
+			goto IL_003c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:45>
+		goto IL_005c;
+	}
+
+IL_003c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:47>
+		RuntimeObject* L_9 = V_0;
+		NullCheck(L_9);
+		InterfaceActionInvoker1< bool >::Invoke(5, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_9, (bool)1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:48>
+		RuntimeObject* L_10 = V_0;
+		float L_11 = ___0_duration;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_12 = ___1_onCompleted;
+		NullCheck(L_10);
+		InterfaceActionInvoker2< float, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* >::Invoke(3, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_10, L_11, L_12);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:50>
+		bool L_13 = ___2_showLoadingAnimation;
+		V_4 = L_13;
+		bool L_14 = V_4;
+		if (!L_14)
+		{
+			goto IL_005c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:51>
+		RuntimeObject* L_15 = V_0;
+		NullCheck(L_15);
+		InterfaceActionInvoker1< bool >::Invoke(6, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_15, (bool)1);
+	}
+
+IL_005c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:52>
+		return;
+	}
+}
+// Method Definition Index: 105618
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Overlay_Hide_mF19FD4D1DE2D8DE49EF8454E8C5E55B84FA39AEA (float ___0_duration, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___1_onCompleted, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass5_0_U3CHideU3Eb__0_m88439581951BF3514C2E41736ADC667A177E22C5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD886BF35F0B587324FB7707EB1F4440DD4D0C54F);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	{
+		U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* L_0 = (U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C_il2cpp_TypeInfo_var);
+		U3CU3Ec__DisplayClass5_0__ctor_m5915CA70BBC533CA37204D97271CCC0B17773A40(L_0, NULL);
+		V_0 = L_0;
+		U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* L_1 = V_0;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_2 = ___1_onCompleted;
+		NullCheck(L_1);
+		L_1->___onCompleted = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___onCompleted), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:60>
+		Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* L_3 = ((Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields*)il2cpp_codegen_static_fields_for(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var))->___instance;
+		V_1 = (bool)((((RuntimeObject*)(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:60>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralD886BF35F0B587324FB7707EB1F4440DD4D0C54F, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:60>
+		goto IL_0074;
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:62>
+		U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* L_5 = V_0;
+		Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* L_6 = ((Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields*)il2cpp_codegen_static_fields_for(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_6);
+		RuntimeObject* L_7 = L_6->___panel;
+		NullCheck(L_5);
+		L_5->___panel = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&L_5->___panel), (void*)L_7);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:63>
+		U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* L_8 = V_0;
+		NullCheck(L_8);
+		RuntimeObject* L_9 = L_8->___panel;
+		V_2 = (bool)((((RuntimeObject*)(RuntimeObject*)L_9) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_10 = V_2;
+		if (!L_10)
+		{
+			goto IL_0047;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:63>
+		goto IL_0074;
+	}
+
+IL_0047:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:64>
+		U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* L_11 = V_0;
+		NullCheck(L_11);
+		RuntimeObject* L_12 = L_11->___panel;
+		NullCheck(L_12);
+		bool L_13;
+		L_13 = InterfaceFuncInvoker0< bool >::Invoke(0, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_12);
+		V_3 = (bool)((((int32_t)L_13) == ((int32_t)0))? 1 : 0);
+		bool L_14 = V_3;
+		if (!L_14)
+		{
+			goto IL_005b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:64>
+		goto IL_0074;
+	}
+
+IL_005b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:66>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:67>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:68>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:69>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:70>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:71>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:72>
+		U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* L_15 = V_0;
+		NullCheck(L_15);
+		RuntimeObject* L_16 = L_15->___panel;
+		float L_17 = ___0_duration;
+		U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* L_18 = V_0;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_19 = (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A*)il2cpp_codegen_object_new(SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		SimpleCallback__ctor_m04CB2FCA2E02060AB815575D93F70A51542A7DE6(L_19, L_18, (intptr_t)((void*)U3CU3Ec__DisplayClass5_0_U3CHideU3Eb__0_m88439581951BF3514C2E41736ADC667A177E22C5_RuntimeMethod_var), NULL);
+		NullCheck(L_16);
+		InterfaceActionInvoker2< float, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* >::Invoke(4, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_16, L_17, L_19);
+	}
+
+IL_0074:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:73>
+		return;
+	}
+}
+// Method Definition Index: 105619
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Overlay_FindOverlayPanel_mCC2776CEE5A21EAEB73BB4D08DA007E6C83755DF (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_parentTransform, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* V_0 = NULL;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_1 = NULL;
+	Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* V_2 = NULL;
+	bool V_3 = false;
+	RuntimeObject* V_4 = NULL;
+	RuntimeObject* V_5 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:77>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_parentTransform;
+		NullCheck(L_0);
+		RuntimeObject* L_1;
+		L_1 = Transform_GetEnumerator_mA7E1C882ACA0C33E284711CD09971DEA3FFEF404(L_0, NULL);
+		V_0 = L_1;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0049:
+			{
+				{
+					RuntimeObject* L_2 = V_0;
+					V_5 = ((RuntimeObject*)IsInst((RuntimeObject*)L_2, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var));
+					RuntimeObject* L_3 = V_5;
+					if (!L_3)
+					{
+						goto IL_005d;
+					}
+				}
+				{
+					RuntimeObject* L_4 = V_5;
+					NullCheck(L_4);
+					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_4);
+				}
+
+IL_005d:
+				{
+					return;
+				}
+			}
+		});
+		try
+		{
+			{
+				goto IL_003f_1;
+			}
+
+IL_000b_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:77>
+				RuntimeObject* L_5 = V_0;
+				NullCheck(L_5);
+				RuntimeObject* L_6;
+				L_6 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_5);
+				V_1 = ((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_6, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var));
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:79>
+				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7 = V_1;
+				RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_8 = { reinterpret_cast<intptr_t> (IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_0_0_0_var) };
+				il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
+				Type_t* L_9;
+				L_9 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_8, NULL);
+				NullCheck(L_7);
+				Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_10;
+				L_10 = Component_GetComponent_m4352437B839B9601EB007CAC1007C8E1FB8A427D(L_7, L_9, NULL);
+				V_2 = L_10;
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:80>
+				Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_11 = V_2;
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				bool L_12;
+				L_12 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_11, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+				V_3 = L_12;
+				bool L_13 = V_3;
+				if (!L_13)
+				{
+					goto IL_003e_1;
+				}
+			}
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:81>
+				Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_14 = V_2;
+				V_4 = ((RuntimeObject*)Castclass((RuntimeObject*)L_14, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var));
+				goto IL_0063;
+			}
+
+IL_003e_1:
+			{
+			}
+
+IL_003f_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:77>
+				RuntimeObject* L_15 = V_0;
+				NullCheck(L_15);
+				bool L_16;
+				L_16 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_15);
+				if (L_16)
+				{
+					goto IL_000b_1;
+				}
+			}
+			{
+				goto IL_005e;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_005e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:84>
+		V_4 = (RuntimeObject*)NULL;
+		goto IL_0063;
+	}
+
+IL_0063:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:85>
+		RuntimeObject* L_17 = V_4;
+		return L_17;
+	}
+}
+// Method Definition Index: 105620
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Overlay_CreateDummyOverlay_mB447C09458450673842AC754C9C816F0F9DDA6E7 (Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_parentTransform, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m13C85FD585C0679530F8B35D0B39D965702FD0F5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisDummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5_mDA29E1BD89AF23E1EE3A148F1BA069C1D0B11A67_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m308DCE149216D4787C3E6147729C0DF79423E1BF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m771EB78FF8813B5AFF21AC0D252E5461943E6388_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral89C47ED691B89B006E458923CF0F906605DC763F);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB93F5E13E0AD8E8044D7D80E771F9A55F393D87F);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* V_1 = NULL;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* V_2 = NULL;
+	RuntimeObject* V_3 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:89>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88(L_0, _stringLiteral89C47ED691B89B006E458923CF0F906605DC763F, NULL);
+		V_0 = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:90>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = V_0;
+		NullCheck(L_1);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_1, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = ___0_parentTransform;
+		NullCheck(L_2);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_2, L_3, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:91>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = V_0;
+		NullCheck(L_4);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
+		L_5 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_4, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = CoreExtensions_ResetLocal_m96DB1813180AAF080B57352A61F17D41C718B3BA(L_5, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:92>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = V_0;
+		int32_t L_8;
+		L_8 = LayerMask_NameToLayer_m2764C530EDA9EC3226A36E3FD43E020B413AF139(_stringLiteralB93F5E13E0AD8E8044D7D80E771F9A55F393D87F, NULL);
+		NullCheck(L_7);
+		GameObject_set_layer_m6E1AF478A2CC86BD222B96317BEB78B7D89B18D0(L_7, L_8, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:94>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = V_0;
+		NullCheck(L_9);
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_10;
+		L_10 = GameObject_AddComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m771EB78FF8813B5AFF21AC0D252E5461943E6388(L_9, GameObject_AddComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m771EB78FF8813B5AFF21AC0D252E5461943E6388_RuntimeMethod_var);
+		V_1 = L_10;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:95>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_11 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12;
+		memset((&L_12), 0, sizeof(L_12));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_12), (0.0f), (0.0f), NULL);
+		NullCheck(L_11);
+		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_11, L_12, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:96>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_13 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14;
+		memset((&L_14), 0, sizeof(L_14));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_14), (1.0f), (1.0f), NULL);
+		NullCheck(L_13);
+		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_13, L_14, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:97>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_15 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_16;
+		L_16 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
+		NullCheck(L_15);
+		RectTransform_set_sizeDelta_mC9A980EA6036E6725EF24CEDF3EE80A9B2B50EE5(L_15, L_16, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:99>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = V_0;
+		NullCheck(L_17);
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_18;
+		L_18 = GameObject_AddComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m13C85FD585C0679530F8B35D0B39D965702FD0F5(L_17, GameObject_AddComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m13C85FD585C0679530F8B35D0B39D965702FD0F5_RuntimeMethod_var);
+		V_2 = L_18;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:100>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_19 = V_2;
+		NullCheck(L_19);
+		Canvas_set_renderMode_mD73E953F8A115CF469508448A00D0EDAFAF5AB47(L_19, 0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:101>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_20 = V_2;
+		NullCheck(L_20);
+		Canvas_set_overrideSorting_m155D936A457E7935683894150A0E5DBED2170F54(L_20, (bool)1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:102>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_21 = V_2;
+		NullCheck(L_21);
+		Canvas_set_sortingOrder_m70D89DB61A3C0589C0FAB525E613DE9D0C799AAC(L_21, ((int32_t)999), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:104>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = V_0;
+		NullCheck(L_22);
+		GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* L_23;
+		L_23 = GameObject_AddComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m308DCE149216D4787C3E6147729C0DF79423E1BF(L_22, GameObject_AddComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m308DCE149216D4787C3E6147729C0DF79423E1BF_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:106>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = V_0;
+		NullCheck(L_24);
+		DummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5* L_25;
+		L_25 = GameObject_AddComponent_TisDummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5_mDA29E1BD89AF23E1EE3A148F1BA069C1D0B11A67(L_24, GameObject_AddComponent_TisDummyOverlayPanel_t3117915464F7E370DC56C080AA6FB8853AD700D5_mDA29E1BD89AF23E1EE3A148F1BA069C1D0B11A67_RuntimeMethod_var);
+		V_3 = L_25;
+		goto IL_00a8;
+	}
+
+IL_00a8:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:107>
+		RuntimeObject* L_26 = V_3;
+		return L_26;
+	}
+}
+// Method Definition Index: 105621
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Overlay_Unload_m6B08B45186331042942EDDE0653D8E8A9113DF8B (Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RuntimeObject* G_B2_0 = NULL;
+	RuntimeObject* G_B1_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:111>
+		RuntimeObject* L_0 = __this->___panel;
+		RuntimeObject* L_1 = L_0;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_000d;
+		}
+		G_B1_0 = L_1;
+	}
+	{
+		goto IL_0013;
+	}
+
+IL_000d:
+	{
+		NullCheck(G_B2_0);
+		InterfaceActionInvoker0::Invoke(2, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, G_B2_0);
+	}
+
+IL_0013:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:112>
+		__this->___panel = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___panel), (void*)(RuntimeObject*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:114>
+		((Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields*)il2cpp_codegen_static_fields_for(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var))->___instance = (Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_StaticFields*)il2cpp_codegen_static_fields_for(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var))->___instance), (void*)(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:115>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105622
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m5915CA70BBC533CA37204D97271CCC0B17773A40 (U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 105623
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3CHideU3Eb__0_m88439581951BF3514C2E41736ADC667A177E22C5 (U3CU3Ec__DisplayClass5_0_tA1E1DFFF2C5364FAA7BC371FF3634C2D4F187D7C* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* G_B2_0 = NULL;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* G_B1_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:68>
+		RuntimeObject* L_0 = __this->___panel;
+		NullCheck(L_0);
+		InterfaceActionInvoker1< bool >::Invoke(5, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_0, (bool)0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:69>
+		RuntimeObject* L_1 = __this->___panel;
+		NullCheck(L_1);
+		InterfaceActionInvoker1< bool >::Invoke(6, IOverlayPanel_t58B7A16DDAA405E00904580FAD6117C70C4A2E49_il2cpp_TypeInfo_var, L_1, (bool)0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:71>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_2 = __this->___onCompleted;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_3 = L_2;
+		if (L_3)
+		{
+			G_B2_0 = L_3;
+			goto IL_0027;
+		}
+		G_B1_0 = L_3;
+	}
+	{
+		goto IL_002d;
+	}
+
+IL_0027:
+	{
+		NullCheck(G_B2_0);
+		SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline(G_B2_0, NULL);
+	}
+
+IL_002d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/Overlay.cs:72>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105624
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OverlayPreInitializer_PreInit_mE64A0CC478223F097FA2C9077D3015F68D82940A (OverlayPreInitializer_t6B0EA8EAB2F860021D6CD1682E1ED24BDF125359* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/OverlayPreInitializer.cs:16>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
+		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* L_1 = (Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470*)il2cpp_codegen_object_new(Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470_il2cpp_TypeInfo_var);
+		Overlay__ctor_m9BD918D0119C7A9026E52802178B02242AD6E2FC(L_1, L_0, NULL);
+		__this->___overlay = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___overlay), (void*)L_1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/OverlayPreInitializer.cs:17>
+		return;
+	}
+}
+// Method Definition Index: 105625
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OverlayPreInitializer_OnDestroy_m7DE3C5A5C5401684FAA3420E3ACA102A89D48442 (OverlayPreInitializer_t6B0EA8EAB2F860021D6CD1682E1ED24BDF125359* __this, const RuntimeMethod* method) 
+{
+	Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* G_B2_0 = NULL;
+	Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* G_B1_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/OverlayPreInitializer.cs:21>
+		Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* L_0 = __this->___overlay;
+		Overlay_t35AD648AE06F8214AFD0FD77CC75B8574C155470* L_1 = L_0;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_000d;
+		}
+		G_B1_0 = L_1;
+	}
+	{
+		goto IL_0013;
+	}
+
+IL_000d:
+	{
+		NullCheck(G_B2_0);
+		Overlay_Unload_m6B08B45186331042942EDDE0653D8E8A9113DF8B(G_B2_0, NULL);
+	}
+
+IL_0013:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Overlay/OverlayPreInitializer.cs:22>
+		return;
+	}
+}
+// Method Definition Index: 105626
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OverlayPreInitializer__ctor_m9B46E710F04265ACE660F394760C291A00CAD9CE (OverlayPreInitializer_t6B0EA8EAB2F860021D6CD1682E1ED24BDF125359* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105627
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SafeAreaAdapter_get_TopOffset_mF6E21296BED4474B62BAD829504641CD31784126 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:25>
+		float L_0 = __this->___U3CTopOffsetU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 105628
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_set_TopOffset_mF17FE596BAF7A95663E2264B76BB9724FDC17413 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:25>
+		float L_0 = ___0_value;
+		__this->___U3CTopOffsetU3Ek__BackingField = L_0;
+		return;
+	}
+}
+// Method Definition Index: 105629
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SafeAreaAdapter_get_BottomOffset_mBD09AA818EEDE7FFF294C37B9FEEA67A488E1C4D (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:27>
+		float L_0 = __this->___U3CBottomOffsetU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 105630
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_set_BottomOffset_mB446A62D985B572782ED85E6BDC004D253112372 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:27>
+		float L_0 = ___0_value;
+		__this->___U3CBottomOffsetU3Ek__BackingField = L_0;
+		return;
+	}
+}
+// Method Definition Index: 105631
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter__ctor_mC8D0B5DDC35731A5A7C193D47F4E6FF80BC44BED (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_virtualResolution, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_mB409389286D75D819DEC0E92E1A99C79A3F4F48C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1__ctor_m73C0176B824C61D374CE302608362C3D17B136CC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:17>
+		HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* L_0 = (HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E*)il2cpp_codegen_object_new(HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E_il2cpp_TypeInfo_var);
+		HashSet_1__ctor_m73C0176B824C61D374CE302608362C3D17B136CC(L_0, HashSet_1__ctor_m73C0176B824C61D374CE302608362C3D17B136CC_RuntimeMethod_var);
+		__this->___registeredTransforms = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___registeredTransforms), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:18>
+		Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* L_1 = (Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6*)il2cpp_codegen_object_new(Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_mB409389286D75D819DEC0E92E1A99C79A3F4F48C(L_1, Dictionary_2__ctor_mB409389286D75D819DEC0E92E1A99C79A3F4F48C_RuntimeMethod_var);
+		__this->___extraOffsets = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___extraOffsets), (void*)L_1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:20>
+		il2cpp_codegen_runtime_class_init_inline(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_2;
+		L_2 = Rect_get_zero_m5341D8B63DEF1F4C308A685EEC8CFEA12A396C8D_inline(NULL);
+		__this->___lastSafeArea = L_2;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:21>
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_3;
+		L_3 = Vector2Int_get_zero_mF92C338E9CB9434105090E675E04D20A29649553_inline(NULL);
+		__this->___lastScreenSize = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:22>
+		__this->___lastOrientation = 5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:31>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:33>
+		((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance), (void*)__this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:35>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___0_virtualResolution;
+		__this->___virtualResolution = L_4;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:37>
+		SafeAreaAdapter_RefreshInternal_mEA1A1C718DFB04F7F5E8C7A7A527415DDC04F0D5(__this, (bool)1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:38>
+		return;
+	}
+}
+// Method Definition Index: 105632
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RegisterInternal_m90C58C2A945F502617B13EC02B28772997EE69EC (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rectTransform, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Add_m69AA32A31BC3001FE0F1C4DDAA04483462F39F69_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:44>
+		HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* L_0 = __this->___registeredTransforms;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_1 = ___0_rectTransform;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = HashSet_1_Add_m69AA32A31BC3001FE0F1C4DDAA04483462F39F69(L_0, L_1, HashSet_1_Add_m69AA32A31BC3001FE0F1C4DDAA04483462F39F69_RuntimeMethod_var);
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:45>
+		SafeAreaAdapter_RefreshInternal_mEA1A1C718DFB04F7F5E8C7A7A527415DDC04F0D5(__this, (bool)1, NULL);
+	}
+
+IL_0019:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:46>
+		return;
+	}
+}
+// Method Definition Index: 105633
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_UnregisterInternal_m56EF4D5552A87868E928153FF395012EB7E86DB8 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rectTransform, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Remove_m4E0DBD4CE9D61E8A4374984A7A7E24F29152F40B_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:50>
+		HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* L_0 = __this->___registeredTransforms;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_1 = ___0_rectTransform;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = HashSet_1_Remove_m4E0DBD4CE9D61E8A4374984A7A7E24F29152F40B(L_0, L_1, HashSet_1_Remove_m4E0DBD4CE9D61E8A4374984A7A7E24F29152F40B_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:51>
+		return;
+	}
+}
+// Method Definition Index: 105634
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_SetOffsetInternal_m81F2F1606519A93B33411B1B243718F3102C4D75 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, String_t* ___0_key, float ___1_bottom, float ___2_top, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m19939A7C035F2910914A45B3FEC17311A78CBB8C_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:55>
+		Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* L_0 = __this->___extraOffsets;
+		String_t* L_1 = ___0_key;
+		float L_2 = ___1_bottom;
+		float L_3 = ___2_top;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
+		memset((&L_4), 0, sizeof(L_4));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_4), L_2, L_3, NULL);
+		NullCheck(L_0);
+		Dictionary_2_set_Item_m19939A7C035F2910914A45B3FEC17311A78CBB8C(L_0, L_1, L_4, Dictionary_2_set_Item_m19939A7C035F2910914A45B3FEC17311A78CBB8C_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:56>
+		SafeAreaAdapter_RefreshInternal_mEA1A1C718DFB04F7F5E8C7A7A527415DDC04F0D5(__this, (bool)1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:57>
+		return;
+	}
+}
+// Method Definition Index: 105635
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RemoveOffsetInternal_m738834116F63746AEBE80B40D3E94516D257899B (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, String_t* ___0_key, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Remove_mF2F9034A6072AEA10B25BDABC9E3D05F20CD897E_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:61>
+		Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* L_0 = __this->___extraOffsets;
+		String_t* L_1 = ___0_key;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = Dictionary_2_Remove_mF2F9034A6072AEA10B25BDABC9E3D05F20CD897E(L_0, L_1, Dictionary_2_Remove_mF2F9034A6072AEA10B25BDABC9E3D05F20CD897E_RuntimeMethod_var);
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:62>
+		SafeAreaAdapter_RefreshInternal_mEA1A1C718DFB04F7F5E8C7A7A527415DDC04F0D5(__this, (bool)1, NULL);
+	}
+
+IL_0019:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:63>
+		return;
+	}
+}
+// Method Definition Index: 105636
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RefreshInternal_mEA1A1C718DFB04F7F5E8C7A7A527415DDC04F0D5 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, bool ___0_force, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	int32_t G_B6_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:67>
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_0;
+		L_0 = Screen_get_safeArea_m2ADAD6C36CC5DB40CC2DAD300DD1DF7CA4DF2525(NULL);
+		V_0 = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:69>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:70>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:71>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:72>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:73>
+		bool L_1 = ___0_force;
+		if (L_1)
+		{
+			goto IL_004b;
+		}
+	}
+	{
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_2 = V_0;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_3 = __this->___lastSafeArea;
+		il2cpp_codegen_runtime_class_init_inline(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Rect_op_Equality_mF2A038255CAF5F1E86079B9EE0FC96DE54307C1F_inline(L_2, L_3, NULL);
+		if (!L_4)
+		{
+			goto IL_004b;
+		}
+	}
+	{
+		int32_t L_5;
+		L_5 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_6 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___lastScreenSize);
+		int32_t L_7;
+		L_7 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_6, NULL);
+		if ((!(((uint32_t)L_5) == ((uint32_t)L_7))))
+		{
+			goto IL_004b;
+		}
+	}
+	{
+		int32_t L_8;
+		L_8 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_9 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___lastScreenSize);
+		int32_t L_10;
+		L_10 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_9, NULL);
+		if ((!(((uint32_t)L_8) == ((uint32_t)L_10))))
+		{
+			goto IL_004b;
+		}
+	}
+	{
+		int32_t L_11;
+		L_11 = Screen_get_orientation_mA6B22A441187D50831B2B18CA48A8F64BD1BD89E(NULL);
+		int32_t L_12 = __this->___lastOrientation;
+		G_B6_0 = ((((int32_t)L_11) == ((int32_t)L_12))? 1 : 0);
+		goto IL_004c;
+	}
+
+IL_004b:
+	{
+		G_B6_0 = 0;
+	}
+
+IL_004c:
+	{
+		V_1 = (bool)G_B6_0;
+		bool L_13 = V_1;
+		if (!L_13)
+		{
+			goto IL_0053;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:75>
+		goto IL_0082;
+	}
+
+IL_0053:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:78>
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_14 = V_0;
+		__this->___lastSafeArea = L_14;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:79>
+		int32_t L_15;
+		L_15 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
+		int32_t L_16;
+		L_16 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_17;
+		memset((&L_17), 0, sizeof(L_17));
+		Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline((&L_17), L_15, L_16, NULL);
+		__this->___lastScreenSize = L_17;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:80>
+		int32_t L_18;
+		L_18 = Screen_get_orientation_mA6B22A441187D50831B2B18CA48A8F64BD1BD89E(NULL);
+		__this->___lastOrientation = L_18;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:82>
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_19 = V_0;
+		SafeAreaAdapter_ApplySafeArea_mB34ADCBB2C8795F7DA7E1C100704E451D1A3B032(__this, L_19, NULL);
+	}
+
+IL_0082:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:83>
+		return;
+	}
+}
+// Method Definition Index: 105637
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_ApplySafeArea_mB34ADCBB2C8795F7DA7E1C100704E451D1A3B032 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_rect, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Values_m040534BCB2F486CE7A528714A553FE3D7D86E62F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m8809033D555BC1DCF1C3A1305CBB424DE4F42097_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_mFBDFA82181DBA00ACBD65938D09DEB086CAAF4B7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m03502D5E010405800A6A2FD950FF32C0D5EF4F2A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mBED14BECD6E95194791D11CD7EB0813F7C85721D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m85CB1C54F971036580F7F9D9C66E5865773559AD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mBD45F4BA44FD09AF03784E50E3194A5AF8EC0480_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_GetEnumerator_m82777515B3B7F3853B6CA5F0DD6D06E105B5AD50_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_RemoveWhere_m7610D53CB3906D96BD5D254317C391863AF1F5B6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CApplySafeAreaU3Eb__22_0_m3E385D148DEFA984128E058847E804687F348949_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ValueCollection_GetEnumerator_m4E213752D3A33BC8225460C69272A06F37D03906_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	float V_4 = 0.0f;
+	float V_5 = 0.0f;
+	Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985 V_6;
+	memset((&V_6), 0, sizeof(V_6));
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_7;
+	memset((&V_7), 0, sizeof(V_7));
+	bool V_8 = false;
+	bool V_9 = false;
+	Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA V_10;
+	memset((&V_10), 0, sizeof(V_10));
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* V_11 = NULL;
+	int32_t G_B9_0 = 0;
+	int32_t G_B16_0 = 0;
+	Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* G_B20_0 = NULL;
+	HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* G_B20_1 = NULL;
+	Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* G_B19_0 = NULL;
+	HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* G_B19_1 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:87>
+		V_0 = (0.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:88>
+		V_1 = (0.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:90>
+		Dictionary_2_t332A957C07F56A23F858DF390B9A1CCAE2F36FB6* L_0 = __this->___extraOffsets;
+		NullCheck(L_0);
+		ValueCollection_t0434EE386C6AC48448DC16F2C8D03B511F9AC3CB* L_1;
+		L_1 = Dictionary_2_get_Values_m040534BCB2F486CE7A528714A553FE3D7D86E62F(L_0, Dictionary_2_get_Values_m040534BCB2F486CE7A528714A553FE3D7D86E62F_RuntimeMethod_var);
+		NullCheck(L_1);
+		Enumerator_t05E462720118266B13B5BED485BAEB4A45EE8985 L_2;
+		L_2 = ValueCollection_GetEnumerator_m4E213752D3A33BC8225460C69272A06F37D03906(L_1, ValueCollection_GetEnumerator_m4E213752D3A33BC8225460C69272A06F37D03906_RuntimeMethod_var);
+		V_6 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_004c:
+			{
+				Enumerator_Dispose_m8809033D555BC1DCF1C3A1305CBB424DE4F42097((&V_6), Enumerator_Dispose_m8809033D555BC1DCF1C3A1305CBB424DE4F42097_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_0041_1;
+			}
+
+IL_0022_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:90>
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_3;
+				L_3 = Enumerator_get_Current_m85CB1C54F971036580F7F9D9C66E5865773559AD_inline((&V_6), Enumerator_get_Current_m85CB1C54F971036580F7F9D9C66E5865773559AD_RuntimeMethod_var);
+				V_7 = L_3;
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:92>
+				float L_4 = V_0;
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_5 = V_7;
+				float L_6 = L_5.___x;
+				V_0 = ((float)il2cpp_codegen_add(L_4, L_6));
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:93>
+				float L_7 = V_1;
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8 = V_7;
+				float L_9 = L_8.___y;
+				V_1 = ((float)il2cpp_codegen_add(L_7, L_9));
+			}
+
+IL_0041_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:90>
+				bool L_10;
+				L_10 = Enumerator_MoveNext_mBED14BECD6E95194791D11CD7EB0813F7C85721D((&V_6), Enumerator_MoveNext_mBED14BECD6E95194791D11CD7EB0813F7C85721D_RuntimeMethod_var);
+				if (L_10)
+				{
+					goto IL_0022_1;
+				}
+			}
+			{
+				goto IL_005b;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_005b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:96>
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* L_11 = (&___0_rect);
+		il2cpp_codegen_runtime_class_init_inline(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		float L_12;
+		L_12 = Rect_get_y_mC733E8D49F3CE21B2A3D40A1B72D687F22C97F49_inline(L_11, NULL);
+		float L_13 = V_0;
+		Rect_set_y_mDE91F4B98A6E8623EFB1250FF6526D5DB5855629_inline(L_11, ((float)il2cpp_codegen_add(L_12, L_13)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:97>
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* L_14 = (&___0_rect);
+		float L_15;
+		L_15 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline(L_14, NULL);
+		float L_16 = V_0;
+		float L_17 = V_1;
+		Rect_set_height_mD00038E6E06637137A5626CA8CD421924005BF03_inline(L_14, ((float)il2cpp_codegen_subtract(L_15, ((float)il2cpp_codegen_add(L_16, L_17)))), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:100>
+		int32_t L_18;
+		L_18 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
+		if ((((int32_t)L_18) <= ((int32_t)0)))
+		{
+			goto IL_0092;
+		}
+	}
+	{
+		int32_t L_19;
+		L_19 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
+		G_B9_0 = ((((int32_t)((((int32_t)L_19) > ((int32_t)0))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_0093;
+	}
+
+IL_0092:
+	{
+		G_B9_0 = 1;
+	}
+
+IL_0093:
+	{
+		V_8 = (bool)G_B9_0;
+		bool L_20 = V_8;
+		if (!L_20)
+		{
+			goto IL_009e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:100>
+		goto IL_0200;
+	}
+
+IL_009e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:102>
+		il2cpp_codegen_runtime_class_init_inline(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21;
+		L_21 = Rect_get_position_m9B7E583E67443B6F4280A676E644BB0B9E7C4E38_inline((&___0_rect), NULL);
+		V_2 = L_21;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:103>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_22;
+		L_22 = Rect_get_position_m9B7E583E67443B6F4280A676E644BB0B9E7C4E38_inline((&___0_rect), NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23;
+		L_23 = Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline((&___0_rect), NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_24;
+		L_24 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_22, L_23, NULL);
+		V_3 = L_24;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:108>
+		int32_t L_25;
+		L_25 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_26 = V_3;
+		float L_27 = L_26.___x;
+		float L_28;
+		L_28 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(((float)L_25), L_27, NULL);
+		V_4 = L_28;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:109>
+		int32_t L_29;
+		L_29 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_30 = V_3;
+		float L_31 = L_30.___y;
+		float L_32;
+		L_32 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(((float)L_29), L_31, NULL);
+		V_5 = L_32;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:111>
+		float* L_33 = (float*)(&(&V_2)->___x);
+		float* L_34 = L_33;
+		float L_35 = *((float*)L_34);
+		float L_36 = V_4;
+		*((float*)L_34) = (float)((float)(L_35/L_36));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:112>
+		float* L_37 = (float*)(&(&V_2)->___y);
+		float* L_38 = L_37;
+		float L_39 = *((float*)L_38);
+		float L_40 = V_5;
+		*((float*)L_38) = (float)((float)(L_39/L_40));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:113>
+		float* L_41 = (float*)(&(&V_3)->___x);
+		float* L_42 = L_41;
+		float L_43 = *((float*)L_42);
+		float L_44 = V_4;
+		*((float*)L_42) = (float)((float)(L_43/L_44));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:114>
+		float* L_45 = (float*)(&(&V_3)->___y);
+		float* L_46 = L_45;
+		float L_47 = *((float*)L_46);
+		float L_48 = V_5;
+		*((float*)L_46) = (float)((float)(L_47/L_48));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:118>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_49 = V_2;
+		float L_50 = L_49.___x;
+		if ((((float)L_50) < ((float)(0.0f))))
+		{
+			goto IL_014a;
+		}
+	}
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_51 = V_2;
+		float L_52 = L_51.___y;
+		if ((((float)L_52) < ((float)(0.0f))))
+		{
+			goto IL_014a;
+		}
+	}
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_53 = V_3;
+		float L_54 = L_53.___x;
+		if ((((float)L_54) < ((float)(0.0f))))
+		{
+			goto IL_014a;
+		}
+	}
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_55 = V_3;
+		float L_56 = L_55.___y;
+		G_B16_0 = ((((float)L_56) < ((float)(0.0f)))? 1 : 0);
+		goto IL_014b;
+	}
+
+IL_014a:
+	{
+		G_B16_0 = 1;
+	}
+
+IL_014b:
+	{
+		V_9 = (bool)G_B16_0;
+		bool L_57 = V_9;
+		if (!L_57)
+		{
+			goto IL_0156;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:118>
+		goto IL_0200;
+	}
+
+IL_0156:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:120>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_58 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___virtualResolution);
+		float L_59 = L_58->___y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_60 = V_3;
+		float L_61 = L_60.___y;
+		SafeAreaAdapter_set_TopOffset_mF17FE596BAF7A95663E2264B76BB9724FDC17413_inline(__this, ((float)il2cpp_codegen_multiply(L_59, ((float)il2cpp_codegen_subtract((1.0f), L_61)))), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:121>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_62 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___virtualResolution);
+		float L_63 = L_62->___y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_64 = V_2;
+		float L_65 = L_64.___y;
+		SafeAreaAdapter_set_BottomOffset_mB446A62D985B572782ED85E6BDC004D253112372_inline(__this, ((float)il2cpp_codegen_multiply(L_63, L_65)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:123>
+		HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* L_66 = __this->___registeredTransforms;
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var);
+		Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* L_67 = ((U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var))->___U3CU3E9__22_0;
+		Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* L_68 = L_67;
+		if (L_68)
+		{
+			G_B20_0 = L_68;
+			G_B20_1 = L_66;
+			goto IL_01b3;
+		}
+		G_B19_0 = L_68;
+		G_B19_1 = L_66;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var);
+		U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638* L_69 = ((U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var))->___U3CU3E9;
+		Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* L_70 = (Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E*)il2cpp_codegen_object_new(Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E_il2cpp_TypeInfo_var);
+		Predicate_1__ctor_m93F0D1AA8F3AB378C17C6F329C589FC7DBC9D8D2(L_70, L_69, (intptr_t)((void*)U3CU3Ec_U3CApplySafeAreaU3Eb__22_0_m3E385D148DEFA984128E058847E804687F348949_RuntimeMethod_var), NULL);
+		Predicate_1_t5918EA744A0A34D53628870F7DD47C8130E8CF4E* L_71 = L_70;
+		((U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var))->___U3CU3E9__22_0 = L_71;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var))->___U3CU3E9__22_0), (void*)L_71);
+		G_B20_0 = L_71;
+		G_B20_1 = G_B19_1;
+	}
+
+IL_01b3:
+	{
+		NullCheck(G_B20_1);
+		int32_t L_72;
+		L_72 = HashSet_1_RemoveWhere_m7610D53CB3906D96BD5D254317C391863AF1F5B6(G_B20_1, G_B20_0, HashSet_1_RemoveWhere_m7610D53CB3906D96BD5D254317C391863AF1F5B6_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:125>
+		HashSet_1_tFFBF4F1085883765CE38D3961197558BD848389E* L_73 = __this->___registeredTransforms;
+		NullCheck(L_73);
+		Enumerator_tB4FE438A0933BFD9184E2615561F416F2209DDAA L_74;
+		L_74 = HashSet_1_GetEnumerator_m82777515B3B7F3853B6CA5F0DD6D06E105B5AD50(L_73, HashSet_1_GetEnumerator_m82777515B3B7F3853B6CA5F0DD6D06E105B5AD50_RuntimeMethod_var);
+		V_10 = L_74;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_01f1:
+			{
+				Enumerator_Dispose_mFBDFA82181DBA00ACBD65938D09DEB086CAAF4B7((&V_10), Enumerator_Dispose_mFBDFA82181DBA00ACBD65938D09DEB086CAAF4B7_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_01e6_1;
+			}
+
+IL_01c9_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:125>
+				RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_75;
+				L_75 = Enumerator_get_Current_mBD45F4BA44FD09AF03784E50E3194A5AF8EC0480_inline((&V_10), Enumerator_get_Current_mBD45F4BA44FD09AF03784E50E3194A5AF8EC0480_RuntimeMethod_var);
+				V_11 = L_75;
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:127>
+				RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_76 = V_11;
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_77 = V_2;
+				NullCheck(L_76);
+				RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_76, L_77, NULL);
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:128>
+				RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_78 = V_11;
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_79 = V_3;
+				NullCheck(L_78);
+				RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_78, L_79, NULL);
+			}
+
+IL_01e6_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:125>
+				bool L_80;
+				L_80 = Enumerator_MoveNext_m03502D5E010405800A6A2FD950FF32C0D5EF4F2A((&V_10), Enumerator_MoveNext_m03502D5E010405800A6A2FD950FF32C0D5EF4F2A_RuntimeMethod_var);
+				if (L_80)
+				{
+					goto IL_01c9_1;
+				}
+			}
+			{
+				goto IL_0200;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0200:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:130>
+		return;
+	}
+}
+// Method Definition Index: 105638
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RegisterRectTransform_m9B4E4A8E2013D27E341A5F54C6B92DC0EDB0E101 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rectTransform, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:137>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_0 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((((RuntimeObject*)(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:137>
+		LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF(_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:137>
+		goto IL_0028;
+	}
+
+IL_001c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:138>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_2 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_3 = ___0_rectTransform;
+		NullCheck(L_2);
+		SafeAreaAdapter_RegisterInternal_m90C58C2A945F502617B13EC02B28772997EE69EC(L_2, L_3, NULL);
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:139>
+		return;
+	}
+}
+// Method Definition Index: 105639
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_UnregisterRectTransform_m84F449B65F49E5131B1932A5729AD7BBE62DC949 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rectTransform, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:144>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_0 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((((RuntimeObject*)(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:144>
+		LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF(_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:144>
+		goto IL_0028;
+	}
+
+IL_001c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:145>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_2 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_3 = ___0_rectTransform;
+		NullCheck(L_2);
+		SafeAreaAdapter_UnregisterInternal_m56EF4D5552A87868E928153FF395012EB7E86DB8(L_2, L_3, NULL);
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:146>
+		return;
+	}
+}
+// Method Definition Index: 105640
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_SetOffset_m597B39D7D8A1262802BD5293FD923C487A3AFFFA (String_t* ___0_key, float ___1_bottom, float ___2_top, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:155>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_0 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((((RuntimeObject*)(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:155>
+		LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF(_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:155>
+		goto IL_002a;
+	}
+
+IL_001c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:156>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_2 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		String_t* L_3 = ___0_key;
+		float L_4 = ___1_bottom;
+		float L_5 = ___2_top;
+		NullCheck(L_2);
+		SafeAreaAdapter_SetOffsetInternal_m81F2F1606519A93B33411B1B243718F3102C4D75(L_2, L_3, L_4, L_5, NULL);
+	}
+
+IL_002a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:157>
+		return;
+	}
+}
+// Method Definition Index: 105641
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_RemoveOffset_mA89280A7DF78330985094079ACA671310D1C5594 (String_t* ___0_key, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:161>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_0 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((((RuntimeObject*)(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:161>
+		LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF(_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:161>
+		goto IL_0028;
+	}
+
+IL_001c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:162>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_2 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		String_t* L_3 = ___0_key;
+		NullCheck(L_2);
+		SafeAreaAdapter_RemoveOffsetInternal_m738834116F63746AEBE80B40D3E94516D257899B(L_2, L_3, NULL);
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:163>
+		return;
+	}
+}
+// Method Definition Index: 105642
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_Refresh_m357DFDC7CBFE2DD3F2D84CADF80C9ECB4B5632F4 (bool ___0_force, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:171>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_0 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((((RuntimeObject*)(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:171>
+		LogManager_LogWarning_m74B9AA83FBA81D70B4A3AE3F3482A5F496C157FF(_stringLiteral3DFE01550773A059C3572B19EF3216ACE31B2001, 1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:171>
+		goto IL_0028;
+	}
+
+IL_001c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:172>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_2 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		bool L_3 = ___0_force;
+		NullCheck(L_2);
+		SafeAreaAdapter_RefreshInternal_mEA1A1C718DFB04F7F5E8C7A7A527415DDC04F0D5(L_2, L_3, NULL);
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:173>
+		return;
+	}
+}
+// Method Definition Index: 105643
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SafeAreaAdapter_GetTopOffset_mD4156687CA5C942415115E3A82817C7540C773E9 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float G_B3_0 = 0.0f;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:175>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_0 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		G_B3_0 = (0.0f);
+		goto IL_0018;
+	}
+
+IL_000e:
+	{
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_1 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_1);
+		float L_2;
+		L_2 = SafeAreaAdapter_get_TopOffset_mF6E21296BED4474B62BAD829504641CD31784126_inline(L_1, NULL);
+		G_B3_0 = L_2;
+	}
+
+IL_0018:
+	{
+		return G_B3_0;
+	}
+}
+// Method Definition Index: 105644
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SafeAreaAdapter_GetBottomOffset_mCDE2DF022320138F6E2ECF5BE609B2A1355E52E7 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float G_B3_0 = 0.0f;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:176>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_0 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		G_B3_0 = (0.0f);
+		goto IL_0018;
+	}
+
+IL_000e:
+	{
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_1 = ((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_1);
+		float L_2;
+		L_2 = SafeAreaAdapter_get_BottomOffset_mBD09AA818EEDE7FFF294C37B9FEEA67A488E1C4D_inline(L_1, NULL);
+		G_B3_0 = L_2;
+	}
+
+IL_0018:
+	{
+		return G_B3_0;
+	}
+}
+// Method Definition Index: 105645
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaAdapter_Unload_m55D2D928236885DBE56BD612319F201595987B02 (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:180>
+		((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance = (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_StaticFields*)il2cpp_codegen_static_fields_for(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var))->___instance), (void*)(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:181>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105646
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m379910D9F4A15D728B2FCE455ECD50E9121FA9F9 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638* L_0 = (U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638*)il2cpp_codegen_object_new(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var);
+		U3CU3Ec__ctor_m128E61E8EE847DE54AF3552E6FE867F1BFE8AD49(L_0, NULL);
+		((U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var))->___U3CU3E9 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638_il2cpp_TypeInfo_var))->___U3CU3E9), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 105647
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m128E61E8EE847DE54AF3552E6FE867F1BFE8AD49 (U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 105648
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CApplySafeAreaU3Eb__22_0_m3E385D148DEFA984128E058847E804687F348949 (U3CU3Ec_tAC502E8CFD793918C2047C4A0BF4831220C11638* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_t, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:123>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = ___0_t;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		return L_1;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105649
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaElement_Awake_m762C3FA4134B3AD4FADC849DDFC339177C281F63 (SafeAreaElement_t8B64F2DE1B5582295162D62146D93756A80E7060* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:17>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0;
+		L_0 = Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4(__this, Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var);
+		__this->___rectTransform = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___rectTransform), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:18>
+		return;
+	}
+}
+// Method Definition Index: 105650
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaElement_OnEnable_m693EFA112816E0E5E40E82417A4EAF03DAC9D5A4 (SafeAreaElement_t8B64F2DE1B5582295162D62146D93756A80E7060* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:22>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___rectTransform;
+		SafeAreaAdapter_RegisterRectTransform_m9B4E4A8E2013D27E341A5F54C6B92DC0EDB0E101(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:23>
+		return;
+	}
+}
+// Method Definition Index: 105651
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaElement_OnDisable_mAF967D77CDF32D02D8EA6AF47DBB4995CF5B9E6B (SafeAreaElement_t8B64F2DE1B5582295162D62146D93756A80E7060* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:27>
+		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___rectTransform;
+		SafeAreaAdapter_UnregisterRectTransform_m84F449B65F49E5131B1932A5729AD7BBE62DC949(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:28>
+		return;
+	}
+}
+// Method Definition Index: 105652
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaElement_Watermelon_IUIPageElement_Init_m7EE6E7E9849A9BAEF48A2E45D49761C5E79C4CFF (SafeAreaElement_t8B64F2DE1B5582295162D62146D93756A80E7060* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:30>
+		return;
+	}
+}
+// Method Definition Index: 105653
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaElement_Watermelon_IUIPageElement_OnPageStateChanged_mD2146448CA1AA343FE320604F4A40AE0844756F6 (SafeAreaElement_t8B64F2DE1B5582295162D62146D93756A80E7060* __this, bool ___0_state, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:34>
+		bool L_0 = ___0_state;
+		V_0 = L_0;
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:35>
+		SafeAreaAdapter_Refresh_m357DFDC7CBFE2DD3F2D84CADF80C9ECB4B5632F4((bool)1, NULL);
+	}
+
+IL_000d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaElement.cs:36>
+		return;
+	}
+}
+// Method Definition Index: 105654
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeAreaElement__ctor_mD44463B48931360015465EFCA4A4CA561285D366 (SafeAreaElement_t8B64F2DE1B5582295162D62146D93756A80E7060* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105655
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* UIController_get_Pages_mF2B31E4A4421B32EBE4342D20B7448483FF85BC2 (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:27>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_0 = __this->___pages;
+		return L_0;
+	}
+}
+// Method Definition Index: 105656
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* UIController_get_PagesLink_m21DAD05FC0A2D0659B098F18DA4E194784FEA6D5 (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:31>
+		Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* L_0 = __this->___pagesLink;
+		return L_0;
+	}
+}
+// Method Definition Index: 105657
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIController_get_IsPopupOpened_m7408ABD61A79B9DBFACF10383C3E88C0490F0B20 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_get_Count_m16FF6E9136F088478194E5B586339A73549A0A84_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD80DC9F9016B1E68CC8B57C3A57284FB28E77B22);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:39>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:41>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralD80DC9F9016B1E68CC8B57C3A57284FB28E77B22, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:43>
+		V_1 = (bool)0;
+		goto IL_0035;
+	}
+
+IL_0020:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:46>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_3 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_3);
+		HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* L_4 = L_3->___popupWindows;
+		NullCheck(L_4);
+		int32_t L_5;
+		L_5 = HashSet_1_get_Count_m16FF6E9136F088478194E5B586339A73549A0A84_inline(L_4, HashSet_1_get_Count_m16FF6E9136F088478194E5B586339A73549A0A84_RuntimeMethod_var);
+		V_1 = (bool)((((int32_t)L_5) > ((int32_t)0))? 1 : 0);
+		goto IL_0035;
+	}
+
+IL_0035:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:47>
+		bool L_6 = V_1;
+		return L_6;
+	}
+}
+// Method Definition Index: 105658
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* UIController_get_PausePopups_mE570BC2F311E86A8BB48E205CAA9F4B7DAFE8C6E (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:52>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_0 = __this->___pausePopups;
+		return L_0;
+	}
+}
+// Method Definition Index: 105659
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIController_get_IsPausePopupOpened_mE0564D100FB16D961A8C713B267C50FFD6E6A9E0 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:55>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_2 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_2);
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_3 = L_2->___pausePopups;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_inline(L_3, List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var);
+		G_B3_0 = ((((int32_t)L_4) > ((int32_t)0))? 1 : 0);
+		goto IL_0022;
+	}
+
+IL_0021:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0022:
+	{
+		return (bool)G_B3_0;
+	}
+}
+// Method Definition Index: 105660
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* UIController_get_MainCanvas_mF8490D4A254D69AB5F7524641F19EFF7D8CD1252 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:59>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___mainCanvas;
+		return L_0;
+	}
+}
+// Method Definition Index: 105661
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* UIController_get_CanvasScaler_m0DAB93EE039A788DDA7B29C751265FA34BFA14D0 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:61>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CCanvasScalerU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 105662
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_set_CanvasScaler_mFC04287E45ADF834175A25AACB7ED9D39D1E1541 (CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:61>
+		CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* L_0 = ___0_value;
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CCanvasScalerU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CCanvasScalerU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 105663
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UIController_get_ScaleFactor_mFDE78C23591D7F4DBA187471C682594E5AF85BFF (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:66>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		float L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CScaleFactorU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 105664
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_set_ScaleFactor_mB4C745F05304FEA34F8106493F4D268FB12ACA8D (float ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:66>
+		float L_0 = ___0_value;
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CScaleFactorU3Ek__BackingField = L_0;
+		return;
+	}
+}
+// Method Definition Index: 105665
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_add_PageOpened_m60205C98AF4D99C6140C39D5D65265B6866F0017 (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_0 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_1 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageOpened;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_1 = V_0;
+		V_1 = L_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_2 = V_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00(L_2, L_3, NULL);
+		V_2 = ((PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)CastclassSealed((RuntimeObject*)L_4, PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_5 = V_2;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_6 = V_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_7;
+		L_7 = InterlockedCompareExchangeImpl<PageCallback_tB109469A96FD014B01B51D47343D68F643405291*>((&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageOpened), L_5, L_6);
+		V_0 = L_7;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_8 = V_0;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_9 = V_1;
+		if ((!(((RuntimeObject*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)L_8) == ((RuntimeObject*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 105666
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_remove_PageOpened_mAB2A9D250071799E3B1C20930C54C9589609230B (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_0 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_1 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageOpened;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_1 = V_0;
+		V_1 = L_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_2 = V_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3(L_2, L_3, NULL);
+		V_2 = ((PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)CastclassSealed((RuntimeObject*)L_4, PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_5 = V_2;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_6 = V_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_7;
+		L_7 = InterlockedCompareExchangeImpl<PageCallback_tB109469A96FD014B01B51D47343D68F643405291*>((&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageOpened), L_5, L_6);
+		V_0 = L_7;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_8 = V_0;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_9 = V_1;
+		if ((!(((RuntimeObject*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)L_8) == ((RuntimeObject*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 105667
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_add_PageClosed_m7B03A035F449B90A17C0B0133D5C58C100645B7D (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_0 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_1 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageClosed;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_1 = V_0;
+		V_1 = L_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_2 = V_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00(L_2, L_3, NULL);
+		V_2 = ((PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)CastclassSealed((RuntimeObject*)L_4, PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_5 = V_2;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_6 = V_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_7;
+		L_7 = InterlockedCompareExchangeImpl<PageCallback_tB109469A96FD014B01B51D47343D68F643405291*>((&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageClosed), L_5, L_6);
+		V_0 = L_7;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_8 = V_0;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_9 = V_1;
+		if ((!(((RuntimeObject*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)L_8) == ((RuntimeObject*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 105668
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_remove_PageClosed_mDA2527FE48779A09A2B438B8FFDA8ACDCC2AC8B6 (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_0 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_1 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageClosed;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_1 = V_0;
+		V_1 = L_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_2 = V_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3(L_2, L_3, NULL);
+		V_2 = ((PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)CastclassSealed((RuntimeObject*)L_4, PageCallback_tB109469A96FD014B01B51D47343D68F643405291_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_5 = V_2;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_6 = V_1;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_7;
+		L_7 = InterlockedCompareExchangeImpl<PageCallback_tB109469A96FD014B01B51D47343D68F643405291*>((&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageClosed), L_5, L_6);
+		V_0 = L_7;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_8 = V_0;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_9 = V_1;
+		if ((!(((RuntimeObject*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)L_8) == ((RuntimeObject*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 105669
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_add_PopupOpened_m12792B0049E69E76A8364CEDA6935745A93FA045 (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_0 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_1 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupOpened;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_1 = V_0;
+		V_1 = L_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_2 = V_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00(L_2, L_3, NULL);
+		V_2 = ((PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)CastclassSealed((RuntimeObject*)L_4, PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_5 = V_2;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_6 = V_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_7;
+		L_7 = InterlockedCompareExchangeImpl<PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*>((&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupOpened), L_5, L_6);
+		V_0 = L_7;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_8 = V_0;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_9 = V_1;
+		if ((!(((RuntimeObject*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)L_8) == ((RuntimeObject*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 105670
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_remove_PopupOpened_m90282D96DCDF34673C4F6D60646DF8985EE38927 (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_0 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_1 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupOpened;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_1 = V_0;
+		V_1 = L_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_2 = V_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3(L_2, L_3, NULL);
+		V_2 = ((PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)CastclassSealed((RuntimeObject*)L_4, PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_5 = V_2;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_6 = V_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_7;
+		L_7 = InterlockedCompareExchangeImpl<PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*>((&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupOpened), L_5, L_6);
+		V_0 = L_7;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_8 = V_0;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_9 = V_1;
+		if ((!(((RuntimeObject*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)L_8) == ((RuntimeObject*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 105671
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_add_PopupClosed_m80420D881A20CEEC59923C1CE014CA2AED0C2A5A (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_0 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_1 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupClosed;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_1 = V_0;
+		V_1 = L_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_2 = V_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00(L_2, L_3, NULL);
+		V_2 = ((PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)CastclassSealed((RuntimeObject*)L_4, PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_5 = V_2;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_6 = V_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_7;
+		L_7 = InterlockedCompareExchangeImpl<PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*>((&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupClosed), L_5, L_6);
+		V_0 = L_7;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_8 = V_0;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_9 = V_1;
+		if ((!(((RuntimeObject*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)L_8) == ((RuntimeObject*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 105672
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_remove_PopupClosed_mDA94DFB144A9DBC148E8B081F5822534F81C0EA7 (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_0 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_1 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* V_2 = NULL;
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupClosed;
+		V_0 = L_0;
+	}
+
+IL_0006:
+	{
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_1 = V_0;
+		V_1 = L_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_2 = V_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3(L_2, L_3, NULL);
+		V_2 = ((PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)CastclassSealed((RuntimeObject*)L_4, PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37_il2cpp_TypeInfo_var));
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_5 = V_2;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_6 = V_1;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_7;
+		L_7 = InterlockedCompareExchangeImpl<PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*>((&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupClosed), L_5, L_6);
+		V_0 = L_7;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_8 = V_0;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_9 = V_1;
+		if ((!(((RuntimeObject*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)L_8) == ((RuntimeObject*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)L_9))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 105673
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_Init_mA2E75AB8334C49D2B9A212CB040B56B5AEC51C67 (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B_m82FD65AA44C2243A4866779598E55571D3576DAE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_mD773970EFE7F022F1764B946090F20EDA5747872_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_mAA751E5109B5AB5C17BDA43F9968A5B3D3F92EC9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_m2B298C0786B22FC071ED51A5207F67EB7C5D0649_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m572277870319CF66320268BDAC7C26ACD9B74217_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1__ctor_mC1A0F89AA50607A3B9303A4F38BC4D57E6EEF82A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBE6E7D0823760F49D1B18B7BCDD19E38B1DA23AC);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* V_1 = NULL;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* G_B2_0 = NULL;
+	CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* G_B1_0 = NULL;
+	int32_t G_B3_0 = 0;
+	CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* G_B3_1 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:88>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController), (void*)__this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:90>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0;
+		L_0 = Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2(__this, Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___mainCanvas = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___mainCanvas), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:91>
+		CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* L_1;
+		L_1 = Component_GetComponent_TisCanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B_m82FD65AA44C2243A4866779598E55571D3576DAE(__this, Component_GetComponent_TisCanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B_m82FD65AA44C2243A4866779598E55571D3576DAE_RuntimeMethod_var);
+		UIController_set_CanvasScaler_mFC04287E45ADF834175A25AACB7ED9D39D1E1541_inline(L_1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:93>
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_2;
+		L_2 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___mainCamera = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___mainCamera), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:95>
+		CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* L_3;
+		L_3 = UIController_get_CanvasScaler_m0DAB93EE039A788DDA7B29C751265FA34BFA14D0_inline(NULL);
+		bool L_4;
+		L_4 = UIUtils_IsTablet_mC44AB4DD4C2FB5FF0FEFBEC3F6C15472D709CC70(NULL);
+		if (L_4)
+		{
+			G_B2_0 = L_3;
+			goto IL_0037;
+		}
+		G_B1_0 = L_3;
+	}
+	{
+		G_B3_0 = 0;
+		G_B3_1 = G_B1_0;
+		goto IL_0038;
+	}
+
+IL_0037:
+	{
+		G_B3_0 = 1;
+		G_B3_1 = G_B2_0;
+	}
+
+IL_0038:
+	{
+		NullCheck(G_B3_1);
+		CanvasScaler_set_matchWidthOrHeight_m44635DC3E4424255C312814C325A48E37E6B6E30(G_B3_1, ((float)G_B3_0), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:97>
+		HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* L_5 = (HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47*)il2cpp_codegen_object_new(HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47_il2cpp_TypeInfo_var);
+		HashSet_1__ctor_mC1A0F89AA50607A3B9303A4F38BC4D57E6EEF82A(L_5, HashSet_1__ctor_mC1A0F89AA50607A3B9303A4F38BC4D57E6EEF82A_RuntimeMethod_var);
+		__this->___popupWindows = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___popupWindows), (void*)L_5);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:98>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_6 = (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C*)il2cpp_codegen_object_new(List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C_il2cpp_TypeInfo_var);
+		List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602(L_6, List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602_RuntimeMethod_var);
+		__this->___pausePopups = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pausePopups), (void*)L_6);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:100>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_7 = (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C*)il2cpp_codegen_object_new(List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C_il2cpp_TypeInfo_var);
+		List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602(L_7, List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602_RuntimeMethod_var);
+		__this->___pages = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pages), (void*)L_7);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:101>
+		Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* L_8 = (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0*)il2cpp_codegen_object_new(Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m572277870319CF66320268BDAC7C26ACD9B74217(L_8, Dictionary_2__ctor_m572277870319CF66320268BDAC7C26ACD9B74217_RuntimeMethod_var);
+		__this->___pagesLink = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pagesLink), (void*)L_8);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:102>
+		V_0 = 0;
+		goto IL_00e9;
+	}
+
+IL_006f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:104>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
+		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		int32_t L_10 = V_0;
+		NullCheck(L_9);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
+		L_11 = Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF(L_9, L_10, NULL);
+		NullCheck(L_11);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_12;
+		L_12 = Component_GetComponent_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_mD773970EFE7F022F1764B946090F20EDA5747872(L_11, Component_GetComponent_TisUIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18_mD773970EFE7F022F1764B946090F20EDA5747872_RuntimeMethod_var);
+		V_1 = L_12;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:105>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_13 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_14;
+		L_14 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_13, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_2 = L_14;
+		bool L_15 = V_2;
+		if (!L_15)
+		{
+			goto IL_00e4;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:107>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_16 = V_1;
+		NullCheck(L_16);
+		UIPage_CacheComponents_mBA1ECF075A83033E52057D0792D6A0A677E26D18(L_16, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:109>
+		Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* L_17 = __this->___pagesLink;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_18 = V_1;
+		NullCheck(L_18);
+		Type_t* L_19;
+		L_19 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_18, NULL);
+		NullCheck(L_17);
+		bool L_20;
+		L_20 = Dictionary_2_ContainsKey_m2B298C0786B22FC071ED51A5207F67EB7C5D0649(L_17, L_19, Dictionary_2_ContainsKey_m2B298C0786B22FC071ED51A5207F67EB7C5D0649_RuntimeMethod_var);
+		V_3 = L_20;
+		bool L_21 = V_3;
+		if (!L_21)
+		{
+			goto IL_00c3;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:111>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_22 = V_1;
+		NullCheck(L_22);
+		Type_t* L_23;
+		L_23 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_22, NULL);
+		String_t* L_24;
+		L_24 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralBE6E7D0823760F49D1B18B7BCDD19E38B1DA23AC, L_23, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_24, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:113>
+		goto IL_00e5;
+	}
+
+IL_00c3:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:116>
+		Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* L_25 = __this->___pagesLink;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_26 = V_1;
+		NullCheck(L_26);
+		Type_t* L_27;
+		L_27 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_26, NULL);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_28 = V_1;
+		NullCheck(L_25);
+		Dictionary_2_Add_mAA751E5109B5AB5C17BDA43F9968A5B3D3F92EC9(L_25, L_27, L_28, Dictionary_2_Add_mAA751E5109B5AB5C17BDA43F9968A5B3D3F92EC9_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:118>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_29 = __this->___pages;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_30 = V_1;
+		NullCheck(L_29);
+		List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_inline(L_29, L_30, List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_RuntimeMethod_var);
+	}
+
+IL_00e4:
+	{
+	}
+
+IL_00e5:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:102>
+		int32_t L_31 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_31, 1));
+	}
+
+IL_00e9:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:102>
+		int32_t L_32 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33;
+		L_33 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_33);
+		int32_t L_34;
+		L_34 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_33, NULL);
+		V_4 = (bool)((((int32_t)L_32) < ((int32_t)L_34))? 1 : 0);
+		bool L_35 = V_4;
+		if (L_35)
+		{
+			goto IL_006f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:122>
+		CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* L_36 = __this->___cachedPages;
+		NullCheck(L_36);
+		CachedPages_Init_m267C38A3899EA796A3A9A647ACED8C1F1A968119(L_36, __this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:123>
+		return;
+	}
+}
+// Method Definition Index: 105674
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_RecalculateScaleFactor_m3B65CAEA63F9A0B0B9E02431D194D25908CFB8F7 (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float G_B3_0 = 0.0f;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:127>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* L_0;
+		L_0 = UIController_get_CanvasScaler_m0DAB93EE039A788DDA7B29C751265FA34BFA14D0_inline(NULL);
+		NullCheck(L_0);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
+		L_1 = CanvasScaler_get_referenceResolution_m79C03DD8CE6759B045928C5339A3C5E6220276B5(L_0, NULL);
+		V_0 = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:129>
+		int32_t L_2;
+		L_2 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
+		int32_t L_3;
+		L_3 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
+		V_1 = ((float)(((float)L_2)/((float)L_3)));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:130>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = V_0;
+		float L_5 = L_4.___x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = V_0;
+		float L_7 = L_6.___y;
+		V_2 = ((float)(L_5/L_7));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:132>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:133>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:134>
+		float L_8 = V_1;
+		float L_9 = V_2;
+		if ((((float)L_8) > ((float)L_9)))
+		{
+			goto IL_003b;
+		}
+	}
+	{
+		int32_t L_10;
+		L_10 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11 = V_0;
+		float L_12 = L_11.___x;
+		G_B3_0 = ((float)(((float)L_10)/L_12));
+		goto IL_0048;
+	}
+
+IL_003b:
+	{
+		int32_t L_13;
+		L_13 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14 = V_0;
+		float L_15 = L_14.___y;
+		G_B3_0 = ((float)(((float)L_13)/L_15));
+	}
+
+IL_0048:
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_set_ScaleFactor_mB4C745F05304FEA34F8106493F4D268FB12ACA8D_inline(G_B3_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:135>
+		return;
+	}
+}
+// Method Definition Index: 105675
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_InitPages_m042022A4451213489C704243DD47B916FC4CBD5B (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:144>
+		UIController_RecalculateScaleFactor_m3B65CAEA63F9A0B0B9E02431D194D25908CFB8F7(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:146>
+		int32_t L_0;
+		L_0 = Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9(NULL);
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		float L_1;
+		L_1 = UIController_get_ScaleFactor_mFDE78C23591D7F4DBA187471C682594E5AF85BFF_inline(NULL);
+		int32_t L_2;
+		L_2 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
+		float L_3;
+		L_3 = UIController_get_ScaleFactor_mFDE78C23591D7F4DBA187471C682594E5AF85BFF_inline(NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
+		memset((&L_4), 0, sizeof(L_4));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_4), ((float)(((float)L_0)/L_1)), ((float)(((float)L_2)/L_3)), NULL);
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_5 = (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373*)il2cpp_codegen_object_new(SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373_il2cpp_TypeInfo_var);
+		SafeAreaAdapter__ctor_mC8D0B5DDC35731A5A7C193D47F4E6FF80BC44BED(L_5, L_4, NULL);
+		__this->___notchSafeArea = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___notchSafeArea), (void*)L_5);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:148>
+		V_0 = 0;
+		goto IL_005e;
+	}
+
+IL_0034:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:150>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_6 = __this->___pages;
+		int32_t L_7 = V_0;
+		NullCheck(L_6);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_8;
+		L_8 = List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF(L_6, L_7, List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF_RuntimeMethod_var);
+		NullCheck(L_8);
+		UIPage_PreparePage_m9F459678D5C83320346D753D07BBAE0D5C275C63(L_8, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:151>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_9 = __this->___pages;
+		int32_t L_10 = V_0;
+		NullCheck(L_9);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_11;
+		L_11 = List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF(L_9, L_10, List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF_RuntimeMethod_var);
+		NullCheck(L_11);
+		VirtualActionInvoker0::Invoke(7, L_11);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:148>
+		int32_t L_12 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_12, 1));
+	}
+
+IL_005e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:148>
+		int32_t L_13 = V_0;
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_14 = __this->___pages;
+		NullCheck(L_14);
+		int32_t L_15;
+		L_15 = List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_inline(L_14, List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var);
+		V_1 = (bool)((((int32_t)L_13) < ((int32_t)L_15))? 1 : 0);
+		bool L_16 = V_1;
+		if (L_16)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:153>
+		return;
+	}
+}
+// Method Definition Index: 105676
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_ResetPages_mC285CB5EF9E7987CDCEA45F8F0FC33B62F7F37DB (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* V_0 = NULL;
+	bool V_1 = false;
+	List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* V_2 = NULL;
+	int32_t V_3 = 0;
+	bool V_4 = false;
+	bool V_5 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:158>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		V_0 = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:159>
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_1 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_2;
+		bool L_3 = V_1;
+		if (!L_3)
+		{
+			goto IL_0055;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:161>
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_4 = V_0;
+		NullCheck(L_4);
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_5 = L_4->___pages;
+		V_2 = L_5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:162>
+		V_3 = 0;
+		goto IL_0045;
+	}
+
+IL_001e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:164>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_6 = V_2;
+		int32_t L_7 = V_3;
+		NullCheck(L_6);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_8;
+		L_8 = List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF(L_6, L_7, List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF_RuntimeMethod_var);
+		NullCheck(L_8);
+		bool L_9;
+		L_9 = UIPage_get_IsPageDisplayed_m0004D64675E0AE6F04BD95D5A2DE847C2AE1F25F_inline(L_8, NULL);
+		V_4 = L_9;
+		bool L_10 = V_4;
+		if (!L_10)
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:166>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_11 = V_2;
+		int32_t L_12 = V_3;
+		NullCheck(L_11);
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_13;
+		L_13 = List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF(L_11, L_12, List_1_get_Item_mAF8DB5893F1010617E19B9F3F14C1355C62E5BBF_RuntimeMethod_var);
+		NullCheck(L_13);
+		UIPage_TriggerUnload_mC33FFD4B153ACD0FEFBB665A0BD9587C7A08B12F(L_13, NULL);
+	}
+
+IL_0040:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:162>
+		int32_t L_14 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_14, 1));
+	}
+
+IL_0045:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:162>
+		int32_t L_15 = V_3;
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_16 = V_2;
+		NullCheck(L_16);
+		int32_t L_17;
+		L_17 = List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_inline(L_16, List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var);
+		V_5 = (bool)((((int32_t)L_15) < ((int32_t)L_17))? 1 : 0);
+		bool L_18 = V_5;
+		if (L_18)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+	}
+
+IL_0055:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:170>
+		return;
+	}
+}
+// Method Definition Index: 105678
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_ShowPage_mB542CC9CC33FC3B331AD2D2D612C57D4F5C8363A (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD80DC9F9016B1E68CC8B57C3A57284FB28E77B22);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFDABD37D9FD1C58B1A77636B3721994D87583348);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:214>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:216>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralD80DC9F9016B1E68CC8B57C3A57284FB28E77B22, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:218>
+		goto IL_0061;
+	}
+
+IL_001e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:221>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_3 = ___0_page;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_4;
+		bool L_5 = V_1;
+		if (!L_5)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:223>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralFDABD37D9FD1C58B1A77636B3721994D87583348, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:225>
+		goto IL_0061;
+	}
+
+IL_0037:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:228>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_6 = ___0_page;
+		NullCheck(L_6);
+		bool L_7;
+		L_7 = UIPage_get_IsPageDisplayed_m0004D64675E0AE6F04BD95D5A2DE847C2AE1F25F_inline(L_6, NULL);
+		V_2 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
+		bool L_8 = V_2;
+		if (!L_8)
+		{
+			goto IL_0061;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:230>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_9 = ___0_page;
+		NullCheck(L_9);
+		GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* L_10;
+		L_10 = UIPage_get_GraphicRaycaster_mE5707F61C970219BDD7DE4E20D2D41BF9AF6C345_inline(L_9, NULL);
+		NullCheck(L_10);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_10, (bool)1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:231>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_11 = ___0_page;
+		NullCheck(L_11);
+		UIPage_TriggerShow_m9BBC87B1C051A008B450403A8262C412F64C47D9(L_11, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:232>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_12 = ___0_page;
+		NullCheck(L_12);
+		UIPage_EnableCanvas_mA8789094CEE377FE2CF24130E5647E29F5924F83(L_12, NULL);
+	}
+
+IL_0061:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:234>
+		return;
+	}
+}
+// Method Definition Index: 105680
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_HidePage_m8E77932F9E639137C4247EBA1B7D253E08EB3A05 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___1_onPageClosed, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m86CAB6A03777ACD7DFB7CCC2EFA35A476840D7DF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD80DC9F9016B1E68CC8B57C3A57284FB28E77B22);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFDABD37D9FD1C58B1A77636B3721994D87583348);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:285>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:287>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralD80DC9F9016B1E68CC8B57C3A57284FB28E77B22, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:289>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_3 = ___1_onPageClosed;
+		if (L_3)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		goto IL_0028;
+	}
+
+IL_0021:
+	{
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_4 = ___1_onPageClosed;
+		NullCheck(L_4);
+		SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline(L_4, NULL);
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:291>
+		goto IL_0099;
+	}
+
+IL_002a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:294>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_5 = ___0_page;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_6;
+		bool L_7 = V_1;
+		if (!L_7)
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:296>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralFDABD37D9FD1C58B1A77636B3721994D87583348, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:298>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_8 = ___1_onPageClosed;
+		if (L_8)
+		{
+			goto IL_0046;
+		}
+	}
+	{
+		goto IL_004d;
+	}
+
+IL_0046:
+	{
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_9 = ___1_onPageClosed;
+		NullCheck(L_9);
+		SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline(L_9, NULL);
+	}
+
+IL_004d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:300>
+		goto IL_0099;
+	}
+
+IL_004f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:303>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_10 = ___0_page;
+		NullCheck(L_10);
+		bool L_11;
+		L_11 = UIPage_get_IsPageDisplayed_m0004D64675E0AE6F04BD95D5A2DE847C2AE1F25F_inline(L_10, NULL);
+		V_2 = (bool)((((int32_t)L_11) == ((int32_t)0))? 1 : 0);
+		bool L_12 = V_2;
+		if (!L_12)
+		{
+			goto IL_006b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:305>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_13 = ___1_onPageClosed;
+		if (L_13)
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		goto IL_0069;
+	}
+
+IL_0062:
+	{
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_14 = ___1_onPageClosed;
+		NullCheck(L_14);
+		SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline(L_14, NULL);
+	}
+
+IL_0069:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:307>
+		goto IL_0099;
+	}
+
+IL_006b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:310>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_15 = ___1_onPageClosed;
+		V_3 = (bool)((!(((RuntimeObject*)(SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A*)L_15) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_16 = V_3;
+		if (!L_16)
+		{
+			goto IL_0085;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:311>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_17 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_17);
+		Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* L_18 = L_17->___pageClosedCallbacks;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_19 = ___0_page;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_20 = ___1_onPageClosed;
+		NullCheck(L_18);
+		Dictionary_2_set_Item_m86CAB6A03777ACD7DFB7CCC2EFA35A476840D7DF(L_18, L_19, L_20, Dictionary_2_set_Item_m86CAB6A03777ACD7DFB7CCC2EFA35A476840D7DF_RuntimeMethod_var);
+	}
+
+IL_0085:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:313>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_21 = ___0_page;
+		NullCheck(L_21);
+		GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* L_22;
+		L_22 = UIPage_get_GraphicRaycaster_mE5707F61C970219BDD7DE4E20D2D41BF9AF6C345_inline(L_21, NULL);
+		NullCheck(L_22);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_22, (bool)0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:314>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_23 = ___0_page;
+		NullCheck(L_23);
+		UIPage_TriggerHide_m0CDD3FDB20ED65A1AE83BA18FF8984B884993AC1(L_23, NULL);
+	}
+
+IL_0099:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:315>
+		return;
+	}
+}
+// Method Definition Index: 105683
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_OnPageClosed_mFDF13FC7463749A73D27C0FB6688EB3463E96F19 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Remove_m889968230F8E2E515F0113D46BB3CE8A7FF78FB5_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Remove_mDFA1B1D49C5A2EC0CEC454181D2AF03641023E8A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_mE004572EBDFF849679C52AB0B5BEE2847268544C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Remove_m88F1B4D1B158C65EE65465887E02CDC4C24AB00F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Remove_mF2FD0CA86C51F3CCA16C37E21458BCFFA0D9D351_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	Type_t* V_6 = NULL;
+	PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* V_7 = NULL;
+	bool V_8 = false;
+	bool V_9 = false;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* G_B2_0 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* G_B1_0 = NULL;
+	int32_t G_B6_0 = 0;
+	int32_t G_B11_0 = 0;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* G_B16_0 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* G_B15_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:376>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_0 = ___0_page;
+		NullCheck(L_0);
+		UIPage_DisableCanvas_mC40C6B60975218023D94D3D77A5362DA09726291(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:378>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_1 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageClosed;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_2 = L_1;
+		if (L_2)
+		{
+			G_B2_0 = L_2;
+			goto IL_0013;
+		}
+		G_B1_0 = L_2;
+	}
+	{
+		goto IL_0020;
+	}
+
+IL_0013:
+	{
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_3 = ___0_page;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_4 = ___0_page;
+		NullCheck(L_4);
+		Type_t* L_5;
+		L_5 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_4, NULL);
+		NullCheck(G_B2_0);
+		PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_inline(G_B2_0, L_3, L_5, NULL);
+	}
+
+IL_0020:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:380>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_6 = ___0_page;
+		NullCheck(L_6);
+		bool L_7;
+		L_7 = VirtualFuncInvoker0< bool >::Invoke(5, L_6);
+		if (!L_7)
+		{
+			goto IL_003a;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_8 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_8);
+		HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* L_9 = L_8->___popupWindows;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_10 = ___0_page;
+		NullCheck(L_9);
+		bool L_11;
+		L_11 = HashSet_1_Remove_m88F1B4D1B158C65EE65465887E02CDC4C24AB00F(L_9, L_10, HashSet_1_Remove_m88F1B4D1B158C65EE65465887E02CDC4C24AB00F_RuntimeMethod_var);
+		G_B6_0 = ((int32_t)(L_11));
+		goto IL_003b;
+	}
+
+IL_003a:
+	{
+		G_B6_0 = 0;
+	}
+
+IL_003b:
+	{
+		V_1 = (bool)G_B6_0;
+		bool L_12 = V_1;
+		if (!L_12)
+		{
+			goto IL_009d;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:382>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_13 = ___0_page;
+		NullCheck(L_13);
+		bool L_14;
+		L_14 = VirtualFuncInvoker0< bool >::Invoke(6, L_13);
+		V_2 = L_14;
+		bool L_15 = V_2;
+		if (!L_15)
+		{
+			goto IL_008a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:384>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_16 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_16);
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_17 = L_16->___pausePopups;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_18 = ___0_page;
+		NullCheck(L_17);
+		bool L_19;
+		L_19 = List_1_Remove_mF2FD0CA86C51F3CCA16C37E21458BCFFA0D9D351(L_17, L_18, List_1_Remove_mF2FD0CA86C51F3CCA16C37E21458BCFFA0D9D351_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:386>
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_20 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_20);
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_21 = L_20->___pausePopups;
+		NullCheck(L_21);
+		int32_t L_22;
+		L_22 = List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_inline(L_21, List_1_get_Count_mC43A3954661CDDE6BCAB7AEA1478C163FB855639_RuntimeMethod_var);
+		if (L_22)
+		{
+			goto IL_0079;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_23 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_23);
+		bool L_24 = L_23->___usePausePopups;
+		G_B11_0 = ((int32_t)(L_24));
+		goto IL_007a;
+	}
+
+IL_0079:
+	{
+		G_B11_0 = 0;
+	}
+
+IL_007a:
+	{
+		V_3 = (bool)G_B11_0;
+		bool L_25 = V_3;
+		if (!L_25)
+		{
+			goto IL_0089;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:387>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((1.0f), NULL);
+	}
+
+IL_0089:
+	{
+	}
+
+IL_008a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:390>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_26 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupClosed;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_27 = L_26;
+		if (L_27)
+		{
+			G_B16_0 = L_27;
+			goto IL_0095;
+		}
+		G_B15_0 = L_27;
+	}
+	{
+		goto IL_009c;
+	}
+
+IL_0095:
+	{
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_28 = ___0_page;
+		NullCheck(G_B16_0);
+		PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_inline(G_B16_0, L_28, NULL);
+	}
+
+IL_009c:
+	{
+	}
+
+IL_009d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:393>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_29 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_29);
+		Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* L_30 = L_29->___pageClosedCallbacks;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_31 = ___0_page;
+		NullCheck(L_30);
+		bool L_32;
+		L_32 = Dictionary_2_TryGetValue_mE004572EBDFF849679C52AB0B5BEE2847268544C(L_30, L_31, (&V_0), Dictionary_2_TryGetValue_mE004572EBDFF849679C52AB0B5BEE2847268544C_RuntimeMethod_var);
+		V_4 = L_32;
+		bool L_33 = V_4;
+		if (!L_33)
+		{
+			goto IL_00cf;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:395>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_34 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_34);
+		Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* L_35 = L_34->___pageClosedCallbacks;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_36 = ___0_page;
+		NullCheck(L_35);
+		bool L_37;
+		L_37 = Dictionary_2_Remove_mDFA1B1D49C5A2EC0CEC454181D2AF03641023E8A(L_35, L_36, Dictionary_2_Remove_mDFA1B1D49C5A2EC0CEC454181D2AF03641023E8A_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:396>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_38 = V_0;
+		NullCheck(L_38);
+		SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline(L_38, NULL);
+	}
+
+IL_00cf:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:399>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_39 = ___0_page;
+		NullCheck(L_39);
+		bool L_40;
+		L_40 = UIPage_get_IsCached_m477F3FEC4FB323BE6D57C51BD4CE26490807714B_inline(L_39, NULL);
+		V_5 = L_40;
+		bool L_41 = V_5;
+		if (!L_41)
+		{
+			goto IL_0143;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:401>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_42 = ___0_page;
+		NullCheck(L_42);
+		Type_t* L_43;
+		L_43 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_42, NULL);
+		V_6 = L_43;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:403>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_44 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_44);
+		CachedPages_t4C59055F77C8B9FAF98B80400D5649E6276C4527* L_45 = L_44->___cachedPages;
+		Type_t* L_46 = V_6;
+		NullCheck(L_45);
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_47;
+		L_47 = CachedPages_GetPageData_mB30F4D4674B3853663E92E48FDD34F8D635234F9(L_45, L_46, NULL);
+		V_7 = L_47;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:404>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_48 = V_7;
+		V_8 = (bool)((!(((RuntimeObject*)(PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254*)L_48) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_49 = V_8;
+		if (!L_49)
+		{
+			goto IL_0142;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:406>
+		PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* L_50 = V_7;
+		NullCheck(L_50);
+		bool L_51;
+		L_51 = PageData_get_AutoDestroy_m4775BB9CA15B24130353BC47E7D25B5830292910_inline(L_50, NULL);
+		V_9 = L_51;
+		bool L_52 = V_9;
+		if (!L_52)
+		{
+			goto IL_0141;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:408>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_53 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_53);
+		Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* L_54 = L_53->___pagesLink;
+		Type_t* L_55 = V_6;
+		NullCheck(L_54);
+		bool L_56;
+		L_56 = Dictionary_2_Remove_m889968230F8E2E515F0113D46BB3CE8A7FF78FB5(L_54, L_55, Dictionary_2_Remove_m889968230F8E2E515F0113D46BB3CE8A7FF78FB5_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:409>
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_57 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_57);
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_58 = L_57->___pages;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_59 = ___0_page;
+		NullCheck(L_58);
+		bool L_60;
+		L_60 = List_1_Remove_mF2FD0CA86C51F3CCA16C37E21458BCFFA0D9D351(L_58, L_59, List_1_Remove_mF2FD0CA86C51F3CCA16C37E21458BCFFA0D9D351_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:411>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_61 = ___0_page;
+		NullCheck(L_61);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_62;
+		L_62 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_61, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_62, NULL);
+	}
+
+IL_0141:
+	{
+	}
+
+IL_0142:
+	{
+	}
+
+IL_0143:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:415>
+		return;
+	}
+}
+// Method Definition Index: 105684
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_OnPageOpened_m1ED3B5C2AE631DEC3079D073A2D2EEA16E3E7321 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Add_m7FCEE79D27F56186AF8DC3E34BD88294227C7090_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* G_B2_0 = NULL;
+	PageCallback_tB109469A96FD014B01B51D47343D68F643405291* G_B1_0 = NULL;
+	int32_t G_B6_0 = 0;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* G_B13_0 = NULL;
+	PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* G_B12_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:424>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageOpened;
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* L_1 = L_0;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_000c;
+		}
+		G_B1_0 = L_1;
+	}
+	{
+		goto IL_0019;
+	}
+
+IL_000c:
+	{
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_2 = ___0_page;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_3 = ___0_page;
+		NullCheck(L_3);
+		Type_t* L_4;
+		L_4 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_3, NULL);
+		NullCheck(G_B2_0);
+		PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_inline(G_B2_0, L_2, L_4, NULL);
+	}
+
+IL_0019:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:426>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_5 = ___0_page;
+		NullCheck(L_5);
+		bool L_6;
+		L_6 = VirtualFuncInvoker0< bool >::Invoke(5, L_5);
+		if (!L_6)
+		{
+			goto IL_0033;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_7 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_7);
+		HashSet_1_tC4A7F746994BCF795D35D789070D01315DE76B47* L_8 = L_7->___popupWindows;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_9 = ___0_page;
+		NullCheck(L_8);
+		bool L_10;
+		L_10 = HashSet_1_Add_m7FCEE79D27F56186AF8DC3E34BD88294227C7090(L_8, L_9, HashSet_1_Add_m7FCEE79D27F56186AF8DC3E34BD88294227C7090_RuntimeMethod_var);
+		G_B6_0 = ((int32_t)(L_10));
+		goto IL_0034;
+	}
+
+IL_0033:
+	{
+		G_B6_0 = 0;
+	}
+
+IL_0034:
+	{
+		V_0 = (bool)G_B6_0;
+		bool L_11 = V_0;
+		if (!L_11)
+		{
+			goto IL_0082;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:428>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_12 = ___0_page;
+		NullCheck(L_12);
+		bool L_13;
+		L_13 = VirtualFuncInvoker0< bool >::Invoke(6, L_12);
+		V_1 = L_13;
+		bool L_14 = V_1;
+		if (!L_14)
+		{
+			goto IL_006f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:430>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_15 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_15);
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_16 = L_15->___pausePopups;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_17 = ___0_page;
+		NullCheck(L_16);
+		List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_inline(L_16, L_17, List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:432>
+		UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* L_18 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController;
+		NullCheck(L_18);
+		bool L_19 = L_18->___usePausePopups;
+		V_2 = L_19;
+		bool L_20 = V_2;
+		if (!L_20)
+		{
+			goto IL_006e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:433>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((0.0f), NULL);
+	}
+
+IL_006e:
+	{
+	}
+
+IL_006f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:436>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_21 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupOpened;
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* L_22 = L_21;
+		if (L_22)
+		{
+			G_B13_0 = L_22;
+			goto IL_007a;
+		}
+		G_B12_0 = L_22;
+	}
+	{
+		goto IL_0081;
+	}
+
+IL_007a:
+	{
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_23 = ___0_page;
+		NullCheck(G_B13_0);
+		PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_inline(G_B13_0, L_23, NULL);
+	}
+
+IL_0081:
+	{
+	}
+
+IL_0082:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:438>
+		return;
+	}
+}
+// Method Definition Index: 105687
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 UIController_FixUIElementToWorld_m4AEB80DFB8D3A3FC75FD2D0D6F13A65810681304 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_target, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_offset, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RectTransformUtility_t65C00A84A72F17D78B81F2E7D88C2AA98AB61244_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	float V_2 = 0.0f;
+	bool V_3 = false;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:501>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_target;
+		NullCheck(L_0);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_0, NULL);
+		NullCheck(L_1);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_1, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___1_offset;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_2, L_3, NULL);
+		V_0 = L_4;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:502>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_5 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___mainCamera;
+		NullCheck(L_5);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_5, NULL);
+		NullCheck(L_6);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_6, NULL);
+		V_1 = L_7;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:504>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_0;
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_9 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___mainCamera;
+		NullCheck(L_9);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
+		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_9, NULL);
+		NullCheck(L_10);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
+		L_11 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_10, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
+		L_13 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_11, L_12, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_8, L_13, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = V_1;
+		float L_16;
+		L_16 = Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline(L_14, L_15, NULL);
+		V_2 = L_16;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:505>
+		float L_17 = V_2;
+		V_3 = (bool)((((float)L_17) < ((float)(0.0f)))? 1 : 0);
+		bool L_18 = V_3;
+		if (!L_18)
+		{
+			goto IL_0061;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:507>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20 = V_1;
+		float L_21 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
+		L_22 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_20, L_21, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23;
+		L_23 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_19, L_22, NULL);
+		V_0 = L_23;
+	}
+
+IL_0061:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:510>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_24 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___mainCamera;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(RectTransformUtility_t65C00A84A72F17D78B81F2E7D88C2AA98AB61244_il2cpp_TypeInfo_var);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_26;
+		L_26 = RectTransformUtility_WorldToScreenPoint_mC8701032E223BA296C43799F4AEE98626686238F(L_24, L_25, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
+		L_27 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_26, NULL);
+		V_4 = L_27;
+		goto IL_0075;
+	}
+
+IL_0075:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:511>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = V_4;
+		return L_28;
+	}
+}
+// Method Definition Index: 105688
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_RegisterCachedPage_mA18FEF42ADF5CA9061853D31818A79A6D23DA60A (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, Type_t* ___0_pageType, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___1_page, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_mAA751E5109B5AB5C17BDA43F9968A5B3D3F92EC9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:515>
+		Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* L_0 = __this->___pagesLink;
+		Type_t* L_1 = ___0_pageType;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_2 = ___1_page;
+		NullCheck(L_0);
+		Dictionary_2_Add_mAA751E5109B5AB5C17BDA43F9968A5B3D3F92EC9(L_0, L_1, L_2, Dictionary_2_Add_mAA751E5109B5AB5C17BDA43F9968A5B3D3F92EC9_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:516>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_3 = __this->___pages;
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_4 = ___1_page;
+		NullCheck(L_3);
+		List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_inline(L_3, L_4, List_1_Add_mFDCBF41550A28B02E455ED09B6168D6FC4F7AF11_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:517>
+		return;
+	}
+}
+// Method Definition Index: 105689
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController_OnDestroy_m53141E15655408805DB0E977694DF87BC16E0C60 (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* G_B2_0 = NULL;
+	SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* G_B1_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:521>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController = (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___uiController), (void*)(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:523>
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_0 = __this->___notchSafeArea;
+		SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* L_1 = L_0;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_0013;
+		}
+		G_B1_0 = L_1;
+	}
+	{
+		goto IL_0019;
+	}
+
+IL_0013:
+	{
+		NullCheck(G_B2_0);
+		SafeAreaAdapter_Unload_m55D2D928236885DBE56BD612319F201595987B02(G_B2_0, NULL);
+	}
+
+IL_0019:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:525>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageOpened = (PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageOpened), (void*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:526>
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageClosed = (PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PageClosed), (void*)(PageCallback_tB109469A96FD014B01B51D47343D68F643405291*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:528>
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupOpened = (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupOpened), (void*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:529>
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupClosed = (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___PopupClosed), (void*)(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:531>
+		bool L_2 = __this->___usePausePopups;
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0046;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:532>
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((1.0f), NULL);
+	}
+
+IL_0046:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:533>
+		return;
+	}
+}
+// Method Definition Index: 105690
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController__ctor_m81BA07C6BB22C85A54C9D0DC07719E894ECB7E60 (UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m572277870319CF66320268BDAC7C26ACD9B74217_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m90717CCB68690A7577828EE09723F8B3C5B05167_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:23>
+		__this->___usePausePopups = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:29>
+		Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0* L_0 = (Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0*)il2cpp_codegen_object_new(Dictionary_2_t03E3B59D30CA12721FDACC037A17A6D41CD9B6C0_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m572277870319CF66320268BDAC7C26ACD9B74217(L_0, Dictionary_2__ctor_m572277870319CF66320268BDAC7C26ACD9B74217_RuntimeMethod_var);
+		__this->___pagesLink = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pagesLink), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:50>
+		List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C* L_1 = (List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C*)il2cpp_codegen_object_new(List_1_t7A5A6411FE865C3B50D9F57956938AF32F643D6C_il2cpp_TypeInfo_var);
+		List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602(L_1, List_1__ctor_mEBDBCB8FE75E3B1B0927856E499B84C53D388602_RuntimeMethod_var);
+		__this->___pausePopups = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pausePopups), (void*)L_1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:70>
+		Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA* L_2 = (Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA*)il2cpp_codegen_object_new(Dictionary_2_tDD7BAD61ED1CAC1F8E2A207FBA97F6DF3261DCBA_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m90717CCB68690A7577828EE09723F8B3C5B05167(L_2, Dictionary_2__ctor_m90717CCB68690A7577828EE09723F8B3C5B05167_RuntimeMethod_var);
+		__this->___pageClosedCallbacks = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pageClosedCallbacks), (void*)L_2);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 105691
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIController__cctor_mA1BFFC407C3667FE1E5A0E63D10BA28433127EC7 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:66>
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CScaleFactorU3Ek__BackingField = (1.0f);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_Multicast(PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		PageCallback_tB109469A96FD014B01B51D47343D68F643405291* currentDelegate = reinterpret_cast<PageCallback_tB109469A96FD014B01B51D47343D68F643405291*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, Type_t*, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_page, ___1_pageType, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenInst(PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	typedef void (*FunctionPointerType) (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, Type_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_page, ___1_pageType, method);
+}
+void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenStatic(PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, Type_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_page, ___1_pageType, method);
+}
+void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenVirtual(PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	VirtualActionInvoker1< Type_t* >::Invoke(il2cpp_codegen_method_get_slot(method), ___0_page, ___1_pageType);
+}
+void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenInterface(PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	InterfaceActionInvoker1< Type_t* >::Invoke(il2cpp_codegen_method_get_slot(method), il2cpp_codegen_method_get_declaring_type(method), ___0_page, ___1_pageType);
+}
+void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenGenericVirtual(PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	GenericVirtualActionInvoker1< Type_t* >::Invoke(method, ___0_page, ___1_pageType);
+}
+void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenGenericInterface(PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	GenericInterfaceActionInvoker1< Type_t* >::Invoke(method, ___0_page, ___1_pageType);
+}
+// Method Definition Index: 105692
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PageCallback__ctor_mC1FB3E62783B8243ADF24FF1B2A575E0A8E05EF9 (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 2;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+		{
+			if (__this->___method_is_virtual)
+			{
+				if (il2cpp_codegen_method_is_generic_instance_method((RuntimeMethod*)___1_method))
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___1_method))
+						__this->___invoke_impl = (intptr_t)&PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenGenericInterface;
+					else
+						__this->___invoke_impl = (intptr_t)&PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenGenericVirtual;
+				else
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___1_method))
+						__this->___invoke_impl = (intptr_t)&PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenInterface;
+					else
+						__this->___invoke_impl = (intptr_t)&PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenVirtual;
+			}
+			else
+			{
+				__this->___invoke_impl = (intptr_t)&PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_OpenInst;
+			}
+		}
+		else
+		{
+			if (___0_object == NULL)
+				il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+			__this->___invoke_impl = __this->___method_ptr;
+			__this->___method_code = (intptr_t)__this->___m_target;
+		}
+	}
+	__this->___extra_arg = (intptr_t)&PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_Multicast;
+}
+// Method Definition Index: 105693
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, Type_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_page, ___1_pageType, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 105694
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PageCallback_BeginInvoke_m642D039C835FDF2F122BC73975FAF6DE43C8B6E9 (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
+{
+	void *__d_args[3] = {0};
+	__d_args[0] = ___0_page;
+	__d_args[1] = ___1_pageType;
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
+}
+// Method Definition Index: 105695
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PageCallback_EndInvoke_m508197811A9DF411EFE2337D358D6D8155B03A69 (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_Multicast(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* currentDelegate = reinterpret_cast<PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_page, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenInst(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	typedef void (*FunctionPointerType) (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_page, method);
+}
+void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenStatic(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_page, method);
+}
+void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenVirtual(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	VirtualActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(method), ___0_page);
+}
+void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenInterface(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	InterfaceActionInvoker0::Invoke(il2cpp_codegen_method_get_slot(method), il2cpp_codegen_method_get_declaring_type(method), ___0_page);
+}
+void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenGenericVirtual(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	GenericVirtualActionInvoker0::Invoke(method, ___0_page);
+}
+void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenGenericInterface(PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method)
+{
+	NullCheck(___0_page);
+	GenericInterfaceActionInvoker0::Invoke(method, ___0_page);
+}
+// Method Definition Index: 105696
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PopupCallback__ctor_m309202F688A86D8C82FA0EB470D757BB1B9FA28B (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 1;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		bool isOpen = parameterCount == 0;
+		if (isOpen)
+		{
+			if (__this->___method_is_virtual)
+			{
+				if (il2cpp_codegen_method_is_generic_instance_method((RuntimeMethod*)___1_method))
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___1_method))
+						__this->___invoke_impl = (intptr_t)&PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenGenericInterface;
+					else
+						__this->___invoke_impl = (intptr_t)&PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenGenericVirtual;
+				else
+					if (il2cpp_codegen_method_is_interface_method((RuntimeMethod*)___1_method))
+						__this->___invoke_impl = (intptr_t)&PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenInterface;
+					else
+						__this->___invoke_impl = (intptr_t)&PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenVirtual;
+			}
+			else
+			{
+				__this->___invoke_impl = (intptr_t)&PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_OpenInst;
+			}
+		}
+		else
+		{
+			if (___0_object == NULL)
+				il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+			__this->___invoke_impl = __this->___method_ptr;
+			__this->___method_code = (intptr_t)__this->___m_target;
+		}
+	}
+	__this->___extra_arg = (intptr_t)&PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_Multicast;
+}
+// Method Definition Index: 105697
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7 (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_page, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 105698
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PopupCallback_BeginInvoke_mBEAB72062098F00BA37403FC941AEA880E10B252 (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
+{
+	void *__d_args[2] = {0};
+	__d_args[0] = ___0_page;
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
+}
+// Method Definition Index: 105699
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PopupCallback_EndInvoke_m8D04F21EB830708F32D1BEBA3AA9197A4E80B497 (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 105700
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIPage_get_IsPageDisplayed_m0004D64675E0AE6F04BD95D5A2DE847C2AE1F25F (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:21>
+		bool L_0 = __this->___isPageDisplayed;
+		return L_0;
+	}
+}
+// Method Definition Index: 105701
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* UIPage_get_Canvas_mE853AFB23D04108B52DDD9BFFD82E60697B6C0DC (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:25>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = __this->___canvas;
+		return L_0;
+	}
+}
+// Method Definition Index: 105702
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* UIPage_get_GraphicRaycaster_mE5707F61C970219BDD7DE4E20D2D41BF9AF6C345 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:29>
+		GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* L_0 = __this->___graphicRaycaster;
+		return L_0;
+	}
+}
+// Method Definition Index: 105703
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIPage_get_IsCached_m477F3FEC4FB323BE6D57C51BD4CE26490807714B (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:37>
+		bool L_0 = __this->___isCached;
+		return L_0;
+	}
+}
+// Method Definition Index: 105704
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIPage_get_IsPopup_mD667DEF85D92D47218806EE533658F37CC11960D (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:40>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 105705
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIPage_get_IsPausePopup_mF37A57F8116CB5E4D6FD15CFD7D64F73847F817E (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:42>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 105706
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_CacheComponents_mBA1ECF075A83033E52057D0792D6A0A677E26D18 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m8D88AC7AC775DA9FE3783014A4448A8C60283FF1_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:46>
+		String_t* L_0;
+		L_0 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(__this, NULL);
+		__this->___defaultName = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___defaultName), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:48>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_1;
+		L_1 = Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2(__this, Component_GetComponent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m209BA4F663AB98A4504995B5BD3EADEDEFB92BF2_RuntimeMethod_var);
+		__this->___canvas = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___canvas), (void*)L_1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:49>
+		GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* L_2;
+		L_2 = Component_GetComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m8D88AC7AC775DA9FE3783014A4448A8C60283FF1(__this, Component_GetComponent_TisGraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B_m8D88AC7AC775DA9FE3783014A4448A8C60283FF1_RuntimeMethod_var);
+		__this->___graphicRaycaster = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___graphicRaycaster), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:50>
+		return;
+	}
+}
+// Method Definition Index: 105707
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_PreparePage_m9F459678D5C83320346D753D07BBAE0D5C275C63 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:54>
+		__this->___isPageDisplayed = (bool)0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:55>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = __this->___canvas;
+		NullCheck(L_0);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, (bool)0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:57>
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_1 = __this->___registeredElements;
+		NullCheck(L_1);
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_2 = (IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A*)(IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A*)SZArrayNew(IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_1)->max_length)));
+		__this->___pageElements = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pageElements), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:58>
+		V_0 = 0;
+		goto IL_0056;
+	}
+
+IL_002c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:60>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_3 = __this->___pageElements;
+		int32_t L_4 = V_0;
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_5 = __this->___registeredElements;
+		int32_t L_6 = V_0;
+		NullCheck(L_5);
+		int32_t L_7 = L_6;
+		Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_8 = (L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
+		NullCheck(L_3);
+		ArrayElementTypeCheck (L_3, ((RuntimeObject*)Castclass((RuntimeObject*)L_8, IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var)));
+		(L_3)->SetAt(static_cast<il2cpp_array_size_t>(L_4), (RuntimeObject*)((RuntimeObject*)Castclass((RuntimeObject*)L_8, IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var)));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:61>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_9 = __this->___pageElements;
+		int32_t L_10 = V_0;
+		NullCheck(L_9);
+		int32_t L_11 = L_10;
+		RuntimeObject* L_12 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
+		NullCheck(L_12);
+		InterfaceActionInvoker1< UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* >::Invoke(0, IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var, L_12, __this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:58>
+		int32_t L_13 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_13, 1));
+	}
+
+IL_0056:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:58>
+		int32_t L_14 = V_0;
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_15 = __this->___pageElements;
+		NullCheck(L_15);
+		V_1 = (bool)((((int32_t)L_14) < ((int32_t)((int32_t)(((RuntimeArray*)L_15)->max_length))))? 1 : 0);
+		bool L_16 = V_1;
+		if (L_16)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:63>
+		return;
+	}
+}
+// Method Definition Index: 105709
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_EnableCanvas_mA8789094CEE377FE2CF24130E5647E29F5924F83 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CoreExtensions_IsNullOrEmpty_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_m770745F3470FEDBAAC24FA6E18ADBA23C420272E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	int32_t V_1 = 0;
+	bool V_2 = false;
+	RuntimeObject* G_B4_0 = NULL;
+	RuntimeObject* G_B3_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:73>
+		__this->___isPageDisplayed = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:75>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = __this->___canvas;
+		NullCheck(L_0);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, (bool)1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:77>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_1 = __this->___pageElements;
+		bool L_2;
+		L_2 = CoreExtensions_IsNullOrEmpty_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_m770745F3470FEDBAAC24FA6E18ADBA23C420272E(L_1, CoreExtensions_IsNullOrEmpty_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_m770745F3470FEDBAAC24FA6E18ADBA23C420272E_RuntimeMethod_var);
+		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:79>
+		V_1 = 0;
+		goto IL_0047;
+	}
+
+IL_002c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:81>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_4 = __this->___pageElements;
+		int32_t L_5 = V_1;
+		NullCheck(L_4);
+		int32_t L_6 = L_5;
+		RuntimeObject* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		RuntimeObject* L_8 = L_7;
+		if (L_8)
+		{
+			G_B4_0 = L_8;
+			goto IL_003b;
+		}
+		G_B3_0 = L_8;
+	}
+	{
+		goto IL_0042;
+	}
+
+IL_003b:
+	{
+		NullCheck(G_B4_0);
+		InterfaceActionInvoker1< bool >::Invoke(1, IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var, G_B4_0, (bool)1);
+	}
+
+IL_0042:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:79>
+		int32_t L_9 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_9, 1));
+	}
+
+IL_0047:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:79>
+		int32_t L_10 = V_1;
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_11 = __this->___pageElements;
+		NullCheck(L_11);
+		V_2 = (bool)((((int32_t)L_10) < ((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length))))? 1 : 0);
+		bool L_12 = V_2;
+		if (L_12)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+	}
+
+IL_0057:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:88>
+		return;
+	}
+}
+// Method Definition Index: 105710
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_DisableCanvas_mC40C6B60975218023D94D3D77A5362DA09726291 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CoreExtensions_IsNullOrEmpty_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_m770745F3470FEDBAAC24FA6E18ADBA23C420272E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	int32_t V_1 = 0;
+	bool V_2 = false;
+	RuntimeObject* G_B4_0 = NULL;
+	RuntimeObject* G_B3_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:92>
+		__this->___isPageDisplayed = (bool)0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:94>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = __this->___canvas;
+		NullCheck(L_0);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, (bool)0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:96>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_1 = __this->___pageElements;
+		bool L_2;
+		L_2 = CoreExtensions_IsNullOrEmpty_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_m770745F3470FEDBAAC24FA6E18ADBA23C420272E(L_1, CoreExtensions_IsNullOrEmpty_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_m770745F3470FEDBAAC24FA6E18ADBA23C420272E_RuntimeMethod_var);
+		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:98>
+		V_1 = 0;
+		goto IL_0047;
+	}
+
+IL_002c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:100>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_4 = __this->___pageElements;
+		int32_t L_5 = V_1;
+		NullCheck(L_4);
+		int32_t L_6 = L_5;
+		RuntimeObject* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		RuntimeObject* L_8 = L_7;
+		if (L_8)
+		{
+			G_B4_0 = L_8;
+			goto IL_003b;
+		}
+		G_B3_0 = L_8;
+	}
+	{
+		goto IL_0042;
+	}
+
+IL_003b:
+	{
+		NullCheck(G_B4_0);
+		InterfaceActionInvoker1< bool >::Invoke(1, IUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_il2cpp_TypeInfo_var, G_B4_0, (bool)0);
+	}
+
+IL_0042:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:98>
+		int32_t L_9 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_9, 1));
+	}
+
+IL_0047:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:98>
+		int32_t L_10 = V_1;
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_11 = __this->___pageElements;
+		NullCheck(L_11);
+		V_2 = (bool)((((int32_t)L_10) < ((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length))))? 1 : 0);
+		bool L_12 = V_2;
+		if (L_12)
+		{
+			goto IL_002c;
+		}
+	}
+	{
+	}
+
+IL_0057:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:107>
+		return;
+	}
+}
+// Method Definition Index: 105713
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_OnUnload_mA68F5347D5880708797F6B6A73DE6E8F9CD7663F (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:114>
+		return;
+	}
+}
+// Method Definition Index: 105714
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_TriggerShow_m9BBC87B1C051A008B450403A8262C412F64C47D9 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:116>
+		VirtualActionInvoker0::Invoke(8, __this);
+		return;
+	}
+}
+// Method Definition Index: 105715
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_TriggerHide_m0CDD3FDB20ED65A1AE83BA18FF8984B884993AC1 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:117>
+		VirtualActionInvoker0::Invoke(9, __this);
+		return;
+	}
+}
+// Method Definition Index: 105716
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_TriggerUnload_mC33FFD4B153ACD0FEFBB665A0BD9587C7A08B12F (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:121>
+		VirtualActionInvoker0::Invoke(10, __this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:123>
+		__this->___isPageDisplayed = (bool)0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:124>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = __this->___canvas;
+		NullCheck(L_0);
+		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, (bool)0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:125>
+		return;
+	}
+}
+// Method Definition Index: 105717
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_NotifyOpened_m11F8477789F6966DF671078A4955C4F12B720B13 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:128>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_OnPageOpened_m1ED3B5C2AE631DEC3079D073A2D2EEA16E3E7321(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 105718
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_NotifyClosed_m153F4D8EA66FFD0EDEF1587027D08CA4C3451FB0 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:130>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		UIController_OnPageClosed_mFDF13FC7463749A73D27C0FB6688EB3463E96F19(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 105719
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_MarkAsCached_m3EE2D6F33D26D06697100F344457B2FEE17253C0 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:134>
+		__this->___isCached = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:135>
+		return;
+	}
+}
+// Method Definition Index: 105720
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIPage_OnPrefabSaving_m0E3D9178C73559DB0C070B55EE1F98FDF983F6FF (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponentsInChildren_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_mDB78EE513D37F4AFB2A67FA928CFC5EE960B0DAA_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:139>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_0;
+		L_0 = Component_GetComponentsInChildren_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_mDB78EE513D37F4AFB2A67FA928CFC5EE960B0DAA(__this, Component_GetComponentsInChildren_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_mDB78EE513D37F4AFB2A67FA928CFC5EE960B0DAA_RuntimeMethod_var);
+		V_0 = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:140>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_1 = V_0;
+		bool L_2;
+		L_2 = UIPage_NeedsElementsUpdate_mE5127C03CA207DB2AA810530848AC437E8278BBD(__this, L_1, NULL);
+		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_1;
+		if (!L_3)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:140>
+		V_2 = (bool)0;
+		goto IL_002a;
+	}
+
+IL_001a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:142>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_4 = V_0;
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_5;
+		L_5 = UIPage_ToComponentArray_m918677B79E29CC104B04205F1F4AE49CF94E1F86(L_4, NULL);
+		__this->___registeredElements = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___registeredElements), (void*)L_5);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:143>
+		V_2 = (bool)1;
+		goto IL_002a;
+	}
+
+IL_002a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:144>
+		bool L_6 = V_2;
+		return L_6;
+	}
+}
+// Method Definition Index: 105721
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage_OnSceneSaving_m5B2ADBA4921BC35502FDD47C409D5114C64EBFF0 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponentsInChildren_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_mDB78EE513D37F4AFB2A67FA928CFC5EE960B0DAA_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* V_0 = NULL;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:148>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_0;
+		L_0 = Component_GetComponentsInChildren_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_mDB78EE513D37F4AFB2A67FA928CFC5EE960B0DAA(__this, Component_GetComponentsInChildren_TisIUIPageElement_t9AA593DB7B55CF96B60A7CB860566BDADED75770_mDB78EE513D37F4AFB2A67FA928CFC5EE960B0DAA_RuntimeMethod_var);
+		V_0 = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:149>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_1 = V_0;
+		bool L_2;
+		L_2 = UIPage_NeedsElementsUpdate_mE5127C03CA207DB2AA810530848AC437E8278BBD(__this, L_1, NULL);
+		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_1;
+		if (!L_3)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:149>
+		goto IL_002b;
+	}
+
+IL_0018:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:151>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_4 = V_0;
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_5;
+		L_5 = UIPage_ToComponentArray_m918677B79E29CC104B04205F1F4AE49CF94E1F86(L_4, NULL);
+		__this->___registeredElements = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___registeredElements), (void*)L_5);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:152>
+		RuntimeEditorUtils_SetDirty_mC1A4C4596BE2CC08BD923B566CC74E0AB1AD40EE(__this, NULL);
+	}
+
+IL_002b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:153>
+		return;
+	}
+}
+// Method Definition Index: 105722
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UIPage_NeedsElementsUpdate_mE5127C03CA207DB2AA810530848AC437E8278BBD (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* ___0_current, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	int32_t V_2 = 0;
+	bool V_3 = false;
+	bool V_4 = false;
+	int32_t V_5 = 0;
+	bool V_6 = false;
+	bool V_7 = false;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:157>
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_0 = __this->___registeredElements;
+		if (!L_0)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_1 = __this->___registeredElements;
+		NullCheck(L_1);
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_2 = ___0_current;
+		NullCheck(L_2);
+		G_B3_0 = ((((int32_t)((((int32_t)((int32_t)(((RuntimeArray*)L_1)->max_length))) == ((int32_t)((int32_t)(((RuntimeArray*)L_2)->max_length))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_001c;
+	}
+
+IL_001b:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_001c:
+	{
+		V_0 = (bool)G_B3_0;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0024;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:158>
+		V_1 = (bool)1;
+		goto IL_0094;
+	}
+
+IL_0024:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:160>
+		V_2 = 0;
+		goto IL_0044;
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:162>
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_4 = __this->___registeredElements;
+		int32_t L_5 = V_2;
+		NullCheck(L_4);
+		int32_t L_6 = L_5;
+		Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_3 = L_8;
+		bool L_9 = V_3;
+		if (!L_9)
+		{
+			goto IL_003f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:163>
+		V_1 = (bool)1;
+		goto IL_0094;
+	}
+
+IL_003f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:160>
+		int32_t L_10 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_10, 1));
+	}
+
+IL_0044:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:160>
+		int32_t L_11 = V_2;
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_12 = __this->___registeredElements;
+		NullCheck(L_12);
+		V_4 = (bool)((((int32_t)L_11) < ((int32_t)((int32_t)(((RuntimeArray*)L_12)->max_length))))? 1 : 0);
+		bool L_13 = V_4;
+		if (L_13)
+		{
+			goto IL_0028;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:166>
+		V_5 = 0;
+		goto IL_0083;
+	}
+
+IL_005a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:168>
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_14 = __this->___registeredElements;
+		int32_t L_15 = V_5;
+		NullCheck(L_14);
+		int32_t L_16 = L_15;
+		Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_17 = (L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_16));
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_18 = ___0_current;
+		int32_t L_19 = V_5;
+		NullCheck(L_18);
+		int32_t L_20 = L_19;
+		RuntimeObject* L_21 = (L_18)->GetAt(static_cast<il2cpp_array_size_t>(L_20));
+		V_6 = (bool)((((int32_t)((((RuntimeObject*)(Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)L_17) == ((RuntimeObject*)(Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)((Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)IsInstClass((RuntimeObject*)L_21, Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3_il2cpp_TypeInfo_var))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_22 = V_6;
+		if (!L_22)
+		{
+			goto IL_007c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:169>
+		V_1 = (bool)1;
+		goto IL_0094;
+	}
+
+IL_007c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:166>
+		int32_t L_23 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_23, 1));
+	}
+
+IL_0083:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:166>
+		int32_t L_24 = V_5;
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_25 = ___0_current;
+		NullCheck(L_25);
+		V_7 = (bool)((((int32_t)L_24) < ((int32_t)((int32_t)(((RuntimeArray*)L_25)->max_length))))? 1 : 0);
+		bool L_26 = V_7;
+		if (L_26)
+		{
+			goto IL_005a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:172>
+		V_1 = (bool)0;
+		goto IL_0094;
+	}
+
+IL_0094:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:173>
+		bool L_27 = V_1;
+		return L_27;
+	}
+}
+// Method Definition Index: 105723
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* UIPage_ToComponentArray_m918677B79E29CC104B04205F1F4AE49CF94E1F86 (IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* ___0_elements, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* V_0 = NULL;
+	int32_t V_1 = 0;
+	bool V_2 = false;
+	ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* V_3 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:177>
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_0 = ___0_elements;
+		NullCheck(L_0);
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_1 = (ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E*)(ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E*)SZArrayNew(ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_0)->max_length)));
+		V_0 = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:178>
+		V_1 = 0;
+		goto IL_001d;
+	}
+
+IL_000e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:179>
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_2 = V_0;
+		int32_t L_3 = V_1;
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_4 = ___0_elements;
+		int32_t L_5 = V_1;
+		NullCheck(L_4);
+		int32_t L_6 = L_5;
+		RuntimeObject* L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		NullCheck(L_2);
+		ArrayElementTypeCheck (L_2, ((Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)IsInstClass((RuntimeObject*)L_7, Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3_il2cpp_TypeInfo_var)));
+		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(L_3), (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)((Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*)IsInstClass((RuntimeObject*)L_7, Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3_il2cpp_TypeInfo_var)));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:178>
+		int32_t L_8 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_8, 1));
+	}
+
+IL_001d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:178>
+		int32_t L_9 = V_1;
+		IUIPageElementU5BU5D_t8B56E6DCF048D2CE635B41DEFB8D94CD97DFC17A* L_10 = ___0_elements;
+		NullCheck(L_10);
+		V_2 = (bool)((((int32_t)L_9) < ((int32_t)((int32_t)(((RuntimeArray*)L_10)->max_length))))? 1 : 0);
+		bool L_11 = V_2;
+		if (L_11)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:180>
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_12 = V_0;
+		V_3 = L_12;
+		goto IL_002b;
+	}
+
+IL_002b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:181>
+		ComponentU5BU5D_t40ECDBC5CC15EA282AF49771C20EBFDADC532D0E* L_13 = V_3;
+		return L_13;
+	}
+}
+// Method Definition Index: 105724
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIPage__ctor_mEFCE507B265EF889EA2115F4EAED72ABF20498D4 (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Method Definition Index: 105575
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* PageData_get_PagePrefab_mC715E784E266B2D2CDE7A9369AF5BC0A41CBD962_inline (PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:105>
+		UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* L_0 = __this->___pagePrefab;
+		return L_0;
+	}
+}
+// Method Definition Index: 105701
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* UIPage_get_Canvas_mE853AFB23D04108B52DDD9BFFD82E60697B6C0DC_inline (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:25>
+		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_0 = __this->___canvas;
+		return L_0;
+	}
+}
+// Method Definition Index: 62579
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_x;
+		__this->___x = L_0;
+		float L_1 = ___1_y;
+		__this->___y = L_1;
+		return;
+	}
+}
+// Method Definition Index: 62609
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ((Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_StaticFields*)il2cpp_codegen_static_fields_for(Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_il2cpp_TypeInfo_var))->___zeroVector;
+		return L_0;
+	}
+}
+// Method Definition Index: 62285
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_r;
+		__this->___r = L_0;
+		float L_1 = ___1_g;
+		__this->___g = L_1;
+		float L_2 = ___2_b;
+		__this->___b = L_2;
+		float L_3 = ___3_a;
+		__this->___a = L_3;
+		return;
+	}
+}
+// Method Definition Index: 62558
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	float V_1 = 0.0f;
+	bool V_2 = false;
+	{
+		float L_0 = ___0_value;
+		V_0 = (bool)((((float)L_0) < ((float)(0.0f)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		V_1 = (0.0f);
+		goto IL_002d;
+	}
+
+IL_0015:
+	{
+		float L_2 = ___0_value;
+		V_2 = (bool)((((float)L_2) > ((float)(1.0f)))? 1 : 0);
+		bool L_3 = V_2;
+		if (!L_3)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		V_1 = (1.0f);
+		goto IL_002d;
+	}
+
+IL_0029:
+	{
+		float L_4 = ___0_value;
+		V_1 = L_4;
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		float L_5 = V_1;
+		return L_5;
+	}
+}
+// Method Definition Index: 62559
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = ___0_a;
+		float L_1 = ___1_b;
+		float L_2 = ___0_a;
+		float L_3 = ___2_t;
+		float L_4;
+		L_4 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_3, NULL);
+		V_0 = ((float)il2cpp_codegen_add(L_0, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_1, L_2)), L_4))));
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		float L_5 = V_0;
+		return L_5;
+	}
+}
+// Method Definition Index: 100195
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 60972
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D Rect_get_zero_m5341D8B63DEF1F4C308A685EEC8CFEA12A396C8D_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_0 = ((Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_StaticFields*)il2cpp_codegen_static_fields_for(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var))->___kZero;
+		return L_0;
+	}
+}
+// Method Definition Index: 62638
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A Vector2Int_get_zero_mF92C338E9CB9434105090E675E04D20A29649553_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_0 = ((Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_StaticFields*)il2cpp_codegen_static_fields_for(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var))->___s_Zero;
+		return L_0;
+	}
+}
+// Method Definition Index: 61006
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Rect_op_Equality_mF2A038255CAF5F1E86079B9EE0FC96DE54307C1F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_lhs, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___1_rhs, const RuntimeMethod* method) 
+{
+	int32_t G_B5_0 = 0;
+	{
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_0 = ___0_lhs;
+		float L_1 = L_0.___m_XMin;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_2 = ___1_rhs;
+		float L_3 = L_2.___m_XMin;
+		if ((!(((float)L_1) == ((float)L_3))))
+		{
+			goto IL_003a;
+		}
+	}
+	{
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_4 = ___0_lhs;
+		float L_5 = L_4.___m_YMin;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_6 = ___1_rhs;
+		float L_7 = L_6.___m_YMin;
+		if ((!(((float)L_5) == ((float)L_7))))
+		{
+			goto IL_003a;
+		}
+	}
+	{
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_8 = ___0_lhs;
+		float L_9 = L_8.___m_Width;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_10 = ___1_rhs;
+		float L_11 = L_10.___m_Width;
+		if ((!(((float)L_9) == ((float)L_11))))
+		{
+			goto IL_003a;
+		}
+	}
+	{
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_12 = ___0_lhs;
+		float L_13 = L_12.___m_Height;
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_14 = ___1_rhs;
+		float L_15 = L_14.___m_Height;
+		G_B5_0 = ((((float)L_13) == ((float)L_15))? 1 : 0);
+		goto IL_003b;
+	}
+
+IL_003a:
+	{
+		G_B5_0 = 0;
+	}
+
+IL_003b:
+	{
+		return (bool)G_B5_0;
+	}
+}
+// Method Definition Index: 62617
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___m_X;
+		return L_0;
+	}
+}
+// Method Definition Index: 62619
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->___m_Y;
+		return L_0;
+	}
+}
+// Method Definition Index: 62621
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* __this, int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_x;
+		__this->___m_X = L_0;
+		int32_t L_1 = ___1_y;
+		__this->___m_Y = L_1;
+		return;
+	}
+}
+// Method Definition Index: 60976
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_y_mC733E8D49F3CE21B2A3D40A1B72D687F22C97F49_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->___m_YMin;
+		return L_0;
+	}
+}
+// Method Definition Index: 60977
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_y_mDE91F4B98A6E8623EFB1250FF6526D5DB5855629_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_YMin = L_0;
+		return;
+	}
+}
+// Method Definition Index: 60987
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = __this->___m_Height;
+		return L_0;
+	}
+}
+// Method Definition Index: 60988
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect_set_height_mD00038E6E06637137A5626CA8CD421924005BF03_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_value;
+		__this->___m_Height = L_0;
+		return;
+	}
+}
+// Method Definition Index: 60978
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_position_m9B7E583E67443B6F4280A676E644BB0B9E7C4E38_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7));
+		float L_0 = __this->___m_XMin;
+		(&V_0)->___x = L_0;
+		float L_1 = __this->___m_YMin;
+		(&V_0)->___y = L_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = V_0;
+		return L_2;
+	}
+}
+// Method Definition Index: 60989
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7));
+		float L_0 = __this->___m_Width;
+		(&V_0)->___x = L_0;
+		float L_1 = __this->___m_Height;
+		(&V_0)->___y = L_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = V_0;
+		return L_2;
+	}
+}
+// Method Definition Index: 62597
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___1_b;
+		float L_3 = L_2.___x;
+		(&V_0)->___x = ((float)il2cpp_codegen_add(L_1, L_3));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___0_a;
+		float L_5 = L_4.___y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___1_b;
+		float L_7 = L_6.___y;
+		(&V_0)->___y = ((float)il2cpp_codegen_add(L_5, L_7));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8 = V_0;
+		return L_8;
+	}
+}
+// Method Definition Index: 62542
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float G_B3_0 = 0.0f;
+	{
+		float L_0 = ___0_a;
+		float L_1 = ___1_b;
+		if ((((float)L_0) > ((float)L_1)))
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		float L_2 = ___1_b;
+		G_B3_0 = L_2;
+		goto IL_0009;
+	}
+
+IL_0008:
+	{
+		float L_3 = ___0_a;
+		G_B3_0 = L_3;
+	}
+
+IL_0009:
+	{
+		V_0 = G_B3_0;
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		float L_4 = V_0;
+		return L_4;
+	}
+}
+// Method Definition Index: 105628
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SafeAreaAdapter_set_TopOffset_mF17FE596BAF7A95663E2264B76BB9724FDC17413_inline (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:25>
+		float L_0 = ___0_value;
+		__this->___U3CTopOffsetU3Ek__BackingField = L_0;
+		return;
+	}
+}
+// Method Definition Index: 105630
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SafeAreaAdapter_set_BottomOffset_mB446A62D985B572782ED85E6BDC004D253112372_inline (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:27>
+		float L_0 = ___0_value;
+		__this->___U3CBottomOffsetU3Ek__BackingField = L_0;
+		return;
+	}
+}
+// Method Definition Index: 105627
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float SafeAreaAdapter_get_TopOffset_mF6E21296BED4474B62BAD829504641CD31784126_inline (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:25>
+		float L_0 = __this->___U3CTopOffsetU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 105629
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float SafeAreaAdapter_get_BottomOffset_mBD09AA818EEDE7FFF294C37B9FEEA67A488E1C4D_inline (SafeAreaAdapter_tFE1F9463B34CAB5B629963B830D3ED85734A5373* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/Safe Area/SafeAreaAdapter.cs:27>
+		float L_0 = __this->___U3CBottomOffsetU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 105662
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UIController_set_CanvasScaler_mFC04287E45ADF834175A25AACB7ED9D39D1E1541_inline (CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:61>
+		CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* L_0 = ___0_value;
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CCanvasScalerU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CCanvasScalerU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 105661
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* UIController_get_CanvasScaler_m0DAB93EE039A788DDA7B29C751265FA34BFA14D0_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:61>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		CanvasScaler_t3BC095205EAD308CF3EAC27136A73387AC32FC3B* L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CCanvasScalerU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 105664
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UIController_set_ScaleFactor_mB4C745F05304FEA34F8106493F4D268FB12ACA8D_inline (float ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:66>
+		float L_0 = ___0_value;
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CScaleFactorU3Ek__BackingField = L_0;
+		return;
+	}
+}
+// Method Definition Index: 105663
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float UIController_get_ScaleFactor_mFDE78C23591D7F4DBA187471C682594E5AF85BFF_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIController.cs:66>
+		il2cpp_codegen_runtime_class_init_inline(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var);
+		float L_0 = ((UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_StaticFields*)il2cpp_codegen_static_fields_for(UIController_t59D959ED1F3F6E6172666A2AC6486681A98B0EEA_il2cpp_TypeInfo_var))->___U3CScaleFactorU3Ek__BackingField;
+		return L_0;
+	}
+}
+// Method Definition Index: 105700
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool UIPage_get_IsPageDisplayed_m0004D64675E0AE6F04BD95D5A2DE847C2AE1F25F_inline (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:21>
+		bool L_0 = __this->___isPageDisplayed;
+		return L_0;
+	}
+}
+// Method Definition Index: 105702
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* UIPage_get_GraphicRaycaster_mE5707F61C970219BDD7DE4E20D2D41BF9AF6C345_inline (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:29>
+		GraphicRaycaster_t16FC39434AE5B47D3C2993134CDCF7F4AE6A6D7B* L_0 = __this->___graphicRaycaster;
+		return L_0;
+	}
+}
+// Method Definition Index: 105693
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PageCallback_Invoke_m534AA2289301F36BEF3CDD0F6E264D02016AF08C_inline (PageCallback_tB109469A96FD014B01B51D47343D68F643405291* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, Type_t* ___1_pageType, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, Type_t*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_page, ___1_pageType, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 105697
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PopupCallback_Invoke_m2194F55CF743C29C3BFA26E581B2FC092C45C2B7_inline (PopupCallback_tBC3477A5C377740ED981E13CE6B00F39A9AB9F37* __this, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* ___0_page, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_page, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 105703
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool UIPage_get_IsCached_m477F3FEC4FB323BE6D57C51BD4CE26490807714B_inline (UIPage_t768F66CC5986D3AD61D5B21BDD7215721D781C18* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/UIPage.cs:37>
+		bool L_0 = __this->___isCached;
+		return L_0;
+	}
+}
+// Method Definition Index: 105576
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PageData_get_AutoDestroy_m4775BB9CA15B24130353BC47E7D25B5830292910_inline (PageData_tC0D23DD96D1B73AFD516E9B3B4BE9B85B3A56254* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Watermelon Core/Systems/UI/Scripts/Runtime/CachedPages.cs:109>
+		bool L_0 = __this->___autoDestroy;
+		return L_0;
+	}
+}
+// Method Definition Index: 62466
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_b;
+		float L_3 = L_2.___x;
+		(&V_0)->___x = ((float)il2cpp_codegen_add(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_a;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_b;
+		float L_7 = L_6.___y;
+		(&V_0)->___y = ((float)il2cpp_codegen_add(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_a;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_b;
+		float L_11 = L_10.___z;
+		(&V_0)->___z = ((float)il2cpp_codegen_add(L_9, L_11));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
+		return L_12;
+	}
+}
+// Method Definition Index: 62467
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_b;
+		float L_3 = L_2.___x;
+		(&V_0)->___x = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_a;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_b;
+		float L_7 = L_6.___y;
+		(&V_0)->___y = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_a;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_b;
+		float L_11 = L_10.___z;
+		(&V_0)->___z = ((float)il2cpp_codegen_subtract(L_9, L_11));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
+		return L_12;
+	}
+}
+// Method Definition Index: 62443
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
+{
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_lhs;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_rhs;
+		float L_3 = L_2.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_lhs;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_rhs;
+		float L_7 = L_6.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_lhs;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_rhs;
+		float L_11 = L_10.___z;
+		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11))));
+	}
+}
+// Method Definition Index: 62469
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		float L_2 = ___1_d;
+		(&V_0)->___x = ((float)il2cpp_codegen_multiply(L_1, L_2));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___0_a;
+		float L_4 = L_3.___y;
+		float L_5 = ___1_d;
+		(&V_0)->___y = ((float)il2cpp_codegen_multiply(L_4, L_5));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___0_a;
+		float L_7 = L_6.___z;
+		float L_8 = ___1_d;
+		(&V_0)->___z = ((float)il2cpp_codegen_multiply(L_7, L_8));
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = V_0;
+		return L_9;
+	}
+}
+// Method Definition Index: 62608
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___0_v;
+		float L_1 = L_0.___x;
+		(&V_0)->___x = L_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___0_v;
+		float L_3 = L_2.___y;
+		(&V_0)->___y = L_3;
+		(&V_0)->___z = (0.0f);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = V_0;
+		return L_4;
+	}
+}
+// Method Definition Index: 11525
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Enumerator_get_Current_m897E00BA84211EA048F43B04C5C25D71F88F1441_gshared_inline (Enumerator_t6637E273E74F207303F5201BFE6065EAD1EF638C* __this, const RuntimeMethod* method) 
+{
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = __this->____currentValue;
+		return L_0;
+	}
+}
+// Method Definition Index: 80857
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m139A176CD271A0532D75BE08DA7831C8C45CE28F_gshared_inline (Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->____current;
+		return L_0;
+	}
+}
+// Method Definition Index: 80833
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t HashSet_1_get_Count_m41CC85EEB7855CEFA3BC7A32F115387939318ED3_gshared_inline (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____count;
+		return L_0;
+	}
+}
+// Method Definition Index: 11581
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____size;
+		return L_0;
+	}
+}
+// Method Definition Index: 11591
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = __this->____version;
+		__this->____version = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = __this->____items;
+		V_0 = L_1;
+		int32_t L_2 = __this->____size;
+		V_1 = L_2;
+		int32_t L_3 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = V_0;
+		NullCheck(L_4);
+		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		int32_t L_5 = V_1;
+		__this->____size = ((int32_t)il2cpp_codegen_add(L_5, 1));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = V_0;
+		int32_t L_7 = V_1;
+		RuntimeObject* L_8 = ___0_item;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (RuntimeObject*)L_8);
+		return;
+	}
+
+IL_0034:
+	{
+		RuntimeObject* L_9 = ___0_item;
+		List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 14));
+		return;
+	}
+}

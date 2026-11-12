@@ -1,0 +1,6524 @@
+﻿#include "pch-cpp.hpp"
+
+
+
+
+
+
+struct Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664;
+struct Dictionary_2_t2D24879A1FC5F29170BCF185C14E3D813F110D25;
+struct Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA;
+struct Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24;
+struct IEqualityComparer_1_t98CA4CCDCBF5ABE50A82E1E8E06829F0BD28E932;
+struct IEqualityComparer_1_tAE94C8F24AD5B94D4EE85CA9FC59E3409D41CAF7;
+struct IReadOnlyList_1_t9B9589F54A498570D4F2F752844896E2EEB35428;
+struct IReadOnlyList_1_t7BB300FE9C8B0D3BCB34B752D2516BD12EB5E8CF;
+struct KeyCollection_t1F7C814CB808F678275C47D65218E83B29D27F65;
+struct KeyCollection_tBAF028287A90DA246BB458204DB49774E41D04AB;
+struct List_1_t4501376E92E2003A7007D92A61469BB9862D6C85;
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
+struct List_1_t11B604C17CD4038182F4F4BECE73CB96457FF5ED;
+struct ValueCollection_t49B96F98E64FCB1321CA083A09EB1A1B0B94FE58;
+struct ValueCollection_t5E8255234E3BA2CFC7E0B1F570F80B07C3EBBDE5;
+struct EntryU5BU5D_t2CCF846C4279DF3BA3F6F013EE19EB5D7DABBB3C;
+struct EntryU5BU5D_tED5B00189A1A2DB5562C6CC6700D361068445B8D;
+struct AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB;
+struct AudioSourceCaseU5BU5D_tC9E1E1463A7F458D25471E6F2B3BA0EE58A0F4C5;
+struct AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
+struct Int32EnumU5BU5D_t87B7DB802810C38016332669039EF42C487A081F;
+struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
+struct KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6;
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354;
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
+struct AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B;
+struct AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20;
+struct AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5;
+struct AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7;
+struct AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7;
+struct AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35;
+struct AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86;
+struct AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D;
+struct AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB;
+struct AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299;
+struct AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8;
+struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
+struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3;
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B;
+struct Delegate_t;
+struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
+struct DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F;
+struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F;
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
+struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
+struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
+struct InitModule_tAB59C22C9D48F281C236CA2963EDA5BDE72E0314;
+struct MethodInfo_t;
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
+struct MusicSource_t901B96561102D7ECF64A870A33679B7336070B60;
+struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A;
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
+struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A;
+struct SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A;
+struct String_t;
+struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
+struct TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1;
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tB693BEDD236838FF293D27621D626BA1EF9E0B12;
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
+struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3;
+struct U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024;
+struct AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD;
+struct PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E;
+struct PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072;
+struct OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841;
+struct U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89;
+struct VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A;
+struct IEasingFunction_t60E83D178300465330FA6E466893DB94BB6F6229;
+struct U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A;
+struct TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7;
+
+IL2CPP_EXTERN_C RuntimeClass* AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* AudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_t4501376E92E2003A7007D92A61469BB9862D6C85_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_tA1407051A446142D80C4C8229757AC1433E87FD6____B25DB5A92F0ECB03F3D59DE85044E4F288F51188EBE71905A052BC69E5559D79_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_tA1407051A446142D80C4C8229757AC1433E87FD6____C7600B158CEFC6072E2E6D9546F3551E1D3ABEC80A9EEEDEAE01947ADFC032E7_FieldInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral0A28A969955664DDA111112830036195FCC4B0A5;
+IL2CPP_EXTERN_C String_t* _stringLiteral249F686B7589D83FFC30728500D88A85E533F15F;
+IL2CPP_EXTERN_C String_t* _stringLiteral2FE42AC0F0F0B8F3F615802909248EC1729B6882;
+IL2CPP_EXTERN_C String_t* _stringLiteral45C82765AFE6AB36D682375DA3A7755B208B07DA;
+IL2CPP_EXTERN_C String_t* _stringLiteral4BC40A28628C4E4745969E329633551068A0ECD7;
+IL2CPP_EXTERN_C String_t* _stringLiteral4CE086457123F7800C81E9FDC21F850E7CB434AC;
+IL2CPP_EXTERN_C String_t* _stringLiteral5029EC9FF4342DD45C78A5FD438B3AF4786697DF;
+IL2CPP_EXTERN_C String_t* _stringLiteral51E97DFB38E92E699494F59E96273F7624179BF6;
+IL2CPP_EXTERN_C String_t* _stringLiteral5FCEB7EFCECAEBD5E9A3AD169900A4D6C22DA63F;
+IL2CPP_EXTERN_C String_t* _stringLiteral7C8965D252A8F5BE786240409F81075F080ED53A;
+IL2CPP_EXTERN_C String_t* _stringLiteral93E28A6403D9F4604B07F787F5F349E06CE636F0;
+IL2CPP_EXTERN_C String_t* _stringLiteral9826BBD2DEB9086ED09B3C5E4B681DA7E422E95D;
+IL2CPP_EXTERN_C String_t* _stringLiteral9F49B6C011B56C676624616FE1CC4620FB0EFAE0;
+IL2CPP_EXTERN_C String_t* _stringLiteralA860A3BA2F51C33F848ED5EF262CBE18DA71CA1F;
+IL2CPP_EXTERN_C String_t* _stringLiteralB74A8FE69D830B429EF876DBC56FF27B6FFC4B6A;
+IL2CPP_EXTERN_C String_t* _stringLiteralBAB76C87D9314DA95B9449E8DFAEDA8B0F40BB7E;
+IL2CPP_EXTERN_C String_t* _stringLiteralCD1E92415C8D2F407D18D8F13E94417652866F04;
+IL2CPP_EXTERN_C String_t* _stringLiteralCE997756AE28DA8CED1FA1160227AA74FACA2C68;
+IL2CPP_EXTERN_C String_t* _stringLiteralD2F04BCCE9966A51E5775FDBFF14426585364E2E;
+IL2CPP_EXTERN_C String_t* _stringLiteralDEAD8CC71BA9ACE38953E84EDCA4146583B86632;
+IL2CPP_EXTERN_C String_t* _stringLiteralE4C40463C7DDB9F551D53CB094056DDF11A18F18;
+IL2CPP_EXTERN_C const RuntimeMethod* AudioCase_U3CFadeOutU3Eb__8_0_m5D268CA2B5D719BF98D4FCEB16E4D56549556A03_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AudioClipHandler_OnVolumeChanged_m11D993ABD8B9E45315BCD6626F5D966B82F980E3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* AudioClipHandler_U3CDoVolumeU3Eb__21_0_mDB3A1F2315F55C0BF05E5A82D915DF99669F39D3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_Add_mC94F64C4969F543F3DD58CDD31D473957F31DE98_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_ContainsKey_mA82E201D6C6F4295E3BCDD89B2D4C485753709D3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_TryGetValue_m7A9A3006D46107F1E4D72685F31A6DEED8C27E02_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m17E8F71EF5A4AEB51E5F811976C8AEE28CC30092_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2__ctor_m39CA5E02917D362561696DE1DA4AE4E236AE7675_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_get_Item_m0BE32FAF650E18EE6F450B12C43E7751F1FFA00E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_set_Item_m6D8159C91FE4513E3489D7B8D777DBB0044FEBED_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Dictionary_2_set_Item_m78188AF7B9EDC2DE7BA2774C89B715FEA7296DED_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* EnumUtils_GetEnumArray_TisAudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028_m61A0794596290598540CB936F45212789737EAB8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_mA30AC51FE6287A9D0057077D99F694600A3D844E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisMusicSource_t901B96561102D7ECF64A870A33679B7336070B60_mBF13E16E7DB99760916A845780A0F0CE4C33D4AB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mF0E6EEF81C0BD6BB30DCF9559E34613468E1D907_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mCC51BE47184AF67777779C3C2F87B3B437447EE8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* MusicSource_OnVolumeChanged_m88D635F5AC3607AD858AEB59AFE9B740DEE0CB01_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SaveController_GetSaveObject_TisAudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB_m5EE19AF18B617A88476626226558A1D7CBA1D7A4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeRoutineU3Ed__21_System_Collections_IEnumerator_Reset_m5A4E817EF32E4C9526863C8910920661729085EC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CInitAsyncU3Ed__10_System_Collections_IEnumerator_Reset_m445C2840277147171D3DA290FB6F09B7DDD7BA61_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3COnAudioEndCoroutineU3Ed__10_System_Collections_IEnumerator_Reset_m732E331119E22D53874BFD257EE2A54F98DA3A97_RuntimeMethod_var;
+struct Delegate_t_marshaled_com;
+struct Delegate_t_marshaled_pinvoke;
+struct Exception_t_marshaled_com;
+struct Exception_t_marshaled_pinvoke;
+
+struct AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB;
+struct AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86;
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3;
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
+struct VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6;
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+struct U3CModuleU3E_tD9A5659EECD5C32CD11AC3B9EB610EF6C182679B 
+{
+};
+struct Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_t2CCF846C4279DF3BA3F6F013EE19EB5D7DABBB3C* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_t1F7C814CB808F678275C47D65218E83B29D27F65* ____keys;
+	ValueCollection_t49B96F98E64FCB1321CA083A09EB1A1B0B94FE58* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24  : public RuntimeObject
+{
+	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets;
+	EntryU5BU5D_tED5B00189A1A2DB5562C6CC6700D361068445B8D* ____entries;
+	int32_t ____count;
+	int32_t ____freeList;
+	int32_t ____freeCount;
+	int32_t ____version;
+	RuntimeObject* ____comparer;
+	KeyCollection_tBAF028287A90DA246BB458204DB49774E41D04AB* ____keys;
+	ValueCollection_t5E8255234E3BA2CFC7E0B1F570F80B07C3EBBDE5* ____values;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_t4501376E92E2003A7007D92A61469BB9862D6C85  : public RuntimeObject
+{
+	AudioSourceCaseU5BU5D_tC9E1E1463A7F458D25471E6F2B3BA0EE58A0F4C5* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D  : public RuntimeObject
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ____items;
+	int32_t ____size;
+	int32_t ____version;
+	RuntimeObject* ____syncRoot;
+};
+struct U3CPrivateImplementationDetailsU3E_tA1407051A446142D80C4C8229757AC1433E87FD6  : public RuntimeObject
+{
+};
+struct AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7  : public RuntimeObject
+{
+	bool ___isInitialized;
+	List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* ___audioSourcesPool;
+	AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* ___registry;
+	AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* ___audioListener;
+	AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* ___save;
+	float ___maxDistance;
+	float ___spread;
+	AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___rolloffCurve;
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___volumeChanged;
+	Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* ___volumeDictionary;
+	AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86* ___audioTypes;
+};
+struct AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D  : public RuntimeObject
+{
+	String_t* ___clipName;
+	String_t* ___assetPath;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___clip;
+};
+struct AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB  : public RuntimeObject
+{
+	VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6* ___VolumeDatas;
+};
+struct DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F  : public RuntimeObject
+{
+	float ___firstValue;
+	float ___secondValue;
+};
+struct String_t  : public RuntimeObject
+{
+	int32_t ____stringLength;
+	Il2CppChar ____firstChar;
+};
+struct TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1  : public RuntimeObject
+{
+	int32_t ___U3CActiveIDU3Ek__BackingField;
+	bool ___U3CIsActiveU3Ek__BackingField;
+	float ___currentDelay;
+	float ___delay;
+	float ___duration;
+	int32_t ___updateMethodIndex;
+	bool ___isPaused;
+	bool ___isUnscaled;
+	bool ___isCompleted;
+	bool ___isKilling;
+	RuntimeObject* ___easeFunction;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___completedCallback;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___terminatedCallback;
+	List_1_t11B604C17CD4038182F4F4BECE73CB96457FF5ED* ___callbackData;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___parentObject;
+	float ___state;
+};
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tB693BEDD236838FF293D27621D626BA1EF9E0B12  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D  : public RuntimeObject
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinvoke
+{
+};
+struct YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
+{
+};
+struct U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	float ___clipDuration;
+	AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* ___U3CU3E4__this;
+};
+struct U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___owner;
+	AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* ___U3CU3E4__this;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___U3CglobalMusicSourceObjectU3E5__1;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___U3CaudioSourceU3E5__2;
+	MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* ___U3CmusicSourceU3E5__3;
+};
+struct U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A  : public RuntimeObject
+{
+	int32_t ___U3CU3E1__state;
+	RuntimeObject* ___U3CU3E2__current;
+	float ___target;
+	float ___duration;
+	float ___delay;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___onComplete;
+	MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* ___U3CU3E4__this;
+	float ___U3CstartU3E5__1;
+	float ___U3CelapsedU3E5__2;
+};
+struct Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 
+{
+	List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* ____current;
+};
+struct Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A 
+{
+	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ____list;
+	int32_t ____index;
+	int32_t ____version;
+	RuntimeObject* ____current;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22 
+{
+	bool ___m_value;
+};
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3 
+{
+	uint8_t ___m_value;
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2  : public ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
+{
+};
+struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	int32_t ___m_value;
+};
+struct IntPtr_t 
+{
+	void* ___m_value;
+};
+struct Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 
+{
+	float ___m_Time;
+	float ___m_Value;
+	float ___m_InTangent;
+	float ___m_OutTangent;
+	int32_t ___m_WeightedMode;
+	float ___m_InWeight;
+	float ___m_OutWeight;
+};
+struct Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+	float ___w;
+};
+struct Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C 
+{
+	float ___m_value;
+};
+struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 
+{
+	float ___x;
+	float ___y;
+	float ___z;
+};
+struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t Void_t4861ACF8F4594C3437BB48B6E56783494B843915__padding[1];
+	};
+};
+struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3  : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D
+{
+	float ___m_Seconds;
+};
+struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_marshaled_pinvoke : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinvoke
+{
+	float ___m_Seconds;
+};
+struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_marshaled_com : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
+{
+	float ___m_Seconds;
+};
+#pragma pack(push, tp, 1)
+struct __StaticArrayInitTypeSizeU3D301_tEC6B4CE7476445F10D9D3B321C5ECCA9A82F1DAE 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D301_tEC6B4CE7476445F10D9D3B321C5ECCA9A82F1DAE__padding[301];
+	};
+};
+#pragma pack(pop, tp)
+#pragma pack(push, tp, 1)
+struct __StaticArrayInitTypeSizeU3D607_t52EDCB12F0B722283F76FF3EAD2C528975859E49 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D607_t52EDCB12F0B722283F76FF3EAD2C528975859E49__padding[607];
+	};
+};
+#pragma pack(pop, tp)
+struct MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2 
+{
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___FilePathsData;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	bool ___IsEditorOnly;
+};
+struct MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshaled_pinvoke
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshaled_com
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354  : public RuntimeObject
+{
+	intptr_t ___m_Ptr;
+	bool ___m_RequiresNativeCleanup;
+};
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_marshaled_pinvoke
+{
+	intptr_t ___m_Ptr;
+	int32_t ___m_RequiresNativeCleanup;
+};
+struct AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_marshaled_com
+{
+	intptr_t ___m_Ptr;
+	int32_t ___m_RequiresNativeCleanup;
+};
+struct AudioRolloffMode_tA944C7222A7D47A746407C74368B413CDA1B6B7B 
+{
+	int32_t ___value__;
+};
+struct AudioSourceCurveType_t64710ADB803BFCA09E5CC91AB49EAE15D4C708B7 
+{
+	int32_t ___value__;
+};
+struct AudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028 
+{
+	int32_t ___value__;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B  : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D
+{
+	intptr_t ___m_Ptr;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B_marshaled_pinvoke : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_pinvoke
+{
+	intptr_t ___m_Ptr;
+};
+struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B_marshaled_com : public YieldInstruction_tFCE35FD0907950EFEE9BC2890AC664E41C53728D_marshaled_com
+{
+	intptr_t ___m_Ptr;
+};
+struct Delegate_t  : public RuntimeObject
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	RuntimeObject* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	bool ___method_is_virtual;
+};
+struct Delegate_t_marshaled_pinvoke
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Delegate_t_marshaled_com
+{
+	intptr_t ___method_ptr;
+	intptr_t ___invoke_impl;
+	Il2CppIUnknown* ___m_target;
+	intptr_t ___method;
+	intptr_t ___delegate_trampoline;
+	intptr_t ___extra_arg;
+	intptr_t ___method_code;
+	intptr_t ___interp_method;
+	intptr_t ___interp_invoke_impl;
+	MethodInfo_t* ___method_info;
+	MethodInfo_t* ___original_method_info;
+	DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E* ___data;
+	int32_t ___method_is_virtual;
+};
+struct Exception_t  : public RuntimeObject
+{
+	String_t* ____className;
+	String_t* ____message;
+	RuntimeObject* ____data;
+	Exception_t* ____innerException;
+	String_t* ____helpURL;
+	RuntimeObject* ____stackTrace;
+	String_t* ____stackTraceString;
+	String_t* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	RuntimeObject* ____dynamicMethods;
+	int32_t ____HResult;
+	String_t* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_pinvoke
+{
+	char* ____className;
+	char* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_pinvoke* ____innerException;
+	char* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	char* ____stackTraceString;
+	char* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	char* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Exception_t_marshaled_com
+{
+	Il2CppChar* ____className;
+	Il2CppChar* ____message;
+	RuntimeObject* ____data;
+	Exception_t_marshaled_com* ____innerException;
+	Il2CppChar* ____helpURL;
+	Il2CppIUnknown* ____stackTrace;
+	Il2CppChar* ____stackTraceString;
+	Il2CppChar* ____remoteStackTraceString;
+	int32_t ____remoteStackIndex;
+	Il2CppIUnknown* ____dynamicMethods;
+	int32_t ____HResult;
+	Il2CppChar* ____source;
+	SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6* ____safeSerializationManager;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	Il2CppSafeArray* ___native_trace_ips;
+	int32_t ___caught_in_unmanaged;
+};
+struct Int32Enum_tCBAC8BA2BFF3A845FA599F303093BBBA374B6F0C 
+{
+	int32_t ___value__;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C  : public RuntimeObject
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+	intptr_t ___m_CachedPtr;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+	intptr_t ___m_CachedPtr;
+};
+struct RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 
+{
+	intptr_t ___value;
+};
+struct UpdateMethod_t9982E41AA04A0C3C2DCD8F40300000EE3FE954AA 
+{
+	int32_t ___value__;
+};
+struct AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B  : public RuntimeObject
+{
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___Source;
+	int32_t ___Type;
+	AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* ___onAudioEnded;
+	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___endCoroutine;
+};
+struct AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5  : public RuntimeObject
+{
+	int32_t ___audioType;
+	float ___clipVolume;
+	bool ___advancedSettings;
+	float ___minDelay;
+	bool ___dynamicPitch;
+	DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* ___pitchRange;
+	int32_t ___pitchSteps;
+	float ___pitchResetTime;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___customAudioSource;
+	float ___lastPlayedTime;
+	int32_t ___currentPitchStep;
+	float ___lastPitchStepTime;
+	TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* ___volumeCase;
+};
+struct AudioResource_t35B84706031E4F08C928B1640B804839F4B6500A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8  : public RuntimeObject
+{
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audioSource;
+	int32_t ___audioType;
+	float ___clipVolume;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___gameObject;
+};
+struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct MulticastDelegate_t  : public Delegate_t
+{
+	DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771* ___delegates;
+};
+struct MulticastDelegate_t_marshaled_pinvoke : public Delegate_t_marshaled_pinvoke
+{
+	Delegate_t_marshaled_pinvoke** ___delegates;
+};
+struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
+{
+	Delegate_t_marshaled_com** ___delegates;
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_pinvoke : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+};
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+};
+struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
+{
+};
+struct VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A  : public RuntimeObject
+{
+	int32_t ___AudioType;
+	float ___Volume;
+};
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C  : public MulticastDelegate_t
+{
+};
+struct AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20  : public AudioResource_t35B84706031E4F08C928B1640B804839F4B6500A
+{
+	PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E* ___m_PCMReaderCallback;
+	PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072* ___m_PCMSetPositionCallback;
+};
+struct AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+	AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* ___entries;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___ignorePatterns;
+	Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24* ___lookup;
+};
+struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct InitModule_tAB59C22C9D48F281C236CA2963EDA5BDE72E0314  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+};
+struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A  : public SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295
+{
+};
+struct SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A  : public MulticastDelegate_t
+{
+};
+struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
+{
+};
+struct AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD  : public MulticastDelegate_t
+{
+};
+struct OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841  : public MulticastDelegate_t
+{
+};
+struct TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7  : public MulticastDelegate_t
+{
+};
+struct AudioBehaviour_t2DC0BEF7B020C952F3D2DA5AAAC88501C7EEB941  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+};
+struct AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7  : public InitModule_tAB59C22C9D48F281C236CA2963EDA5BDE72E0314
+{
+	AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* ___audioRegistry;
+	int32_t ___audioSourcesPoolSize;
+	float ___maxDistance;
+	float ___spread;
+	AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___rolloffCurve;
+	bool ___spawnGlobalMusicSource;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___globalMusicClip;
+	AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* ___audioController;
+};
+struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71  : public Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA
+{
+	CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B* ___m_CancellationTokenSource;
+};
+struct AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35  : public AudioBehaviour_t2DC0BEF7B020C952F3D2DA5AAAC88501C7EEB941
+{
+};
+struct AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299  : public AudioBehaviour_t2DC0BEF7B020C952F3D2DA5AAAC88501C7EEB941
+{
+};
+struct MusicSource_t901B96561102D7ECF64A870A33679B7336070B60  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	bool ___activateAutomatically;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___audioSource;
+	float ___currentRawVolume;
+	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___fadeCoroutine;
+	float ___volumeMultiplier;
+	bool ___isInitialized;
+};
+struct List_1_t4501376E92E2003A7007D92A61469BB9862D6C85_StaticFields
+{
+	AudioSourceCaseU5BU5D_tC9E1E1463A7F458D25471E6F2B3BA0EE58A0F4C5* ___s_emptyArray;
+};
+struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_StaticFields
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___s_emptyArray;
+};
+struct U3CPrivateImplementationDetailsU3E_tA1407051A446142D80C4C8229757AC1433E87FD6_StaticFields
+{
+	__StaticArrayInitTypeSizeU3D301_tEC6B4CE7476445F10D9D3B321C5ECCA9A82F1DAE ___B25DB5A92F0ECB03F3D59DE85044E4F288F51188EBE71905A052BC69E5559D79;
+	__StaticArrayInitTypeSizeU3D607_t52EDCB12F0B722283F76FF3EAD2C528975859E49 ___C7600B158CEFC6072E2E6D9546F3551E1D3ABEC80A9EEEDEAE01947ADFC032E7;
+};
+struct AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields
+{
+	AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* ___instance;
+};
+struct String_t_StaticFields
+{
+	String_t* ___Empty;
+};
+struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
+{
+	String_t* ___TrueString;
+	String_t* ___FalseString;
+};
+struct IntPtr_t_StaticFields
+{
+	intptr_t ___Zero;
+};
+struct Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_StaticFields
+{
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___identityQuaternion;
+};
+struct Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___zeroVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___oneVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___upVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___downVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___leftVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rightVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___forwardVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___backVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___positiveInfinityVector;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___negativeInfinityVector;
+};
+struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticFields
+{
+	int32_t ___OffsetOfInstanceIDInCPlusPlusObject;
+};
+struct MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields
+{
+	MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* ___defaultMusicSource;
+	MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* ___activeMusicSource;
+};
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
+{
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+	inline uint8_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Delegate_t* m_Items[1];
+
+	inline Delegate_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Delegate_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Delegate_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Delegate_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6  : public RuntimeArray
+{
+	ALIGN_FIELD (8) VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* m_Items[1];
+
+	inline VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 m_Items[1];
+
+	inline Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 value)
+	{
+		m_Items[index] = value;
+	}
+};
+struct AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86  : public RuntimeArray
+{
+	ALIGN_FIELD (8) int32_t m_Items[1];
+
+	inline int32_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline int32_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, int32_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline int32_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline int32_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, int32_t value)
+	{
+		m_Items[index] = value;
+	}
+};
+struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
+{
+	ALIGN_FIELD (8) String_t* m_Items[1];
+
+	inline String_t* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, String_t* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline String_t* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline String_t** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, String_t* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB  : public RuntimeArray
+{
+	ALIGN_FIELD (8) AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* m_Items[1];
+
+	inline AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeArray
+{
+	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
+
+	inline RuntimeObject* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline RuntimeObject* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline RuntimeObject** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, RuntimeObject* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SaveController_GetSaveObject_TisRuntimeObject_mE2F2846180A8CC473B682131A299BC089F340277_gshared (String_t* ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int32EnumU5BU5D_t87B7DB802810C38016332669039EF42C487A081F* EnumUtils_GetEnumArray_TisInt32Enum_tCBAC8BA2BFF3A845FA599F303093BBBA374B6F0C_mE2C60DF8BBB72DB2EB8688E2DB10C86C7FC94FEC_gshared (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_mC34BD92CA942BFFE843F0D35D036E6F13090A85F_gshared (Dictionary_2_t2D24879A1FC5F29170BCF185C14E3D813F110D25* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m7A948A4F155CD81D917D907608AED6998AF784D3_gshared (Dictionary_2_t2D24879A1FC5F29170BCF185C14E3D813F110D25* __this, int32_t ___0_key, float ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mF9D7BD0FE1C56928295F0A67E859CDC33804E503_gshared (Dictionary_2_t2D24879A1FC5F29170BCF185C14E3D813F110D25* __this, int32_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Dictionary_2_get_Item_m56C71FA7106AE13D664D32E59D845344D82573E6_gshared (Dictionary_2_t2D24879A1FC5F29170BCF185C14E3D813F110D25* __this, int32_t ___0_key, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m23DD5D6DEF17E594109470EF0DBDA937FE2ADFA0_gshared (Dictionary_2_t2D24879A1FC5F29170BCF185C14E3D813F110D25* __this, int32_t ___0_key, float ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_mF225F49F6BE54C39563CECD7C693F0AE4F0530E8_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, int32_t ___0_capacity, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, RuntimeObject* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, RuntimeObject* ___0_key, RuntimeObject** ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
+
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* AudioSource_get_clip_m4F5027066F9FC44B44192713142B0C277BB418FE (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioClip_get_length_m6102CB29AF65988797452E4D6E43D4788303873D (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AudioCase_OnAudioEndCoroutine_mB43CAA0E96868157BF64660730FED28FD2390A19 (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, float ___0_clipDuration, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* Tween_InvokeCoroutine_mCE5352F9595BAAC15E07E115C6DEA1042BD4B728 (RuntimeObject* ___0_enumerator, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Tween_StopCustomCoroutine_m7D855745676BD6961C4EE0502B655F2946C1D95C (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___0_coroutine, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* AudioTweenCases_DOVolume_mC728C0FC2F034539AD2A46360CC82CC52E4F3460 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___0_tweenObject, float ___1_resultValue, float ___2_time, float ___3_delay, bool ___4_unscaledTime, int32_t ___5_updateMethod, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SimpleCallback__ctor_m04CB2FCA2E02060AB815575D93F70A51542A7DE6 (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* TweenCase_OnComplete_m024ABDE49BD6C9F1021B1E8B888D41BE5F64F726 (TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* __this, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___0_callback, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3COnAudioEndCoroutineU3Ed__10__ctor_m5F083C6F5711F3289D88D00F4E9E6926052495FE (U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* __this, float ___0_seconds, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850_inline (AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DuoFloat__ctor_mAF682087AB96794ECA8DE82A9F20DCA139217789 (DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* __this, float ___0_firstValue, float ___1_secondValue, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler_Init_m3247A29C14459BA3385C43BF816A9E6DE9F9E070 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnVolumeChangedCallback__ctor_mEE04238BB079D851B720A8E13817FDC547BFB2B5 (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_add_VolumeChanged_m273796D86693FD31271FC8A43DCB3DA7E7866E7B (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_remove_VolumeChanged_m79B5A3ED5AC295F2DCDBE0DDC6BC1F84828AA01A (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TweenExtensions_KillActive_m3A5AB11FB7EB65DF25BCA40BA5451109D60E49F0 (TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* ___0_tweenCase, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DuoFloat_Lerp_m204D01E4E8D19C3C9998CB9282499935FA67AB34 (DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* __this, float ___0_t, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551 (int32_t ___0_audioType, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_PlaySound_mE397E8983DC71AB9649159CE9CD7A916267ADBCA (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, float ___1_volumePercentage, float ___2_pitch, float ___3_minDelay, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_PlaySound_m2CC26C407B4FCA2BE282D485C09C22AE9CF6E071 (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, float ___2_volumePercentage, float ___3_pitch, float ___4_minDelay, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TweenFloatCallback__ctor_m613F566925FDED01A03C93273CBC137C1E5D051E (TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* Tween_DoFloat_m15914A3517E46EC94AC1E261AF78EBC9084A701E (float ___0_startValue, float ___1_resultValue, float ___2_time, TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7* ___3_callback, float ___4_delay, bool ___5_unscaledTime, int32_t ___6_tweenType, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00 (Delegate_t* ___0_a, Delegate_t* ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3 (Delegate_t* ___0_source, Delegate_t* ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Keyframe__ctor_mECF144086B28785BE911A22C06194A9E0FBF3C34 (Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0* __this, float ___0_time, float ___1_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnimationCurve__ctor_mEABC98C03805713354D61E50D9340766BD5B717E (AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* __this, KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3* ___0_keys, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioRegistry_BuildRuntimeLookup_mAB9981A4B6DE182520155273BE1CD6CBA68EE32B (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* __this, const RuntimeMethod* method) ;
+inline AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* SaveController_GetSaveObject_TisAudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB_m5EE19AF18B617A88476626226558A1D7CBA1D7A4 (String_t* ___0_key, const RuntimeMethod* method)
+{
+	return ((  AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* (*) (String_t*, const RuntimeMethod*))SaveController_GetSaveObject_TisRuntimeObject_mE2F2846180A8CC473B682131A299BC089F340277_gshared)(___0_key, method);
+}
+inline AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86* EnumUtils_GetEnumArray_TisAudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028_m61A0794596290598540CB936F45212789737EAB8 (const RuntimeMethod* method)
+{
+	return ((  AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86* (*) (const RuntimeMethod*))EnumUtils_GetEnumArray_TisInt32Enum_tCBAC8BA2BFF3A845FA599F303093BBBA374B6F0C_mE2C60DF8BBB72DB2EB8688E2DB10C86C7FC94FEC_gshared)(method);
+}
+inline void Dictionary_2__ctor_m39CA5E02917D362561696DE1DA4AE4E236AE7675 (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*, const RuntimeMethod*))Dictionary_2__ctor_mC34BD92CA942BFFE843F0D35D036E6F13090A85F_gshared)(__this, method);
+}
+inline void Dictionary_2_Add_mC94F64C4969F543F3DD58CDD31D473957F31DE98 (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* __this, int32_t ___0_key, float ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*, int32_t, float, const RuntimeMethod*))Dictionary_2_Add_m7A948A4F155CD81D917D907608AED6998AF784D3_gshared)(__this, ___0_key, ___1_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_CreateAudioListener_m220543939192114CE86F4959C780D3ADD6683C17 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) ;
+inline void List_1__ctor_mCC51BE47184AF67777779C3C2F87B3B437447EE8 (List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t4501376E92E2003A7007D92A61469BB9862D6C85*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSourceCase__ctor_mEB3F12644091601BD2FB48BECF459B22DCD4C6C4 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, const RuntimeMethod* method) ;
+inline void List_1_Add_mF0E6EEF81C0BD6BB30DCF9559E34613468E1D907_inline (List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* __this, AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t4501376E92E2003A7007D92A61469BB9862D6C85*, AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___0_item, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88 (String_t* ___0_caller, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_add_volumeChanged_mA1B5891B2726B533A284527120B4FD12663F0DB6 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_remove_volumeChanged_mCD127353ACBEB821B4F88512CD1D021BB8A211A4 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_PlaySoundInternal_m4A236881F8F500C1CBB2232D6633CA6DBEF0CCFE (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, float ___1_volumePercentage, float ___2_pitch, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_PlaySoundInternal_m9AD9765883F9A0E19E73990F80EDB395DF83ADFE (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, float ___2_volumePercentage, float ___3_pitch, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* AudioRegistry_GetClip_m4FD75C142036CF06F813F52E6E7D13E37C3BDB4E (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* __this, String_t* ___0_name, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioController_GetVolumeInternal_m9F87820CAAF0AE714742C107EBA312631B85C11C (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, int32_t ___0_audioType, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_SetVolumeInternal_mA0A2173208C3010FD50F8D1CD19BF667C0EBE815 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ReleaseSourcesInternal_mBBD72604138D756DAEC4AF09459738B97FE0BF8C (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ApplyDefaultSettingsInternal_m60177F98A12A6EF7BBCCA038C0451CD605FEB13F (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** ___0_audioSource, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* AudioController_AttachAudioListenerInternal_mB683426FEF6B330E37DA73B9B5CBF524EB3B52A3 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_parentObject, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ResetAudioListenerParentInternal_m20EC41A0D6A0FBEF11BB6B8A2CD26BB3E5A2BD31 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B (String_t* ___0_str0, String_t* ___1_str1, String_t* ___2_str2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_maxDistance_m4BF310D54761500A77A6C4841A0BBDBD09225813 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_spread_mDFBC1BF11837C26EF9763A8DEEFC56AF95F6E83F (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_rolloffMode_m441D9552D8648D6040E66EE2C2650A79DC5E6FB4 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_SetCustomCurve_m6597C180AE2DD79DA663ABD76FC26AC816CB7CFB (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, int32_t ___0_type, AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___1_curve, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, String_t* ___0_name, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_target, const RuntimeMethod* method) ;
+inline AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* GameObject_AddComponent_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_mA30AC51FE6287A9D0057077D99F694600A3D844E (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_p, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_SetLocalPositionAndRotation_m0FB0FCF462AB7CD21880042918BCC372A59E734D (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_localPosition, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_localRotation, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
+inline Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896 (List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 (*) (List_1_t4501376E92E2003A7007D92A61469BB9862D6C85*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+}
+inline void Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6 (Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+}
+inline AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_inline (Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88* __this, const RuntimeMethod* method)
+{
+	return ((  AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* (*) (Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioSourceCase_get_IsPlaying_m93DA2DD16A95C26ECC87C0EC2DA664D9C84964B6 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* AudioSourceCase_get_AudioSource_mF6CF1F36ABB31AC71988526333DB91AF6DAFC453_inline (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, const RuntimeMethod* method) ;
+inline bool Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B (Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* AudioController_GetAudioSource_m433CABACBA6E5D9ADBC41C7D2321EF95AF1226B1 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSourceCase_Play_m2F64854A2E549065F891167C74B02669227F2390 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_audioClip, float ___1_clipVolume, int32_t ___2_type, const RuntimeMethod* method) ;
+inline bool Dictionary_2_ContainsKey_mA82E201D6C6F4295E3BCDD89B2D4C485753709D3 (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* __this, int32_t ___0_key, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*, int32_t, const RuntimeMethod*))Dictionary_2_ContainsKey_mF9D7BD0FE1C56928295F0A67E859CDC33804E503_gshared)(__this, ___0_key, method);
+}
+inline float Dictionary_2_get_Item_m0BE32FAF650E18EE6F450B12C43E7751F1FFA00E (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* __this, int32_t ___0_key, const RuntimeMethod* method)
+{
+	return ((  float (*) (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*, int32_t, const RuntimeMethod*))Dictionary_2_get_Item_m56C71FA7106AE13D664D32E59D845344D82573E6_gshared)(__this, ___0_key, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSourceCase_OverrideVolume_mBAE5FDDBD237EB70ED696EDA16F145E7D093A6D4 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, int32_t ___0_type, float ___1_volume, const RuntimeMethod* method) ;
+inline void Dictionary_2_set_Item_m78188AF7B9EDC2DE7BA2774C89B715FEA7296DED (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* __this, int32_t ___0_key, float ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*, int32_t, float, const RuntimeMethod*))Dictionary_2_set_Item_m23DD5D6DEF17E594109470EF0DBDA937FE2ADFA0_gshared)(__this, ___0_key, ___1_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_FlushVolumesToSave_m37C6D17347E25D5F73378242DB1E152EB48339ED (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SaveController_MarkAsSaveIsRequired_mC43B6B31B2FF7F8FED774FB1D5DE5D0CFC752928 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C_inline (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VolumeData__ctor_mFE095B8F2F1C36DA6E644B1E8894B6DA92DD5769 (VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitAsyncU3Ed__10__ctor_m986AC6A87104427E7E1919A44A93F2A265EAD66A (U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_Unload_m436477A60EB08E331A3663B5442B679C1E41B45F (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InitModule__ctor_mB63BC2AB083368E4563EE0132B818D5A85573879 (InitModule_tAB59C22C9D48F281C236CA2963EDA5BDE72E0314* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController__ctor_m06DD3A5F655529B216837847A3E6E5C899059CEE (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, int32_t ___0_poolSize, AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* ___1_registry, float ___2_maxDistance, float ___3_spread, AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___4_rolloffCurve, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* CoreExtensions_ResetGlobal_mB2381AEC863BB3950BEBCD26B8D12A5E06FE8F83 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_transform, const RuntimeMethod* method) ;
+inline AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+inline MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* GameObject_AddComponent_TisMusicSource_t901B96561102D7ECF64A870A33679B7336070B60_mBF13E16E7DB99760916A845780A0F0CE4C33D4AB (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Init_m6B9E019052E8FAF7877EA7C1E3B112425C25DBC5 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Activate_mBC820060D0790DDAFCB2D799BC2D72EF070430FB (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) ;
+inline void Dictionary_2__ctor_m17E8F71EF5A4AEB51E5F811976C8AEE28CC30092 (Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24* __this, int32_t ___0_capacity, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24*, int32_t, const RuntimeMethod*))Dictionary_2__ctor_mF225F49F6BE54C39563CECD7C693F0AE4F0530E8_gshared)(__this, ___0_capacity, method);
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* AudioRegistryEntry_get_Clip_m66CDC074EB6A9C609E0E5CAA5DFF13A27247D06D_inline (AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AudioRegistryEntry_get_ClipName_mC0B4EEFB09F0AD64D99A5EBCE36F032DEDE1F2CD_inline (AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* __this, const RuntimeMethod* method) ;
+inline void Dictionary_2_set_Item_m6D8159C91FE4513E3489D7B8D777DBB0044FEBED (Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24* __this, String_t* ___0_key, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___1_value, const RuntimeMethod* method)
+{
+	((  void (*) (Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24*, String_t*, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20*, const RuntimeMethod*))Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_gshared)(__this, ___0_key, ___1_value, method);
+}
+inline bool Dictionary_2_TryGetValue_m7A9A3006D46107F1E4D72685F31A6DEED8C27E02 (Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24* __this, String_t* ___0_key, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20** ___1_value, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24*, String_t*, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20**, const RuntimeMethod*))Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_gshared)(__this, ___0_key, ___1_value, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioSource_get_isPlaying_mC203303F2F7146B2C056CB47B9391463FDF408FC (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_playOnAwake_m7EACC6ECEF12D7BA86A4E5A53603F1C8F9E11949 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ApplyDefaultSettings_mD10C7C95632445FC0D222CD7870230C70700486E (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** ___0_audioSource, const RuntimeMethod* method) ;
+inline AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_set_loop_m834A590939D8456008C0F897FD80B0ECFFB7FE56 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioSource_get_volume_m9CCF33BC636562EA282FDE07463B547D70134EE3 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___0_routine, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Unload_m2210F74862551E483AF51F49643E1E0298DC5097 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Fade_m5EF951C719D34E3F5FF245DF986DD4140C0E83A0 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, float ___0_targetVolume, float ___1_duration, float ___2_delay, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___3_onComplete, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MusicSource_FadeRoutine_m4373964ED7B8E7F0E381CD97301196E25EC03FD3 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, float ___0_target, float ___1_duration, float ___2_delay, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___3_onComplete, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___0_routine, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeRoutineU3Ed__21__ctor_mDF7EFF2310D8ED6A7726A573811C1CBC1BBEE29B (U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865 (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, const RuntimeMethod* method) ;
+inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared)(__this, ___0_item, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106241
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBDF0E7BC55F367B831A399357ABFD1BBD85B0CEE (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tA1407051A446142D80C4C8229757AC1433E87FD6____B25DB5A92F0ECB03F3D59DE85044E4F288F51188EBE71905A052BC69E5559D79_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_tA1407051A446142D80C4C8229757AC1433E87FD6____C7600B158CEFC6072E2E6D9546F3551E1D3ABEC80A9EEEDEAE01947ADFC032E7_FieldInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)607));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_tA1407051A446142D80C4C8229757AC1433E87FD6____C7600B158CEFC6072E2E6D9546F3551E1D3ABEC80A9EEEDEAE01947ADFC032E7_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
+		(&V_0)->___FilePathsData = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)301));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = L_3;
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_5 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_tA1407051A446142D80C4C8229757AC1433E87FD6____B25DB5A92F0ECB03F3D59DE85044E4F288F51188EBE71905A052BC69E5559D79_FieldInfo_var) };
+		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_4, L_5, NULL);
+		(&V_0)->___TypesData = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___TypesData), (void*)L_4);
+		(&V_0)->___TotalFiles = 8;
+		(&V_0)->___TotalTypes = ((int32_t)10);
+		(&V_0)->___IsEditorOnly = (bool)0;
+		MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2 L_6 = V_0;
+		V_1 = L_6;
+		goto IL_005e;
+	}
+
+IL_005e:
+	{
+		MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2 L_7 = V_1;
+		return L_7;
+	}
+}
+// Method Definition Index: 106242
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m4A3A90EE60699E5E6F6894AC0146A799164A97EC (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tB693BEDD236838FF293D27621D626BA1EF9E0B12* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C void MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshal_pinvoke(const MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2& unmarshaled, MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshaled_pinvoke& marshaled)
+{
+	marshaled.___FilePathsData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___FilePathsData);
+	marshaled.___TypesData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___TypesData);
+	marshaled.___TotalTypes = unmarshaled.___TotalTypes;
+	marshaled.___TotalFiles = unmarshaled.___TotalFiles;
+	marshaled.___IsEditorOnly = static_cast<int32_t>(unmarshaled.___IsEditorOnly);
+}
+IL2CPP_EXTERN_C void MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshal_pinvoke_back(const MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshaled_pinvoke& marshaled, MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2& unmarshaled)
+{
+	unmarshaled.___FilePathsData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___FilePathsData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData));
+	unmarshaled.___TypesData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___TypesData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData));
+	int32_t unmarshaledTotalTypes_temp_2 = 0;
+	unmarshaledTotalTypes_temp_2 = marshaled.___TotalTypes;
+	unmarshaled.___TotalTypes = unmarshaledTotalTypes_temp_2;
+	int32_t unmarshaledTotalFiles_temp_3 = 0;
+	unmarshaledTotalFiles_temp_3 = marshaled.___TotalFiles;
+	unmarshaled.___TotalFiles = unmarshaledTotalFiles_temp_3;
+	bool unmarshaledIsEditorOnly_temp_4 = false;
+	unmarshaledIsEditorOnly_temp_4 = static_cast<bool>(marshaled.___IsEditorOnly);
+	unmarshaled.___IsEditorOnly = unmarshaledIsEditorOnly_temp_4;
+}
+IL2CPP_EXTERN_C void MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshal_pinvoke_cleanup(MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshaled_pinvoke& marshaled)
+{
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___FilePathsData);
+	marshaled.___FilePathsData = NULL;
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___TypesData);
+	marshaled.___TypesData = NULL;
+}
+IL2CPP_EXTERN_C void MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshal_com(const MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2& unmarshaled, MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshaled_com& marshaled)
+{
+	marshaled.___FilePathsData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___FilePathsData);
+	marshaled.___TypesData = il2cpp_codegen_com_marshal_safe_array(IL2CPP_VT_I1, unmarshaled.___TypesData);
+	marshaled.___TotalTypes = unmarshaled.___TotalTypes;
+	marshaled.___TotalFiles = unmarshaled.___TotalFiles;
+	marshaled.___IsEditorOnly = static_cast<int32_t>(unmarshaled.___IsEditorOnly);
+}
+IL2CPP_EXTERN_C void MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshal_com_back(const MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshaled_com& marshaled, MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2& unmarshaled)
+{
+	unmarshaled.___FilePathsData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___FilePathsData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___FilePathsData));
+	unmarshaled.___TypesData = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData);
+	Il2CppCodeGenWriteBarrier((void**)(&unmarshaled.___TypesData), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)il2cpp_codegen_com_marshal_safe_array_result(IL2CPP_VT_I1, il2cpp_defaults.byte_class, marshaled.___TypesData));
+	int32_t unmarshaledTotalTypes_temp_2 = 0;
+	unmarshaledTotalTypes_temp_2 = marshaled.___TotalTypes;
+	unmarshaled.___TotalTypes = unmarshaledTotalTypes_temp_2;
+	int32_t unmarshaledTotalFiles_temp_3 = 0;
+	unmarshaledTotalFiles_temp_3 = marshaled.___TotalFiles;
+	unmarshaled.___TotalFiles = unmarshaledTotalFiles_temp_3;
+	bool unmarshaledIsEditorOnly_temp_4 = false;
+	unmarshaledIsEditorOnly_temp_4 = static_cast<bool>(marshaled.___IsEditorOnly);
+	unmarshaled.___IsEditorOnly = unmarshaledIsEditorOnly_temp_4;
+}
+IL2CPP_EXTERN_C void MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshal_com_cleanup(MonoScriptData_t432C49A981A0B1572AF72674226EAD2222BAD0D2_marshaled_com& marshaled)
+{
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___FilePathsData);
+	marshaled.___FilePathsData = NULL;
+	il2cpp_codegen_com_destroy_safe_array(marshaled.___TypesData);
+	marshaled.___TypesData = NULL;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106243
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCase__ctor_m1C226A12289A75A7CC3C2FCF43B0FE08F7271CAB (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___1_source, int32_t ___2_type, AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* ___3_callback, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:15>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:17>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = ___1_source;
+		__this->___Source = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___Source), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:18>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1 = __this->___Source;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = ___0_clip;
+		NullCheck(L_1);
+		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_1, L_2, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:20>
+		int32_t L_3 = ___2_type;
+		__this->___Type = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:22>
+		AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* L_4 = ___3_callback;
+		__this->___onAudioEnded = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___onAudioEnded), (void*)L_4);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:23>
+		return;
+	}
+}
+// Method Definition Index: 106244
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* AudioCase_OnComplete_m49BC9AC5462A3DF23AD6E6F92754EEFE9E5D7122 (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* ___0_callback, const RuntimeMethod* method) 
+{
+	AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* V_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:27>
+		AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* L_0 = ___0_callback;
+		__this->___onAudioEnded = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___onAudioEnded), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:29>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1 = __this->___Source;
+		NullCheck(L_1);
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2;
+		L_2 = AudioSource_get_clip_m4F5027066F9FC44B44192713142B0C277BB418FE(L_1, NULL);
+		NullCheck(L_2);
+		float L_3;
+		L_3 = AudioClip_get_length_m6102CB29AF65988797452E4D6E43D4788303873D(L_2, NULL);
+		RuntimeObject* L_4;
+		L_4 = AudioCase_OnAudioEndCoroutine_mB43CAA0E96868157BF64660730FED28FD2390A19(__this, L_3, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
+		L_5 = Tween_InvokeCoroutine_mCE5352F9595BAAC15E07E115C6DEA1042BD4B728(L_4, NULL);
+		__this->___endCoroutine = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___endCoroutine), (void*)L_5);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:31>
+		V_0 = __this;
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:32>
+		AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* L_6 = V_0;
+		return L_6;
+	}
+}
+// Method Definition Index: 106245
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCase_Play_mFA7228BA6F29A9B233AA4D3F112BADAEA6E2ECD4 (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:36>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___Source;
+		NullCheck(L_0);
+		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:37>
+		return;
+	}
+}
+// Method Definition Index: 106246
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCase_Stop_m77E3FF47AAE73155F29B287AF39936FC08F15784 (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:41>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___Source;
+		NullCheck(L_0);
+		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:43>
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1 = __this->___endCoroutine;
+		V_0 = (bool)((!(((RuntimeObject*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)L_1) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:44>
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3 = __this->___endCoroutine;
+		Tween_StopCustomCoroutine_m7D855745676BD6961C4EE0502B655F2946C1D95C(L_3, NULL);
+	}
+
+IL_0026:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:45>
+		return;
+	}
+}
+// Method Definition Index: 106247
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCase_FadeOut_mB18F09CE338A8A60F6D04F1A3E7E24CC4FC643F6 (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, float ___0_value, float ___1_time, bool ___2_stop, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioCase_U3CFadeOutU3Eb__8_0_m5D268CA2B5D719BF98D4FCEB16E4D56549556A03_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* V_0 = NULL;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:49>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___Source;
+		float L_1 = ___0_value;
+		float L_2 = ___1_time;
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_3;
+		L_3 = AudioTweenCases_DOVolume_mC728C0FC2F034539AD2A46360CC82CC52E4F3460(L_0, L_1, L_2, (0.0f), (bool)0, 0, NULL);
+		V_0 = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:51>
+		bool L_4 = ___2_stop;
+		V_1 = L_4;
+		bool L_5 = V_1;
+		if (!L_5)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:53>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:54>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:55>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:56>
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_6 = V_0;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_7 = (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A*)il2cpp_codegen_object_new(SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A_il2cpp_TypeInfo_var);
+		SimpleCallback__ctor_m04CB2FCA2E02060AB815575D93F70A51542A7DE6(L_7, __this, (intptr_t)((void*)AudioCase_U3CFadeOutU3Eb__8_0_m5D268CA2B5D719BF98D4FCEB16E4D56549556A03_RuntimeMethod_var), NULL);
+		NullCheck(L_6);
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_8;
+		L_8 = TweenCase_OnComplete_m024ABDE49BD6C9F1021B1E8B888D41BE5F64F726(L_6, L_7, NULL);
+	}
+
+IL_0030:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:58>
+		return;
+	}
+}
+// Method Definition Index: 106248
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCase_FadeIn_mA6FAF01407299A5CE2C76D9EF96FD4ECAE85972D (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, float ___0_value, float ___1_time, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:62>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___Source;
+		float L_1 = ___0_value;
+		float L_2 = ___1_time;
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_3;
+		L_3 = AudioTweenCases_DOVolume_mC728C0FC2F034539AD2A46360CC82CC52E4F3460(L_0, L_1, L_2, (0.0f), (bool)0, 0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:63>
+		return;
+	}
+}
+// Method Definition Index: 106249
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AudioCase_OnAudioEndCoroutine_mB43CAA0E96868157BF64660730FED28FD2390A19 (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, float ___0_clipDuration, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* L_0 = (U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024*)il2cpp_codegen_object_new(U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024_il2cpp_TypeInfo_var);
+		U3COnAudioEndCoroutineU3Ed__10__ctor_m5F083C6F5711F3289D88D00F4E9E6926052495FE(L_0, 0, NULL);
+		U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* L_2 = L_1;
+		float L_3 = ___0_clipDuration;
+		NullCheck(L_2);
+		L_2->___clipDuration = L_3;
+		return L_2;
+	}
+}
+// Method Definition Index: 106250
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCase_U3CFadeOutU3Eb__8_0_m5D268CA2B5D719BF98D4FCEB16E4D56549556A03 (AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:55>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___Source;
+		NullCheck(L_0);
+		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:56>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850_Multicast(AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* currentDelegate = reinterpret_cast<AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850_OpenInst(AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(method);
+}
+void AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850_OpenStatic(AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD (AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc)();
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc();
+
+}
+// Method Definition Index: 106251
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCallback__ctor_m4447D1F4BB83EB1A735D8CA2ACAC9BD0044CBC8E (AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 0;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850_Multicast;
+}
+// Method Definition Index: 106252
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850 (AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 106253
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AudioCallback_BeginInvoke_m497A321D3D0252DBD14415C58B1C8BCDB4B10124 (AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___0_callback, RuntimeObject* ___1_object, const RuntimeMethod* method) 
+{
+	void *__d_args[1] = {0};
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___0_callback, (RuntimeObject*)___1_object);
+}
+// Method Definition Index: 106254
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioCallback_EndInvoke_mC808688CC7A7AAAC51935E652C748C7BDF3B2783 (AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106255
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3COnAudioEndCoroutineU3Ed__10__ctor_m5F083C6F5711F3289D88D00F4E9E6926052495FE (U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 106256
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3COnAudioEndCoroutineU3Ed__10_System_IDisposable_Dispose_m310822CDBFE4EFE24F34F817FFA5024CD9E39E9D (U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 106257
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3COnAudioEndCoroutineU3Ed__10_MoveNext_m738CFA874886456DCD8183CF534E26B7B6851060 (U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) == ((int32_t)1)))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		goto IL_0016;
+	}
+
+IL_0012:
+	{
+		goto IL_0018;
+	}
+
+IL_0014:
+	{
+		goto IL_003a;
+	}
+
+IL_0016:
+	{
+		return (bool)0;
+	}
+
+IL_0018:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:67>
+		float L_3 = __this->___clipDuration;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, L_3, NULL);
+		__this->___U3CU3E2__current = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_4);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_003a:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:69>
+		AudioCase_t140CFDA0517A46AEAF782D71F630D6F7689CBD3B* L_5 = __this->___U3CU3E4__this;
+		NullCheck(L_5);
+		AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* L_6 = L_5->___onAudioEnded;
+		NullCheck(L_6);
+		AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850_inline(L_6, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioCase.cs:70>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 106258
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3COnAudioEndCoroutineU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m83AAD9F83B588237690E4CC0B67E87F4F662C3A1 (U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 106259
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3COnAudioEndCoroutineU3Ed__10_System_Collections_IEnumerator_Reset_m732E331119E22D53874BFD257EE2A54F98DA3A97 (U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3COnAudioEndCoroutineU3Ed__10_System_Collections_IEnumerator_Reset_m732E331119E22D53874BFD257EE2A54F98DA3A97_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 106260
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3COnAudioEndCoroutineU3Ed__10_System_Collections_IEnumerator_get_Current_mCD80C2C05955C87EDF8D8DD926E3DE88456670F9 (U3COnAudioEndCoroutineU3Ed__10_tF91841E945E7E75335138782281338398E522024* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106261
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler__ctor_mFC7FC9D212AB6B57A9B95C9381166F185D55B6E9 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, int32_t ___0_audioType, float ___1_clipVolume, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:11>
+		__this->___clipVolume = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:21>
+		DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* L_0 = (DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F*)il2cpp_codegen_object_new(DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var);
+		DuoFloat__ctor_mAF682087AB96794ECA8DE82A9F20DCA139217789(L_0, (0.800000012f), (1.20000005f), NULL);
+		__this->___pitchRange = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pitchRange), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:23>
+		__this->___pitchSteps = ((int32_t)10);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:25>
+		__this->___pitchResetTime = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:31>
+		__this->___lastPlayedTime = (-(std::numeric_limits<float>::max)());
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:38>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:40>
+		int32_t L_1 = ___0_audioType;
+		__this->___audioType = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:41>
+		float L_2 = ___1_clipVolume;
+		__this->___clipVolume = L_2;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:43>
+		__this->___advancedSettings = (bool)0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:45>
+		AudioClipHandler_Init_m3247A29C14459BA3385C43BF816A9E6DE9F9E070(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:46>
+		return;
+	}
+}
+// Method Definition Index: 106262
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler__ctor_m1C60F9C9A98EC10CC642EADC1DF13C173EF009A4 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, int32_t ___0_audioType, float ___1_clipVolume, float ___2_minDelay, AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___3_customAudioSource, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:11>
+		__this->___clipVolume = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:21>
+		DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* L_0 = (DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F*)il2cpp_codegen_object_new(DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var);
+		DuoFloat__ctor_mAF682087AB96794ECA8DE82A9F20DCA139217789(L_0, (0.800000012f), (1.20000005f), NULL);
+		__this->___pitchRange = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pitchRange), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:23>
+		__this->___pitchSteps = ((int32_t)10);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:25>
+		__this->___pitchResetTime = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:31>
+		__this->___lastPlayedTime = (-(std::numeric_limits<float>::max)());
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:48>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:50>
+		int32_t L_1 = ___0_audioType;
+		__this->___audioType = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:51>
+		float L_2 = ___1_clipVolume;
+		__this->___clipVolume = L_2;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:52>
+		float L_3 = ___2_minDelay;
+		__this->___minDelay = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:54>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = ___3_customAudioSource;
+		__this->___customAudioSource = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___customAudioSource), (void*)L_4);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:56>
+		__this->___advancedSettings = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:58>
+		AudioClipHandler_Init_m3247A29C14459BA3385C43BF816A9E6DE9F9E070(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:59>
+		return;
+	}
+}
+// Method Definition Index: 106263
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler__ctor_m16F63104F9D430651534EE43FCFD961766A79B2D (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, int32_t ___0_audioType, float ___1_clipVolume, float ___2_minDelay, DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* ___3_pitchRange, int32_t ___4_pitchSteps, float ___5_pitchResetTime, AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___6_customAudioSource, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:11>
+		__this->___clipVolume = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:21>
+		DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* L_0 = (DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F*)il2cpp_codegen_object_new(DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F_il2cpp_TypeInfo_var);
+		DuoFloat__ctor_mAF682087AB96794ECA8DE82A9F20DCA139217789(L_0, (0.800000012f), (1.20000005f), NULL);
+		__this->___pitchRange = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pitchRange), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:23>
+		__this->___pitchSteps = ((int32_t)10);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:25>
+		__this->___pitchResetTime = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:31>
+		__this->___lastPlayedTime = (-(std::numeric_limits<float>::max)());
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:61>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:63>
+		int32_t L_1 = ___0_audioType;
+		__this->___audioType = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:64>
+		float L_2 = ___1_clipVolume;
+		__this->___clipVolume = L_2;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:65>
+		float L_3 = ___2_minDelay;
+		__this->___minDelay = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:66>
+		DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* L_4 = ___3_pitchRange;
+		__this->___pitchRange = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pitchRange), (void*)L_4);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:67>
+		int32_t L_5 = ___4_pitchSteps;
+		__this->___pitchSteps = L_5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:68>
+		float L_6 = ___5_pitchResetTime;
+		__this->___pitchResetTime = L_6;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:69>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_7 = ___6_customAudioSource;
+		__this->___customAudioSource = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___customAudioSource), (void*)L_7);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:71>
+		__this->___advancedSettings = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:72>
+		__this->___dynamicPitch = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:74>
+		AudioClipHandler_Init_m3247A29C14459BA3385C43BF816A9E6DE9F9E070(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:75>
+		return;
+	}
+}
+// Method Definition Index: 106264
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler_Init_m3247A29C14459BA3385C43BF816A9E6DE9F9E070 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioClipHandler_OnVolumeChanged_m11D993ABD8B9E45315BCD6626F5D966B82F980E3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:79>
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_0 = (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)il2cpp_codegen_object_new(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		OnVolumeChangedCallback__ctor_mEE04238BB079D851B720A8E13817FDC547BFB2B5(L_0, __this, (intptr_t)((void*)AudioClipHandler_OnVolumeChanged_m11D993ABD8B9E45315BCD6626F5D966B82F980E3_RuntimeMethod_var), NULL);
+		AudioController_add_VolumeChanged_m273796D86693FD31271FC8A43DCB3DA7E7866E7B(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:81>
+		__this->___lastPlayedTime = (-(std::numeric_limits<float>::max)());
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:82>
+		return;
+	}
+}
+// Method Definition Index: 106265
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler_Unload_mDCEC0FBEEDBFC6B2A407C08F79BC2A67F6EC8AD8 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioClipHandler_OnVolumeChanged_m11D993ABD8B9E45315BCD6626F5D966B82F980E3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:86>
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_0 = (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)il2cpp_codegen_object_new(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		OnVolumeChangedCallback__ctor_mEE04238BB079D851B720A8E13817FDC547BFB2B5(L_0, __this, (intptr_t)((void*)AudioClipHandler_OnVolumeChanged_m11D993ABD8B9E45315BCD6626F5D966B82F980E3_RuntimeMethod_var), NULL);
+		AudioController_remove_VolumeChanged_m79B5A3ED5AC295F2DCDBE0DDC6BC1F84828AA01A(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:88>
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_1 = __this->___volumeCase;
+		bool L_2;
+		L_2 = TweenExtensions_KillActive_m3A5AB11FB7EB65DF25BCA40BA5451109D60E49F0(L_1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:89>
+		return;
+	}
+}
+// Method Definition Index: 106266
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler_OnVolumeChanged_m11D993ABD8B9E45315BCD6626F5D966B82F980E3 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, int32_t ___0_type, float ___1_volume, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:93>
+		bool L_0 = __this->___advancedSettings;
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:93>
+		goto IL_0048;
+	}
+
+IL_0010:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:94>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___customAudioSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_3;
+		L_3 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_3;
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:94>
+		goto IL_0048;
+	}
+
+IL_0022:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:95>
+		int32_t L_5 = __this->___audioType;
+		int32_t L_6 = ___0_type;
+		V_2 = (bool)((((int32_t)((((int32_t)L_5) == ((int32_t)L_6))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_7 = V_2;
+		if (!L_7)
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:95>
+		goto IL_0048;
+	}
+
+IL_0034:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:97>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_8 = __this->___customAudioSource;
+		float L_9 = ___1_volume;
+		float L_10 = __this->___clipVolume;
+		NullCheck(L_8);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_8, ((float)il2cpp_codegen_multiply(L_9, L_10)), NULL);
+	}
+
+IL_0048:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:98>
+		return;
+	}
+}
+// Method Definition Index: 106267
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler_Play_mCD6074364E4ED51245D07E5B8CFF35EC83AEB32E (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_audioClip, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	int32_t G_B4_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:102>
+		V_0 = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:104>
+		bool L_0 = __this->___advancedSettings;
+		V_1 = L_0;
+		bool L_1 = V_1;
+		if (!L_1)
+		{
+			goto IL_010c;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:106>
+		float L_2;
+		L_2 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_3 = __this->___lastPlayedTime;
+		float L_4 = __this->___minDelay;
+		if ((!(((float)L_2) < ((float)((float)il2cpp_codegen_add(L_3, L_4))))))
+		{
+			goto IL_003b;
+		}
+	}
+	{
+		float L_5;
+		L_5 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_6 = __this->___lastPlayedTime;
+		G_B4_0 = ((((int32_t)((!(((float)L_5) >= ((float)L_6)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_003c;
+	}
+
+IL_003b:
+	{
+		G_B4_0 = 0;
+	}
+
+IL_003c:
+	{
+		V_2 = (bool)G_B4_0;
+		bool L_7 = V_2;
+		if (!L_7)
+		{
+			goto IL_0046;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:108>
+		goto IL_011f;
+	}
+
+IL_0046:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:111>
+		float L_8;
+		L_8 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		__this->___lastPlayedTime = L_8;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:113>
+		bool L_9 = __this->___dynamicPitch;
+		V_3 = L_9;
+		bool L_10 = V_3;
+		if (!L_10)
+		{
+			goto IL_00b2;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:115>
+		int32_t L_11 = __this->___currentPitchStep;
+		__this->___currentPitchStep = ((int32_t)il2cpp_codegen_add(L_11, 1));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:117>
+		float L_12;
+		L_12 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_13 = __this->___lastPitchStepTime;
+		V_4 = (bool)((((float)L_12) > ((float)L_13))? 1 : 0);
+		bool L_14 = V_4;
+		if (!L_14)
+		{
+			goto IL_0084;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:118>
+		__this->___currentPitchStep = 0;
+	}
+
+IL_0084:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:120>
+		float L_15;
+		L_15 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_16 = __this->___pitchResetTime;
+		__this->___lastPitchStepTime = ((float)il2cpp_codegen_add(L_15, L_16));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:122>
+		DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* L_17 = __this->___pitchRange;
+		int32_t L_18 = __this->___currentPitchStep;
+		int32_t L_19 = __this->___pitchSteps;
+		NullCheck(L_17);
+		float L_20;
+		L_20 = DuoFloat_Lerp_m204D01E4E8D19C3C9998CB9282499935FA67AB34(L_17, ((float)(((float)L_18)/((float)L_19))), NULL);
+		V_0 = L_20;
+	}
+
+IL_00b2:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:125>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_21 = __this->___customAudioSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_22;
+		L_22 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_21, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_5 = L_22;
+		bool L_23 = V_5;
+		if (!L_23)
+		{
+			goto IL_010b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:127>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_24 = __this->___customAudioSource;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_25 = ___0_audioClip;
+		NullCheck(L_24);
+		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_24, L_25, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:128>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_26 = __this->___customAudioSource;
+		int32_t L_27 = __this->___audioType;
+		float L_28;
+		L_28 = AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551(L_27, NULL);
+		float L_29 = __this->___clipVolume;
+		NullCheck(L_26);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_26, ((float)il2cpp_codegen_multiply(L_28, L_29)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:129>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_30 = __this->___customAudioSource;
+		float L_31 = V_0;
+		NullCheck(L_30);
+		AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811(L_30, L_31, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:131>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_32 = __this->___customAudioSource;
+		NullCheck(L_32);
+		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_32, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:133>
+		goto IL_011f;
+	}
+
+IL_010b:
+	{
+	}
+
+IL_010c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:137>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_33 = ___0_audioClip;
+		float L_34 = __this->___clipVolume;
+		float L_35 = V_0;
+		AudioController_PlaySound_mE397E8983DC71AB9649159CE9CD7A916267ADBCA(L_33, L_34, L_35, (0.0f), NULL);
+	}
+
+IL_011f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:138>
+		return;
+	}
+}
+// Method Definition Index: 106268
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler_Play_m325D23572E26C5BD0D597340635A4FB702D7A4A3 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_audioClip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:142>
+		V_0 = (1.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:144>
+		bool L_0 = __this->___advancedSettings;
+		V_1 = L_0;
+		bool L_1 = V_1;
+		if (!L_1)
+		{
+			goto IL_00f8;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:146>
+		float L_2;
+		L_2 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_3 = __this->___lastPlayedTime;
+		float L_4 = __this->___minDelay;
+		V_2 = (bool)((((float)L_2) < ((float)((float)il2cpp_codegen_add(L_3, L_4))))? 1 : 0);
+		bool L_5 = V_2;
+		if (!L_5)
+		{
+			goto IL_0032;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:146>
+		goto IL_010c;
+	}
+
+IL_0032:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:148>
+		float L_6;
+		L_6 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		__this->___lastPlayedTime = L_6;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:150>
+		bool L_7 = __this->___dynamicPitch;
+		V_3 = L_7;
+		bool L_8 = V_3;
+		if (!L_8)
+		{
+			goto IL_009e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:152>
+		int32_t L_9 = __this->___currentPitchStep;
+		__this->___currentPitchStep = ((int32_t)il2cpp_codegen_add(L_9, 1));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:154>
+		float L_10;
+		L_10 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_11 = __this->___lastPitchStepTime;
+		V_4 = (bool)((((float)L_10) > ((float)L_11))? 1 : 0);
+		bool L_12 = V_4;
+		if (!L_12)
+		{
+			goto IL_0070;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:155>
+		__this->___currentPitchStep = 0;
+	}
+
+IL_0070:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:157>
+		float L_13;
+		L_13 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_14 = __this->___pitchResetTime;
+		__this->___lastPitchStepTime = ((float)il2cpp_codegen_add(L_13, L_14));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:159>
+		DuoFloat_tA453953C667FB36B1729F9B5E7963A0559D6F15F* L_15 = __this->___pitchRange;
+		int32_t L_16 = __this->___currentPitchStep;
+		int32_t L_17 = __this->___pitchSteps;
+		NullCheck(L_15);
+		float L_18;
+		L_18 = DuoFloat_Lerp_m204D01E4E8D19C3C9998CB9282499935FA67AB34(L_15, ((float)(((float)L_16)/((float)L_17))), NULL);
+		V_0 = L_18;
+	}
+
+IL_009e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:162>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_19 = __this->___customAudioSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_20;
+		L_20 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_19, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_5 = L_20;
+		bool L_21 = V_5;
+		if (!L_21)
+		{
+			goto IL_00f7;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:164>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_22 = __this->___customAudioSource;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_23 = ___0_audioClip;
+		NullCheck(L_22);
+		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_22, L_23, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:165>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_24 = __this->___customAudioSource;
+		int32_t L_25 = __this->___audioType;
+		float L_26;
+		L_26 = AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551(L_25, NULL);
+		float L_27 = __this->___clipVolume;
+		NullCheck(L_24);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_24, ((float)il2cpp_codegen_multiply(L_26, L_27)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:166>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_28 = __this->___customAudioSource;
+		float L_29 = V_0;
+		NullCheck(L_28);
+		AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811(L_28, L_29, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:168>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_30 = __this->___customAudioSource;
+		NullCheck(L_30);
+		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_30, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:170>
+		goto IL_010c;
+	}
+
+IL_00f7:
+	{
+	}
+
+IL_00f8:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:174>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_31 = ___0_audioClip;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32 = ___1_position;
+		float L_33 = __this->___clipVolume;
+		float L_34 = V_0;
+		AudioController_PlaySound_m2CC26C407B4FCA2BE282D485C09C22AE9CF6E071(L_31, L_32, L_33, L_34, (0.0f), NULL);
+	}
+
+IL_010c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:175>
+		return;
+	}
+}
+// Method Definition Index: 106269
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* AudioClipHandler_DoVolume_mA24993EFA537F6EDCC7B911D7A102C148C3EC898 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, float ___0_volume, float ___1_duration, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioClipHandler_U3CDoVolumeU3Eb__21_0_mDB3A1F2315F55C0BF05E5A82D915DF99669F39D3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* V_1 = NULL;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:179>
+		bool L_0 = __this->___advancedSettings;
+		if (!L_0)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1 = __this->___customAudioSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		G_B3_0 = ((int32_t)(L_2));
+		goto IL_0018;
+	}
+
+IL_0017:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0018:
+	{
+		V_0 = (bool)G_B3_0;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0058;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:181>
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_4 = __this->___volumeCase;
+		bool L_5;
+		L_5 = TweenExtensions_KillActive_m3A5AB11FB7EB65DF25BCA40BA5451109D60E49F0(L_4, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:182>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:183>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:184>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:185>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:186>
+		float L_6 = __this->___clipVolume;
+		float L_7 = ___0_volume;
+		float L_8 = ___1_duration;
+		TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7* L_9 = (TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7*)il2cpp_codegen_object_new(TweenFloatCallback_t5B545AEE5E610B6A9CCE9630031BCD88D841D6D7_il2cpp_TypeInfo_var);
+		TweenFloatCallback__ctor_m613F566925FDED01A03C93273CBC137C1E5D051E(L_9, __this, (intptr_t)((void*)AudioClipHandler_U3CDoVolumeU3Eb__21_0_mDB3A1F2315F55C0BF05E5A82D915DF99669F39D3_RuntimeMethod_var), NULL);
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_10;
+		L_10 = Tween_DoFloat_m15914A3517E46EC94AC1E261AF78EBC9084A701E(L_6, L_7, L_8, L_9, (0.0f), (bool)0, 0, NULL);
+		__this->___volumeCase = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___volumeCase), (void*)L_10);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:188>
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_11 = __this->___volumeCase;
+		V_1 = L_11;
+		goto IL_005c;
+	}
+
+IL_0058:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:191>
+		V_1 = (TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1*)NULL;
+		goto IL_005c;
+	}
+
+IL_005c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:192>
+		TweenCase_t6AB5E9BB730AE1BD46C4FBF9189067C1AB1390A1* L_12 = V_1;
+		return L_12;
+	}
+}
+// Method Definition Index: 106270
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler_StopPlaying_m8FC85F74B8370948CE1FE21F30B36875CCEB86A1 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:196>
+		bool L_0 = __this->___advancedSettings;
+		if (!L_0)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1 = __this->___customAudioSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		G_B3_0 = ((int32_t)(L_2));
+		goto IL_0018;
+	}
+
+IL_0017:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0018:
+	{
+		V_0 = (bool)G_B3_0;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:198>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___customAudioSource;
+		NullCheck(L_4);
+		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_4, NULL);
+	}
+
+IL_002a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:200>
+		return;
+	}
+}
+// Method Definition Index: 106271
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioClipHandler_U3CDoVolumeU3Eb__21_0_mDB3A1F2315F55C0BF05E5A82D915DF99669F39D3 (AudioClipHandler_t227FCD0884EBB4A856B7EDC5C2437026025937B5* __this, float ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:184>
+		float L_0 = ___0_value;
+		__this->___clipVolume = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:185>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1 = __this->___customAudioSource;
+		int32_t L_2 = __this->___audioType;
+		float L_3;
+		L_3 = AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551(L_2, NULL);
+		float L_4 = __this->___clipVolume;
+		NullCheck(L_1);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_1, ((float)il2cpp_codegen_multiply(L_3, L_4)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioClipHandler.cs:186>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106272
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_add_volumeChanged_mA1B5891B2726B533A284527120B4FD12663F0DB6 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* V_0 = NULL;
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* V_1 = NULL;
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* V_2 = NULL;
+	{
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_0 = __this->___volumeChanged;
+		V_0 = L_0;
+	}
+
+IL_0007:
+	{
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_1 = V_0;
+		V_1 = L_1;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_2 = V_1;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00(L_2, L_3, NULL);
+		V_2 = ((OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)CastclassSealed((RuntimeObject*)L_4, OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var));
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841** L_5 = (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841**)(&__this->___volumeChanged);
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_6 = V_2;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_7 = V_1;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_8;
+		L_8 = InterlockedCompareExchangeImpl<OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*>(L_5, L_6, L_7);
+		V_0 = L_8;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_9 = V_0;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_10 = V_1;
+		if ((!(((RuntimeObject*)(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)L_9) == ((RuntimeObject*)(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)L_10))))
+		{
+			goto IL_0007;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 106273
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_remove_volumeChanged_mCD127353ACBEB821B4F88512CD1D021BB8A211A4 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* V_0 = NULL;
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* V_1 = NULL;
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* V_2 = NULL;
+	{
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_0 = __this->___volumeChanged;
+		V_0 = L_0;
+	}
+
+IL_0007:
+	{
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_1 = V_0;
+		V_1 = L_1;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_2 = V_1;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_3 = ___0_value;
+		Delegate_t* L_4;
+		L_4 = Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3(L_2, L_3, NULL);
+		V_2 = ((OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)CastclassSealed((RuntimeObject*)L_4, OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var));
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841** L_5 = (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841**)(&__this->___volumeChanged);
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_6 = V_2;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_7 = V_1;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_8;
+		L_8 = InterlockedCompareExchangeImpl<OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*>(L_5, L_6, L_7);
+		V_0 = L_8;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_9 = V_0;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_10 = V_1;
+		if ((!(((RuntimeObject*)(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)L_9) == ((RuntimeObject*)(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)L_10))))
+		{
+			goto IL_0007;
+		}
+	}
+	{
+		return;
+	}
+}
+// Method Definition Index: 106274
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController__ctor_m06DD3A5F655529B216837847A3E6E5C899059CEE (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, int32_t ___0_poolSize, AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* ___1_registry, float ___2_maxDistance, float ___3_spread, AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* ___4_rolloffCurve, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_Add_mC94F64C4969F543F3DD58CDD31D473957F31DE98_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m39CA5E02917D362561696DE1DA4AE4E236AE7675_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EnumUtils_GetEnumArray_TisAudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028_m61A0794596290598540CB936F45212789737EAB8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mF0E6EEF81C0BD6BB30DCF9559E34613468E1D907_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mCC51BE47184AF67777779C3C2F87B3B437447EE8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t4501376E92E2003A7007D92A61469BB9862D6C85_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SaveController_GetSaveObject_TisAudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB_m5EE19AF18B617A88476626226558A1D7CBA1D7A4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2FE42AC0F0F0B8F3F615802909248EC1729B6882);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCE997756AE28DA8CED1FA1160227AA74FACA2C68);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6* V_2 = NULL;
+	int32_t V_3 = 0;
+	VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* V_4 = NULL;
+	int32_t V_5 = 0;
+	bool V_6 = false;
+	AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* G_B4_0 = NULL;
+	AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* G_B4_1 = NULL;
+	AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* G_B3_0 = NULL;
+	AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* G_B3_1 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:35>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:36>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:37>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:38>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:39>
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:40>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:42>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_0 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((!(((RuntimeObject*)(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:43>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral2FE42AC0F0F0B8F3F615802909248EC1729B6882, NULL);
+	}
+
+IL_001f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:45>
+		((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance), (void*)__this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:47>
+		float L_2 = ___2_maxDistance;
+		__this->___maxDistance = L_2;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:48>
+		float L_3 = ___3_spread;
+		__this->___spread = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:49>
+		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_4 = ___4_rolloffCurve;
+		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_5 = L_4;
+		if (L_5)
+		{
+			G_B4_0 = L_5;
+			G_B4_1 = __this;
+			goto IL_0072;
+		}
+		G_B3_0 = L_5;
+		G_B3_1 = __this;
+	}
+	{
+		KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3* L_6 = (KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3*)(KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3*)SZArrayNew(KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3_il2cpp_TypeInfo_var, (uint32_t)2);
+		KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3* L_7 = L_6;
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_8;
+		memset((&L_8), 0, sizeof(L_8));
+		Keyframe__ctor_mECF144086B28785BE911A22C06194A9E0FBF3C34((&L_8), (0.0f), (1.0f), NULL);
+		NullCheck(L_7);
+		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(0), (Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0)L_8);
+		KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3* L_9 = L_7;
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_10;
+		memset((&L_10), 0, sizeof(L_10));
+		Keyframe__ctor_mECF144086B28785BE911A22C06194A9E0FBF3C34((&L_10), (1.0f), (0.0f), NULL);
+		NullCheck(L_9);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(1), (Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0)L_10);
+		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_11 = (AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354*)il2cpp_codegen_object_new(AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_il2cpp_TypeInfo_var);
+		AnimationCurve__ctor_mEABC98C03805713354D61E50D9340766BD5B717E(L_11, L_9, NULL);
+		G_B4_0 = L_11;
+		G_B4_1 = G_B3_1;
+	}
+
+IL_0072:
+	{
+		NullCheck(G_B4_1);
+		G_B4_1->___rolloffCurve = G_B4_0;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B4_1->___rolloffCurve), (void*)G_B4_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:50>
+		AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* L_12 = ___1_registry;
+		__this->___registry = L_12;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___registry), (void*)L_12);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:52>
+		AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* L_13 = ___1_registry;
+		if (L_13)
+		{
+			goto IL_0083;
+		}
+	}
+	{
+		goto IL_008a;
+	}
+
+IL_0083:
+	{
+		AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* L_14 = ___1_registry;
+		NullCheck(L_14);
+		AudioRegistry_BuildRuntimeLookup_mAB9981A4B6DE182520155273BE1CD6CBA68EE32B(L_14, NULL);
+	}
+
+IL_008a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:54>
+		AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* L_15;
+		L_15 = SaveController_GetSaveObject_TisAudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB_m5EE19AF18B617A88476626226558A1D7CBA1D7A4(_stringLiteralCE997756AE28DA8CED1FA1160227AA74FACA2C68, SaveController_GetSaveObject_TisAudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB_m5EE19AF18B617A88476626226558A1D7CBA1D7A4_RuntimeMethod_var);
+		__this->___save = L_15;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___save), (void*)L_15);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:56>
+		AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86* L_16;
+		L_16 = EnumUtils_GetEnumArray_TisAudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028_m61A0794596290598540CB936F45212789737EAB8(EnumUtils_GetEnumArray_TisAudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028_m61A0794596290598540CB936F45212789737EAB8_RuntimeMethod_var);
+		__this->___audioTypes = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioTypes), (void*)L_16);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:57>
+		Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* L_17 = (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*)il2cpp_codegen_object_new(Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m39CA5E02917D362561696DE1DA4AE4E236AE7675(L_17, Dictionary_2__ctor_m39CA5E02917D362561696DE1DA4AE4E236AE7675_RuntimeMethod_var);
+		__this->___volumeDictionary = L_17;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___volumeDictionary), (void*)L_17);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:58>
+		AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* L_18 = __this->___save;
+		NullCheck(L_18);
+		VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6* L_19 = L_18->___VolumeDatas;
+		V_1 = (bool)((!(((RuntimeObject*)(VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6*)L_19) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_20 = V_1;
+		if (!L_20)
+		{
+			goto IL_0100;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:60>
+		AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* L_21 = __this->___save;
+		NullCheck(L_21);
+		VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6* L_22 = L_21->___VolumeDatas;
+		V_2 = L_22;
+		V_3 = 0;
+		goto IL_00f9;
+	}
+
+IL_00d4:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:60>
+		VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6* L_23 = V_2;
+		int32_t L_24 = V_3;
+		NullCheck(L_23);
+		int32_t L_25 = L_24;
+		VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* L_26 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
+		V_4 = L_26;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:62>
+		Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* L_27 = __this->___volumeDictionary;
+		VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* L_28 = V_4;
+		NullCheck(L_28);
+		int32_t L_29 = L_28->___AudioType;
+		VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* L_30 = V_4;
+		NullCheck(L_30);
+		float L_31 = L_30->___Volume;
+		NullCheck(L_27);
+		Dictionary_2_Add_mC94F64C4969F543F3DD58CDD31D473957F31DE98(L_27, L_29, L_31, Dictionary_2_Add_mC94F64C4969F543F3DD58CDD31D473957F31DE98_RuntimeMethod_var);
+		int32_t L_32 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_32, 1));
+	}
+
+IL_00f9:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:60>
+		int32_t L_33 = V_3;
+		VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6* L_34 = V_2;
+		NullCheck(L_34);
+		if ((((int32_t)L_33) < ((int32_t)((int32_t)(((RuntimeArray*)L_34)->max_length)))))
+		{
+			goto IL_00d4;
+		}
+	}
+	{
+	}
+
+IL_0100:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:66>
+		AudioController_CreateAudioListener_m220543939192114CE86F4959C780D3ADD6683C17(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:68>
+		List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* L_35 = (List_1_t4501376E92E2003A7007D92A61469BB9862D6C85*)il2cpp_codegen_object_new(List_1_t4501376E92E2003A7007D92A61469BB9862D6C85_il2cpp_TypeInfo_var);
+		List_1__ctor_mCC51BE47184AF67777779C3C2F87B3B437447EE8(L_35, List_1__ctor_mCC51BE47184AF67777779C3C2F87B3B437447EE8_RuntimeMethod_var);
+		__this->___audioSourcesPool = L_35;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioSourcesPool), (void*)L_35);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:69>
+		V_5 = 0;
+		goto IL_0130;
+	}
+
+IL_0117:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:71>
+		List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* L_36 = __this->___audioSourcesPool;
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_37 = (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8*)il2cpp_codegen_object_new(AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8_il2cpp_TypeInfo_var);
+		AudioSourceCase__ctor_mEB3F12644091601BD2FB48BECF459B22DCD4C6C4(L_37, NULL);
+		NullCheck(L_36);
+		List_1_Add_mF0E6EEF81C0BD6BB30DCF9559E34613468E1D907_inline(L_36, L_37, List_1_Add_mF0E6EEF81C0BD6BB30DCF9559E34613468E1D907_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:69>
+		int32_t L_38 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_38, 1));
+	}
+
+IL_0130:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:69>
+		int32_t L_39 = V_5;
+		int32_t L_40 = ___0_poolSize;
+		V_6 = (bool)((((int32_t)L_39) < ((int32_t)L_40))? 1 : 0);
+		bool L_41 = V_6;
+		if (L_41)
+		{
+			goto IL_0117;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:74>
+		__this->___isInitialized = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:75>
+		return;
+	}
+}
+// Method Definition Index: 106275
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* AudioController_get_AudioListener_mB7382D30AE847D11BC768C813FBFDF780195A0A1 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* G_B2_0 = NULL;
+	AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* G_B1_0 = NULL;
+	AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* G_B3_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:79>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_0 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_1 = L_0;
+		if (L_1)
+		{
+			G_B2_0 = L_1;
+			goto IL_000c;
+		}
+		G_B1_0 = L_1;
+	}
+	{
+		G_B3_0 = ((AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35*)(NULL));
+		goto IL_0011;
+	}
+
+IL_000c:
+	{
+		NullCheck(G_B2_0);
+		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_2 = G_B2_0->___audioListener;
+		G_B3_0 = L_2;
+	}
+
+IL_0011:
+	{
+		return G_B3_0;
+	}
+}
+// Method Definition Index: 106276
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioController_get_IsInitialized_mCB82521F168001EEAFA43A71F6185295139D845D (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:81>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_0 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		if (!L_0)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_1 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_1);
+		bool L_2 = L_1->___isInitialized;
+		G_B3_0 = ((int32_t)(L_2));
+		goto IL_0014;
+	}
+
+IL_0013:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0014:
+	{
+		return (bool)G_B3_0;
+	}
+}
+// Method Definition Index: 106277
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_add_VolumeChanged_m273796D86693FD31271FC8A43DCB3DA7E7866E7B (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4CE086457123F7800C81E9FDC21F850E7CB434AC);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:89>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteral4CE086457123F7800C81E9FDC21F850E7CB434AC, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:89>
+		goto IL_0020;
+	}
+
+IL_0014:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:90>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_3 = ___0_value;
+		NullCheck(L_2);
+		AudioController_add_volumeChanged_mA1B5891B2726B533A284527120B4FD12663F0DB6(L_2, L_3, NULL);
+	}
+
+IL_0020:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:91>
+		return;
+	}
+}
+// Method Definition Index: 106278
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_remove_VolumeChanged_m79B5A3ED5AC295F2DCDBE0DDC6BC1F84828AA01A (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:94>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_0 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((!(((RuntimeObject*)(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:95>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_3 = ___0_value;
+		NullCheck(L_2);
+		AudioController_remove_volumeChanged_mCD127353ACBEB821B4F88512CD1D021BB8A211A4(L_2, L_3, NULL);
+	}
+
+IL_0019:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:96>
+		return;
+	}
+}
+// Method Definition Index: 106279
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_PlaySound_mE397E8983DC71AB9649159CE9CD7A916267ADBCA (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, float ___1_volumePercentage, float ___2_pitch, float ___3_minDelay, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral93E28A6403D9F4604B07F787F5F349E06CE636F0);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:103>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteral93E28A6403D9F4604B07F787F5F349E06CE636F0, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:103>
+		goto IL_0022;
+	}
+
+IL_0014:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:104>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_3 = ___0_clip;
+		float L_4 = ___1_volumePercentage;
+		float L_5 = ___2_pitch;
+		NullCheck(L_2);
+		AudioController_PlaySoundInternal_m4A236881F8F500C1CBB2232D6633CA6DBEF0CCFE(L_2, L_3, L_4, L_5, NULL);
+	}
+
+IL_0022:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:105>
+		return;
+	}
+}
+// Method Definition Index: 106280
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_PlaySound_m2CC26C407B4FCA2BE282D485C09C22AE9CF6E071 (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, float ___2_volumePercentage, float ___3_pitch, float ___4_minDelay, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral93E28A6403D9F4604B07F787F5F349E06CE636F0);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:109>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteral93E28A6403D9F4604B07F787F5F349E06CE636F0, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:109>
+		goto IL_0023;
+	}
+
+IL_0014:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:110>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_3 = ___0_clip;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___1_position;
+		float L_5 = ___2_volumePercentage;
+		float L_6 = ___3_pitch;
+		NullCheck(L_2);
+		AudioController_PlaySoundInternal_m9AD9765883F9A0E19E73990F80EDB395DF83ADFE(L_2, L_3, L_4, L_5, L_6, NULL);
+	}
+
+IL_0023:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:111>
+		return;
+	}
+}
+// Method Definition Index: 106281
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* AudioController_GetClip_m45E4AB205FC9FD95F3DFA6E35EA0563E7E356935 (String_t* ___0_name, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD2F04BCCE9966A51E5775FDBFF14426585364E2E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDEAD8CC71BA9ACE38953E84EDCA4146583B86632);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* V_1 = NULL;
+	bool V_2 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:117>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteralDEAD8CC71BA9ACE38953E84EDCA4146583B86632, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:117>
+		V_1 = (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20*)NULL;
+		goto IL_004d;
+	}
+
+IL_0016:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:119>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* L_3 = L_2->___registry;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_2 = L_4;
+		bool L_5 = V_2;
+		if (!L_5)
+		{
+			goto IL_003a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:121>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralD2F04BCCE9966A51E5775FDBFF14426585364E2E, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:122>
+		V_1 = (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20*)NULL;
+		goto IL_004d;
+	}
+
+IL_003a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:125>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_6 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_6);
+		AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* L_7 = L_6->___registry;
+		String_t* L_8 = ___0_name;
+		NullCheck(L_7);
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_9;
+		L_9 = AudioRegistry_GetClip_m4FD75C142036CF06F813F52E6E7D13E37C3BDB4E(L_7, L_8, NULL);
+		V_1 = L_9;
+		goto IL_004d;
+	}
+
+IL_004d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:126>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_10 = V_1;
+		return L_10;
+	}
+}
+// Method Definition Index: 106282
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551 (int32_t ___0_audioType, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9F49B6C011B56C676624616FE1CC4620FB0EFAE0);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	float V_1 = 0.0f;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:132>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteral9F49B6C011B56C676624616FE1CC4620FB0EFAE0, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:132>
+		V_1 = (1.0f);
+		goto IL_0028;
+	}
+
+IL_001a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:133>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		int32_t L_3 = ___0_audioType;
+		NullCheck(L_2);
+		float L_4;
+		L_4 = AudioController_GetVolumeInternal_m9F87820CAAF0AE714742C107EBA312631B85C11C(L_2, L_3, NULL);
+		V_1 = L_4;
+		goto IL_0028;
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:134>
+		float L_5 = V_1;
+		return L_5;
+	}
+}
+// Method Definition Index: 106283
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_SetVolume_mC4D34BA8673134AAE83A422A79BDBF32EF1B0848 (int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4BC40A28628C4E4745969E329633551068A0ECD7);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:138>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteral4BC40A28628C4E4745969E329633551068A0ECD7, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:138>
+		goto IL_0021;
+	}
+
+IL_0014:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:139>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		int32_t L_3 = ___0_audioType;
+		float L_4 = ___1_volume;
+		NullCheck(L_2);
+		AudioController_SetVolumeInternal_mA0A2173208C3010FD50F8D1CD19BF667C0EBE815(L_2, L_3, L_4, NULL);
+	}
+
+IL_0021:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:140>
+		return;
+	}
+}
+// Method Definition Index: 106284
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioController_IsAudioTypeActive_m50741CF42FB0F2D8F2D88D7D17C112076292B84F (int32_t ___0_audioType, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral249F686B7589D83FFC30728500D88A85E533F15F);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:144>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteral249F686B7589D83FFC30728500D88A85E533F15F, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:144>
+		V_1 = (bool)0;
+		goto IL_002b;
+	}
+
+IL_0016:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:145>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		int32_t L_3 = ___0_audioType;
+		NullCheck(L_2);
+		float L_4;
+		L_4 = AudioController_GetVolumeInternal_m9F87820CAAF0AE714742C107EBA312631B85C11C(L_2, L_3, NULL);
+		V_1 = (bool)((((float)L_4) == ((float)(1.0f)))? 1 : 0);
+		goto IL_002b;
+	}
+
+IL_002b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:146>
+		bool L_5 = V_1;
+		return L_5;
+	}
+}
+// Method Definition Index: 106285
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ReleaseSources_mB9400B5083C2EBF92428962EDA8C11CD673C1073 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBAB76C87D9314DA95B9449E8DFAEDA8B0F40BB7E);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:152>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteralBAB76C87D9314DA95B9449E8DFAEDA8B0F40BB7E, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:152>
+		goto IL_001f;
+	}
+
+IL_0014:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:153>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		AudioController_ReleaseSourcesInternal_mBBD72604138D756DAEC4AF09459738B97FE0BF8C(L_2, NULL);
+	}
+
+IL_001f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:154>
+		return;
+	}
+}
+// Method Definition Index: 106286
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ApplyDefaultSettings_mD10C7C95632445FC0D222CD7870230C70700486E (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** ___0_audioSource, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:159>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_0 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		V_0 = (bool)((((RuntimeObject*)(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:159>
+		goto IL_001b;
+	}
+
+IL_000f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:160>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** L_3 = ___0_audioSource;
+		NullCheck(L_2);
+		AudioController_ApplyDefaultSettingsInternal_m60177F98A12A6EF7BBCCA038C0451CD605FEB13F(L_2, L_3, NULL);
+	}
+
+IL_001b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:161>
+		return;
+	}
+}
+// Method Definition Index: 106287
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* AudioController_AttachAudioListener_mC5DABD4696F466ABD6B9DF5153233ED6939FFAC1 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_parentObject, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0A28A969955664DDA111112830036195FCC4B0A5);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_1 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:165>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteral0A28A969955664DDA111112830036195FCC4B0A5, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:165>
+		V_1 = (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL;
+		goto IL_0024;
+	}
+
+IL_0016:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:166>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = ___0_parentObject;
+		NullCheck(L_2);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = AudioController_AttachAudioListenerInternal_mB683426FEF6B330E37DA73B9B5CBF524EB3B52A3(L_2, L_3, NULL);
+		V_1 = L_4;
+		goto IL_0024;
+	}
+
+IL_0024:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:167>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = V_1;
+		return L_5;
+	}
+}
+// Method Definition Index: 106288
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ResetAudioListenerParent_mAA5A181D5BA4AB08CD84319FDC4B6F11CF35FB94 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5FCEB7EFCECAEBD5E9A3AD169900A4D6C22DA63F);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:171>
+		bool L_0;
+		L_0 = AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88(_stringLiteral5FCEB7EFCECAEBD5E9A3AD169900A4D6C22DA63F, NULL);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:171>
+		goto IL_001f;
+	}
+
+IL_0014:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:172>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_2 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_2);
+		AudioController_ResetAudioListenerParentInternal_m20EC41A0D6A0FBEF11BB6B8A2CD26BB3E5A2BD31(L_2, NULL);
+	}
+
+IL_001f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:173>
+		return;
+	}
+}
+// Method Definition Index: 106289
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioController_CheckInitialized_m2E3280A9AFD8F8DF1D300EB86CF8B365D8DD7E88 (String_t* ___0_caller, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9826BBD2DEB9086ED09B3C5E4B681DA7E422E95D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA860A3BA2F51C33F848ED5EF262CBE18DA71CA1F);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:179>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_0 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		if (!L_0)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_1 = ((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance;
+		NullCheck(L_1);
+		bool L_2 = L_1->___isInitialized;
+		G_B3_0 = ((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		goto IL_0018;
+	}
+
+IL_0017:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_0018:
+	{
+		V_0 = (bool)G_B3_0;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0037;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:181>
+		String_t* L_4 = ___0_caller;
+		String_t* L_5;
+		L_5 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralA860A3BA2F51C33F848ED5EF262CBE18DA71CA1F, L_4, _stringLiteral9826BBD2DEB9086ED09B3C5E4B681DA7E422E95D, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_5, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:182>
+		V_1 = (bool)0;
+		goto IL_003b;
+	}
+
+IL_0037:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:185>
+		V_1 = (bool)1;
+		goto IL_003b;
+	}
+
+IL_003b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:186>
+		bool L_6 = V_1;
+		return L_6;
+	}
+}
+// Method Definition Index: 106290
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ApplyDefaultSettingsInternal_m60177F98A12A6EF7BBCCA038C0451CD605FEB13F (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** ___0_audioSource, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:192>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** L_0 = ___0_audioSource;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1 = *((AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299**)L_0);
+		float L_2 = __this->___maxDistance;
+		NullCheck(L_1);
+		AudioSource_set_maxDistance_m4BF310D54761500A77A6C4841A0BBDBD09225813(L_1, L_2, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:193>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** L_3 = ___0_audioSource;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = *((AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299**)L_3);
+		float L_5 = __this->___spread;
+		NullCheck(L_4);
+		AudioSource_set_spread_mDFBC1BF11837C26EF9763A8DEEFC56AF95F6E83F(L_4, L_5, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:194>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** L_6 = ___0_audioSource;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_7 = *((AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299**)L_6);
+		NullCheck(L_7);
+		AudioSource_set_rolloffMode_m441D9552D8648D6040E66EE2C2650A79DC5E6FB4(L_7, 2, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:195>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** L_8 = ___0_audioSource;
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_9 = *((AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299**)L_8);
+		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_10 = __this->___rolloffCurve;
+		NullCheck(L_9);
+		AudioSource_SetCustomCurve_m6597C180AE2DD79DA663ABD76FC26AC816CB7CFB(L_9, 0, L_10, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:196>
+		return;
+	}
+}
+// Method Definition Index: 106291
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_CreateAudioListener_m220543939192114CE86F4959C780D3ADD6683C17 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_mA30AC51FE6287A9D0057077D99F694600A3D844E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral45C82765AFE6AB36D682375DA3A7755B208B07DA);
+		s_Il2CppMethodInitialized = true;
+	}
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:200>
+		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_0 = __this->___audioListener;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_1;
+		bool L_2 = V_1;
+		if (!L_2)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:201>
+		goto IL_0042;
+	}
+
+IL_0013:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:203>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88(L_3, _stringLiteral45C82765AFE6AB36D682375DA3A7755B208B07DA, NULL);
+		V_0 = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:204>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = V_0;
+		NullCheck(L_4);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
+		L_5 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_4, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		NullCheck(L_5);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_5, L_6, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:206>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_7, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:208>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = V_0;
+		NullCheck(L_8);
+		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_9;
+		L_9 = GameObject_AddComponent_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_mA30AC51FE6287A9D0057077D99F694600A3D844E(L_8, GameObject_AddComponent_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_mA30AC51FE6287A9D0057077D99F694600A3D844E_RuntimeMethod_var);
+		__this->___audioListener = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioListener), (void*)L_9);
+	}
+
+IL_0042:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:209>
+		return;
+	}
+}
+// Method Definition Index: 106292
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* AudioController_AttachAudioListenerInternal_mB683426FEF6B330E37DA73B9B5CBF524EB3B52A3 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_parentObject, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_0 = NULL;
+	bool V_1 = false;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_2 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:213>
+		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_0 = __this->___audioListener;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_1;
+		bool L_2 = V_1;
+		if (!L_2)
+		{
+			goto IL_0018;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:214>
+		AudioController_CreateAudioListener_m220543939192114CE86F4959C780D3ADD6683C17(__this, NULL);
+	}
+
+IL_0018:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:216>
+		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_3 = __this->___audioListener;
+		NullCheck(L_3);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_3, NULL);
+		V_0 = L_4;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:217>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = ___0_parentObject;
+		NullCheck(L_5);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_5, L_6, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:218>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_9;
+		L_9 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
+		NullCheck(L_7);
+		Transform_SetLocalPositionAndRotation_m0FB0FCF462AB7CD21880042918BCC372A59E734D(L_7, L_8, L_9, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:220>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = V_0;
+		V_2 = L_10;
+		goto IL_0041;
+	}
+
+IL_0041:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:221>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11 = V_2;
+		return L_11;
+	}
+}
+// Method Definition Index: 106293
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ResetAudioListenerParentInternal_m20EC41A0D6A0FBEF11BB6B8A2CD26BB3E5A2BD31 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:225>
+		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_0 = __this->___audioListener;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0013;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:225>
+		goto IL_0036;
+	}
+
+IL_0013:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:227>
+		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_3 = __this->___audioListener;
+		NullCheck(L_3);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_3, NULL);
+		NullCheck(L_4);
+		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_4, (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:229>
+		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_5 = __this->___audioListener;
+		NullCheck(L_5);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
+		L_6 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_5, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_6, NULL);
+	}
+
+IL_0036:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:230>
+		return;
+	}
+}
+// Method Definition Index: 106294
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_ReleaseSourcesInternal_mBBD72604138D756DAEC4AF09459738B97FE0BF8C (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* V_1 = NULL;
+	bool V_2 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:234>
+		List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* L_0 = __this->___audioSourcesPool;
+		NullCheck(L_0);
+		Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 L_1;
+		L_1 = List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896(L_0, List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896_RuntimeMethod_var);
+		V_0 = L_1;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_003b:
+			{
+				Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6((&V_0), Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_0030_1;
+			}
+
+IL_0010_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:234>
+				AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_2;
+				L_2 = Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_inline((&V_0), Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_RuntimeMethod_var);
+				V_1 = L_2;
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:236>
+				AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_3 = V_1;
+				NullCheck(L_3);
+				bool L_4;
+				L_4 = AudioSourceCase_get_IsPlaying_m93DA2DD16A95C26ECC87C0EC2DA664D9C84964B6(L_3, NULL);
+				V_2 = L_4;
+				bool L_5 = V_2;
+				if (!L_5)
+				{
+					goto IL_002f_1;
+				}
+			}
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:237>
+				AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_6 = V_1;
+				NullCheck(L_6);
+				AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_7;
+				L_7 = AudioSourceCase_get_AudioSource_mF6CF1F36ABB31AC71988526333DB91AF6DAFC453_inline(L_6, NULL);
+				NullCheck(L_7);
+				AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_7, NULL);
+			}
+
+IL_002f_1:
+			{
+			}
+
+IL_0030_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:234>
+				bool L_8;
+				L_8 = Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B((&V_0), Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B_RuntimeMethod_var);
+				if (L_8)
+				{
+					goto IL_0010_1;
+				}
+			}
+			{
+				goto IL_004a;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_004a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:239>
+		return;
+	}
+}
+// Method Definition Index: 106295
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_PlaySoundInternal_m4A236881F8F500C1CBB2232D6633CA6DBEF0CCFE (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, float ___1_volumePercentage, float ___2_pitch, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral51E97DFB38E92E699494F59E96273F7624179BF6);
+		s_Il2CppMethodInitialized = true;
+	}
+	AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* V_0 = NULL;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* V_1 = NULL;
+	bool V_2 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:243>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___0_clip;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_2 = L_1;
+		bool L_2 = V_2;
+		if (!L_2)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:245>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral51E97DFB38E92E699494F59E96273F7624179BF6, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:246>
+		goto IL_0046;
+	}
+
+IL_001a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:249>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_3;
+		L_3 = AudioController_GetAudioSource_m433CABACBA6E5D9ADBC41C7D2321EF95AF1226B1(__this, NULL);
+		V_0 = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:251>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_4 = V_0;
+		NullCheck(L_4);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_5;
+		L_5 = AudioSourceCase_get_AudioSource_mF6CF1F36ABB31AC71988526333DB91AF6DAFC453_inline(L_4, NULL);
+		V_1 = L_5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:252>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_6 = V_1;
+		NullCheck(L_6);
+		AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001(L_6, (0.0f), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:253>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_7 = V_1;
+		float L_8 = ___2_pitch;
+		NullCheck(L_7);
+		AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811(L_7, L_8, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:255>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_9 = V_0;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_10 = ___0_clip;
+		float L_11 = ___1_volumePercentage;
+		NullCheck(L_9);
+		AudioSourceCase_Play_m2F64854A2E549065F891167C74B02669227F2390(L_9, L_10, L_11, 1, NULL);
+	}
+
+IL_0046:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:256>
+		return;
+	}
+}
+// Method Definition Index: 106296
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_PlaySoundInternal_m9AD9765883F9A0E19E73990F80EDB395DF83ADFE (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, float ___2_volumePercentage, float ___3_pitch, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral51E97DFB38E92E699494F59E96273F7624179BF6);
+		s_Il2CppMethodInitialized = true;
+	}
+	AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* V_0 = NULL;
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* V_1 = NULL;
+	bool V_2 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:260>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = ___0_clip;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_2 = L_1;
+		bool L_2 = V_2;
+		if (!L_2)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:262>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral51E97DFB38E92E699494F59E96273F7624179BF6, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:263>
+		goto IL_0054;
+	}
+
+IL_001a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:266>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_3;
+		L_3 = AudioController_GetAudioSource_m433CABACBA6E5D9ADBC41C7D2321EF95AF1226B1(__this, NULL);
+		V_0 = L_3;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:268>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_4 = V_0;
+		NullCheck(L_4);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_5;
+		L_5 = AudioSourceCase_get_AudioSource_mF6CF1F36ABB31AC71988526333DB91AF6DAFC453_inline(L_4, NULL);
+		V_1 = L_5;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:269>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_6 = V_1;
+		NullCheck(L_6);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
+		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_6, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___1_position;
+		NullCheck(L_7);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_7, L_8, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:270>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_9 = V_1;
+		NullCheck(L_9);
+		AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001(L_9, (1.0f), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:271>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_10 = V_1;
+		float L_11 = ___3_pitch;
+		NullCheck(L_10);
+		AudioSource_set_pitch_mD14631FC99BF38AAFB356D9C45546BC16CF9E811(L_10, L_11, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:273>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_12 = V_0;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_13 = ___0_clip;
+		float L_14 = ___2_volumePercentage;
+		NullCheck(L_12);
+		AudioSourceCase_Play_m2F64854A2E549065F891167C74B02669227F2390(L_12, L_13, L_14, 1, NULL);
+	}
+
+IL_0054:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:274>
+		return;
+	}
+}
+// Method Definition Index: 106297
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* AudioController_GetAudioSource_m433CABACBA6E5D9ADBC41C7D2321EF95AF1226B1 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mF0E6EEF81C0BD6BB30DCF9559E34613468E1D907_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* V_0 = NULL;
+	Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* V_2 = NULL;
+	bool V_3 = false;
+	AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* V_4 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:278>
+		List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* L_0 = __this->___audioSourcesPool;
+		NullCheck(L_0);
+		Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 L_1;
+		L_1 = List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896(L_0, List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896_RuntimeMethod_var);
+		V_1 = L_1;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0037:
+			{
+				Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6((&V_1), Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_002c_1;
+			}
+
+IL_0010_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:278>
+				AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_2;
+				L_2 = Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_inline((&V_1), Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_RuntimeMethod_var);
+				V_2 = L_2;
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:280>
+				AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_3 = V_2;
+				NullCheck(L_3);
+				bool L_4;
+				L_4 = AudioSourceCase_get_IsPlaying_m93DA2DD16A95C26ECC87C0EC2DA664D9C84964B6(L_3, NULL);
+				V_3 = (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
+				bool L_5 = V_3;
+				if (!L_5)
+				{
+					goto IL_002b_1;
+				}
+			}
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:281>
+				AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_6 = V_2;
+				V_4 = L_6;
+				goto IL_005e;
+			}
+
+IL_002b_1:
+			{
+			}
+
+IL_002c_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:278>
+				bool L_7;
+				L_7 = Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B((&V_1), Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B_RuntimeMethod_var);
+				if (L_7)
+				{
+					goto IL_0010_1;
+				}
+			}
+			{
+				goto IL_0046;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0046:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:284>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_8 = (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8*)il2cpp_codegen_object_new(AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8_il2cpp_TypeInfo_var);
+		AudioSourceCase__ctor_mEB3F12644091601BD2FB48BECF459B22DCD4C6C4(L_8, NULL);
+		V_0 = L_8;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:285>
+		List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* L_9 = __this->___audioSourcesPool;
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_10 = V_0;
+		NullCheck(L_9);
+		List_1_Add_mF0E6EEF81C0BD6BB30DCF9559E34613468E1D907_inline(L_9, L_10, List_1_Add_mF0E6EEF81C0BD6BB30DCF9559E34613468E1D907_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:287>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_11 = V_0;
+		V_4 = L_11;
+		goto IL_005e;
+	}
+
+IL_005e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:288>
+		AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_12 = V_4;
+		return L_12;
+	}
+}
+// Method Definition Index: 106298
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioController_GetVolumeInternal_m9F87820CAAF0AE714742C107EBA312631B85C11C (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, int32_t ___0_audioType, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_ContainsKey_mA82E201D6C6F4295E3BCDD89B2D4C485753709D3_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_get_Item_m0BE32FAF650E18EE6F450B12C43E7751F1FFA00E_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	float V_1 = 0.0f;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:292>
+		Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* L_0 = __this->___volumeDictionary;
+		int32_t L_1 = ___0_audioType;
+		NullCheck(L_0);
+		bool L_2;
+		L_2 = Dictionary_2_ContainsKey_mA82E201D6C6F4295E3BCDD89B2D4C485753709D3(L_0, L_1, Dictionary_2_ContainsKey_mA82E201D6C6F4295E3BCDD89B2D4C485753709D3_RuntimeMethod_var);
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:293>
+		Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* L_4 = __this->___volumeDictionary;
+		int32_t L_5 = ___0_audioType;
+		NullCheck(L_4);
+		float L_6;
+		L_6 = Dictionary_2_get_Item_m0BE32FAF650E18EE6F450B12C43E7751F1FFA00E(L_4, L_5, Dictionary_2_get_Item_m0BE32FAF650E18EE6F450B12C43E7751F1FFA00E_RuntimeMethod_var);
+		V_1 = L_6;
+		goto IL_0028;
+	}
+
+IL_0020:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:295>
+		V_1 = (1.0f);
+		goto IL_0028;
+	}
+
+IL_0028:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:296>
+		float L_7 = V_1;
+		return L_7;
+	}
+}
+// Method Definition Index: 106299
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_SetVolumeInternal_mA0A2173208C3010FD50F8D1CD19BF667C0EBE815 (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m78188AF7B9EDC2DE7BA2774C89B715FEA7296DED_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* V_1 = NULL;
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* G_B8_0 = NULL;
+	OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* G_B7_0 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:300>
+		List_1_t4501376E92E2003A7007D92A61469BB9862D6C85* L_0 = __this->___audioSourcesPool;
+		NullCheck(L_0);
+		Enumerator_t2DD73B7B79610730B60CDB02E7367DB0445A3F88 L_1;
+		L_1 = List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896(L_0, List_1_GetEnumerator_m1F07B597DE83B48E3151A2C0D37F92D1E96FA896_RuntimeMethod_var);
+		V_0 = L_1;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_002e:
+			{
+				Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6((&V_0), Enumerator_Dispose_m0A042B3D8C0CA4EE1ADEB7C48BEA24179E4BA9C6_RuntimeMethod_var);
+				return;
+			}
+		});
+		try
+		{
+			{
+				goto IL_0023_1;
+			}
+
+IL_0010_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:300>
+				AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_2;
+				L_2 = Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_inline((&V_0), Enumerator_get_Current_m0F10C987C7BD4D2185E676B01335D057E834D72C_RuntimeMethod_var);
+				V_1 = L_2;
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:302>
+				AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* L_3 = V_1;
+				int32_t L_4 = ___0_audioType;
+				float L_5 = ___1_volume;
+				NullCheck(L_3);
+				AudioSourceCase_OverrideVolume_mBAE5FDDBD237EB70ED696EDA16F145E7D093A6D4(L_3, L_4, L_5, NULL);
+			}
+
+IL_0023_1:
+			{
+				//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:300>
+				bool L_6;
+				L_6 = Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B((&V_0), Enumerator_MoveNext_m4C8DD008526BB497CF878DC241D0C4FDD2898E2B_RuntimeMethod_var);
+				if (L_6)
+				{
+					goto IL_0010_1;
+				}
+			}
+			{
+				goto IL_003d;
+			}
+		}
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_003d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:305>
+		Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* L_7 = __this->___volumeDictionary;
+		int32_t L_8 = ___0_audioType;
+		float L_9 = ___1_volume;
+		NullCheck(L_7);
+		Dictionary_2_set_Item_m78188AF7B9EDC2DE7BA2774C89B715FEA7296DED(L_7, L_8, L_9, Dictionary_2_set_Item_m78188AF7B9EDC2DE7BA2774C89B715FEA7296DED_RuntimeMethod_var);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:307>
+		AudioController_FlushVolumesToSave_m37C6D17347E25D5F73378242DB1E152EB48339ED(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:308>
+		SaveController_MarkAsSaveIsRequired_mC43B6B31B2FF7F8FED774FB1D5DE5D0CFC752928(NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:310>
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_10 = __this->___volumeChanged;
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_11 = L_10;
+		if (L_11)
+		{
+			G_B8_0 = L_11;
+			goto IL_0064;
+		}
+		G_B7_0 = L_11;
+	}
+	{
+		goto IL_006c;
+	}
+
+IL_0064:
+	{
+		int32_t L_12 = ___0_audioType;
+		float L_13 = ___1_volume;
+		NullCheck(G_B8_0);
+		OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C_inline(G_B8_0, L_12, L_13, NULL);
+	}
+
+IL_006c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:311>
+		return;
+	}
+}
+// Method Definition Index: 106300
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_FlushVolumesToSave_m37C6D17347E25D5F73378242DB1E152EB48339ED (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:315>
+		AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* L_0 = __this->___save;
+		AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86* L_1 = __this->___audioTypes;
+		NullCheck(L_1);
+		VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6* L_2 = (VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6*)(VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6*)SZArrayNew(VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6_il2cpp_TypeInfo_var, (uint32_t)((int32_t)(((RuntimeArray*)L_1)->max_length)));
+		NullCheck(L_0);
+		L_0->___VolumeDatas = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&L_0->___VolumeDatas), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:316>
+		V_0 = 0;
+		goto IL_0055;
+	}
+
+IL_001d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:317>
+		AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* L_3 = __this->___save;
+		NullCheck(L_3);
+		VolumeDataU5BU5D_tD6A6B81406CF2AFF458BCA304FBB13AFF0A212B6* L_4 = L_3->___VolumeDatas;
+		int32_t L_5 = V_0;
+		VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* L_6 = (VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A*)il2cpp_codegen_object_new(VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A_il2cpp_TypeInfo_var);
+		VolumeData__ctor_mFE095B8F2F1C36DA6E644B1E8894B6DA92DD5769(L_6, NULL);
+		VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* L_7 = L_6;
+		AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86* L_8 = __this->___audioTypes;
+		int32_t L_9 = V_0;
+		NullCheck(L_8);
+		int32_t L_10 = L_9;
+		int32_t L_11 = (int32_t)(L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
+		NullCheck(L_7);
+		L_7->___AudioType = L_11;
+		VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* L_12 = L_7;
+		AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86* L_13 = __this->___audioTypes;
+		int32_t L_14 = V_0;
+		NullCheck(L_13);
+		int32_t L_15 = L_14;
+		int32_t L_16 = (int32_t)(L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
+		float L_17;
+		L_17 = AudioController_GetVolumeInternal_m9F87820CAAF0AE714742C107EBA312631B85C11C(__this, L_16, NULL);
+		NullCheck(L_12);
+		L_12->___Volume = L_17;
+		NullCheck(L_4);
+		ArrayElementTypeCheck (L_4, L_12);
+		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(L_5), (VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A*)L_12);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:316>
+		int32_t L_18 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add(L_18, 1));
+	}
+
+IL_0055:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:316>
+		int32_t L_19 = V_0;
+		AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86* L_20 = __this->___audioTypes;
+		NullCheck(L_20);
+		V_1 = (bool)((((int32_t)L_19) < ((int32_t)((int32_t)(((RuntimeArray*)L_20)->max_length))))? 1 : 0);
+		bool L_21 = V_1;
+		if (L_21)
+		{
+			goto IL_001d;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:318>
+		return;
+	}
+}
+// Method Definition Index: 106301
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioController_Unload_m436477A60EB08E331A3663B5442B679C1E41B45F (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:322>
+		AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* L_0 = __this->___save;
+		if (!L_0)
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664* L_1 = __this->___volumeDictionary;
+		G_B3_0 = ((!(((RuntimeObject*)(Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*)L_1) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		goto IL_0015;
+	}
+
+IL_0014:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0015:
+	{
+		V_0 = (bool)G_B3_0;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:323>
+		AudioController_FlushVolumesToSave_m37C6D17347E25D5F73378242DB1E152EB48339ED(__this, NULL);
+	}
+
+IL_0020:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:325>
+		__this->___audioSourcesPool = (List_1_t4501376E92E2003A7007D92A61469BB9862D6C85*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioSourcesPool), (void*)(List_1_t4501376E92E2003A7007D92A61469BB9862D6C85*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:326>
+		__this->___registry = (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___registry), (void*)(AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:327>
+		__this->___audioListener = (AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioListener), (void*)(AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:328>
+		__this->___save = (AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___save), (void*)(AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:329>
+		__this->___volumeDictionary = (Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___volumeDictionary), (void*)(Dictionary_2_t2C967B05519C66C28265393233836FB2F8704664*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:330>
+		__this->___audioTypes = (AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioTypes), (void*)(AudioTypeU5BU5D_t7CC9FC0720186E8BAB9B3E45B6AB9555DCC6BE86*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:331>
+		__this->___volumeChanged = (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___volumeChanged), (void*)(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:332>
+		__this->___isInitialized = (bool)0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:333>
+		((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance = (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&((AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_StaticFields*)il2cpp_codegen_static_fields_for(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var))->___instance), (void*)(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioController.cs:334>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C_Multicast(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* currentDelegate = reinterpret_cast<OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, float, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_audioType, ___1_volume, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
+	}
+}
+void OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C_OpenInst(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (int32_t, float, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_audioType, ___1_volume, method);
+}
+void OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C_OpenStatic(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (int32_t, float, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr)(___0_audioType, ___1_volume, method);
+}
+IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841 (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method)
+{
+	typedef void (DEFAULT_CALL *PInvokeFunc)(int32_t, float);
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(il2cpp_codegen_get_reverse_pinvoke_function_ptr(__this));
+	il2cppPInvokeFunc(___0_audioType, ___1_volume);
+
+}
+// Method Definition Index: 106302
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnVolumeChangedCallback__ctor_mEE04238BB079D851B720A8E13817FDC547BFB2B5 (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+{
+	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
+	__this->___method = ___1_method;
+	__this->___m_target = ___0_object;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target), (void*)___0_object);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___1_method);
+	__this->___method_code = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___1_method))
+	{
+		bool isOpen = parameterCount == 2;
+		if (isOpen)
+			__this->___invoke_impl = (intptr_t)&OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C_OpenStatic;
+		else
+			{
+				__this->___invoke_impl = __this->___method_ptr;
+				__this->___method_code = (intptr_t)__this->___m_target;
+			}
+	}
+	else
+	{
+		if (___0_object == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl = __this->___method_ptr;
+		__this->___method_code = (intptr_t)__this->___m_target;
+	}
+	__this->___extra_arg = (intptr_t)&OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C_Multicast;
+}
+// Method Definition Index: 106303
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, float, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_audioType, ___1_volume, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 106304
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OnVolumeChangedCallback_BeginInvoke_mCF167D370D9D34ACC4B03B9DC5E5C83E31BC2660 (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, int32_t ___0_audioType, float ___1_volume, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	void *__d_args[3] = {0};
+	__d_args[0] = Box(AudioType_tE662F2698D967BE8E6E4A7ABFA21CBCBF1B04028_il2cpp_TypeInfo_var, &___0_audioType);
+	__d_args[1] = Box(il2cpp_defaults.single_class, &___1_volume);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
+}
+// Method Definition Index: 106305
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnVolumeChangedCallback_EndInvoke_m96B9D14FE24C0A9FA3427C543DB164B4712ABE7B (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106306
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AudioInitModule_get_ModuleName_m02242FFE26AEFFB3D075F861AA789C0496A3354A (AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCD1E92415C8D2F407D18D8F13E94417652866F04);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:11>
+		return _stringLiteralCD1E92415C8D2F407D18D8F13E94417652866F04;
+	}
+}
+// Method Definition Index: 106307
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AudioInitModule_InitAsync_m1CD1BE59F515D80FFE39351C9DF37B010988F080 (AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_owner, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* L_0 = (U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89*)il2cpp_codegen_object_new(U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89_il2cpp_TypeInfo_var);
+		U3CInitAsyncU3Ed__10__ctor_m986AC6A87104427E7E1919A44A93F2A265EAD66A(L_0, 0, NULL);
+		U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* L_2 = L_1;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = ___0_owner;
+		NullCheck(L_2);
+		L_2->___owner = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&L_2->___owner), (void*)L_3);
+		return L_2;
+	}
+}
+// Method Definition Index: 106308
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioInitModule_Unload_m46DCCA87E4D37D232A6A735E22534646458E9E77 (AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:53>
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_0 = __this->___audioController;
+		NullCheck(L_0);
+		AudioController_Unload_m436477A60EB08E331A3663B5442B679C1E41B45F(L_0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:54>
+		__this->___audioController = (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioController), (void*)(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:55>
+		return;
+	}
+}
+// Method Definition Index: 106309
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioInitModule__ctor_m711A282BA6BD3A70D0F87B704D06B801C6C36392 (AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:14>
+		__this->___audioSourcesPoolSize = 4;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:17>
+		__this->___maxDistance = (30.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:20>
+		__this->___spread = (180.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:21>
+		KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3* L_0 = (KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3*)(KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3*)SZArrayNew(KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3_il2cpp_TypeInfo_var, (uint32_t)2);
+		KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3* L_1 = L_0;
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_2;
+		memset((&L_2), 0, sizeof(L_2));
+		Keyframe__ctor_mECF144086B28785BE911A22C06194A9E0FBF3C34((&L_2), (0.0f), (1.0f), NULL);
+		NullCheck(L_1);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0)L_2);
+		KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3* L_3 = L_1;
+		Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0 L_4;
+		memset((&L_4), 0, sizeof(L_4));
+		Keyframe__ctor_mECF144086B28785BE911A22C06194A9E0FBF3C34((&L_4), (1.0f), (0.0f), NULL);
+		NullCheck(L_3);
+		(L_3)->SetAt(static_cast<il2cpp_array_size_t>(1), (Keyframe_tB9C67DCBFE10C0AE9C52CB5C66E944255C9254F0)L_4);
+		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_5 = (AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354*)il2cpp_codegen_object_new(AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354_il2cpp_TypeInfo_var);
+		AnimationCurve__ctor_mEABC98C03805713354D61E50D9340766BD5B717E(L_5, L_3, NULL);
+		__this->___rolloffCurve = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___rolloffCurve), (void*)L_5);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:24>
+		__this->___spawnGlobalMusicSource = (bool)1;
+		InitModule__ctor_mB63BC2AB083368E4563EE0132B818D5A85573879(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106310
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitAsyncU3Ed__10__ctor_m986AC6A87104427E7E1919A44A93F2A265EAD66A (U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 106311
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitAsyncU3Ed__10_System_IDisposable_Dispose_m6FD95E110264C28060EF15E40AEA9FE3D811DD68 (U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 106312
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CInitAsyncU3Ed__10_MoveNext_mC2F3A4726C359A793B1DF860D9AC93B5A507D3B0 (U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisMusicSource_t901B96561102D7ECF64A870A33679B7336070B60_mBF13E16E7DB99760916A845780A0F0CE4C33D4AB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB74A8FE69D830B429EF876DBC56FF27B6FFC4B6A);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000c;
+		}
+	}
+	{
+		goto IL_000e;
+	}
+
+IL_000c:
+	{
+		goto IL_0010;
+	}
+
+IL_000e:
+	{
+		return (bool)0;
+	}
+
+IL_0010:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:31>
+		AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* L_2 = __this->___U3CU3E4__this;
+		AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* L_3 = __this->___U3CU3E4__this;
+		NullCheck(L_3);
+		int32_t L_4 = L_3->___audioSourcesPoolSize;
+		AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* L_5 = __this->___U3CU3E4__this;
+		NullCheck(L_5);
+		AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* L_6 = L_5->___audioRegistry;
+		AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* L_7 = __this->___U3CU3E4__this;
+		NullCheck(L_7);
+		float L_8 = L_7->___maxDistance;
+		AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* L_9 = __this->___U3CU3E4__this;
+		NullCheck(L_9);
+		float L_10 = L_9->___spread;
+		AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* L_11 = __this->___U3CU3E4__this;
+		NullCheck(L_11);
+		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_12 = L_11->___rolloffCurve;
+		AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7* L_13 = (AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7*)il2cpp_codegen_object_new(AudioController_tA661877F1771DFC17D8A4227AD076811A55305C7_il2cpp_TypeInfo_var);
+		AudioController__ctor_m06DD3A5F655529B216837847A3E6E5C899059CEE(L_13, L_4, L_6, L_8, L_10, L_12, NULL);
+		NullCheck(L_2);
+		L_2->___audioController = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&L_2->___audioController), (void*)L_13);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:33>
+		AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* L_14 = __this->___U3CU3E4__this;
+		NullCheck(L_14);
+		bool L_15 = L_14->___spawnGlobalMusicSource;
+		V_1 = L_15;
+		bool L_16 = V_1;
+		if (!L_16)
+		{
+			goto IL_0106;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:35>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88(L_17, _stringLiteralB74A8FE69D830B429EF876DBC56FF27B6FFC4B6A, NULL);
+		__this->___U3CglobalMusicSourceObjectU3E5__1 = L_17;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CglobalMusicSourceObjectU3E5__1), (void*)L_17);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:36>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = __this->___U3CglobalMusicSourceObjectU3E5__1;
+		NullCheck(L_18);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
+		L_19 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_18, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
+		L_20 = CoreExtensions_ResetGlobal_mB2381AEC863BB3950BEBCD26B8D12A5E06FE8F83(L_19, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:38>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = __this->___U3CglobalMusicSourceObjectU3E5__1;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_21, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:40>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___U3CglobalMusicSourceObjectU3E5__1;
+		NullCheck(L_22);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_23;
+		L_23 = GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14(L_22, GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
+		__this->___U3CaudioSourceU3E5__2 = L_23;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CaudioSourceU3E5__2), (void*)L_23);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:41>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_24 = __this->___U3CaudioSourceU3E5__2;
+		AudioInitModule_t2835C9BBE71C08B42BE97260E71F5773DB5438E7* L_25 = __this->___U3CU3E4__this;
+		NullCheck(L_25);
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_26 = L_25->___globalMusicClip;
+		NullCheck(L_24);
+		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_24, L_26, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:43>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = __this->___U3CglobalMusicSourceObjectU3E5__1;
+		NullCheck(L_27);
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_28;
+		L_28 = GameObject_AddComponent_TisMusicSource_t901B96561102D7ECF64A870A33679B7336070B60_mBF13E16E7DB99760916A845780A0F0CE4C33D4AB(L_27, GameObject_AddComponent_TisMusicSource_t901B96561102D7ECF64A870A33679B7336070B60_mBF13E16E7DB99760916A845780A0F0CE4C33D4AB_RuntimeMethod_var);
+		__this->___U3CmusicSourceU3E5__3 = L_28;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CmusicSourceU3E5__3), (void*)L_28);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:44>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_29 = __this->___U3CmusicSourceU3E5__3;
+		NullCheck(L_29);
+		MusicSource_Init_m6B9E019052E8FAF7877EA7C1E3B112425C25DBC5(L_29, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:45>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_30 = __this->___U3CmusicSourceU3E5__3;
+		NullCheck(L_30);
+		MusicSource_Activate_mBC820060D0790DDAFCB2D799BC2D72EF070430FB(L_30, NULL);
+		__this->___U3CglobalMusicSourceObjectU3E5__1 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CglobalMusicSourceObjectU3E5__1), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
+		__this->___U3CaudioSourceU3E5__2 = (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CaudioSourceU3E5__2), (void*)(AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299*)NULL);
+		__this->___U3CmusicSourceU3E5__3 = (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CmusicSourceU3E5__3), (void*)(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60*)NULL);
+	}
+
+IL_0106:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioInitModule.cs:48>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 106313
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitAsyncU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8FAB60F774BC7B4DB0D493AA174C7D15C33686D2 (U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 106314
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitAsyncU3Ed__10_System_Collections_IEnumerator_Reset_m445C2840277147171D3DA290FB6F09B7DDD7BA61 (U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CInitAsyncU3Ed__10_System_Collections_IEnumerator_Reset_m445C2840277147171D3DA290FB6F09B7DDD7BA61_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 106315
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitAsyncU3Ed__10_System_Collections_IEnumerator_get_Current_m839D25A41B07D0E4B56531CD4FFBF8BD07847C32 (U3CInitAsyncU3Ed__10_tE4F8E8900259D31FDF3FE70794D19574376BEC89* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106316
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AudioRegistry_get_IgnorePatterns_m8A87DD767759DCA3AEEE7BC6D23CD7F0383B515C (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:23>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = __this->___ignorePatterns;
+		return (RuntimeObject*)L_0;
+	}
+}
+// Method Definition Index: 106317
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AudioRegistry_get_Entries_mDAD55256F524D9FA6AEDCC2BB991FEE1D340978B (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:24>
+		AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* L_0 = __this->___entries;
+		return (RuntimeObject*)L_0;
+	}
+}
+// Method Definition Index: 106318
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioRegistry_OnEnable_m1C56513ED2C96826FCC203BA1C286840A2A52D33 (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:28>
+		AudioRegistry_BuildRuntimeLookup_mAB9981A4B6DE182520155273BE1CD6CBA68EE32B(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:29>
+		return;
+	}
+}
+// Method Definition Index: 106319
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioRegistry_BuildRuntimeLookup_mAB9981A4B6DE182520155273BE1CD6CBA68EE32B (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2__ctor_m17E8F71EF5A4AEB51E5F811976C8AEE28CC30092_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_set_Item_m6D8159C91FE4513E3489D7B8D777DBB0044FEBED_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* V_1 = NULL;
+	int32_t V_2 = 0;
+	AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* V_3 = NULL;
+	bool V_4 = false;
+	AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* G_B2_0 = NULL;
+	AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* G_B1_0 = NULL;
+	int32_t G_B3_0 = 0;
+	AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* G_B3_1 = NULL;
+	int32_t G_B9_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:33>
+		AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* L_0 = __this->___entries;
+		if (L_0)
+		{
+			G_B2_0 = __this;
+			goto IL_000d;
+		}
+		G_B1_0 = __this;
+	}
+	{
+		G_B3_0 = 0;
+		G_B3_1 = G_B1_0;
+		goto IL_0015;
+	}
+
+IL_000d:
+	{
+		AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* L_1 = __this->___entries;
+		NullCheck(L_1);
+		G_B3_0 = ((int32_t)(((RuntimeArray*)L_1)->max_length));
+		G_B3_1 = G_B2_0;
+	}
+
+IL_0015:
+	{
+		Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24* L_2 = (Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24*)il2cpp_codegen_object_new(Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m17E8F71EF5A4AEB51E5F811976C8AEE28CC30092(L_2, G_B3_0, Dictionary_2__ctor_m17E8F71EF5A4AEB51E5F811976C8AEE28CC30092_RuntimeMethod_var);
+		NullCheck(G_B3_1);
+		G_B3_1->___lookup = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&G_B3_1->___lookup), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:35>
+		AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* L_3 = __this->___entries;
+		V_0 = (bool)((((RuntimeObject*)(AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_4 = V_0;
+		if (!L_4)
+		{
+			goto IL_002e;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:35>
+		goto IL_007c;
+	}
+
+IL_002e:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:37>
+		AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* L_5 = __this->___entries;
+		V_1 = L_5;
+		V_2 = 0;
+		goto IL_0076;
+	}
+
+IL_003a:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:37>
+		AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* L_6 = V_1;
+		int32_t L_7 = V_2;
+		NullCheck(L_6);
+		int32_t L_8 = L_7;
+		AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* L_9 = (L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
+		V_3 = L_9;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:39>
+		AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* L_10 = V_3;
+		if (!L_10)
+		{
+			goto IL_0050;
+		}
+	}
+	{
+		AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* L_11 = V_3;
+		NullCheck(L_11);
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_12;
+		L_12 = AudioRegistryEntry_get_Clip_m66CDC074EB6A9C609E0E5CAA5DFF13A27247D06D_inline(L_11, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_13;
+		L_13 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		G_B9_0 = ((int32_t)(L_13));
+		goto IL_0051;
+	}
+
+IL_0050:
+	{
+		G_B9_0 = 1;
+	}
+
+IL_0051:
+	{
+		V_4 = (bool)G_B9_0;
+		bool L_14 = V_4;
+		if (!L_14)
+		{
+			goto IL_0059;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:39>
+		goto IL_0072;
+	}
+
+IL_0059:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:40>
+		Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24* L_15 = __this->___lookup;
+		AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* L_16 = V_3;
+		NullCheck(L_16);
+		String_t* L_17;
+		L_17 = AudioRegistryEntry_get_ClipName_mC0B4EEFB09F0AD64D99A5EBCE36F032DEDE1F2CD_inline(L_16, NULL);
+		AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* L_18 = V_3;
+		NullCheck(L_18);
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_19;
+		L_19 = AudioRegistryEntry_get_Clip_m66CDC074EB6A9C609E0E5CAA5DFF13A27247D06D_inline(L_18, NULL);
+		NullCheck(L_15);
+		Dictionary_2_set_Item_m6D8159C91FE4513E3489D7B8D777DBB0044FEBED(L_15, L_17, L_19, Dictionary_2_set_Item_m6D8159C91FE4513E3489D7B8D777DBB0044FEBED_RuntimeMethod_var);
+	}
+
+IL_0072:
+	{
+		int32_t L_20 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_20, 1));
+	}
+
+IL_0076:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:37>
+		int32_t L_21 = V_2;
+		AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* L_22 = V_1;
+		NullCheck(L_22);
+		if ((((int32_t)L_21) < ((int32_t)((int32_t)(((RuntimeArray*)L_22)->max_length)))))
+		{
+			goto IL_003a;
+		}
+	}
+
+IL_007c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:42>
+		return;
+	}
+}
+// Method Definition Index: 106320
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* AudioRegistry_GetClip_m4FD75C142036CF06F813F52E6E7D13E37C3BDB4E (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* __this, String_t* ___0_name, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_m7A9A3006D46107F1E4D72685F31A6DEED8C27E02_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7C8965D252A8F5BE786240409F81075F080ED53A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE4C40463C7DDB9F551D53CB094056DDF11A18F18);
+		s_Il2CppMethodInitialized = true;
+	}
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* V_3 = NULL;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:46>
+		Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24* L_0 = __this->___lookup;
+		V_1 = (bool)((((RuntimeObject*)(Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:47>
+		AudioRegistry_BuildRuntimeLookup_mAB9981A4B6DE182520155273BE1CD6CBA68EE32B(__this, NULL);
+	}
+
+IL_0015:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:49>
+		Dictionary_2_t3F562E9148A8E8AA20BC15F94541BEA78590DD24* L_2 = __this->___lookup;
+		String_t* L_3 = ___0_name;
+		NullCheck(L_2);
+		bool L_4;
+		L_4 = Dictionary_2_TryGetValue_m7A9A3006D46107F1E4D72685F31A6DEED8C27E02(L_2, L_3, (&V_0), Dictionary_2_TryGetValue_m7A9A3006D46107F1E4D72685F31A6DEED8C27E02_RuntimeMethod_var);
+		V_2 = L_4;
+		bool L_5 = V_2;
+		if (!L_5)
+		{
+			goto IL_002b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:50>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_6 = V_0;
+		V_3 = L_6;
+		goto IL_0045;
+	}
+
+IL_002b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:52>
+		String_t* L_7 = ___0_name;
+		String_t* L_8;
+		L_8 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralE4C40463C7DDB9F551D53CB094056DDF11A18F18, L_7, _stringLiteral7C8965D252A8F5BE786240409F81075F080ED53A, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_8, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:53>
+		V_3 = (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20*)NULL;
+		goto IL_0045;
+	}
+
+IL_0045:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:54>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_9 = V_3;
+		return L_9;
+	}
+}
+// Method Definition Index: 106321
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioRegistry__ctor_mE687A85D3B0DE29F68C4F025A273E06E4ACD6E0A (AudioRegistry_tD70590F3217BCEA85A63F239FC53B851F74B9C86* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:10>
+		AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB* L_0 = (AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB*)(AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB*)SZArrayNew(AudioRegistryEntryU5BU5D_t61D0CD0B057B98FBEF6048A7843BC44F3B6189BB_il2cpp_TypeInfo_var, (uint32_t)0);
+		__this->___entries = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___entries), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:19>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)0);
+		__this->___ignorePatterns = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___ignorePatterns), (void*)L_1);
+		ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106322
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AudioRegistryEntry_get_ClipName_mC0B4EEFB09F0AD64D99A5EBCE36F032DEDE1F2CD (AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:73>
+		String_t* L_0 = __this->___clipName;
+		return L_0;
+	}
+}
+// Method Definition Index: 106323
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AudioRegistryEntry_get_AssetPath_mA9E32FCB6C71642EB8D6A4BEBB5100FBA87D0B92 (AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:74>
+		String_t* L_0 = __this->___assetPath;
+		return L_0;
+	}
+}
+// Method Definition Index: 106324
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* AudioRegistryEntry_get_Clip_m66CDC074EB6A9C609E0E5CAA5DFF13A27247D06D (AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:75>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___clip;
+		return L_0;
+	}
+}
+// Method Definition Index: 106325
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioRegistryEntry__ctor_mD38F852EADE5FDE418564946A9BB0D69FB63C7D9 (AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* __this, String_t* ___0_clipName, String_t* ___1_assetPath, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___2_clip, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:77>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:79>
+		String_t* L_0 = ___0_clipName;
+		__this->___clipName = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___clipName), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:80>
+		String_t* L_1 = ___1_assetPath;
+		__this->___assetPath = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___assetPath), (void*)L_1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:81>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = ___2_clip;
+		__this->___clip = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___clip), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:82>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106326
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSave_OnBeforeSave_m7EEA0DDBFFA225AEA5FA65CC45E28B4A747685BA (AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSave.cs:8>
+		return;
+	}
+}
+// Method Definition Index: 106327
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSave__ctor_mC164AFC7247513723C00249571F199FE82C67682 (AudioSave_t21835F38E14FFF4B7BE9FBD3644AB5F5C013B6EB* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106328
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VolumeData__ctor_mFE095B8F2F1C36DA6E644B1E8894B6DA92DD5769 (VolumeData_tEFEDC5B3F4A20289BAEBECEC4D2320E27263DB4A* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106329
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* AudioSourceCase_get_AudioSource_mF6CF1F36ABB31AC71988526333DB91AF6DAFC453 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:8>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___audioSource;
+		return L_0;
+	}
+}
+// Method Definition Index: 106330
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AudioSourceCase_get_IsPlaying_m93DA2DD16A95C26ECC87C0EC2DA664D9C84964B6 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:10>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___audioSource;
+		NullCheck(L_0);
+		bool L_1;
+		L_1 = AudioSource_get_isPlaying_mC203303F2F7146B2C056CB47B9391463FDF408FC(L_0, NULL);
+		return L_1;
+	}
+}
+// Method Definition Index: 106331
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* AudioSourceCase_get_GameObject_mBAF45043A488CCE91689B683B32D8480567B4F44 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:16>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___gameObject;
+		return L_0;
+	}
+}
+// Method Definition Index: 106332
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSourceCase__ctor_mEB3F12644091601BD2FB48BECF459B22DCD4C6C4 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5029EC9FF4342DD45C78A5FD438B3AF4786697DF);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:18>
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:20>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88(L_0, _stringLiteral5029EC9FF4342DD45C78A5FD438B3AF4786697DF, NULL);
+		__this->___gameObject = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___gameObject), (void*)L_0);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:22>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___gameObject;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:24>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___gameObject;
+		NullCheck(L_2);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_3;
+		L_3 = GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14(L_2, GameObject_AddComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m0E8EFDB9B3D8DF1ADE10C56D3168A9C1BA19BF14_RuntimeMethod_var);
+		__this->___audioSource = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioSource), (void*)L_3);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:25>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___audioSource;
+		NullCheck(L_4);
+		AudioSource_set_playOnAwake_m7EACC6ECEF12D7BA86A4E5A53603F1C8F9E11949(L_4, (bool)0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:27>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299** L_5 = (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299**)(&__this->___audioSource);
+		AudioController_ApplyDefaultSettings_mD10C7C95632445FC0D222CD7870230C70700486E(L_5, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:28>
+		return;
+	}
+}
+// Method Definition Index: 106333
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSourceCase_Play_m2F64854A2E549065F891167C74B02669227F2390 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_audioClip, float ___1_clipVolume, int32_t ___2_type, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:32>
+		int32_t L_0 = ___2_type;
+		__this->___audioType = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:33>
+		float L_1 = ___1_clipVolume;
+		__this->___clipVolume = L_1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:35>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___audioSource;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_3 = ___0_audioClip;
+		NullCheck(L_2);
+		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_2, L_3, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:36>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___audioSource;
+		float L_5 = ___1_clipVolume;
+		int32_t L_6 = __this->___audioType;
+		float L_7;
+		L_7 = AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551(L_6, NULL);
+		NullCheck(L_4);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_4, ((float)il2cpp_codegen_multiply(L_5, L_7)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:38>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_8 = __this->___audioSource;
+		NullCheck(L_8);
+		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_8, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:39>
+		return;
+	}
+}
+// Method Definition Index: 106334
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSourceCase_OverrideVolume_mBAE5FDDBD237EB70ED696EDA16F145E7D093A6D4 (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, int32_t ___0_type, float ___1_volume, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	int32_t G_B3_0 = 0;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:43>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___audioSource;
+		NullCheck(L_0);
+		bool L_1;
+		L_1 = AudioSource_get_isPlaying_mC203303F2F7146B2C056CB47B9391463FDF408FC(L_0, NULL);
+		if (!L_1)
+		{
+			goto IL_001c;
+		}
+	}
+	{
+		int32_t L_2 = __this->___audioType;
+		int32_t L_3 = ___0_type;
+		G_B3_0 = ((((int32_t)((((int32_t)L_2) == ((int32_t)L_3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_001d;
+	}
+
+IL_001c:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_001d:
+	{
+		V_0 = (bool)G_B3_0;
+		bool L_4 = V_0;
+		if (!L_4)
+		{
+			goto IL_0023;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:43>
+		goto IL_0037;
+	}
+
+IL_0023:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:45>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_5 = __this->___audioSource;
+		float L_6 = ___1_volume;
+		float L_7 = __this->___clipVolume;
+		NullCheck(L_5);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_5, ((float)il2cpp_codegen_multiply(L_6, L_7)), NULL);
+	}
+
+IL_0037:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:46>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106335
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* MusicSource_get_ActiveMusicSource_mB0D0A02BEFE01AC952272BE64D65104EE6CD5C71 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:14>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_0 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource;
+		return L_0;
+	}
+}
+// Method Definition Index: 106336
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* MusicSource_get_AudioSource_m4F0A5784F6A41DD5EF1DC9923018BF93D49D9BD6 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:19>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___audioSource;
+		return L_0;
+	}
+}
+// Method Definition Index: 106337
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Start_m1E3681241953E8A85188325E5DB5A46F10AC3CAE (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:31>
+		bool L_0 = __this->___activateAutomatically;
+		V_0 = L_0;
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:33>
+		MusicSource_Init_m6B9E019052E8FAF7877EA7C1E3B112425C25DBC5(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:34>
+		MusicSource_Activate_mBC820060D0790DDAFCB2D799BC2D72EF070430FB(__this, NULL);
+	}
+
+IL_001b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:36>
+		return;
+	}
+}
+// Method Definition Index: 106338
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Init_m6B9E019052E8FAF7877EA7C1E3B112425C25DBC5 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MusicSource_OnVolumeChanged_m88D635F5AC3607AD858AEB59AFE9B740DEE0CB01_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:40>
+		bool L_0 = __this->___isInitialized;
+		V_0 = L_0;
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000d;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:40>
+		goto IL_0079;
+	}
+
+IL_000d:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:41>
+		__this->___isInitialized = (bool)1;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:43>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2;
+		L_2 = Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B(__this, Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var);
+		__this->___audioSource = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioSource), (void*)L_2);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:44>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_3 = __this->___audioSource;
+		NullCheck(L_3);
+		AudioSource_set_loop_m834A590939D8456008C0F897FD80B0ECFFB7FE56(L_3, (bool)1, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:45>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___audioSource;
+		NullCheck(L_4);
+		AudioSource_set_playOnAwake_m7EACC6ECEF12D7BA86A4E5A53603F1C8F9E11949(L_4, (bool)0, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:47>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_5 = __this->___audioSource;
+		NullCheck(L_5);
+		float L_6;
+		L_6 = AudioSource_get_volume_m9CCF33BC636562EA282FDE07463B547D70134EE3(L_5, NULL);
+		__this->___volumeMultiplier = L_6;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:48>
+		__this->___currentRawVolume = (0.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:49>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_7 = __this->___audioSource;
+		NullCheck(L_7);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_7, (0.0f), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:51>
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_8 = (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)il2cpp_codegen_object_new(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		OnVolumeChangedCallback__ctor_mEE04238BB079D851B720A8E13817FDC547BFB2B5(L_8, __this, (intptr_t)((void*)MusicSource_OnVolumeChanged_m88D635F5AC3607AD858AEB59AFE9B740DEE0CB01_RuntimeMethod_var), NULL);
+		AudioController_add_VolumeChanged_m273796D86693FD31271FC8A43DCB3DA7E7866E7B(L_8, NULL);
+	}
+
+IL_0079:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:52>
+		return;
+	}
+}
+// Method Definition Index: 106339
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Unload_m2210F74862551E483AF51F49643E1E0298DC5097 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MusicSource_OnVolumeChanged_m88D635F5AC3607AD858AEB59AFE9B740DEE0CB01_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:56>
+		bool L_0 = __this->___isInitialized;
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:56>
+		goto IL_004c;
+	}
+
+IL_0010:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:58>
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___fadeCoroutine;
+		V_1 = (bool)((!(((RuntimeObject*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)L_2) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_3 = V_1;
+		if (!L_3)
+		{
+			goto IL_0033;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:60>
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4 = __this->___fadeCoroutine;
+		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_4, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:61>
+		__this->___fadeCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___fadeCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
+	}
+
+IL_0033:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:64>
+		OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* L_5 = (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841*)il2cpp_codegen_object_new(OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841_il2cpp_TypeInfo_var);
+		OnVolumeChangedCallback__ctor_mEE04238BB079D851B720A8E13817FDC547BFB2B5(L_5, __this, (intptr_t)((void*)MusicSource_OnVolumeChanged_m88D635F5AC3607AD858AEB59AFE9B740DEE0CB01_RuntimeMethod_var), NULL);
+		AudioController_remove_VolumeChanged_m79B5A3ED5AC295F2DCDBE0DDC6BC1F84828AA01A(L_5, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:65>
+		__this->___isInitialized = (bool)0;
+	}
+
+IL_004c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:66>
+		return;
+	}
+}
+// Method Definition Index: 106340
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_OnDestroy_m947B744CD6C2AF0E658A972151306DF2EE26D53B (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:70>
+		MusicSource_Unload_m2210F74862551E483AF51F49643E1E0298DC5097(__this, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:71>
+		return;
+	}
+}
+// Method Definition Index: 106341
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_SetAsDefault_m1B1A9B383F739334D8D845819544ED4F6873EAF3 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:75>
+		((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___defaultMusicSource = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___defaultMusicSource), (void*)__this);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:76>
+		return;
+	}
+}
+// Method Definition Index: 106342
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Activate_mBC820060D0790DDAFCB2D799BC2D72EF070430FB (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:80>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_0 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, __this, NULL);
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:80>
+		goto IL_0080;
+	}
+
+IL_0012:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:82>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_3 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_4;
+		bool L_5 = V_1;
+		if (!L_5)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:84>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_6 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource;
+		NullCheck(L_6);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_7 = L_6->___audioSource;
+		NullCheck(L_7);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_7, (0.0f), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:85>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_8 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource;
+		NullCheck(L_8);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_9 = L_8->___audioSource;
+		NullCheck(L_9);
+		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_9, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:86>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_10 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource;
+		NullCheck(L_10);
+		L_10->___currentRawVolume = (0.0f);
+	}
+
+IL_0057:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:89>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_11 = __this->___audioSource;
+		NullCheck(L_11);
+		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_11, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:91>
+		MusicSource_Fade_m5EF951C719D34E3F5FF245DF986DD4140C0E83A0(__this, (1.0f), (0.300000012f), (0.0f), (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A*)NULL, NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:93>
+		((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource), (void*)__this);
+	}
+
+IL_0080:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:94>
+		return;
+	}
+}
+// Method Definition Index: 106343
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_SetVolume_m9259D5B665CF56086039616E694C6C8262B3CA95 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, float ___0_volume, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:98>
+		float L_0 = ___0_volume;
+		__this->___currentRawVolume = L_0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:99>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_1 = __this->___audioSource;
+		float L_2 = ___0_volume;
+		float L_3;
+		L_3 = AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551(0, NULL);
+		float L_4 = __this->___volumeMultiplier;
+		NullCheck(L_1);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_1, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_2, L_3)), L_4)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:100>
+		return;
+	}
+}
+// Method Definition Index: 106344
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_Fade_m5EF951C719D34E3F5FF245DF986DD4140C0E83A0 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, float ___0_targetVolume, float ___1_duration, float ___2_delay, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___3_onComplete, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:104>
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->___fadeCoroutine;
+		V_0 = (bool)((!(((RuntimeObject*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:105>
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___fadeCoroutine;
+		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_2, NULL);
+	}
+
+IL_001b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:107>
+		float L_3 = ___0_targetVolume;
+		float L_4 = ___1_duration;
+		float L_5 = ___2_delay;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_6 = ___3_onComplete;
+		RuntimeObject* L_7;
+		L_7 = MusicSource_FadeRoutine_m4373964ED7B8E7F0E381CD97301196E25EC03FD3(__this, L_3, L_4, L_5, L_6, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_8;
+		L_8 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_7, NULL);
+		__this->___fadeCoroutine = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___fadeCoroutine), (void*)L_8);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:108>
+		return;
+	}
+}
+// Method Definition Index: 106345
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MusicSource_FadeRoutine_m4373964ED7B8E7F0E381CD97301196E25EC03FD3 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, float ___0_target, float ___1_duration, float ___2_delay, SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* ___3_onComplete, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* L_0 = (U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A*)il2cpp_codegen_object_new(U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A_il2cpp_TypeInfo_var);
+		U3CFadeRoutineU3Ed__21__ctor_mDF7EFF2310D8ED6A7726A573811C1CBC1BBEE29B(L_0, 0, NULL);
+		U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
+		U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* L_2 = L_1;
+		float L_3 = ___0_target;
+		NullCheck(L_2);
+		L_2->___target = L_3;
+		U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* L_4 = L_2;
+		float L_5 = ___1_duration;
+		NullCheck(L_4);
+		L_4->___duration = L_5;
+		U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* L_6 = L_4;
+		float L_7 = ___2_delay;
+		NullCheck(L_6);
+		L_6->___delay = L_7;
+		U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* L_8 = L_6;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_9 = ___3_onComplete;
+		NullCheck(L_8);
+		L_8->___onComplete = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&L_8->___onComplete), (void*)L_9);
+		return L_8;
+	}
+}
+// Method Definition Index: 106346
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_OnVolumeChanged_m88D635F5AC3607AD858AEB59AFE9B740DEE0CB01 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:135>
+		int32_t L_0 = ___0_audioType;
+		V_0 = (bool)((!(((uint32_t)L_0) <= ((uint32_t)0)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:135>
+		goto IL_0026;
+	}
+
+IL_000b:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:137>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2 = __this->___audioSource;
+		float L_3 = __this->___currentRawVolume;
+		float L_4 = ___1_volume;
+		float L_5 = __this->___volumeMultiplier;
+		NullCheck(L_2);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_2, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_3, L_4)), L_5)), NULL);
+	}
+
+IL_0026:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:138>
+		return;
+	}
+}
+// Method Definition Index: 106347
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MusicSource_IsActive_mFC934B79BE5123694F5B207E18825791F5A31561 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:142>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_0 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, __this, NULL);
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:143>
+		bool L_2 = V_0;
+		return L_2;
+	}
+}
+// Method Definition Index: 106348
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource_ActivateDefault_m222F9E1FC050C2C77221DEA7B563E80E93A972EC (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:147>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_0 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___activeMusicSource;
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_1 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___defaultMusicSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, L_1, NULL);
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:147>
+		goto IL_0030;
+	}
+
+IL_0016:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:149>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_4 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___defaultMusicSource;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_5;
+		L_5 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		V_1 = L_5;
+		bool L_6 = V_1;
+		if (!L_6)
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:150>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_7 = ((MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_StaticFields*)il2cpp_codegen_static_fields_for(MusicSource_t901B96561102D7ECF64A870A33679B7336070B60_il2cpp_TypeInfo_var))->___defaultMusicSource;
+		NullCheck(L_7);
+		MusicSource_Activate_mBC820060D0790DDAFCB2D799BC2D72EF070430FB(L_7, NULL);
+	}
+
+IL_0030:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:151>
+		return;
+	}
+}
+// Method Definition Index: 106349
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MusicSource__ctor_mA7DA36552145A62B4E84642176F2C0D24884D111 (MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:16>
+		__this->___activateAutomatically = (bool)0;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:22>
+		__this->___currentRawVolume = (0.0f);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:25>
+		__this->___volumeMultiplier = (1.0f);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 106350
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeRoutineU3Ed__21__ctor_mDF7EFF2310D8ED6A7726A573811C1CBC1BBEE29B (U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___0_U3CU3E1__state;
+		__this->___U3CU3E1__state = L_0;
+		return;
+	}
+}
+// Method Definition Index: 106351
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeRoutineU3Ed__21_System_IDisposable_Dispose_m24E6603122AFA3B5544A32B02A9A1EFFF113A170 (U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// Method Definition Index: 106352
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFadeRoutineU3Ed__21_MoveNext_mED98F1AE7543D27A38C76EB6DBA49E20837295A9 (U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	bool V_1 = false;
+	bool V_2 = false;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* G_B15_0 = NULL;
+	SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* G_B14_0 = NULL;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		switch (L_1)
+		{
+			case 0:
+			{
+				goto IL_001b;
+			}
+			case 1:
+			{
+				goto IL_001d;
+			}
+			case 2:
+			{
+				goto IL_001f;
+			}
+		}
+	}
+	{
+		goto IL_0024;
+	}
+
+IL_001b:
+	{
+		goto IL_0026;
+	}
+
+IL_001d:
+	{
+		goto IL_0059;
+	}
+
+IL_001f:
+	{
+		goto IL_0101;
+	}
+
+IL_0024:
+	{
+		return (bool)0;
+	}
+
+IL_0026:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:112>
+		float L_2 = __this->___delay;
+		V_1 = (bool)((((float)L_2) > ((float)(0.0f)))? 1 : 0);
+		bool L_3 = V_1;
+		if (!L_3)
+		{
+			goto IL_0060;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:113>
+		float L_4 = __this->___delay;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_5 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_5, L_4, NULL);
+		__this->___U3CU3E2__current = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_5);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_0059:
+	{
+		__this->___U3CU3E1__state = (-1);
+	}
+
+IL_0060:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:115>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_6 = __this->___U3CU3E4__this;
+		NullCheck(L_6);
+		float L_7 = L_6->___currentRawVolume;
+		__this->___U3CstartU3E5__1 = L_7;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:116>
+		__this->___U3CelapsedU3E5__2 = (0.0f);
+		goto IL_0109;
+	}
+
+IL_0081:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:120>
+		float L_8 = __this->___U3CelapsedU3E5__2;
+		float L_9;
+		L_9 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		__this->___U3CelapsedU3E5__2 = ((float)il2cpp_codegen_add(L_8, L_9));
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:121>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_10 = __this->___U3CU3E4__this;
+		float L_11 = __this->___U3CstartU3E5__1;
+		float L_12 = __this->___target;
+		float L_13 = __this->___U3CelapsedU3E5__2;
+		float L_14 = __this->___duration;
+		float L_15;
+		L_15 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_13/L_14)), NULL);
+		float L_16;
+		L_16 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_11, L_12, L_15, NULL);
+		NullCheck(L_10);
+		L_10->___currentRawVolume = L_16;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:122>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_17 = __this->___U3CU3E4__this;
+		NullCheck(L_17);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_18 = L_17->___audioSource;
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_19 = __this->___U3CU3E4__this;
+		NullCheck(L_19);
+		float L_20 = L_19->___currentRawVolume;
+		float L_21;
+		L_21 = AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551(0, NULL);
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_22 = __this->___U3CU3E4__this;
+		NullCheck(L_22);
+		float L_23 = L_22->___volumeMultiplier;
+		NullCheck(L_18);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_18, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_20, L_21)), L_23)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:123>
+		__this->___U3CU3E2__current = NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
+		__this->___U3CU3E1__state = 2;
+		return (bool)1;
+	}
+
+IL_0101:
+	{
+		__this->___U3CU3E1__state = (-1);
+	}
+
+IL_0109:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:118>
+		float L_24 = __this->___U3CelapsedU3E5__2;
+		float L_25 = __this->___duration;
+		V_2 = (bool)((((float)L_24) < ((float)L_25))? 1 : 0);
+		bool L_26 = V_2;
+		if (L_26)
+		{
+			goto IL_0081;
+		}
+	}
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:126>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_27 = __this->___U3CU3E4__this;
+		float L_28 = __this->___target;
+		NullCheck(L_27);
+		L_27->___currentRawVolume = L_28;
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:127>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_29 = __this->___U3CU3E4__this;
+		NullCheck(L_29);
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_30 = L_29->___audioSource;
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_31 = __this->___U3CU3E4__this;
+		NullCheck(L_31);
+		float L_32 = L_31->___currentRawVolume;
+		float L_33;
+		L_33 = AudioController_GetVolume_m976775FE92ABF931B3C3D2C29CD2E45832017551(0, NULL);
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_34 = __this->___U3CU3E4__this;
+		NullCheck(L_34);
+		float L_35 = L_34->___volumeMultiplier;
+		NullCheck(L_30);
+		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_30, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_32, L_33)), L_35)), NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:129>
+		MusicSource_t901B96561102D7ECF64A870A33679B7336070B60* L_36 = __this->___U3CU3E4__this;
+		NullCheck(L_36);
+		L_36->___fadeCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_36->___fadeCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:130>
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_37 = __this->___onComplete;
+		SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* L_38 = L_37;
+		if (L_38)
+		{
+			G_B15_0 = L_38;
+			goto IL_0176;
+		}
+		G_B14_0 = L_38;
+	}
+	{
+		goto IL_017c;
+	}
+
+IL_0176:
+	{
+		NullCheck(G_B15_0);
+		SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline(G_B15_0, NULL);
+	}
+
+IL_017c:
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/MusicSource.cs:131>
+		return (bool)0;
+	}
+}
+// Method Definition Index: 106353
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeRoutineU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m83FB64A292656FC37767B9E83FD081E1274533BD (U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+// Method Definition Index: 106354
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFadeRoutineU3Ed__21_System_Collections_IEnumerator_Reset_m5A4E817EF32E4C9526863C8910920661729085EC (U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFadeRoutineU3Ed__21_System_Collections_IEnumerator_Reset_m5A4E817EF32E4C9526863C8910920661729085EC_RuntimeMethod_var)));
+	}
+}
+// Method Definition Index: 106355
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFadeRoutineU3Ed__21_System_Collections_IEnumerator_get_Current_mCE85E303529CD07788FA98FA9A81570186B7935D (U3CFadeRoutineU3Ed__21_t740A68226AF37212174A39D4AE891120B432D93A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+// Method Definition Index: 106252
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AudioCallback_Invoke_m64ED9786B91A837AC004D76A6C119BEFD8B02850_inline (AudioCallback_tF359B2BCD9283CC4834A05347495BFEEABD9A2FD* __this, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 62457
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_StaticFields*)il2cpp_codegen_static_fields_for(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))->___zeroVector;
+		return L_0;
+	}
+}
+// Method Definition Index: 62496
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = ((Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_StaticFields*)il2cpp_codegen_static_fields_for(Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var))->___identityQuaternion;
+		return L_0;
+	}
+}
+// Method Definition Index: 106329
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* AudioSourceCase_get_AudioSource_mF6CF1F36ABB31AC71988526333DB91AF6DAFC453_inline (AudioSourceCase_t06F2FFF53AE0BB46A2E7C4A31E7ED35CA117EBF8* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioSourceCase.cs:8>
+		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___audioSource;
+		return L_0;
+	}
+}
+// Method Definition Index: 106303
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void OnVolumeChangedCallback_Invoke_m5EB35E0001C01ECF8888E5182ED2FA02C3CD7D1C_inline (OnVolumeChangedCallback_t8C2AD44AD4D4A4335A57545D455284F1C4F54841* __this, int32_t ___0_audioType, float ___1_volume, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, float, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_audioType, ___1_volume, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 106324
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* AudioRegistryEntry_get_Clip_m66CDC074EB6A9C609E0E5CAA5DFF13A27247D06D_inline (AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:75>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___clip;
+		return L_0;
+	}
+}
+// Method Definition Index: 106322
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AudioRegistryEntry_get_ClipName_mC0B4EEFB09F0AD64D99A5EBCE36F032DEDE1F2CD_inline (AudioRegistryEntry_t6628825326B862FF1FC9254D8B7D79EAF22F8C1D* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:/Users/serhiibabchuk/Documents/StaryUpGameDev/GitHub/Survival-Island/Assets/Project Files/Modules/Audio/Scripts/Runtime/AudioRegistry.cs:73>
+		String_t* L_0 = __this->___clipName;
+		return L_0;
+	}
+}
+// Method Definition Index: 62558
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	float V_1 = 0.0f;
+	bool V_2 = false;
+	{
+		float L_0 = ___0_value;
+		V_0 = (bool)((((float)L_0) < ((float)(0.0f)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		V_1 = (0.0f);
+		goto IL_002d;
+	}
+
+IL_0015:
+	{
+		float L_2 = ___0_value;
+		V_2 = (bool)((((float)L_2) > ((float)(1.0f)))? 1 : 0);
+		bool L_3 = V_2;
+		if (!L_3)
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		V_1 = (1.0f);
+		goto IL_002d;
+	}
+
+IL_0029:
+	{
+		float L_4 = ___0_value;
+		V_1 = L_4;
+		goto IL_002d;
+	}
+
+IL_002d:
+	{
+		float L_5 = V_1;
+		return L_5;
+	}
+}
+// Method Definition Index: 62559
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	{
+		float L_0 = ___0_a;
+		float L_1 = ___1_b;
+		float L_2 = ___0_a;
+		float L_3 = ___2_t;
+		float L_4;
+		L_4 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_3, NULL);
+		V_0 = ((float)il2cpp_codegen_add(L_0, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_1, L_2)), L_4))));
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		float L_5 = V_0;
+		return L_5;
+	}
+}
+// Method Definition Index: 100195
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SimpleCallback_Invoke_mE8EB4A0730D92C118CF13A297B683176223DB520_inline (SimpleCallback_t329692DD4E1B78E26C713384A1480BC0200DBE8A* __this, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
+}
+// Method Definition Index: 11591
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
+{
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
+	int32_t V_1 = 0;
+	{
+		int32_t L_0 = __this->____version;
+		__this->____version = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = __this->____items;
+		V_0 = L_1;
+		int32_t L_2 = __this->____size;
+		V_1 = L_2;
+		int32_t L_3 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = V_0;
+		NullCheck(L_4);
+		if ((!(((uint32_t)L_3) < ((uint32_t)((int32_t)(((RuntimeArray*)L_4)->max_length))))))
+		{
+			goto IL_0034;
+		}
+	}
+	{
+		int32_t L_5 = V_1;
+		__this->____size = ((int32_t)il2cpp_codegen_add(L_5, 1));
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = V_0;
+		int32_t L_7 = V_1;
+		RuntimeObject* L_8 = ___0_item;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(L_7), (RuntimeObject*)L_8);
+		return;
+	}
+
+IL_0034:
+	{
+		RuntimeObject* L_9 = ___0_item;
+		List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4(__this, L_9, il2cpp_rgctx_method(method->klass->rgctx_data, 14));
+		return;
+	}
+}
+// Method Definition Index: 11642
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->____current;
+		return L_0;
+	}
+}
