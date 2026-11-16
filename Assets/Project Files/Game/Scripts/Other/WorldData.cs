@@ -22,6 +22,10 @@ namespace Watermelon
         [SerializeField] bool unlockedByDefault;
         public bool UnlockedByDefault => unlockedByDefault;
 
+        [Tooltip("The player can't sail away from this island: the travel pop-up shows \"To be continued\" instead of destinations.")]
+        [SerializeField] bool departureLocked;
+        public bool DepartureLocked => departureLocked;
+
         private WorldUnlockSave unlockSave;
 
         public bool IsUnlocked => unlockedByDefault || (unlockSave != null && unlockSave.IsUnlocked);

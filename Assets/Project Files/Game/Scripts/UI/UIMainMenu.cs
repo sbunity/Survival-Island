@@ -19,7 +19,10 @@ namespace Watermelon
         [SerializeField] Button newGameCancelButton;
 
         private const string CutsceneWatchedKey = "IntroComicCutsceneWatched";
-        
+
+        // Temporarily disabled: Play and New Game go straight to the Game scene. Set to true to bring the intro comic back.
+        private static readonly bool IntroCutsceneEnabled = false;
+
         public override void Init()
         {
             SafeAreaAdapter.RegisterRectTransform(safeAreaRectTransform);
@@ -64,7 +67,7 @@ namespace Watermelon
 
             Overlay.Show(0.3f, () =>
             {
-                if(PlayerPrefs.GetInt(CutsceneWatchedKey, 0) == 0)
+                if(IntroCutsceneEnabled && PlayerPrefs.GetInt(CutsceneWatchedKey, 0) == 0)
                 {
                     SceneManager.LoadScene("IntroComic");
                 }
@@ -103,8 +106,7 @@ namespace Watermelon
                 PlayerPrefs.SetInt(CutsceneWatchedKey, 0);
                 PlayerPrefs.Save();
                 
-                SceneManager.LoadScene("IntroComic");
-                //SceneManager.LoadScene("Game");
+                SceneManager.LoadScene(IntroCutsceneEnabled ? "IntroComic" : "Game");
 
                 Overlay.Hide(0.3f, null);
             });

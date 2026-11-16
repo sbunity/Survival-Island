@@ -24,6 +24,8 @@ namespace Watermelon
         public static WorldData CurrentWorld { get; private set; }
         public static WorldBehavior WorldBehavior { get; private set; }
 
+        public static bool IsDepartureLocked => CurrentWorld != null && CurrentWorld.DepartureLocked;
+
         public static event SimpleCallback OnWorldLoaded;
         public static event WorldDataCallback OnWorldUnlocked;
 

@@ -16,6 +16,8 @@ namespace Watermelon
         [Space]
         [SerializeField] GameObject destinationButtonPrefab;
         [SerializeField] RectTransform destinationsContainer;
+        [Tooltip("Shown instead of the destinations when the current world has its departure locked.")]
+        [SerializeField] GameObject toBeContinuedObject;
 
         [Space]
         [SerializeField] Button exitButton;
@@ -48,7 +50,13 @@ namespace Watermelon
         {
             this.callback = callback;
 
-            SpawnDestinationButtons();
+            var isDepartureLocked = WorldController.IsDepartureLocked;
+
+            destinationsContainer.gameObject.SetActive(!isDepartureLocked);
+            toBeContinuedObject.SetActive(isDepartureLocked);
+
+            if (!isDepartureLocked)
+                SpawnDestinationButtons();
 
             panelObject.SetActive(true);
             fadeAnimation.Show();

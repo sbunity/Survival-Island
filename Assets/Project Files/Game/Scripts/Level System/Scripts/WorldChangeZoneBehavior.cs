@@ -24,7 +24,7 @@ namespace Watermelon
         {
             if (other.CompareTag(PhysicsHelper.TAG_PLAYER))
             {
-                if (!WorldController.HasTravelDestinations())
+                if (!WorldController.IsDepartureLocked && !WorldController.HasTravelDestinations())
                     return;
 
                 var gameUI = UIController.GetPage<UIGame>();
