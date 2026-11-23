@@ -117472,7 +117472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2419208618518662, guid: e232b4a6ff5c799408c364e6bb464e71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.09
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2419208618518662, guid: e232b4a6ff5c799408c364e6bb464e71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -142382,8 +142382,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 1820117116}
     - {fileID: 18863360}
+    - {fileID: 1820117116}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
