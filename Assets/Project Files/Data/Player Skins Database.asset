@@ -19,7 +19,7 @@ MonoBehaviour:
       type: 3}
   - id: 290f3b81-10cd-4681-9d75-a93871a9bc58
     previewSprite: {fileID: 21300000, guid: 2f30ccdca731a02478d68d066dadb409, type: 3}
-    prefab: {fileID: 2528254130589353162, guid: 98a52491937ea2846b341690cc9d8fce,
+    prefab: {fileID: 3631507181350634327, guid: 2d18ce16d972bb34ca49fac78716e804,
       type: 3}
   templatePrefab: {fileID: 2125939529248842785, guid: 7d4cd56625169ff4ea81b0965201a461,
     type: 3}
