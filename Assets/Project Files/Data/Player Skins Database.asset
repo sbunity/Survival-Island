@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skins:
   - id: 38ef8571-0e7d-4926-88db-fcb5a8892adb
-    previewSprite: {fileID: 21300000, guid: 92f8a779a7c786a4f87ed8e1b36a66b3, type: 3}
+    previewSprite: {fileID: 21300000, guid: 634461dcb4a482a448c25a8f615bf486, type: 3}
     prefab: {fileID: 1222269731363957643, guid: d2bdd3c401635c043ba123b99f710d08,
       type: 3}
   - id: 290f3b81-10cd-4681-9d75-a93871a9bc58

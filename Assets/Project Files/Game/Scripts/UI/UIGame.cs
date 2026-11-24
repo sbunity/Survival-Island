@@ -35,6 +35,7 @@ namespace Watermelon
         [Space]
         [SerializeField] Button upgradesButton;
         [SerializeField] Button iapStoreButton;
+        [SerializeField] Button skinsButton;
         [SerializeField] Button pauseButton;
         [SerializeField] TutorialCanvasController tutorialCanvasController;
 
@@ -67,6 +68,7 @@ namespace Watermelon
             inventoryButton.onClick.AddListener(OnInventoryButtonClicked);
             upgradesButton.onClick.AddListener(OnUpgradesButonClicked);
             iapStoreButton.onClick.AddListener(OnIAPStoreButtonClicked);
+            skinsButton.onClick.AddListener(OnSkinsButtonClicked);
             pauseButton.onClick.AddListener(OnPauseButtonClicked);
 
             currenciesUIController.Init(CurrencyController.Currencies);
@@ -259,6 +261,17 @@ namespace Watermelon
             AudioController.PlaySound(AudioController.GetClip("button_sound"));
 
             UIStore.OpenAsOverlay();
+        }
+
+        private void OnSkinsButtonClicked()
+        {
+#if MODULE_HAPTIC
+            Haptic.Play(Haptic.HAPTIC_LIGHT);
+#endif
+
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
+
+            UIController.ShowPage<UIPlayerSkins>();
         }
 
         private void OnPauseButtonClicked()

@@ -290,9 +290,13 @@ namespace Watermelon
 
         private void OnSkinSelected(ISkinData skinData)
         {
-            PlayerSkinData playerSkinData = (PlayerSkinData)skinData;
+            if (skinData is not PlayerSkinData playerSkinData)
+                return;
 
             playerGraphicsHolder.SetGraphics(playerSkinData.Prefab);
+            IsPlayerOnWater(waterDetector.IsOnWater);
+            OnSwimmingMultiplierChanged(waterDetector.SubmersionMultiplier);
+            OnHungerChanged();
         }
         #endregion
 
@@ -1156,6 +1160,7 @@ namespace Watermelon
         public void Unload()
         {
             CombatTargetRegistry.Unregister(this);
+            SkinController.SkinSelected -= OnSkinSelected;
 
             AudioController.ResetAudioListenerParent();
 
@@ -1195,6 +1200,7 @@ namespace Watermelon
             inventory.CapacityChanged -= OnInventoryCapacityChanged;
             EnergyController.OnEnergyChanged -= OnHungerChanged;
             GlobalUpgradesEventsHandler.OnUpgraded -= OnUpgraded;
+            SkinController.SkinSelected -= OnSkinSelected;
         }
 
         #endregion

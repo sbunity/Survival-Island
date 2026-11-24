@@ -168,6 +168,9 @@ namespace Watermelon
 
         public void SelectSkin(ISkinData data)
         {
+            if (!data.IsUnlocked)
+                return;
+
             AbstractSkinDatabase provider = data.SkinsProvider;
 
             if (selectedSkins.ContainsKey(provider))
@@ -181,6 +184,7 @@ namespace Watermelon
 
             UpdateSave();
 
+            SaveController.MarkAsSaveIsRequired();
             SkinSelected?.Invoke(data);
         }
 
@@ -202,6 +206,10 @@ namespace Watermelon
             if (select)
             {
                 SelectSkin(skinData);
+            }
+            else
+            {
+                SaveController.MarkAsSaveIsRequired();
             }
         }
 
