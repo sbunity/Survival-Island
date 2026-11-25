@@ -1,79 +1,70 @@
-using System;
-using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class TypewriterText : MonoBehaviour
+namespace Watermelon
 {
-    [SerializeField] private TextMeshProUGUI textComponent;
-    [SerializeField] private float charsPerSecond = 30f;
-
-    private Coroutine typingCoroutine;
-    private string fullText;
-    private Action onComplete;
-
-    private void Awake()
+    [RequireComponent(typeof(TMP_Text))]
+    public class TypewriterText : MonoBehaviour
     {
-        if (textComponent == null)
-            textComponent = GetComponent<TextMeshProUGUI>();
-    }
+        [SerializeField] float charactersPerSecond = 40f;
 
-    public void Play(string text, Action onComplete = null)
-    {
-        this.fullText = text;
-        this.onComplete = onComplete;
+        private TMP_Text textComponent;
+        private TMP_Text Text => textComponent != null ? textComponent : textComponent = GetComponent<TMP_Text>();
 
-        if (typingCoroutine != null)
-            StopCoroutine(typingCoroutine);
+        private TweenCase typingTweenCase;
+        private SimpleCallback completedCallback;
 
-        textComponent.text = string.Empty;
-        gameObject.SetActive(true);
-        typingCoroutine = StartCoroutine(TypeRoutine());
-    }
-
-    public void Skip()
-    {
-        if (typingCoroutine != null)
+        public int CharacterCount
         {
-            StopCoroutine(typingCoroutine);
-            typingCoroutine = null;
+            get
+            {
+                Text.ForceMeshUpdate();
+
+                return Text.textInfo.characterCount;
+            }
         }
 
-        if (textComponent != null)
-            textComponent.text = fullText;
-
-        onComplete?.Invoke();
-        onComplete = null;
-    }
-
-    public void Clear()
-    {
-        if (typingCoroutine != null)
+        public void Clear()
         {
-            StopCoroutine(typingCoroutine);
-            typingCoroutine = null;
+            typingTweenCase.KillActive();
+            completedCallback = null;
+
+            Text.maxVisibleCharacters = 0;
         }
 
-        if (textComponent != null)
-            textComponent.text = string.Empty;
-
-        gameObject.SetActive(false);
-    }
-
-    public bool IsTyping => typingCoroutine != null;
-
-    private IEnumerator TypeRoutine()
-    {
-        float delay = charsPerSecond > 0 ? 1f / charsPerSecond : 0f;
-
-        for (int i = 0; i <= fullText.Length; i++)
+        public void Play(SimpleCallback onCompleted)
         {
-            textComponent.text = fullText.Substring(0, i);
-            yield return new WaitForSeconds(delay);
+            typingTweenCase.KillActive();
+            completedCallback = onCompleted;
+
+            int characterCount = CharacterCount;
+            if (characterCount == 0 || charactersPerSecond <= 0f)
+            {
+                Complete();
+
+                return;
+            }
+
+            Text.maxVisibleCharacters = 0;
+            typingTweenCase = Tween.DoFloat(0f, characterCount, characterCount / charactersPerSecond, value =>
+            {
+                Text.maxVisibleCharacters = Mathf.CeilToInt(value);
+            }).OnComplete(Complete);
         }
 
-        typingCoroutine = null;
-        onComplete?.Invoke();
-        onComplete = null;
+        public void Complete()
+        {
+            typingTweenCase.KillActive();
+            Text.maxVisibleCharacters = int.MaxValue;
+
+            SimpleCallback callback = completedCallback;
+            completedCallback = null;
+            callback?.Invoke();
+        }
+
+        private void OnDestroy()
+        {
+            typingTweenCase.KillActive();
+        }
     }
 }

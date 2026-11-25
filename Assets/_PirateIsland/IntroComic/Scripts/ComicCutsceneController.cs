@@ -1,233 +1,228 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Watermelon;
+using UnityEngine.UI;
 
-public class ComicCutsceneController : MonoBehaviour
+namespace Watermelon
 {
-    [Serializable]
-    public enum ComicTextType { Sound, Dialogue, Narration }
-
-    [Serializable]
-    public class ComicTextEntry
+    public class ComicCutsceneController : MonoBehaviour
     {
-        public TypewriterText target;
-        public ComicTextType type;
-        [TextArea(1, 3)] public string text;
-        public float delayBefore;
-        public bool showInstantly;
-    }
+        [SerializeField] RectTransform safeAreaRectTransform;
+        [SerializeField] List<ComicPage> pages = new List<ComicPage>();
 
-    [Serializable]
-    public class ComicPanelData
-    {
-        public CanvasGroup panel;
-        public List<ComicTextEntry> texts = new List<ComicTextEntry>();
-    }
+        [Header("Controls")]
+        [SerializeField] Button nextButton;
+        [SerializeField] Button skipButton;
+        [SerializeField] Button tapAreaButton;
 
-    [Header("Comic panels in display order")]
-    [SerializeField] private List<ComicPanelData> panels = new List<ComicPanelData>();
+        [Header("Pacing")]
+        [SerializeField] float holdAfterTextBase = 0.8f;
+        [SerializeField] float holdAfterTextPerCharacter = 0.045f;
+        [SerializeField] float holdAfterSilentPanel = 1.2f;
+        [SerializeField] float holdAfterPage = 0.8f;
 
-    [Header("Controls")]
-    [SerializeField] private Button skipButton;
-    [SerializeField] private Button continueButton;
+        [Header("Page Transition")]
+        [SerializeField] float pageTransitionDuration = 0.45f;
+        [SerializeField] float pageTransitionOffset = 400f;
 
-    [Header("Animation")]
-    [SerializeField] private float delayBetweenPanels = 0.25f;
-    [SerializeField] private float fadeDuration = 0.25f;
-    [SerializeField] private Vector3 hiddenScale = new Vector3(0.96f, 0.96f, 1f);
-    [SerializeField] private Vector3 visibleScale = Vector3.one;
+        [Header("After Cutscene")]
+        [SerializeField] string nextSceneName = "Game";
 
-    [Header("After cutscene")]
-    [SerializeField] private string gameplaySceneName = "Init";
-    [SerializeField] private float continueDelay = 1f;
-    [SerializeField] private bool rememberWatchedCutscene = true;
+        private enum Step { None, PageTransition, PanelReveal, Bubble, Hold }
 
-    private Coroutine playRoutine;
-    private bool isFinishing;
-    private bool advancePanel;
-    private TypewriterText activeTypewriter;
-    private const string CutsceneWatchedKey = "IntroComicCutsceneWatched";
+        private Step step = Step.None;
+        private int pageIndex = -1;
+        private int panelIndex = -1;
+        private int bubbleIndex = -1;
 
-    private void Awake()
-    {
-#if UNITY_EDITOR
-        PlayerPrefs.DeleteKey(CutsceneWatchedKey);
-#endif
-        HideAllElements();
+        private TweenCase holdTweenCase;
+        private SimpleCallback holdCallback;
 
-        if (skipButton != null)
-            skipButton.onClick.AddListener(SkipCurrentPanel);
+        private bool isFinishing;
 
-        if (continueButton != null)
-            continueButton.onClick.AddListener(ShowAllAndFinish);
-    }
+        private ComicPage CurrentPage => pages[pageIndex];
+        private ComicPanel CurrentPanel => CurrentPage.Panels[panelIndex];
+        private ComicBubble CurrentBubble => CurrentPanel.Bubbles[bubbleIndex];
 
-    private void Start()
-    {
-        Overlay.Hide(0.3f);
-
-        if (rememberWatchedCutscene && PlayerPrefs.GetInt(CutsceneWatchedKey, 0) == 1)
+        private void Awake()
         {
-            ShowAllAndFinish();
-            return;
+            nextButton.onClick.AddListener(OnNextButtonClicked);
+            skipButton.onClick.AddListener(OnSkipButtonClicked);
+
+            if (tapAreaButton != null)
+                tapAreaButton.onClick.AddListener(Advance);
+
+            foreach (ComicPage page in pages)
+                page.Prepare();
         }
 
-        playRoutine = StartCoroutine(PlayCutscene());
-    }
-
-    private void HideAllElements()
-    {
-        foreach (var panelData in panels)
+        private void Start()
         {
-            if (panelData.panel == null) continue;
+            if (safeAreaRectTransform != null)
+                SafeAreaAdapter.RegisterRectTransform(safeAreaRectTransform);
 
-            panelData.panel.alpha = 0f;
-            panelData.panel.transform.localScale = hiddenScale;
-            panelData.panel.interactable = false;
-            panelData.panel.blocksRaycasts = false;
+            Overlay.Hide(0.3f);
 
-            foreach (var entry in panelData.texts)
-                entry.target?.Clear();
+            ShowNextPage();
         }
-    }
 
-    private IEnumerator PlayCutscene()
-    {
-        foreach (var panelData in panels)
+        #region Sequence
+
+        private void ShowNextPage()
         {
-            if (panelData.panel == null) continue;
-            advancePanel = false;
+            ComicPage previousPage = pageIndex >= 0 ? CurrentPage : null;
 
-            yield return ShowElement(panelData.panel);
-
-            foreach (var entry in panelData.texts)
+            pageIndex++;
+            if (pageIndex >= pages.Count)
             {
-                if (entry.target == null || string.IsNullOrEmpty(entry.text))
-                {
-#if UNITY_EDITOR
-                    if (entry.target == null)
-                        Debug.LogWarning($"[ComicCutscene] Panel '{panelData.panel.name}' has a text entry ({entry.type}) with no TypewriterText assigned.");
-#endif
-                    continue;
-                }
+                Finish();
 
-                if (!advancePanel && entry.delayBefore > 0f)
-                    yield return WaitOrAdvance(entry.delayBefore);
-
-                if (advancePanel || entry.showInstantly)
-                {
-                    entry.target.Play(entry.text);
-                    entry.target.Skip();
-                    continue;
-                }
-
-                activeTypewriter = entry.target;
-                bool done = false;
-                entry.target.Play(entry.text, () => done = true);
-                yield return new WaitUntil(() => done || advancePanel);
-
-                if (advancePanel && activeTypewriter != null)
-                    activeTypewriter.Skip();
-
-                activeTypewriter = null;
+                return;
             }
 
-            if (!advancePanel)
-                yield return new WaitForSeconds(delayBetweenPanels);
+            panelIndex = -1;
+            step = Step.PageTransition;
+
+            if (previousPage != null)
+                previousPage.Hide(pageTransitionDuration, pageTransitionOffset);
+
+            CurrentPage.Show(pageTransitionDuration, pageTransitionOffset, ShowNextPanel);
         }
 
-        yield return new WaitForSeconds(continueDelay);
-        FinishCutscene();
-    }
-
-    private IEnumerator ShowElement(CanvasGroup element)
-    {
-        float timer = 0f;
-        element.alpha = 0f;
-        element.transform.localScale = hiddenScale;
-
-        while (timer < fadeDuration && !advancePanel)
+        private void ShowNextPanel()
         {
-            timer += Time.deltaTime;
-            float t = Mathf.Clamp01(timer / fadeDuration);
-            float smooth = Mathf.SmoothStep(0f, 1f, t);
-            element.alpha = smooth;
-            element.transform.localScale = Vector3.Lerp(hiddenScale, visibleScale, smooth);
-            yield return null;
-        }
-
-        element.alpha = 1f;
-        element.transform.localScale = visibleScale;
-    }
-
-    private IEnumerator WaitOrAdvance(float duration)
-    {
-        float elapsed = 0f;
-        while (elapsed < duration && !advancePanel)
-        {
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
-    }
-
-    // Skip — completes current panel instantly and moves to the next one
-    private void SkipCurrentPanel()
-    {
-        if (isFinishing) return;
-        advancePanel = true;
-
-        if (activeTypewriter != null && activeTypewriter.IsTyping)
-            activeTypewriter.Skip();
-    }
-
-    // Continue — shows all panels and texts instantly, then transitions after continueDelay
-    private void ShowAllAndFinish()
-    {
-        if (isFinishing) return;
-
-        if (playRoutine != null)
-            StopCoroutine(playRoutine);
-
-        foreach (var panelData in panels)
-        {
-            if (panelData.panel == null) continue;
-
-            panelData.panel.alpha = 1f;
-            panelData.panel.transform.localScale = visibleScale;
-
-            foreach (var entry in panelData.texts)
+            panelIndex++;
+            if (panelIndex >= CurrentPage.Panels.Count)
             {
-                if (entry.target == null || string.IsNullOrEmpty(entry.text)) continue;
-                entry.target.Play(entry.text);
-                entry.target.Skip();
+                Hold(holdAfterPage, ShowNextPage);
+
+                return;
+            }
+
+            bubbleIndex = -1;
+            step = Step.PanelReveal;
+
+            CurrentPanel.Reveal(ShowNextBubble);
+        }
+
+        private void ShowNextBubble()
+        {
+            bubbleIndex++;
+            if (bubbleIndex >= CurrentPanel.Bubbles.Count)
+            {
+                if (CurrentPanel.Bubbles.Count == 0)
+                {
+                    Hold(holdAfterSilentPanel, ShowNextPanel);
+                }
+                else
+                {
+                    ShowNextPanel();
+                }
+
+                return;
+            }
+
+            step = Step.Bubble;
+
+            ComicBubble bubble = CurrentBubble;
+            bubble.Play(() =>
+            {
+                Hold(holdAfterTextBase + bubble.CharacterCount * holdAfterTextPerCharacter, ShowNextBubble);
+            });
+        }
+
+        private void Hold(float duration, SimpleCallback onCompleted)
+        {
+            step = Step.Hold;
+            holdCallback = onCompleted;
+            holdTweenCase = Tween.DelayedCall(duration, EndHold);
+        }
+
+        private void EndHold()
+        {
+            holdTweenCase.KillActive();
+
+            SimpleCallback callback = holdCallback;
+            holdCallback = null;
+            callback?.Invoke();
+        }
+
+        private void Advance()
+        {
+            if (isFinishing) return;
+
+            switch (step)
+            {
+                case Step.PanelReveal:
+                    CurrentPanel.Complete();
+                    break;
+
+                case Step.Bubble:
+                    CurrentBubble.Complete();
+                    break;
+
+                case Step.Hold:
+                    EndHold();
+                    break;
             }
         }
 
-        StartCoroutine(DelayedFinish());
-    }
-
-    private IEnumerator DelayedFinish()
-    {
-        yield return new WaitForSeconds(continueDelay);
-        FinishCutscene();
-    }
-
-    private void FinishCutscene()
-    {
-        if (isFinishing) return;
-        isFinishing = true;
-
-        if (rememberWatchedCutscene)
+        private void Finish()
         {
-            PlayerPrefs.SetInt(CutsceneWatchedKey, 1);
-            PlayerPrefs.Save();
+            if (isFinishing) return;
+
+            isFinishing = true;
+            step = Step.None;
+
+            holdTweenCase.KillActive();
+            holdCallback = null;
+
+            nextButton.interactable = false;
+            skipButton.interactable = false;
+
+            IntroComicSave.MarkWatched();
+
+            Overlay.Show(0.3f, () =>
+            {
+                SceneManager.LoadScene(nextSceneName);
+            });
         }
 
-        if (!string.IsNullOrEmpty(gameplaySceneName))
-            SceneManager.LoadScene(gameplaySceneName);
+        #endregion
+
+        #region Buttons
+
+        private void OnNextButtonClicked()
+        {
+            PlayButtonFeedback();
+
+            Advance();
+        }
+
+        private void OnSkipButtonClicked()
+        {
+            PlayButtonFeedback();
+
+            Finish();
+        }
+
+        private void PlayButtonFeedback()
+        {
+#if MODULE_HAPTIC
+            Haptic.Play(Haptic.HAPTIC_LIGHT);
+#endif
+
+            AudioController.PlaySound(AudioController.GetClip("button_sound"));
+        }
+
+        #endregion
+
+        private void OnDestroy()
+        {
+            holdTweenCase.KillActive();
+
+            if (safeAreaRectTransform != null)
+                SafeAreaAdapter.UnregisterRectTransform(safeAreaRectTransform);
+        }
     }
 }
