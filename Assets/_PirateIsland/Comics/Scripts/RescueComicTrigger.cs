@@ -4,7 +4,7 @@ namespace Watermelon
 {
     public class RescueComicTrigger : MonoBehaviour, IWorldElement
     {
-        [SerializeField] GuardedSkeletonEncounter encounter;
+        [SerializeField] HelperBehavior helper;
         [SerializeField] ComicPlayer comicPrefab;
         [SerializeField, Min(0f)] float delay = 1.5f;
 
@@ -16,10 +16,10 @@ namespace Watermelon
 
         public void OnWorldLoaded()
         {
-            if (encounter == null || comicPrefab == null || encounter.IsCleared)
+            if (helper == null || comicPrefab == null || helper.IsOpened)
                 return;
 
-            encounter.Cleared += OnEncounterCleared;
+            helper.HelperUnlocked += OnHelperUnlocked;
             isSubscribed = true;
         }
 
@@ -30,7 +30,7 @@ namespace Watermelon
             delayTweenCase.KillActive();
         }
 
-        private void OnEncounterCleared()
+        private void OnHelperUnlocked()
         {
             Unsubscribe();
 
@@ -45,7 +45,7 @@ namespace Watermelon
             if (!isSubscribed)
                 return;
 
-            encounter.Cleared -= OnEncounterCleared;
+            helper.HelperUnlocked -= OnHelperUnlocked;
             isSubscribed = false;
         }
 

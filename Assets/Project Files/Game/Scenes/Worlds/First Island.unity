@@ -23883,6 +23883,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392603324}
   m_CullTransparentMesh: 1
+--- !u!1 &393658749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 393658751}
+  - component: {fileID: 393658750}
+  m_Layer: 0
+  m_Name: Helper 2 Rescue Comic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &393658750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393658749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7840a1c9e346fd49ba14c42dd184f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.RescueComicTrigger
+  helper: {fileID: 1862239977}
+  comicPrefab: {fileID: 5860318446895802344, guid: 74f45eca6911c8647b5228e02773d5c6,
+    type: 3}
+  delay: 1.5
+--- !u!4 &393658751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393658749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 959720379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &395846240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49550,8 +49598,7 @@ Transform:
   m_LocalPosition: {x: -35.85, y: -0.45, z: -23.18257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 905648053}
+  m_Children: []
   m_Father: {fileID: 1780791335}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &855640420
@@ -52279,7 +52326,7 @@ GameObject:
   - component: {fileID: 905648053}
   - component: {fileID: 905648054}
   m_Layer: 0
-  m_Name: Rescue Comic Trigger
+  m_Name: Helper 1 Rescue Comic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52298,7 +52345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 855640419}
+  m_Father: {fileID: 959720379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &905648054
 MonoBehaviour:
@@ -52312,7 +52359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7840a1c9e346fd49ba14c42dd184f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Watermelon.RescueComicTrigger
-  encounter: {fileID: 855640420}
+  helper: {fileID: 1327118833}
   comicPrefab: {fileID: 8747750782505348599, guid: cadb3ff03ab9af844998e3f6dd9394d9,
     type: 3}
   delay: 1.5
@@ -54538,6 +54585,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 957972818}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &959720378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959720379}
+  m_Layer: 0
+  m_Name: Comic Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959720379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959720378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 905648053}
+  - {fileID: 393658751}
+  m_Father: {fileID: 2625476478768325108}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &960268690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142417,6 +142497,7 @@ MonoBehaviour:
   - {fileID: 855640420}
   - {fileID: 1203055599}
   - {fileID: 905648054}
+  - {fileID: 393658750}
   registeredNavmeshElements:
   - {fileID: 1327118833}
   - {fileID: 1862239977}
@@ -142471,6 +142552,7 @@ Transform:
   - {fileID: 1780791335}
   - {fileID: 817708189}
   - {fileID: 1728899279}
+  - {fileID: 959720379}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2625476478768325109
