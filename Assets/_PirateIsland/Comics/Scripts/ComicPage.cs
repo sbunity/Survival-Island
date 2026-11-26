@@ -36,16 +36,16 @@ namespace Watermelon
             CanvasGroup.alpha = 0f;
             RectTransform.anchoredPosition = new Vector2(offset, 0f);
 
-            fadeTweenCase = CanvasGroup.DOFade(1f, duration);
-            moveTweenCase = RectTransform.DOAnchoredPosition(Vector2.zero, duration).SetEasing(Ease.Type.CircOut).OnComplete(onCompleted);
+            fadeTweenCase = CanvasGroup.DOFade(1f, duration, unscaledTime: true);
+            moveTweenCase = RectTransform.DOAnchoredPosition(Vector2.zero, duration, unscaledTime: true).SetEasing(Ease.Type.CircOut).OnComplete(onCompleted);
         }
 
         public void Hide(float duration, float offset)
         {
             KillTweens();
 
-            fadeTweenCase = CanvasGroup.DOFade(0f, duration);
-            moveTweenCase = RectTransform.DOAnchoredPosition(new Vector2(-offset, 0f), duration).SetEasing(Ease.Type.CircIn).OnComplete(() =>
+            fadeTweenCase = CanvasGroup.DOFade(0f, duration, unscaledTime: true);
+            moveTweenCase = RectTransform.DOAnchoredPosition(new Vector2(-offset, 0f), duration, unscaledTime: true).SetEasing(Ease.Type.CircIn).OnComplete(() =>
             {
                 gameObject.SetActive(false);
             });

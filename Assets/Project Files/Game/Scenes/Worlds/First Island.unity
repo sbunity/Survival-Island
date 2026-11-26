@@ -49550,7 +49550,8 @@ Transform:
   m_LocalPosition: {x: -35.85, y: -0.45, z: -23.18257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 905648053}
   m_Father: {fileID: 1780791335}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &855640420
@@ -52267,6 +52268,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7979544f4d69148a1a87028ce5bfd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &905648052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905648053}
+  - component: {fileID: 905648054}
+  m_Layer: 0
+  m_Name: Rescue Comic Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905648053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905648052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 855640419}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905648054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905648052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7840a1c9e346fd49ba14c42dd184f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.RescueComicTrigger
+  encounter: {fileID: 855640420}
+  comicPrefab: {fileID: 8747750782505348599, guid: cadb3ff03ab9af844998e3f6dd9394d9,
+    type: 3}
+  delay: 1.5
 --- !u!1001 &908592241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142367,6 +142416,7 @@ MonoBehaviour:
   - {fileID: 1836896734}
   - {fileID: 855640420}
   - {fileID: 1203055599}
+  - {fileID: 905648054}
   registeredNavmeshElements:
   - {fileID: 1327118833}
   - {fileID: 1862239977}

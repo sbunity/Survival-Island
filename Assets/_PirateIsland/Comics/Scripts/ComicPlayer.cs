@@ -1,13 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Watermelon
 {
-    public class ComicCutsceneController : MonoBehaviour
+    public class ComicPlayer : MonoBehaviour
     {
-        [SerializeField] RectTransform safeAreaRectTransform;
         [SerializeField] List<ComicPage> pages = new List<ComicPage>();
 
         [Header("Controls")]
@@ -25,9 +23,6 @@ namespace Watermelon
         [SerializeField] float pageTransitionDuration = 0.45f;
         [SerializeField] float pageTransitionOffset = 400f;
 
-        [Header("After Cutscene")]
-        [SerializeField] string nextSceneName = "Game";
-
         private enum Step { None, PageTransition, PanelReveal, Bubble, Hold }
 
         private Step step = Step.None;
@@ -38,7 +33,8 @@ namespace Watermelon
         private TweenCase holdTweenCase;
         private SimpleCallback holdCallback;
 
-        private bool isFinishing;
+        private SimpleCallback finishedCallback;
+        private bool isPlaying;
 
         private ComicPage CurrentPage => pages[pageIndex];
         private ComicPanel CurrentPanel => CurrentPage.Panels[panelIndex];
@@ -56,17 +52,24 @@ namespace Watermelon
                 page.Prepare();
         }
 
-        private void Start()
+        public void Play(SimpleCallback onFinished)
         {
-            if (safeAreaRectTransform != null)
-                SafeAreaAdapter.RegisterRectTransform(safeAreaRectTransform);
+            if (isPlaying) return;
 
-            Overlay.Hide(0.3f);
+            isPlaying = true;
+            finishedCallback = onFinished;
+
+            pageIndex = -1;
+            nextButton.interactable = true;
+            skipButton.interactable = true;
 
             ShowNextPage();
         }
 
-        #region Sequence
+        public void Skip()
+        {
+            Finish();
+        }
 
         private void ShowNextPage()
         {
@@ -135,7 +138,7 @@ namespace Watermelon
         {
             step = Step.Hold;
             holdCallback = onCompleted;
-            holdTweenCase = Tween.DelayedCall(duration, EndHold);
+            holdTweenCase = Tween.DelayedCall(duration, EndHold, unscaledTime: true);
         }
 
         private void EndHold()
@@ -149,7 +152,7 @@ namespace Watermelon
 
         private void Advance()
         {
-            if (isFinishing) return;
+            if (!isPlaying) return;
 
             switch (step)
             {
@@ -169,9 +172,9 @@ namespace Watermelon
 
         private void Finish()
         {
-            if (isFinishing) return;
+            if (!isPlaying) return;
 
-            isFinishing = true;
+            isPlaying = false;
             step = Step.None;
 
             holdTweenCase.KillActive();
@@ -180,17 +183,10 @@ namespace Watermelon
             nextButton.interactable = false;
             skipButton.interactable = false;
 
-            IntroComicSave.MarkWatched();
-
-            Overlay.Show(0.3f, () =>
-            {
-                SceneManager.LoadScene(nextSceneName);
-            });
+            SimpleCallback callback = finishedCallback;
+            finishedCallback = null;
+            callback?.Invoke();
         }
-
-        #endregion
-
-        #region Buttons
 
         private void OnNextButtonClicked()
         {
@@ -203,7 +199,7 @@ namespace Watermelon
         {
             PlayButtonFeedback();
 
-            Finish();
+            Skip();
         }
 
         private void PlayButtonFeedback()
@@ -215,14 +211,9 @@ namespace Watermelon
             AudioController.PlaySound(AudioController.GetClip("button_sound"));
         }
 
-        #endregion
-
         private void OnDestroy()
         {
             holdTweenCase.KillActive();
-
-            if (safeAreaRectTransform != null)
-                SafeAreaAdapter.UnregisterRectTransform(safeAreaRectTransform);
         }
     }
 }

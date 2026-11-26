@@ -2116,6 +2116,9 @@ MonoBehaviour:
     - pagePrefab: {fileID: 8366893520344629325, guid: 484f33c07be57e248b4b5f2bfac30fa9,
         type: 3}
       autoDestroy: 1
+    - pagePrefab: {fileID: 6671208513111407021, guid: b8fa98dec7ab8b940a3bb5ee41e1f742,
+        type: 3}
+      autoDestroy: 1
   usePausePopups: 1
 --- !u!114 &8095943557840496074
 MonoBehaviour:

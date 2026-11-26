@@ -49,7 +49,7 @@ namespace Watermelon
             typingTweenCase = Tween.DoFloat(0f, characterCount, characterCount / charactersPerSecond, value =>
             {
                 Text.maxVisibleCharacters = Mathf.CeilToInt(value);
-            }).OnComplete(Complete);
+            }, unscaledTime: true).OnComplete(Complete);
         }
 
         public void Complete()

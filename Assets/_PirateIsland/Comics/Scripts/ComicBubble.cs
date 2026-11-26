@@ -1,31 +1,27 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Watermelon
 {
     [RequireComponent(typeof(CanvasGroup))]
-    public class ComicPanel : MonoBehaviour
+    public class ComicBubble : MonoBehaviour
     {
-        [SerializeField] RectTransform artRectTransform;
-        [SerializeField] List<ComicBubble> bubbles = new List<ComicBubble>();
+        [SerializeField] TypewriterText typewriter;
 
         [Space]
-        [SerializeField] float revealDuration = 0.35f;
-        [SerializeField] float hiddenScale = 0.94f;
-
-        [SerializeField] float artStartScale = 1.06f;
-        [SerializeField] float artSettleDuration = 6f;
+        [SerializeField] float delayBefore = 0.15f;
+        [SerializeField] float popDuration = 0.25f;
+        [SerializeField] float hiddenScale = 0.6f;
 
         private CanvasGroup canvasGroup;
         private CanvasGroup CanvasGroup => canvasGroup != null ? canvasGroup : canvasGroup = GetComponent<CanvasGroup>();
 
+        private TweenCase delayTweenCase;
         private TweenCase fadeTweenCase;
         private TweenCase scaleTweenCase;
-        private TweenCase artTweenCase;
 
         private SimpleCallback completedCallback;
 
-        public IReadOnlyList<ComicBubble> Bubbles => bubbles;
+        public int CharacterCount => typewriter != null ? typewriter.CharacterCount : 0;
 
         public void Prepare()
         {
@@ -35,32 +31,40 @@ namespace Watermelon
             CanvasGroup.alpha = 0f;
             transform.localScale = Vector3.one * hiddenScale;
 
-            if (artRectTransform != null)
-                artRectTransform.localScale = Vector3.one * artStartScale;
-
-            foreach (ComicBubble bubble in bubbles)
-                bubble.Prepare();
+            if (typewriter != null)
+                typewriter.Clear();
         }
 
-        public void Reveal(SimpleCallback onCompleted)
+        public void Play(SimpleCallback onCompleted)
         {
             Prepare();
             completedCallback = onCompleted;
 
-            fadeTweenCase = CanvasGroup.DOFade(1f, revealDuration);
-            scaleTweenCase = transform.DOScale(Vector3.one, revealDuration).SetEasing(Ease.Type.BackOut).OnComplete(NotifyCompleted);
+            delayTweenCase = Tween.DelayedCall(delayBefore, () =>
+            {
+                fadeTweenCase = CanvasGroup.DOFade(1f, popDuration * 0.6f, unscaledTime: true);
+                scaleTweenCase = transform.DOScale(Vector3.one, popDuration, unscaledTime: true).SetEasing(Ease.Type.BackOut);
 
-            if (artRectTransform != null)
-                artTweenCase = artRectTransform.DOScale(Vector3.one, artSettleDuration).SetEasing(Ease.Type.SineOut);
+                if (typewriter != null)
+                {
+                    typewriter.Play(NotifyCompleted);
+                }
+                else
+                {
+                    scaleTweenCase.OnComplete(NotifyCompleted);
+                }
+            }, unscaledTime: true);
         }
 
         public void Complete()
         {
-            fadeTweenCase.KillActive();
-            scaleTweenCase.KillActive();
+            KillTweens();
 
             CanvasGroup.alpha = 1f;
             transform.localScale = Vector3.one;
+
+            if (typewriter != null)
+                typewriter.Complete();
 
             NotifyCompleted();
         }
@@ -74,9 +78,9 @@ namespace Watermelon
 
         private void KillTweens()
         {
+            delayTweenCase.KillActive();
             fadeTweenCase.KillActive();
             scaleTweenCase.KillActive();
-            artTweenCase.KillActive();
         }
 
         private void OnDestroy()
