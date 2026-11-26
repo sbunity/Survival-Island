@@ -16,6 +16,8 @@ namespace Watermelon
 
         event SimpleCallback RescueAreaUnlocked;
 
+        event SimpleCallback Rescued;
+
         bool TryRelease();
     }
 }

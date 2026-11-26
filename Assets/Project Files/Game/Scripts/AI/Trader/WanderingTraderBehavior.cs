@@ -101,6 +101,7 @@ namespace Watermelon
         public bool WaitForExternalRelease => true;
         public bool IsAwaitingRescue => isInitialised && requiresRescue && !IsRescued;
         public event SimpleCallback RescueAreaUnlocked;
+        public event SimpleCallback Rescued;
 
         private readonly RescueAreaGate rescueGate = new RescueAreaGate();
 
@@ -405,6 +406,8 @@ namespace Watermelon
             rescueState = RescueState.RunningToPlayer;
 
             UpdatePresence();
+
+            Rescued?.Invoke();
 
             return true;
         }

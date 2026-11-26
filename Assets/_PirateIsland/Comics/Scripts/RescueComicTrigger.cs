@@ -1,15 +1,24 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Watermelon
 {
     public class RescueComicTrigger : ComicTrigger
     {
-        [SerializeField] HelperBehavior helper;
+        [SerializeField, FormerlySerializedAs("helper")] MonoBehaviour rescueTarget;
 
-        protected override bool CanArm() => helper != null && !helper.IsOpened;
+        private IGuardedRescueTarget Target => rescueTarget as IGuardedRescueTarget;
 
-        protected override void Subscribe() => helper.HelperUnlocked += Fire;
+        protected override bool CanArm() => Target != null && !Target.IsRescued;
 
-        protected override void Unsubscribe() => helper.HelperUnlocked -= Fire;
+        protected override void Subscribe() => Target.Rescued += Fire;
+
+        protected override void Unsubscribe() => Target.Rescued -= Fire;
+
+        private void OnValidate()
+        {
+            if (rescueTarget != null && !(rescueTarget is IGuardedRescueTarget))
+                rescueTarget = rescueTarget.GetComponent<IGuardedRescueTarget>() as MonoBehaviour;
+        }
     }
 }

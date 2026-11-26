@@ -228,6 +228,11 @@ namespace Watermelon
             add => OpeningAreaUnlocked += value;
             remove => OpeningAreaUnlocked -= value;
         }
+        event SimpleCallback IGuardedRescueTarget.Rescued
+        {
+            add => HelperUnlocked += value;
+            remove => HelperUnlocked -= value;
+        }
 
         private void Awake()
         {

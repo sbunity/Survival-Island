@@ -23915,7 +23915,7 @@ MonoBehaviour:
   comicPrefab: {fileID: 5860318446895802344, guid: 74f45eca6911c8647b5228e02773d5c6,
     type: 3}
   delay: 1.5
-  helper: {fileID: 1862239977}
+  rescueTarget: {fileID: 1862239977}
 --- !u!4 &393658751
 Transform:
   m_ObjectHideFlags: 0
@@ -52410,7 +52410,7 @@ MonoBehaviour:
   comicPrefab: {fileID: 8747750782505348599, guid: cadb3ff03ab9af844998e3f6dd9394d9,
     type: 3}
   delay: 1.5
-  helper: {fileID: 1327118833}
+  rescueTarget: {fileID: 1327118833}
 --- !u!1001 &908592241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54664,6 +54664,7 @@ Transform:
   m_Children:
   - {fileID: 905648053}
   - {fileID: 393658751}
+  - {fileID: 1912828912}
   - {fileID: 430145025}
   m_Father: {fileID: 2625476478768325108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -126416,6 +126417,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1911563743}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1912828911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912828912}
+  - component: {fileID: 1912828913}
+  m_Layer: 0
+  m_Name: Trader Rescue Comic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1912828912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912828911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 959720379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912828913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912828911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7840a1c9e346fd49ba14c42dd184f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.RescueComicTrigger
+  comicPrefab: {fileID: 408358005979513401, guid: 342aa616446743f40b811cd2ca4ef9e3,
+    type: 3}
+  delay: 1.5
+  rescueTarget: {fileID: 773305257}
 --- !u!1 &1914649783
 GameObject:
   m_ObjectHideFlags: 0
@@ -142547,6 +142596,7 @@ MonoBehaviour:
   - {fileID: 1203055599}
   - {fileID: 905648054}
   - {fileID: 393658750}
+  - {fileID: 1912828913}
   - {fileID: 430145024}
   registeredNavmeshElements:
   - {fileID: 1327118833}
@@ -142563,8 +142613,8 @@ MonoBehaviour:
   navMeshSurface: {fileID: 438512383339899028}
   subWorldHandler:
     subworlds:
-    - {fileID: 18863360}
     - {fileID: 1820117116}
+    - {fileID: 18863360}
   diggingSpawnSettings:
     spawnDelay:
       firstValue: 0
