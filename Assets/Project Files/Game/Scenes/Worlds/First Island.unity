@@ -54715,6 +54715,7 @@ Transform:
   - {fileID: 1912828912}
   - {fileID: 430145025}
   - {fileID: 649671727}
+  - {fileID: 1649572012}
   m_Father: {fileID: 2625476478768325108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &960268690
@@ -107110,6 +107111,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648918031}
   m_CullTransparentMesh: 1
+--- !u!1 &1649572010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649572012}
+  - component: {fileID: 1649572011}
+  m_Layer: 0
+  m_Name: Boss Defeat Comic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1649572011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649572010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9876021755dd6a4db796ec7eae2f79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MissionComicTrigger
+  comicPrefab: {fileID: 408358005979513401, guid: c60098e18e705ed4d8321bcc483ff422,
+    type: 3}
+  delay: 1.5
+  mission: {fileID: 118880452}
+--- !u!4 &1649572012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649572010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 959720379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1653832736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142648,6 +142697,7 @@ MonoBehaviour:
   - {fileID: 1912828913}
   - {fileID: 430145024}
   - {fileID: 649671726}
+  - {fileID: 1649572011}
   registeredNavmeshElements:
   - {fileID: 1327118833}
   - {fileID: 1862239977}
