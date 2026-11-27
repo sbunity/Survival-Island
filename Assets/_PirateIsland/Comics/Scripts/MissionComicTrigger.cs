@@ -6,7 +6,7 @@ namespace Watermelon
     {
         [SerializeField] Mission mission;
 
-        protected override bool CanArm() => mission != null && mission.MissionStage != Mission.Stage.Finished && mission.MissionStage != Mission.Stage.Collected;
+        protected override bool CanArm() => mission != null && !IsCompleted(mission.MissionStage);
 
         protected override void Subscribe() => mission.OnStageChanged += OnMissionStageChanged;
 
@@ -14,8 +14,10 @@ namespace Watermelon
 
         private void OnMissionStageChanged(Mission.Stage previousStage, Mission.Stage currentStage)
         {
-            if (previousStage == Mission.Stage.Active && currentStage == Mission.Stage.Finished)
+            if (currentStage == Mission.Stage.Finished && !IsCompleted(previousStage))
                 Fire();
         }
+
+        private static bool IsCompleted(Mission.Stage stage) => stage == Mission.Stage.Finished || stage == Mission.Stage.Collected;
     }
 }

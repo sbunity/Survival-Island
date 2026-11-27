@@ -40113,6 +40113,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802a9906ebaf778489c92a0a5f4897bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &649671725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 649671727}
+  - component: {fileID: 649671726}
+  m_Layer: 0
+  m_Name: Iron Mine Comic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &649671726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649671725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9876021755dd6a4db796ec7eae2f79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Watermelon.MissionComicTrigger
+  comicPrefab: {fileID: 408358005979513401, guid: 08783aae8cab3b045bdff625292a3815,
+    type: 3}
+  delay: 1.5
+  mission: {fileID: 7540371}
+--- !u!4 &649671727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649671725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 959720379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650998397
 GameObject:
   m_ObjectHideFlags: 0
@@ -54666,6 +54714,7 @@ Transform:
   - {fileID: 393658751}
   - {fileID: 1912828912}
   - {fileID: 430145025}
+  - {fileID: 649671727}
   m_Father: {fileID: 2625476478768325108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &960268690
@@ -142598,6 +142647,7 @@ MonoBehaviour:
   - {fileID: 393658750}
   - {fileID: 1912828913}
   - {fileID: 430145024}
+  - {fileID: 649671726}
   registeredNavmeshElements:
   - {fileID: 1327118833}
   - {fileID: 1862239977}
